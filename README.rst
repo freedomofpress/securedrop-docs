@@ -6,7 +6,8 @@ Redmine documentation
 Onboarding SecureDrop Admins
 ----------------------------
 
-**Overview**
+Overview
+^^^^^^^^
 
 Freedom of the Press Foundation is transitioning to a Redmine-based
 ticketing system for all support requests related to SecureDrop. All
@@ -40,7 +41,8 @@ SecureDrop administrators and journalists. You can learn more about
 configuring and using the email-based workflow in `Setting up Encrypted
 Email Workflow`_.
 
-**Why are we doing this?**
+Why are we doing this?
+^^^^^^^^^^^^^^^^^^^^^^
 
 Our goal with this new system is to simplify and centralize the process
 of providing assistance to users of SecureDrop, making it easier for
@@ -68,7 +70,8 @@ new system will make us more effective in providing help to you. Don't
 hesitate to let us know if you have any feedback on the new support
 system.
 
-**Creating your Account**
+Creating your Account
+^^^^^^^^^^^^^^^^^^^^^
 
 To get started, register your account at
 `support.freedom.press/account/register <https://support.freedom.press/account/register>`_.
@@ -83,7 +86,8 @@ your account has been activated before proceeding further.
 After you've been activated by us and you're ready to login, continue
 reading below.
 
-**Using Redmine**
+Using Redmine
+^^^^^^^^^^^^^
 
 Once your account has been activated, go to
 `support.freedom.press <https://support.freedom.press>`_
@@ -129,7 +133,8 @@ setting as the default: "For any event on all my projects".
 For further instruction on using Redmine, please consult their `User
 Guide <https://www.redmine.org/projects/redmine/wiki/User_Guide>`_.
 
-**Setting up Encrypted Email Workflow**
+Setting up Encrypted Email Workflow
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 One of Redmine's strengths as a ticketing system is its powerful support
 for email-based workflow. You can use email to create new issues, reply
@@ -201,7 +206,8 @@ following command:
 The key can be downloaded `at this
 link <https://freedom.press/sites/default/files/redmine_key.asc>`_.
 
-**Troubleshooting**
+Troubleshooting
+^^^^^^^^^^^^^^^
 
 When you're replying to Redmine via e-mail, you **must use PGP/MIME**
 instead of inline PGP. The default settings for the Enigmail plugin in
@@ -237,7 +243,8 @@ starts out as a list of issues that are assigned to you and issues that
 have been reported to you. However, it can be personalized further to
 include stuff like Documents and the latest news from your project.
 
-**Miscellaneous support**
+Miscellaneous support
+^^^^^^^^^^^^^^^^^^^^^
 
 If you haven't installed SecureDrop yet and you'd like our help, or you
 have a situation related to digital security for journalists, simply get
