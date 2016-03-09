@@ -191,6 +191,10 @@ and then in Thunderbird navigate to Enigmail menu > Key Management >
 Edit > and select Import Keys from Clipboard. You may also use the
 following command:
 
+.. todo:: The following key is a testing key, so this command is only a
+   placeholder until the transition to a live key. DO NOT upload this key to
+   keyservers.
+
     gpg --keyserver keys.gnupg.net --recv-keys 
     5F7B9C54E9B27164909EDA6693359153A3BD4560
 
