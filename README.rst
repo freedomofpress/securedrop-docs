@@ -6,27 +6,29 @@ Redmine documentation
 Onboarding SecureDrop Admins
 ----------------------------
 
-**Overview**
+.. _Overview:
+
+Overview
+^^^^^^^^
 
 Freedom of the Press Foundation is transitioning to a Redmine-based
 ticketing system for all support requests related to SecureDrop. All
 current and future SecureDrop administrators are required to use the new
 support system in order to receive support from FPF staff. From now on,
 the best way to get in touch with us is through
-`support.freedom.press <https://support.freedom.press>`__
+`support.freedom.press <https://support.freedom.press>`_
 or by e-mailing support@freedom.press.
 
 As a current SecureDrop administrator or journalist, you will need to
 spend a little time setting up an account on our new support site,
-`support.freedom.press <https://support.freedom.press>`__.
-This process should be quick and easy, and is documented in `Creating
-Your Account`_.
+`support.freedom.press <https://support.freedom.press>`_.
+This process should be quick and easy, and is documented in
+:ref:`Creating your Account`.
 
 Once your account has been created, there are two workflows you can use:
 a web-based workflow, and an email-based workflow. Either workflow may
 be used interchangeably. We think most people will want to use the
-web-based workflow, which is documented in `Using
-Redmine`_.
+web-based workflow, which is documented in :ref:`Using Redmine`.
 
 Freedom of the Press Foundation takes the security of every SecureDrop
 instance seriously. We require an encrypted communications channel for
@@ -37,10 +39,13 @@ workflow is more difficult because email is unencrypted by default. Our
 solution is to combine Redmine's excellent email-based workflow with
 OpenPGP encryption, which we already use to communicate with many
 SecureDrop administrators and journalists. You can learn more about
-configuring and using the email-based workflow in `Setting up Encrypted
-Email Workflow`_.
+configuring and using the email-based workflow in
+:ref:`Setting up Encrypted Email Workflow`.
 
-**Why are we doing this?**
+.. _Why are we doing this?:
+
+Why are we doing this?
+^^^^^^^^^^^^^^^^^^^^^^
 
 Our goal with this new system is to simplify and centralize the process
 of providing assistance to users of SecureDrop, making it easier for
@@ -68,10 +73,13 @@ new system will make us more effective in providing help to you. Don't
 hesitate to let us know if you have any feedback on the new support
 system.
 
-**Creating your Account**
+.. _Creating your Account:
+
+Creating your Account
+^^^^^^^^^^^^^^^^^^^^^
 
 To get started, register your account at
-`support.freedom.press/account/register <https://support.freedom.press/account/register>`__.
+`support.freedom.press/account/register <https://support.freedom.press/account/register>`_.
 Choose a strong password, and use an e-mail address that you frequently
 check. We have to manually confirm each new account, so after submitting
 your registration you'll need to wait until you receive an e-mail saying
@@ -83,10 +91,13 @@ your account has been activated before proceeding further.
 After you've been activated by us and you're ready to login, continue
 reading below.
 
-**Using Redmine**
+.. _Using Redmine:
+
+Using Redmine
+^^^^^^^^^^^^^
 
 Once your account has been activated, go to
-`support.freedom.press <https://support.freedom.press>`__
+`support.freedom.press <https://support.freedom.press>`_
 to log in with your new account.
 
 |Login|
@@ -127,9 +138,13 @@ set your local time zone. We encourage you to leave the notification
 setting as the default: "For any event on all my projects".
 
 For further instruction on using Redmine, please consult their `User
-Guide <https://www.redmine.org/projects/redmine/wiki/User_Guide>`__.
+Guide <https://www.redmine.org/projects/redmine/wiki/User_Guide>`_.
 
-**Setting up Encrypted Email Workflow**
+
+.. _Setting up Encrypted Email Workflow:
+
+Setting up Encrypted Email Workflow
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 One of Redmine's strengths as a ticketing system is its powerful support
 for email-based workflow. You can use email to create new issues, reply
@@ -162,7 +177,7 @@ familiarity with the concepts used by PGP. It also assumes you are using
 Thunderbird+Enigmail for OpenPGP-encrypted email.
 
 Start by navigating to
-`support.freedom.press/pgp <https://support.freedom.press/pgp>`__ or
+`support.freedom.press/pgp <https://support.freedom.press/pgp>`_ or
 click the key icon in the upper right corner of the support window.
 
 |PGPicon|
@@ -199,9 +214,12 @@ following command:
     5F7B9C54E9B27164909EDA6693359153A3BD4560
 
 The key can be downloaded `at this
-link <https://freedom.press/sites/default/files/redmine_key.asc>`__.
+link <https://freedom.press/sites/default/files/redmine_key.asc>`_.
 
-**Troubleshooting**
+.. _Troubleshooting:
+
+Troubleshooting
+^^^^^^^^^^^^^^^
 
 When you're replying to Redmine via e-mail, you **must use PGP/MIME**
 instead of inline PGP. The default settings for the Enigmail plugin in
@@ -237,7 +255,10 @@ starts out as a list of issues that are assigned to you and issues that
 have been reported to you. However, it can be personalized further to
 include stuff like Documents and the latest news from your project.
 
-**Miscellaneous support**
+.. _Miscellaneous support:
+
+Miscellaneous support
+^^^^^^^^^^^^^^^^^^^^^
 
 If you haven't installed SecureDrop yet and you'd like our help, or you
 have a situation related to digital security for journalists, simply get
