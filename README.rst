@@ -13,12 +13,12 @@ ticketing system for all support requests related to SecureDrop. All
 current and future SecureDrop administrators are required to use the new
 support system in order to receive support from FPF staff. From now on,
 the best way to get in touch with us is through
-`support.freedom.press <https://support.freedom.press>`__
+`support.freedom.press <https://support.freedom.press>`_
 or by e-mailing support@freedom.press.
 
 As a current SecureDrop administrator or journalist, you will need to
 spend a little time setting up an account on our new support site,
-`support.freedom.press <https://support.freedom.press>`__.
+`support.freedom.press <https://support.freedom.press>`_.
 This process should be quick and easy, and is documented in `Creating
 Your Account`_.
 
@@ -71,7 +71,7 @@ system.
 **Creating your Account**
 
 To get started, register your account at
-`support.freedom.press/account/register <https://support.freedom.press/account/register>`__.
+`support.freedom.press/account/register <https://support.freedom.press/account/register>`_.
 Choose a strong password, and use an e-mail address that you frequently
 check. We have to manually confirm each new account, so after submitting
 your registration you'll need to wait until you receive an e-mail saying
@@ -86,7 +86,7 @@ reading below.
 **Using Redmine**
 
 Once your account has been activated, go to
-`support.freedom.press <https://support.freedom.press>`__
+`support.freedom.press <https://support.freedom.press>`_
 to log in with your new account.
 
 |Login|
@@ -127,7 +127,7 @@ set your local time zone. We encourage you to leave the notification
 setting as the default: "For any event on all my projects".
 
 For further instruction on using Redmine, please consult their `User
-Guide <https://www.redmine.org/projects/redmine/wiki/User_Guide>`__.
+Guide <https://www.redmine.org/projects/redmine/wiki/User_Guide>`_.
 
 **Setting up Encrypted Email Workflow**
 
@@ -162,7 +162,7 @@ familiarity with the concepts used by PGP. It also assumes you are using
 Thunderbird+Enigmail for OpenPGP-encrypted email.
 
 Start by navigating to
-`support.freedom.press/pgp <https://support.freedom.press/pgp>`__ or
+`support.freedom.press/pgp <https://support.freedom.press/pgp>`_ or
 click the key icon in the upper right corner of the support window.
 
 |PGPicon|
@@ -199,7 +199,7 @@ following command:
     5F7B9C54E9B27164909EDA6693359153A3BD4560
 
 The key can be downloaded `at this
-link <https://freedom.press/sites/default/files/redmine_key.asc>`__.
+link <https://freedom.press/sites/default/files/redmine_key.asc>`_.
 
 **Troubleshooting**
 
