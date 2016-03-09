@@ -6,6 +6,8 @@ Redmine documentation
 Onboarding SecureDrop Admins
 ----------------------------
 
+.. _Overview:
+
 Overview
 ^^^^^^^^
 
@@ -20,14 +22,13 @@ or by e-mailing support@freedom.press.
 As a current SecureDrop administrator or journalist, you will need to
 spend a little time setting up an account on our new support site,
 `support.freedom.press <https://support.freedom.press>`_.
-This process should be quick and easy, and is documented in `Creating
-Your Account`_.
+This process should be quick and easy, and is documented in
+:ref:`Creating your Account`.
 
 Once your account has been created, there are two workflows you can use:
 a web-based workflow, and an email-based workflow. Either workflow may
 be used interchangeably. We think most people will want to use the
-web-based workflow, which is documented in `Using
-Redmine`_.
+web-based workflow, which is documented in :ref:`Using Redmine`.
 
 Freedom of the Press Foundation takes the security of every SecureDrop
 instance seriously. We require an encrypted communications channel for
@@ -38,8 +39,10 @@ workflow is more difficult because email is unencrypted by default. Our
 solution is to combine Redmine's excellent email-based workflow with
 OpenPGP encryption, which we already use to communicate with many
 SecureDrop administrators and journalists. You can learn more about
-configuring and using the email-based workflow in `Setting up Encrypted
-Email Workflow`_.
+configuring and using the email-based workflow in
+:ref:`Setting up Encrypted Email Workflow`.
+
+.. _Why are we doing this?:
 
 Why are we doing this?
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -70,6 +73,8 @@ new system will make us more effective in providing help to you. Don't
 hesitate to let us know if you have any feedback on the new support
 system.
 
+.. _Creating your Account:
+
 Creating your Account
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -85,6 +90,8 @@ your account has been activated before proceeding further.
 
 After you've been activated by us and you're ready to login, continue
 reading below.
+
+.. _Using Redmine:
 
 Using Redmine
 ^^^^^^^^^^^^^
@@ -132,6 +139,9 @@ setting as the default: "For any event on all my projects".
 
 For further instruction on using Redmine, please consult their `User
 Guide <https://www.redmine.org/projects/redmine/wiki/User_Guide>`_.
+
+
+.. _Setting up Encrypted Email Workflow:
 
 Setting up Encrypted Email Workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -206,6 +216,8 @@ following command:
 The key can be downloaded `at this
 link <https://freedom.press/sites/default/files/redmine_key.asc>`_.
 
+.. _Troubleshooting:
+
 Troubleshooting
 ^^^^^^^^^^^^^^^
 
@@ -242,6 +254,8 @@ There's a shortcut in the main menu called "My page". Typically, this
 starts out as a list of issues that are assigned to you and issues that
 have been reported to you. However, it can be personalized further to
 include stuff like Documents and the latest news from your project.
+
+.. _Miscellaneous support:
 
 Miscellaneous support
 ^^^^^^^^^^^^^^^^^^^^^
