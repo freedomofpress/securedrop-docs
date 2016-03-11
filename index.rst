@@ -18,14 +18,14 @@ the best way to get in touch with us is through our new `support site
 
 As a current SecureDrop administrator or journalist, you will need to
 spend a little time setting up an account on the new support site. This
-process is quick and easy - get started by :doc:`creating_your_account`.
+is quick and easy - get started by :doc:`creating_your_account`.
 
 Once your account has been created, there are two workflows you can use:
 a web-based workflow, and an email-based workflow. Either workflow may
 be used interchangeably. We think most people will want to use the
 web-based workflow, which is documented in :doc:`using_redmine`. You can
 learn more about configuring and using the optional email-based workflow
-in :doc:`encrypted_email_workflow`.
+in the :doc:`Encrypted Email Overview <encrypted_email_overview>`.
 
 .. toctree::
    :caption: Support Website
@@ -39,7 +39,9 @@ in :doc:`encrypted_email_workflow`.
    :caption: Email Workflow
    :name: Email Workflow
 
-   encrypted_email_workflow
+   encrypted_email_overview
+   encrypted_email_do_not_want
+   encrypted_email_setup
 
 First time contacting us?
 -------------------------
