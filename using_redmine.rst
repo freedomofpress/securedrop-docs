@@ -57,6 +57,8 @@ Support site.
 Once we're satisfied you're ready to use the new site, we'll close the
 issue.
 
+.. todo:: Write script for the onboarding issue interaction
+
 
 Key Features
 ------------
