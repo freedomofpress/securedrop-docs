@@ -17,7 +17,9 @@ SecureDrop Support Documentation
    :name: Getting Started
 
    creating_your_account
-   using_redmine
+   logging_in
+   onboarding_issue
+   key_features
    encrypted_email_workflow
    troubleshooting
 

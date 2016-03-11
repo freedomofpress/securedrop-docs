@@ -20,8 +20,8 @@ your account has been activated before proceeding further.
 
 |Activation|
 
-After you've been activated by us and you're ready to login, continue
-reading below.
+After you've been activated by us and you're ready to login, continue to
+the next step.
 
 .. |Registration| image:: images/register.png
 .. |Activation| image:: images/activated.png
