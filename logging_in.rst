@@ -25,9 +25,11 @@ SecureDrop instance listed underneath the parent SecureDrop project.
 Only Freedom of the Press Foundation staff and people within your
 organization have access to your instance's project.
 
-Click on the project link.. You'll be shown an Overview of the project
+Click on the project link. You'll be shown an Overview of the project
 and all of the issues that are open, which are also listed under the
 Issues pane.
+
+.. todo:: Screenshot of project overview page
 
 .. |Login| image:: images/login.png
 .. |Home| image:: images/home.png
