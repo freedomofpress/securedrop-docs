@@ -7,8 +7,20 @@ SecureDrop Support Documentation
 ================================
 
 .. toctree::
-   :caption: Using FPF's Redmine
-   :name: readme
-   :maxdepth: 2
+   :caption: Overview
+   :name: Overview
 
-   README
+   overview
+
+.. toctree::
+   :caption: Getting Started
+   :name: Getting Started
+   :glob:
+
+   onboarding/*
+
+.. toctree::
+   :caption: General Support
+   :name: General Support
+
+   general_support
