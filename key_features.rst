@@ -1,18 +1,21 @@
 Key Features
 ============
 
-Making a new issue
-------------------
+Creating a new issue
+--------------------
 
-To make a new issue, click "New issue" and fill out the Subject and
+To create a new issue, click **New issue** and fill out the Subject and
 Description fields. All other fields can be left blank, although you can
 assign a priority if you want. When we see the issue, we will respond
 and assign it to the appropriate person. If we're waiting for a reply
 from someone in your organization, we may assign it back to you.
 
+Createing a new issue via email
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Sending an e-mail to support@freedom.press will automatically create a
-new issue in your project, using the subject line for the Subject and
-the body for the Description.
+new issue in your project, using the subject line of the email for the
+Subject and the body of the email for the Description.
 
 Documents, Wiki, and Files
 --------------------------
