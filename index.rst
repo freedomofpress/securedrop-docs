@@ -15,9 +15,11 @@ SecureDrop Support Documentation
 .. toctree::
    :caption: Getting Started
    :name: Getting Started
-   :glob:
 
-   onboarding/*
+   creating_your_account
+   using_redmine
+   encrypted_email_workflow
+   troubleshooting
 
 .. toctree::
    :caption: General Support
