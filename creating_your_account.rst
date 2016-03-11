@@ -3,14 +3,21 @@
 Creating your Account
 ---------------------
 
-To get started, register your account at
-`support.freedom.press/account/register <https://support.freedom.press/account/register>`_.
-Choose a strong password, and use an e-mail address that you frequently
-check. We have to manually confirm each new account, so after submitting
+To get started, register your account on the `Registration Page`_.
+
+Make sure you:
+
+* Choose a strong password
+* Use an e-mail address that you frequently check.
+
+.. _Registration Page: https://support.freedom.press/account/register
+
+|Registration|
+
+We have to manually confirm each new account, so after submitting
 your registration you'll need to wait until you receive an e-mail saying
 your account has been activated before proceeding further.
 
-|Registration|
 |Activation|
 
 After you've been activated by us and you're ready to login, continue
