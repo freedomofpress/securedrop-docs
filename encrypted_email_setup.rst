@@ -60,6 +60,5 @@ link <https://freedom.press/sites/default/files/redmine_key.asc>`_.
 
 .. todo:: Add section on testing encrypted email after setting it up
 
-.. |Per-recipientRule| image:: images/per_recipient_rule.png
 .. |PGPicon| image:: images/pgp_icon.png
 .. |PGPsettings| image:: images/pgp.png

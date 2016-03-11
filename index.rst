@@ -42,6 +42,7 @@ in the :doc:`Encrypted Email Overview <encrypted_email_overview>`.
    encrypted_email_overview
    encrypted_email_do_not_want
    encrypted_email_setup
+   encrypted_email_troubleshooting
 
 First time contacting us?
 -------------------------
