@@ -55,6 +55,7 @@ then please contact us through the :doc:`general_support` channel.
 .. toctree::
    :caption: General Support
    :name: General Support
+   :hidden:
 
    general_support
 
