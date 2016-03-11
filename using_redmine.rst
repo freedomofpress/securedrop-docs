@@ -59,6 +59,12 @@ issue.
 
 .. todo:: Write script for the onboarding issue interaction
 
+Once we're finished with the onboarding issue, you're ready to use the Support
+site. If you want to additionally set up encrypted email notifications, head
+over to the :doc:`Encrypted Email Overview <encrypted_email_overview>`.
+
+The rest of this documentation is for your reference.
+
 
 Key Features
 ------------
