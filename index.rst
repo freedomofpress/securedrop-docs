@@ -3,10 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Freedom of the Press Foundation's Redmine documentation!
-=====================================================================
-
-Contents:
+SecureDrop Support Documentation
+================================
 
 .. toctree::
    :caption: Using FPF's Redmine

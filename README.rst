@@ -1,15 +1,7 @@
-Redmine documentation
-=====================
-
-.. _Onboarding SecureDrop Admins:
-
-Onboarding SecureDrop Admins
-----------------------------
-
 .. _Overview:
 
 Overview
-^^^^^^^^
+========
 
 Freedom of the Press Foundation is transitioning to a Redmine-based
 ticketing system for all support requests related to SecureDrop. All
@@ -45,7 +37,7 @@ configuring and using the email-based workflow in
 .. _Why are we doing this?:
 
 Why are we doing this?
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 Our goal with this new system is to simplify and centralize the process
 of providing assistance to users of SecureDrop, making it easier for
@@ -75,8 +67,14 @@ system.
 
 .. _Creating your Account:
 
+
+.. _Onboarding:
+
+Onboarding
+==========
+
 Creating your Account
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 To get started, register your account at
 `support.freedom.press/account/register <https://support.freedom.press/account/register>`_.
@@ -94,7 +92,7 @@ reading below.
 .. _Using Redmine:
 
 Using Redmine
-^^^^^^^^^^^^^
+-------------
 
 Once your account has been activated, go to
 `support.freedom.press <https://support.freedom.press>`_
@@ -144,7 +142,7 @@ Guide <https://www.redmine.org/projects/redmine/wiki/User_Guide>`_.
 .. _Setting up Encrypted Email Workflow:
 
 Setting up Encrypted Email Workflow
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 One of Redmine's strengths as a ticketing system is its powerful support
 for email-based workflow. You can use email to create new issues, reply
@@ -219,7 +217,7 @@ link <https://freedom.press/sites/default/files/redmine_key.asc>`_.
 .. _Troubleshooting:
 
 Troubleshooting
-^^^^^^^^^^^^^^^
+---------------
 
 When you're replying to Redmine via e-mail, you **must use PGP/MIME**
 instead of inline PGP. The default settings for the Enigmail plugin in
@@ -255,10 +253,10 @@ starts out as a list of issues that are assigned to you and issues that
 have been reported to you. However, it can be personalized further to
 include stuff like Documents and the latest news from your project.
 
-.. _Miscellaneous support:
+.. _General Support:
 
-Miscellaneous support
-^^^^^^^^^^^^^^^^^^^^^
+General Support
+===============
 
 If you haven't installed SecureDrop yet and you'd like our help, or you
 have a situation related to digital security for journalists, simply get
