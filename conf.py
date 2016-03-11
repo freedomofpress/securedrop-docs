@@ -15,6 +15,10 @@
 import sys
 import os
 
+# Detect if we're being built by Read the Docs
+# https://docs.readthedocs.org/en/latest/faq.html#how-do-i-change-behavior-for-read-the-docs
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -109,7 +113,22 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+if on_rtd:
+    html_theme = 'default'
+else:
+    try:
+        # If you want to build the docs locally using the RTD theme,
+        # you may need to install it: ``pip install sphinx_rtd_theme``.
+        # https://github.com/snide/sphinx_rtd_theme#via-package
+        import sphinx_rtd_theme
+        html_theme = "sphinx_rtd_theme"
+        html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    except ImportError:
+        # This theme is included with Sphinx and is quite nice (based
+        # on the Pocoo themes), but since we're using the RTD theme
+        # for the production docs, it's best to use that to avoid
+        # issues due to discrepancies between the themes.
+        html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
