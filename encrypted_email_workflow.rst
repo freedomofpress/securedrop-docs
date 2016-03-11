@@ -56,7 +56,7 @@ familiarity with the concepts used by PGP. It also assumes you are using
 Thunderbird+Enigmail for OpenPGP-encrypted email.
 
 Providing your public key
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Start by navigating to
 `support.freedom.press/pgp <https://support.freedom.press/pgp>`_ or
@@ -78,7 +78,7 @@ on the left and hit **Save**.
    link to instructions on another site
 
 Importing the server's public key
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now, import the public key for our Redmine server. It is available on
 the right hand side of the page. Start by selecting the entire public
