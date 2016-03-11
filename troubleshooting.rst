@@ -3,15 +3,15 @@
 Troubleshooting
 ---------------
 
-When you're replying to Redmine via e-mail, you **must use PGP/MIME**
+When you're replying to Redmine via email, you **must use PGP/MIME**
 instead of inline PGP. The default settings for the Enigmail plugin in
 Thunderbird should work.
 
-Also, be sure that you **always sign your e-mails**. Our system will
+Also, be sure that you **always sign your emails**. Our system will
 reject them if they don't have a valid signature.
 
 To check these settings, go to Edit > Account Settings in Thunderbird.
-Navigate to the "OpenPGP Security" tab of your e-mail account. Be sure
+Navigate to the "OpenPGP Security" tab of your email account. Be sure
 that "Use PGP/MIME by default" is checked. You may not want to enable
 "Sign messages by default" for everything, so we encourage you to add a
 per-recipient rule for support@freedom.press. T
@@ -24,7 +24,7 @@ per-recipient rule should look like this:
 
 |Per-recipientRule|
 
-If you'd rather not receive e-mails for your own comments on issues,
+If you'd rather not receive emails for your own comments on issues,
 there's a setting for that. Go to the "My account" page, select " I
 don't want to be notified of changes that I make myself" under "Email
 notifications" and hit Save.

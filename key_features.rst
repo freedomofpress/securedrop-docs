@@ -13,7 +13,7 @@ from someone in your organization, we may assign it back to you.
 Createing a new issue via email
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sending an e-mail to support@freedom.press will automatically create a
+Sending an email to support@freedom.press will automatically create a
 new issue in your project, using the subject line of the email for the
 Subject and the body of the email for the Description.
 

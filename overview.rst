@@ -9,7 +9,7 @@ current and future SecureDrop administrators are required to use the new
 support system in order to receive support from FPF staff. From now on,
 the best way to get in touch with us is through
 `support.freedom.press <https://support.freedom.press>`_
-or by e-mailing support@freedom.press.
+or by emailing support@freedom.press.
 
 As a current SecureDrop administrator or journalist, you will need to
 spend a little time setting up an account on our new support site,
@@ -41,8 +41,8 @@ Why are we doing this?
 
 Our goal with this new system is to simplify and centralize the process
 of providing assistance to users of SecureDrop, making it easier for
-both us and you. Previously, we had asked people to e-mail us. These
-e-mail threads were difficult to follow, especially when they're
+both us and you. Previously, we had asked people to email us. These
+email threads were difficult to follow, especially when they're
 encrypted and thus not searchable, and when multiple people are CC'ed,
 which quickly becomes a headache in terms of PGP key management. It can
 be a challenge to find the information you are looking for or remember
@@ -54,7 +54,7 @@ track of the status and scope of an issue, the person who is responsible
 for dealing with it, and make sure everyone is apprised of the
 discussion who needs to be. Reviewing the ticket's history allows
 someone to quickly obtain a full understanding of the problem, without
-having to resort to searching within encrypted e-mails. We can collect
+having to resort to searching within encrypted emails. We can collect
 all of the information relevant to your organization's deployment in one
 place, and it's more efficient and less confusing for us when we're
 dealing with multiple conversations simultaneously across several
