@@ -20,19 +20,9 @@ This process should be quick and easy, and is documented in
 Once your account has been created, there are two workflows you can use:
 a web-based workflow, and an email-based workflow. Either workflow may
 be used interchangeably. We think most people will want to use the
-web-based workflow, which is documented in :ref:`Using Redmine`.
-
-Freedom of the Press Foundation takes the security of every SecureDrop
-instance seriously. We require an encrypted communications channel for
-support requests because they may contain sensitive information about
-your SecureDrop instance. The web-based workflow is automatically
-encrypted thanks to HTTPS; however, supporting a secure email-based
-workflow is more difficult because email is unencrypted by default. Our
-solution is to combine Redmine's excellent email-based workflow with
-OpenPGP encryption, which we already use to communicate with many
-SecureDrop administrators and journalists. You can learn more about
-configuring and using the email-based workflow in
-:ref:`Setting up Encrypted Email Workflow`.
+web-based workflow, which is documented in :ref:`Using Redmine`. You can
+learn more about configuring and using the email-based workflow in
+:ref:`Encrypted Email Workflow`.
 
 .. _Why are we doing this?:
 

@@ -1,29 +1,51 @@
-.. _Setting up Encrypted Email Workflow:
+.. _Encrypted Email Workflow:
 
-Setting up Encrypted Email Workflow
------------------------------------
+Encrypted Email Workflow
+========================
 
 One of Redmine's strengths as a ticketing system is its powerful support
 for email-based workflow. You can use email to create new issues, reply
 to existing issues, and be notified of updates to issues that are
 relevant to you.
 
-If you prefer to only use the web-based workflow, that's fine! In that
-case, you will still receive email alerts for changes to issues on your
-SecureDrop's project, but the content of the email will not be included.
-This is called a "filtered" email. We encourage you to use these
-filtered emails as a reminder to login to your Redmine account and check
-the content of the corresponding updates to an issue. These are a kind
-of "poor man's push notifications", and we welcome feedback on how we
-could make notifications for this Redmine system more convenient for
-you.
+While many people find email-based workflows convenient, email is
+unfortunately insecure by default. Freedom of the Press Foundation takes
+the security of every SecureDrop instance seriously; therefore, we
+require the use of encryption for support requests because they may
+contain sensitive information about your SecureDrop instance.
+
+The web interface workflow is automatically encrypted thanks to HTTPS.
+Supporting a secure email-based workflow is more difficult because email
+is unencrypted by default. Our solution is to combine Redmine's
+excellent email-based workflow with OpenPGP encryption, which we already
+use to communicate with many SecureDrop administrators and journalists.
+
+What if I don't want to use encrypted email?
+--------------------------------------------
+
+That's fine! You can do everything through the web interface that you
+can do through email.
+
+If you don't do the setup process for receiving encrypted emails from
+our support server, you will still receive email alerts for changes to
+issues in your project, but the content of the email will not be
+included. This is called a "filtered" email.
 
 |FilteredEmail|
 
-To protect the contents of support requests, which could be sensitive,
-we require all email to and from the server to be encrypted with
-OpenPGP. At a high level, in order to use this encrypted email workflow,
-you need to:
+We encourage you to use these filtered emails as a reminder to login to
+your Redmine account and check the content of the corresponding updates
+to an issue through the web interface. We like to think of them as "poor
+man's push notifications".
+
+.. note:: We welcome feedback on how we could make notifications for
+          this Redmine system more convenient for you.
+
+Setup
+-----
+
+At a high level, in order to use this encrypted email workflow, you need
+to:
 
 1. Provide **your public key** to the support server
 2. Import the **server's public key** into your local GPG keyring.
@@ -32,6 +54,9 @@ The following documentation explains how to perform these steps to get
 the encrypted email workflow working. It assumes you have some
 familiarity with the concepts used by PGP. It also assumes you are using
 Thunderbird+Enigmail for OpenPGP-encrypted email.
+
+Providing your public key
+-------------------------
 
 Start by navigating to
 `support.freedom.press/pgp <https://support.freedom.press/pgp>`_ or
@@ -51,6 +76,9 @@ on the left and hit **Save**.
 
 .. todo::  provide instructions for exporting ascii-armored copy, or provide
    link to instructions on another site
+
+Importing the server's public key
+---------------------------------
 
 Now, import the public key for our Redmine server. It is available on
 the right hand side of the page. Start by selecting the entire public
@@ -73,6 +101,7 @@ following command:
 The key can be downloaded `at this
 link <https://freedom.press/sites/default/files/redmine_key.asc>`_.
 
+.. todo:: Add section on testing encrypted email after setting it up
 
 .. |FilteredEmail| image:: images/filtered_email.png
 .. |Per-recipientRule| image:: images/per_recipient_rule.png
