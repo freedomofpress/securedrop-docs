@@ -1,0 +1,193 @@
+#+TITLE: Onboarding Issue Script
+
+This is the script for onboarding new users onto the SecureDrop Support Redmine
+site. Onboarding users consists of:
+
+1. Creating an issue on the new user's project for them to interact with
+2. Replying to the issue to get users to do additional tasks in order to help
+   them practice and ensure they know how to correctly use the new system.
+
+/Note for non-Emacs users:/ This document is written with Org-mode (.org), a
+kickass Emacs mode for outlining. It is also plain text, so you can edit it with
+your preferred editor. The formatting should be fairly self-explanatory, but in
+case it's not, check out the [[http://orgmode.org/guide/][Org Guide]].
+
+* New user should be able to reply to an existing issue
+
+Create the initial onboarding issue on the project for the new user's SecureDrop
+instance:
+
+*Subject*: Onboarding
+*Description*:
+
+#+BEGIN_SRC markdown
+# Welcome to the Freedom of the Press Foundation's SecureDrop Support site!
+
+This is the onboarding issue, which we will use to walk you through the basics of using the support site.
+
+For your first task, write a reply to this issue. Click the **Edit** button at either the top or bottom of the issue. Write a reply in the "Notes" text box, then click **Submit** at the bottom of the page.
+
+You should see the issue updated with your reply, including a "Successful update" notification in green at the top of the page.
+
+You should also get an email notification of your change to the issue within a few minutes. If you haven't configured encrypted email notifications yet, the message will be "filtered" - that is, you'll get an email notifying you that the issue was changed, but the details of the change will not be included in the body of the email for security reasons.
+
+We'll get a notification of your reply as well, and will reply within a few minutes with the next step of the onboarding process. You should get an email notification when we do. Refresh this page to see our reply.
+
+## Troubleshooting
+
+### I didn't get an email notification
+
+Typically, email notifications are sent within a minute of submitting a change. If you don't get an email notification within 10 minutes of submitting your reply, write another reply on the issue explaining that you're still waiting on the email notification. We'll check the server to make sure it's ok.
+
+You should check your Spam folder to to make sure the notification email wasn't filtered as spam. If it was, check your spam setting or talk to your email provider. Consider whitelisting the support@freedom.press email address.
+#+END_SRC
+
+The new user should send a reply within a few minutes. Once you've received
+their reply, continue to the next step.
+
+** New user should be able to receive email notifications
+
+This is an optional step, and only needs to be followed if the user replies
+saying they did not receive an email after 10 minutes (following the "I didn't
+receive a notification email" steps in the "Troubleshooting" section on the
+onboarding issue).
+
+Use the issue to communicate back and forth with the user.
+
+- Make sure their spam settings are not blocking the emails.
+- Make sure the server is working and verify that email in question was sent in ~production.log~.
+
+
+* New user should be able to create a new issue
+
+Write a reply on the onboarding issue asking the user to create a new issue.
+
+*Reply*:
+
+#+BEGIN_SRC markdown
+For your second task, create a new issue on this project. This is how you will initiate new support requests for your SecureDrop installation.
+
+On the project page, or any of its subpages, navigate to the gray menu bar and click **New issue**. Fill out the *Subject* and *Description* fields, and leave the rest of the fields set to their defaults. Feel free to explore the rich text editor. You can click the button with a question mark icon for a reference on the markup language (Markdown). When you're done, click **Save**.
+
+You should be taken to a page with the new issue, including a "Issue #xyz created" notification at the top of the page. If you go back to the Issues page (by clicking **Issues**), you should see both your new issue and the original "Onboarding" issue listed.
+
+You should get an email notification of the new issue within a few minutes. It will have "(New)" in the subject line, as well as the issue's Subject. Note that because OpenPGP does not encrypt subject lines, you should not include potentially sensitive information in the Subject of an issue; however, please try to make them meaningful to avoid driving us crazy :-)
+
+We'll get a notification of the new issue as well, and will reply *on the new issue* in a few minutes with the next step of the onboarding process.
+
+## Troubleshooting
+
+If you encounter any unexpected problems, let us know in a reply on the original "Onboarding" issue.
+
+#+END_SRC
+
+Once the user creates the new issue, write the following reply on the /new
+issue/:
+
+*Reply*:
+
+#+BEGIN_SRC markdown
+We got a notification of your new issue, so here's our reply!
+
+Normally, we would be writing an answer to your support request here, or we might ask you for more information to help us understand the problem. Since this was just a learning exercise for onboarding, we're going to close it now.
+
+Go back to the original "Onboarding" issue and look for a reply with the next step in the onboarding process!
+#+END_SRC
+
+
+* New user should be able to set up the encrypted email workflow (optional)
+
+Now that the new user is comfortable with creating and replying to issues, they
+have everything they need to report issues and interact with us on resolving
+them.
+
+Ask them if they want to use the encrypted email workflow. This step is
+optional, and should only be undertaken if the person is already comfortable
+using OpenPGP email. Otherwise, it is probably going to be more trouble than
+it's worth and they should stick to the web workflow.
+
+On the original "Onboarding" issue, write the following reply:
+
+*Reply*:
+
+#+BEGIN_SRC markdown
+Great! Now that you're comfortable creating and replying to issues, you're ready to use Redmine to report issues and request support for your Redmine instance.
+
+We optionally provide an encrypted email-based workflow for users who are comfortable using encrypted email. If you would like to use this workflow, write a reply on this issue saying so - we'll walk you through setting it up and testing it to make sure everything's working.
+
+Otherwise, write a reply saying you'd prefer to stick to the web-based workflow and we'll respond with the final part of the onboarding process.
+#+END_SRC
+
+If they reply in the affirmative, continue with the steps in the subheadings
+below. Otherwise, skip to the next section.
+
+** New user should be able to read encrypted email notifications
+
+Write a reply on the original "Onboarding" issue:
+
+#+BEGIN_SRC markdown
+To get started, follow our [documentation](https://securedrop-support.readthedocs.org/en/latest/encrypted_email_overview.html) on setting up the encrypted email workflow. We'll wait :-)
+
+Once you have the public keys and your mail client set up, continue by writing a reply on this issue.
+#+END_SRC
+
+If they have encrypted email set up correctly, then writing a reply on the issue
+should trigger an encrypted email notification that they can now read. Verify
+that this is the case by writing another reply:
+
+#+BEGIN_SRC markdown
+Great! The reply that you just wrote should have triggered an email notification that will get sent to you. Since you've set up the encrypted email workflow, you should get an encrypted email with detailed information about the change you just made to this issue.
+
+Please write a reply confirming that you were able to receive and read an encrypted email notification. If you did not, let us know and we'll work with you to troubleshoot your setup.
+#+END_SRC
+
+** New user should be able to update an issue by replying to an email notification
+
+Once you've confirmed that they can /receive/ encrypted email notifications, you
+should test that they can send encrypted email to update issues as well.
+
+Write a reply on the onboarding issue:
+
+#+BEGIN_SRC markdown
+Now that you can read the encrypted notification emails sent to you from Redmine, you should also be able to write replies on an issue simply by replying to the email notification.
+
+Try it! Go to the last encrypted email notification for this issue, then hit the **Reply** button in your email client. Write your reply in the body of the email (above the line that says "Reply above this line"). Make sure the email is being sent to support@freedom.press, is using PGP/MIME (not inline PGP), and is encrypted and signed. Hit **Send**.
+
+After sending the email, wait a minute or two, then refresh this page. You should see the issue updated with a new reply taken from the email you just sent.
+#+END_SRC
+
+Wait until you see a new reply on the issue that was created by the new user
+sending an email. You can tell when a reply was created by email because the
+issue will include the line above the "reply above this line" line from the
+original email, which usually looks something like: ~On 3/13/16 1:38 PM, support@freedom.press wrote:~.
+
+** New user should be able to create a new issue by sending an email
+
+Now that they can reply to issues from email, you should let them know that they
+can create issues from email as well.
+
+#+BEGIN_SRC markdown
+Now that you can reply to issues from your email inbox, you should know that you can create new issues by email as well!
+
+To do so, simply write a new email to support@freedom.press. The subject line will be used as the Subject of the issue and the body will be used as the Description. Make sure it's PGP/MIME, encrypted and signed, then hit **Send**. Our server will automatically create a new issue in the correct project based on your email address.
+
+Note that our server will reject email sent to support@freedom.press if it is not encrypted or validly signed.
+#+END_SRC
+
+Wait until the user creates a new issue by email. Once they have, reply on the
+new issue confirming that we saw it, then close it.
+
+* Done!
+
+Write a reply on the original "Onboarding" issue:
+
+#+BEGIN_SRC markdown
+You're done! Thanks for taking the time to set up your account on the new SecureDrop Support server and walk through the onboarding process with us. From now on, please report all support requests to us through this system.
+
+If you have any questions, check out the [SecureDrop Support Server Documentation](https://securedrop-support.readthedocs.org) online. If you still can't find what you're looking for, open a new issue on the Support Server and we'll discuss your question there.
+
+Now that we've finished the onboarding process, we're going to close this "Onboarding" issue. If you'd like to refer back to it at any time, you can find it by showing Closed issues on the Issues page. To do so, go to your project page and click **Issues**. In the *Filters* section, change *Status* from *open* to *closed*, then click **Apply**. All of your closed issues, including the Onboarding issue, will be shown.
+
+Thanks for playing,
+Freedom of the Press Foundation
+#+END_SRC
