@@ -15,6 +15,10 @@
 import sys
 import os
 
+# Detect if we're being built by Read the Docs
+# https://docs.readthedocs.org/en/latest/faq.html#how-do-i-change-behavior-for-read-the-docs
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -47,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'FPF Redmine'
+project = u'SecureDrop Support'
 copyright = u'2016, Freedom of the Press Foundation'
 author = u'Freedom of the Press Foundation'
 
@@ -109,7 +113,22 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+if on_rtd:
+    html_theme = 'default'
+else:
+    try:
+        # If you want to build the docs locally using the RTD theme,
+        # you may need to install it: ``pip install sphinx_rtd_theme``.
+        # https://github.com/snide/sphinx_rtd_theme#via-package
+        import sphinx_rtd_theme
+        html_theme = "sphinx_rtd_theme"
+        html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    except ImportError:
+        # This theme is included with Sphinx and is quite nice (based
+        # on the Pocoo themes), but since we're using the RTD theme
+        # for the production docs, it's best to use that to avoid
+        # issues due to discrepancies between the themes.
+        html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -201,7 +220,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'FPFRedminedoc'
+htmlhelp_basename = 'SecureDropSupportdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -223,7 +242,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'FPFRedmine.tex', u'FPF\'s Redmine Documentation',
+    (master_doc, 'SecureDropSupport.tex', u'SecureDrop Support Documentation',
      u'Freedom of the Press Foundation', 'manual'),
 ]
 
@@ -253,7 +272,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'fpfsredmine', u'FPF\'s Redmine Documentation',
+    (master_doc, 'securedropsupport', u'SecureDrop Support Documentation',
      [author], 1)
 ]
 
@@ -267,8 +286,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'FPFRedmine', u'FPF\'s Redmine Documentation',
-     author, 'FPFsRedmine', 'One line description of project.',
+    (master_doc, 'SecureDrop Support', u'SecureDrop Support Documentation',
+     author, 'SecureDrop Support', 'One line description of project.',
      'Miscellaneous'),
 ]
 
