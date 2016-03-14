@@ -28,14 +28,23 @@ SecureDrop instance listed underneath the parent SecureDrop project.
 Only Freedom of the Press Foundation staff and people within your
 organization have access to your instance's project.
 
-Click on the project link. You'll be shown an Overview of the project
-and all of the issues that are open, which are also listed under the
-Issues pane.
+|Projects|
 
-.. todo:: Screenshot of project overview page
+Click on the project link. You'll be shown an **Overview** of the project and
+all of its issues.
+
+|Overview|
+
+To view the list of open issues, click the **Issues** button to open the issues
+pane.
+
+|Issues|
 
 .. |Login| image:: images/login.png
 .. |Home| image:: images/home.png
+.. |Projects| image:: images/projects.png
+.. |Overview| image:: images/overview.png
+.. |Issues| image:: images/issues.png
 
 
 Onboarding Issue
