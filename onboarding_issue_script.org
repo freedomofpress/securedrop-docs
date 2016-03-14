@@ -110,7 +110,7 @@ On the original "Onboarding" issue, write the following reply:
 *Reply*:
 
 #+BEGIN_SRC markdown
-Great! Now that you're comfortable creating and replying to issues, you're ready to use Redmine to report issues and request support for your Redmine instance.
+Great! Now that you're comfortable creating and replying to issues, you're ready to use Redmine to report issues and request support for your SecureDrop instance.
 
 We optionally provide an encrypted email-based workflow for users who are comfortable using encrypted email. If you would like to use this workflow, write a reply on this issue saying so - we'll walk you through setting it up and testing it to make sure everything's working.
 
