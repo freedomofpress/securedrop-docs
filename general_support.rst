@@ -3,11 +3,15 @@
 General Support
 ===============
 
-If you haven't installed SecureDrop yet and you'd like our help, or you
-have a situation related to digital security for journalists, simply get
-started by :doc:`creating an account <creating_your_account>` in Redmine.
+First time getting in touch with us about SecureDrop? Please start by submitting
+a request through the `SecureDrop Contact Form`_.
 
-Once your account is manually activated by us, we will assign you to a project
-called "Support Triage" where you can open a new issue. Any tickets that you
-create in this project will only be visible to Freedom of the Press Foundation
-staff and you.
+.. _SecureDrop Contact Form: https://securedrop.org/help
+
+Please provide an email address so we can reply back to you. We'll review your
+request and decide how to respond. If we decide to offer you support, we will
+send you instructions for onboarding you into our support system.
+
+Once you are initially onboarded, we will assign you to a project called
+"Support Triage" where you will be able open new issues. Any issues that you
+create will only be visible to Freedom of the Press Foundation staff and you.
