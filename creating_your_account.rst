@@ -7,8 +7,10 @@ To get started, register your account on the `Registration Page`_.
 
 Make sure you:
 
-* Choose a strong password
+* Choose a strong password.
 * Use an email address that you frequently check.
+* Pick a username that helps us identify you at a glance. We recommend using
+  your first initial and your last name, e.g. "jsmith" for John Smith.
 
 .. _Registration Page: https://support.freedom.press/account/register
 
