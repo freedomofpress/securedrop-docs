@@ -92,13 +92,12 @@ Sending an email to support@freedom.press will automatically create a
 new issue in your project, using the subject line of the email for the
 Subject and the body of the email for the Description.
 
-Documents, Wiki, and Files
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Wiki
+^^^^
 
-In addition to the Activity pane which lists recent updates, your
-subproject has modules for Documents, Wiki, and Files. This is where we
-intend to store any technical documentation related to your SecureDrop
-instance.
+In addition to the Activity pane which lists recent updates, your subproject has
+a **Wiki** module. This is where we will store notes and other useful
+information related to your SecureDrop instance.
 
 Account Settings
 ^^^^^^^^^^^^^^^^
