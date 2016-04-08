@@ -46,12 +46,8 @@ Select the entire public key and copy it to your clipboard. Import the
 copied public key into your local GPG keyring.
 
 The key is also available on the keyservers (fingerprint:
-``5F7B9C54E9B27164909EDA6693359153A3BD4560``), or you can download it
+``D0E0B2F2B71BA4E48278037D9EA33029E9FBBA2E``), or you can download it
 `here <https://freedom.press/sites/default/files/redmine_key.asc>`_.
-
-.. todo:: The following key is a testing key, so this command is only a
-   placeholder until the transition to a live key. DO NOT upload this key to
-   keyservers.
 
 .. todo:: Add section on testing encrypted email after setting it up
 
