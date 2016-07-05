@@ -42,16 +42,16 @@ learn more about configuring and using the optional email-based workflow
 in the :doc:`Encrypted Email Overview <encrypted_email_overview>`.
 
 .. toctree::
-   :caption: Support Website
-   :name: Support Website
+   :caption: Web-based Workflow
+   :name: Web-based Workflow
 
    creating_your_account
    using_redmine
    troubleshooting
 
 .. toctree::
-   :caption: Email Workflow
-   :name: Email Workflow
+   :caption: Email-based Workflow
+   :name: Email-based Workflow
 
    encrypted_email_overview
    encrypted_email_do_not_want
