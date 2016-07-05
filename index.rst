@@ -77,4 +77,6 @@ in providing help to you.
 .. note:: Don't hesitate to let us know if you have any feedback on the
           new support system.
 
-.. todo:: What's the best way to provide feedback on the support system?
+          If you already have an account on the support site, create a new issue
+          in your project to provide feedback. Otherwise, use the
+          :doc:`general_support` channel.
