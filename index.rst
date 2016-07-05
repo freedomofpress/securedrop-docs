@@ -20,6 +20,20 @@ As a current SecureDrop administrator or journalist, you will need to
 spend a little time setting up an account on the new support site. This
 is quick and easy - get started by :doc:`creating_your_account`.
 
+First time contacting us?
+-------------------------
+
+If you've never contacted us before, and have questions about:
+
+* Installing SecureDrop
+* An existing SecureDrop installation that was set up without our involvement
+* Inclusion in the `SecureDrop Directory <https://securedrop.org/directory>`_
+
+then please contact us through the :doc:`general_support` channel.
+
+Using the support site
+----------------------
+
 Once your account has been created, there are two workflows you can use:
 a web-based workflow, and an email-based workflow. Either workflow may
 be used interchangeably. We think most people will want to use the
@@ -43,17 +57,6 @@ in the :doc:`Encrypted Email Overview <encrypted_email_overview>`.
    encrypted_email_do_not_want
    encrypted_email_setup
    encrypted_email_troubleshooting
-
-First time contacting us?
--------------------------
-
-If you've never contacted us before, and have questions about:
-
-* Installing SecureDrop
-* An existing SecureDrop installation that was set up without our involvement
-* Inclusion in the `SecureDrop Directory <https://securedrop.org/directory>`_
-
-then please contact us through the :doc:`general_support` channel.
 
 .. toctree::
    :caption: General Support
