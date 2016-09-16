@@ -20,6 +20,10 @@ As a current SecureDrop administrator or journalist, you will need to
 spend a little time setting up an account on the new support site. This
 is quick and easy - get started by :doc:`creating_your_account`.
 
+.. note:: We recently added the ability to reach our new support site
+          through a Tor onion service. It's available at
+          http://support6kv2242qx.onion/
+
 First time contacting us?
 -------------------------
 
