@@ -1,7 +1,5 @@
-# Redmine Documentation
+![SecureDrop logo](images/sdlogo.png) ![Freedom of the Press Foundation's logo](images/fpflogo.png)
 
-![Freedom of the Press Foundation's logo](images/fpflogo.png)
+# SecureDrop Redmine Support Documentation
 
-This repository holds documentation for our [Redmine-based support system](https://support.freedom.press) for [Freedom of the Press Foundation](https://freedom.press/).
-
-Our Redmine support system is also available as a Tor Onion Service (http://support6kv2242qx.onion).
+This repository holds the [documentation](https://securedrop-support.readthedocs.io/en/latest/index.html) for SecureDrop's [Redmine-based support system](https://support.freedom.press). The support system is also available as a Tor Onion Service (http://support6kv2242qx.onion).
