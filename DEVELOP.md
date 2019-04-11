@@ -7,3 +7,5 @@ To render the docs locally:
 * Install the requirements with `pipenv install`;
 * Do `pipenv run make docs`;
 * Open a browser and point to http://localhost:8000.
+
+Before submitting a PR, please test for any formatting problems with `pipenv run make docs-lint`.
