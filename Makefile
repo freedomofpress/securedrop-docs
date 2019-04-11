@@ -47,6 +47,11 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  coverage   to run coverage check of the documentation (if enabled)"
 
+.PHONY: docs
+docs: ## Build project documentation in live reload for editing
+# Spins up livereload environment for editing; blocks.
+	rm -rf _build/ && sphinx-autobuild . _build/html
+
 .PHONY: clean
 clean:
 	rm -rf $(BUILDDIR)/*

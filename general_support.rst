@@ -1,4 +1,4 @@
-.. _General Support:
+.. _general_support:
 
 General Support
 ===============
