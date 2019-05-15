@@ -52,6 +52,12 @@ docs: ## Build project documentation in live reload for editing
 # Spins up livereload environment for editing; blocks.
 	rm -rf _build/ && sphinx-autobuild . _build/html
 
+.PHONY: docs-lint
+docs-lint: ## Check documentation for common syntax errors.
+# The `-W` option converts warnings to errors.
+# The `-n` option enables "nit-picky" mode.
+	make clean && sphinx-build -Wn . $(BUILDDIR)/html
+
 .PHONY: clean
 clean:
 	rm -rf $(BUILDDIR)/*
