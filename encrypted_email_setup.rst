@@ -47,7 +47,7 @@ copied public key into your local GPG keyring.
 
 The key is also available on the keyservers (fingerprint:
 ``D0E0B2F2B71BA4E48278037D9EA33029E9FBBA2E``), or you can download it
-`here <https://freedom.press/sites/default/files/redmine_key.asc>`_.
+`here <https://freedom.press/documents/37/redmine_public_key.asc>`_.
 
 .. todo:: Add section on testing encrypted email after setting it up
 
