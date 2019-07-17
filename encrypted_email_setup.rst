@@ -20,19 +20,21 @@ Providing your public key
 
 Start by navigating to
 `support.freedom.press/pgp <https://support.freedom.press/pgp>`_ or
-click the key icon in the upper right corner of the support window.
+click on the "PGP" menu option in the upper right corner of the support window.
 
-|PGPicon|
+|PGPMenu|
 
 In the PGP management window you will see two columns: one for your
 public key on the left, and one with the server's public key on the
 right.
 
-|PGPsettings|
+|PGPUpload|
 
 To provide your public key, start by exporting an ASCII-armored copy of
 your public key. Paste your armored public key into the empty text box
 on the left and hit **Save**.
+
+|PGPSave|
 
 Importing the server's public key
 ---------------------------------
@@ -51,5 +53,6 @@ The key is also available on the keyservers (fingerprint:
 
 .. todo:: Add section on testing encrypted email after setting it up
 
-.. |PGPicon| image:: images/pgp_icon.png
-.. |PGPsettings| image:: images/pgp.png
+.. |PGPMenu| image:: images/pgp_menu.png
+.. |PGPUpload| image:: images/pgp_upload.png
+.. |PGPSave| image:: images/pgp_save.png

@@ -55,13 +55,19 @@ onboarding, called "Onboarding Verification". Please write a reply on
 this issue, which will let us know that you succeeded in logging in and
 finding your project page.
 
-To write a reply, click **Edit** button at the bottom of the issue.
+|OnboardingIssue|
+
+To write a reply, click **Edit** button at the top of the issue.
 Write your reply in the Notes text box, then click **Submit**.
+
+|EditIssue1|
 
 We'll reply to the issue and start a little exchange to explain some
 features of the platform and answer any questions you might have. The
 goal here is to make sure you're comfortable and confident using the new
 Support site.
+
+|EditIssue2|
 
 Once we're satisfied you're ready to use the new site, we'll close the
 issue.
@@ -72,6 +78,9 @@ over to the :doc:`Encrypted Email Overview <encrypted_email_overview>`.
 
 The rest of this documentation is for your reference.
 
+.. |OnboardingIssue| image:: images/onboarding_issue.png
+.. |EditIssue1| image:: images/edit_issue_1.png
+.. |EditIssue2| image:: images/edit_issue_2.png
 
 Key Features
 ------------
@@ -85,6 +94,10 @@ assign a priority if you want. When we see the issue, we will respond
 and assign it to the appropriate person. If we're waiting for a reply
 from someone in your organization, we may assign it back to you.
 
+|NewIssue|
+
+.. |NewIssue| image:: images/new_issue.png
+
 Creating a new issue via email
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -92,19 +105,16 @@ Sending an email to support@freedom.press will automatically create a
 new issue in your project, using the subject line of the email for the
 Subject and the body of the email for the Description.
 
-Wiki
-^^^^
-
-In addition to the Activity pane which lists recent updates, your subproject has
-a **Wiki** module. This is where we will store notes and other useful
-information related to your SecureDrop instance.
-
 Account Settings
 ^^^^^^^^^^^^^^^^
 
 Under your account settings (accessible in the top right corner) you may
 set your local time zone. We encourage you to leave the notification
 setting as the default: "For any event on all my projects".
+
+|AccountSettings|
+
+.. |AccountSettings| image:: images/account_settings.png
 
 Additional Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^
