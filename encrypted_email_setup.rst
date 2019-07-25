@@ -47,9 +47,9 @@ text box labeled "Public PGP key".
 Select the entire public key and copy it to your clipboard. Import the
 copied public key into your local GPG keyring.
 
-The key is also available on the keyservers (fingerprint:
-``D0E0B2F2B71BA4E48278037D9EA33029E9FBBA2E``), or you can download it
-`here <https://freedom.press/documents/37/redmine_public_key.asc>`_.
+You can `download the key <https://freedom.press/documents/37/redmine_public_key.asc>`_ or fetch it from a `keyserver <https://keys.openpgp.org/vks/v1/by-fingerprint/D0E0B2F2B71BA4E48278037D9EA33029E9FBBA2E>`_ (fingerprint:
+``D0E0B2F2B71BA4E48278037D9EA33029E9FBBA2E``).
+
 
 .. todo:: Add section on testing encrypted email after setting it up
 
