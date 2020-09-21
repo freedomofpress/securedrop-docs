@@ -4,15 +4,16 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
+SPHINXAUTO    = sphinx-autobuild
 PAPER         =
 BUILDDIR      = _build
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
+$(error The '$(SPHINXBUILD)' command was not found. This is most likely because you are not running this command in a Python virtual environment with the requirements installed. Please see DEVELOP.md for setup instructions.')
 endif
 
-# Internal variables.
+# Internal variables. The doctrees directory is used by Sphinx to cache parsing results.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
@@ -21,8 +22,15 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 .PHONY: help
 help:
-	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "Please use \`make <target>' where <target> is one of:"
+	@echo
+	@echo "  docs       to build the docs, serve them up locally, and watch for changes"
+	@echo "  docs-lint  to build the docs with strict syntactic validation"
 	@echo "  html       to make standalone HTML files"
+	@echo "  linkcheck  to check all external links for integrity"
+	@echo
+	@echo "The following targets are also supported:"
+	@echo
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
 	@echo "  pickle     to make pickle files"
@@ -43,20 +51,19 @@ help:
 	@echo "  changes    to make an overview of all changed/added/deprecated items"
 	@echo "  xml        to make Docutils-native XML files"
 	@echo "  pseudoxml  to make pseudoxml-XML files for display purposes"
-	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  coverage   to run coverage check of the documentation (if enabled)"
 
 .PHONY: docs
 docs: ## Build project documentation in live reload for editing
 # Spins up livereload environment for editing; blocks.
-	rm -rf _build/ && sphinx-autobuild . _build/html
+	make clean && $(SPHINXAUTO) $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 .PHONY: docs-lint
 docs-lint: ## Check documentation for common syntax errors.
 # The `-W` option converts warnings to errors.
 # The `-n` option enables "nit-picky" mode.
-	make clean && sphinx-build -Wn . $(BUILDDIR)/html
+	make clean && $(SPHINXBUILD) -Wn $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 .PHONY: clean
 clean:
