@@ -105,20 +105,75 @@ Sending an email to support@freedom.press will automatically create a
 new issue in your project, using the subject line of the email for the
 Subject and the body of the email for the Description.
 
-Account Settings
-^^^^^^^^^^^^^^^^
+Enabling two-factor authentication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Two-factor authentication (2FA) protects your account in the event that your
+passphrase is compromised. Once enabled, you will be prompted to provide a
+one-time six digit code every time you log into the support portal, in addition
+to your passphrase.
 
-Under your account settings (accessible in the top right corner) you may
-set your local time zone. We encourage you to leave the notification
-setting as the default: "For any event on all my projects".
+To enable 2FA:
 
-|AccountSettings|
+1. Choose an application to generate two-factor codes. We recommend the
+   `FreeOTP app <https://freeotp.github.io/>`__ for Android or iOS, but any
+   app that implements the Time-based One Time Password (TOTP) algorithm
+   should work.
+2. If you are not already logged in, log into the support portal.
+3. Click **My account** in the top right corner to navigate to your
+   account settings. On the settings page, click **Enable authenticator app**.
 
-.. |AccountSettings| image:: images/account_settings.png
+   |2FA setting|
+
+4. You will see a page that shows a QR code, similar to the one below.
+   Use your 2FA app's QR code scanning function to scan the code on the page,
+   or manually enter the 2FA secret (called a "plain text key" here) in the app.
+
+   |2FA example|
+
+5. Select the account you have just added to your 2FA app, and generate a new
+   one-time token using the app. Enter it on the webpage and click **Activate**.
+6. You should see a success message like the one below. Follow the recommendation
+   and click **generate backup codes**.
+
+   |2FA success|
+
+7. You will see a list of codes like the one below. Each code (e.g., ``ec96 a5d7 c678``)
+   can be used once *instead of* a 2FA code during the login sequence. Store
+   these codes securely and separately from your passphrase. The recommended
+   method is to keep a printout of the recovery codes in a secure location.
+
+   |2FA backup codes|
+
+8. Log out of your account and attempt to log in again. After entering your
+   passphrase, you will additionally be prompted for a two-factor code, which
+   you can generate using your 2FA app.
+
+If you have to reset your 2FA settings at any time, you can use a recovery code.
+Once you are logged in, disable and then re-enable 2FA from your account settings.
+
+Please do not hesitate to open a ticket or email us at
+securedrop@freedom.press (`GPG-encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__)
+if you encounter difficulties using 2FA on the support portal.
+
+.. |2FA setting| image:: images/account_settings_with_2fa_highlighted.png
+.. |2FA example| image:: images/qr_code_example.png
+.. |2FA success| image:: images/2fa_success.png
+.. |2FA backup codes| image:: images/2fa_backup_codes.png
+
+Other account settings
+^^^^^^^^^^^^^^^^^^^^^^
+In addition to two-factor authentication, you can also configure your local
+time zone in the account settings.
+
+We encourage you to leave the notification setting as the default:
+"For any event on all my projects".
+
+|Account settings|
+
+.. |Account settings| image:: images/account_settings.png
 
 Additional Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 For more information on using Redmine, consult their `User Guide
 <https://www.redmine.org/projects/redmine/wiki/User_Guide>`_.
-
