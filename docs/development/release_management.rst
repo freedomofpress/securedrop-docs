@@ -176,8 +176,14 @@ Pre-Release
      is done, ensure that no changes involving string changes are
      backported into the release branch.
 
-   * Ensure that a draft of the release notes are prepared and shared
-     with the community for feedback.
+   * Work with the Communications Manager to ensure that a draft of the release
+     notes are prepared and shared for review, and that a draft PR is prepared
+     into the ``securedrop-docs`` repository which:
+
+     - bumps the SecureDrop version of the documentation using the ``update_version.sh``
+       script in that repository;
+     - adds upgrade instructions and other release-specific technical documentation;
+     - updates the screenshots, if warranted;
 
 Release Process
 ---------------
@@ -262,16 +268,32 @@ Release Process
    ``apt.freedom.press``.
 #. The reviewer must delete the ``release`` branch so that it can be re-created
    during the next release.
-#. Update the `public documentation <https://docs.securedrop.org/en/stable>`_ by
-   synchronising the ``stable`` branch with the release branch:
+#. Update the `public documentation <https://docs.securedrop.org/>`_:
 
-   * If a repository maintainer is available, remove the branch protection on
-     the ``stable`` branch, hard-reset it to the release branch, and force push
-     ``stable``. Then restore branch protection on ``stable``.
+  * Review and merge the ``securedrop-docs`` PR that bumps the version and adds
+    the upgrade documentation for this release.
 
-   * If a maintainer is not available, create a PR with the release branch
-     changes using ``stable`` as the base. Version number updates will cause
-     conflicts which must be resolved manually before issuing the PR.
+  * Verify that there are no changes on the ``main`` branch of ``securedrop-docs``
+    that should not be released into the stable version of the documentation.
+
+    If necessary, you can create a branch from an earlier commit. Follow the
+    ``release/<major>.<minor>.<patch>`` convention for the branch name in
+    ``securedrop-docs``, and cherry-pick at least the changes from the PR above
+    onto it via a backport PR.
+
+  * Create a tag signed with your developer key in the format
+    ``<major>.<minor>.<patch>`` on the ``HEAD`` of the ``main`` branch or of the
+    docs release branch you created in the previous step. ::
+
+      git tag -as <major>.<minor>.<patch>
+      git push origin <major>.<minor>.<patch>
+
+    This will update the stable version of the documentation.
+
+  * Subsequent changes to the stable version should be tagged with PEP-440
+    conformant `post-release separators <https://www.python.org/dev/peps/pep-0440/#post-release-separators>`__
+    in the format ``<major>.<minor>.<patch>-1``,  ``<major>.<minor>.<patch>-2``,
+    and so on.
 
 #. Verify that the public documentation has been updated, by checking the
    `ReadTheDocs build history <https://readthedocs.org/projects/securedrop/builds/>`_.
