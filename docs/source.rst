@@ -16,24 +16,26 @@ Source Guide
    communications with them. If you plan to use SecureDrop to maintain your
    anonymity, you should not discuss your own use of it with others via unsafe
    methods, including email to Freedom of the Press Foundation.
+   
+What is SecureDrop?
+---------------------------
+
+Dozens of news organizations — from *ProPublica* to *The New York Times* — use SecureDrop to accept tips securely and anonymously. You can reach out and share files, and messages, but for real anonymity, it’s important to take some extra precautions. This resource will describe things you can do to help protect your anonymity when using SecureDrop.
+
+Before moving ahead, note that your Internet Service Provider, or ISP (e.g., Comcast), may already have a record of your visit to this website, docs.securedrop.org. Likewise, any related activity should be conducted outside of your workplace; if you are reading this page on a workplace device or network, they may also have a record of that. 
+
+Here are some things you can do to further minimize risk.
 
 
 Choosing the Right Location
 ---------------------------
 
-When national security is involved, we suggest you buy a new computer and a
-USB flash drive, using cash. In any case you must then find a busy coworking
-place or cyber cafe you don't regularly go to and sit at a place with your back
-to a wall to avoid cameras capturing information on your screen or keystrokes.
+If you don’t have sensitive information to send to a news organization, it may be okay to use a traditional computer when reaching out. But when sensitive disclosures (e.g., national security) are involved, we suggest you buy a new computer and a USB flash drive, using cash. Either way, you should then find a busy cafe you don’t regularly go to and sit at a place with your back to a wall to avoid cameras capturing information on your screen or keystrokes.
 
 Get Tor Browser
 -------------------
 
-Each SecureDrop instance has a publicly available *Source Interface:* a website
-where sources can create anonymous accounts, submit files and messages, and
-check back for replies.
-
-Each *Source Interface* is only available as an onion service, which is a
+Each SecureDrop page is only available as an onion service, which is a
 special type of website with an address ending in ".onion" that is only
 accessible through Tor. Tor is an anonymizing network that makes it difficult
 for anybody observing the network to associate a user's identity (e.g., their
@@ -60,15 +62,13 @@ last time you used Tor Browser.
 
 In general, when you are trying to stay anonymous, many time-saving features of
 your computer or phone turn into threats: bookmarks, recommendations,
-synchronization features, shortcuts to frequently opened files, and so on. It
-is very easy to make small mistakes that can endanger your anonymity, especially
-if you use the same device for any other purpose.
+synchronization features, shortcuts to frequently opened files, and so on. This is why using a dedicated computer for whistleblowing activities is generally safer.
 
-For greater deniability and security, we recommend booting into the
+For greater deniability and security, we recommend booting the computer into the
 `Tails operating system`_ (typically from a USB stick). Tails is specifically
 designed to run on your computer without leaving traces of your activity or
 saving logs. It automatically routes all of your Internet browsing through Tor
-so you can easily access SecureDrop safely.
+so you can easily access SecureDrop safely. This may take some additional technical steps, but it’s safer, and fairly simple to get started.
 
 Even if you are using a dedicated computer for your SecureDrop activity that you
 have never used and will never use for anything else, we recommend also using
@@ -80,7 +80,7 @@ your ISP's logs, or on cloud services.
    Tor protects your anonymity, but third parties who can monitor your network
    traffic can detect *that you are using Tor*. They may even be able to do so
    long after your browser session, using network activity logs. This is why we
-   recommend using Tor Browser from a cybercafe or coworking space you do not
+   recommend using Tor Browser from a cafe you do not
    visit regularly.
 
 .. _`Tor Project website`: https://www.torproject.org/
@@ -92,9 +92,7 @@ We recommend conducting all research related to your submission in Tor Browser.
 If you are unsure whether you are using Tor, you can visit the address
 https://check.torproject.org.
 
-All organizations operating SecureDrop have a *Landing Page* that provides their
-own organization-specific recommendations for using SecureDrop. We encourage you
-to consider an organization's *Landing Page* before submitting to them.
+All organizations operating SecureDrop have a landing page that provides their own organization-specific recommendations for using SecureDrop. We encourage you to consider an organization’s landing age before submitting to them.
 
 .. note::
 
@@ -102,24 +100,24 @@ to consider an organization's *Landing Page* before submitting to them.
    the organization you are submitting to. Only the journalists associated
    with that organization can see your submissions.
 
-Most organizations make their *Landing Page* prominently accessible from their
+Most organizations make their SecureDrop prominently accessible from their
 main website's homepage (for news organizations, typically under sections called
 "Tips" or "Contact us"). You can also find an incomplete list of organizations
 accepting submissions through SecureDrop in the `SecureDrop Directory`_
 maintained by Freedom of the Press Foundation.
 
-Using Tor Browser, find the ".onion" address for the *Source Interface* of
+Using Tor Browser, find the ".onion" address for the SecureDrop for
 the organization that you wish to submit to.
 
 .. tip::
 
    If the organization does have an entry in the SecureDrop Directory, we
    recommend comparing the address of the entry with the one on the
-   organization's own *Landing Page*.
+   organization's own SecureDrop landing page.
 
    If the two addresses don't match, please do not submit to this organization
    yet. Instead, please `contact us <https://securedrop.org/report-an-error>`__
-   through the SecureDrop Website, using Tor Browser. For additional
+   through the SecureDrop website, using Tor Browser. For additional
    security, you can use our .onion service address in Tor:
 
    ``secrdrop5wyphb5x.onion/report-an-error``
@@ -127,15 +125,14 @@ the organization that you wish to submit to.
    We will update the directory entry if the information in it is incorrect.
 
 Once you have located the ".onion" address, copy it into the address bar in Tor
-Browser to visit the organization's *Source Interface*.
+Browser to visit the organization's SecureDrop.
 
 .. _`SecureDrop Directory`: https://securedrop.org/directory
 
 Making Your First Submission
 ----------------------------
 
-Open Tor Browser and navigate to the .onion address for the SecureDrop
-*Source Interface* you wish to make a submission to. The page should look similar
+Open Tor Browser and navigate to the .onion address for the SecureDrop you wish to make a submission to. The page should look similar
 to the screenshot below, although it will probably have a logo specific to the
 organization you are submitting to:
 
@@ -168,7 +165,7 @@ similar to this screenshot:
    "Safest" during the entirety of the session in which you access an
    organization's SecureDrop instance.
 
-The SecureDrop *Source Interface* should now refresh automatically and look
+The SecureDrop page should now refresh automatically and look
 similar to the screenshot below. If this is the first time you are using
 SecureDrop, click the **Get Started** button.
 
@@ -193,7 +190,7 @@ Once you have generated a codename and put it somewhere safe, click
 
 |Memorizing your codename|
 
-You will next be brought to the submission interface, where you may
+You will next be brought to the submission page, where you may
 upload a document, enter a message to send to journalists, or both. You
 can only submit one document at a time, so you may want to combine
 several files into a ZIP archive if necessary. The maximum submission
@@ -232,7 +229,7 @@ Continuing the Conversation
 
 If you have already submitted a document and would like to check for
 responses, click the **Log in** button on the media
-organization's *Source Interface*.
+organization's SecureDrop page.
 
 |Source Interface with Javascript Disabled|
 
@@ -242,8 +239,7 @@ The next page will ask for your secret codename. Enter it and click
 |Check for response|
 
 If a journalist has responded, their message will appear on the
-next page. This page also allows you to upload another document or send
-another message to the journalist. Before leaving the page, you should
+next page. Before leaving the page, you should
 delete any replies. In the unlikely event that someone learns
 your codename, this will ensure that they will not be able to see the previous
 correspondences you had with journalists.
