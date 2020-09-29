@@ -25,7 +25,7 @@ To get started editing the docs:
 
       pip install --no-deps --require-hashes -r securedrop/requirements/python3/develop-requirements.txt
 
-.. include:: ../includes/virtualenv.txt   
+.. include:: ../includes/virtualenv.txt
 
 3. Build the docs for viewing in your web browser:
 
@@ -75,13 +75,13 @@ To update these screenshots automatically you can run:
 
 .. code:: sh
 
-   make update-user-guides
+   DOCS_REPO_DIR=/path/to/docs make update-user-guides
 
 This will generate screenshots for each page in the web application and copy
-them to the folder under ``docs/images/manual/screenshots`` where they will
-replace the existing screenshots. Stage for commit any screenshots you wish to
-update. If you wish to update all screenshots, simply stage for commit all
-changed files in that directory.
+them to the folder ``docs/images/manual/screenshots`` in your documentation
+repository checkout, where they will replace the existing screenshots. Stage for
+commit any screenshots you wish to update. If you wish to update all screenshots,
+simply stage for commit all changed files in that directory.
 
 Integration with Read the Docs
 ------------------------------

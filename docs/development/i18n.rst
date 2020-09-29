@@ -207,7 +207,7 @@ repo root:
 
     $ git checkout -b i18n-merge origin/develop
     $ securedrop/bin/dev-shell ./i18n_tool.py --verbose update-from-weblate
-    $ securedrop/bin/dev-shell ./i18n_tool.py --verbose update-docs
+    $ securedrop/bin/dev-shell ./i18n_tool.py --verbose update-docs --docs-repo-dir /path/to/documentation
 
 You now have the latest translations on your ``i18n-merge`` branch.
 
