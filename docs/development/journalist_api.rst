@@ -675,3 +675,37 @@ Response 200:
     "first_name": "Bob",
     "last_name": "Smith",
   }
+
+
+Users ``[/users]``
+------------------
+
+Get a list of all users [``GET``]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Requires authentication.
+
+.. code:: sh
+
+  GET /api/v1/users
+
+Response 200:
+
+.. code:: sh
+
+  {
+    "users": [
+      {
+        "first_name": "Nellie",
+        "last_name": "Bly",
+        "username": "nbly",
+        "uuid": "2b3f05ef-3695-4522-88bd-f124d2e89d01"
+      },
+      {
+        "first_name": "Daniel",
+        "last_name": "Ellsberg",
+        "username": "dellsberg",
+        "uuid": "89eec426-f8c3-4c7a-921f-59ec8fa9fd69"
+      }
+    ]
+  }
