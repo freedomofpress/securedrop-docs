@@ -4,7 +4,8 @@
           <https://docs.securedrop.org/en/latest/development/contributing.html>`_.
           ``stable`` is the default used by our Read the Docs site, and is built
           from our latest signed git tag. ``latest`` is built from the head of
-          the ``develop`` git branch. In almost all cases involving development
-          work, you'll want to make sure you have the ``latest`` version
-          selected by using the menu in the bottom left corner of the Read the
-          Docs site.
+          the ``main`` git branch of the `securedrop-docs repository 
+          <https://github.com/freedomofpress/securedrop-docs>`_. 
+          In almost all cases involving development work, you'll want to make
+          sure you have the ``latest`` version selected by using the menu in the 
+          bottom left corner of the Read the Docs site.
