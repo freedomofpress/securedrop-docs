@@ -1,0 +1,12 @@
+
+.. note:: 
+          It is generally good practice to maintain a clean git history by
+          reducing the number of commits to a reasonable minimum. You can do 
+          this by squashing closely related commits through an interactive 
+          rebase once your PR is close to being merged. If you are unfamiliar 
+          with how to squash commits with rebase, check out this 
+          `blog post <http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html>`__.
+
+          If you would like a project maintainer to help you with squashing 
+          commits in a PR, please don't hesitate to leave a comment requesting
+          assistance.

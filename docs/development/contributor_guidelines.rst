@@ -192,12 +192,9 @@ Git History
 -----------
 
 We currently use an explicit merge strategy to merge feature branches into
-``develop``. In order to keep our git history as clean as possible, please squash
-your commits to package up your changes into a clear history. If you have
-many unnecessary commits that do not add information to aid in review, they
-should be removed. If you are unfamiliar with how to squash commits with rebase,
-check out this
-`blog post <http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html>`__.
+``develop``. 
+
+.. include:: ../includes/squash-commits.txt
 
 .. _contributor-permissions:
 

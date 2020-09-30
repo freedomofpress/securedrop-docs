@@ -1,13 +1,24 @@
 Documentation Guidelines
 ========================
 
-SecureDrop's documentation is written in `ReStructuredText`_ (ReST),
-and is built by and hosted on `Read the Docs`_ (RTD). The
-documentation files are stored in the primary SecureDrop git
-repository under the ``docs/`` directory.
+SecureDrop's documentation is available at https://docs.securedrop.org. It is
+written in `reStructuredText`_ (reST),
+and is built by and hosted on `Read the Docs`_ (RTD). The documentation files
+are stored in the ``docs/`` directory of the `SecureDrop docs repository
+<https://github.com/freedomofpress/securedrop-docs>`_.
 
-.. _ReStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+.. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 .. _Read the Docs: https://docs.readthedocs.org/en/latest/index.html
+
+
+Integration with Read the Docs
+------------------------------
+
+.. include:: ../includes/docs-branches.txt
+
+
+Updating Documentation
+----------------------
 
 To get started editing the docs:
 
@@ -17,15 +28,19 @@ To get started editing the docs:
 
    .. code:: sh
 
-      git clone https://github.com/freedomofpress/securedrop.git
+      git clone https://github.com/freedomofpress/securedrop-docs.git
+
 
 2. Install the dependencies:
 
+   .. include:: ../includes/virtualenv.txt
+
    .. code:: sh
 
-      pip install --no-deps --require-hashes -r securedrop/requirements/python3/develop-requirements.txt
+      pip install --require-hashes -r requirements/requirements.txt
 
-.. include:: ../includes/virtualenv.txt
+
+.. _build_the_docs:
 
 3. Build the docs for viewing in your web browser:
 
@@ -33,9 +48,15 @@ To get started editing the docs:
 
       make docs
 
-You can then browse the documentation at http://127.0.0.1:8000/. As you make
-changes, the documentation pages will automatically rebuild in the browser
-window, so you don't need to refresh the page manually.
+   You can then preview the documentation at http://127.0.0.1:8000. Navigate to
+   the ``docs/`` directory to make changes to the documentation
+   rendered on https://docs.securedrop.org.
+   The documentation pages will automatically rebuild in the browser
+   window, as you make changes; you don't need to refresh the page manually.
+
+   After performing lint checks, open a PR against the ``main`` branch
+   of the `SecureDrop docs repository <https://github.com/freedomofpress/securedrop-docs>`_.
+
 
 Testing Documentation Changes
 -----------------------------
@@ -46,11 +67,9 @@ You can check for formatting violations by running the linting option:
 
       make docs-lint
 
-The ``make docs`` command will display warnings, but will still build the
-documentation if formatting mistakes are found. Using ``make docs-lint``
-will convert any warnings to errors, causing the build to fail.
-The :ref:`CI tests<ci_tests>` will automatically perform linting via the same
-command.
+The ``make docs`` command will display warnings if mistakes are found, but will
+still build the documentation. Using ``make docs-lint`` will convert any warnings
+to errors, causing the build to fail.
 
 To test the documentation for broken links, run the following command from
 a reliable internet connection:
@@ -59,11 +78,12 @@ a reliable internet connection:
 
       make docs-linkcheck
 
-The :ref:`CI tests<ci_tests>` by default create staging servers to test the
-application code. If your PR only makes documentation changes, you should
-prefix the branch name with ``docs-`` to skip the staging run. Project
-maintainers will still need to approve the PR prior to merge, and the linting
-checks will also still run.
+
+Project maintainers will need to approve the PR before it can be merged.
+
+.. include:: ../includes/squash-commits.txt
+
+
 
 .. _updating_screenshots:
 
@@ -71,7 +91,8 @@ Updating Screenshots
 --------------------
 
 The user guides for SecureDrop contain screenshots of the web applications.
-To update these screenshots automatically you can run:
+To update these screenshots automatically you can run this command from within
+your main SecureDrop repository checkout:
 
 .. code:: sh
 
@@ -83,20 +104,15 @@ repository checkout, where they will replace the existing screenshots. Stage for
 commit any screenshots you wish to update. If you wish to update all screenshots,
 simply stage for commit all changed files in that directory.
 
-Integration with Read the Docs
-------------------------------
-
-.. include:: ../includes/docs-branches.txt
-
-Our documentation is built and hosted by `Read the Docs`_ and is available at
-https://docs.securedrop.org. We use a `webhook`_ to rebuild the documentation
-automatically when commits get pushed to the branch.
-
-.. _upstream Git repository: https://github.com/freedomofpress/securedrop
-.. _webhook: https://docs.readthedocs.io/en/latest/webhooks.html
 
 Style Guide
 -----------
+
+Please see the `reStructuredText`_ Primer by the Sphinx project as a reference
+for writing in the markup language used for this documentation.
+
+.. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+
 
 Line Wrapping
 ^^^^^^^^^^^^^
