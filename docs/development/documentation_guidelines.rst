@@ -1,10 +1,10 @@
 Documentation Guidelines
 ========================
 
-SecureDrop's documentation is available at https://docs.securedrop.org. It is 
+SecureDrop's documentation is available at https://docs.securedrop.org. It is
 written in `reStructuredText`_ (reST),
-and is built by and hosted on `Read the Docs`_ (RTD). The documentation files 
-are stored in the ``docs/`` directory of the `SecureDrop docs repository 
+and is built by and hosted on `Read the Docs`_ (RTD). The documentation files
+are stored in the ``docs/`` directory of the `SecureDrop docs repository
 <https://github.com/freedomofpress/securedrop-docs>`_.
 
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
@@ -33,7 +33,7 @@ To get started editing the docs:
 
 2. Install the dependencies:
 
-   .. include:: ../includes/virtualenv.txt  
+   .. include:: ../includes/virtualenv.txt
 
    .. code:: sh
 
@@ -48,13 +48,13 @@ To get started editing the docs:
 
       make docs
 
-   You can then preview the documentation at http://127.0.0.1:8000. Navigate to 
-   the ``docs/`` directory to make changes to the documentation 
+   You can then preview the documentation at http://127.0.0.1:8000. Navigate to
+   the ``docs/`` directory to make changes to the documentation
    rendered on https://docs.securedrop.org.
    The documentation pages will automatically rebuild in the browser
    window, as you make changes; you don't need to refresh the page manually.
 
-   After performing lint checks, open a PR and push changes to the `main` branch
+   After performing lint checks, open a PR against the ``main`` branch
    of the `SecureDrop docs repository <https://github.com/freedomofpress/securedrop-docs>`_.
 
 
@@ -67,8 +67,8 @@ You can check for formatting violations by running the linting option:
 
       make docs-lint
 
-The ``make docs`` command will display warnings if mistakes are found, but will 
-still build the documentation. Using ``make docs-lint`` will convert any warnings 
+The ``make docs`` command will display warnings if mistakes are found, but will
+still build the documentation. Using ``make docs-lint`` will convert any warnings
 to errors, causing the build to fail.
 
 To test the documentation for broken links, run the following command from
@@ -79,7 +79,7 @@ a reliable internet connection:
       make docs-linkcheck
 
 
-Project maintainers will need to approve the PR before it can be merged. 
+Project maintainers will need to approve the PR before it can be merged.
 
 .. include:: ../includes/squash-commits.txt
 
@@ -91,7 +91,8 @@ Updating Screenshots
 --------------------
 
 The user guides for SecureDrop contain screenshots of the web applications.
-To update these screenshots automatically you can run:
+To update these screenshots automatically you can run this command from within
+your main SecureDrop repository checkout:
 
 .. code:: sh
 
@@ -107,7 +108,7 @@ simply stage for commit all changed files in that directory.
 Style Guide
 -----------
 
-Please see the `reStructuredText`_ Primer by the Sphinx project as a reference 
+Please see the `reStructuredText`_ Primer by the Sphinx project as a reference
 for writing in the markup language used for this documentation.
 
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
