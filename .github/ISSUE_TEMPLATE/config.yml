@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Getting Support
+    url: https://docs.securedrop.org/en/stable/getting_support.html
+    about: Plesee see our documentation for support on using SecureDrop. 
