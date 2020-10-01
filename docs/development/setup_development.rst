@@ -98,12 +98,15 @@ Fork & Clone the Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now you are ready to get your own copy of the source code.
-Visit our repository_ fork it and clone it on you local machine:
-
+Visit our repository_ fork it and clone it on your local machine.
 
 .. code:: sh
 
    git clone git@github.com:<your_github_username>/securedrop.git
+
+.. note:: The ``develop`` branch is the primary branch for development. Code 
+   changes should be pushed to the ``develop`` git branch of our repository_.
+
 
 Using the Docker Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
