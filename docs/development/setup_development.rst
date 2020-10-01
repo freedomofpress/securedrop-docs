@@ -104,8 +104,8 @@ Visit our repository_ fork it and clone it on your local machine.
 
    git clone git@github.com:<your_github_username>/securedrop.git
 
-.. note:: The ``develop`` branch is the primary branch for development. Code 
-   changes should be pushed to the ``develop`` git branch of our repository_.
+.. note:: Pull requests should be opened against the ``develop`` branch of our 
+   repository_, which is the primary branch used for development.  
 
 
 Using the Docker Environment
