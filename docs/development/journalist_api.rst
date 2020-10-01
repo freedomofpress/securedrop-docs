@@ -30,7 +30,7 @@ Authentication
 ``POST /api/v1/token`` to get a token with the username, password, and two-factor
 code in the request body:
 
-.. code:: sh
+.. code:: json
 
   {
     "username": "journalist",
@@ -40,7 +40,7 @@ code in the request body:
 
 This will produce a response with your Authorization token:
 
-.. code:: sh
+.. code:: json
 
   {
       "expiration": "2018-07-10T04:29:41.696321Z",
@@ -69,10 +69,10 @@ Clients should use the logout endpoint to invalidate their token:
 and you will get the following response upon successful invalidation of the
 API token:
 
-.. code:: sh
+.. code:: json
 
   {
-  "message": "Your token has been revoked."
+      "message": "Your token has been revoked."
   }
 
 Errors
@@ -81,7 +81,7 @@ Errors
 The API will respond to all errors (400-599) with a JSON object with the
 following fields:
 
-.. code:: sh
+.. code:: json
 
   {
     "message": "This is a detailed error message."
@@ -103,21 +103,23 @@ The root endpoint describes the available resources:
 
 Response 200 (application/json):
 
-.. code:: sh
+.. code:: json
 
-  {
-    "current_user_url": "/api/v1/user",
-    "sources_url": "/api/v1/sources",
-    "submissions_url": "/api/v1/submissions",
-    "replies_url": "/api/v1/replies",
-    "token_url": "/api/v1/token"
-  }
+    {
+      "all_users_url": "/api/v1/users",
+      "auth_token_url": "/api/v1/token",
+      "current_user_url": "/api/v1/user",
+      "replies_url": "/api/v1/replies",
+      "seen_url": "/api/v1/seen",
+      "sources_url": "/api/v1/sources",
+      "submissions_url": "/api/v1/submissions"
+    }
 
-Sources ``[/sources]``
-----------------------
+Sources
+-------
 
-Get all sources [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Get all sources
+^^^^^^^^^^^^^^^
 
 Requires authentication. Provides a list of all sources and data about them
 (such as number of documents, submissions, and their public key that replies
@@ -129,7 +131,7 @@ should be encrypted to).
 
 Response 200 (application/json):
 
-.. code:: sh
+.. code:: json
 
   {
       "sources": [
@@ -176,16 +178,18 @@ Response 200 (application/json):
       ]
   }
 
-Individual Source ``[/sources/<source_uuid>]``
-----------------------------------------------
+Get a single source
+^^^^^^^^^^^^^^^^^^^
 
-Requires authentication
+Requires authentication.
 
-An object representing a single source.
+.. code:: sh
+
+    GET /sources/<source_uuid>
 
 Response 200 (application/json):
 
-.. code:: sh
+.. code:: json
 
   {
       "add_star_url": "/api/v1/sources/9b6df7c9-a6b1-461d-91f0-5b715fc7a47a/add_star",
@@ -208,8 +212,8 @@ Response 200 (application/json):
       "uuid": "9b6df7c9-a6b1-461d-91f0-5b715fc7a47a"
   }
 
-Get all submissions associated with a source [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Get all submissions associated with a source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -219,33 +223,43 @@ Requires authentication.
 
 Response 200 (application/json):
 
-.. code:: sh
+.. code:: json
 
-  {
+    {
       "submissions": [
-          {
-              "download_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/4c2e701c-70d2-4cb5-87c0-de59c2ebbc62/download",
-              "filename": "1-dejected_respondent-msg.gpg",
-              "is_read": false,
-              "size": 603,
-              "source_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241",
-              "submission_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/4c2e701c-70d2-4cb5-87c0-de59c2ebbc62",
-              "uuid": "4c2e701c-70d2-4cb5-87c0-de59c2ebbc62"
-          },
-          {
-              "download_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/c2e00865-8f75-444a-b5b4-88424024ce69/download",
-              "filename": "2-dejected_respondent-msg.gpg",
-              "is_read": false,
-              "size": 604,
-              "source_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241",
-              "submission_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/c2e00865-8f75-444a-b5b4-88424024ce69",
-              "uuid": "c2e00865-8f75-444a-b5b4-88424024ce69"
-          }
+        {
+          "download_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/b7a7b6ca-9a11-4a51-8b59-7e454f6bf8d0/download",
+          "filename": "1-dark-haired_insolation-msg.gpg",
+          "is_file": false,
+          "is_message": true,
+          "is_read": true,
+          "seen_by": [
+            "1c914871-a335-44ba-b2ae-da878cbc3630"
+          ],
+          "size": 593,
+          "source_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704",
+          "submission_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/b7a7b6ca-9a11-4a51-8b59-7e454f6bf8d0",
+          "uuid": "b7a7b6ca-9a11-4a51-8b59-7e454f6bf8d0"
+        },
+        {
+          "download_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/00d24bed-8d13-4f90-b068-52341593a727/download",
+          "filename": "2-dark-haired_insolation-doc.gz.gpg",
+          "is_file": true,
+          "is_message": false,
+          "is_read": true,
+          "seen_by": [
+            "1c914871-a335-44ba-b2ae-da878cbc3630"
+          ],
+          "size": 179404,
+          "source_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704",
+          "submission_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/00d24bed-8d13-4f90-b068-52341593a727",
+          "uuid": "00d24bed-8d13-4f90-b068-52341593a727"
+        }
       ]
-  }
+    }
 
-Get a single submission associated with a source [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Get a single submission associated with a source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -255,20 +269,25 @@ Requires authentication.
 
 Response 200 (application/json):
 
-.. code:: sh
+.. code:: json
 
-  {
-      "download_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/4c2e701c-70d2-4cb5-87c0-de59c2ebbc62/download",
-      "filename": "1-dejected_respondent-msg.gpg",
-      "is_read": false,
-      "size": 603,
-      "source_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241",
-      "submission_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/4c2e701c-70d2-4cb5-87c0-de59c2ebbc62",
-      "uuid": "4c2e701c-70d2-4cb5-87c0-de59c2ebbc62"
-  }
+    {
+      "download_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/00d24bed-8d13-4f90-b068-52341593a727/download",
+      "filename": "2-dark-haired_insolation-doc.gz.gpg",
+      "is_file": true,
+      "is_message": false,
+      "is_read": true,
+      "seen_by": [
+        "1c914871-a335-44ba-b2ae-da878cbc3630"
+      ],
+      "size": 179404,
+      "source_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704",
+      "submission_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/00d24bed-8d13-4f90-b068-52341593a727",
+      "uuid": "00d24bed-8d13-4f90-b068-52341593a727"
+    }
 
-Get all replies associated with a source [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Get all replies associated with a source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -278,39 +297,45 @@ Requires authentication.
 
 Response 200 (application/json):
 
-.. code:: sh
+.. code:: json
 
-  {
+    {
       "replies": [
-          {
-              "filename": "3-famished_sheep-reply.gpg",
-              "is_deleted_by_source": false,
-              "journalist_username": "journalist",
-              "journalist_first_name": "Bob",
-              "journalist_last_name": "Smith",
-              "journalist_uuid": "a2405127-1c9e-4a3a-80ea-95f6a71e5738",
-              "reply_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5/replies/98cc4ed6-6ac5-4867-b144-f97d0497f2c1",
-              "size": 1116,
-              "source_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5",
-              "uuid": "98cc4ed6-6ac5-4867-b144-f97d0497f2c1"
-          },
-          {
-              "filename": "4-famished_sheep-reply.gpg",
-              "is_deleted_by_source": false,
-              "journalist_username": "journalist",
-              "journalist_uuid": "a2405127-1c9e-4a3a-80ea-95f6a71e5738",
-              "journalist_first_name": "Bob",
-              "journalist_last_name": "Smith",
-              "reply_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5/replies/2863e3ec-66c8-4b74-ba43-615c805be4da",
-              "size": 1116,
-              "source_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5",
-              "uuid": "2863e3ec-66c8-4b74-ba43-615c805be4da"
-          }
+        {
+          "filename": "3-electrocardiographic_lost-and-found-reply.gpg",
+          "is_deleted_by_source": false,
+          "journalist_first_name": "",
+          "journalist_last_name": "",
+          "journalist_username": "journalist",
+          "journalist_uuid": "3ae405e0-01bb-41f5-98b6-c4707c5c4b96",
+          "reply_url": "/api/v1/sources/55b96e66-688a-4333-b429-f1a3233b40e9/replies/5d6260ce-cf70-420a-9ca0-250b09d6cc58",
+          "seen_by": [
+            "3ae405e0-01bb-41f5-98b6-c4707c5c4b96"
+          ],
+          "size": 753,
+          "source_url": "/api/v1/sources/55b96e66-688a-4333-b429-f1a3233b40e9",
+          "uuid": "5d6260ce-cf70-420a-9ca0-250b09d6cc58"
+        },
+        {
+          "filename": "4-electrocardiographic_lost-and-found-reply.gpg",
+          "is_deleted_by_source": false,
+          "journalist_first_name": "",
+          "journalist_last_name": "",
+          "journalist_username": "journalist",
+          "journalist_uuid": "3ae405e0-01bb-41f5-98b6-c4707c5c4b96",
+          "reply_url": "/api/v1/sources/55b96e66-688a-4333-b429-f1a3233b40e9/replies/3400b55f-9bfb-4368-b975-0f6950fd5631",
+          "seen_by": [
+            "3ae405e0-01bb-41f5-98b6-c4707c5c4b96"
+          ],
+          "size": 901,
+          "source_url": "/api/v1/sources/55b96e66-688a-4333-b429-f1a3233b40e9",
+          "uuid": "3400b55f-9bfb-4368-b975-0f6950fd5631"
+        }
       ]
-  }
+    }
 
-Get a single reply associated with a source [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Get a single reply associated with a source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -320,23 +345,26 @@ Requires authentication.
 
 Response 200 (application/json):
 
-.. code:: sh
+.. code:: json
 
-  {
-      "filename": "3-famished_sheep-reply.gpg",
+    {
+      "filename": "4-electrocardiographic_lost-and-found-reply.gpg",
       "is_deleted_by_source": false,
+      "journalist_first_name": "",
+      "journalist_last_name": "",
       "journalist_username": "journalist",
-      "journalist_uuid": "a2405127-1c9e-4a3a-80ea-95f6a71e5738",
-      "journalist_first_name": "Bob",
-      "journalist_last_name": "Smith",
-      "reply_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5/replies/98cc4ed6-6ac5-4867-b144-f97d0497f2c1",
-      "size": 1116,
-      "source_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5",
-      "uuid": "98cc4ed6-6ac5-4867-b144-f97d0497f2c1"
-  }
+      "journalist_uuid": "3ae405e0-01bb-41f5-98b6-c4707c5c4b96",
+      "reply_url": "/api/v1/sources/55b96e66-688a-4333-b429-f1a3233b40e9/replies/3400b55f-9bfb-4368-b975-0f6950fd5631",
+      "seen_by": [
+        "3ae405e0-01bb-41f5-98b6-c4707c5c4b96"
+      ],
+      "size": 901,
+      "source_url": "/api/v1/sources/55b96e66-688a-4333-b429-f1a3233b40e9",
+      "uuid": "3400b55f-9bfb-4368-b975-0f6950fd5631"
+    }
 
-Download a reply [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Download a reply
+^^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -356,8 +384,8 @@ An ETag header is also present containing the SHA256 hash of the response data:
 Note that these are not intended for cryptographic purposes and are present
 for clients to check that downloads are not corrupted.
 
-Delete a reply [``DELETE``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Delete a reply
+^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -367,14 +395,14 @@ Requires authentication.
 
 Response 200:
 
-.. code:: sh
+.. code:: json
 
   {
     "message": "Reply deleted"
   }
 
-Add a reply to a source [``POST``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Add a reply to a source
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Requires authentication. Clients are expected to encrypt replies prior to
 submission to the server. Replies should be encrypted to the public key of the
@@ -419,8 +447,8 @@ Response 400 (application/json):
       "message": "You must encrypt replies client side"
   }
 
-Delete a submission [``DELETE``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Delete a submission
+^^^^^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -430,14 +458,14 @@ Requires authentication.
 
 Response 200:
 
-.. code:: sh
+.. code:: json
 
   {
     "message": "Submission deleted"
   }
 
-Download a submission [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Download a submission
+^^^^^^^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -457,8 +485,8 @@ An ETag header is also present containing the SHA256 hash of the response data:
 Note that these are not intended for cryptographic purposes and are present
 for clients to check that downloads are not corrupted.
 
-Delete a Source and all their associated submissions [``DELETE``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Delete a source and all their associated submissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -468,14 +496,14 @@ Requires authentication.
 
 Response 200:
 
-.. code:: sh
+.. code:: json
 
   {
     "message": "Source and submissions deleted"
   }
 
-Star a source [``POST``]
-^^^^^^^^^^^^^^^^^^^^^^^^
+Star a source
+^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -485,14 +513,14 @@ Requires authentication.
 
 Response 201 created:
 
-.. code:: sh
+.. code:: json
 
   {
     "message": "Star added"
   }
 
-Remove a source [``DELETE``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Unstar a source
+^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -502,14 +530,14 @@ Requires authentication.
 
 Response 200:
 
-.. code:: sh
+.. code:: json
 
   {
     "message": "Star removed"
   }
 
-Flag a source [``POST``]
-^^^^^^^^^^^^^^^^^^^^^^^^
+Flag a source
+^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -519,17 +547,17 @@ Requires authentication.
 
 Response 200:
 
-.. code:: sh
+.. code:: json
 
   {
     "message": "Source flagged for reply"
   }
 
-Submission ``[/submissions]``
------------------------------
+Submissions
+-----------
 
-Get all submissions [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Get all submissions
+^^^^^^^^^^^^^^^^^^^
 
 Requires authentication. This gets details of all submissions across sources.
 
@@ -539,54 +567,46 @@ Requires authentication. This gets details of all submissions across sources.
 
 Response 200:
 
-.. code:: sh
+.. code:: json
 
-  {
+    {
       "submissions": [
-          {
-              "download_url": "/api/v1/sources/1ed4c191-c6b1-463b-92a5-102deaf7d40a/submissions/e58f6206-fc12-4dbe-9a9c-84c3d82eea2f/download",
-              "filename": "1-abridged_psalmist-msg.gpg",
-              "is_read": false,
-              "size": 604,
-              "source_url": "/api/v1/sources/1ed4c191-c6b1-463b-92a5-102deaf7d40a",
-              "submission_url": "/api/v1/sources/1ed4c191-c6b1-463b-92a5-102deaf7d40a/submissions/e58f6206-fc12-4dbe-9a9c-84c3d82eea2f",
-              "uuid": "e58f6206-fc12-4dbe-9a9c-84c3d82eea2f"
-          },
-          {
-              "download_url": "/api/v1/sources/1ed4c191-c6b1-463b-92a5-102deaf7d40a/submissions/a93d4123-a984-4740-9849-772c30694bab/download",
-              "filename": "2-abridged_psalmist-msg.gpg",
-              "is_read": false,
-              "size": 604,
-              "source_url": "/api/v1/sources/1ed4c191-c6b1-463b-92a5-102deaf7d40a",
-              "submission_url": "/api/v1/sources/1ed4c191-c6b1-463b-92a5-102deaf7d40a/submissions/a93d4123-a984-4740-9849-772c30694bab",
-              "uuid": "a93d4123-a984-4740-9849-772c30694bab"
-          },
-          {
-              "download_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/4c2e701c-70d2-4cb5-87c0-de59c2ebbc62/download",
-              "filename": "1-dejected_respondent-msg.gpg",
-              "is_read": false,
-              "size": 603,
-              "source_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241",
-              "submission_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/4c2e701c-70d2-4cb5-87c0-de59c2ebbc62",
-              "uuid": "4c2e701c-70d2-4cb5-87c0-de59c2ebbc62"
-          },
-          {
-              "download_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/c2e00865-8f75-444a-b5b4-88424024ce69/download",
-              "filename": "2-dejected_respondent-msg.gpg",
-              "is_read": false,
-              "size": 604,
-              "source_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241",
-              "submission_url": "/api/v1/sources/598b859c-72c7-4e53-a68c-b725eb514241/submissions/c2e00865-8f75-444a-b5b4-88424024ce69",
-              "uuid": "c2e00865-8f75-444a-b5b4-88424024ce69"
-          }
+        {
+          "download_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/b7a7b6ca-9a11-4a51-8b59-7e454f6bf8d0/download",
+          "filename": "1-dark-haired_insolation-msg.gpg",
+          "is_file": false,
+          "is_message": true,
+          "is_read": true,
+          "seen_by": [
+            "1c914871-a335-44ba-b2ae-da878cbc3630"
+          ],
+          "size": 593,
+          "source_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704",
+          "submission_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/b7a7b6ca-9a11-4a51-8b59-7e454f6bf8d0",
+          "uuid": "b7a7b6ca-9a11-4a51-8b59-7e454f6bf8d0"
+        },
+        {
+          "download_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/00d24bed-8d13-4f90-b068-52341593a727/download",
+          "filename": "2-dark-haired_insolation-doc.gz.gpg",
+          "is_file": true,
+          "is_message": false,
+          "is_read": true,
+          "seen_by": [
+            "1c914871-a335-44ba-b2ae-da878cbc3630"
+          ],
+          "size": 179404,
+          "source_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704",
+          "submission_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/submissions/00d24bed-8d13-4f90-b068-52341593a727",
+          "uuid": "00d24bed-8d13-4f90-b068-52341593a727"
+        }
       ]
-  }
+    }
 
-Reply ``[/replies]``
---------------------
+Replies
+-------
 
-Get all replies [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Get all replies
+^^^^^^^^^^^^^^^
 
 Requires authentication. This gets details of all replies across sources.
 
@@ -596,92 +616,49 @@ Requires authentication. This gets details of all replies across sources.
 
 Response 200:
 
-.. code:: sh
+.. code:: json
 
-  {
+    {
       "replies": [
-          {
-              "filename": "3-famished_sheep-reply.gpg",
-              "is_deleted_by_source": false,
-              "journalist_username": "journalist",
-              "journalist_uuid": "a2405127-1c9e-4a3a-80ea-95f6a71e5738",
-              "journalist_first_name": "Bob",
-              "journalist_last_name": "Smith",
-              "reply_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5/replies/98cc4ed6-6ac5-4867-b144-f97d0497f2c1",
-              "size": 1116,
-              "source_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5",
-              "uuid": "98cc4ed6-6ac5-4867-b144-f97d0497f2c1"
-          },
-          {
-              "filename": "4-famished_sheep-reply.gpg",
-              "is_deleted_by_source": false,
-              "journalist_username": "journalist",
-              "journalist_uuid": "a2405127-1c9e-4a3a-80ea-95f6a71e5738",
-              "journalist_first_name": "Bob",
-              "journalist_last_name": "Smith",
-              "reply_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5/replies/2863e3ec-66c8-4b74-ba43-615c805be4da",
-              "size": 1116,
-              "source_url": "/api/v1/sources/f381dbb4-4bb5-451a-801a-e961461af6e5",
-              "uuid": "2863e3ec-66c8-4b74-ba43-615c805be4da"
-          },
-          {
-              "filename": "3-intermittent_proline-reply.gpg",
-              "is_deleted_by_source": false,
-              "journalist_username": "journalist",
-              "journalist_uuid": "a2405127-1c9e-4a3a-80ea-95f6a71e5738",
-              "journalist_first_name": "Bob",
-              "journalist_last_name": "Smith",
-              "reply_url": "/api/v1/sources/06bfd5ba-ed6a-4850-b713-4e6940b74931/replies/33b35f6e-b43e-4ad5-a24b-37fd1916ad75",
-              "size": 1116,
-              "source_url": "/api/v1/sources/06bfd5ba-ed6a-4850-b713-4e6940b74931",
-              "uuid": "33b35f6e-b43e-4ad5-a24b-37fd1916ad75"
-          },
-          {
-              "filename": "4-intermittent_proline-reply.gpg",
-              "is_deleted_by_source": false,
-              "journalist_username": "journalist",
-              "journalist_uuid": "a2405127-1c9e-4a3a-80ea-95f6a71e5738",
-              "journalist_first_name": "Bob",
-              "journalist_last_name": "Smith",
-              "reply_url": "/api/v1/sources/06bfd5ba-ed6a-4850-b713-4e6940b74931/replies/6fad52dd-bc55-42aa-96da-4636644fb3e2",
-              "size": 1116,
-              "source_url": "/api/v1/sources/06bfd5ba-ed6a-4850-b713-4e6940b74931",
-              "uuid": "6fad52dd-bc55-42aa-96da-4636644fb3e2"
-          }
+        {
+          "filename": "3-electrocardiographic_lost-and-found-reply.gpg",
+          "is_deleted_by_source": false,
+          "journalist_first_name": "",
+          "journalist_last_name": "",
+          "journalist_username": "journalist",
+          "journalist_uuid": "3ae405e0-01bb-41f5-98b6-c4707c5c4b96",
+          "reply_url": "/api/v1/sources/55b96e66-688a-4333-b429-f1a3233b40e9/replies/5d6260ce-cf70-420a-9ca0-250b09d6cc58",
+          "seen_by": [
+            "3ae405e0-01bb-41f5-98b6-c4707c5c4b96"
+          ],
+          "size": 753,
+          "source_url": "/api/v1/sources/55b96e66-688a-4333-b429-f1a3233b40e9",
+          "uuid": "5d6260ce-cf70-420a-9ca0-250b09d6cc58"
+        },
+        {
+          "filename": "3-dark-haired_insolation-reply.gpg",
+          "is_deleted_by_source": false,
+          "journalist_first_name": "",
+          "journalist_last_name": "",
+          "journalist_username": "journalist",
+          "journalist_uuid": "3ae405e0-01bb-41f5-98b6-c4707c5c4b96",
+          "reply_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704/replies/285682f8-2bfb-47aa-9889-f9c41a44cebb",
+          "seen_by": [
+            "3ae405e0-01bb-41f5-98b6-c4707c5c4b96",
+            "1c914871-a335-44ba-b2ae-da878cbc3630"
+          ],
+          "size": 744,
+          "source_url": "/api/v1/sources/e5a42bdb-1fef-4d66-9876-b2d592f90704",
+          "uuid": "285682f8-2bfb-47aa-9889-f9c41a44cebb"
+        }
       ]
-  }
+    }
 
-User ``[/user]``
-----------------
+Users
+-----
 
-Get an object representing the current user [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Requires authentication.
-
-.. code:: sh
-
-  GET /api/v1/user
-
-Response 200:
-
-.. code:: sh
-
-  {
-    "is_admin": true,
-    "last_login": "2018-07-09T20:29:41.696782Z",
-    "username": "journalist",
-    "uuid": "a2405127-1c9e-4a3a-80ea-95f6a71e5738"
-    "first_name": "Bob",
-    "last_name": "Smith",
-  }
-
-
-Users ``[/users]``
-------------------
-
-Get a list of all users [``GET``]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Get a list of all users
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Requires authentication.
 
@@ -691,7 +668,7 @@ Requires authentication.
 
 Response 200:
 
-.. code:: sh
+.. code:: json
 
   {
     "users": [
@@ -709,3 +686,93 @@ Response 200:
       }
     ]
   }
+
+Get an object representing the current user
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Requires authentication.
+
+.. code:: sh
+
+  GET /api/v1/user
+
+Response 200:
+
+.. code:: json
+
+  {
+    "is_admin": true,
+    "last_login": "2018-07-09T20:29:41.696782Z",
+    "username": "journalist",
+    "uuid": "a2405127-1c9e-4a3a-80ea-95f6a71e5738",
+    "first_name": "Bob",
+    "last_name": "Smith",
+  }
+
+Mark items that have been seen by the current user
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Requires authentication. Records that the current user has seen a
+reply from another user, or a file or message submitted by a source.
+
+.. code:: sh
+
+  POST /api/v1/seen
+
+The request body should contain one or more lists of UUIDs
+representing the conversation items to be marked seen. The valid list
+keys are ``files``, ``messages``, and ``replies``. The type of a given
+submission (file or message) is available in the responses from
+endpoints under ``/submissions``; each submission will have
+``is_file`` and ``is_message`` fields.
+
+.. code:: json
+
+    {
+      "files": [
+        "00d24bed-8d13-4f90-b068-52341593a727"
+      ],
+      "messages": [
+        "b7a7b6ca-9a11-4a51-8b59-7e454f6bf8d0"
+      ],
+      "replies": [
+        "285682f8-2bfb-47aa-9889-f9c41a44cebb"
+      ]
+    }
+
+Any of the lists may be omitted, but at least one must be specified. An empty or invalid request will result in a ``400 Bad Request`` response with the following body:
+
+.. code:: json
+
+    {
+      "error": "Bad Request",
+      "message": "Please specify the resources to mark seen."
+    }
+
+A successful request will result in a ``200 OK`` response with the
+following body:
+
+.. code:: json
+
+    {
+        "message": "resources marked seen"
+    }
+
+Any submission or reply marked seen will thereafter include the user's
+UUID in the ``seen_by`` field of responses including the item, like
+``/api/v1/submissions`` or ``/api/v1/replies``.
+
+If a file, message, or reply cannot be found with one of the specified
+UUIDs, the response will be ``404 Not Found`` with details in the
+response body:
+
+.. code:: json
+
+    {
+      "error": "Not Found",
+      "message": "reply not found: 285682f8-2bfb-47aa-9889-f9c41a44cebc"
+
+    }
+
+None of the requested items will be marked seen if any of them cannot
+be found.
