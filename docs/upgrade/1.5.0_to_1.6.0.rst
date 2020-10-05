@@ -1,12 +1,13 @@
-Upgrade from 1.3.0 to 1.4.0
+Upgrade from 1.5.0 to 1.6.0
 ===========================
 
 Automatic server upgrades
 -------------------------
+
 As with previous releases, your servers will be upgraded to the latest version
 of SecureDrop automatically within 24 hours of the release.
 
-Updating Workstations to SecureDrop 1.4.0
+Updating Workstations to SecureDrop 1.6.0
 -----------------------------------------
 
 Using the graphical updater
@@ -16,7 +17,7 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.boum.org/doc/first_steps/startup_options/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 1.4.0 by clicking "Update Now":
+Perform the update to 1.6.0 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
@@ -36,10 +37,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2224 5C81 E3BA EB41 38B3 6061 310F 5612 00F4 AD77"
-  git tag -v 1.4.0
-
-.. important:: Do not skip the ``gpg`` step. This release includes an update
-   of the release key. The old release key is set to expire on June 30, 2020.
+  git tag -v 1.6.0
 
 The output should include the following two lines: ::
 
@@ -50,9 +48,9 @@ Please verify that each character of the fingerprint above matches what is
 on the screen of your workstation. If it does, you can check out the
 new release: ::
 
-    git checkout 1.4.0
+    git checkout 1.6.0
 
-.. important:: If you do see the warning "refname '1.4.0' is ambiguous" in the
+.. important:: If you do see the warning "refname '1.6.0' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -63,6 +61,7 @@ Finally, run the following commands: ::
 
 Upgrading Tails
 ---------------
+
 If you have already upgraded your workstations to the Tails 4 series, follow the
 graphical prompts to update to the latest version.
 
@@ -77,19 +76,13 @@ graphical prompts to update to the latest version.
    These instructions will be removed from a future version of this
    documentation.
 
+
 .. include:: ../includes/always-backup.txt
 
-New OSSEC alert for iptables misconfigurations
-----------------------------------------------
-This release of SecureDrop introduces a new level 12 alert for detecting
-misconfigurations of the iptables rules on the *Application* and
-*Monitor Servers*. iptables functions as a software firewall, providing defense
-in depth in addition to the rules configured in your hardware firewall.
+V3 Onion Services
+-----------------
 
-We recommend that you check your OSSEC alerts carefully in the days after this
-release, to ensure iptables is configured correctly. Please see our guide to
-:ref:`uncommon OSSEC alerts <uncommon_alerts>` for an example of this alert,
-and for information on how to reinstate the correct configuration.
+Due to security and anonymity improvements in v3 of the onion services protocol, support for v2 onion services will be removed from SecureDrop in February 2021. If your SecureDrop instance is still using 16-character v2 onion URLs, you should migrate to v3 onion services at the earliest opportunity, and contact us via the Support Portal if you require assistance doing so. For more information, see :doc:`our migration documentation <../v3_services>`. 
 
 Getting Support
 ---------------
