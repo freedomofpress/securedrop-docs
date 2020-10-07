@@ -131,7 +131,9 @@ Note that the ``cat`` example above will also add the ATHS info for the
 Architecture Diagrams
 ---------------------
 
-Some helpful diagrams for getting a sense of the SecureDrop application architecture are stored `here
-<https://github.com/freedomofpress/securedrop/tree/develop/docs/diagrams>`_, including a high-level view of the SecureDrop database structure:
+Some helpful diagrams for getting a sense of the SecureDrop application
+architecture are stored `here <https://github.com/freedomofpress/securedrop-docs/tree/main/docs/diagrams>`_,
+including a high-level view of the SecureDrop database structure:
 
 .. image:: ../diagrams/securedrop-database.png
+  :width: 100%
