@@ -11,7 +11,7 @@ Ready for review / Work in progress
 
 * Description: 
 
-* Fixes [Issue#<issue-number>](url)
+* Fixes Issue#
 
 
 ## Testing
