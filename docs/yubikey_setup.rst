@@ -19,7 +19,7 @@ Tool; for this, you require `a key that can support OATH-HOTP`_.
 
 .. _`commercially available`: https://www.yubico.com/products/yubikey-hardware/fido-u2f-security-key
 
-.. _`a key that can support OATH-HOTP`: https://support.yubico.com/support/solutions/articles/15000006467-oath-hotp-yubico-best-practices-guide
+.. _`a key that can support OATH-HOTP`: https://support.yubico.com/hc/en-us/articles/360016614780-OATH-HOTP-Yubico-Best-Practices-Guide
 
 Download and Launch the YubiKey Personalization Tool
 ----------------------------------------------------
@@ -65,8 +65,8 @@ Under **Configuration Slot**, click **Configuration Slot 1**.
 .. _`Yubikey manual`: https://www.yubico.com/wp-content/uploads/2015/03/YubiKeyManual_v3.4.pdf
 
 In the section titled **OATH-HOTP parameters**, uncheck the box for
-**OATH Token Identifier (6 bytes)**. Leave the HOTP length at 6 digits. 
-Next, uncheck the box for **Hide secret**. This will display the **Secret Key 
+**OATH Token Identifier (6 bytes)**. Leave the HOTP length at 6 digits.
+Next, uncheck the box for **Hide secret**. This will display the **Secret Key
 (20 bytes Hex)** field.
 
 .. important:: Make a note somewhere safe of the **Secret Key (20
@@ -109,4 +109,3 @@ will insert the 6-digit code that you will need to log in.
 .. |YubiKey Overview| image:: images/yubikey_overview.png
 .. |YubiKey Config| image:: images/yubikey_oath_hotp_configuration.png
 .. |YubiKey Config Successful| image:: images/yubikey_configuration_successful.png
-
