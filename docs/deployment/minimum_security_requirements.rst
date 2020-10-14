@@ -7,7 +7,8 @@ Minimum requirements for the SecureDrop environment
    in a location that is owned or occupied by the organization to ensure
    that their legal department can not be bypassed with gag orders.
 -  The SecureDrop servers should be on a separate internet connection or
-   completely segmented from corporate network.
+   completely segmented from the corporate network, such as a dedicated subnet 
+   with DENY rules for all traffic to and from the corporate LAN.
 -  All traffic from the corporate network should be blocked at the
    SecureDrop's point of demarcation.
 -  Video monitoring should be recorded of the server area and the
