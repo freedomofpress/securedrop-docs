@@ -19,5 +19,4 @@ about: Report a documentation bug/error
 
 
 ## Additional information
-*(Add any other context about the problem here.)*
-
+<!-- Add any other context about the problem here. -->
