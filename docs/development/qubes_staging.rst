@@ -57,7 +57,7 @@ In ``dom0``:
 
 .. code:: sh
 
-   qvm-start sd-staging-base --cdrom=sd-dev:/home/user/ubuntu-16.04.6-server-amd64.iso
+   qvm-start sd-staging-base --cdrom=sd-dev:/home/user/ubuntu-16.04.7-server-amd64.iso
 
 You may need to edit the filepath above if you downloaded the ISO to a
 different location within the ``sd-dev`` VM. Choose **Install Ubuntu**.

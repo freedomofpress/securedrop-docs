@@ -533,18 +533,16 @@ laptops from other manufacturers, as long as the wireless components are
 removable.
 
 Just as with the servers, you can also use an Intel NUC for the *SVS*. As noted
-before, NUCs do not ship with a hard drive, and can be configured without any
-wireless components, so you'll save time by not having to remove these, since
-they won't be present. However, NUCs *do* contain an IR receiver, which we
-recommend taping over with opaque masking tape.
+before, NUCs do not ship with a hard drive, and older models can be configured 
+without any wireless components. However, NUCs *do* contain an IR receiver, 
+which we recommend taping over with opaque masking tape.
 
-If you choose to use an Intel NUC that differs from our recommended
-model, make sure you use one that offers wireless as an **option**. If the model
-is advertised as having "integrated wireless", such as the `NUC5i5RYK`, this
-could mean it's built into the motherboard, making it physically irremovable, and
-attempting to do so would risk damaging the unit; instead, look for attributes like
-`M.2 22×30 slot and wireless antenna pre-assembled (for wireless card support)`,
-as advertised by the `NUC5i5MYHE` that we recommend.
+If you choose to use an Intel NUC, you must use an older model that offers wireless 
+as an **option** (described as something like ``M.2 22×30 slot and wireless antenna 
+pre-assembled (for wireless card support)``). If a model is advertised as having 
+"integrated wireless" (most newer NUC models), this means the wireless 
+components are not physically removable, and these machines are not a suitable 
+choice for the *SVS*.
 
 Tails USBs
 ^^^^^^^^^^
