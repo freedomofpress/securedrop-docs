@@ -1,6 +1,6 @@
 ## How to Contribute to SecureDrop Docs
 
-See the [introduction for contributors](https://docs.securedrop.org/en/latest/development/contributing.html) and [Contributing Guidelines for Documentation](https://docs.securedrop.org/en/latest/development/documentation_guidelines.html).
+See the [introduction for contributors](https://docs.securedrop.org/en/latest/development/contributing.html) and [Documentation Guidelines for contributors](https://docs.securedrop.org/en/latest/development/documentation_guidelines.html).
 
 Check out our [Development Roadmap](https://github.com/freedomofpress/securedrop/wiki/Development-Roadmap) to see our plans and priorities for upcoming releases.
 
