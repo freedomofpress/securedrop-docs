@@ -23,18 +23,14 @@ Updating Documentation
 To get started editing the docs:
 
 1. Enable LFS:
-   
-   The SecureDrop docs repository stores binaries such as screenshots via 
-   Git Large File Storage (LFS). If not already present, you must install Git LFS.
-   
-   Git LFS requires ``Git`` version 1.8.2 or later to be installed. Follow the
-   `install guide <https://github.com/git-lfs/git-lfs/wiki/Installation>`_.
-   to learn more about installing and configuring ``git-lfs``.
 
+   The SecureDrop docs repository stores binaries such as screenshots via
+   Git Large File Storage (LFS). If not already present, install Git LFS
+   by following the `install guide <https://github.com/git-lfs/git-lfs/wiki/Installation>`_.
 
 .. _clone_the_rep:
 
-2. Clone the SecureDrop repository:
+2. Clone the SecureDrop documentation repository:
 
    .. code:: sh
 
