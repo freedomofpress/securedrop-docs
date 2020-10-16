@@ -1,32 +1,32 @@
-Deploying SecureDrop staging instance on Qubes
-==============================================
+Virtual Environments: Using Qubes
+=================================
 
-This assumes you have an up-to-date Qubes installation on a compatible laptop
-with at least 16GB RAM and 60GB free disk space.
+SecureDrop currently uses Ubuntu Xenial as its server OS, and Focal support is under
+development. The instructions below cover setting up a SecureDrop staging environment
+using either Xenial or Focal under Qubes.
+
+It is assumed that you have an up-to-date Qubes installation on a compatible
+laptop, with at least 16GB RAM and 60GB free disk space.
 
 Overview
 --------
+.. note:: Throughout the following instructions, ``$SERVER_OS`` will refer to your choice
+  of either ``xenial`` or ``focal``.
 
 Follow the the Qubes platform instructions in :doc:`setup_development`
-to create an ``sd-dev`` Standalone VM. Once done, we'll create three new
+to create a Debian 10 ``sd-dev`` Standalone VM. Once done, we'll create three new
 Standalone (HVM) Qubes VMs for use with staging:
 
-- ``sd-staging-base``, a base VM for cloning reusable staging VMs
-- ``sd-staging-app-base``, a base VM for the *SecureDrop Application Server*
-- ``sd-staging-mon-base``, a base VM for the *SecureDrop Monitor Server*
+- ``sd-staging-base-$SERVER_OS``, a base VM for cloning reusable staging VMs
+- ``sd-staging-app-base-$SERVER_OS``, a base VM for the *SecureDrop Application Server*
+- ``sd-staging-mon-base-$SERVER_OS``, a base VM for the *SecureDrop Monitor Server*
 
-While the development VM, ``sd-dev``, is based on Debian 10, the other VMs
-will be based on Ubuntu Xenial.
+Download Ubuntu server ISO
+----------------------------
 
-.. note:: The staging server VM names were recently changed from ``sd-app`` and
-         ``sd-mon`` to account for a name change in the SecureDrop Workstation
-         project.
-
-Download Ubuntu Xenial server ISO
----------------------------------
-
-On ``sd-dev``, download the Ubuntu Xenial server ISO, along with corresponding
-checksum and signature files. See the :ref:`hardware installation docs <download_ubuntu>`
+On ``sd-dev``, download the latest Ubuntu server ISO for either Xenial or Focal,
+along with corresponding checksum and signature files. See the
+:ref:`hardware installation docs <download_ubuntu>`
 for detailed instructions. If you opt for the command line instructions, omit
 the ``torify`` prepended to the ``curl`` command.
 
@@ -40,11 +40,11 @@ In ``dom0``, do the following:
 
 .. code:: sh
 
-   qvm-create sd-staging-base --class StandaloneVM --property virt_mode=hvm --label green
-   qvm-volume extend sd-staging-base:root 20g
-   qvm-prefs sd-staging-base memory 2000
-   qvm-prefs sd-staging-base maxmem 2000
-   qvm-prefs sd-staging-base kernel ''
+   qvm-create sd-staging-base-$SERVER_OS --class StandaloneVM --property virt_mode=hvm --label green
+   qvm-volume extend sd-staging-base-$SERVER_OS:root 20g
+   qvm-prefs sd-staging-base-$SERVER_OS memory 2000
+   qvm-prefs sd-staging-base-$SERVER_OS maxmem 2000
+   qvm-prefs sd-staging-base-$SERVER_OS kernel ''
 
 The commands above will create a new StandaloneVM, expand the storage space
 and memory available to it, as well as disable the integrated kernel support.
@@ -57,17 +57,20 @@ In ``dom0``:
 
 .. code:: sh
 
-   qvm-start sd-staging-base --cdrom=sd-dev:/home/user/ubuntu-16.04.7-server-amd64.iso
+   qvm-start sd-staging-base-$SERVER_OS --cdrom=sd-dev:$ISO_PATH
 
-You may need to edit the filepath above if you downloaded the ISO to a
-different location within the ``sd-dev`` VM. Choose **Install Ubuntu**.
+where ``ISO_PATH`` is the full path to the Ubuntu ISO previously downloaded on ``sd-dev``.
+
+Next, choose **Install Ubuntu**.
+
 For the most part, the install process matches the
 :ref:`hardware install flow <install_ubuntu>`, with a few exceptions:
 
-  -  Server IP address: use value returned by ``qvm-prefs sd-staging-base ip``, with ``/24`` netmask suffix
-  -  Gateway: use value returned by ``qvm-prefs sd-staging-base visible_gateway``
+  -  Server IP address: use value returned by ``qvm-prefs sd-staging-base-$SERVER_OS ip``,
+     with ``/24`` netmask suffix
+  -  Gateway: use value returned by ``qvm-prefs sd-staging-base-$SERVER_OS visible_gateway``
   -  For DNS, use Qubes's DNS servers: ``10.139.1.1`` and ``10.139.1.2``.
-  -  Hostname: ``sd-staging-base``
+  -  Hostname: ``sd-staging-base-$SERVER_OS``
   -  Domain name should be left blank
 
 Make sure to configure LVM and use **Virtual disk 1 (xvda 20.0GB Xen Virtual Block device)**
@@ -81,7 +84,7 @@ Once installation is done, let the machine shut down and then restart it with
 
 .. code:: sh
 
-   qvm-start sd-staging-base
+   qvm-start sd-staging-base-$SERVER_OS
 
 in ``dom0``. You should get a login prompt.
 
@@ -89,7 +92,7 @@ Initial VM configuration
 ------------------------
 
 Before cloning this machine, we'll update software to reduce provisioning time
-on the staging VMs. In the new ``sd-staging-base`` VM's console, do:
+on the staging VMs. In the new ``sd-staging-base-$SERVER_OS`` VM's console, do:
 
 .. code:: sh
 
@@ -117,8 +120,7 @@ to
 
    GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 
-
-When initial configuration is done, run ``qvm-shutdown sd-staging-base`` to shut it down.
+When initial configuration is done, run ``qvm-shutdown sd-staging-base-$SERVER_OS`` to shut it down.
 
 Clone VMs
 ---------
@@ -130,19 +132,19 @@ documented below. Run the following in ``dom0``:
 
 .. code:: sh
 
-   qvm-clone sd-staging-base sd-staging-app-base
-   qvm-clone sd-staging-base sd-staging-mon-base
-   qvm-prefs sd-staging-app-base ip 10.137.0.50
-   qvm-prefs sd-staging-mon-base ip 10.137.0.51
-   qvm-tags sd-staging-app-base add created-by-sd-dev
-   qvm-tags sd-staging-mon-base add created-by-sd-dev
+   qvm-clone sd-staging-base-$SERVER_OS sd-staging-app-base-$SERVER_OS
+   qvm-clone sd-staging-base-$SERVER_OS sd-staging-mon-base-$SERVER_OS
+   qvm-prefs sd-staging-app-base-$SERVER_OS ip 10.137.0.50
+   qvm-prefs sd-staging-mon-base-$SERVER_OS ip 10.137.0.51
+   qvm-tags sd-staging-app-base-$SERVER_OS add created-by-sd-dev
+   qvm-tags sd-staging-mon-base-$SERVER_OS add created-by-sd-dev
 
 Now start both new VMs:
 
 .. code:: sh
 
-   qvm-start sd-staging-app-base
-   qvm-start sd-staging-mon-base
+   qvm-start sd-staging-app-base-$SERVER_OS
+   qvm-start sd-staging-mon-base-$SERVER_OS
 
 On the consoles which eventually appear, you should be able to log in with
 ``sdadmin/securedrop``.
@@ -150,16 +152,18 @@ On the consoles which eventually appear, you should be able to log in with
 Configure cloned VMs
 ~~~~~~~~~~~~~~~~~~~~
 
-We'll need to fix each machine's idea of its own IP. In the console for each
-machine, edit ``/etc/network/interfaces`` to update the ``address`` line with
-the machine's IP.
+We'll need to fix each machine's idea of its own IP. The config location differs
+on your OS choice:
+
+- **Xenial:** In the console for each machine, edit ``/etc/network/interfaces`` to update the ``address`` line with the machine's IP.
+- **Focal:** In the console for each machine, edit ``/etc/netplan/00-installer-config.yaml`` to update the ``addresses`` entry with the machine's IP.
 
 Edit ``/etc/hosts`` on each host to include the hostname and IP for itself.
-Use ``sd-staging-app`` and ``sd-staging-mon``, omitting the ``-base`` suffix, since the cloned VMs
+Use ``sd-staging-app`` and ``sd-staging-mon``, omitting the ``-base-$SERVER_OS`` suffix, since the cloned VMs
 will not have the suffix.
 
 Next, on each host edit ``/etc/hostname`` to reflect the machine's name.
-Again, omit the ``-base`` suffix.
+Again, omit the ``-base-SERVER_OS`` suffix.
 
 Halt each machine, then restart each from ``dom0``. The prompt in each console
 should reflect the correct name of the VM. Confirm you have network access by
@@ -228,8 +232,8 @@ a password. On ``sd-dev``:
    ssh-copy-id sdadmin@10.137.0.50
    ssh-copy-id sdadmin@10.137.0.51
 
-Confirm that you're able to ssh as user ``sdadmin`` from ``sd-dev`` to
-``sd-staging-mon-base`` and ``sd-staging-app-base`` without being prompted for a password.
+Confirm that you're able to ssh as user ``sdadmin`` from ``sd-dev`` to both IP
+addresses without a password.
 
 SecureDrop Installation
 -----------------------
@@ -239,13 +243,10 @@ then we're going to build them, and provision ``sd-staging-app`` and ``sd-stagin
 Follow the instructions in the :doc:`developer documentation <setup_development>`
 to set up the development environment.
 
-Once finished, build the Debian packages for installation on the staging VMs.
+Once finished, build the Debian packages for installation on the staging VMs:
 
-.. code::
-
-   make build-debs
-
-The ``.deb`` files will be available in ``build/``.
+- **Xenial:** use the command ``make build-debs``
+- **Focal:** use the command ``make build-debs-focal``
 
 Managing Qubes RPC for Admin API capability
 -------------------------------------------
@@ -288,33 +289,29 @@ Creating staging instance
 After creating the StandaloneVMs as described above:
 
 * ``sd-dev``
-* ``sd-staging-base``
-* ``sd-staging-app-base``
-* ``sd-staging-mon-base``
+* ``sd-staging-base-$SERVER_OS``
+* ``sd-staging-app-base-$SERVER_OS``
+* ``sd-staging-mon-base-$SERVER_OS``
 
 And after building the SecureDrop .debs, we can finally provision the staging
-environment. In from the root of the SecureDrop project in ``sd-dev``, run:
+environment:
 
-.. code:: sh
+- **Xenial:** run the command ``make staging``
+- **Focal:** run the command ``make staging-focal``
 
-   make staging
-
-The ``make staging`` command invokes the ``qubes-staging`` Molecule scenario.
+The commands invoke the appropriate Molecule scenario for your choice of ``$SERVER_OS``.
 You can also run constituent Molecule actions directly, rather than using
 the Makefile target:
 
 .. code:: sh
 
-   molecule create -s qubes-staging
-   molecule converge -s qubes-staging
-   molecule test -s qubes-staging
+   molecule create -s qubes-staging-$SERVER_OS
+   molecule converge -s qubes-staging-#SERVER_OS
+   molecule test -s qubes-staging-$SERVER_OS
 
-.. note::
-
-  Previous `workarounds <https://github.com/freedomofpress/securedrop/issues/3936>`_ 
-  to mitigate the error ``"stderr": "app: Failed to clone appmenus, qvm-appmenus 
-  missing\`` are no longer required. If you experience errors at this stage, ensure you have
-  followed all the previous steps correctly. 
+.. note:: If a **[dom0] Operation execution** dialog is displayed asking you to
+   allow an ``admin.vm.device.mic.List`` operation, click  **Cancel**. This operation
+   is not required to set up the staging environment.
 
 That's it. You should now have a running, configured SecureDrop staging instance
 running on your Qubes machine. For day-to-day operation, you should run
@@ -323,7 +320,7 @@ to provision staging VMs on-demand. To remove the staging instance, use the Mole
 
 .. code:: sh
 
-   molecule destroy -s qubes-staging
+   molecule destroy -s qubes-staging-$SERVER_OS
 
 Accessing the Journalist Interface (Staging) in Whonix-based VMs
 ----------------------------------------------------------------
@@ -342,7 +339,7 @@ In ``sd-dev``
 
 You will have to copy the ``app-journalist.auth_private`` file (located in 
 your ``sd-dev`` VM in ``${SECUREDROP_HOME}/install_files/ansible_base`` and 
-generated after a successful run of ``make staging``) into your Whonix gateway 
+generated after a successful staging build) into your Whonix gateway 
 VM. On standard Qubes installations this VM is called ``sys-whonix``.
 
 To do this, in an ``sd-dev`` terminal, run the command:
@@ -375,15 +372,33 @@ containing your credentials:
 In this file, enter the following:
 
 .. code:: sh
-   
+
    ClientOnionAuthDir /var/lib/tor/onion_auth
 
-Save and close the file. Finally, reload Tor by clicking 
-**Qubes Application Menu > sys-whonix > Reload Tor**   
+Save and close the file. Finally, reload Tor by clicking
+**Qubes Application Menu > sys-whonix > Reload Tor**
 
-At this point, you should be able to access the *Journalist Interface* 
+At this point, you should be able to access the *Journalist Interface*
 (staging) in a Whonix VM that uses ``sys-whonix`` as its gateway.
 
-Note that you will have to replace the ``app-journalist.auth_private`` file 
-and reload Tor on the Whonix gateway every time you rerun ``make staging``.
+Note that you will have to replace the ``app-journalist.auth_private`` file
+and reload Tor on the Whonix gateway every time you rebuild the staging environment.
 
+Switching between Xenial and Focal
+----------------------------------
+
+Both environments may be set up on your Qubes workstation, but they cannot be run
+simultaneously. To switch between them:
+
+- Use the appropriate ``molecule destroy`` command to bring down the active environment.
+- Remove SSH known host entries for the servers with the commands:
+
+  .. code:: sh
+
+    ssh-keygen -f "/home/user/.ssh/known_hosts" -R "10.137.0.50"
+    ssh-keygen -f "/home/user/.ssh/known_hosts" -R "10.137.0.51"
+
+
+- Build environment-specific packages first if necessary with ``make build-debs``
+  or ``make build-debs-focal``.
+- Run ``make staging`` or ``make staging-focal`` as appropriate.
