@@ -6,7 +6,9 @@ development. The instructions below cover setting up a SecureDrop staging enviro
 using either Xenial or Focal under Qubes.
 
 It is assumed that you have an up-to-date Qubes installation on a compatible
-laptop, with at least 16GB RAM and 60GB free disk space.
+laptop, with at least 16GB RAM and 60GB free disk space. The SecureDrop server VMs
+run Tor locally instead of using ``sys-whonix``, so the system clock must be set
+accurately for Tor to start and hidden services to be available.
 
 Overview
 --------
@@ -261,7 +263,8 @@ which requires some additional software. Install it with
 You'll need to grant the ``sd-dev`` VM the ability to create other VMs,
 by editing the Qubes RPC policies in ``dom0``. Here is an example of a
 permissive policy, sufficient to grant ``sd-dev`` management capabilities
-over VMs it creates:
+over VMs it creates. The lines below should be inserted at the beginning of their
+respective policy files, before other more general rules:
 
 .. todo::
 
@@ -276,6 +279,9 @@ over VMs it creates:
    /etc/qubes-rpc/policy/include/admin-global-rwx:
      sd-dev @adminvm allow,target=@adminvm
      sd-dev @tag:created-by-sd-dev allow,target=@adminvm
+
+   /etc/qubes-rpc/policy/admin.vm.device.mic.List:
+     sd-dev @anyvm deny
 
 .. tip::
 
@@ -308,10 +314,6 @@ the Makefile target:
    molecule create -s qubes-staging-$SERVER_OS
    molecule converge -s qubes-staging-#SERVER_OS
    molecule test -s qubes-staging-$SERVER_OS
-
-.. note:: If a **[dom0] Operation execution** dialog is displayed asking you to
-   allow an ``admin.vm.device.mic.List`` operation, click  **Cancel**. This operation
-   is not required to set up the staging environment.
 
 That's it. You should now have a running, configured SecureDrop staging instance
 running on your Qubes machine. For day-to-day operation, you should run
