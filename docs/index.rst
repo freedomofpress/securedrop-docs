@@ -110,6 +110,7 @@ anonymous sources.
    development/journalist_api
    development/virtual_environments
    development/virtualizing_tails
+   development/qubes_staging
    development/upgrade_testing
    development/contributor_guidelines
    development/tips_and_tricks
@@ -127,7 +128,6 @@ anonymous sources.
    development/portable_demo
    development/release_management
    development/dockerbuildmaint
-   development/qubes_staging
 
 .. toctree::
   :caption: Threat Model
