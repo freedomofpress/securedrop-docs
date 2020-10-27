@@ -43,9 +43,7 @@ recipients and anyone else interested
    Interface
 -  Explain why the *Journalist Interface* does not have 'is it up?'
    monitoring
--  Discuss vanity onion URLs with
-   `Shallot <https://github.com/katmagic/Shallot>`__ and
-   `Scallion <https://github.com/lachesis/scallion>`__
+-  Overview of `onion names <https://securedrop.org/news/introducing-onion-names-securedrop/>`__
 -  How to brand the *Source Interface* and *Journalist Interface*
 -  Physical security of servers and *SVS*
 -  How to securely publicize the organization's Source Interface Tor URL
