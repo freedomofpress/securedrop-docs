@@ -25,7 +25,7 @@ encourage Journalists to delete regularly unneeded submissions from the *Journal
 Interface*.
 
 .. tip:: Although it varies, the average throughput of an onion service is
-         about 150 kB/s, or roughly 4 hours for 2GB. Plan your backup and
+         about 300 kB/s, or roughly 2 hours for 2GB. Plan your backup and
          restore accordingly.
 
 You can use the following command to determine the volume of submissions
