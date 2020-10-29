@@ -151,6 +151,10 @@ Perform the Installation
 The steps below are the same for both the *Application Server* and the
 *Monitor Server*.
 
+.. note:: If you're installing Ubuntu 16.04 on a NUC8, you will need a 16.04-compatible
+  USB Ethernet adaptor attached to complete the steps below. See the
+  :ref:`nuc8_recommendation` notes in the recommended hardware list for more information.
+
 Start by inserting the Ubuntu installation media into the server. Boot
 or reboot the server with the installation media inserted, and enter the
 boot menu. To enter the boot menu, you need to press a key as soon as
@@ -298,10 +302,16 @@ When the packages are finished installing, Ubuntu will automatically
 install the bootloader (GRUB). If it asks to install the bootloader to
 the Master Boot Record, choose **Yes**. When everything is done, reboot.
 
+.. note:: If you're installing Ubuntu on a NUC8 using a USB Ethernet adaptor,
+  you should now complete the steps listed in :ref:`nuc8_enable_network` before
+  proceeding with the rest of the installaton.
+
 .. |Ubuntu Server| image:: images/install/ubuntu_server.png
 
+.. _nuc8_back_to_setup:
+
 Save the Configurations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 When you are done, make sure you save the following information:
 
