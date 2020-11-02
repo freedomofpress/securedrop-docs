@@ -245,6 +245,23 @@ playbooks.) Save ``group_vars/all/site-specific``, exit the editor and
 :ref:`proceed with the installation <Install SecureDrop Servers>` by running the
 playbooks.
 
+
+--------
+
+``gpg --auto-key-retrieve --verify file.sig`` 
+and then ask the user to check for "Good signature" and compare the last line of output (primary key fingerprint):
+
+$ gpg --auto-key-retrieve --verify gnupg-2.2.16.tar.bz2.sig
+gpg: assuming signed data in 'gnupg-2.2.16.tar.bz2'
+gpg: Signature made wto, 28 maj 2019, 17:26:17 CEST
+gpg:                using RSA key D8692123C4065DEA5E0F3AB5249B39D24F25E3B6
+gpg: Good signature from "Werner Koch (dist sig)" [marginal]
+...
+gpg: WARNING: This key is not certified with sufficiently trusted signatures!
+gpg:          It is not certain that the signature belongs to the owner.
+Primary key fingerprint: 031E C253 6E58 0D8E A286  A9F2 2071 B08A 33BD 3F06
+
+
 .. _troubleshooting_ossec:
 
 Troubleshooting
