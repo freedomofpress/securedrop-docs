@@ -361,33 +361,141 @@ Specific Hardware Recommendations
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We currently recommend the Intel NUC for SecureDrop servers.
+We currently recommend Intel 7- and 8-series NUCS for SecureDrop servers.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
     extraneous hardware as physically possible from your servers. This
     could include: speakers, cameras, microphones, fingerprint readers,
     wireless, and Bluetooth cards.
 
-.. _nuc7_recommendation:
-
-Intel 7th-gen NUC
-~~~~~~~~~~~~~~~~~
 
 The Intel NUC (Next Unit of Computing) is an inexpensive, quiet, low-power
 device that can be used for the SecureDrop servers. There are a
 `variety of models <https://www.intel.com/content/www/us/en/products/boards-kits/nuc.html>`__
 to choose from.
 
-The NUCs typically come as kits, and some assembly is required. You will need to
+NUCs typically come as kits, and some assembly is required. You will need to
 purchase the RAM and hard drive separately for each NUC and insert both into the
 NUC before it can be used. We recommend:
 
 -  2x 240GB SSDs (2.5")
--  1x memory kit of compatible 2x4GB sticks
-   -  You can put one 4GB memory stick in each of the servers.
+-  1x memory kit of compatible 2x8GB sticks
+   -  You can put one 8GB memory stick in each of the servers.
 
-We have tested and can recommend the `NUC7i5BNH <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc7i5bnh.html>`__ - these tend to be readily available in
-retail stores.
+.. _nuc8_recommendation:
+
+Intel 8th-gen NUC
+~~~~~~~~~~~~~~~~~
+
+We have tested and can recommend the `NUC8i5BEK <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc8i5bek.html>`__.
+
+.. note:: The Ubuntu 16.04 install kernel does not support the NUC8's built-in
+  Ethernet NIC, so a 16.04-compatible USB Ethernet adaptor is required for the
+  OS installation. The Ethernet adaptor will not be needed after the
+  installation is complete, as SecureDrop's custom kernel does support the
+  built-in NIC.
+
+  For more information on the NUC8-specific steps required during the OS install, see :ref:`nuc8_enable_network`.
+
+The NUC8i5BEK has soldered-on wireless components, which cannot easily be
+removed. For security reasons, we recommend that you take the following steps
+to disable wireless functionality:
+
+- before installation of the RAM and storage, disconnect the wireless antennae
+  leads:
+
+|NUC8 leads|
+
+- before the initial OS installation, boot into the BIOS by pressing **F2** at
+  startup, navigate to **Advanced > Devices > Onboard Devices**, and disable
+  unwanted hardware - everything except **LAN**:
+
+|NUC8 VisualBios1|
+
+While in the BIOS, you should also navigate to **Advanced > Security** in the
+and disable SGX support, which not used by SecureDrop and may be targeted by
+active CPU exploits:
+
+|NUC8 VisualBios2|
+
+.. |NUC8 leads| image:: images/hardware/nuc8_leads.jpg
+.. |NUC8 VisualBIOS1| image:: images/hardware/nuc8_visualbios1.png
+.. |NUC8 VisualBIOS2| image:: images/hardware/nuc8_visualbios2.png
+
+
+.. _nuc8_enable_network:
+
+Enabling Network Support for the NUC8i5BEK
+******************************************
+
+The Ubuntu 16.04 installer uses a 4.4-series Linux kernel, which does not include
+support for the NUC8-series built-in NIC. In order to complete the Ubuntu OS
+install on the SecureDrop servers, a USB Ethernet adaptor that is supported by
+the install may be used. The adaptor should not be used as part of the final
+system setup, however. Instead, before installing SecureDrop, the Ubuntu kernel
+should be updated to a version with support for the built-in NIC, and the
+network configuration should be updated to use it instead of the USB adaptor.
+
+To do so, after rebooting the server following the initial Ubuntu install,
+follow the steps below:
+
+#. Log in at the console as the admin user created during the initial install.
+#. Verify that the server is using a 4.4-series kernel with the command ``uname -r``.
+#. Check the USB adaptor's interface name with the command ``ip link show`` - it
+   should list two network interfaces: the loopback device ``lo``, and an interface
+   with a longer name - the latter is the USB adaptor's interface name.
+#. Upgrade to the Ubuntu 16.04 HWE kernel using the following commands:
+
+   .. code:: sh
+
+     sudo apt-get update
+     sudo apt-get dist-upgrade
+     sudo apt install --install-recommends linux-generic-hwe-16.04
+
+#. Reboot the system, log in at the console,  and verify that it is now running
+   a 4.15-series kernel with the command ``uname -r``
+#. Verify that the built-in NIC is now enabled via ``ip link show``. There
+   should now be 3 devices listed, ``lo``, the adaptor interface, and ``eno1``,
+   the interface name of the built-in NIC.
+#. Edit the network interface configuration file with the command:
+
+   .. code:: sh
+
+     sudo vi /etc/network/interfaces
+
+   Note the two references to the USB adaptor interface name in the lines:
+
+   .. code-block:: none
+
+     # the primary network interface
+     auto <USB adaptor interface name>
+     iface <USB adaptor interface name> inet static
+
+   Update them to read as follows:
+
+   .. code-block:: none
+
+     # the primary network interface
+     auto eno1
+     iface eno1 inet static
+
+
+   Then save the changes, disconnect the Ethernet cable from the USB adaptor,
+   connect the cable to the onboard Ethernet port, disconnect the adaptor,
+   and reboot the system.
+
+#. Log in and verify that  ``lo`` and ``eno1`` are the only interfaces listed, via ``ip link
+   show``, and that external connectivity is working, via ``curl -I www.google.com``
+   for example.
+
+Next, proceed with the rest of the :ref:`SecureDrop installation<nuc8_back_to_setup>`.
+
+.. _nuc7_recommendation:
+
+Intel 7th-gen NUC
+~~~~~~~~~~~~~~~~~
+
+We have tested and can recommend the `NUC7i5BNH <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc7i5bnh.html>`__.
 
 The NUC7i5BNH has soldered-on wireless components, which cannot easily be
 removed. For security reasons, we recommend that you take the following steps
@@ -420,17 +528,12 @@ Intel 5th-gen NUC
 ~~~~~~~~~~~~~~~~~
 
 We previously recommended the
-`NUC5i5MYHE <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc5i5myhe.html>`__, however, it has now reached end-of-life. We will continue to support and
+`NUC5i5MYHE <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc5i5myhe.html>`__,
+however, it has now reached end-of-life. We will continue to support and
 test SecureDrop on this hardware, but if you are building a new SecureDrop
-instance we recommend using 7th-generation NUCs instead.
+instance we recommend using 7th- or 8th-generation NUCs instead.
 
-The NUC5i5MYHE supports wireless through *optionally-purchased* expansion cards.
-This means the wireless components aren't soldered on which would make them
-nearly impossible to remove without inflicting damage to the NUC. This optional
-support is preferable, since you want neither WiFi nor Bluetooth.
-
-
-.. note:: If you encounter issues booting Ubuntu on the NUCs, try
+.. note:: If you encounter issues booting Ubuntu on the NUC5, try
 	  updating the BIOS according to `these instructions
 	  <https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
 
@@ -443,7 +546,7 @@ the 2018 revision of the Mac Mini is not a viable candidate for use with
 SecureDrop, as security features of the device prevent Linux from being
 installed on its internal storage. We will continue to support existing
 instances using 2014 Mac Minis, but if you are building a new instance we
-recommend using the 7th-gen Intel NUCs.
+recommend using Intel NUCs.
 
 2014 Mac Minis have removable wireless cards that you
 should remove. This requires a screwdriver for non-standard
