@@ -136,17 +136,33 @@ signed with the release signing key:
 .. code:: sh
 
     cd ~/Persistent/securedrop/
-    git checkout 1.6.0
+    git fetch --tags
+    gpg --keyserver hkps://keys.openpgp.org --recv-key \ "2224 5C81 E3BA EB41 38B3 6061 310F 5612 00F4 AD77"
     git tag -v 1.6.0
 
-You should see ``Good signature from "SecureDrop Release Signing Key"`` in the
-output of that last command along with the fingerprint above.
+The output should include the following two lines:
+
+.. code:: sh
+
+    gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
+    gpg: Good signature from "SecureDrop Release Signing Key"
+
 
 .. important::
 
    If you do not see the message above, signature verification has failed
    and you should **not** proceed with the installation. If this happens,
    please contact us at securedrop@freedom.press.
+
+Verify that each character of the fingerprint matches what is on the 
+screen of your workstation. If it does, you can check out the new release:
+
+.. code:: sh
+
+    git checkout 1.6.0
+
+.. include:: ../includes/refname-warning.txt
+
 
 .. _keepassxc_setup:
 
