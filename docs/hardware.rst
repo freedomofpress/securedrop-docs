@@ -378,7 +378,7 @@ NUCs typically come as kits, and some assembly is required. You will need to
 purchase the RAM and hard drive separately for each NUC and insert both into the
 NUC before it can be used. We recommend:
 
--  2x 240GB SSDs (2.5")
+-  2x 240GB SSDs (2.5" or M.2, depending on your choice of kit)
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
 
@@ -388,6 +388,7 @@ Intel 8th-gen NUC
 ~~~~~~~~~~~~~~~~~
 
 We have tested and can recommend the `NUC8i5BEK <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc8i5bek.html>`__.
+It provides a single storage option: an M.2 NVMe or SATA SSD.
 
 .. note:: The Ubuntu 16.04 install kernel does not support the NUC8's built-in
   Ethernet NIC, so a 16.04-compatible USB Ethernet adaptor is required for the
