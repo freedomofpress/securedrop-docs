@@ -695,6 +695,8 @@ When troubleshooting, ensure you are on the latest version of SecureDrop
 in your *Admin Workstation*. This is done by accepting the update
 when prompted at boot in the GUI that appears.
 
+.. _troubleshooting_admin_connectivity: 
+
 I can't SSH into my servers over Tor from my Admin Workstation. What do I do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -739,6 +741,7 @@ into your Admin Workstation, you should first perform the following troubleshoot
    Ensure this key is available using ``ssh-add -L``. If you see the output
    "This agent has no identities." then you need to add the key via ``ssh-add``
    prior to SSHing into the servers.
+
 
 I got a unusual error when running ``./securedrop-admin install``. What do I do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
