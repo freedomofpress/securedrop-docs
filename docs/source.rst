@@ -122,7 +122,7 @@ the organization that you wish to submit to.
    through the SecureDrop Website, using Tor Browser. For additional
    security, you can use our .onion service address in Tor:
 
-   ``secrdrop5wyphb5x.onion/report-an-error``
+   ``sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion/report-an-error``
 
    We will update the directory entry if the information in it is incorrect.
 
