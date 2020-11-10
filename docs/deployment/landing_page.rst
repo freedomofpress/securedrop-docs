@@ -140,7 +140,8 @@ behavior, regardless of the use of HTTPS.
 
 We suggest offering a reference to the SecureDrop Onion Service in
 plain text, without a hyperlink (as per the preceding section):
-**secrdrop5wyphb5x.onion**
+
+**sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion**
 
 Apply Security Headers
 ----------------------
