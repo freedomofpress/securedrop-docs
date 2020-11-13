@@ -182,9 +182,9 @@ If you intend to run nginx as your webserver instead, this will work:
     add_header X-Frame-Options DENY;
     add_header X-XSS-Protection "1; mode=block";
     add_header X-Content-Type-Options nosniff;
-    add_header X-Download-Options: noopen;
+    add_header X-Download-Options noopen;
     add_header X-Permitted-Cross-Domain-Policies master-only;
-    add_header Content-Security-Policy "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
+    add_header Content-Security-Policy "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';";
     add_header Referrer-Policy "no-referrer";
 
 
