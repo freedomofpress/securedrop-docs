@@ -161,7 +161,7 @@ screen of your workstation. If it does, you can check out the new release:
 
     git checkout 1.6.0
 
-.. include:: ../includes/refname-warning.txt
+.. include:: includes/refname-warning.txt
 
 
 .. _keepassxc_setup:
