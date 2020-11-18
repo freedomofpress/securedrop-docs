@@ -156,7 +156,7 @@ Release Testing Migrations
 
 In order to ensure that migrations between from the previous to current version of SecureDrop apply
 cleanly in production-like instances, we have a helper script that is designed to load
-semi-randomized data into the database. You will need to modify the script ``qa_loader.py`` to
+semi-randomized data into the database. You will need to modify the script ``loaddata.py`` to
 include sample data. This sample data should intentionally include edge cases that might behave
 strangely such as data whose nullability is only enforced by the application or missing files.
 
@@ -167,7 +167,7 @@ During QA, the release manager should follow these steps to test the migrations.
 3. Provision staging VMs
 4. ``vagrant ssh app-staging``
 5. ``sudo -u www-data bash``
-6. ``cd /var/www/securedrop && ./qa_loader.py``
+6. ``cd /var/www/securedrop && ./loaddata.py``
 7. Checkout the release candidate
 8. Re-provision the staging VMs
 9. Check that nothing went horribly wrong
