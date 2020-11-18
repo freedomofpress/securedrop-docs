@@ -296,7 +296,7 @@ using the command:
 
  curl http://$(cat app-source-ths)/metadata
 
-To copy the OSSEC alert public key, first list available keys on the monitor server:
+To copy the *OSSEC Alert Public Key*, first list available keys on the monitor server:
 
 .. code:: sh
 

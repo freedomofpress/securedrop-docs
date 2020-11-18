@@ -24,7 +24,7 @@ prior to installing SecureDrop.
 
 What you need:
 
--  The GPG key that OSSEC will encrypt alerts to
+-  The *OSSEC Alert Public Key*
 -  The email address that will receive alerts from OSSEC
 -  Information for your SMTP server or relay (hostname, port)
 -  Credentials for the email address that OSSEC will send alerts from
@@ -54,7 +54,7 @@ For first-time installs, you can use the
 :ref:`configuration playbook<configure_securedrop>`, or edit
 ``install_files/ansible-base/group_vars/all/site-specific`` manually.
 
-- GPG public key used to encrypt OSSEC alerts:
+- *OSSEC Alert Public Key*:
   ``ossec_alert_gpg_public_key``
 - Fingerprint of key used when encrypting OSSEC alerts:
   ``ossec_gpg_fpr``
@@ -88,7 +88,7 @@ documentation <http://www.postfix.org/documentation.html>`__ for help,
 although we've described some common scenarios in the
 :ref:`troubleshooting section <troubleshooting_ossec>`.
 
-If you have your GPG public key handy, copy it to
+If you have your *OSSEC Alert Public Key* public key handy, copy it to
 ``install_files/ansible-base`` and then specify the filename, e.g.
 ``ossec.pub``, in the ``ossec_alert_gpg_public_key`` line of
 ``group_vars/all/site-specific``.
@@ -334,7 +334,7 @@ then run the playbook again.
 
 Message Failed to Encrypt
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-If OSSEC cannot encrypt the alert to the GPG public key for the Admin
+If OSSEC cannot encrypt the alert to the *OSSEC Alert Public Key* for the Admin
 email address (configured as ``ossec_alert_email`` in ``group_vars/all/site-specific``),
 the system will send a static message instead of the scheduled alert:
 
