@@ -137,7 +137,6 @@ signed with the release signing key:
 
     cd ~/Persistent/securedrop/
     git fetch --tags
-    gpg --keyserver hkps://keys.openpgp.org --recv-key \ "2224 5C81 E3BA EB41 38B3 6061 310F 5612 00F4 AD77"
     git tag -v 1.6.0
 
 The output should include the following two lines:
@@ -154,14 +153,16 @@ The output should include the following two lines:
    and you should **not** proceed with the installation. If this happens,
    please contact us at securedrop@freedom.press.
 
-Verify that each character of the fingerprint matches what is on the 
+Verify that each character of the fingerprint matches what is on the
 screen of your workstation. If it does, you can check out the new release:
 
 .. code:: sh
 
     git checkout 1.6.0
 
-.. include:: includes/refname-warning.txt
+.. important:: If you see the warning ``refname '1.6.0' is ambiguous`` in the
+               output, we recommend that you contact us immediately at
+               securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
 
 .. _keepassxc_setup:
