@@ -3,7 +3,7 @@
 OSSEC Guide
 ===========
 
-Setting Up OSSEC Alerts
+Setting up OSSEC alerts
 -----------------------
 
 OSSEC is an open source host-based intrusion detection system (IDS) that
@@ -168,7 +168,7 @@ when validating the SMTP relay TLS certificate.
 Save ``group_vars/all/site-specific``, exit the editor and :ref:`proceed with
 the installation <Install SecureDrop Servers>` by running the playbooks.
 
-Using Gmail for OSSEC Alerts
+Using Gmail for OSSEC alerts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It's easy to get SecureDrop to use Google's servers to deliver the
@@ -199,7 +199,7 @@ generated from the 2-step config for ``sasl_passwd``, as the primary
 account password won't work. The ``smtp_relay`` is smtp.gmail.com and
 the ``smtp_relay_port`` is 587.
 
-Configuring Fingerprint Verification
+Configuring fingerprint verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you run your own mail server, you may wish to increase the security
@@ -298,7 +298,7 @@ OSSEC service.
          the files live on the servers, since values like ``smtp_relay_port``
          are used in several locations throughout the config.
 
-Useful Log Files for OSSEC
+Useful log files for OSSEC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Other log files that may contain useful information:
@@ -320,7 +320,7 @@ Other log files that may contain useful information:
          security-related information about your organization's
          SecureDrop instance.
 
-Not Receiving Emails
+Not receiving emails
 ~~~~~~~~~~~~~~~~~~~~
 Some mail servers require that the sending email address match the account
 that authenticated to send mail. By default the *Monitor Server* will use
@@ -332,7 +332,7 @@ after the first playbook run, try setting ``ossec_from_address`` in
 ``group_vars/all/site-specific`` to the full email address used for sending the alerts,
 then run the playbook again.
 
-Message Failed to Encrypt
+Message failed to encrypt
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 If OSSEC cannot encrypt the alert to the *OSSEC Alert Public Key* for the Admin
 email address (configured as ``ossec_alert_email`` in ``group_vars/all/site-specific``),
@@ -489,12 +489,37 @@ should examine these alerts regularly to ensure that the SecureDrop
 environment has not been compromised in any way, and follow up on any
 particularly concerning messages with direct investigation.
 
+An initial SecureDrop install will generate quite a few alerts as OSSEC is installed
+early in the install process.
+As part of the administration of a SecureDrop instance, regularly looking through
+the generated alerts will be able to and gather status on the overall health of
+your SecureDrop instance.
+
+Ossec alerts will range from a severity level of 1 to 14, and as a baseline, you
+should expect to see the following alerts that are either informative or for which
+you should take action:
+
 Common OSSEC Alerts
 ~~~~~~~~~~~~~~~~~~~
 
+Package updates
+^^^^^^^^^^^^^^^
 The SecureDrop *Application* and *Monitor Servers* reboot every night, as part
-of the unattended upgrades process. Therefore, on nights where packages were updated,
-you should receive email alerts every morning indicating binaries have changed.
+of the unattended upgrades process. When the servers come back up, OSSEC will
+start again and report the change in status. Therefore you should receive an
+email alert every morning containing text similar to: ::
+
+    Received From: mon->ossec-monitord
+    Rule: 502 fired (level 3) -> "Ossec server started."
+    Portion of the log(s):
+
+    ossec: Ossec started.
+
+This is a normal alert, and informs you that the system is working as expected.
+
+Similarly, your SecureDrop Application and Monitoring Servers will
+check for application updates on your servers. Should your servers require
+updates, OSSEC will alarm because the packages binaries will have changed
 Below is a sample alert, but you may see any number of these records in the
 logs. This will happen in batches so these emails might be longer than the
 below alert. You should also see them in an email named ``Daily Report:
@@ -507,7 +532,21 @@ can review the logs in ``/var/log/apt/history.log``. ::
 
     status installed <package name> <version>
 
-These are normal alerts, they tell you your system is up-to-date and patched.
+In conjunction to these alerts, you should also receive alerts pertaining to file
+checksum changes. ::
+
+    Received From: (app)
+    Rule: 550 fired (level 7) -> "Integrity checksum changed."
+    Portion of the log(s):
+
+    Integrity checksum changed for: '/usr/sbin/<binary name>'
+    Old md5sum was: '<old md5sum>'
+    New md5sum is : '<new md5sum>'
+    Old sha1sum was: '<old sha1sum>'
+    New sha1sum is : '<new sha1sum>'
+
+These are normal alerts, they tell you that your SecureDrop servers are are
+properly up-to-date and patched.
 
 Occasionally your SecureDrop Servers will send an alert for failing to connect
 to Tor relays. Since SecureDrop runs as a Tor Onion Service, it is possible
@@ -527,32 +566,40 @@ securedrop@freedom.press for help.
 
 .. _SecureDrop Support Portal: https://securedrop-support.readthedocs.io/en/latest/
 
+Daily reports
+^^^^^^^^^^^^^
+
+On days where file integrity checksums have changed or users login the the ``app``
+or ``mon`` servers, you will receive emails entitled ``Daily report: File changes`` or
+``Daily report: Successful logins``. These emails may be a more digestible format
+should you not have continuous access to the inbox or GPG key.
+
+**Action**: periodically review these daily reports to ensure file changes correspond
+to platform updates and logins correspond to admin activity on the SecureDrop environment.
+
+If you would have any suggestions on how to further tune or improve the alerting,
+you can join the discussion or open an issue on `GitHub <https://github.com/freedomofpress/securedrop/labels/goals%3A%20reduce%20IDS%20noise>`__.
+
 Uncommon OSSEC Alerts
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. _uncommon_alerts:
+Logins
+^^^^^^
+Ossec will send an alert whenever a user interactively logs into the system (via SSH
+or console). You will receive an email containing the following. ::
 
-SecureDrop also runs automatic checks for submission data integrity
-problems. For example, secure deletion of large submissions could
-potentially be interrupted, resulting in an alert recommending steps
-to :ref:`clean them up <submission-cleanup>`.
+    Rule: 40101 (level 12) -> 'System user successfully logged to the system.'
 
-In addition, SecureDrop performs a daily configuration check to ensure that
-the iptables rules configured on the *Application* and *Monitor Server* match
-the expected configuration. If they do not, you may receive a level 12 alert
-like the following: ::
+**Action**: Ensure that this action was performed by either you or a fellow administrator.
 
-      Received From: (app) 10.20.2.2->/var/ossec/checksdconfig.py
-      Rule: 400900 fired (level 12) ->
-      "Indicates a problem with the configuration of the SecureDrop servers."
-      Portion of the log(s):
-      ossec: output: '/var/ossec/checksdconfig.py': System configuration error:
-      The iptables default drop rules are incorrect.
+``securedrop-admin`` commands
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Ossec will sent an alert when there is change to the infrastructure, configuration or
+backups using the command-line `securedrop-admin` tool. ::
 
-Alternatively, the error text may say: ``The iptables rules have not been configured.``
+    Rule: 400001 fired (level 13) -> "Ansible playbook run on server (securedrop-admin install, backup, or restore)."
 
-To resolve the issue, you can reinstate the standard iptables
-rules by :ref:`updating the system configuration <update-system-configuration>`.
+**Action**: You should ensure that this action was performed by you or a fellow administrator.
 
 If you believe that the system is behaving abnormally, you should
 contact us at the `SecureDrop Support Portal`_ or securedrop@freedom.press for
