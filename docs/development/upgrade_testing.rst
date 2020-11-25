@@ -41,6 +41,24 @@ First, build the app code packages and create the environment:
  make build-debs
  make upgrade-start
 
+.. note::
+
+   If you observe errors with "Too many authentication failures" in the
+   output, SSH may be attempting to authenticate using keys configured for other
+   services, eventually reaching the limit configured on the server. There are
+   multiple ways to work around this; one is to add the following configuration
+   to the top of your ``~/.ssh/config``:
+
+   .. code::
+
+      Host *
+          IdentitiesOnly yes
+
+   This instructs SSH to only attempt authentication using explicitly configured
+   identities, instead of cycling through keys available to your SSH agent.
+   Note that the configuration above may break authentication to other services
+   if you do not specify an identity file for them.
+
 The playbook will return the source interface Onion address. You can use this to
 check the application version displayed in the source interface footer.
 Alternatively, you can log into the *Application Server* VM and check the deployed
