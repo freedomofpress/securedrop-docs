@@ -279,7 +279,7 @@ it locally using the following commands:
 .. code:: sh
 
  cd ~/Persistent/securedrop/install_files/ansible-base
- curl http://$(cat app-source-ths)/journalist-key > SecureDrop.asc
+ curl http://$(cat app-source-ths)/public-key > SecureDrop.asc
  gpg --import SecureDrop.asc
 
 Validate that the imported key's fingerprint matches the one on your
