@@ -4,7 +4,7 @@ Set up the *Admin Workstation*
 .. _set_up_admin_tails:
 
 Earlier, you should have created the *Admin Workstation* Tails USB along with a
-persistence volume for it. Now, we are going to add a couple more features to
+persistent volume for it. Now, we are going to add a couple more features to
 the *Admin Workstation* to facilitate SecureDrop's setup.
 
 If you have not switched to and booted the *Admin Workstation* Tails USB on your
@@ -190,22 +190,32 @@ in the SecureDrop repository that you just cloned. To use the template:
    .. code:: sh
 
      cp ~/Persistent/securedrop/tails_files/securedrop-keepassx.kdbx \
-        ~/Persistent/keepassx.kdbx
+        ~/Persistent/Passwords.kdbx
 
 -  Open the KeePassXC program |KeePassXC| which is already installed on
    Tails
--  Select **Database**, **Open database**, and navigate to the location of
-   **~/Persistent/keepassx.kdbx**, select it, and click **Open**
--  Check the **password** box and hit **OK**
+-  Select **Database ▸ Open database**, and navigate to the location of
+   **~/Persistent/Passwords.kdbx**, select it, and click **Open**
+-  Leave the password blank and click **OK**. If you receive an "Unlock failed"
+   prompt, click **Retry with empty password**.
 -  Edit entries as required.
--  Select **Database** and **Save Database** to save your changes.
+-  Select **Database ▸ Save Database** to save your changes.
 
-The next time you use KeepassXC, the database at ``~/Persistent/keepassx.kdbx``
-will be opened by default.
+The next time you use KeepassXC, the database at ``~/Persistent/Passwords.kdbx``
+will be selected by default.
 
-.. tip:: If you would like to add a master password, navigate to **Database** and
-   **Change master key**. Note that since each KeePassXC database is stored
-   on the encrypted persistent volume, this additional passphrase is not necessary.
+KeePassXC will show a warning every time you attempt to open a database without
+entering a password. Because your persistent volume is encrypted, setting up this
+additional password is not strictly required. It provides some additional
+protection, e.g., if a computer is left running, at the cost of convenience.
+
+For passwordless access without warnings, you can protect the database using a
+key file, via **Database ▸ Database settings ▸ Security ▸ Add additional protection
+▸ Add Key File ▸ Generate**. This key file has to be stored in your Persistent
+folder and it must be selected when you open the database.
+
+After configuring the password database, restart KeePassXC once to verify
+that you are able to access it as expected.
 
 .. warning:: You will not be able to access your passwords if you
          forget the master password or the location of the key
