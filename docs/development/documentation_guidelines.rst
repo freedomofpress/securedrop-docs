@@ -120,29 +120,6 @@ for writing in the markup language used for this documentation.
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 
 
-Line Wrapping
-^^^^^^^^^^^^^
-
-Lines in the plain-text documentation files should wrap at 80 characters. (Some
-exceptions: complex code blocks showing example commands, or long URLs.)
-
-Glossary
-^^^^^^^^
-
-Text taken directly from a user interface is in **bold face**.
-
-    "Once you’re sure you have the right drive, click **Format Drive**."
-
-SecureDrop-specific :doc:`glossary <../glossary>` is in *italics*.
-
-    "To get started, you’ll need two Tails drives: one for the *Admin
-    Workstation* and one for the *Secure Viewing Station*."
-
-When referring to virtual machines in the development environment, use
-lowercase for the name:
-
-    app-staging VM
-
 Code Blocks
 ^^^^^^^^^^^
 
@@ -162,6 +139,31 @@ output text, use ``$`` before the typed commands:
      hello
      $ echo sunshine
      sunshine
+
+
+Date Format
+^^^^^^^^^^^
+Follow AP guidelines for formatting dates. Don't use the ISO format for adding 
+dates to the documentation.
+
+To avoid confusion, format dates in the documentation as Month_Name Day, Year:
+
+  .. code::
+
+     October 13, 2020
+
+  not
+  
+  .. code::
+
+     13 October, 2020
+     13/10/2020
+     10/13/2020
+     10/13/20
+     2020-10-13
+     2020-Oct-13
+     
+
 
 File Paths
 ^^^^^^^^^^
@@ -186,10 +188,36 @@ of the SecureDrop repo.
 Use absolute paths when refering to files outside the SecureDrop repository:
 ``/usr/local/bin/tor-browser``.
 
+
+Glossary
+^^^^^^^^
+
+Text taken directly from a user interface is in **bold face**.
+
+    "Once you’re sure you have the right drive, click **Format Drive**."
+
+SecureDrop-specific :doc:`glossary <../glossary>` is in *italics*.
+
+    "To get started, you’ll need two Tails drives: one for the *Admin
+    Workstation* and one for the *Secure Viewing Station*."
+
+When referring to virtual machines in the development environment, use
+lowercase for the name:
+
+    app-staging VM
+
+
+Line Wrapping
+^^^^^^^^^^^^^
+
+Lines in the plain-text documentation files should wrap at 80 characters. (Some
+exceptions: complex code blocks showing example commands, or long URLs.)
+
+
 Usage and Style
 ^^^^^^^^^^^^^^^
 
-To avoid confusion, lists should include the so-called "Oxford comma":
+To avoid confusion, lists should include the "Oxford comma":
 
     "You will need an email address, a public GPG key for that address, and the
     fingerprint for that key."
