@@ -9,7 +9,7 @@ committed to offering support during installation and into the working life of
 an organization's SecureDrop instance.
 
 .. note:: The `support site`_ is also available as a Tor Onion Service at
-          http://support6kv2242qx.onion/.
+          http://sup6h5iyiyenvjkfxbgrjynm5wsgijjoatvnvdgyyi7je3xqm4kh6uqd.onion/.
 
 .. _`Redmine`: https://www.redmine.org/
 .. _`support site`: https://support.freedom.press/
