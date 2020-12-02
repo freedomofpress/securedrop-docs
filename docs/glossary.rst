@@ -31,7 +31,7 @@ everyday workstation, or to another computer for additional processing.
 
 Please see the detailed security recommendations for the choice, configuration
 and use of your *Export Device* in the :doc:`journalist guide <journalist>`
-and in the :doc:`setup guide <set_up_transfer_and_export_device>` .
+and in the :doc:`setup guide <set_up_transfer_and_export_device>`.
 
 
 Journalist
@@ -46,15 +46,15 @@ they can be prepared for publication on the *Secure Viewing Station* before
 being transferred to an Internet-connected computer.
 
 Instructions for using SecureDrop as a *Journalist* are available in our
-`Journalist Guide <https://docs.securedrop.org/en/latest/journalist.html>`__.
+:doc:`Journalist Guide <journalist>`.
 
 
 Journalist Alert Key
 --------------------
-The *Journalist Alert Key* is an alert that notifies journalists daily 
+The *Journalist Alert Key* is used for encrypting the alert that notifies journalists daily 
 via encrypted email about whether or not there has been submission activity 
 in the past 24 hours. More information about journalist alerts, is in our 
-`Journalist Guide <https://docs.securedrop.org/en/stable/journalist.html#daily-journalist-alerts-about-submissions>`__.
+:doc:`Journalist Guide <journalist>`.
 
 
 Journalist Interface
@@ -66,7 +66,7 @@ this was called the *Document Interface*, but we have renamed it to avoid
 ambiguity.
 
 Instructions for using the *Journalist Interface* are available in our
-`Journalist Guide <https://docs.securedrop.org/en/latest/journalist.html>`__.
+:doc:`Journalist Guide <journalist>`.
 
 
 Journalist Workstation
@@ -78,7 +78,7 @@ documents, and move them to the *Secure Viewing Station* using the
 *Transfer Device*.
 
 Instructions for using the *Journalist Workstation* are available in our
-`Journalist Guide <https://docs.securedrop.org/en/latest/journalist.html>`__.
+:doc:`Journalist Guide <journalist>`.
 
 
 Landing Page
@@ -99,14 +99,7 @@ OSSEC Alert Public Key
 ----------------------
 The *OSSEC Alert Public Key* is the GPG key that OSSEC will encrypt alerts to.
 It is used by the admin to access encrypted OSSEC alerts from the Monitor Server.
-
-Copy the *OSSEC Alert Public Key* to ``install_files/ansible-base`` and then 
-specify the filename, (e.g. ``ossec.pub``, in the ``ossec_alert_gpg_public_key`` 
-line of ``group_vars/all/site-specific``.
-
-If you don’t have your *OSSEC Alert Public Key* ready, you can run ``GnuPG`` on 
-the command line to find, import, and export your public key. Instructions about 
-setting up OSSEC alerts are available in the `OSSEC Guide <https://docs.securedrop.org/en/stable/ossec_alerts.html>`_.
+Instructions about setting up OSSEC alerts are available in the :doc:`OSSEC Guide <ossec_alerts>`.
 
 
 .. _svs:
@@ -140,7 +133,7 @@ SecureDrop to communicate with a *Journalist*. A *Source* will always
 access SecureDrop through the *Source Interface* and must do so using Tor.
 
 Instructions for using SecureDrop as a *Source* are available in our
-`Source Guide <https://docs.securedrop.org/en/latest/source.html>`__.
+:doc: `Source Guide <source>`.
 
 
 Source Interface
@@ -149,8 +142,8 @@ The *Source Interface* is the website that sources will access to
 submit documents and communicate with journalists. This site is
 hosted on the *Application Server* and can only be accessed through Tor.
 
-Instructions for using the *Source Interface* are available in our `Source Guide
-<https://docs.securedrop.org/en/latest/source.html>`__.
+Instructions for using the *Source Interface* are available in our :doc:`Source Guide
+<source>`.
 
 
 .. _submission-key:

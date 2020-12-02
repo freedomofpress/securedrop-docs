@@ -231,7 +231,7 @@ the template are:
 - Email account for sending OSSEC alerts
 - Monitor Server SSH Onion URL
 - Network Firewall Admin Credentials
-- OSSEC Alert Public Key
+- *OSSEC Alert Public Key*
 - SecureDrop Login Credentials
 
 **Journalist**:

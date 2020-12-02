@@ -190,9 +190,8 @@ Attacks on Network Infrastructure
 -  apt server man-in-the-middle used to serve old or malicious packages
 -  SecureDrop apt servers are compromised, or apt server man-in-the middle attack injects malicious packages
 -  News Organization network is compromised
--  *OSSEC Alert Public Key* and/or *Journalist Alert Public Key* SMTP account 
-   credentials are compromised
--  *OSSEC Alert Public Key* and/or *Journalist Alert Private Key* are compromised
+-  OSSEC and/or Journalist alert SMTP account credentials compromised
+-  OSSEC and/or Journalist alert private key compromised
 -  SMTP relay compromised
 -  Admin's network is monitored
 
