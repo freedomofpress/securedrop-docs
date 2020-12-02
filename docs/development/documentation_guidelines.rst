@@ -89,7 +89,19 @@ Project maintainers will need to approve the PR before it can be merged.
 
 .. include:: ../includes/squash-commits.txt
 
+Pushing to a contributor fork
+-----------------------------
+As a maintainer, you can push directly to a contributor fork, as long as there
+is an active Pull Request corresponding to the branch you are pushing to, and
+you have added the contributor remote with authentication enabled (i.e. the ``url``
+value in ``.git/config`` starts with ``git@github.com``).
 
+In addition, to avoid encountering a permission error with LFS file locking,
+you have to disable lock verification for the contributor fork:
+
+.. code:: sh
+
+   git config 'lfs.https://github.com/<contributor>/securedrop-docs/info/lfs.locksverify' false
 
 .. _updating_screenshots:
 
@@ -143,7 +155,7 @@ output text, use ``$`` before the typed commands:
 
 Date Format
 ^^^^^^^^^^^
-Follow AP guidelines for formatting dates. Don't use the ISO format for adding 
+Follow AP guidelines for formatting dates. Don't use the ISO format for adding
 dates to the documentation.
 
 To avoid confusion, format dates in the documentation as Month_Name Day, Year:
@@ -153,7 +165,7 @@ To avoid confusion, format dates in the documentation as Month_Name Day, Year:
      October 13, 2020
 
   not
-  
+
   .. code::
 
      13 October, 2020
@@ -162,7 +174,7 @@ To avoid confusion, format dates in the documentation as Month_Name Day, Year:
      10/13/20
      2020-10-13
      2020-Oct-13
-     
+
 
 
 File Paths
