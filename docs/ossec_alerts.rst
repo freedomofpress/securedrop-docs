@@ -149,7 +149,7 @@ into a separate folder.
 Now you can move on to the SMTP and SASL settings, which are
 straightforward. These correspond to the outgoing e-mail address used to
 send the alerts instead of where you're receiving them. If that e-mail
-is ossec@news-org.com, the ``sasl_username`` would be ossec and
+is ossec@news-org.com, the ``sasl_username`` would be OSSEC and
 ``sasl_domain`` would be news-org.com.
 
 The Postfix configuration enforces certificate verification, and
@@ -479,7 +479,7 @@ that it will successfully verify the connection.
 
 .. _AnalyzingAlerts:
 
-Analyzing the Alerts
+Analyzing the alerts
 --------------------
 
 Understanding the contents of the OSSEC alerts requires a background and
@@ -492,39 +492,23 @@ particularly concerning messages with direct investigation.
 An initial SecureDrop install will generate quite a few alerts as OSSEC is installed
 early in the install process.
 As part of the administration of a SecureDrop instance, regularly looking through
-the generated alerts will be able to and gather status on the overall health of
-your SecureDrop instance.
+the generated alerts provides administrators with information on the overall health of
+the SecureDrop instance.
 
-Ossec alerts will range from a severity level of 1 to 14, and as a baseline, you
-should expect to see the following alerts that are either informative or for which
-you should take action:
+OSSEC alerts will range from a severity level of 1 (lowest) to 14 (highest), and as a baseline, you
+should expect to see the following alerts:
 
-Common OSSEC Alerts
+Common OSSEC alerts
 ~~~~~~~~~~~~~~~~~~~
 
 Package updates
 ^^^^^^^^^^^^^^^
-The SecureDrop *Application* and *Monitor Servers* reboot every night, as part
-of the unattended upgrades process. When the servers come back up, OSSEC will
-start again and report the change in status. Therefore you should receive an
-email alert every morning containing text similar to: ::
-
-    Received From: mon->ossec-monitord
-    Rule: 502 fired (level 3) -> "Ossec server started."
-    Portion of the log(s):
-
-    ossec: Ossec started.
-
-This is a normal alert, and informs you that the system is working as expected.
-
-Similarly, your SecureDrop Application and Monitoring Servers will
-check for application updates on your servers. Should your servers require
-updates, OSSEC will alarm because the packages binaries will have changed
-Below is a sample alert, but you may see any number of these records in the
-logs. This will happen in batches so these emails might be longer than the
-below alert. You should also see them in an email named ``Daily Report:
-File Changes``. To verify this activity matches the package history, you
-can review the logs in ``/var/log/apt/history.log``. ::
+The SecureDrop *Application* and *Monitor Servers* check for package updates every day.
+As updates are automatically installed, OSSEC will notice and send out alerts. You
+may see any number of these alerts in the email, as several alerts can be batched in
+a single email. You should also see them in an email named ``Daily Report: File Changes``.
+To verify this activity matches the package history, you can review the logs in
+``/var/log/apt/history.log``. ::
 
     Received From: (app)
     Rule: 2902 fired (level 7) -> "New (Debian Package) installed."
@@ -532,8 +516,8 @@ can review the logs in ``/var/log/apt/history.log``. ::
 
     status installed <package name> <version>
 
-In conjunction to these alerts, you should also receive alerts pertaining to file
-checksum changes. ::
+In addition to letting you know what packages were updated, OSSEC will send alerts
+about the specific changes to the files in these packages. ::
 
     Received From: (app)
     Rule: 550 fired (level 7) -> "Integrity checksum changed."
@@ -545,8 +529,9 @@ checksum changes. ::
     Old sha1sum was: '<old sha1sum>'
     New sha1sum is : '<new sha1sum>'
 
-These are normal alerts, they tell you that your SecureDrop servers are are
-properly up-to-date and patched.
+These are normal alerts, and tell you that your SecureDrop servers are
+properly up-to-date and patched. Changes to configuration files, or files
+files unrelated to an expected package may warrant further investigation.
 
 Occasionally your SecureDrop Servers will send an alert for failing to connect
 to Tor relays. Since SecureDrop runs as a Tor Onion Service, it is possible
@@ -569,33 +554,57 @@ securedrop@freedom.press for help.
 Daily reports
 ^^^^^^^^^^^^^
 
-On days where file integrity checksums have changed or users login the the ``app``
+On days where file integrity checksums have changed or users have logged into ``app``
 or ``mon`` servers, you will receive emails entitled ``Daily report: File changes`` or
-``Daily report: Successful logins``. These emails may be a more digestible format
+``Daily report: Successful logins``. These emails may be a more convenient format
 should you not have continuous access to the inbox or GPG key.
 
 **Action**: periodically review these daily reports to ensure file changes correspond
-to platform updates and logins correspond to admin activity on the SecureDrop environment.
+to platform updates and logins correspond to authorized admin activity on the SecureDrop
+servers.
 
-If you would have any suggestions on how to further tune or improve the alerting,
-you can join the discussion or open an issue on `GitHub <https://github.com/freedomofpress/securedrop/labels/goals%3A%20reduce%20IDS%20noise>`__.
+If you have any suggestions on how to further tune or improve the alerting,
+you can open an issue on `GitHub <https://github.com/freedomofpress/securedrop/labels/goals%3A%20reduce%20IDS%20noise>`__.
 
-Uncommon OSSEC Alerts
+Uncommon OSSEC alerts
 ~~~~~~~~~~~~~~~~~~~~~
 
-Logins
-^^^^^^
-Ossec will send an alert whenever a user interactively logs into the system (via SSH
-or console). You will receive an email containing the following. ::
+Data integrity
+^^^^^^^^^^^^^^
 
-    Rule: 40101 (level 12) -> 'System user successfully logged to the system.'
+SecureDrop runs automatic checks for submission data integrity
+problems. For example, secure deletion of large submissions could
+potentially be interrupted: ::
 
-**Action**: Ensure that this action was performed by either you or a fellow administrator.
+    Received From: (app) 10.20.2.2->/opt/venvs/securedrop-app-code/bin/python3 /var/www/securedrop/manage.py check-disconnected-fs-submissions
+    Rule: 400801 fired (level 1) -> "Indicates that there are files in the submission area without corresponding submissions in the database."
+    Portion of the log(s):
+
+    ossec: output: '/opt/venvs/securedrop-app-code/bin/python3 /var/www/securedrop/manage.py check-disconnected-fs-submissions': There are files in the submission area with no corresponding records in the database. Run "manage.py list-disconnected-fs-submissions" for details.
+
+To resolve the issue, you can :ref:`clean them up <submission-cleanup>`.
+
+Instance misconfigurations
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+In addition, SecureDrop performs a small set of daily configuration checks to ensure
+that the iptables rules configured on the *Application* and *Monitor Server* match
+the expected configuration. If they do not, you may receive a level 12 alert
+like the following: ::
+
+      Received From: (app) 10.20.2.2->/var/ossec/checksdconfig.py
+      Rule: 400900 fired (level 12) ->
+      "Indicates a problem with the configuration of the SecureDrop servers."
+      Portion of the log(s):
+      ossec: output: '/var/ossec/checksdconfig.py': System configuration error:
+      The iptables default drop rules are incorrect.
+
+Alternatively, the error text may say: ``The iptables rules have not been configured.``
+To resolve the issue, you can reinstate the standard iptables
+rules by :ref:`updating the system configuration <update-system-configuration>`.
 
 ``securedrop-admin`` commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Ossec will sent an alert when there is change to the infrastructure, configuration or
-backups using the command-line `securedrop-admin` tool. ::
+OSSEC will send an alert when the `securedrop-admin` tool is used to backup, restore, or change the system configuration: ::
 
     Rule: 400001 fired (level 13) -> "Ansible playbook run on server (securedrop-admin install, backup, or restore)."
 
