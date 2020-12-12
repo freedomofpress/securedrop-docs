@@ -49,13 +49,12 @@ Instructions for using SecureDrop as a *Journalist* are available in our
 :doc:`Journalist Guide <journalist>`.
 
 
-Journalist Alert Key
---------------------
-The *Journalist Alert Key* is used for encrypting the alert that notifies journalists daily 
-via encrypted email about whether or not there has been submission activity 
-in the past 24 hours. More information about journalist alerts, is in our 
-:doc:`Journalist Guide <journalist>`.
-
+Journalist Alert Public Key
+---------------------------
+The *Journalist Alert Public Key* is used for encrypting the :ref:`daily alert <daily_journalist_alerts>`
+that notifies journalists via encrypted email about whether or not there has been
+submission activity in the past 24 hours. The journalist uses an associated
+private key to decrypt the alerts.
 
 Journalist Interface
 --------------------
@@ -98,8 +97,9 @@ to this server, and they may only do so using Tor.
 OSSEC Alert Public Key
 ----------------------
 The *OSSEC Alert Public Key* is the GPG key that OSSEC will encrypt alerts to.
-It is used by the admin to access encrypted OSSEC alerts from the Monitor Server.
-Instructions about setting up OSSEC alerts are available in the :doc:`OSSEC Guide <ossec_alerts>`.
+The associated private key is used by the admin to access encrypted OSSEC alerts
+from the *Monitor Server*. Instructions for setting up OSSEC alerts can be found
+in the :doc:`OSSEC Guide <ossec_alerts>`.
 
 
 .. _svs:
@@ -133,7 +133,7 @@ SecureDrop to communicate with a *Journalist*. A *Source* will always
 access SecureDrop through the *Source Interface* and must do so using Tor.
 
 Instructions for using SecureDrop as a *Source* are available in our
-:doc: `Source Guide <source>`.
+:doc:`Source Guide <source>`.
 
 
 Source Interface
