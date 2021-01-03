@@ -159,15 +159,22 @@ HTML content
 ^^^^^^^^^^^^
 
 Some source strings represent HTML that will be presented in the
-SecureDrop web interface. It can be hard to tell what to translate,
-since HTML is source code and changing the wrong thing can break the
-page layout.
+SecureDrop web interface.
 
-One thing you should always translate are ``alt`` attributes of image
-elements. Image elements (``<img>``) in HTML place a picture on the
-page. People with visual impairments rely on a special note on the
-image element -- the ``alt`` attribute -- to describe the image, so
-it's helpful to translate those. Here's an example that contains an
+HTML elements (embraced by in ``<``, ``>``, example: ``<strong>``)
+can contain multiple so-called *attributes*.
+
+The text of the two attributes called ``alt`` and ``title``
+should be translated. The text of the other attributes should not
+be translated.
+
+Attribute ``alt``
+"""""""""""""""""
+
+Image elements (``<img>``) in HTML place a picture on the
+page. Because people with visual impairments rely on a special note
+on the image element -- the ``alt`` attribute -- to describe the image,
+it is necessary to translate those. Here's an example that contains an
 image with both an ``alt`` attribute *and* a placeholder::
 
   <img src="{icon}" alt="shield icon">
@@ -178,6 +185,36 @@ attribute of the ``<img>`` element should not be translated. The
 translated HTML in Portuguese would be::
 
   <img src="{icon}" alt="ícone do escudo">
+
+Attribute ``title``
+"""""""""""""""""""
+
+Links (``<a>``) and abbreviations (``<abbr>``) sometimes rely on
+an additional ``title`` attribute. The content of that attribute is
+usually shown when placing a cursor over the link or abbreviation.
+::
+
+  <a id="recommend-tor" title="How to install Tor Browser" href="{url}">Learn how to install it</a>
+
+It is necessary to translate the contents of any ``title`` attribute.
+The correctly translated HTML in Spanish would be::
+
+  <a id="recommend-tor" title="Cómo instalar Tor Browser" href="{url}">Aprenda cómo instalarlo</a>
+
+As explained above, the text content ``recommend-tor`` of the ``id``
+attribute in the ``<a>`` element should not be translated. Neither
+should the ``{url}`` placeholder of ``href`` attribute. Only the text
+content of the ``title`` attribute (``"How to install Tor Browser"``)
+should be translated.
+
+Other attributes
+""""""""""""""""
+
+No attribute other than ``alt`` and ``title`` should be translated.
+
+In particular, please make sure the attributes ``class``, ``id``,
+``height``, ``href``, ``rel``, ``src`` and ``width``
+are never translated.
 
 Reviews
 -------
