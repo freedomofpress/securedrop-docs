@@ -182,7 +182,8 @@ Attacks on Network Infrastructure
 -  Landing Page is framed or unavailable
 -  Landing Page DNS leaks from SecureDrop/leaks-related subdomain
 -  Communications vulnerability in *Source* or *Journalist Interface*
--  DNS requests to news organization's subdomain for SecureDrop Landing Page, Freedom.press, torproject.org Tor activity, SD submissions may be correlated
+-  DNS requests to news organization's subdomain for SecureDrop Landing Page, 
+   Freedom.press, torproject.org Tor activity, SD submissions may be correlated
 -  SecureDrop.org is compromised
 -  User web traffic to SecureDrop Landing Page uses CDN and may be logged
 -  Tor network exploit

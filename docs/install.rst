@@ -88,8 +88,8 @@ submission activity for journalists. These help journalists avoid spending time
 checking the *Journalist Interface* when there are no submissions. For this you
 will need:
 
--  the journalist alerts GPG key
--  the journalist alerts GPG key fingerprint
+-  the *Journalist Alert Public Key* 
+-  the *Journalist Alert Public Key*  fingerprint
 -  the email address that will receive the journalist alerts
 
 .. note:: It is not possible to specify multiple email addresses for email
@@ -104,7 +104,7 @@ Before proceeding, you will need to copy the following files to
 ``install_files/ansible-base``:
 
 -  the *Submission Public Key* file
--  the admin's GPG public key file (for encrypting OSSEC alerts)
+-  the *OSSEC Alert Public Key*
 
 The *Submission Public Key* should be located on your *Transfer
 Device* from earlier. Its exact path will depend on the location where the USB stick

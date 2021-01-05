@@ -270,8 +270,8 @@ What a Comprommise of the *Monitor Server* Can Surrender
 
 -  The server stores the plaintext alerts on disk, data may also reside
    in RAM.
--  The server stores the GPG public key the OSSEC alerts are encrypted
-   to.
+-  The server stores the *OSSEC Alert Public Key* the OSSEC alerts are 
+   encrypted to.
 -  The server stores plaintext credentials for the SMTP relay used to
    send OSSEC alerts.
 -  The server stores the email address the encrypted OSSEC alerts are
