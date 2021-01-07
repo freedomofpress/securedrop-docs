@@ -48,7 +48,7 @@ If you find you cannot perform a backup or restore due to this constraint,
 and have already deleted old submissions from the *Journalist Interface*,
 contact us through the `SecureDrop Support Portal`_.
 
-.. _SecureDrop Support Portal: https://securedrop-support.readthedocs.io/en/latest/
+.. _SecureDrop Support Portal: https://support-docs.securedrop.org/
 
 Backing Up
 ----------

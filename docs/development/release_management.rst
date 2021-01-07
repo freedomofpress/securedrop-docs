@@ -261,7 +261,7 @@ Release Process
 #. Push your commits to the remote ``release`` branch. This will trigger an
    automatic upload of the packages to ``apt-qa.freedom.press``, but the
    packages will not yet be installable.
-#. Create a `draft PR <https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests>`__
+#. Create a `draft PR <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests>`__
    from ``release`` into ``main``. Make sure to include a link to the build
    logs in the PR description.
 #. A reviewer must verify the build logs, obtain and sign the generated ``Release``

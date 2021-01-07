@@ -67,7 +67,7 @@ Enabling v3 onion services will have the following effects:
           process
           without first disabling HTTPS for v2. 
 
-.. _SecureDrop Support Portal: https://securedrop-support.readthedocs.io/en/latest/
+.. _SecureDrop Support Portal: https://support-docs.securedrop.org/
 .. _our GPG key: https://securedrop.org/sites/default/files/fpf-email.asc
 
 

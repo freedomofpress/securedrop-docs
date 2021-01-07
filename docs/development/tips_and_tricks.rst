@@ -40,7 +40,7 @@ The modified value persists across restarts of Tor Browser.
 Upgrading or Adding Python Dependencies
 ---------------------------------------
 
-We use a `pip-compile <http://nvie.com/posts/better-package-management/>`_
+We use a `pip-compile <https://nvie.com/posts/better-package-management/>`_
 based workflow for adding Python dependencies. If you would like to add a Python
 dependency, instead of editing the ``securedrop/requirements/*.txt`` files
 directly, please:

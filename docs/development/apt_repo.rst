@@ -27,7 +27,7 @@ securedrop-ossec-agent
 securedrop-ossec-server
     Installs the SecureDrop-specific OSSEC configuration for the *Monitor Server*.
 
-`securedrop-grsec <https://github.com/freedomofpress/grsec>`_
+`securedrop-grsec <https://github.com/freedomofpress/ansible-role-grsecurity>`_
     SecureDrop grsecurity kernel metapackage, depending on the latest version
     of ``linux-image-3.14-*-grsec``.
 

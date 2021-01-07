@@ -171,7 +171,7 @@ SecureDrop system. Each admin and each journalist needs a two-factor
 device. We currently support two options for two-factor authentication:
 
 * Your existing smartphone with an app that computes TOTP codes
-  (e.g. FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ and `for iOS <https://itunes.apple.com/us/app/freeotp-authenticator/id872559395>`__).
+  (e.g. FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ and `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__).
 
 * A dedicated hardware dongle that computes HOTP codes (e.g. a
   `YubiKey <https://www.yubico.com/products/yubikey-hardware/yubikey/>`__).
@@ -336,8 +336,8 @@ easy-to-read labels, and it's easy to customize the size of the label's text,
 which is great for clearly labeling both large components (like computers) and
 small components (like USB sticks).
 
-.. _`Brother P-Touch PT-210`: https://www.amazon.com/Brother-P-Touch-PT-D210-Label-Maker/dp/B01BTMEKRQ/ref=zg_bs_226180_1
-.. _`Epson LabelWorks LW-300`: https://www.amazon.com/Epson-LabelWorks-LW-300-Label-Maker/dp/B005J7Y6HW/ref=pd_sbs_229_7
+.. _`Brother P-Touch PT-210`: https://www.amazon.com/Brother-PTD210-with-TZe2312PK-Tape/dp/B01BTMEKRQ
+.. _`Epson LabelWorks LW-300`: https://www.amazon.com/Epson-LabelWorks-LW-300-Label-C51CB69010/dp/B005J7Y6HW
 
 If you do not have a label maker available but have an inkjet printer available to you, it may
 also be possible to print and cut out labels using adhesive-backed paper and some scissors. These are some labels designed by our team which may be used for labeling:
@@ -496,7 +496,7 @@ Next, proceed with the rest of the :ref:`SecureDrop installation<nuc8_back_to_se
 Intel 7th-gen NUC
 ~~~~~~~~~~~~~~~~~
 
-We have tested and can recommend the `NUC7i5BNH <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc7i5bnh.html>`__.
+We have tested and can recommend the `NUC7i5BNH <https://ark.intel.com/content/www/us/en/ark/products/95067/intel-nuc-kit-nuc7i5bnh.html>`__.
 
 The NUC7i5BNH has soldered-on wireless components, which cannot easily be
 removed. For security reasons, we recommend that you take the following steps
@@ -611,7 +611,7 @@ from exhaustive.
 
 We advise against using Macs, as there are many Tails compatibility issues both
 with older and with newer models. Instead, we recommend the
-`ThinkPad T series <https://www3.lenovo.com/us/en/laptops/thinkpad/thinkpad-t-series/c/thinkpadt>`__,
+`ThinkPad T series <https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-t-series/c/thinkpadt>`__,
 and have had good experiences specifically with the T420 and T440. The
 `ThinkWiki <https://www.thinkwiki.org/wiki/ThinkWiki>`__ is an excellent,
 independently maintained resource for verifying general Linux compatibility of
@@ -663,7 +663,7 @@ Anything more than that is probably overkill.
 
 Transfer Device(s) and Export Device(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-For USB drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/storage-accessories/kanguru-ss3.shtml>`__
+For USB drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/storage-accessories/kanguru-ss3-high-performance-usb-flash-drive-with-physical-write-protect-switch.shtml>`__
 on Tails, and it works well with and without encryption.
 
 If you want to use a setup based on CD-Rs or DVD-Rs, we've found the CDR/DVD

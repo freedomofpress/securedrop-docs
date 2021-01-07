@@ -55,7 +55,7 @@ applied, you can do so through the firewall's pfSense WebGUI. Refer to our
 Upgrade Docs`_ for further details on how to update the suggested firewall.
 
 .. _`Netgate RSS Feed`: https://www.netgate.com/feed.xml
-.. _`pfSense Upgrade Docs`: https://doc.pfsense.org/index.php/Upgrade_Guide
+.. _`pfSense Upgrade Docs`: https://docs.netgate.com/pfsense/en/latest/install/upgrade-guide.html
 
 Updating the SecureDrop Workstations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,7 +97,7 @@ Guide <ossec_alerts>` for more information on common OSSEC alerts.
 
           |Test Alert|
 
-.. _`SecureDrop Support Portal`: https://securedrop-support.readthedocs.io/en/latest/
+.. _`SecureDrop Support Portal`: https://support-docs.securedrop.org/
 
 Common Tasks
 ------------
@@ -243,7 +243,7 @@ the *Application Server* and *Monitor Server*.
         to use ``tmux``.
 
 .. _`tmux tutorial`:
-  https://robots.thoughtbot.com/a-tmux-crash-course
+  https://thoughtbot.com/blog/a-tmux-crash-course
 
 .. tip:: If you want a refresher of the Linux command line, we recommend
   `this resource`_ to cover the fundamentals.

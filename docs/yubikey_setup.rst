@@ -17,7 +17,7 @@ are made by a company called Yubico and are `commercially available`_. Note
 that not all physical tokens are compatible with the YubiKey Personalization
 Tool; for this, you require `a key that can support OATH-HOTP`_.
 
-.. _`commercially available`: https://www.yubico.com/products/yubikey-hardware/fido-u2f-security-key
+.. _`commercially available`: https://www.yubico.com/authentication-standards/fido-u2f/
 
 .. _`a key that can support OATH-HOTP`: https://support.yubico.com/hc/en-us/articles/360016614780-OATH-HOTP-Yubico-Best-Practices-Guide
 

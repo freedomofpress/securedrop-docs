@@ -94,4 +94,4 @@ If you run into issues, you can always restore your data from the backup device 
 
 If you continue to have problems, you can contact us through the `SecureDrop Support Portal`_.
 
-.. _SecureDrop Support Portal: https://securedrop-support.readthedocs.io/en/latest/
+.. _SecureDrop Support Portal: https://support-docs.securedrop.org/
