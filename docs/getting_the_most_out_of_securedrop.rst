@@ -91,7 +91,7 @@ proof of concept Twitter advertisement aimed at EPA and NOAA employees to show
 how it can be done. You can read about `how you can do the same thing here`_.
 
 .. _`recently targeted online advertisements`: https://www.wsj.com/articles/gizmodo-ads-target-potential-trump-leakers-1487191482
-.. _`tell on trump`: https://specialprojectsdesk.com/tell-on-trump-1792401813
+.. _`tell on trump`: https://web.archive.org/web/20201114212453/https://specialprojectsdesk.com/tell-on-trump-1792401813
 .. _`how you can do the same thing here`: https://freedom.press/news/we-targeted-securedrop-ad-potential-whistleblowers-trump-administration-you-can-too/
 
 Put an Advertisement in Your Physical Paper
