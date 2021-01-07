@@ -174,7 +174,7 @@ device. We currently support two options for two-factor authentication:
   (e.g. FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ and `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__).
 
 * A dedicated hardware dongle that computes HOTP codes (e.g. a
-  `YubiKey <https://www.yubico.com/products/yubikey-hardware/yubikey/>`__).
+  `YubiKey <https://www.yubico.com/setup/>`__).
 
 .. include:: includes/otp-app.txt
 
