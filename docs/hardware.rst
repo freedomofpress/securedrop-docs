@@ -686,7 +686,7 @@ Network Switch
 This is optional, for people who are using a firewall with less than 4
 ports.  Any old switch with more than 3 ports will do, such as the
 `5-port Netgear ProSafe Ethernet Switch
-<http://www.amazon.com/NETGEAR-ProSafe-Gigabit-Ethernet-Desktop/dp/B0000BVYT3/>`__.
+<https://www.amazon.com/NETGEAR-Ethernet-Unmanaged-Protection-GS105NA/dp/B0000BVYT3>`__.
 
 .. _printers_tested_by_fpf:
 
