@@ -19,8 +19,9 @@ Application Server
 ------------------
 The *Application Server* runs the SecureDrop application. This server hosts both
 the website that sources access (the *Source Interface*) and the website that
-journalists access (the *Journalist Interface*). Sources, journalists, and
-admins may only connect to this server using Tor.
+journalists access (the *Journalist Interface*). Both are published
+through an *onion service* because sources, journalists, and admins
+may only connect to this server using Tor.
 
 
 Export Device
@@ -92,6 +93,37 @@ Monitor Server
 The *Monitor Server* keeps track of the *Application Server* and sends out an
 email alert if something seems wrong. Only system admins connect
 to this server, and they may only do so using Tor.
+
+
+Onion Service
+-------------
+
+Tor onion services provide anonymous inbound connections to websites and other
+servers exclusively over the Tor network. For example, SecureDrop uses onion
+services for the *Journalist Interface* and *Source Interface* websites,
+as well as for administrative access to the servers in SSH-over-Tor mode.
+
+Onion services can be accessed by clicking a link or pasting the onion service
+address into Tor Browser. For example,
+``sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion`` is the onion
+service address for the SecureDrop website.
+
+Read more about `onion services in Tor's glossary
+<https://support.torproject.org/onionservices/>`__.
+
+Onion Service v2
+""""""""""""""""
+
+The third generation of onion services (v3) provides stronger cryptographic
+algorithms than v2 onion services, and includes redesigned protocols that
+guard against service information leaks on the Tor network.
+
+Support for v2 onion services will start to be removed from SecureDrop in
+February 2021, and we strongly recommend :doc:`upgrading SecureDrop
+instances to v3 onion services <v3_services>` as soon as possible.
+
+Distinguishing between different generations of onion services is easy:
+v3 addresses are longer (56 characters) than v2 addresses (16 characters).
 
 
 OSSEC Alert Public Key
