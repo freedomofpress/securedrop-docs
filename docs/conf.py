@@ -325,4 +325,6 @@ linkcheck_ignore = [
     r"https://weblate.securedrop.org/accounts/profile/.*",
     r"https://github.com/freedomofpress/securedrop/issues/.*",
     r"https://github.com/freedomofpress/securedrop/tree/.*",
+    r"https://docs.securedrop.org/?$",
+    r"https://support-docs.securedrop.org/?$",
 ]
