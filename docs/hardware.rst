@@ -529,7 +529,7 @@ Intel 5th-gen NUC
 ~~~~~~~~~~~~~~~~~
 
 We previously recommended the
-`NUC5i5MYHE <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc5i5myhe.html>`__,
+`NUC5i5MYHE <https://web.archive.org/web/20190102175756/https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc5i5myhe.html>`__,
 however, it has now reached end-of-life. We will continue to support and
 test SecureDrop on this hardware, but if you are building a new SecureDrop
 instance we recommend using 7th- or 8th-generation NUCs instead.
