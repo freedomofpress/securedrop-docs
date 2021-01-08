@@ -208,7 +208,7 @@ Connect to the pfSense WebGUI
 
    |Default pfSense|
 
-.. _intentionally disables LAN access: https://labs.riseup.net/code/issues/7976
+.. _intentionally disables LAN access: https://gitlab.tails.boum.org/tails/tails/-/issues/7976
 
 Alternate Hostnames
 ~~~~~~~~~~~~~~~~~~~
