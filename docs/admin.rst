@@ -9,46 +9,71 @@ Responsibilities
 ----------------
 
 The SecureDrop architecture contains multiple machines and hardened servers.
-While we have automated many of the installation and maintenance tasks, a
+While many of the installation and maintenance tasks have been automated, a
 skilled Linux admin is required to responsibly run the system.
 
 This section outlines the tasks the admin is responsible for in order to
-ensure that the SecureDrop server continues to be a safe place for sources to
+ensure that their SecureDrop instance continues to be a safe place for sources to
 talk to journalists.
 
-Maintaining Credentials
-~~~~~~~~~~~~~~~~~~~~~~~
+Managing Users
+~~~~~~~~~~~~~~
 
-The admin should have her own username, passphrase, and two-factor
-authentication method (via smartphone application or YubiKey). Admins are also
-responsible for managing user credentials and encouraging best practices. (See
+Admins are responsible for managing user credentials and encouraging best practices. (See
 :doc:`passphrases` and :doc:`passphrase_best_practices`.)
+The admin will also have access to the *Journalist Interface*, via her own username, passphrase,
+and two-factor authentication method (using a smartphone application or YubiKey).
 
-Updating the SecureDrop Servers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+See :ref:`User Management<User Management>` for more information on adding and managing
+users.
+
+Managing the System Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Admins are responsible for configuring and maintaining the system. Several tools
+are available to support this:
+
+* :ref:`The Admin Interface<The Admin Interface>` allows the admin to manage users and configure
+  web interface features such as organizations logos and submission preferences
+* :ref:`Server SSH access<server SSH access>` is also available, to allow administrators to
+  troubleshoot server issues and perform manual updates.
+* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the *Admin Workstation*
+  to configure and install SecureDrop, to perform operations including server backups and restores,
+  and to update the server configuration after installation.
+
+
+Keeping the System Updated
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The admin is responsible for ensuring that updates are applied to SecureDrop.
+Where possible, updates are applied automatically, but some update operations require
+manual intervention.
+
+
+Updates: Servers
+^^^^^^^^^^^^^^^^
 
 The admin should be aware of all SecureDrop updates and take any required
-manual action if requested in the `SecureDrop Release Blog`_. We recommend
-subscribing to the `SecureDrop RSS Feed`_ to stay apprised of new updates.
+manual action if requested in the `SecureDrop Release Blog`_ (`RSS feed`_). We also
+recommend registering with the `SecureDrop Support Portal`_ to stay apprised of upcoming releases.
 
-Most often, the SecureDrop server will automatically update via apt. However,
-occasionally you will need to run ``securedrop-admin install``. We will inform you in
-the release blog when this is the case. If you are onboarded to our `SecureDrop
-Support Portal`_, we will let you know in advance of major releases if manual
-intervention will be required.
+Most often, the SecureDrop servers will automatically update via ``apt``. However,
+occasionally you will need to run ``securedrop-admin install`` or take other manual steps.
+If you are onboarded to the support portal, we will let you know in advance of major
+releases if manual intervention will be required.
 
 .. _`SecureDrop Release Blog`: https://securedrop.org/news
-.. _`SecureDrop RSS Feed`: https://securedrop.org/news/feed
+.. _`RSS Feed`: https://securedrop.org/news/feed
 
-Updating the Network Firewall
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Updates: Network Firewall
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Given all traffic first hits the network firewall as it faces the non-Tor public
 network, the admin should ensure that critical security patches are applied to the
 firewall.
 
 Be informed of potential updates to your network firewall. If you're using the
-network firewall suggested by FPF, you can subscribe to the `Netgate RSS Feed`_
+network firewall recommended by FPF, you can subscribe to the `Netgate RSS Feed`_
 to be alerted when releases occur. If critical security updates need to be
 applied, you can do so through the firewall's pfSense WebGUI. Refer to our
 :ref:`Keeping pfSense up to date` documentation or the official `pfSense
@@ -57,10 +82,10 @@ Upgrade Docs`_ for further details on how to update the suggested firewall.
 .. _`Netgate RSS Feed`: https://www.netgate.com/feed.xml
 .. _`pfSense Upgrade Docs`: https://docs.netgate.com/pfsense/en/latest/install/upgrade-guide.html
 
-Updating the SecureDrop Workstations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Updates: Workstations
+^^^^^^^^^^^^^^^^^^^^^
 
-The admin should keep all SecureDrop workstations updated with
+The admin should keep all SecureDrop workstations updated with:
 
 * **Tails updates** for each *Admin Workstation*, *Journalist Workstation*, and
   *Secure Viewing Station*; and
@@ -79,157 +104,264 @@ Upgrade Documentation`_ on how to upgrade the drives.
 .. _`Tails
    Upgrade Documentation`: https://tails.boum.org/doc/upgrade/index.en.html
 
-Monitoring OSSEC Alerts for Unusual Activity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Monitoring OSSEC Alerts
+~~~~~~~~~~~~~~~~~~~~~~~
 
-The admin should decrypt and read all OSSEC alerts. Report any suspicious
-events to FPF through the `SecureDrop Support Portal`_. See the :doc:`OSSEC
-Guide <ossec_alerts>` for more information on common OSSEC alerts.
+SecureDrop uses OSSEC to monitor the servers for unusual activity caused by
+system configuration issues or security breaches. The admin should decrypt and
+read all OSSEC alerts. Report any suspicious events to FPF through the `SecureDrop Support Portal`_.
+See the :doc:`OSSEC Guide <ossec_alerts>` for more information on common OSSEC alerts.
 
 .. warning:: Do not post logs or alerts to public forums without first carefully
          examining and redacting any sensitive information.
 
-.. _test OSSEC alert:
-
-.. note:: You can send a test OSSEC alert to verify OSSEC and your email
-          configuration is working properly through the *Admin Interface* by
-          clicking **Send Test OSSEC Alert**:
-
-          |Test Alert|
-
+.. _`OSSEC`: https://www.ossec.net/
 .. _`SecureDrop Support Portal`: https://support-docs.securedrop.org/
 
-Common Tasks
-------------
+.. _The Admin Interface:
+
+The Admin Interface
+-------------------------
+
+The *Admin Interface* is an extended version of the *Journalist Interface*, that
+allows you to manage users and configure the appearance and behaviour of your
+instance's web interfaces.
+
+Logging in
+~~~~~~~~~~
+
+To log in to the *Admin Interface*, start the *Admin Workstation* with persistence
+enabled and double-click the *Journalist Interface* icon on the Desktop. Tor Browser
+will start and load the login page for the *Journalist Interface*. Use your username,
+passphrase, and two-factor authentication token to log in.
+
+By default, you will be logged in to the *Journalist Interface*'s source list page:
+
+|SecureDrop main page|
+
+In the course of normal administration operations you should not need to view source
+communications, but if you do, you can find information on managing submissions in
+the `journalist guide <journalist>`_.
+
+.. note::
+  If you have lost your login information or your two-factor authentication is no longer
+  valid, you can create another account with admin privileges via the command line
+  on the *Application Server*. See :ref:`here <Create Admin CLI>` for more information.
+
+
+.. _User Management:
+
+User Management
+~~~~~~~~~~~~~~~
+
+You can use the *Admin Interface* to add and remove users, and to reset their
+credentials if necessary. To open the *Admin Interface*, click **Admin** in the
+upper right corner of the *Journalist Interface*.
 
 .. _Adding Users:
 
 Adding Users
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
-Now you can add new logins for the journalists at your news organization
-who will be checking the system for submissions. Make sure the
-journalist is physically in the same room as you when you do this, as
-they will have to scan a barcode for their
-two-factor authentication. Since you’re logged in, this is the screen
-you should see now:
+After logging in, you can add new user accounts for the journalists at your organization
+who will be checking the system for submissions. Make sure the journalist is
+physically in the same room as you when you do this, as they will have to be present
+to enable two-factor authentication. SecureDrop supports the use of either a
+smartphone authenticator app or a Yubikey for two-factor authentication. If an
+app is to be used, the journalist should install it before proceeding with the
+account setup.
 
-|SecureDrop main page|
+  .. include:: includes/otp-app.txt
 
-In the top right corner click the “Admin” link, which should bring you
-to this page:
+* First, click **Admin** in the top right corner of the page to load the *Admin Interface*:
 
-|SecureDrop admin home|
+  |SecureDrop admin home|
 
-Once there, click ‘Add User’ button, which will take you to this page:
+*  Once there, click **Add User** to add a new user:
 
 |Add a new user|
 
-Here, you will hand the keyboard over to the journalist so they can
-create their own username. Once they’re done entering a username for
-themselves, have them save their pre-generated diceware passphrase to their
-password manager. Then, you will select whether you would like them to also be
-an admin (this allows them to add or delete other journalist accounts), and
-whether they will be using FreeOTP or a YubiKey for two-factor authentication.
+* Next, hand the keyboard over to the journalist so they can
+  create their own username.
 
-.. note::
-  We don't allow the username **deleted** as we use it to mark the
-  journalists which are deleted from the system.
+  .. note::
+    The username **deleted** is reserved, as it is used to mark accounts which
+    have been deleted from the system.
+
+* Once they’re done entering a username for themselves, have them save their
+  pre-generated diceware passphrase to their password manager.
+
+* If the new account should also have admin privileges, allowing them to add or
+  delete other journalist accounts, select **Is Admin**.
+
+* Finally, set up two-factor authentication for the account, following one of
+  the two procedures below for your chosen method.
 
 FreeOTP
-^^^^^^^
+#######
 
-If they are using FreeOTP for their two-factor, they can
-just proceed to the next page:
+* If the journalist is using FreeOTP or another app for two-factor authentication,
+  click **Add User** to proceed to the next page.
 
 |Enable FreeOTP|
 
-At this point, the journalist should make sure they have downloaded the
-FreeOTP app to their smartphone. It can be installed from
-the Apple Store for an iPhone or from the Google Play store for an
-Android phone. Once downloaded and opened, the app does not
-require setup. It should prompt you to scan a barcode. The journalist
-should use their phone's camera to scan the barcode on the screen.
+* Next, the journalist should open FreeOTP on their smartphone and scan the barcode
+  displayed on the screen.
 
-If they have difficulty scanning the barcode, they can tap on the icon
-at the top that shows a plus and the symbol of a key and use their
-phone's keyboard to input the two-factor secret (highlighted
-in yellow) into the ``Secret`` input field, without white space.
+* If they have difficulty scanning the barcode, they can tap on the icon
+  at the top that shows a plus and the symbol of a key and use their
+  phone's keyboard to input the two-factor secret (highlighted
+  in yellow) into the ``Secret`` input field, without whitespace.
 
-Inside the FreeOTP app, a new entry for this account will
-appear on the main screen, with a six digit number that recycles to a
-new number every thirty seconds. Enter the six digit number under
-“Verification code” at the bottom of the screen, and hit
-enter.
+* Inside the FreeOTP app, a new entry for this account will appear on the main
+  screen, with a six-digit number that recycles to a new number every thirty seconds.
+  The journalist should enter the six-digit number in the  **Verification code**
+  field at the bottom of the **Enable FreeOTP** form and click **Submit**.
 
-If FreeOTP was set up correctly, you will be redirected
-back to the Admin Interface and will see a confirmation that the
-two-factor code was verified.
-
-.. include:: includes/otp-app.txt
+If two-factor authentication was set up successfully, you will be redirected back
+to the *Admin Interface* and will see a confirmation that the two-factor code was
+verified.
 
 YubiKey
-^^^^^^^
+#######
 
-If the journalist wishes to use a YubiKey for two-factor authentication,
-check the box next to "Is using a YubiKey". You will then need to enter
-the OATH-HOTP Secret Key that their YubiKey is configured with. For more
-information, read the :doc:`YubiKey Setup Guide <yubikey_setup>`.
+* If the journalist wishes to use a YubiKey for two-factor authentication,
+  select **Is using a YubiKey**. You will then need to enter their YubiKey's
+  OATH-HOTP Secret Key. For more information on how to retrieve this key, read
+  the :doc:`YubiKey Setup Guide <yubikey_setup>`.
 
 |Enable YubiKey|
 
-Once you've configured the YubiKey and entered the Secret Key, click
-*Add user*. On the next page, have the journalist enter a code from their
-YubiKey by inserting it into the workstation and pressing the button.
+* Once you've entered the Yubikey's OATH-HOTP Secret Key, click **Add User**.
+  On the next page, have the journalist authenticate using their YubiKey, by
+  inserting it into a USB port on the workstation and pressing its button.
 
 |Verify YubiKey|
 
-If everything was set up correctly, you will be redirected back to the
-Admin Interface, where you should see a flashed message that says "The
-two-factor code for user *new username* was verified successfully.".
+* If everything was set up correctly, you will be redirected back to the
+  *Admin Interface*, where you should see a flashed message that says "The
+  two-factor code for user *new username* was verified successfully.".
 
-Congratulations! You have successfully set up a journalist on
-SecureDrop. Make sure the journalist remembers their username and
-passphrase and always has their two-factor authentication device in their
-possession when they attempt to log in to SecureDrop.
-
+The journalist will require their username, passphrase, and two-factor authentication
+method whenever they check SecureDrop. Make sure that they have memorised their
+username and passphrase, or stored them in their password manager, and that they
+can keep their two-factor authentication device secure.
 
 Passphrases and Two-Factor Resets
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning:: Both of these operations will lock a user out of their
-   SecureDrop account. We recommend having users be physically present when
-   resetting their passphrase or two-factor authentication. If this is not
-   possible, store the passphrase and/or two-factor authentication secret in
-   your own password manager before securely transmitting them to the user
-   in question, and delete them once the user has confirmed they can
-   successfully log in.
+   SecureDrop account. Users should be physically present when their passphrase
+   or two-factor authentication method is reset. If this is not possible, store
+   the passphrase and/or two-factor authentication secret in your own password
+   manager before securely transmitting them to the user in question, and delete
+   them once the user has confirmed they can successfully log in.
 
-While we publish some :ref:`passphrase best practices <passphrase_best_practices>`,
+Even while following :ref:`passphrase best practices <passphrase_best_practices>`,
 your journalists may occasionally lock themselves out of their accounts. This
 can happen if, for example, they lose their two-factor device or if they
 forget the passphrase to their password manager. When this happens, you
-can reset their account by logging in as an administrator to the
-*Journalist Interface* and selecting *Admin* at the top right. Find their
-username and select **Edit**. Next, you can either rotate their passphrase or
-reset their two-factor authentication. You should make sure the user's
-passphrase is saved in a password manager *before* selecting the "Reset
-Password" button. To reset a user's two-factor authentication, choose the button
-that corresponds to the user's two-factor authentication method (hardware token,
-such as a Yubikey, or software-based application, such as FreeOTP).
+can reset their account as follows:
+
+* Log in as an administrator to the *Journalist Interface* and select *Admin* at
+  the top right to open the *Admin Interface*.
+
+* Find the user's account name and select **Edit**.
+
+Next, you can either rotate their passphrase or reset two-factor authentication
+for their account:
+
+* To change their passphrase to the randomly-generated passphrase shown, first
+  make sure the new passphrase is saved in a password manager, then select **Reset Password**.
+
+* To reset two-factor authentication, click the button that corresponds to the user's
+  chosen two-factor authentication method:
+
+  * Click **Reset Mobile App Credentials** for accounts using FreeOTP or a similar
+    authentication app.
+
+  * Click **Reset Security Key Credentials** for accounts using a Yubikey.
+
+* Follow the on-screen instructions to complete the process and verify their new
+  two-factor authentication credentials.
 
 |Reset Passphrase|
 
 Off-boarding Users
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 See :doc:`our guide to off-boarding users from SecureDrop <offboarding>`.
 
-Server Command Line Use
-~~~~~~~~~~~~~~~~~~~~~~~
+Instance Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+The Instance Configuration section of the *Admin Interface* allows you to:
+
+* update the organization name and logo displayed on the *Source* and *Journalist Interfaces*
+* set submission preferences for the *Source Interface*
+* send test OSSEC alerts.
+
+Updating the Organization Name
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Your organization name is used in page titles and logo ALT text on the
+*Source Interface* and *Journalist Interface*. By default, it's set to ``SecureDrop``.
+To change it, enter your desired name in the Organization Name field and click
+**Set Organization Name**.
+
+.. _Updating Logo Image:
+
+Updating the Logo Image
+^^^^^^^^^^^^^^^^^^^^^^^
+
+You can update the system logo shown on the web interfaces of your SecureDrop
+instance via the *Admin Interface*. We recommend a size of ``500px x 450px``. Only
+PNG-format images are supported. To update the logo image:
+
+* copy the logo image to your admin workstation
+* click **Browse** and select the image from your workstation's filesystem
+* click **Update Logo** to upload and set the new logo.
+
+You should see a message appear indicating the change was a success:
+
+|Logo Update|
+
+.. _submission prefs:
+
+Setting Submission Preferences
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By default, SecureDrop supports both text submissions and document uploads. If you
+only want to receive text messages, you can disable uploads as follows:
+
+* check the the **Prevent sources from uploading documents** checkbox
+* click **Update Submission Preferences**
+
+This change will be applied immediately on the *Source Interface*. Documents that
+were previously uploaded will still be available via the **Journalist Interface**.
+
+.. _test OSSEC alert:
+
+Testing OSSEC Alerts
+^^^^^^^^^^^^^^^^^^^^
+
+To verify that the OSSEC monitoring sysstem's functionality, you can send a test
+OSSEC alert by clicking **Send Test OSSEC Alert**:
+
+          |Test Alert|
+
+You should receive an OSSEC alert email at the address specified during the
+installation of SecureDrop. The email may take several minutes to arrive. If
+you don't receive it, refer to the :doc:`OSSEC Guide<ossec_alerts>` for information on
+troubleshooting steps.
+
+
+.. _server SSH access:
+
+Server SSH Access
+------------------
 
 Generally, you should avoid directly SSHing into the servers in favor of using
-the *Admin Interface* or ``securedrop-admin`` CLI tool. However, in some cases,
+the *Admin Interface* or ``securedrop-admin``. However, in some cases,
 you may need to SSH in order to troubleshoot and fix a problem that cannot be
 resolved via these tools.
 
@@ -252,14 +384,14 @@ the *Application Server* and *Monitor Server*.
   http://linuxcommand.org/lc3_learning_the_shell.php
 
 Shutting Down the Servers
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: sh
 
   sudo shutdown now -h
 
 Rebooting the Servers
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: sh
 
@@ -268,7 +400,7 @@ Rebooting the Servers
 .. _investigating_logs:
 
 Investigating Logs
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 Consult our :doc:`Investigating Logs <logging>` topic guide for locations of the
 most relevant log files you may want to examine as part of troubleshooting, and
@@ -277,7 +409,7 @@ for how to enable error logging for the *Source Interface*.
 .. include:: includes/get-logs.txt
 
 Immediately Apply a SecureDrop Update
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SecureDrop will update and reboot once per day. However, if after a SecureDrop
 update `is announced`_ you wish to fetch the update immediately, you can SSH
@@ -291,10 +423,10 @@ into each server and run:
   https://securedrop.org/news
 
 Application Server
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 Adding Users (CLI)
-&&&&&&&&&&&&&&&&&&
+^^^^^^^^^^^^^^^^^^
 
 After the provisioning of the first admin account, we recommend
 using the Admin Interface web application for adding additional journalists
@@ -305,7 +437,7 @@ as described :doc:`during first install <create_admin_account>`. You can use
 this command line method if the web application is unavailable.
 
 Restart the Web Server
-&&&&&&&&&&&&&&&&&&&&&&
+^^^^^^^^^^^^^^^^^^^^^^
 
 If you make changes to your Apache configuration, you may want to restart the
 web server to apply the changes:
@@ -317,7 +449,7 @@ web server to apply the changes:
 .. _submission-cleanup:
 
 Cleaning up deleted submissions
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When submissions are deleted through the web interface, their database
 records are deleted and their encrypted files are securely wiped. For
@@ -374,10 +506,10 @@ that you delete old backup files with ``shred``, which is available on
 Tails.
 
 Monitor Server
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 
 Restart OSSEC
-&&&&&&&&&&&&&
+^^^^^^^^^^^^^
 
 If you make changes to your OSSEC monitoring configuration, you will want to
 restart OSSEC via `OSSEC's control script`_, ``ossec-control``:
@@ -389,37 +521,39 @@ restart OSSEC via `OSSEC's control script`_, ``ossec-control``:
 .. _`OSSEC's control script`:
   https://ossec-docs.readthedocs.io/en/latest/docs/programs/ossec-control.html
 
-.. _Updating the Servers:
+.. _securedrop-admin utility:
 
-Updating the Servers
-^^^^^^^^^^^^^^^^^^^^
+The ``securedrop-admin`` Utility
+--------------------------------
 
-Sometimes you will want to update the system configuration on the SecureDrop
-servers. For example, to customize the logo on the source interface,
-or change the PGP key that OSSEC alerts are encrypted to. You can do this from
-your *Admin Workstation* by following the procedure described in this
-section.
+.. _Using securedrop-admin:
 
-.. _Updating Logo Image:
+Using ``securedrop-admin``
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+The ``securedrop-admin`` command-line utility is used from the *Admin Workstation*
+to perform common server administration tasks, including:
 
-Updating Logo Image
-~~~~~~~~~~~~~~~~~~~
+* configuring and installing SecureDrop
+* backing up and restoring the servers (see :doc:`backup_and_restore`)
+* retrieving server logs for troubleshooting (see :doc:`logging`)
+* updating the SecureDrop code and Tails configuration on the *Admin Workstation*
+* updating your SecureDrop servers' configuration post-install.
 
-You can update the system logo shown on the web interfaces of your SecureDrop
-instance via the Admin Interface. We recommend a size of ``500px x 450px``.
-Simply click the **Update Instance Config** button. If you haven't replaced the
-default logo yet, the page should look like this:
+To use ``securedrop-admin``:
 
-|System Config Page|
+#. boot the *Admin Workstation* with persistence enabled and an admin password set
+#. open a terminal via **Applications > System Tools > Terminal**
+#. change directory to the SecureDrop installation directory: ``cd ~/Persistent/securedrop``
 
-And on the instance configuration page, select and upload the PNG image you prefer.
-You should see a message appear indicating the change was a success:
+You can list all available ``securedrop-admin`` actions using the command
+``./securedrop-admin --help``
 
-|Logo Update|
+.. note:: If your team has multiple admins, each with their own *Admin Workstation*, you
+  must take steps to manually synchronize any configuration changes made via ``securedrop-admin``
+  with each other. See `Managing Configuration Updates with Multiple Admins`_
 
-
-Updating System Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Updating the Server Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _update-system-configuration:
 
@@ -433,59 +567,31 @@ There are two primary reasons why you may want to update the system configuratio
 
 In both cases, follow these steps:
 
-1. Boot the *Admin Workstation* and unlock its persistent volume.
-2. Open a terminal and type ``cd ~/Persistent/securedrop``.
-3. Run ``git status``. If the output includes ``HEAD detached at``
+#. Boot the *Admin Workstation* and unlock its persistent volume.
+#. Open a terminal and type ``cd ~/Persistent/securedrop``.
+#. Run ``git status``. If the output includes ``HEAD detached at``
    followed by the version number displayed in the footer of your *Source Interface*,
    you are running the applicable version of the SecureDrop code on your
    workstation, and can proceed to the next step.
-
    If not, **it is not not safe to proceed**. Follow the upgrade instructions
    associated with the `release notes for the most recent release of
    SecureDrop <https://securedrop.org/news/release-announcement/>`__. Apply all
    available updates, including for the Tails operating system.
-4. Run ``./securedrop-admin sdconfig``. This will display the current
+#. Run ``./securedrop-admin sdconfig``. This will display the current
    configuration, one line at a time, and allow you to change it. At this point,
    any changes you make are only saved on this *Admin Workstation*, to the
    following file:
 
    ``~/Persistent/securedrop/install_files/ansible-base/group_vars/all/site-specific``
-
-5. Run ``./securedrop-admin install``. This will apply the configuration to your
+#. Run ``./securedrop-admin install``. This will apply the configuration to your
    *Application* and *Monitor Server*, and enforce the canonical state of the
    server configuration.
 
-If there is more than one administrator on your team, please also see the
-following section.
-
 .. include:: includes/rerun-install-is-safe.txt
 
-Managing ``site-specific`` Updates On Teams With Multiple Admins
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Organizations with multiple admins should establish a protocol to communicate
-any changes one admin makes to the ``site-specific`` configuration file on the server.
-
-Currently, when one admin pushes changes in ``site-specific`` to the server, the
-changes will not sync to the local ``site-specific`` file on the remaining admin workstations.
-Without being aware of changes made to ``site-specific``, admins run the risk of pushing old
-information to the servers. This can affect the receipt of OSSEC alerts, viability of the
-*Submission Key*, among other critical components of the SecureDrop environment.
-
-There are multiple ways to avoid pushing out-of-date information to the servers.
-We recommend admins establish a secure communication pipeline to alert fellow admins
-of any changes made to ``site-specific`` on the server. That clues every admin in on
-changes in real time, providing all team members with a reminder to manually update
-all ``site-specific`` files.
-
-In addition to secure group communications, admins can learn of updates to the server
-by monitoring OSSEC alerts. (Please note that while an OSSEC alert can notify you of the
-occurrence of an update to the server, it may not reveal the content of the change.) Another
-management option would be SSHing into the server and manually inspecting the configuration to
-identify any discrepancies.
-
-Configuring Localization for the *Source Interface* and the *Journalist Interface*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Updating Localization for the *Source Interface* and the *Journalist Interface*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The *Source Interface* and *Journalist Interface* are translated in the following
 languages:
@@ -512,6 +618,57 @@ codes. For example: ::
 
 You'll need to list all languages you now want to support, adding or removing
 languages as needed. Locale changes will be applied after the next reboot.
+
+Managing Configuration Updates with Multiple Admins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Organizations with multiple admins should set up a way to synchronize
+any changes one admin makes to the server configuration, as by default those
+changes are stored only on their individual *Admin Workstation*.
+
+Configuration changes will be flagged by OSSEC and will generate alerts, but
+if other admins don't regularly review OSSEC alerts they may miss important
+changes, such as an update to the *Submission Public Key*. If they subsequently
+run ``./securedrop-admin install`` from their *Admin Workstation*, they will
+revert the server configuration to an older version.
+
+The simplest approach to keeping workstations in sync is to inform other admins
+of changes as you make them, for example via a secure Signal group chat. Any such
+communications should happen over a platform that provides E2EE, as you may need to
+share sensitive information.
+
+Configuration information is stored in several files on the *Admin Workstation* under
+``~/Persistent/securedrop/``:
+
+* ``install_files/ansible-base/group_vars/all/site-specific`` contains settings written by
+  ``./securedrop-admin sdconfig`` - if it is changed other admins should be notified.
+* The *Submission Public Key* and *OSSEC Alert Public Key* should be present
+  under ``install_files/ansible-base``. If these keys are rotated, the public keys
+  should be updated on other *Admin Workstations*.
+* Onion service information is stored in several files:
+
+  * v2 onion services:
+
+    .. code-block:: none
+
+      install_files/ansible-base/app-ssh-aths
+      install_files/ansible-base/mon-ssh-aths
+      install_files/ansible-base/app-journalist-aths
+      install_files/ansible-base/app-source-ths
+
+  * v3 onion services:
+
+    .. code-block:: none
+
+      install_files/ansible-base/app-ssh.auth_private
+      install_files/ansible-base/mon-ssh.auth_private
+      install_files/ansible-base/app-journalist.auth_private
+      install_files/ansible-base/app-sourcev3-ths
+      install_files/ansible-base/tor_v3_keys.json
+
+  If onion service addresses are changed, the files listed above should be shared
+  securely with other administrators - preferably in person using an encrypted transfer USB,
+  as they can be used to access the servers directly via SSH over Tor.
 
 Frequently Asked Questions
 --------------------------
