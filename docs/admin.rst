@@ -407,7 +407,8 @@ Updating Logo Image
 
 You can update the system logo shown on the web interfaces of your SecureDrop
 instance via the Admin Interface. We recommend a size of ``500px x 450px``.
-Simply click the **Update Instance Config** button:
+Simply click the **Update Instance Config** button. If you haven't replaced the
+default logo yet, the page should look like this:
 
 |System Config Page|
 

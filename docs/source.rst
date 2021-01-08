@@ -214,15 +214,16 @@ messages.
 |Confirmation page|
 
 Once you are finished submitting documents, be certain you have saved your
-secret codename and then click the **Log out** button:
+secret codename and then click the **Log out** button. You should see the
+screen below:
 
 |Logout|
 
 The final step to clearing your session is to restart Tor Browser for
 optimal security. You can either close the browser entirely or follow
-the notification: click on the Tor onion in the toolbar, click
-**New Identity** and then click **Yes** in the dialog box that appears
-to confirm you'd like to restart Tor Browser:
+the instructions on the page: click on the "New Identity" button in the toolbar
+and then click **Yes** in the dialog box that appears to confirm you'd like to
+restart Tor Browser:
 
 |Restart TBB|
 
@@ -278,7 +279,7 @@ Repeat these steps to continue communicating with the journalist.
 .. |Confirmation page|
   image:: images/manual/screenshots/source-lookup.png
 .. |Logout|
-  image:: images/manual/screenshots/source-logout_flashed_message.png
+  image:: images/manual/screenshots/source-logout_new_identity.png
 .. |Restart TBB| image:: images/manual/restart-tor-browser.png
 .. |Check for response|
   image:: images/manual/screenshots/source-enter-codename-in-login.png
