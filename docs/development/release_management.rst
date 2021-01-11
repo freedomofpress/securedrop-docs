@@ -35,13 +35,19 @@ Pre-Release
 -----------
 
 1. Open a **Release SecureDrop <major>.<minor>.<patch>** issue to track release-related activity.
-   Keep this issue updated as you proceed through the release process for
-   transparency.
+   Keep this issue updated as you proceed through the release process for transparency.
+
+#. Copy a link of the latest release or release candidate from the `Tails apt repo
+   <https://deb.tails.boum.org/dists/>`_ and include it in the issue. You can compare it with the
+   `Tails release calendar <https://tails.boum.org/contribute/calendar/>`_ if you're not sure. The
+   goal is to make sure we test against the lastest Tails release, including release candidates,
+   so that we can report bugs early to Tails.
 
 #. Check if there is a new stable release of Tor that can be QAed and released as part of the
-   SecureDrop release. You can find stable releases by checking the `Tor blog
-   <https://blog.torproject.org/category/tags/stable-release>`_. If we can upgrade, file an issue
-   and upgrade Tor following these steps:
+   SecureDrop release. Also check for any new release candidates so that we're aware of any
+   upcoming major bug fixes and communicate them to the team. You can find releases by checking the
+   `Tor blog <https://blog.torproject.org/category/tags/stable-release>`_. If there is a new
+   stable release, file an issue and upgrade Tor following these steps:
 
       a. Bump the version in `fetch-tor-packages
          <https://github.com/freedomofpress/securedrop/blob/develop/molecule/fetch-tor-packages/
@@ -54,19 +60,9 @@ Pre-Release
       c. Copy the downloaded packages into the ``securedrop-dev-packages-lfs`` repo,
          and open a PR so that a reviewer can verify that the checksums match the checksums
          of the packages hosted on the
-         `Tor apt repo <https://deb.torproject.org/torproject.org/pool/main/>`_. Once the PR is merged, the
-         packages will be resigned with our an FPF-managed test-only signing key, replacing the Tor
-         signature, and served from ``apt-test.freedom.press``.
-
-#. Check if a new release or release candidate for Tails has been added to the `Tails apt repo
-   <https://deb.tails.boum.org/dists/>`_. If so, request
-   people participating in QA to use the latest release candidate.
-
-#. Work with the Communications Manager assigned for the release to prepare a pre-release
-   announcement that will be shared on the support.freedom.press support portal, securedrop.org
-   website, and Twitter. Wait until the day of the release before including an announcmement for a
-   SecureDrop security update. For a point release, you may be able to skip the pre-release
-   announcement depending on how small the point release is.
+         `Tor apt repo <https://deb.torproject.org/torproject.org/pool/main/>`_. Once the PR is
+         merged, the packages will be resigned with our an FPF-managed test-only signing key,
+         replacing the Tor signature, and served from ``apt-test.freedom.press``.
 
 #. Create a release branch.
 
@@ -81,21 +77,23 @@ Pre-Release
      git checkout release/<major>.<minor>.0
      git checkout -b release/<major>.<minor>.1
 
-#. For each release candidate, update the version and changelog.
+#. For each release candidate, update the version files, code repo changelog, and Debian package
+   changelog.
 
-   a. Collect a list of important changes from the `SecureDrop milestones
-      <https://github.com/freedomofpress/securedrop/milestones>`_ for the release, including
-      GitHub issues or PR numbers for each change. You will add these changes to the changelog in
-      the next step.
+   a. First collect a list of changes since the last release. For example, if the last release was
+      version 1.6.0, you can view changes in Github by running::
 
-   #. Run ``update_version.sh`` in the dev shell to update the version and changelog. The script
-      will open both the main repository changelog (``changelog.md``) and the one used for Debian
-      packaging in an editor, giving you a chance to add the changes you collected. In the Debian
-      changelog, we typically just refer the reader to the ``changelog.md`` file. When you run the
-      script, you will need to pass it the new version in the format
+         https://github.com/freedomofpress/securedrop/compare/release/1.6.0...develop
+
+      Also check `SecureDrop milestones <https://github.com/freedomofpress/securedrop/milestones>`_
+      to make sure all milestone changes are included. Append GitHub PR numbers to each
+      change. You will add these changes to the changelog in the next step.
+
+   #. Run ``update_version.sh`` which will walk you though updating the version files and
+      changelogs. When you run the script, pass it the new version in the format
       ``<major>.<minor>.<patch>~rcN``::
 
-        securedrop/bin/dev-shell ../update_version.sh <major>.<minor>.<patch>~rcN
+        ./update_version.sh <major>.<minor>.<patch>~rcN
 
       .. note:: A tilde is used in the version number passed to ``update_version.sh`` to match
                 the format specified in the `Debian docs
@@ -104,10 +102,13 @@ Pre-Release
                 since `git does not support the use of tilde
                 <https://git-scm.com/docs/git-check-ref-format#_description>`_.
 
+      .. note:: In the Debian changelog, we typically just refer the reader to the ``changelog.md``
+                file.
+
    #. Disregard the script-generated ``.tag`` file since this is only used when we need to sign the
       final release tag (see `Release Process`_ section).
 
-   #. Sign the commit that was added by the ``update_version.sh`` script::
+   #. Sign the commit that was added by ``update_version.sh``::
 
         git commit --amend --gpg-sign
 
@@ -120,6 +121,9 @@ Pre-Release
 
         git push origin <major>.<minor>.<patch>-rcN
 
+   #. Once the tag is pushed, notify the Localization Manager so that the localization team can get
+      started on translations.
+
 #. Build Debian packages:
 
    a. Check out the tag for the release candidate.
@@ -128,19 +132,18 @@ Pre-Release
       log guidelines
       <https://github.com/freedomofpress/securedrop/wiki/Build-logs>`_.
    #. Open a PR on `securedrop-dev-packages-lfs
-      <https://github.com/freedomofpress/securedrop-dev-packages-lfs>`_ that targets the `main`
-      branch. Changes merged to this branch will be published to ``apt-test.freedom.press``
+      <https://github.com/freedomofpress/securedrop-dev-packages-lfs>`_ that targets the ``main``
+      branch with the new debs. Do not include tarballs or any debs that would overwrite
+      existing debs. Changes merged to this branch will be published to ``apt-test.freedom.press``
       within 15 minutes.
 
-   .. warning:: Only commit packages with an incremented version number: do not clobber existing
-                packages.  That is, if there is already a deb called e.g.
+   .. warning:: Only commit deb packages with an incremented version number: do not clobber existing
+                packages. That is, if there is already a deb called e.g.
                 ``ossec-agent-3.6.0-amd64.deb`` in ``main``, do not commit a new version of this
                 deb.
 
-   .. note:: If the release contains other packages not created by
-          ``make build-debs``, such as Tor or kernel updates, make
-          sure that they also get pushed to
-          ``apt-test.freedom.press``.
+   .. note:: If the release contains other packages not created by ``make build-debs``, such as Tor
+             or kernel updates, make sure that they also get pushed to ``apt-test.freedom.press``.
 
 #. Write a test plan that focuses on the new functionality introduced in the release. Post for
    feedback and make changes based on suggestions from the community. Once it's ready, publish the
@@ -176,9 +179,14 @@ Pre-Release
      is done, ensure that no changes involving string changes are
      backported into the release branch.
 
-   * Work with the Communications Manager to ensure that a draft of the release
-     notes are prepared and shared for review, and that a draft PR is prepared
-     into the ``securedrop-docs`` repository which:
+   * Work with the Communications Manager assigned for the release to prepare a pre-release
+     announcement that will be shared on the support.freedom.press support portal, securedrop.org
+     website, and Twitter. Wait until the day of the release before including an announcmement for a
+     SecureDrop security update. For a point release, you may be able to skip the pre-release
+     announcement depending on how small the point release is.
+
+     Make sure a draft of the release notes are prepared and shared for review, and that a draft PR
+     is prepared into the ``securedrop-docs`` repository which:
 
      - bumps the SecureDrop version of the documentation using the ``update_version.sh``
        script in that repository;
@@ -310,28 +318,36 @@ Release Process
 #. Update the upgrade testing boxes following this process:
    :ref:`updating_upgrade_boxes`.
 
-
 Post-Release
 ------------
 
-Now it's time to backport the changelog from the release branch into the ``develop`` branch and bump
-the SecureDrop version so that it's ready for the next round of QA testing.
+1. Backport the changelog from the release branch into ``develop``.
 
-We backport the changelog by cherry-picking any commits that modified ``changelog.md`` during the
-release. You can look at the file history by checking out the release branch and running:
-``git log --pretty=oneline changelog.md``. The output will contain the commit hashes associated with
-the release. Create a new branch based on ``develop`` and cherry-pick these commits using the
-``-x`` flag.
+   a. Collect the hashes of all the commits that modified ``changelog.md`` during the release::
 
-Now you're ready to bump the SecureDrop version on your new branch. There are a bunch of version
-files that'll need to be updated in order to set up the upgrade test for the next release. We do
-this by running the version-updater script and specifying the new version number, which will be the
-next minor version with ``~rc1`` appended. For example, if the release is 1.3.0, then you'll run:
-``securedrop/bin/dev-shell ../update_version.sh 1.4.0~rc1``  (``dev-shell`` is a script that starts
-a container so that we can ensure ``dch`` is installed). Accept all the default changes from the
-``update_version.sh`` script. You'll only need to add your commit message. Once you're done, sign
-your commit and make a PR to merge these changes into ``develop``.
+         git log --pretty=oneline changelog.md
 
-The only thing left to do is to monitor the `FPF support portal <https://support.freedom.press>`_
-and the `SecureDrop community support forum <https://forum.securedrop.org/c/support>`_ for any new
-user issues related to the release.
+   #. From a new branch based on ``develop``, cherry-pick each commit in the ``git log`` output
+      from the previous step. Make sure to use the ``-x`` flag so that the original commit is
+      appended to the new commit.
+
+#. Bump the SecureDrop version so that it's ready for the next release.
+
+   a. Create a new minor release candidate. Only add a commit message and accept the default changes
+      for everything else (it's fine to leave the changelog entries with empty bullets). For
+      example, if the release is 1.3.0, then you'll run::
+
+         ./update_version.sh 1.4.0~rc1
+
+   #. Disregard the script-generated ``.tag`` file since this is only used when we are making an
+      actual release.
+
+   #. Sign the commit that was added by ``update_version.sh``::
+
+         git commit --amend --gpg-sign
+
+   #. Make a PR to merge these changes into ``develop``.
+
+#. Monitor the `FPF support portal <https://support.freedom.press>`_ and the
+   `SecureDrop community support forum <https://forum.securedrop.org/c/support>`_ for any new user
+   issues related to the release.
