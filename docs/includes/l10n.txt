@@ -18,4 +18,5 @@
 * Slovak (``sk``)
 * Swedish (``sv``)
 * Turkish (``tr``)
+* Chinese, Simplified (``zh_Hans``)
 * Chinese, Traditional (``zh_Hant``)
