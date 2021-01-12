@@ -25,17 +25,10 @@ obtain a separate switch to connect the *Admin Workstation* for the initial
 installation.
 
 If you are new to pfSense or firewall management in general, we
-recommend the following resources:
+recommend the following resource:
 
 -  `Official pfSense
    Wiki <https://docs.netgate.com/pfsense/en/latest/index.html>`__
--  `pfSense: The Definitive
-   Guide <https://www.amazon.com/pfSense-Definitive-Christopher-M-Buechler/dp/0979034280>`__
-
-   -  *Note:* This guide is now slightly out of date, although we found
-      it to be a useful reference in the past. To get the latest version of
-      this book, you need to become a `pfSense Gold
-      Member <https://www.pfsense.org/our-services/#gold-membership>`__.
 
 If you're using the recommended SG-3100 firewall, then you may find the
 following resource useful. In particular, you can find instructions on factory
