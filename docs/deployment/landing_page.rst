@@ -55,7 +55,7 @@ in common templates to ensure your page does not end up in a mixed
 HTTPS/HTTP state.
 
 Consider submitting your domain to be included in the `Chrome HSTS
-preload list <https://hstspreload.appspot.com/>`__ if you can meet all
+preload list <https://hstspreload.org/>`__ if you can meet all
 of the requirements. This will tell web browsers that the site is only
 ever to be reached over HTTPS.
 
@@ -78,7 +78,7 @@ issues it, you'll often be asked to generate the private key and a CSR
 
 When you do this, it's imperative that you use SHA-2 as the hashing
 algorithm instead of SHA-1, which is `being phased
-out <http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html>`__.
+out <https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html>`__.
 You should also choose a key size of *at least* 2048 bits. These
 parameters will help ensure that the encryption used on your *Landing
 Page* is sufficiently strong. The following example OpenSSL command will
@@ -254,7 +254,7 @@ Change detection monitoring for the web application configuration and *Landing P
 
 OSSEC is a free and open source host-based intrusion detection suite
 that includes a file integrity monitor. More information can be found
-`here. <https://ossec.github.io/>`__
+`here. <https://www.ossec.net/>`__
 
 Don't log access to the *Landing Page* in the webserver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -344,7 +344,7 @@ identity. Instead, use public wifi networks and devices you control.
 **Got it. How can I submit files and messages through SecureDrop?**
 
 Once you are connected to a public network at a cafe or library, download
-and install the `Tor Browser <https://www.torproject.org/projects/torbrowser>`_.
+and install the `Tor Browser <https://www.torproject.org/download/>`_.
 
 Launch Tor Browser. Visit our organization’s unique SecureDrop URL at
 **http://our-unique-URL.onion/**.

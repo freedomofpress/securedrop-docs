@@ -22,7 +22,7 @@ recent Tor Browser.
 .. _`GitHub #1629`: https://github.com/freedomofpress/securedrop/pull/1629
 
 .. _Pytest: https://docs.pytest.org/en/latest/
-.. _Selenium: http://docs.seleniumhq.org/docs/
+.. _Selenium: https://www.selenium.dev/documentation/
 
 Installation
 ------------

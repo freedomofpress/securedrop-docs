@@ -6,7 +6,7 @@ Rebuilding an *Admin Workstation* USB
           rebuild your *Admin Workstation*, please contact FPF through the
           `SecureDrop Support Portal`_.
 
-.. _SecureDrop Support Portal: https://securedrop-support.readthedocs.io/en/latest/
+.. _SecureDrop Support Portal: https://support-docs.securedrop.org/
 
 
 In cases where an *Admin Workstation* USB stick has been lost or destroyed, and no

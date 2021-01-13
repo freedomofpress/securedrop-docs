@@ -120,5 +120,5 @@ PR page and also emailed to admins.
 3. From there, a maintainer will accept your PR or they may request comments
 for you to address prior to merge. The maintainer may also ask you to `squash
 your commits
-<https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history>`_
+<https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history>`_
 prior to merge.

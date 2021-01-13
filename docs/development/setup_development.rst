@@ -70,7 +70,7 @@ macOS
 
 Install Docker_.
 
-.. _Docker: https://store.docker.com/editions/community/docker-ce-desktop-mac
+.. _Docker: https://hub.docker.com/editions/community/docker-ce-desktop-mac
 
 
 Qubes
@@ -289,9 +289,9 @@ different version, the path to ``virtualenvwrapper.sh`` will differ. Running
 
 The version of rsync installed by default on macOS is extremely out-of-date, as is Apple's custom. We recommend using Homebrew_ to install a modern version (3.1.0 or greater): ``brew install rsync``.
 
-.. _Vagrant: http://www.vagrantup.com/downloads.html
+.. _Vagrant: https://www.vagrantup.com/downloads.html
 .. _VirtualBox: https://www.virtualbox.org/wiki/Downloads
-.. _Ansible: http://docs.ansible.com/intro_installation.html
+.. _Ansible: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
 .. _Homebrew: https://brew.sh/
 .. _homebrew-cask: https://sourabhbajaj.com/mac-setup/Vagrant/README.html
 

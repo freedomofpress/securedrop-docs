@@ -20,7 +20,7 @@ safer approach, fill a port with epoxy to physically disable it. We also
 recommend you remove the speakers from the device (or just cut the audio cables
 if that's easier). This is to prevent `exfiltration of data from the airgap via
 ultrasonic audio
-<https://arstechnica.com/security/2013/12/scientist-developed-malware-covertly-jumps-air-gaps-using-inaudible-sound/>`__,
+<https://arstechnica.com/information-technology/2013/12/scientist-developed-malware-covertly-jumps-air-gaps-using-inaudible-sound/>`__,
 which cannot be heard by humans. If you have questions about repurposing
 hardware for the *Secure Viewing Station*, contact the `Freedom of the Press
 Foundation <https://securedrop.org/help>`__.

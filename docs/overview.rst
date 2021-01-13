@@ -31,7 +31,7 @@ SecureDrop application environment consists of three dedicated computers:
    download encrypted documents and respond to sources.
 - *Monitor Server*:
    An Ubuntu server that monitors the *Application Server*
-   with `OSSEC <https://ossec.github.io/>`__ and sends email alerts.
+   with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
 
 These computers should all physically be in your organization's office.
 
@@ -91,13 +91,13 @@ newsrooms, there may be a team of systems admins. The admin
 uses a dedicated *Admin Workstation* running `Tails <https://tails.boum.org>`__,
 connects to the *Application* and *Monitor Servers* over  `authenticated onion services
 <https://tb-manual.torproject.org/onion-services/>`__, and manages them
-using `Ansible <http://www.ansible.com/>`__.
+using `Ansible <https://www.ansible.com/>`__.
 
 Sources
 ~~~~~~~
 
 A source submits documents and messages by using `Tor Browser
-<https://www.torproject.org/projects/torbrowser.html>`__ (or Tails) to access
+<https://www.torproject.org/download/>`__ (or Tails) to access
 the *Source Interface*: a public onion service. Submissions are encrypted
 in place on the *Application Server* as they are uploaded.
 

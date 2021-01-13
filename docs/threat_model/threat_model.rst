@@ -647,7 +647,7 @@ What a Local Network Attacker Can Achieve Against the Source, Admin, or Journali
 -  A local network may be able to deduce use of SecureDrop by looking at
    request sizes, plaintext uploads and encrypted downloads, although
    `research suggests this is very
-   difficult <https://blog.torproject.org/blog/critique-website-traffic-fingerprinting-attacks>`__.
+   difficult <https://blog.torproject.org/critique-website-traffic-fingerprinting-attacks>`__.
 
 What a Global Adversary Can Achieve Against the Source, Admin, or Journalist:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

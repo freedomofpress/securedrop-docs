@@ -183,7 +183,7 @@ systems. These instances use the standard TOTP and/or HOTP algorithms,
 and so a variety of devices can be used to generate 6-digit two-factor
 authentication codes. We recommend using one of:
 
--  FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ or `for iOS <https://itunes.apple.com/us/app/freeotp-authenticator/id872559395>`__ installed
--  A `YubiKey <https://www.yubico.com/products/yubikey-hardware/>`__
+-  FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ or `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__ installed
+-  A `YubiKey <https://www.yubico.com/products/>`__
 
 .. include:: includes/otp-app.txt

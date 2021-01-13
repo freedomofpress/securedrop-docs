@@ -8,7 +8,7 @@ are stored in the ``docs/`` directory of the `SecureDrop docs repository
 <https://github.com/freedomofpress/securedrop-docs>`_.
 
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
-.. _Read the Docs: https://docs.readthedocs.org/en/latest/index.html
+.. _Read the Docs: https://docs.readthedocs.io/en/latest/index.html
 
 
 Integration with Read the Docs

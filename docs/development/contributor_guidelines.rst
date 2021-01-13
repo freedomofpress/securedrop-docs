@@ -4,7 +4,7 @@ Contributing Guidelines
 Signing commits
 ---------------
 
-Commits should be signed, as `explained in the GitHub documentation <https://help.github.com/articles/signing-commits-using-gpg/>`_.
+Commits should be signed, as `explained in the GitHub documentation <https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/signing-commits>`_.
 This helps verify commits proposed in a pull request are from the expected author.
 
 Branching Strategy
@@ -88,7 +88,7 @@ HTML
 
 HTML should be in compliance with
 `Google's HTML style guide <https://google.github.io/styleguide/htmlcssguide.html>`__.
-We use `html-linter <https://pypi.python.org/pypi/html-linter/>`__ to lint
+We use `html-linter <https://pypi.org/project/html-linter/>`__ to lint
 our HTML templates in ``securedrop/source_templates`` and
 ``securedrop/journalist_templates``. Run the HTML linting options we use via:
 

@@ -12,7 +12,7 @@ provide `abstract firewall rules`_ that can be implemented with iptables, Cisco
 IOS etc. This guide is based on pfSense, and assumes your firewall hardware has
 at least three interfaces: WAN, LAN, and OPT1. For hardware, you can build
 your own network firewall (not covered in this guide) and `install pfSense
-<https://doc.pfsense.org/index.php/Installing_pfSense>`__ on it. For most
+<https://docs.netgate.com/pfsense/en/latest/install/download-installer-image.html>`__ on it. For most
 installations, we recommend buying a dedicated firewall appliance with
 pfSense pre-installed, such as the one recommended in the
 :ref:`Hardware Guide <hardware_guide>`.
@@ -25,17 +25,10 @@ obtain a separate switch to connect the *Admin Workstation* for the initial
 installation.
 
 If you are new to pfSense or firewall management in general, we
-recommend the following resources:
+recommend the following resource:
 
 -  `Official pfSense
-   Wiki <https://doc.pfsense.org/index.php/Main_Page>`__
--  `pfSense: The Definitive
-   Guide <https://www.amazon.com/pfSense-Definitive-Christopher-M-Buechler/dp/0979034280>`__
-
-   -  *Note:* This guide is now slightly out of date, although we found
-      it to be a useful reference in the past. To get the latest version of
-      this book, you need to become a `pfSense Gold
-      Member <https://www.pfsense.org/our-services/gold-membership.html>`__.
+   Wiki <https://docs.netgate.com/pfsense/en/latest/index.html>`__
 
 If you're using the recommended SG-3100 firewall, then you may find the
 following resource useful. In particular, you can find instructions on factory

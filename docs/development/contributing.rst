@@ -67,7 +67,7 @@ project and its components, including the graphical `SecureDrop Client <https://
 
 When you're ready to share your work with the SecureDrop team for review, submit
 a `pull request
-<https://help.github.com/categories/collaborating-with-issues-and-pull-requests/>`__
+<https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests>`__
 with the proposed changes. :doc:`Tests <testing_securedrop>` will run
 automatically on GitHub.
 
@@ -169,7 +169,7 @@ Forum Moderators and Support
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Those running a production instance of SecureDrop are encouraged to `read the
-support documentation <https://securedrop-support.readthedocs.io/>`__ to get
+support documentation <https://support-docs.securedrop.org/>`__ to get
 help from the `Freedom of the Press Foundation <https://freedom.press>`__. For
 less sensitive topics such as running a demo or getting help to understand a
 concept, a `public forum section <https://forum.securedrop.org/c/support>`__ is

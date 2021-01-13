@@ -549,7 +549,7 @@ This alert is common but if you see them for sustained periods of time (several
 times a day), please contact us at the `SecureDrop Support Portal`_ or at
 securedrop@freedom.press for help.
 
-.. _SecureDrop Support Portal: https://securedrop-support.readthedocs.io/en/latest/
+.. _SecureDrop Support Portal: https://support-docs.securedrop.org/
 
 Daily reports
 ^^^^^^^^^^^^^

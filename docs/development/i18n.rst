@@ -487,7 +487,7 @@ with a release looming, the server can be rebooted.
 .. _`.po`: https://www.gnu.org/software/gettext/manual/gettext.html#PO-Files
 .. _`.mo`: https://www.gnu.org/software/gettext/manual/gettext.html#MO-Files
 .. _`pybabel`: https://babel.pocoo.org/en/latest/
-.. _`Weblate`: http://weblate.securedrop.org/
+.. _`Weblate`: https://weblate.securedrop.org/
 .. _`SecureDrop git repository`: https://github.com/freedomofpress/securedrop
 .. _`Weblate SecureDrop branch`: https://github.com/freedomofpress/securedrop-i18n
 .. _`patch they contain is unique`: https://git-scm.com/docs/git-patch-id
