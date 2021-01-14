@@ -29,7 +29,9 @@ running a command on the *Application Server*. After that, the Journalist
 Interface admin can create additional accounts through the web
 interface.
 
-If you are installing SecureDrop yourself, to create the first admin account, :doc:`SSH to the Application Server <test_the_installation>`, then:
+.. _Create Admin CLI:
+
+To create an admin account via the command line, :doc:`SSH to the Application Server <test_the_installation>`, then:
 
 .. code:: sh
 
