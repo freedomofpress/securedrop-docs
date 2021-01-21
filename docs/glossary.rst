@@ -80,20 +80,24 @@ documents, and move them to the *Secure Viewing Station* using the
 Instructions for using the *Journalist Workstation* are available in our
 :doc:`Journalist Guide <journalist>`.
 
+.. _glossary_landing_page:
 
 Landing Page
 ------------
 The *Landing Page* is the public-facing webpage for a SecureDrop instance. This
 page is hosted as a standard (i.e. non-Tor) webpage on the news organization's
-site. It provides first instructions for potential sources.
+site. It provides first instructions for potential sources and includes
+the instance's :ref:`Source Interface <glossary_source_interface>` address.
 
 
 Monitor Server
 --------------
+
 The *Monitor Server* keeps track of the *Application Server* and sends out an
 email alert if something seems wrong. Only system admins connect
 to this server, and they may only do so using Tor.
 
+.. _glossary_onion_service:
 
 Onion Service
 -------------
@@ -111,8 +115,11 @@ service address for the SecureDrop website.
 Read more about `onion services in Tor's glossary
 <https://support.torproject.org/onionservices/>`__.
 
-Onion Service v2
-""""""""""""""""
+Onion Service versions
+""""""""""""""""""""""
+
+Distinguishing between different generations of onion services is easy:
+v3 addresses are longer (56 characters) than v2 addresses (16 characters).
 
 The third generation of onion services (v3) provides stronger cryptographic
 algorithms than v2 onion services, and includes redesigned protocols that
@@ -121,10 +128,6 @@ guard against service information leaks on the Tor network.
 Support for v2 onion services will start to be removed from SecureDrop in
 February 2021, and we strongly recommend :doc:`upgrading SecureDrop
 instances to v3 onion services <v3_services>` as soon as possible.
-
-Distinguishing between different generations of onion services is easy:
-v3 addresses are longer (56 characters) than v2 addresses (16 characters).
-
 
 OSSEC Alert Public Key
 ----------------------
@@ -167,6 +170,7 @@ access SecureDrop through the *Source Interface* and must do so using Tor.
 Instructions for using SecureDrop as a *Source* are available in our
 :doc:`Source Guide <source>`.
 
+.. _glossary_source_interface:
 
 Source Interface
 ----------------
