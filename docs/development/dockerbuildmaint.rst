@@ -1,12 +1,21 @@
-Docker Build Maintenance
-========================
+.. _build_container:
 
-Get your Quay account squared away
------------------------------------
-The container that performs builds of Debian packages is version controlled in
-a docker repository at **quay.io/freedomofpress/sd-docker-builder**.
-There are tight restrictions over who can make edits here. If you have permissions
-to do so, you'll need to make sure your local docker client has credentials to push.
+Build container
+===============
+We use a Docker build container to build our debian packages for SecureDrop (via ``make build-debs``
+in the ``securedrop`` Github repository root directory). We keep images of this our container in a
+Docker repository at **quay.io/freedomofpress**. The images are organized by Ubuntu release
+version. For instance, you can find the images for Xenial at
+**quay.io/freedomofpress/sd-docker-builder-xenial** and, for Focal, at
+**quay.io/freedomofpress/sd-docker-builder-focal**.
+
+Maintaining images of our bulid container for each release is our way of recording the exact version
+of each dependency used to build our production debian packages for SecureDrop.
+
+Who can update the build container?
+===================================
+There are tight restrictions over who can make edits to our Docker repository. If you have
+permissions to do so, you'll need to make sure your local Docker client has credentials to push.
 
 * First login into your quay.io account via the web-portal at https://quay.io/
 * Drill into your **Account settings** via the upper right drop-down (where your username is)
@@ -15,12 +24,16 @@ to do so, you'll need to make sure your local docker client has credentials to p
   obtained from the previous step.
 * Proceed with update instructions
 
+Updating the build container
+============================
+We know the build container needs to be updated when **test_ensure_no_updates_avail** fails during
+``make build-debs`` in the ``securedrop`` Github reprository root directory. This test fails if any
+of the dependencies required to build the debian packages have security updates. If you have access
+rights to push to quay.io, then you can build and push a new container to the Quay repository by
+following the steps below.
 
-Performing container updates
-----------------------------
-If one of the dependencies requires security updates, the build may fail at
-**test_ensure_no_updates_avail** . If you have access rights to push to quay.io,
-here is the process to build and push a new container:
+.. note:: The reason we don't update the container at runtime is that we use the container image as
+          a way of recording our build environment.
 
 .. code:: sh
 
