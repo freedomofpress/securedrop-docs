@@ -82,7 +82,7 @@ graphical prompts to update to the latest version.
 V3 Onion Services
 -----------------
 
-Due to security and anonymity improvements in v3 of the onion services protocol, support for v2 onion services will be removed from SecureDrop in February 2021. If your SecureDrop instance is still using 16-character v2 onion URLs, you should migrate to v3 onion services at the earliest opportunity, and contact us via the Support Portal if you require assistance doing so. For more information, see :doc:`our migration documentation <../v3_services>`. 
+Due to security and anonymity improvements in v3 of the onion services protocol, support for v2 onion services will be removed from SecureDrop in February 2021. If your SecureDrop instance is still using 16-character v2 onion URLs, you should migrate to v3 onion services at the earliest opportunity, and contact us via the Support Portal if you require assistance doing so. For more information, see :doc:`our migration documentation <../v3_services>`.
 
 Getting Support
 ---------------
