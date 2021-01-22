@@ -17,12 +17,12 @@ Minimizing Disk Use
 Since the backup and restore operations both involve transferring *all* of
 your SecureDrop's stored submissions over Tor, the process can take a long time.
 
-Encouraing journalists to regularly delete older, unneeded submissions from 
+Encouraging journalists to regularly delete older, unneeded submissions from 
 the *Journalist Interface* will save time and improve reliability when 
 doing backups.
 
 .. tip:: Although it varies, the average throughput of an onion service is
-         about 300 kB/s, or roughly 2 hours for 2GB. Plan your backup and
+         about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
          restore accordingly.
 
 You can use the following command to determine the volume of submissions
@@ -60,7 +60,8 @@ Backing Up
 Open a **Terminal** on the *Admin Workstation* and ``cd`` to 
 ``~/Persistent/securedrop``.
 
-Run ``git describe --exact-match`` to verify that you have a tagged SecureDrop release, 0.4 or newer, checked out. 
+Run ``git describe --exact-match`` to verify that you have a tagged SecureDrop
+release, 0.12.0 or newer, checked out. 
 
 Check Connectivity
 ''''''''''''''''''
@@ -72,7 +73,8 @@ the SecureDrop servers.
 
    ssh app uptime
 
-If this command fails, see :ref:`Troubleshooting <troubleshooting_admin_connectivity>`.
+If this command fails, see 
+:ref:`Troubleshooting <troubleshooting_admin_connectivity>`.
 
 Create the Backup
 '''''''''''''''''
@@ -113,16 +115,21 @@ backup, the archive will already be in place).
 
 If you are restoring data onto an existing instance (for example, for data 
 recovery purposes), see 
-:ref:`Restoring Data on an Existing SecureDrop Installation <restore_data>`.
+:ref:`Restoring a Backup on an Existing Instance <restore_data>`.
 
 If you are reinstalling SecureDrop and then restoring from a backup (for 
 example, for hardware migration or disaster recovery purposes), see 
 :ref:`Migrating <migrating>`.
 
+For other data recovery scenarios, see 
+:ref:`Additional Information <additional_restore_info>` or `contact Support`_.
+
+.. _contact Support: https://securedrop-support.readthedocs.io/en/latest/
+
 .. _restore_data:
 
-Restoring Data on an Existing SecureDrop Installation
-''''''''''''''''''''''''''''''''''''''''''''''''''''' 
+Restoring a Backup on an Existing Instance
+'''''''''''''''''''''''''''''''''''''''''' 
 
 To restore an existing instance to a previous state, run the command:
 
@@ -143,24 +150,27 @@ time of the backup.
 Migrating
 ---------
 
-.. note:: These steps require physical access to the servers. 
-         
 Moving a SecureDrop installation to new hardware consists of:
 
-  - Backing up the existing installation and preserving its Tor credentials from the *Admin Workstation* 
-  - Installing the same version of SecureDrop on the new hardware;
-  - Restoring the backup to the new installation;
-  - Repairing Tor credentials for the new installation. 
+  - Backing up the existing installation and preserving credentials from the *Admin Workstation*; 
+  - Installing the same version of SecureDrop on the new hardware and copying credentials into place;
+  - Restoring the backup to the new installation.
 
-Detailed Migration Instructions
-''''''''''''''''''''''''''''''' 
+The instructions differ depending on which onion services version 
+your instance is using.
 
+* :ref:`Instances using v3 onion services <migrate_v3>`
+* :ref:`Instances using v2 + v3 onion services <migrate_v2v3>`
+* :ref:`Instances using v2 onion services <migrate_v2>`
+
+.. _migrate_v3:
+
+Hardware Migration for Instances Using v3 Onion Services
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 #. :ref:`Back up the existing installation <backing_up>`.
 
-#. **Preserve important credentials**: Before re-installing SecureDrop, you 
-   will need to preserve some important credential files from the old 
-   installation on the *Admin Workstation*. Save these credentials
-   somewhere in the ``~/Persistent/`` directory. 
+#. **Preserve files and credentials**: Create a folder to
+   preserve important files from the old installation: 
 
    .. code:: sh
 
@@ -168,35 +178,146 @@ Detailed Migration Instructions
 
    Copy in the following files from ``~/Persistent/securedrop/install_files/ansible-base``:
 
-   **Instances using v2 onion services:**
-   
-   - ``app-source-ths``
-   - ``app-journalist-aths``
-   - ``app-ssh-aths``
-
-   **Instances using v3 onion services:**
-
-   - ``app-sourcev3-ths``
-   - ``app-ssh.auth_private``
-   - ``app-journalist.auth_private``
    -  ``tor_v3_keys.json``
+   - All ``.asc`` files (these correspond to your *Submission Public Key*, your OSSEC alerts public key, and (if configured) your journalist alerts public key)
+   - The file ``~/Persistent/securedrop/install_files/ansible-base/group-vars/all/site-specific``
 
    Once you have preserved those files, rename the 
-   SecureDrop project root directory to something like ``securedrop.old`` and
-   delete it when the migration is complete. 
+   SecureDrop project root directory to ``securedrop.old``. 
 
-#. **Prepare the new servers.** Re-clone the SecureDrop repository, and 
-   :doc:`reinstall SecureDrop from scratch <install>`. 
+#. **Reinstall SecureDrop on new hardware:** Re-clone the SecureDrop repository.
+  
+   Copy the ``.asc`` files and the ``tor_v3_keys.json`` file into
+   ``~/Persistent/securedrop/install_files/ansible-base``
+   and the ``site-specific`` file to 
+   ``~/Persistent/securedrop/install_files/ansible-base/group-vars/all/site-specific``.
 
-   During the configuration step (``./securedrop-admin sdconfig``), you will be
-   prompted to choose whether to enable v2 onion services, v3 onion services, or 
-   both. Make the same selection as your previous server configuration. Proceed through 
-   the installation, finishing with ``./securedrop-admin tailsconfig.``
+   Prepare the new :doc:`servers <servers>`, and 
+   :doc:`reinstall SecureDrop <install>`. During the configuration 
+   stage (``./securedrop-admin sdconfig``), press 
+   "Enter" to use the values that are populated for you. Proceed through the 
+   installation, finishing with ``./securedrop-admin tailsconfig.``
+
+   If SSH-over-Tor is configured, run ``ssh app`` and ``ssh mon`` to add the
+   new onion URLs to your ``known_hosts`` file. 
+
+#. **Restore the backup**: Copy the backup archive (located in 
+   ``securedrop.old/install_files/ansible-base``) into the 
+   ``install_files/ansible-base`` directory and run
+
+   .. code:: sh
+            
+       ./securedrop-admin restore sd-backup-<your_backup_file>.tar.gz
+
+#. **Delete temporary files**: Remove any temporary files or directories
+   you created as you performed this migration, including the 
+   ``securedrop.old`` directory.
+
+.. _migrate_v2v3:
+
+Hardware Migration for Instances Using v2 + v3 Onion Services
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+#. :ref:`Back up the existing installation <backing_up>`.
+
+#. **Preserve files and credentials**: Create a folder to
+   preserve important files from the old installation: 
+
+   .. code:: sh
+
+       mkdir ~/Persistent/sd-restore-creds
+
+   Copy in the following files from ``~/Persistent/securedrop/install_files/ansible-base``:
+
+   -  ``tor_v3_keys.json``
+   - All ``.asc`` files (these correspond to your *Submission Public Key*, your OSSEC alerts public key, and (if configured) your journalist alerts public key
+   - The file ``~/Persistent/securedrop/install_files/ansible-base/group-vars/all/site-specific``
+   - (optional) ``app-ssh-aths`` and ``mon-ssh-aths``, if you wish to reinstate the ``app-ssh-legacy`` and ``mon-ssh-legacy`` commands
+   
+   Once you have preserved those files, rename the 
+   SecureDrop project root directory to ``securedrop.old``. 
+
+#. **Reinstall SecureDrop on new hardware.** Re-clone the SecureDrop repository.
+   Copy the ``.asc`` files and the ``tor_v3_keys.json`` file into
+   ``~/Persistent/securedrop/install_files/ansible-base``
+   and the ``site-specific`` file to 
+   ``~/Persistent/securedrop/install_files/ansible-base/group-vars/all/site-specific``.
+
+   Prepare the new :doc:`servers <servers>`, and 
+   :doc:`reinstall SecureDrop <install>`. During the configuration 
+   stage (``./securedrop-admin sdconfig``), press 
+   "Enter" to use the values that are populated for you. Proceed through the 
+   installation, finishing with ``./securedrop-admin tailsconfig.``
 
    If SSH-over-Tor is configured, run ``ssh app`` and ``ssh mon`` to add the
    new (temporary) onion URLs to your ``known_hosts`` file. 
 
-#. **Restore the backup**: Copy the backup archive into the 
+#. **Restore the backup**: Copy the backup archive (located in 
+   ``securedrop.old/install_files/ansible-base``) into the 
+   ``install_files/ansible-base`` directory and run
+
+   .. code:: sh
+            
+       ./securedrop-admin restore sd-backup-<your_backup_file>.tar.gz
+
+#. **Delete temporary files**: Remove any temporary files or directories
+   you created as you performed this migration, including the 
+   ``securedrop.old`` directory.
+
+
+.. _migrate_v2:
+
+Hardware Migration for Instances Using v2 Onion Services
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+.. note:: Support for v2 onion services will be removed from SecureDrop 
+          starting in March 2021. We encourage you to migrate to v3 onion 
+          services. To do so, follow our 
+          :doc:`migration guidelines <v3_services>`, 
+          or reinstall SecureDrop with v3 onion services enabled, and 
+          follow :ref:`these restore instructions <restore_preserve_tor_config>`.
+        
+          The instructions for v2 onion services will be removed
+          in a future release.
+
+#. :ref:`Back up the existing installation <backing_up>`.
+
+#. **Preserve files and credentials**: Create a folder to
+   preserve important files from the old installation: 
+
+   .. code:: sh
+
+       mkdir ~/Persistent/sd-restore-creds
+
+   Copy in the following files from ``~/Persistent/securedrop/install_files/ansible-base``:
+
+   - ``app-source-ths``
+   - ``app-journalist-aths``
+   - ``app-ssh-aths``
+   - your SecureDrop instance's public key (``SecureDrop.asc``, or as named by you)
+   - your SecureDrop instance's OSSEC alerts key (``ossec.asc``, or as named by you)
+   - your SecureDrop instance's journalist alerts key (``journalist-alerts.asc``, or as named by you)
+   - The file ``~/Persistent/securedrop/install_files/ansible-base/group-vars/all/site-specific``
+
+   Once you have preserved those files, rename the 
+   SecureDrop project root directory to ``securedrop.old``. 
+
+#. **Reinstall SecureDrop on new hardware.** Re-clone the SecureDrop repository.
+   Copy the ``.asc`` files into ``~/Persistent/securedrop/install_files/ansible-base``
+   and the ``site-specific`` file to 
+   ``~/Persistent/securedrop/install_files/ansible-base/group-vars/all/site-specific``.
+
+   Prepare the new :doc:`servers <servers>`, and 
+   :doc:`reinstall SecureDrop <install>`. During the configuration 
+   stage (``./securedrop-admin sdconfig``), press 
+   "Enter" to use the values that are populated for you. Proceed through the 
+   installation, finishing with ``./securedrop-admin tailsconfig.``
+
+   If SSH-over-Tor is configured, run ``ssh app`` and ``ssh mon`` to add the
+   new (temporary) onion URLs to your ``known_hosts`` file. 
+
+#. **Restore the backup**: Copy the backup archive (located in 
+   ``securedrop.old/install_files/ansible-base``) into the 
    ``install_files/ansible-base`` directory and run
 
    .. code:: sh
@@ -220,8 +341,6 @@ Detailed Migration Instructions
 
    First, obtain the SSH service onion address for the *Application Server.*
 
-   **Instances using v2 onion services:**
-
    Inspect the ``app-ssh-aths`` file: 
 
    .. code:: sh
@@ -232,19 +351,6 @@ Detailed Migration Instructions
    The ``app_ssh_url`` portion is your SSH service .onion address for the
    *Application Server*.
 
-
-   **Instances using v3 onion services:**
-
-   Inspect the ``app-ssh.auth_private`` file: 
-
-   .. code:: sh
-
-      cat install_files/ansible-base/app-ssh.auth_private 
-
-   This file is in the format ``app_ssh_url:descriptor:x25519:secret``.
-   Appending ``.onion`` to the ``app_ssh_url`` portion gives you your SSH
-   service .onion address for the Application Server.
-
 #. **Fix Tor Credentials:**
    Type the following command, replacing ``<app_ssh_url>``: with the .onion
    URL you obtained in the previous step.
@@ -253,16 +359,6 @@ Detailed Migration Instructions
 
       ssh-keygen -f "/home/amnesia/.ssh/known_hosts" -R "<app_ssh_url>"
 
-   **Additional step for instances using v3 onion services:**   
-
-   Edit the file called ``tor_v3_keys.json``, located in 
-   ``install_files/ansible-base`` to replace the two ``app_journalist`` and 
-   two ``app_ssh`` values in the file with their respective values 
-   that you preserved in the ``tor_v3_keys.json`` file from the previous installation.
-
-   .. important:: Do not change the ``mon_ssh`` values, since the restore process
-                  did not restore the Monitor server.  
-
 #. **Replace original Tor credentials**: Copy the following files preserved 
    from the old installation into
    ``install_files/ansible-base``, overwriting the existing files of the 
@@ -270,17 +366,9 @@ Detailed Migration Instructions
    to another location outside of the SecureDrop directory before overwriting 
    them).  
 
-   **Instances using v2 onion services:**
-
    * ``app-source-ths``
    * ``app-journalist-aths``
    * ``app-ssh-aths``
-
-   **Instances using v3 onion services:**
-
-   * ``app-sourcev3-ths``
-   * ``app-journalist.auth_private``
-   * ``app-ssh.auth_private``
 
 #. **Reconfigure Tor connections**: 
    Run ``./securedrop-admin tailsconfig`` to update the *Admin Workstation*
@@ -290,10 +378,15 @@ Detailed Migration Instructions
    for further instructions.
 
 #. **Delete temporary files**: Remove any temporary files or directories
-   you created for storing Tor credentials as you performed the migration.
+   you created as you performed this migration, including the 
+   ``securedrop.old`` directory.
+
+.. _additional_restore_info:
 
 Additional Information
 ----------------------
+
+.. _restore_preserve_tor_config:
 
 Restore Data Without Restoring Tor Configuation 
 ''''''''''''''''''''''''''''''''''''''''''''''''
@@ -309,8 +402,12 @@ the following command:
 
    ./securedrop-admin restore --preserve-tor-config sd-backup-2020-07-22--01-06-25.tar.gz
 
+This is a suitable option if you have a backup archive taken from an instance
+with v2 onion services, and wish to restore it to an instance that is now using
+v3 onion services. 
 
-If you require any assistance, please `contact Support`_.
+If you require any assistance with migration or data recovery, please
+`contact Support`_.
 
 .. _contact Support: https://securedrop-support.readthedocs.io/en/latest/
 
