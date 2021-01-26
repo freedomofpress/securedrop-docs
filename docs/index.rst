@@ -92,10 +92,10 @@ anonymous sources.
    :name: upgradetoc
    :maxdepth: 2
 
+   upgrade/focal_prep.rst
+   upgrade/1.6.0_to_1.7.0.rst
    upgrade/1.5.0_to_1.6.0.rst
-   upgrade/1.4.1_to_1.5.0.rst
-   upgrade/1.4.0_to_1.4.1.rst
-   
+
 .. toctree::
    :caption: Developer Documentation
    :name: devdocs
