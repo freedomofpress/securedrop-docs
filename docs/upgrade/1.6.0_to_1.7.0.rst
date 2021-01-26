@@ -12,6 +12,9 @@ Automatic server upgrades
 As with previous releases, your servers will be upgraded to the latest version
 of SecureDrop automatically within 24 hours of the release.
 
+
+.. _updating_workstations_170:
+
 Updating Workstations to SecureDrop 1.7.0
 -----------------------------------------
 
@@ -95,6 +98,26 @@ If you are not already running v3 onion services (easily recognizable by their
 56 character ``.onion`` addresses), please complete the migration at your
 earliest convenience to keep your instance running. See our
 :doc:`upgrade guide <../v3_services>` for details.
+
+.. note::
+
+  If you have previously disabled v2 onion services, due to a bug that was fixed
+  in SecureDrop 1.7.0, SSH access via v2 onion services may still be enabled,
+  and you may receive OSSEC alerts warning you that v2 onion services are still
+  running.
+
+  To fully disable v2 onion services:
+
+  1. Make sure that your *Admin Workstation* is up-to-date by following the
+     :ref:`earlier steps <updating_workstations_170>`.
+  2. Run ``./securedrop-admin sdconfig`` from the ``~/Persistent/securedrop``
+     directory and confirm that all configuration settings are correct.
+     In particular, make sure that v2 onion services are disabled, and
+     v3 onion services are enabled.
+  3. Re-run the install playbook via ``./securedrop-admin install``.
+
+  We apologize for the inconvenience. Please contact us if you have any
+  questions about this process.
 
 Preparing for Ubuntu 20.04
 --------------------------
