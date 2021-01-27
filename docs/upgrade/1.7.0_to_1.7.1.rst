@@ -1,0 +1,75 @@
+Upgrade from 1.7.0 to 1.7.1
+===========================
+
+SecureDrop 1.7.1 is a bugfix release to address an issue introduced in
+SecureDrop 1.7.0 which caused an outage for some long-running SecureDrop
+instances. Please see :doc:`1.6.0_to_1.7.0` for important information about
+SecureDrop 1.7.0.
+
+Automatic server upgrades
+-------------------------
+As with previous releases, your servers will be upgraded to the latest version
+of SecureDrop automatically within 24 hours of the release.
+
+Because this release resolves an ongoing outage for some instances, you may
+want to :ref:`apply it immediately <immediate_update>`.
+
+Updating Workstations to SecureDrop 1.7.1
+-----------------------------------------
+
+Using the graphical updater
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
+the *SecureDrop Workstation Updater* will alert you to workstation updates. You
+must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
+on the Tails welcome screen in order to use the graphical updater.
+
+Perform the update to 1.7.1 by clicking "Update Now":
+
+.. image:: ../images/securedrop-updater.png
+
+Performing a manual update
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+If the graphical updater fails and you want to perform a manual update instead,
+first delete the graphical updater's temporary flag file, if it exists (the
+``.`` before ``securedrop`` is not a typo): ::
+
+  rm ~/Persistent/.securedrop/securedrop_update.flag
+
+This will prevent the graphical updater from attempting to re-apply the failed
+update and has no bearing on future updates. You can now perform a manual
+update by running the following commands: ::
+
+  cd ~/Persistent/securedrop
+  git fetch --tags
+  gpg --keyserver hkps://keys.openpgp.org --recv-key \
+   "2224 5C81 E3BA EB41 38B3 6061 310F 5612 00F4 AD77"
+  git tag -v 1.7.1
+
+The output should include the following two lines: ::
+
+    gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
+    gpg: Good signature from "SecureDrop Release Signing Key"
+
+Please verify that each character of the fingerprint above matches what is
+on the screen of your workstation. If it does, you can check out the
+new release: ::
+
+    git checkout 1.7.1
+
+.. important:: If you do see the warning "refname '1.7.1' is ambiguous" in the
+  output, we recommend that you contact us immediately at securedrop@freedom.press
+  (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
+
+Finally, run the following commands: ::
+
+  ./securedrop-admin setup
+  ./securedrop-admin tailsconfig
+
+Getting Support
+---------------
+
+Should you require further support with your SecureDrop installation, we are
+happy to help!
+
+.. include:: ../includes/getting-support.txt

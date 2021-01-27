@@ -408,16 +408,27 @@ for how to enable error logging for the *Source Interface*.
 
 .. include:: includes/get-logs.txt
 
+.. _immediate_update:
+
 Immediately Apply a SecureDrop Update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SecureDrop will update and reboot once per day. However, if after a SecureDrop
 update `is announced`_ you wish to fetch the update immediately, you can SSH
-into each server and run:
+into each server (via ``ssh app`` and ``ssh mon``) and run:
 
 .. code:: sh
 
   sudo cron-apt -i -s
+
+Depending on the nature of the update (e.g., if the ``tor`` package is upgraded
+and you are using SSH-over-Tor), your SSH connection may be interrupted, and you
+may have to reconnect to see the full output.
+
+.. important::
+
+   Except where otherwise indicated, make sure to update both your
+   *Application Server* and your *Monitor Server*.
 
 .. _`is announced`:
   https://securedrop.org/news
