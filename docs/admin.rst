@@ -421,6 +421,10 @@ into each server (via ``ssh app`` and ``ssh mon``) and run:
 
   sudo cron-apt -i -s
 
+Depending on the nature of the update (e.g., if the ``tor`` package is upgraded
+and you are using SSH-over-Tor), your SSH connection may be interrupted, and you
+may have to reconnect to see the full output.
+
 .. important::
 
    Except where otherwise indicated, make sure to update both your
