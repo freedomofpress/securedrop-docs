@@ -29,7 +29,7 @@ participate in longer discussions.
 
 * To start contributing to the `codebase <https://github.com/freedomofpress>`__, see our :doc:`contributing guidelines <contributor_guidelines>`.
 * To start making documentation changes, see our :doc:`documentation guidelines <documentation_guidelines>`.
-* To start translating, see our :doc:`translator guide <l10n>`.
+* To start translating, see our :doc:`translator guide <translations>`.
 * Not sure where to start? You can always ask for advice in the `chat room <https://gitter.im/freedomofpress/securedrop>`__.
 
 Programmers
@@ -168,7 +168,7 @@ another language, we would welcome your help.
 
 SecureDrop is translated using `Weblate
 <https://weblate.securedrop.org/>`__. We provide a :doc:`detailed
-guide <l10n>` for translators, and feel free to contact us in the
+guide <translations>` for translators, and feel free to contact us in the
 `translation section of the SecureDrop forum
 <https://forum.securedrop.org/c/translations>`__ for help. Non-English
 forum discussions are also welcome.

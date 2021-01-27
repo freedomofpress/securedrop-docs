@@ -116,8 +116,8 @@ anonymous sources.
    development/contributor_guidelines
    development/tips_and_tricks
    development/database_migrations
+   development/translations
    development/i18n
-   development/l10n
    development/documentation_guidelines
    development/testing_securedrop
    development/testing_application_tests
