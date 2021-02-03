@@ -413,22 +413,41 @@ for how to enable error logging for the *Source Interface*.
 Immediately Apply a SecureDrop Update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SecureDrop will update and reboot once per day. However, if after a SecureDrop
-update `is announced`_ you wish to fetch the update immediately, you can SSH
-into each server (via ``ssh app`` and ``ssh mon``) and run:
-
-.. code:: sh
-
-  sudo cron-apt -i -s
-
-Depending on the nature of the update (e.g., if the ``tor`` package is upgraded
-and you are using SSH-over-Tor), your SSH connection may be interrupted, and you
+SecureDrop will update and reboot once per day. However, once a SecureDrop
+update `is announced`_ , you can opt to fetch the update immediately. Depending
+on the nature of the update (e.g., if the ``tor`` package is upgraded and you are
+using SSH-over-Tor), your SSH connection may be interrupted, and you
 may have to reconnect to see the full output.
 
 .. important::
 
    Except where otherwise indicated, make sure to update both your
    *Application Server* and your *Monitor Server*.
+
+
+To update your servers immediately, you can SSH
+into each server (via ``ssh app`` and ``ssh mon``) and run the following command,
+noting the value of ``VERSION_CODENAME``:
+
+.. code:: sh
+
+  cat /etc/os-release
+
+VERSION_CODENAME is "Focal"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: sh
+
+  sudo unattended-upgrades
+
+
+VERSION_CODENAME is "Xenial"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: sh
+
+  sudo cron-apt -i -s
+
 
 .. _`is announced`:
   https://securedrop.org/news
