@@ -9,7 +9,7 @@ version. For instance, you can find the images for Xenial at
 **quay.io/freedomofpress/sd-docker-builder-xenial** and, for Focal, at
 **quay.io/freedomofpress/sd-docker-builder-focal**.
 
-Maintaining images of our bulid container for each release is our way of recording the exact version
+Maintaining images of our build container for each release is our way of recording the exact version
 of each dependency used to build our production debian packages for SecureDrop.
 
 Who can update the build container?
