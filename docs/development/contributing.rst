@@ -19,19 +19,21 @@ may have on the `SecureDrop instant messaging channel
 forum <https://forum.securedrop.org/>`__ for more information and to
 participate in longer discussions.
 
-.. note:: Not sure where to start? You can always ask for advice in the `chat
-          room <https://gitter.im/freedomofpress/securedrop>`__.
+
+.. note::
+
+   The SecureDrop GitHub repositories and other project resources are managed
+   by `Freedom of the Press Foundation employees <https://freedom.press/about/staff>`__.
+   All SecureDrop contributors are required to abide by the project's `Code of Conduct <https://github.com/freedomofpress/securedrop/blob/develop/CODE_OF_CONDUCT.md>`__.
+
 
 * To start contributing to the `codebase <https://github.com/freedomofpress>`__, see our :doc:`contributing guidelines <contributor_guidelines>`.
-* To start making documentation changes, see our :doc:`documentation guidelines <documentation_guidelines>.`
-
+* To start making documentation changes, see our :doc:`documentation guidelines <documentation_guidelines>`.
+* To start translating, see our :doc:`translator guide <l10n>`.
+* Not sure where to start? You can always ask for advice in the `chat room <https://gitter.im/freedomofpress/securedrop>`__.
 
 Programmers
 ~~~~~~~~~~~
-The `SecureDrop web site <https://securedrop.org>`__ and the `GitHub repository
-<https://github.com/freedomofpress>`__ are controlled and maintained by `Freedom
-of the Press Foundation employees <https://freedom.press/about/staff>`__.
-
 The SecureDrop system includes `Flask`_-based web applications for sources and
 journalists. It is deployed across multiple machines with `Ansible`_. Most of
 SecureDrop's code is written in `Python`_.
@@ -49,9 +51,9 @@ Newcomer Issues
 If you are a novice programmer, you can start with these issues in the following
 repositories:
 
-`SecureDrop <https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22>`__
-`SecureDrop Workstation <https://github.com/freedomofpress/securedrop-workstation/labels/good%20first%20issue>`__
-`SecureDrop Client <https://github.com/freedomofpress/securedrop-client/labels/good%20first%20issue>`__
+- `SecureDrop <https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22>`__
+- `SecureDrop Workstation <https://github.com/freedomofpress/securedrop-workstation/labels/good%20first%20issue>`__
+- `SecureDrop Client <https://github.com/freedomofpress/securedrop-client/labels/good%20first%20issue>`__
 
 
 Advanced Issues
@@ -59,35 +61,40 @@ Advanced Issues
 Programmers who are more comfortable with contributing to the SecureDrop codebase
 can work on issues related to the following topics:
 
-**Full Stack Engineering:**
+**Application development and general tasks:**
+
 * `Application code cleanup <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+app+code+cleanup%22>`__
 * `Developer workflow <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+improve+developer+workflow%22>`__
-* `Needs/Research <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Aresearch>`__
-* `SecureDrop Workstation <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22SecureDrop+Workstation%22>`__
+* `Needs/Research <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Aneeds%2Fresearch+>`__
 * `Source and journalist applications <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Aapp>`__
+* `Journalist experience <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+journalist+experience%22>`__
+* `Source experience <https://github.com/freedomofpress/securedrop/labels/goals%3A%20improve%20source%20experience>`__
 * `Tests <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+more+tests%22>`__
 
 
-**Infrastructure Engineering:**
+**Infrastructure focus:**
+
 * `Continuous Integration <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+sick+CI%22>`__
 * `Ansible logic/installation <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+Improve+Ansible+logic+%2F+smoother+install%22>`__
 * `Operations and deployment <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Aops%2Fdeployment>`__
 
 
-**Security Engineering:**
+**Security focus:**
+
 * `IDS noise <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+reduce+IDS+noise%22>`__
-* `Journalist experience <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+journalist+experience%22>`__
 * `OSSEC <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3AOSSEC>`__
 * `Security <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Asecurity>`__
-* `Source experience <https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+is%3Aissue+label%3A%22goals%3A+improve+source+experience%22>`__
-* `Threat model <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+improve+threat+modeling%22>`__
-
-
-Submit Changes
---------------
 
 You may also want to consider contributing to the new `SecureDrop Workstation <https://github.com/freedomofpress/securedrop-workstation/>`__
 project and its components, including the graphical `SecureDrop Client <https://github.com/freedomofpress/securedrop-client/>`__ app.
+
+
+Preparing and submitting changes
+--------------------------------
+Before beginning your work on any given issue, we recommend asking questions
+or sharing an implementation proposal on the relevant GitHub issue.
+Alternatively, you can often find the development team on `Gitter chat <https://gitter.im/freedomofpress/securedrop>`__.
+Communicating early and often is especially important for larger changes.
 
 When you're ready to share your work with the SecureDrop team for review, submit
 a `pull request
@@ -99,8 +106,6 @@ If you would like to contribute on a regular basis, you'll want to read the
 :doc:`developer documentation <setup_development>` and set up a local
 development environment to preview changes, run tests locally, etc.
 
-
-
 Technical Writers
 ~~~~~~~~~~~~~~~~~
 
@@ -110,8 +115,7 @@ Technical writers and editors are invited to review the `documentation
 located in our `documentation repository <https://github.com/freedomofpress/securedrop-docs>`__.
 
 If this is your first time contributing to SecureDrop documentation, consider
-working on `low-hanging fruit`_ to become familiar with the process. Refer to our
-`:doc:`documentation guidelines <documentation_guidelines>`__ for more information.
+working on low-hanging fruit to become familiar with the process.
 
 
 If you would like to contribute to copywriting user-facing text in the SecureDrop UI,
