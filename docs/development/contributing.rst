@@ -98,7 +98,7 @@ Communicating early and often is especially important for larger changes.
 
 When you're ready to share your work with the SecureDrop team for review, submit
 a `pull request
-<https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests>`__
+<https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests>`__
 with the proposed changes. :doc:`Tests <testing_securedrop>` will run
 automatically on GitHub.
 
