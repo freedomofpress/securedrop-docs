@@ -161,11 +161,9 @@ on your OS choice:
 - **Focal:** In the console for each machine, edit ``/etc/netplan/00-installer-config.yaml`` to update the ``addresses`` entry with the machine's IP.
 
 Edit ``/etc/hosts`` on each host to include the hostname and IP for itself.
-Use ``sd-staging-app`` and ``sd-staging-mon``, omitting the ``-base-$SERVER_OS`` suffix, since the cloned VMs
-will not have the suffix.
+Use ``app-staging`` and ``mon-staging`` as appropriate.
 
 Next, on each host edit ``/etc/hostname`` to reflect the machine's name.
-Again, omit the ``-base-SERVER_OS`` suffix.
 
 Halt each machine, then restart each from ``dom0``. The prompt in each console
 should reflect the correct name of the VM. Confirm you have network access by
@@ -312,7 +310,7 @@ the Makefile target:
 .. code:: sh
 
    molecule create -s qubes-staging-$SERVER_OS
-   molecule converge -s qubes-staging-#SERVER_OS
+   molecule converge -s qubes-staging-$SERVER_OS
    molecule test -s qubes-staging-$SERVER_OS
 
 That's it. You should now have a running, configured SecureDrop staging instance
