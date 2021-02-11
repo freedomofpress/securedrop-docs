@@ -12,7 +12,7 @@ instances to upgrade to Ubuntu 20.04 LTS (Focal) before **April 30**.
 
 Support for Ubuntu 20.04 LTS (which will receive security updates until
 April 30, 2025) will be included in SecureDrop 1.8.0, scheduled to
-be released on March 2, 2021. Please do **not** attempt to upgrade to Ubuntu 20.04
+be released on March 9, 2021. Please do **not** attempt to upgrade to Ubuntu 20.04
 before then. The migration to Ubuntu 20.04 will require a reinstall from a
 backup.
 
