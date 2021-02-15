@@ -49,11 +49,6 @@ file. Applications use these to get translations at runtime. The `.po`_
 files are compiled to `.mo`_ files when the SecureDrop package is
 installed.
 
-The `Weblate`_ web application is used to translate strings and relies
-on `gettext`_ behind the scenes. It owns the `.pot`_ and `.po`_
-files. When preparing a SecureDrop release, a pull request is created
-to pull in all the translations that have been updated in Weblate.
-
 The desktop icons installed on SecureDrop workstations are also
 translated.  The icon templates are in the
 ``install_files/ansible-base/roles/tails-config/templates`` directory.
@@ -63,6 +58,21 @@ in the corresponding `.po`_ files in the same directory (``fr.po``,
 files into the corresponding ``*.j2`` file and committed to the
 SecureDrop repository. They are then installed when configuring Tails
 with the ``tasks/create_desktop_shortcuts.yml`` tasks.
+
+We don't expect translators to deal with all these files
+directly. Translation happens on our `Weblate`_ server, which is
+configured to use a fork of the `main SecureDrop repository`_.
+
+At the start of the :ref:`release process <release_management>`, the
+localization manager collects string changes on the ``develop`` branch
+in the `main SecureDrop repository`_ and merges them to the ``i18n``
+branch of the `securedrop-i18n repository`_. The changes will then
+appear in Weblate, and translation can begin. At the end of the
+translation period, the localization manager collects the changes to
+the PO files on ``securedrop-i18n/i18n`` in a pull request for
+``securedrop/develop``. Once that pull request is merged, the
+translations are backported to the release branch in the `main
+SecureDrop repository`_.
 
 i18n_tool.py
 ------------
@@ -92,43 +102,60 @@ new language is completely translated and reviewed, the
 ``i18n_tool.py`` file must be manually edited to add this new language
 to the ``SUPPORTED_LANGUAGES`` variable.
 
+.. _update_strings_to_be_translated:
+
 Update strings to be translated
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-After strings are modified in the SecureDrop source code, templates or
-desktop labels, the ``securedrop/translations/messages.pot`` files
-must also be updated. Individual developers should not do this
-whenever changing strings in the code; the translations are updated in
-bulk when it's time to update the Weblate fork.
+Whenever strings are modified in the SecureDrop source, whether in
+Python code, HTML templates, or desktop icon labels, the translation
+files should also be updated by running ``make translate`` in the root
+of the SecureDrop working copy.
 
-Translations can be updated with the following command:
+The ``translate`` target runs ``i18n_tool.py translate-messages`` and
+``i18n_tool.py translate-desktop``, which in turn use ``pybabel
+extract`` to gather source strings.  These commands update the `.pot`_
+files for the SecureDrop server code and the desktop icons, as well as
+the `.po`_ files for each language.
 
-.. code:: sh
+After running ``make translate``, carefully review the output of ``git
+diff``. Check ``securedrop/messages.pot`` first for updated strings,
+looking for problems like:
 
-    $ make translate
+* overly idiomatic English
+* fragmented text, such as pieces of a sentence intended to be
+  concatenated together, which can be difficult to translate
+* messages that are marked with plain ``gettext`` and contain plurals
+  based on numeric placeholder variables -- these should generally be
+  marked with ``ngettext`` so that they can be translated properly in
+  languages with complex plural forms
 
-This wraps ``i18n_tool.py translate-messages`` and ``i18n_tool.py
-translate-desktop``.  These commands update the `.pot`_ files for the
-SecureDrop server code and the desktop icons, as well as the `.po`_
-files for each language.
+Then review the ``messages.po`` of one existing translation, with a
+focus on new translations, which are often marked `fuzzy
+<https://www.gnu.org/software/gettext/manual/html_node/Fuzzy-Entries.html>`__. There
+is no need to review multiple languages' ``.po`` files because they
+are processed in the same way.
 
-.. note:: The new source strings will only be visible to translators
-    in `Weblate`_ after the ``develop`` branch is merged into the
-    Weblate fork.
+Once you've reviewed the changes, submit them in a pull request for
+the ``develop`` branch in the `main SecureDrop repository`_.
+
+The new source strings will only be visible to translators in
+`Weblate`_ after they've been merged to ``securedrop/develop`` and
+that branch has been merged into ``securedrop-i18n/i18n``. The
+localization manager does this at the beginning of our release cycle.
 
 .. _merge_develop_to_weblate:
 
 Merge develop into the Weblate fork
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Weblate`_ works on a long standing fork of the `SecureDrop git
-repository`_ and is exclusively responsible for the content of the
-``*.pot`` and ``*.po`` files. The content of the ``develop`` branch
-must be merged into the ``i18n`` branch to make updated source strings
-available to Weblate.
+1) First make sure the translation files on the ``develop`` branch of
+the `main SecureDrop repository`_ contain the latest source
+strings. Follow the steps under
+:ref:`update_strings_to_be_translated`.
 
-Translation must be suspended in `Weblate`_, and any uncommitted
-changes committed and pushed, to avoid conflicts:
+2) Then, translation must be suspended in `Weblate`_, and any
+uncommitted changes committed and pushed, to avoid conflicts:
 
 * Go to the `Weblate repository page for SecureDrop`_.
 
@@ -140,7 +167,8 @@ changes committed and pushed, to avoid conflicts:
 
 |Weblate commit Locked|
 
-The ``develop`` branch can now be merged into ``i18n``:
+3) The ``securedrop/develop`` branch can now be merged into
+   ``securedrop-i18n/i18n``:
 
 .. code:: sh
 
@@ -150,23 +178,11 @@ The ``develop`` branch can now be merged into ``i18n``:
     $ git fetch i18n
     $ git checkout -b i18n i18n/i18n
     $ git merge origin/develop
-    $ make translate
-
-The ``translate`` Makefile target uses the ``i18n_tool.py`` command to
-keep the ``*.pot`` and ``*.po`` files in sync with the SecureDrop
-source code. After running ``make translate``, carefully
-review the output of ``git diff``. Check ``messages.pot`` first for
-updated strings, looking for formatting problems. Then review the
-``messages.po`` of one existing translation, with a focus on ``fuzzy``
-translations. There is no need to review other translations because
-they are processed in the same way. When you are satisfied with the
-result, it can be merged with:
-
-.. code:: sh
-
     $ git commit -a -m 'l10n: sync with upstream origin/develop'
     $ git push i18n i18n
 
+
+4) Verify that Weblate has the latest changes, and unlock the repository.
 
 * Go to the `Weblate commit page for SecureDrop`_ and verify the
   commit hash matches the last commit of the ``i18n`` branch. This must
@@ -178,10 +194,12 @@ result, it can be merged with:
 
 |Weblate commit Unlock|
 
-`Weblate`_ pushes the translations done via the web interface
-to the develop branch in a fork of the `SecureDrop git repository`_.
-These commits must be manually cherry-picked and proposed as pull
-requests for the `SecureDrop git repository`_.
+Translation can now begin. As translators make progress, `Weblate`_
+pushes the translations done via the web interface in commits to the
+``i18n`` branch of the `securedrop-i18n repository`_ (a fork of the
+`main SecureDrop repository`_). When the translation period ends,
+these commits will be collected into a pull request for the `main
+SecureDrop repository`_.
 
 |Weblate commit Unlocked|
 
@@ -193,13 +211,13 @@ Merge translations back to develop
 
 `Weblate`_ automatically pushes the translations done via the web
 interface as a series of commits to the ``i18n`` branch in the
-`Weblate SecureDrop branch`_, which is a fork of the ``develop``
-branch of the `SecureDrop git repository`_. These translations need to
-be submitted back to the ``develop`` branch via pull requests. When
-you create a branch for this, begin its name with ``i18n-``, as that
-prefix triggers special CI tests for translations.
+`securedrop-i18n repository`_, which is a fork of the ``develop``
+branch of the `main SecureDrop repository`_. These translations need
+to be submitted back to the ``securedrop/develop`` branch via pull
+requests. When you create a branch for this, begin its name with
+``i18n-``, as that prefix triggers special CI tests for translations.
 
-To fetch the latest translations from the ``i18n`` branch into your
+To fetch the latest translations from the ``securedrop-i18n/i18n`` branch into your
 working copy of the SecureDrop repository, run these commands in your
 repo root:
 
@@ -371,6 +389,8 @@ If new screenshots were added as part of this run, make sure to associate them
 with relevant strings in Weblate, which you can do from the
 `screenshots list <https://weblate.securedrop.org/screenshots/securedrop/securedrop/>`__.
 
+.. _release_management:
+
 Release Management
 ------------------
 
@@ -488,8 +508,8 @@ with a release looming, the server can be rebooted.
 .. _`.mo`: https://www.gnu.org/software/gettext/manual/gettext.html#MO-Files
 .. _`pybabel`: https://babel.pocoo.org/en/latest/
 .. _`Weblate`: https://weblate.securedrop.org/
-.. _`SecureDrop git repository`: https://github.com/freedomofpress/securedrop
-.. _`Weblate SecureDrop branch`: https://github.com/freedomofpress/securedrop-i18n
+.. _`main SecureDrop repository`: https://github.com/freedomofpress/securedrop
+.. _`securedrop-i18n repository`: https://github.com/freedomofpress/securedrop-i18n
 .. _`patch they contain is unique`: https://git-scm.com/docs/git-patch-id
 .. _`Weblate commit page for SecureDrop`: https://weblate.securedrop.org/projects/securedrop/securedrop/#information
 .. _`Weblate repository page for SecureDrop`: https://weblate.securedrop.org/projects/securedrop/securedrop/#repository
