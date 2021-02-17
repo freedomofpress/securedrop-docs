@@ -6,11 +6,11 @@ Install Ubuntu
 --------------
 
 .. note:: Installing Ubuntu is simple and may even be something you are very familiar
-  with, but we **strongly** encourage you to read and follow this documentation
+  with, but it is **strongly** encouraged that youread and follow this documentation
   exactly as there are some "gotchas" that may cause your SecureDrop setup to break.
 
 The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu Server
-20.04.2 LTS (Focal Fosse)**. To install Ubuntu on the servers, you must first
+20.04.2 LTS (Focal Fossa)**. To install Ubuntu on the servers, you must first
 download and verify the Ubuntu installation media. You should use the *Admin
 Workstation* to download and verify the Ubuntu installation media.
 
@@ -28,10 +28,9 @@ The installation media and the files required to verify it are available on the
 
 If you're reading this documentation in Tor Browser on the *Admin
 Workstation*, you can just click the links above and follow the prompts to save
-them to your Admin Workstation. We recommend saving them to the
-``/home/amnesia/Persistent/Tor Browser`` directory on the *Admin Workstation*,
-because it can be useful to have a copy of the installation media readily
-available.
+them to your Admin Workstation. Save them to the ``/home/amnesia/Persistent/Tor Browser``
+directory on the *Admin Workstation*, because it can be useful to have a copy of
+the installation media readily available.
 
 Alternatively, you can use the command line:
 
@@ -53,10 +52,10 @@ Verify the Ubuntu Installation Media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You should verify the Ubuntu image you downloaded hasn't been modified by
-a malicious attacker or otherwise corrupted. We can do so by checking its
-integrity with cryptographic signatures and hashes.
+a malicious attacker or otherwise corrupted. To do so, check its integrity with
+cryptographic signatures and hashes.
 
-First, we will download both *Ubuntu Image Signing Keys* and verify their
+First, download both *Ubuntu Image Signing Keys* and verify their
 fingerprints. ::
 
     gpg --recv-key --keyserver hkps://keyserver.ubuntu.com \
@@ -64,7 +63,7 @@ fingerprints. ::
     "8439 38DF 228D 22F7 B374 2BC0 D94A A3F0 EFE2 1092"
 
 .. note:: It is important you type this out correctly. If you are not
-          copy-pasting this command, we recommend you double-check you have
+          copy-pasting this command, double-check you have
           entered it correctly before pressing enter.
 
 Again, when passing the full public key fingerprint to the ``--recv-key`` command, GPG
@@ -108,11 +107,10 @@ Create the Ubuntu Installation Media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To create the Ubuntu installation media, you can either burn the ISO image to a
-CD-R or create a bootable USB stick.  As a reliable method we recommend using
-the ``dd`` command to copy the hybrid ISO directly to a USB drive rather than a
-utility like UNetbootin which can result in errors. Once you have a CD or USB
-with an ISO image of Ubuntu on it, you may begin the Ubuntu installation on both
-SecureDrop servers.
+CD-R or create a bootable USB stick.  The ``dd`` command can be used to copy the
+hybrid ISO directly to a USB drive, instead of a utility like UNetbootin which
+can result in errors. Once you have a CD or USB with an ISO image of Ubuntu on
+it, you may begin the Ubuntu installation on both SecureDrop servers.
 
 To use `dd` you first need to find where the USB device you wish to install
 Ubuntu on has been mapped. Simply running the command ``lsblk`` in the terminal
@@ -159,7 +157,8 @@ available, corresponding to its Ethernet, usually named ``eno1``. Select its lis
 entry using the arrow keys and press **Enter**, then select **Edit IPv4** and press
 **Enter** again.
 
-The **Edit eno1 IPv4 configuration** dialog will be displayed. In the **IPv4 Method** menu, select **Manual**, then add your server-specific settings.
+The **Edit eno1 IPv4 configuration** dialog will be displayed. In the
+**IPv4 Method** menu, select **Manual**, then add your server-specific settings.
 
 .. note:: For a production install with a pfSense network firewall in place, the
   *Application Server* and the *Monitor Server* are on separate networks.
@@ -195,32 +194,21 @@ screens should not need to be changed. Select **Done** for both.
 Full Disk Encryption - pros and cons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before setting up the server's disk partitions and filesystems in the
-next step, you will need to decide if you would like to enable `Full
-Disk Encryption
-(FDE) <https://www.eff.org/deeplinks/2012/11/privacy-ubuntu-1210-full-disk-encryption>`__.
-If the servers are ever powered down, FDE will ensure all of the
-information on them stays private in case they are seized or stolen.
+The use of `Full Disk Encryption (FDE)
+<https://www.eff.org/deeplinks/2012/11/privacy-ubuntu-1210-full-disk-encryption>`__
+with SecureDrop is **not recommended**. While FDE does offer data protection for
+devices that are powered down, SecureDrop's servers are designed to be always-on,
+with the exception of a nightly reboot after automatic upgrades are applied.
+Given this update schedule, with FDE enabled, the servers would become unreachable
+once every 24 hours until an administrator entered the full-disk encryption
+passphrase via the console, and during that time, sources and journalists would
+be unable to access your instance.
 
-.. warning:: The Ansible playbooks for SecureDrop will configure automatic
-             updates via ``unattended-upgrades``. As part of the automatic update
-             process, the servers will reboot nightly..
-             Using FDE would therefore require manual intervention every morning.
-             Consequently **we strongly discourage the use of FDE.**
-
-While FDE can be useful in some cases, we currently do not recommend
-that you enable it because there are not many scenarios where it will be
-a net security benefit for SecureDrop operators. Doing so will introduce
-the need for more passphrases and add even more responsibility on the
-admin of the system (see `this GitHub
-issue <https://github.com/freedomofpress/securedrop/issues/511#issuecomment-50823554>`__
-for more information).
-
-If you decide to go ahead and enable FDE, please note that
-doing so means your SecureDrop instance will become unreachable after an
-automatic reboot. An admin will need to be on hand to enter the passphrase
-in order to decrypt the disks and complete the startup process, which
-will occur after every nightly software update.
+The increased responsibility for administrators, as well as the daily downtime
+and limited scenarios in which FDE would be a net security benefit, inform this
+recommendation, but you may make a decision based on your own requirements.
+(See this `GitHub issue <https://github.com/freedomofpress/securedrop/issues/511#issuecomment-50823554>`_
+for more information.)
 
 Setting up storage
 ~~~~~~~~~~~~~~~~~~
@@ -241,7 +229,9 @@ choose **Continue** on the **Confirm destructive action** dialog.
 Configure account and hostname
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-On the **Profile setup** screen, configure the server's hostname and the administration account:
+On the **Profile setup** screen, configure the server's hostname and the administration account.
+The administrator account username and password should be the same for both
+servers:
 
 - **Your name:** Specify the administrator account name, e.g. ``SecureDrop Admin``
 - **Your server's name:** Use ``app`` for the *Application Server*, and ``mon`` for
@@ -314,7 +304,7 @@ Set Up SSH Keys
 
 Ubuntu's default SSH configuration authenticates users with their
 passphrases; however, public key authentication is more secure, and once
-it's set up it is also easier to use. In this section, we will create
+it's set up it is also easier to use. In this section, you will create
 a new SSH key for authenticating to both servers. Since the *Admin
 Workstation* was set up with `SSH Client Persistence`_, this key will be saved
 on the *Admin Workstation* and can be used in the future to authenticate to
