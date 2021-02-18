@@ -1,12 +1,38 @@
 Set Up the Servers
 ==================
 
+Pre-Install Steps
+-----------------
+
+Upgrade the Server BIOS
+~~~~~~~~~~~~~~~~~~~~~~~
+Before beginning the installation process, you should upgrade your servers' BIOS
+to the most recent stable version available. This process will differ for each
+server make/model - if you are using one of the recommended NUC models, you can
+find instructions in :doc:`update_bios`.
+
+Update BIOS Settings
+~~~~~~~~~~~~~~~~~~~~
+Once the BIOS has been updated, you should boot into it again to disable any unused
+hardware, including:
+
+* wireless LAN and Bluetooth
+* Thunderbolt support
+* audio support (output, speakers, microphones)
+* other features supported by the hardware but not used by SecureDrop.
+
+In most cases, you should enable support for LAN and USB ports only.
+
+You should also check the servers' boot settings. Ubuntu 20.04 supports both
+Legacy and UEFI boot modes, with UEFI preferred. You should also disable Secure
+Boot. SecureDrop uses a custom kernel with security patches, which is unsigned
+and will not boot if Secure Boot is enabled.
 
 Install Ubuntu
 --------------
 
 .. note:: Installing Ubuntu is simple and may even be something you are very familiar
-  with, but it is **strongly** encouraged that youread and follow this documentation
+  with, but it is **strongly** encouraged that you read and follow this documentation
   exactly as there are some "gotchas" that may cause your SecureDrop setup to break.
 
 The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu Server
