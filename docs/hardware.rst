@@ -413,16 +413,19 @@ to disable wireless functionality:
 
 |NUC8 VisualBios1|
 
-While in the BIOS, you should also navigate to **Advanced > Security** in the
-and disable SGX support, which not used by SecureDrop and may be targeted by
-active CPU exploits:
+- navigate to **Advanced > Security** in the BIOS and disable SGX support, which is not used by 
+  SecureDrop and may be targeted by active CPU exploits:
 
 |NUC8 VisualBios2|
+
+- navigate to **Advanced > Boot > Secure Boot** and uncheck the **Secure Boot** checkbox:
+
+|NUC8 VisualBIOS SecureBoot|
 
 .. |NUC8 leads| image:: images/hardware/nuc8_leads.jpg
 .. |NUC8 VisualBIOS1| image:: images/hardware/nuc8_visualbios1.png
 .. |NUC8 VisualBIOS2| image:: images/hardware/nuc8_visualbios2.png
-
+.. |NUC8 VisualBIOS SecureBoot| image:: images/hardware/nuc8_visualbios_secureboot.png
 
 .. _nuc8_enable_network:
 

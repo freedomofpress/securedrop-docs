@@ -123,7 +123,7 @@ Preparing for Ubuntu 20.04
 --------------------------
 The current server operating system, Ubuntu 16.04, will no longer receive
 security updates after April 30, 2021. Support for Ubuntu 20.04 is planned
-for the SecureDrop 1.8.0 release, scheduled for March 2, 2021. We recommend
+for the SecureDrop 1.8.0 release, scheduled for March 9, 2021. We recommend
 that you schedule a two-day maintenance window **between March 9 and April 30**.
 
 Before then, we encourage you to take :doc:`preparatory steps <focal_prep>`
