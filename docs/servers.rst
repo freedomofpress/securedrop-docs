@@ -105,7 +105,7 @@ Next, verify the ``SHA256SUMS`` file. ::
 
     gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
 
-Move on to the next step if you see "Good Signature" twice in the output, as
+Move on to the next step if you see "Good Signature" in the output, as
 below. Note that any other message (such as "Can't check signature: no public
 key") means that you are not ready to proceed. ::
 
@@ -145,7 +145,8 @@ drives and USB). If the USB you are writing the Ubuntu installer to is of a
 different size or brand than the USB you are running Tails from, it should be
 easy to identify which USB has which sdX identifier. If you are unsure, try
 running ``lsblk`` before and after plugging in the USB you are using for the
-Ubuntu installer.
+Ubuntu installer. Note that you should use the main block device (e.g. ``/dev/sdb``)
+rather than any listed partitions (e.g. ``/dev/sdb2``).
 
 If your USB is mapped to /dev/sdX and you are currently in the directory that
 contains the Ubuntu ISO, you would use dd like so: ::
