@@ -414,10 +414,7 @@ Immediately Apply a SecureDrop Update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SecureDrop will update and reboot once per day. However, once a SecureDrop
-update `is announced`_ , you can opt to fetch the update immediately. Depending
-on the nature of the update (e.g., if the ``tor`` package is upgraded and you are
-using SSH-over-Tor), your SSH connection may be interrupted, and you
-may have to reconnect to see the full output.
+update `is announced`_, you can opt to fetch the update immediately.
 
 .. important::
 
@@ -433,7 +430,7 @@ noting the value of ``VERSION_CODENAME``:
 
   cat /etc/os-release
 
-VERSION_CODENAME is "Focal"
+VERSION_CODENAME is "focal"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: sh
@@ -441,13 +438,19 @@ VERSION_CODENAME is "Focal"
   sudo unattended-upgrades
 
 
-VERSION_CODENAME is "Xenial"
+VERSION_CODENAME is "xenial"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: sh
 
   sudo cron-apt -i -s
 
+
+.. note::
+
+   Depending on the nature of the update (e.g., if the ``tor`` package is
+   upgraded and you are using SSH-over-Tor), your SSH connection may be
+   interrupted, and you may have to reconnect to see the full output.
 
 .. _`is announced`:
   https://securedrop.org/news
