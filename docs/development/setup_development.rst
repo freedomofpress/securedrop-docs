@@ -218,7 +218,7 @@ from the `Vagrant Downloads page`_ and then install it.
     # OR this, if you downloaded the deb package.
     sudo dpkg -i vagrant.deb
 
-.. _`Vagrant Downloads page`: https://www.vagrantup.com/downloads.html
+.. _`Vagrant Downloads page`: https://www.vagrantup.com/downloads
 .. _`GitHub #932`: https://github.com/freedomofpress/securedrop/pull/932
 .. _`GitHub #1381`: https://github.com/freedomofpress/securedrop/issues/1381
 
@@ -289,7 +289,7 @@ different version, the path to ``virtualenvwrapper.sh`` will differ. Running
 
 The version of rsync installed by default on macOS is extremely out-of-date, as is Apple's custom. We recommend using Homebrew_ to install a modern version (3.1.0 or greater): ``brew install rsync``.
 
-.. _Vagrant: https://www.vagrantup.com/downloads.html
+.. _Vagrant: https://www.vagrantup.com/downloads
 .. _VirtualBox: https://www.virtualbox.org/wiki/Downloads
 .. _Ansible: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
 .. _Homebrew: https://brew.sh/

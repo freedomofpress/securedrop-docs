@@ -18,7 +18,7 @@ pfSense pre-installed, such as the one recommended in the
 :ref:`Hardware Guide <hardware_guide>`.
 
 We currently recommend the `pfSense SG-3100
-<https://store.netgate.com/SG-3100.aspx>`__, which has 3 network interfaces
+<https://shop.netgate.com/products/3100-base-pfsense>`__, which has 3 network interfaces
 and 6 ports: WAN, OPT1, LAN1, LAN2, LAN3 and LAN4. This firewall comes with
 an internal switch on the LAN interface. If yours does not you will need to
 obtain a separate switch to connect the *Admin Workstation* for the initial
