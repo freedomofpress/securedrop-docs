@@ -344,7 +344,7 @@ identity. Instead, use public wifi networks and devices you control.
 **Got it. How can I submit files and messages through SecureDrop?**
 
 Once you are connected to a public network at a cafe or library, download
-and install the `Tor Browser <https://www.torproject.org/download/>`_.
+and install the desktop version of `Tor Browser <https://www.torproject.org/download/>`_.
 
 Launch Tor Browser. Visit our organization’s unique SecureDrop URL at
 **http://our-unique-URL.onion/**.
