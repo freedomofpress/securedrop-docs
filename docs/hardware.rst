@@ -680,7 +680,7 @@ Network Firewall
 ^^^^^^^^^^^^^^^^
 
 We recommend the `pfSense SG-3100
-<https://store.netgate.com/SG-3100.aspx>`__. It has 3 NICs and an internal
+<https://shop.netgate.com/products/3100-base-pfsense>`__. It has 3 NICs and an internal
 switch, increasing the number of available ports to 6.
 
 Network Switch
