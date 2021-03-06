@@ -617,7 +617,7 @@ Decrypting and Preparing to Publish
    To decrypt a VeraCrypt drive on a Windows or Mac workstation, you need
    to have the VeraCrypt software installed. If you are unsure if you have the
    software installed or how to use it, ask your administrator, or see
-   the `Freedom of the Press Foundation guide <https://freedom.press/training/encryption-toolkit-media-makers/encryption-toolkit-media-makers-veracrypt-guide/>`__
+   the `Freedom of the Press Foundation guide <https://freedom.press/training/encryption-toolkit-media-makers/veracrypt-guide/>`__
    for working with VeraCrypt.
 
 To access the *Export Device* on your everyday workstation, follow these steps:
