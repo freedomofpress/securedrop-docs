@@ -18,7 +18,7 @@ What you need
 Perform Backups
 ~~~~~~~~~~~~~~~
 
-Before performing any updates on the servers, we recommend you :doc:`back up the Application Server <backup_and_restore>`.
+If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the Application Server <backup_and_restore>` before proceeding.
 
 Prepare the USB Stick
 ~~~~~~~~~~~~~~~~~~~~~~~

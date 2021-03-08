@@ -390,14 +390,6 @@ Intel 8th-gen NUC
 We have tested and can recommend the `NUC8i5BEK <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc8i5bek.html>`__.
 It provides a single storage option: an M.2 NVMe or SATA SSD.
 
-.. note:: The Ubuntu 16.04 install kernel does not support the NUC8's built-in
-  Ethernet NIC, so a 16.04-compatible USB Ethernet adaptor is required for the
-  OS installation. The Ethernet adaptor will not be needed after the
-  installation is complete, as SecureDrop's custom kernel does support the
-  built-in NIC.
-
-  For more information on the NUC8-specific steps required during the OS install, see :ref:`nuc8_enable_network`.
-
 The NUC8i5BEK has soldered-on wireless components, which cannot easily be
 removed. For security reasons, we recommend that you take the following steps
 to disable wireless functionality:
@@ -426,73 +418,6 @@ to disable wireless functionality:
 .. |NUC8 VisualBIOS1| image:: images/hardware/nuc8_visualbios1.png
 .. |NUC8 VisualBIOS2| image:: images/hardware/nuc8_visualbios2.png
 .. |NUC8 VisualBIOS SecureBoot| image:: images/hardware/nuc8_visualbios_secureboot.png
-
-.. _nuc8_enable_network:
-
-Enabling Network Support for the NUC8i5BEK
-******************************************
-
-The Ubuntu 16.04 installer uses a 4.4-series Linux kernel, which does not include
-support for the NUC8-series built-in NIC. In order to complete the Ubuntu OS
-install on the SecureDrop servers, a USB Ethernet adaptor that is supported by
-the install may be used. The adaptor should not be used as part of the final
-system setup, however. Instead, before installing SecureDrop, the Ubuntu kernel
-should be updated to a version with support for the built-in NIC, and the
-network configuration should be updated to use it instead of the USB adaptor.
-
-To do so, after rebooting the server following the initial Ubuntu install,
-follow the steps below:
-
-#. Log in at the console as the admin user created during the initial install.
-#. Verify that the server is using a 4.4-series kernel with the command ``uname -r``.
-#. Check the USB adaptor's interface name with the command ``ip link show`` - it
-   should list two network interfaces: the loopback device ``lo``, and an interface
-   with a longer name - the latter is the USB adaptor's interface name.
-#. Upgrade to the Ubuntu 16.04 HWE kernel using the following commands:
-
-   .. code:: sh
-
-     sudo apt-get update
-     sudo apt-get dist-upgrade
-     sudo apt install --install-recommends linux-generic-hwe-16.04
-
-#. Reboot the system, log in at the console,  and verify that it is now running
-   a 4.15-series kernel with the command ``uname -r``
-#. Verify that the built-in NIC is now enabled via ``ip link show``. There
-   should now be 3 devices listed, ``lo``, the adaptor interface, and ``eno1``,
-   the interface name of the built-in NIC.
-#. Edit the network interface configuration file with the command:
-
-   .. code:: sh
-
-     sudo vi /etc/network/interfaces
-
-   Note the two references to the USB adaptor interface name in the lines:
-
-   .. code-block:: none
-
-     # the primary network interface
-     auto <USB adaptor interface name>
-     iface <USB adaptor interface name> inet static
-
-   Update them to read as follows:
-
-   .. code-block:: none
-
-     # the primary network interface
-     auto eno1
-     iface eno1 inet static
-
-
-   Then save the changes, disconnect the Ethernet cable from the USB adaptor,
-   connect the cable to the onboard Ethernet port, disconnect the adaptor,
-   and reboot the system.
-
-#. Log in and verify that  ``lo`` and ``eno1`` are the only interfaces listed, via ``ip link
-   show``, and that external connectivity is working, via ``curl -I www.google.com``
-   for example.
-
-Next, proceed with the rest of the :ref:`SecureDrop installation<nuc8_back_to_setup>`.
 
 .. _nuc7_recommendation:
 
