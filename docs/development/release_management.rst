@@ -43,11 +43,12 @@ Pre-Release
    goal is to make sure we test against the lastest Tails release, including release candidates,
    so that we can report bugs early to Tails.
 
-#. Check if there is a new stable release of Tor that can be QAed and released as part of the
-   SecureDrop release. Also check for any new release candidates so that we're aware of any
-   upcoming major bug fixes and communicate them to the team. You can find releases by checking the
-   `Tor blog <https://blog.torproject.org/category/tags/stable-release>`_. If there is a new
-   stable release, file an issue and upgrade Tor following these steps:
+#. Check the Tor blog for new
+   `release candidates <https://blog.torproject.org/category/tags/release-candidate>`_ and new
+   `stable releases <https://blog.torproject.org/category/tags/stable-release>`_. Let the team
+   know about any new release candidates during the SecureDrop release process in case there are
+   critical bug fixes. For a new stable release, file an issue and upgrade Tor following these
+   steps:
 
       a. Bump the version in `fetch-tor-packages
          <https://github.com/freedomofpress/securedrop/blob/develop/molecule/fetch-tor-packages/
@@ -127,23 +128,30 @@ Pre-Release
 #. Build Debian packages:
 
    a. Check out the tag for the release candidate.
-   #. Build the packages with ``make build-debs``.
-   #. Build logs should be saved and published according to the `build
-      log guidelines
+   b. Build the packages with ``make build-debs``
+
+     .. note:: If the :ref:`build container <build_container>` used by ``make build-debs`` has
+               security updates, then you will see ``test_ensure_no_updates_avail`` fail in the
+               build output. To get around the bottleneck of tight restrictions around who can
+               update the build container, you can ignore this test failure until you are building a
+               production release.
+
+   c. Build logs should be saved and published according to the `build log guidelines
       <https://github.com/freedomofpress/securedrop/wiki/Build-logs>`_.
-   #. Open a PR on `securedrop-dev-packages-lfs
+   d. Open a PR on `securedrop-dev-packages-lfs
       <https://github.com/freedomofpress/securedrop-dev-packages-lfs>`_ that targets the ``main``
       branch with the new debs. Do not include tarballs or any debs that would overwrite
       existing debs. Changes merged to this branch will be published to ``apt-test.freedom.press``
       within 15 minutes.
 
-   .. warning:: Only commit deb packages with an incremented version number: do not clobber existing
-                packages. That is, if there is already a deb called e.g.
-                ``ossec-agent-3.6.0-amd64.deb`` in ``main``, do not commit a new version of this
-                deb.
+     .. warning:: Only commit deb packages with an incremented version number: do not clobber
+                  existing packages. That is, if there is already a deb called e.g.
+                  ``ossec-agent-3.6.0-amd64.deb`` in ``main``, do not commit a new version of this
+                  deb.
 
-   .. note:: If the release contains other packages not created by ``make build-debs``, such as Tor
-             or kernel updates, make sure that they also get pushed to ``apt-test.freedom.press``.
+     .. note:: If the release contains other packages not created by ``make build-debs``, such as
+               Tor or kernel updates, make sure that they also get pushed to
+               ``apt-test.freedom.press``.
 
 #. Write a test plan that focuses on the new functionality introduced in the release. Post for
    feedback and make changes based on suggestions from the community. Once it's ready, publish the
