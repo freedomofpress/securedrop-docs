@@ -5,18 +5,16 @@ On April 30, 2021, Ubuntu 16.04 LTS (Xenial), the operating system for the
 SecureDrop servers, will reach End of Life. In order to continue using SecureDrop, 
 instances must migrate to Ubuntu 20.04 LTS (Focal) **before** April 30, 2021.
 
-This migration will require on-premises access to the servers, and a complete
-reinstallation of Ubuntu and SecureDrop. In-place upgrades and 
-remote upgrades via SSH are not currently supported.
-
 .. important::
 
-   For security reasons, the *Source Interface* will automatically be
+   For security reasons, the *Source Interface* will be automatically 
    disabled on SecureDrop servers still running Ubuntu 16.04 after 
    April 30, 2021.
 
-We recommend that you plan a two day maintenance window
-**between March 9 and April 30** to perform and test the migration.
+This migration will require on-premises access to the servers, and a complete
+reinstallation of Ubuntu and SecureDrop. In-place upgrades and 
+remote upgrades via SSH are not currently supported. We recommend that you 
+plan a two day maintenance window to perform and test the migration.
 
 At a high level, the migration process consists of:
 
@@ -38,6 +36,7 @@ preserve their existing *Source* and *Journalist Interface* onion URLs.
    need to coordinate the publication of your new *Source Interface* onion 
    URL so that sources can reach you.
 
+.. _focal_prep:
 
 Preparation
 ~~~~~~~~~~~
@@ -46,16 +45,19 @@ Before migrating, complete the following steps:
 #. :ref:`Consider a hardware upgrade <consider_hardware_upgrade>`
 #. :ref:`Choose your migration path <choose_migration_path>` and plan your
    maintenance window
+#. Coordinate with journalists to 
+   :ref:`delete old submissions from the server <prune_submissions>`             
 #. :ref:`Check your SecureDrop version (servers) <check_server_versions>`
 #. :ref:`Check your SecureDrop version (workstations) <check_workstation_versions>`
 #. :ref:`Verify SSH access <verify_ssh_access>`
+#. :ref:`Download and verify the 
+   Ubuntu 20.04 LTS (Focal) installation media <download_focal>`
 
 
 .. _consider_hardware_upgrade:
 
 Consider a hardware upgrade
 ---------------------------
-
 If you are running hardware that is not currently listed in our
 :ref:`hardware recommendations <Specific Hardware Recommendations>`, we
 recommend that you also plan a hardware refresh as part of this migration,
@@ -111,7 +113,8 @@ Check your SecureDrop version (workstations)
    updates.
 5. Compare the version shown on the About screen (**Applications ▸ Tails ▸ About Tails**)
    with the version indicated on the `Tails website <https://tails.boum.org/index.en.html>`_.
-   If the installed Tail version is outdated, follow our :doc:`guide to updating Tails USBs <../update_tails_usbs>`.
+   If the installed Tail version is outdated, follow our 
+   :doc:`guide to updating Tails USBs <../update_tails_usbs>`.
 6. Run the command ``git status`` in the ``~/Persistent/securedrop`` directory.
    The output should include the following text:
 
@@ -121,7 +124,7 @@ Check your SecureDrop version (workstations)
 
    where ``<version>`` is  the version of the workstation code that is installed.
    If the *Admin Workstation* is at |version|, it is up-to-date.
-7. If your SecureDrop code is outdated, follow our :doc:`upgrade guide <1.6.0_to_1.7.0>`
+7. If your SecureDrop code is outdated, follow the latest release guide
    to perform a manual update. If that fails, please :ref:`contact us <contact_us>`
    for assistance.
 8. (Recommended) Repeat this process for all *Admin Workstations* and *Journalist
@@ -160,71 +163,133 @@ Choose Migration Path
 ---------------------
 
 If your instance is already using v3 onion services, choose our
-:ref:`Standard Migration <migration_standard>` procedure.
+:ref:`Standard Migration Procedure <migration_standard>`.
 
 Instances that have not yet enabled v3 
-:ref:`onion services <glossary_onion_service>` and are nearing the
-April migration deadline have two options: 
+:ref:`onion services <glossary_onion_service>` should choose the 
+:ref:`Alternate Migration Procedure <migration_alternate>`. 
 
-- :doc:`Upgrade to v3 onion services <../v3_services>` before performing 
-  the standard migration, or 
-- Take a backup of the current system, perform a fresh installation 
-  (which will be created with v3 onion services), and follow a 
-  modified restore path to restore only source and journalist 
-  data (:ref:`Alternate Migration <migration_alternate>` procedure).
 
-The second option is simpler, but potentially more disruptive to sources
-and journalists, since you will be abruptly switching from one set of
-onion URLs to another.
+.. _prune_submissions:
 
+Delete Old Submissions from the Server
+--------------------------------------
+
+In coordination with journalists, ensure that any old or unneeded
+submissions have been deleted from the server. Pruning old submissions
+will reduce the size and improve the speed of your server backup. 
+Journalists can delete unneeded submissions via the *Journalist Interface.*
+
+
+.. _download_focal:
+
+Download and Verify Ubuntu 20.04 LTS (Focal) Installation Media
+----------------------------------------------------------------
+
+Follow our instructions to 
+:ref:`download and verify Ubuntu Server 20.04 LTS <download_ubuntu>` and
+install the .iso file onto a USB stick.
+
+You have now completed all the preparatory steps. The rest of the 
+migration procedure will be completed during your maintenance window. 
 
 Migration
-~~~~~~~~~
+~~~~~~~~~ 
 
 .. _migration_standard:
 
 Standard Migration Procedure
 ----------------------------
-(For SecureDrop instances already using v3 onion services)
+Perform these steps if your instance is already using v3 onion services. Ensure
+you have completed the :ref:`preparatory steps <focal_prep>`.
 
-#. :doc:`Take a backup of the current instance <../backup_and_restore>`.
-   Before doing so, in coordination with your journalist team, delete 
-   old submissions and sources via the *Journalist Interface*.
-   Deleting old submissions is a good security practice, and helps to
-   control the size and improve the speed of backups.
-#. Follow our guide for downloading and verifying the 
-   Ubuntu 20.04 LTS (Focal) installation media.       
+#. Ensure that your Landing Page 
+   :ref:`shows your v3 Source Interface URL <publish_v3>`. 
+   For instances using v2+v3 onion services concurrently, any v2 onion
+   services will be removed as part of this migration.
+#. Announce your maintenance window. As part of this procedure, your servers
+   will become unreachable.
+#. :doc:`Take a backup of the current instance <../backup_and_restore>`. Once 
+   you have taken a backup of the servers, power them off.
+
+    .. warning::
+
+     The next steps will overwrite existing data on the servers.
+
+     Data from the *Monitor Server* will not be restored after the backup.
+     If you require historical data from the *Monitor Server*, archive it
+     separately before proceeding.
 #. Follow the instructions on 
-   hardware migration for instances using v3 Onion Services. 
-   This document will guide you through
-   performing a clean installation of Ubuntu on your servers, 
-   a clean installation of SecureDrop, and finally, 
-   a restoration of your backup file onto the new installation, 
-   restoring your previous Tor and ssh credentials.
+   :ref:`hardware migration for instances using v2+v3 or v3 onion services <migrate_v3>`. 
 
-   While you may not be performing a true hardware migration (i.e.,
-   you may be reusing existing hardware), in this case the steps
-   are equivalent.  
+   As part of this process, you will be instructed to 
+   reinstall your servers, restore your backup, and configure access
+   via your *Admin Workstation*.
+#. Ensure that all *Journalist* and *Admin Workstations* can
+   access the *Source* and *Journalist Interfaces*.
+   By this point, for instances that were running v2+v3 onion services
+   concurrently, all v2 onion services will have been disabled.
+   If you have not yet updated the onion service 
+   configurations for all *Journalist* and *Admin Workstations*,
+   you must :ref:`do so now <update_tails_v3>`. 
+   
+   .. note::
+
+      If you cannot update your Journalists' Tails USBs in person due
+      to remote work policies, 
+      contact Support for suggestions on how to safely complete this step.
+
+#. (Optional): If you'd like your instance to be listed in our SecureDrop 
+   directory, ensure your Landing Page meets our 
+   :doc:`security guidelines <../deployment/landing_page>`, and then
+   submit a `directory listing request <https://securedrop.org/directory/submit>`_. 
+
+   Instances listed in the directory can receive an 
+   `onion name <https://securedrop.org/news/introducing-onion-names-securedrop>`__, an 
+   easy-to-type alias for their *Source Interface* in the form
+   ``yourinstance.securedrop.tor.onion``.
 
 .. _migration_alternate:
 
 Alternate Migration Procedure  
 -----------------------------
-(For SecureDrop instances not yet using v3 onion services)
+Perform these steps if your SecureDrop instance is not yet using v3 onion services.
+Ensure you have completed the :ref:`preparatory steps <focal_prep>`.
 
+#. Announce your maintenance window. As part of this procedure, your servers
+   will become unreachable.
 #. :doc:`Take a backup of the current instance <../backup_and_restore>`. 
-   Before doing so, in coordination with your journalist team, delete old 
-   submissions and sources via the *Journalist Interface*.
-   deleting old submissions is a good security practice, and helps to
-   control the size and improve the speed of backups.
-   over the Tor network.
-#. :doc:`Install Ubuntu 20.04 (Focal Fossa) <../servers>` on the servers.
-#. :doc:`Install SecureDrop from scratch <../install>`. 
-#. Follow the guidelines to 
-   restore data without restoring Tor configuration.
-#. Publish :ref:`your new Source Interface URL <publish_v3>` on your Landing Page
-#. Update :ref:`Journalist Workstation USBs <update_tails_v3>` 
-   with new Tor credentials
+   Once you have taken a backup of the servers, power them off.
+
+    .. warning::
+
+     The next steps will overwrite existing data on the servers.
+
+     Data from the *Monitor Server* will not be restored after the backup.
+     If you require historical data from the *Monitor Server*, archive it
+     separately before proceeding.
+
+#. Follow our documentation on 
+   :ref:`hardware migration using a v2-only backup <migrate_v2>`. 
+   
+   As part of this process, you will be instructed to 
+   reinstall your servers, generating new v3 onion URLs, and restore
+   source and journalist data from your backup.
+#. :ref:`Publish your new Source Interface URL <publish_v3>` on your 
+   Landing Page. This is the new, 56-character .onion address at which 
+   sources will now reach you.
+#. You will then need to  
+   :ref:`update Journalist and Admin Workstation USBs <update_tails_v3>` 
+   so that Journalists and other Admins can access your instance.
+#. (Optional): If you'd like your instance to be listed in our SecureDrop 
+   directory, ensure your Landing Page meets our 
+   :doc:`security guidelines <../deployment/landing_page>`, and then
+   submit a `directory listing request <https://securedrop.org/directory/submit>`_. 
+
+   Instances listed in the directory can receive an 
+   `onion name <securedrop.org/news/introducing-onion-names-securedrop/>`__, an 
+   easy-to-type alias for their *Source Interface* in the form
+   ``yourinstance.securedrop.tor.onion``.
 
 
 .. _contact_us:
@@ -232,7 +297,7 @@ Alternate Migration Procedure
 Contact us
 ----------
 
-If you have questions or comments regarding the coming upgrade to Ubuntu 20.04 LTS
+If you have questions or comments regarding the pgrade to Ubuntu 20.04 LTS
 or the preparatory procedure outlined above, please don't hesitate to reach out:
 
  - via our `Support Portal <https://support.freedom.press>`_, if you are a member (membership is approved on a case-by-case basis);
