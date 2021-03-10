@@ -645,6 +645,57 @@ audio, and begin publishing important, high-impact work!
          <getting_the_most_out_of_securedrop>` to read about
          encouraging sources to use SecureDrop.
 
+Deleting submissions and source accounts
+----------------------------------------
+
+As part of routine SecureDrop usage, we recommend that you establish data retention
+practices consistent with your organization's threat model, data lifecycle and data
+retention policies. Regularly deleting submissions and source accounts can
+mitigate risks in the event that your SecureDrop servers or a source's account
+details are compromised.
+
+To delete sources, first select them in the list of all sources in the
+*Journalist Interface*, then click the **Delete** button. You will be
+given a choice to delete all messages and files for the selected sources, or to
+delete the source accounts:
+
+|Delete sources|
+
+If you delete messages and files for a source, the source will continue to appear
+in the list of sources in the *Journalist Interface*, and they will still be able
+to log into the *Source Interface* using their codename. Consider using this
+option as part of regular deletion of reviewed submissions, especially if you
+are not sure that all communication with the source has concluded.
+
+.. note::
+
+   If you delete all messages and files, that includes all replies you have sent
+   to the source, even if the source has not seen them yet. You will still be
+   able to send new replies.
+
+If you delete the entire source account, the source will not be able to log
+in again using their codename, and all information about them will be
+destroyed. Consider using this option if it is clear that all communication
+with the source has concluded, or if the source has requested that all information
+about them and their submissions should be removed.
+
+You can more selectively delete source submissions and journalist replies by
+clicking the source's two-word designation in the list of all sources. You will
+see a list of source messages (filenames end with ``-msg.gpg``), file submissions
+(filenames end with ``-doc.gz.gpg``) and journalist replies (filenames end with
+``--reply.gpg``).
+
+Select the source data you wish to delete, then click the **Delete** button.
+You will be prompted for confirmation:
+
+|Delete individual submissions|
+
+From the same page, you also have the option to delete the entire source
+account. To do so, click the button labeled **Delete Source Account** at the
+bottom of the page. You will be prompted for confirmation:
+
+|Delete source account|
+
 .. |Journalist Interface Login| image:: images/manual/screenshots/journalist-index_with_text.png
 .. |Journalist Interface| image:: images/manual/screenshots/journalist-index_javascript.png
 .. |Load external content| image:: images/manual/screenshots/journalist-clicks_on_source_and_selects_documents.png
@@ -660,6 +711,9 @@ audio, and begin publishing important, high-impact work!
 .. |Sent reply| image:: images/manual/screenshots/journalist-composes_reply.png
 .. |Flag for reply button| image:: images/manual/screenshots/journalist-col_has_no_key.png
 .. |Flag for reply notification| image:: images/manual/screenshots/journalist-col_flagged.png
+.. |Delete sources| image:: images/manual/screenshots/journalist-delete_sources.png
+.. |Delete individual submissions| image:: images/manual/screenshots/journalist-delete_submissions.png
+.. |Delete source account| image:: images/manual/screenshots/journalist-delete_source_account.png
 
 .. |mat2 context menu| image:: images/manual/screenshots/mat2_context_menu.png
 .. |mat2 cleaned| image:: images/manual/screenshots/mat2_cleaned.png
