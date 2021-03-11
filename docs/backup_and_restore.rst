@@ -218,7 +218,7 @@ Migrating Using a V2+V3 or V3-Only Backup
 
       cd ~/Persistent/securedrop/
       git fetch --tags
-      git tag -v 1.7.1
+      git tag -v 1.8.0
 
    The output should include the following two lines:
 
@@ -239,10 +239,10 @@ Migrating Using a V2+V3 or V3-Only Backup
 
    .. code:: sh
 
-      git checkout 1.7.1
+      git checkout 1.8.0
 
    .. important::
-      If you see the warning ``refname '1.7.1' is ambiguous`` in the
+      If you see the warning ``refname '1.8.0' is ambiguous`` in the
       output, we recommend that you contact us immediately at
       securedrop@freedom.press 
       (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
@@ -385,7 +385,7 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
       cd ~/Persistent/securedrop/
       git fetch --tags
-      git tag -v 1.7.1
+      git tag -v 1.8.0
 
    The output should include the following two lines:
 
@@ -405,11 +405,11 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
    .. code:: sh
 
-      git checkout 1.7.1
+      git checkout 1.8.0
 
 
    .. important::
-      If you see the warning ``refname '1.7.1' is ambiguous`` in the
+      If you see the warning ``refname '1.8.0' is ambiguous`` in the
       output, we recommend that you contact us immediately at
       securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
