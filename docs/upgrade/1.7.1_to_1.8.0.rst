@@ -1,0 +1,109 @@
+Upgrade from 1.7.1 to 1.8.0
+===========================
+
+.. important::
+
+  You must migrate your SecureDrop servers to Ubuntu 20.04 before **April 30,
+  2021** to keep your SecureDrop instance operational. This migration will require
+  physical access to the servers. Please see our :doc:`migration guide <focal_migration>`
+  for instructions.
+
+Updating Servers to SecureDrop 1.8.0
+------------------------------------
+Your servers will be updated to the latest version of SecureDrop automatically
+within 24 hours of the release.
+
+.. _updating_workstations_180:
+
+Updating Workstations to SecureDrop 1.8.0
+-----------------------------------------
+
+Using the graphical updater
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
+the *SecureDrop Workstation Updater* will alert you to workstation updates. You
+must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
+on the Tails welcome screen in order to use the graphical updater.
+
+Perform the update to 1.8.0 by clicking "Update Now":
+
+.. image:: ../images/securedrop-updater.png
+
+Performing a manual update
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+If the graphical updater fails and you want to perform a manual update instead,
+first delete the graphical updater's temporary flag file, if it exists (the
+``.`` before ``securedrop`` is not a typo): ::
+
+  rm ~/Persistent/.securedrop/securedrop_update.flag
+
+This will prevent the graphical updater from attempting to re-apply the failed
+update and has no bearing on future updates. You can now perform a manual
+update by running the following commands: ::
+
+  cd ~/Persistent/securedrop
+  git fetch --tags
+  gpg --keyserver hkps://keys.openpgp.org --recv-key \
+   "2224 5C81 E3BA EB41 38B3 6061 310F 5612 00F4 AD77"
+  git tag -v 1.8.0
+
+The output should include the following two lines: ::
+
+    gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
+    gpg: Good signature from "SecureDrop Release Signing Key"
+
+Please verify that each character of the fingerprint above matches what is
+on the screen of your workstation. If it does, you can check out the
+new release: ::
+
+    git checkout 1.8.0
+
+.. important:: If you do see the warning "refname '1.8.0' is ambiguous" in the
+  output, we recommend that you contact us immediately at securedrop@freedom.press
+  (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
+
+Finally, run the following commands: ::
+
+  ./securedrop-admin setup
+  ./securedrop-admin tailsconfig
+
+.. include:: ../includes/always-backup.txt
+
+Updating Tails
+--------------
+Check the version of Tails on your *Admin* and *Journalist Workstations*
+(**Applications ▸ Tails ▸ About Tails**). If your workstations are running Tails
+version 4.14 or earlier, you will not receive an update notification due to a
+bug. Perform a :ref:`manual update <Update Tails Manually>`, or reinstate
+automatic updates by following the steps in the
+`Tails advisory <https://tails.boum.org/news/version_4.14/broken_upgrades/index.en.html>`__.
+
+If you are running Tails 4.15 or later, follow the graphical prompts to update
+to the latest version.
+
+Migration to Ubuntu 20.04 and to v3 onion services
+--------------------------------------------------
+The operating system running on your *Application* and *Monitor Servers*,
+Ubuntu 16.04 (Xenial), reaches its end-of-life for security updates on April 30,
+2021. You must migrate your servers to Ubuntu 20.04 before April 30, 2021 to
+remain secure. Please see our :doc:`migration guide <focal_migration>` for detailed
+instructions.
+
+.. important ::
+
+   If your servers are running Ubuntu 16.04 after **April 30, 2021**, the
+   *Source Interface* will be automatically disabled as a security precaution.
+
+Because  v2 :ref:`onion services <glossary_onion_service>` are deprecated,
+SecureDrop does not support enabling them on Ubuntu 20.04. If you are not already
+running v3 onion services (easily recognizable by their 56 character ``.onion``
+addresses), you can :doc:`enable them <../v3_services>` prior to the migration
+to Ubuntu 20.04, or as part of the same maintenance window.
+
+Getting Support
+---------------
+
+Should you require further support with your SecureDrop installation, we are
+happy to help!
+
+.. include:: ../includes/getting-support.txt
