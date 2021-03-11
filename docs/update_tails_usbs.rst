@@ -30,6 +30,8 @@ We recommend that you :ref:`back up your existing configuration <backup_workstat
 
 .. |Update Notification| image:: images/tails_update_notification.png
 
+.. _Update Tails Manually:
+
 Update Manually
 ---------------
 
