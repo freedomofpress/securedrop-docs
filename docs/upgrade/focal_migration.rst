@@ -212,16 +212,28 @@ you have completed the :ref:`preparatory steps <focal_prep>`.
 #. :doc:`Take a backup of the current instance <../backup_and_restore>`. Once 
    you have taken a backup of the servers, power them off.
 
-    .. warning::
+   .. warning::
 
-     The next steps will overwrite existing data on the servers.
+      The next steps will overwrite existing data on the servers.
 
-     Data from the *Monitor Server* will not be restored after the backup.
-     If you require historical data from the *Monitor Server*, archive it
-     separately before proceeding.
+      Data from the *Monitor Server* will not be restored after the backup.
+      If you require historical data from the *Monitor Server*, archive it
+      separately before proceeding.
+
+   .. note::
+
+      If you are reusing the same hardware (servers), your old data will
+      be overwritten by the new operating system installation, but traces 
+      of this data may still be recoverable. 
+      
+      In most cases, this is not a concern, since you will be restoring data 
+      from your backup file as part of the migration process. However, if this 
+      is a concern, refer to our 
+      :doc:`decommissioning documentation <../decommission>` 
+      for instructions on securely erasing and destroying server data.  
+
 #. Follow the instructions on 
    :ref:`hardware migration for instances using v2+v3 or v3 onion services <migrate_v3>`. 
-
    As part of this process, you will be instructed to 
    reinstall your servers, restore your backup, and configure access
    via your *Admin Workstation*.
@@ -261,13 +273,25 @@ Ensure you have completed the :ref:`preparatory steps <focal_prep>`.
 #. :doc:`Take a backup of the current instance <../backup_and_restore>`. 
    Once you have taken a backup of the servers, power them off.
 
-    .. warning::
+   .. warning::
 
-     The next steps will overwrite existing data on the servers.
+      The next steps will overwrite existing data on the servers.
 
-     Data from the *Monitor Server* will not be restored after the backup.
-     If you require historical data from the *Monitor Server*, archive it
-     separately before proceeding.
+      Data from the *Monitor Server* will not be restored after the backup.
+      If you require historical data from the *Monitor Server*, archive it
+      separately before proceeding. 
+
+   .. note::
+
+      If you are reusing the same hardware (servers), your old data will
+      be overwritten by the new operating system installation, but traces 
+      of this data may still be recoverable. 
+      
+      In most cases, this is not a concern, since you will be restoring data 
+      from your backup file as part of the migration process. However, if this 
+      is a concern, refer to our 
+      :doc:`decommissioning documentation <../decommission>` 
+      for instructions on securely erasing and destroying server data.  
 
 #. Follow our documentation on 
    :ref:`hardware migration using a v2-only backup <migrate_v2>`. 
