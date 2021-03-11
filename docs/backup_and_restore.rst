@@ -281,6 +281,10 @@ Migrating Using a V2+V3 or V3-Only Backup
       cp $SD_OLD/sd.{crt,key} $SD_NEW/
       cp $SD_OLD/ca.crt $SD_NEW/
 
+#. If you are migrating to new hardware, ensure your old servers have been
+   decommissioned and/or destroyed by following the relevant sections of
+   :doc:`our decommissioning documentation <decommission>`.  
+
 #. Install Ubuntu 20.04 on the *Application* and *Monitor Servers*, following
    the :doc:`server setup instructions<servers>` to install with the correct
    settings, test connectivity, and set up SSH keys to allow for
@@ -428,6 +432,10 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
       cp $SD_OLD/SecureDrop.asc $SD_NEW/
       cp $SD_OLD/ossec.asc $SD_NEW/
+
+#. If you are migrating to new hardware, ensure your old servers have been
+   decommissioned and/or destroyed by following the relevant sections of
+   :doc:`our decommissioning documentation <decommission>`.  
 
 #. Install Ubuntu 20.04 on the *Application* and *Monitor Servers*, following
    the :doc:`server setup instructions<servers>` to install with the correct

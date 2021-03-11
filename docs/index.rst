@@ -92,7 +92,7 @@ anonymous sources.
    :name: upgradetoc
    :maxdepth: 2
 
-   upgrade/focal_prep.rst
+   upgrade/focal_migration.rst
    upgrade/1.7.0_to_1.7.1.rst
    upgrade/1.6.0_to_1.7.0.rst
    upgrade/1.5.0_to_1.6.0.rst

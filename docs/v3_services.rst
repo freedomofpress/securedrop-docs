@@ -3,14 +3,21 @@ SecureDrop V3 Onion Services
 
 .. important::
 
-   If you have not enabled v3 onion services before April 30, 2021,
-   your SecureDrop servers will become unreachable. To minimize disruption
-   to sources and journalists, you should begin the migration well
-   before that deadline.
+   SecureDrop instances must migrate to v3 onion services and Ubuntu 20.04
+   before April 30, 2021.
+
+   If your instance is still using 16-character v2 onion URLs as the
+   migration deadline approaches, the simplest solution is to follow the 
+   :ref:`Alternate Migration Procedure <migration_alternate>`.
 
    Your SecureDrop's :ref:`Landing Page <glossary_landing_page>`
    must be updated with your new 56-character onion address so sources
    can continue to reach you.
+
+.. note::
+  
+   This documentation is applicable to servers running Ubuntu 16.04.
+   It will be removed in a future release.
 
 SecureDrop supports the v3 :ref:`onion services <glossary_onion_service>`
 protocol, which provides stronger cryptographic protections than v2 onion
