@@ -147,10 +147,10 @@ This command attempts to restore submissions, source and journalist accounts,
 and configuration details for the onion services used by the web interfaces and
 SSH (if configured).
 
-.. note:: You cannot restore v2 onion service configurations to a v3-only server 
-   (this includes any SecureDrop installation based on Ubuntu 20.04). If a 
-   restore operation would leave you without a valid onion service configuration, 
-   the restore script will fail with an error. In this case, you can still perform 
+.. note:: You cannot restore v2 onion service configurations to a v3-only server
+   (this includes any SecureDrop installation based on Ubuntu 20.04). If a
+   restore operation would leave you without a valid onion service configuration,
+   the restore script will fail with an error. In this case, you can still perform
    a data-only restore. See :ref:`Data-only Restores <additional_restore_info>` for more information.
 
 .. _migrating:
@@ -184,8 +184,8 @@ Migrating Using a V2+V3 or V3-Only Backup
    from the old workstation to the new workstation (using a *Transfer Device*)
    before proceeding.
 
-#. If you have not already done so, :ref:`back up the existing installation <backing_up>`. 
-   The instructions below assume that the backup has been created 
+#. If you have not already done so, :ref:`back up the existing installation <backing_up>`.
+   The instructions below assume that the backup has been created
    and renamed ``sd-backup-old.tar.gz``.
 
 #. Move the existing *Admin Workstation* SecureDrop code out of the way, by
@@ -204,7 +204,7 @@ Migrating Using a V2+V3 or V3-Only Backup
        mv ~/.ssh/config ~/.ssh/config.bak
        mv ~/.ssh/known_hosts ~/.ssh/known_hosts.bak
 
-#. Re-clone the SecureDrop repository to the *Admin Workstation* using the following 
+#. Re-clone the SecureDrop repository to the *Admin Workstation* using the following
    Terminal commands:
 
    .. code:: sh
@@ -244,18 +244,18 @@ Migrating Using a V2+V3 or V3-Only Backup
    .. important::
       If you see the warning ``refname '1.8.0' is ambiguous`` in the
       output, we recommend that you contact us immediately at
-      securedrop@freedom.press 
+      securedrop@freedom.press
       (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
-#. Copy the old instance's configuration files and backup from 
-   ``~/Persistent/sd.bak`` into ``~/Persistent/securedrop`` using the following 
+#. Copy the old instance's configuration files and backup from
+   ``~/Persistent/sd.bak`` into ``~/Persistent/securedrop`` using the following
    Terminal commands:
 
    .. code:: sh
 
       cd ~/Persistent/securedrop
-      export SD_OLD="~/Persistent/sd.bak/install_files/ansible-base"
-      export SD_NEW="~/Persistent/securedrop/install_files/ansible-base"
+      export SD_OLD=~/Persistent/sd.bak/install_files/ansible-base
+      export SD_NEW=~/Persistent/securedrop/install_files/ansible-base
       cp $SD_OLD/group_vars/all/site-specific $SD_NEW/group_vars/all/
       cp $SD_OLD/tor_v3_keys.json $SD_NEW/
       cp $SD_OLD/sd-backup-old.tar.gz $SD_NEW/
@@ -283,7 +283,7 @@ Migrating Using a V2+V3 or V3-Only Backup
 
 #. If you are migrating to new hardware, ensure your old servers have been
    decommissioned and/or destroyed by following the relevant sections of
-   :doc:`our decommissioning documentation <decommission>`.  
+   :doc:`our decommissioning documentation <decommission>`.
 
 #. Install Ubuntu 20.04 on the *Application* and *Monitor Servers*, following
    the :doc:`server setup instructions<servers>` to install with the correct
@@ -351,8 +351,8 @@ source accounts, and journalist accounts. To do so, follow the steps below:
   from the old workstation to the new workstation (using a *Transfer Device*)
   before proceeding.
 
-#. If you have not already done so, :ref:`back up the existing installation <backing_up>`. 
-   The instructions below assume that the backup has been created and 
+#. If you have not already done so, :ref:`back up the existing installation <backing_up>`.
+   The instructions below assume that the backup has been created and
    renamed ``sd-backup-old.tar.gz``.
 
 #. Move the existing *Admin Workstation* SecureDrop code out of the way, by
@@ -418,8 +418,8 @@ source accounts, and journalist accounts. To do so, follow the steps below:
    .. code:: sh
 
       cd ~/Persistent/securedrop
-      export SD_OLD="~/Persistent/sd.bak/install_files/ansible-base"
-      export SD_NEW="~/Persistent/securedrop/install_files/ansible-base"
+      export SD_OLD=~/Persistent/sd.bak/install_files/ansible-base
+      export SD_NEW=~/Persistent/securedrop/install_files/ansible-base
       cp $SD_OLD/group_vars/all/site-specific $SD_NEW/group_vars/all/
       cp $SD_OLD/sd-backup-old.tar.gz $SD_NEW/
 
@@ -435,7 +435,7 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
 #. If you are migrating to new hardware, ensure your old servers have been
    decommissioned and/or destroyed by following the relevant sections of
-   :doc:`our decommissioning documentation <decommission>`.  
+   :doc:`our decommissioning documentation <decommission>`.
 
 #. Install Ubuntu 20.04 on the *Application* and *Monitor Servers*, following
    the :doc:`server setup instructions<servers>` to install with the correct
@@ -498,5 +498,3 @@ If you require any assistance with migration or data recovery, please
 `contact Support`_.
 
 .. _contact Support: https://securedrop-support.readthedocs.io/en/latest/
-
-
