@@ -352,15 +352,11 @@ From here you can click on the cog beside the wired network connection:
 
 |Tails Network Settings|
 
-This will take you to the network settings, where you can click **IPv4** to see
-whether or not the **Automatic (DHCP)** or **Manual** (static IP) setting is
-turned on.
+This will take you to the network settings. Change to the **IPv4** tab. Ensure
+that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
+**DNS** is in the "off" position, as highlighted in the screenshot below:
 
-Change to the **IPv4 Settings** tab. Change **Addresses** from
-**Automatic (DHCP)** to **Manual** (if it isn't already).
-
-
-|IPv4 Settings|
+|Tails Manual Network Settings|
 
 
 .. note:: The Unsafe Browser will not launch when using a manual
@@ -385,7 +381,7 @@ Fill in the static networking information for the *Admin Workstation*:
 -  Netmask: ``255.255.255.0``
 -  Gateway : ``10.20.1.1``
 
-|Admin Workstation Static IP Configuration|
+|4 NIC Admin Workstation Static IP Configuration|
 
 3 NIC Example (SG-3100)
 '''''''''''''''''''''''
@@ -775,7 +771,7 @@ Once it is complete, you will see a notification of successful upgrade:
 .. |3 NIC Configure LAN Interface| image:: images/firewall/three_nic_configure_lan_interface.png
 .. |pfSense General Info| image:: images/firewall/pfsense_general_information.png
 .. |Ping| image:: images/firewall/pfsense_diagnostics_ping.png
-.. |Admin Workstation Static IP Configuration| image:: images/firewall/admin_workstation_static_ip_configuration.png
+.. |4 NIC Admin Workstation Static IP Configuration| image:: images/firewall/four_nic_admin_workstation_static_ip_configuration.png
 .. |3 NIC Admin Workstation Static IP Configuration| image:: images/firewall/three_nic_admin_workstation_static_ip_configuration.png
 .. |Firewall Port Aliases| image:: images/firewall/port_aliases.png
 .. |Firewall IP Aliases| image:: images/firewall/ip_aliases_with_opt2.png
@@ -791,7 +787,7 @@ Once it is complete, you will see a notification of successful upgrade:
 .. |3 NIC Firewall OPT1 Rules| image:: images/firewall/three_nic_opt1_firewall_rules.png
 .. |Wired Settings| image:: images/firewall/wired_settings.png
 .. |Tails Network Settings| image:: images/firewall/tails_network_settings.png
-.. |IPv4 Settings| image:: images/firewall/IPv4_settings.png
+.. |Tails Manual Network Settings| image:: images/firewall/tails-manual-network-with-highlights.png
 .. |Disable DHCP| image:: images/firewall/disable_DHCP.png
 .. |OPT1| image:: images/firewall/opt1.png
 .. |OPT2| image:: images/firewall/opt2.png
