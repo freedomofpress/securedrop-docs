@@ -209,8 +209,11 @@ you have completed the :ref:`preparatory steps <focal_prep>`.
    services will be removed as part of this migration.
 #. Announce your maintenance window. As part of this procedure, your servers
    will become unreachable.
-#. :doc:`Take a backup of the current instance <../backup_and_restore>`. Once
-   you have taken a backup of the servers, power them off.
+#. :doc:`Take a backup of the current instance <../backup_and_restore>`.
+   If you have configured a custom logo for your SecureDrop instance, make
+   sure to :ref:`download it <backing_up_logos>` as well.
+
+   Once you have taken a backup of the servers, power them off.
 
    .. warning::
 
