@@ -62,7 +62,7 @@ Under **Configuration Slot**, click **Configuration Slot 1**.
           **Slot 2** instead of the one in **Slot 1**. See the
           `YubiKey manual`_ for more information.
 
-.. _`Yubikey manual`: https://www.yubico.com/wp-content/uploads/2015/03/YubiKeyManual_v3.4.pdf
+.. _`Yubikey manual`: https://support.yubico.com/hc/en-us/articles/360016614900-YubiKey-5-Series-Technical-Manual
 
 In the section titled **OATH-HOTP parameters**, uncheck the box for
 **OATH Token Identifier (6 bytes)**. Leave the HOTP length at 6 digits.
