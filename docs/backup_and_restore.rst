@@ -104,6 +104,24 @@ archive in the output of the backup command.
 
 .. include:: includes/backup-warning.txt
 
+.. _backing_up_logos:
+
+Backing up your custom logo
+'''''''''''''''''''''''''''
+
+The backup will not include any custom logo file that you have configured
+for your SecureDrop instance. To back up your logo:
+
+1. Open a terminal via **Applications ▸ System Tools ▸ Terminal**.
+2. Change into the persistent storage directory: ``cd ~/Persistent``
+3. Run the following command:
+
+.. code:: sh
+
+  wget $(grep Exec ~/source.desktop | awk '{print $2}')/org-logo -O logo-backup.png
+
+This will save your current logo file as ``logo-backup.png``.
+
 Restoring from a Backup
 -----------------------
 
@@ -189,7 +207,7 @@ Migrating Using a V2+V3 or V3-Only Backup
    and renamed ``sd-backup-old.tar.gz``.
 
 #. Move the existing *Admin Workstation* SecureDrop code out of the way, by
-   opening a Terminal via **Applications > System Tools > Terminal** and
+   opening a Terminal via **Applications ▸ System Tools ▸ Terminal** and
    running the command:
 
    .. code:: sh
@@ -334,6 +352,8 @@ Migrating Using a V2+V3 or V3-Only Backup
 #. :doc:`Test the new instance <test_the_installation>` to verify that the
    web interfaces are available and the servers can be reached via SSH.
 
+#. If you had previously configured a custom logo for your SecureDrop instance,
+   :ref:`upload it again <Updating Logo Image>` using the *Admin Interface*.
 
 .. _migrate_v2:
 
@@ -356,7 +376,7 @@ source accounts, and journalist accounts. To do so, follow the steps below:
    renamed ``sd-backup-old.tar.gz``.
 
 #. Move the existing *Admin Workstation* SecureDrop code out of the way, by
-   opening a Terminal via **Applications > System Tools > Terminal** and
+   opening a Terminal via **Applications ▸ System Tools ▸ Terminal** and
    running the command:
 
    .. code:: sh
@@ -468,6 +488,9 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
    The new instance's onion service addresses will be unchanged, but the
    old instance's data and accounts will now be available.
+
+#. If you had previously configured a custom logo for your SecureDrop instance,
+   :ref:`upload it again <Updating Logo Image>` using the *Admin Interface*.
 
 .. _additional_restore_info:
 
