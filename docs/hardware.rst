@@ -391,6 +391,15 @@ We have tested and can recommend the `Intel NUC10i5FNH <https://ark.intel.com/co
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
 
+The NUC10's AX201 wireless hardware is not removable. We recommend you
+disable wireless in the BIOS, along with other unwanted hardware
+(everything but LAN) and physically disconnect the antenna leads from
+the AX201 component. They're the black and gray wires highlighted in
+the red box in the picture. Cover the free ends with electrical tape
+after disconnecting them.
+
+|NUC10 leads|
+
 .. _nuc8_recommendation:
 
 Intel 8th-gen NUC
@@ -423,6 +432,7 @@ to disable wireless functionality:
 
 |NUC8 VisualBIOS SecureBoot|
 
+.. |NUC10 leads| image:: images/hardware/nuc10_leads.jpg
 .. |NUC8 leads| image:: images/hardware/nuc8_leads.jpg
 .. |NUC8 VisualBIOS1| image:: images/hardware/nuc8_visualbios1.png
 .. |NUC8 VisualBIOS2| image:: images/hardware/nuc8_visualbios2.png
@@ -472,8 +482,8 @@ test SecureDrop on this hardware, but if you are building a new SecureDrop
 instance we recommend using 7th- or 8th-generation NUCs instead.
 
 .. note:: If you encounter issues booting Ubuntu on the NUC5, try
-	  updating the BIOS according to `these instructions
-	  <https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
+      updating the BIOS according to `these instructions
+      <https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
 
 2014 Mac Minis
 ~~~~~~~~~~~~~~
