@@ -361,7 +361,8 @@ Specific Hardware Recommendations
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We currently recommend Intel 7- and 8-series NUCS for SecureDrop servers.
+We currently recommend Intel 7-, 8-series and 10-series NUCS for SecureDrop
+servers.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
     extraneous hardware as physically possible from your servers. This
@@ -381,6 +382,14 @@ NUC before it can be used. We recommend:
 -  2x 240GB SSDs (2.5" or M.2, depending on your choice of kit)
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
+
+.. _nuc10_recommendation:
+
+Intel 10th-gen NUC
+~~~~~~~~~~~~~~~~~~
+We have tested and can recommend the `Intel NUC10i5FNH <https://ark.intel.com/content/www/us/en/ark/products/189239/intel-nuc-10-performance-kit-nuc10i5fnh.html>`__.
+It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
+option (SSD or HDD).
 
 .. _nuc8_recommendation:
 
@@ -405,7 +414,7 @@ to disable wireless functionality:
 
 |NUC8 VisualBios1|
 
-- navigate to **Advanced > Security** in the BIOS and disable SGX support, which is not used by 
+- navigate to **Advanced > Security** in the BIOS and disable SGX support, which is not used by
   SecureDrop and may be targeted by active CPU exploits:
 
 |NUC8 VisualBios2|
@@ -565,15 +574,15 @@ laptops from other manufacturers, as long as the wireless components are
 removable.
 
 Just as with the servers, you can also use an Intel NUC for the *SVS*. As noted
-before, NUCs do not ship with a hard drive, and older models can be configured 
-without any wireless components. However, NUCs *do* contain an IR receiver, 
+before, NUCs do not ship with a hard drive, and older models can be configured
+without any wireless components. However, NUCs *do* contain an IR receiver,
 which we recommend taping over with opaque masking tape.
 
-If you choose to use an Intel NUC, you must use an older model that offers wireless 
-as an **option** (described as something like ``M.2 22×30 slot and wireless antenna 
-pre-assembled (for wireless card support)``). If a model is advertised as having 
-"integrated wireless" (most newer NUC models), this means the wireless 
-components are not physically removable, and these machines are not a suitable 
+If you choose to use an Intel NUC, you must use an older model that offers wireless
+as an **option** (described as something like ``M.2 22×30 slot and wireless antenna
+pre-assembled (for wireless card support)``). If a model is advertised as having
+"integrated wireless" (most newer NUC models), this means the wireless
+components are not physically removable, and these machines are not a suitable
 choice for the *SVS*.
 
 Tails USBs
