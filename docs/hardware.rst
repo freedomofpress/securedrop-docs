@@ -391,14 +391,27 @@ We have tested and can recommend the `Intel NUC10i5FNH <https://ark.intel.com/co
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
 
-The NUC10's AX201 wireless hardware is not removable. We recommend you
-disable wireless in the BIOS, along with other unwanted hardware
-(everything but LAN) and physically disconnect the antenna leads from
-the AX201 component. They're the black and gray wires highlighted in
+The NUC10's AX201 wireless hardware is not removable. Before installation of the
+RAM and storage, we recommend that you disconnect the wireless antennae leads
+from the AX201 component. They're the black and gray wires highlighted in
 the red box in the picture. Cover the free ends with electrical tape
 after disconnecting them.
 
 |NUC10 leads|
+
+Before the initial OS installation, boot into the BIOS by pressing **F2** at
+startup and adjust the system configuration:
+
+- Under **Advanced ▸ Onboard Devices**, disable all onboard devices
+  other than LAN: HD audio, microphone, Thunderbolt, WLAN, Bluetooth,
+  SD card controller, and enhanced consumer infrared.
+
+- Under **Security ▸ Security Features**, disable SGX support, which is not used
+  by SecureDrop and may be targeted by active CPU exploits.
+
+- Under **Boot ▸ Secure Boot**, uncheck the **Secure Boot** checkbox.
+
+.. |NUC10 leads| image:: images/hardware/nuc10_leads.jpg
 
 .. _nuc8_recommendation:
 
@@ -409,34 +422,24 @@ We have tested and can recommend the `NUC8i5BEK <https://www.intel.com/content/w
 It provides a single storage option: an M.2 NVMe or SATA SSD.
 
 The NUC8i5BEK has soldered-on wireless components, which cannot easily be
-removed. For security reasons, we recommend that you take the following steps
-to disable wireless functionality:
-
-- before installation of the RAM and storage, disconnect the wireless antennae
-  leads:
+removed. Before installation of the RAM and storage, we recommend that you
+disconnect the wireless antennae leads:
 
 |NUC8 leads|
 
-- before the initial OS installation, boot into the BIOS by pressing **F2** at
-  startup, navigate to **Advanced > Devices > Onboard Devices**, and disable
-  unwanted hardware - everything except **LAN**:
+Before the initial OS installation, boot into the BIOS by pressing **F2** at
+startup and adjust the system configuration:
 
-|NUC8 VisualBios1|
+- Under **Advanced ▸ Devices ▸ Onboard Devices**, disable all onboard devices
+  other than LAN: audio, audio DSP, microphone, Thunderbolt, WLAN, Bluetooth,
+  and SD card.
 
-- navigate to **Advanced > Security** in the BIOS and disable SGX support, which is not used by
-  SecureDrop and may be targeted by active CPU exploits:
+- Under **Advanced ▸ Security**, disable SGX support, which is not used by
+  SecureDrop and may be targeted by active CPU exploits.
 
-|NUC8 VisualBios2|
+- Under **Advanced ▸ Boot ▸ Secure Boot**, uncheck the **Secure Boot** checkbox.
 
-- navigate to **Advanced > Boot > Secure Boot** and uncheck the **Secure Boot** checkbox:
-
-|NUC8 VisualBIOS SecureBoot|
-
-.. |NUC10 leads| image:: images/hardware/nuc10_leads.jpg
 .. |NUC8 leads| image:: images/hardware/nuc8_leads.jpg
-.. |NUC8 VisualBIOS1| image:: images/hardware/nuc8_visualbios1.png
-.. |NUC8 VisualBIOS2| image:: images/hardware/nuc8_visualbios2.png
-.. |NUC8 VisualBIOS SecureBoot| image:: images/hardware/nuc8_visualbios_secureboot.png
 
 .. _nuc7_recommendation:
 
@@ -446,28 +449,19 @@ Intel 7th-gen NUC
 We have tested and can recommend the `NUC7i5BNH <https://ark.intel.com/content/www/us/en/ark/products/95067/intel-nuc-kit-nuc7i5bnh.html>`__.
 
 The NUC7i5BNH has soldered-on wireless components, which cannot easily be
-removed. For security reasons, we recommend that you take the following steps
-to disable wireless functionality:
-
-- before installation of the RAM and storage, disconnect the wireless antennae
-  leads.
+removed. Before installation of the RAM and storage, we recommend that you
+disconnect the wireless antennae leads:
 
 |NUC7 leads|
 
-- before the initial OS installation, boot into the BIOS by pressing **F2** at
-  startup, navigate to **Advanced > Devices > Onboard Devices**, and disable
-  unwanted hardware - everything except **LAN**.
+Before the initial OS installation, boot into the BIOS by pressing **F2** at
+startup and adjust the system configuration:
 
-|Visual Bios|
-
+- Under **Advanced ▸ Devices ▸ Onboard Devices**, disable all onboard devices
+  other than LAN: audio, audio DSP, microphone, Thunderbolt, WLAN, Bluetooth,
+  and SD card.
 
 .. |NUC7 leads| image:: images/hardware/nuc7-leads.jpg
-.. |Visual BIOS| image:: images/hardware/visualbios.png
-
-Other 7th-generation NUCs have also been reported to work, although we have not
-tested them. For example, the `NUC7i5DNHE <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc7i5dnhe.html>`__ uses the same Ethernet chipset as the NUC7i5BNH,
-and also has a removable wireless card, simplifying the server setup process.
-However, it may be harder to find a retail source for this model.
 
 Previous Server Recommendations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
