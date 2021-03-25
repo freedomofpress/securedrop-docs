@@ -76,6 +76,7 @@ SSH key, you should rotate the key in the following manner.
     to change. For example, instead of ``/home/amnesia/.ssh/id_rsa``, call the
     key ``/home/amnesia/.ssh/newkey``. You don't need a passphrase for the key.
 
+    .. _ssh_add_pubkey:
 
 #.  Copy new public key to the SecureDrop Servers.
     Copy the public portion of the key to the *Application* and *Monitor
