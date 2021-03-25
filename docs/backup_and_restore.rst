@@ -215,12 +215,16 @@ Migrating Using a V2+V3 or V3-Only Backup
       mv ~/Persistent/securedrop ~/Persistent/sd.bak
 
 #. Move the existing *Admin Workstation* SSH configuration out of the way via
-   the Terminal, using the commands:
+   the Terminal, using the command:
 
    .. code:: sh
 
-       mv ~/.ssh/config ~/.ssh/config.bak
-       mv ~/.ssh/known_hosts ~/.ssh/known_hosts.bak
+      find ~/.ssh/ -type f -exec mv {} {}.bak \;
+
+   .. note::
+      You will be generating fresh SSH credentials for the servers, and any
+      other *Admin Workstation* USBs will have to be
+      :ref:`provisioned with updated credentials <repair_admin_usbs>`.
 
 #. Re-clone the SecureDrop repository to the *Admin Workstation* using the following
    Terminal commands:
@@ -299,9 +303,9 @@ Migrating Using a V2+V3 or V3-Only Backup
       cp $SD_OLD/sd.{crt,key} $SD_NEW/
       cp $SD_OLD/ca.crt $SD_NEW/
 
-#. If you are migrating to new hardware, ensure your old servers have been
-   decommissioned and/or destroyed by following the relevant sections of
-   :doc:`our decommissioning documentation <decommission>`.
+#. Ensure your *Admin Workstation* is connected to a LAN port on your
+   network firewall, and
+   :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
 
 #. Install Ubuntu 20.04 on the *Application* and *Monitor Servers*, following
    the :doc:`server setup instructions<servers>` to install with the correct
@@ -355,6 +359,85 @@ Migrating Using a V2+V3 or V3-Only Backup
 #. If you had previously configured a custom logo for your SecureDrop instance,
    :ref:`upload it again <Updating Logo Image>` using the *Admin Interface*.
 
+#. If you have migrated to new hardware, ensure your old servers have been
+   decommissioned and/or destroyed by following the relevant sections of
+   :doc:`our decommissioning documentation <decommission>`.
+
+.. _repair_admin_usbs:
+
+Repair Additional Admin Workstations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have additional *Admin Workstation* USBs, they will no longer have
+valid SSH credentials and will need to be repaired. In these steps, the "primary
+*Admin Workstation*" is the one which you used to complete the above migration
+process.
+
+#. Prepare a fresh
+   :doc:`LUKS-encrypted USB <set_up_transfer_and_export_device>`.
+   You may record the passphrase in your primary *Admin Workstation*
+   KeePassXC password manager.
+
+#. Copy the following files from your primary *Admin Workstation* onto the
+   LUKS-encrypted USB:
+
+   - ``~/Persistent/securedrop/install_files/ansible-base/tor_v3_keys.json``
+   - ``~/Persistent/securedrop/install_files/ansible-base/mon-ssh.auth_private``
+   - ``~/.ssh/id_rsa.pub``
+   - ``~/.ssh/id_rsa`` |br| |br|
+
+   .. note::
+      Alternatively, if you wish to use different SSH credentials for each
+      *Admin Workstation*, you may do so. In this case, copy only the first two
+      files above to your additional *Admin Workstations*.
+
+      Generate per-machine SSH keys and use a clean LUKS-encrypted USB drive
+      to transfer the public portions of those keys to your primary
+      *Admin Workstation*, where you will then add them to the servers'
+      ``authorized_keys`` files, as described :ref:`here <ssh_add_pubkey>`.
+      You may also `contact Support`_ for assistance.
+
+#. Boot into each additional *Admin Workstation*. Set
+   `an administration password`_
+   and unlock the persistent volume on the Tails welcome screen.
+   Once logged in, attach the LUKS-encrypted USB
+   and unlock it.
+
+#. Ensure that this *Admin Workstation* is using an up-to-date version of Tails
+   and is running the latest SecureDrop application code, |version|.
+
+#. As you did with the primary *Admin Workstation*, archive the existing
+   SSH configuration:
+
+   .. code:: sh
+
+       find ~/.ssh/ -type f -exec mv {} {}.bak \;
+
+#. From the LUKS-encrypted USB, copy ``~/.ssh/id_rsa`` and
+   ``~/.ssh/id_rsa.pub`` to the ``~/.ssh/`` directory.
+
+#. From the LUKS-encrypted USB, copy ``tor_v3_keys.json`` and
+   ``mon-ssh.auth_private`` to the
+   ``~/Persistent/securedrop/install_files/ansible-base`` directory.
+
+#. In the Terminal, type the following commands:
+
+   .. code:: sh
+
+      cd ~/Persistent/securedrop
+      ./securedrop-admin tailsconfig
+
+#. Test connectivity to each server by running ``ssh app uptime``
+   and ``ssh mon uptime``.
+
+#. Once all *Admin Workstations* have been updated, securely wipe the files on
+   the LUKS-encrypted USB, by right-clicking them in the file manager and selecting
+   **Wipe**. Then, reformat the device using the
+   **Disks** utility.
+
+.. _contact Support: https://securedrop-support.readthedocs.io/en/latest/
+.. _an administration password: https://tails.boum.org/doc/first_steps/welcome_screen/administration_password
+
 .. _migrate_v2:
 
 Migrating Using a V2-Only Backup
@@ -365,13 +448,16 @@ V2 onion services are no longer supported for new SecureDrop installs, so
 migration using a v2-only backup. However, it is possible to migrate submissions,
 source accounts, and journalist accounts. To do so, follow the steps below:
 
-.. note:: The instructions below assume that you are using the same *Admin Workstation*
-  that was used to manage your old instance. If you are using a new *Admin
-  Workstation* you will need to copy the directory ``~amnesia/Persistent/securedrop``
+.. note:: The instructions below assume that you are using the same
+  *Admin Workstation*
+  that was used to manage your old instance. If you are using a new
+  *Admin Workstation* you will need to copy the directory
+  ``~amnesia/Persistent/securedrop``
   from the old workstation to the new workstation (using a *Transfer Device*)
   before proceeding.
 
-#. If you have not already done so, :ref:`back up the existing installation <backing_up>`.
+#. If you have not already done so,
+   :ref:`back up the existing installation <backing_up>`.
    The instructions below assume that the backup has been created and
    renamed ``sd-backup-old.tar.gz``.
 
@@ -388,10 +474,9 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
    .. code:: sh
 
-       mv ~/.ssh/config ~/.ssh/config.bak
-       mv ~/.ssh/known_hosts ~/.ssh/known_hosts.bak
+       find ~/.ssh/ -type f -exec mv {} {}.bak \;
 
-#. Reinstall SecureDrop  on the *Admin Workstation* using the following Terminal
+#. Reinstall SecureDrop on the *Admin Workstation* using the following Terminal
    commands:
 
    .. code:: sh
@@ -453,9 +538,9 @@ source accounts, and journalist accounts. To do so, follow the steps below:
       cp $SD_OLD/SecureDrop.asc $SD_NEW/
       cp $SD_OLD/ossec.asc $SD_NEW/
 
-#. If you are migrating to new hardware, ensure your old servers have been
-   decommissioned and/or destroyed by following the relevant sections of
-   :doc:`our decommissioning documentation <decommission>`.
+#. Ensure your *Admin Workstation* is connected to a LAN port on your
+   network firewall, and
+   :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
 
 #. Install Ubuntu 20.04 on the *Application* and *Monitor Servers*, following
    the :doc:`server setup instructions<servers>` to install with the correct
@@ -489,8 +574,16 @@ source accounts, and journalist accounts. To do so, follow the steps below:
    The new instance's onion service addresses will be unchanged, but the
    old instance's data and accounts will now be available.
 
+#. As part of this process, your .onion URLs have changed, and *Journalist* and
+   *Admin Workstations* will be out of date, and will need to be
+   :ref:`updated <update_tails_v3>`.
+
 #. If you had previously configured a custom logo for your SecureDrop instance,
    :ref:`upload it again <Updating Logo Image>` using the *Admin Interface*.
+
+#. If you have migrated to new hardware, ensure your old servers have been
+   decommissioned and/or destroyed by following the relevant sections of
+   :doc:`our decommissioning documentation <decommission>`.
 
 .. _additional_restore_info:
 
@@ -521,3 +614,6 @@ If you require any assistance with migration or data recovery, please
 `contact Support`_.
 
 .. _contact Support: https://securedrop-support.readthedocs.io/en/latest/
+.. |br| raw:: html
+
+    <br>
