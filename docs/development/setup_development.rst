@@ -150,8 +150,7 @@ following ports:
 * Source Interface: `localhost:8080 <http://localhost:8080>`__
 * *Journalist Interface*: `localhost:8081 <http://localhost:8081>`__
 
-You should use Tor Browser to test web application changes, `see here for instructions
-<tips_and_tricks.html#using-tor-browser-with-the-development-environment>`__.
+You should use Tor Browser to test web application changes, :ref:`see here for instructions <using_tor_with_dev_env>`.
 
 A test administrator (``journalist``) and non-admin user (``dellsberg``) are
 created by default when running ``make dev``. In addition, sources and

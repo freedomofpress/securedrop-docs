@@ -314,7 +314,7 @@ Ensure you have completed the :ref:`preparatory steps <focal_prep>`.
    submit a `directory listing request <https://securedrop.org/directory/submit>`_.
 
    Instances listed in the directory can receive an
-   `onion name <securedrop.org/news/introducing-onion-names-securedrop/>`__, an
+   `onion name <https://securedrop.org/news/introducing-onion-names-securedrop/>`__, an
    easy-to-type alias for their *Source Interface* in the form
    ``yourinstance.securedrop.tor.onion``.
 
