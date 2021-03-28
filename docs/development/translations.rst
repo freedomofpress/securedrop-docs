@@ -29,7 +29,12 @@ two translation components: the main SecureDrop web application (labeled
 "SecureDrop"), and the translations for the desktop icons of the admin
 and journalist workstations used by news organizations (labeled "desktop").
 
-|Weblate project page screenshot|
+.. figure:: ../images/weblate/project.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   Components of the SecureDrop project in Weblate. Click on the image to see it full-size.
 
 Once a string is translated, it must be approved by a :ref:`reviewer <weblate_glossary_reviewer>`
 before being accepted into SecureDrop.
@@ -103,6 +108,13 @@ How to register an account on Weblate using an email address
 #. Check your email for a message from **weblate@securedrop.org** with the subject **[Weblate] Your registration on Weblate**.
 #. That message contains a confirmation link. Click that link to complete your registration.
 
+.. figure:: ../images/weblate/registration.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   Weblate registration page. Click on the image to see it full-size.
+
 .. _how_to_register_on_weblate_github:
 
 How to register an account on Weblate using a GitHub account
@@ -115,7 +127,12 @@ How to register an account on Weblate using a GitHub account
 
 The authorization request looks like this:
 
-|GitHub authorization page screenshot|
+.. figure:: ../images/weblate/github-authorization.png
+   :align: center
+   :figwidth: 50%
+   :width: 100%
+
+   GitHub authorization request. Click on the image to see it full-size.
 
 .. _how_to_manage_your_preferred_languages_weblate:
 
@@ -127,7 +144,12 @@ How to manage your preferred languages on Weblate
 #. Select the languages your want to translate.
 #. Click the **Save** button.
 
-|Weblate manage languages screenshot|
+.. figure:: ../images/weblate/manage-languages.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   Language preferences in Weblate. Click on the image to see it full-size.
 
 .. _how_to_translate_a_language_weblate:
 
@@ -139,7 +161,12 @@ How to translate a language on Weblate
 #. Click the **Translate** button.
 #. :ref:`Start translating <how_to_translate_a_phrase_weblate>`.
 
-|Weblate translations screenshot|
+.. figure:: ../images/weblate/translations.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   List of available languages in Weblate. Click on the image to see it full-size.
 
 .. _how_to_suggest_changes_to_a_source_string:
 
@@ -165,7 +192,12 @@ How to translate a phrase on Weblate
 #. Input your translation in the **Translation** test area near the *source string*.
 #. Click **Save**. The next untranslated string will appear automatically.
 
-|Weblate translate screenshot|
+.. figure:: ../images/weblate/translate.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   Translating a phrase in Weblate. Click on the image to see it full-size.
 
 - :ref:`Learn more about translating phrases with placeholders <how_to_translate_a_phrase_with_placeholders>`
 - :ref:`Learn more about translating phrases with HTML code <how_to_translate_a_phrase_with_html_code>`
@@ -288,9 +320,12 @@ we can add suggested translations. If a :ref:`source string <weblate_glossary_so
 from this glossary, the glossary entries will be displayed in a box on
 the right side of the translation page.
 
-|Weblate glossary sidebar screenshot|
+.. figure:: ../images/weblate/glossary-sidebar.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
 
-- :ref:`How to translate a phrase on Weblate <how_to_translate_a_phrase_weblate>`
+   Glossary sidebar in Weblate. Click on the image to see it full-size.
 
 If you find that a *source string* contains terms from the
 :doc:`SecureDrop glossary <../glossary>` or the `EFF Surveillance
@@ -315,6 +350,13 @@ Glossary
 Weblate contains an internal glossary for each language, to which
 we can add suggested translations. Learn more about
 :ref:`using language glossaries on Weblate <how_to_use_language_glossaries_on_weblate>`.
+
+.. figure:: ../images/weblate/glossary-list.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   A language glossary in Weblate. Click on the image to see it full-size.
 
 If a term is missing from the glossary for the language
 you're translating into, you can refer to the following
@@ -353,12 +395,3 @@ Source strings are English phrases and are automatically extracted from SecureDr
 .. _`SecureDrop instant messaging channel`: https://gitter.im/freedomofpress/securedrop
 .. _`Weblate documentation`: https://docs.weblate.org/
 .. _`EFF Surveillance Self-Defense glossary`: https://ssd.eff.org/en/glossary/
-
-.. |Weblate registration page screenshot| image:: ../images/weblate/registration.png
-.. |GitHub authorization page screenshot| image:: ../images/weblate/github-authorization.png
-.. |Weblate manage languages screenshot| image:: ../images/weblate/manage-languages.png
-.. |Weblate project page screenshot| image:: ../images/weblate/project.png
-.. |Weblate translations screenshot| image:: ../images/weblate/translations.png
-.. |Weblate translate screenshot| image:: ../images/weblate/translate.png
-.. |Weblate glossary sidebar screenshot| image:: ../images/weblate/glossary-sidebar.png
-.. |Weblate glossary list screenshot| image:: ../images/weblate/glossary-list.png
