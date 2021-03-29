@@ -141,7 +141,7 @@ By default, you will be logged in to the *Journalist Interface*'s source list pa
 
 In the course of normal administration operations you should not need to view source
 communications, but if you do, you can find information on managing submissions in
-the `journalist guide <journalist>`_.
+the :doc:`journalist guide <journalist>`.
 
 .. note::
   If you have lost your login information or your two-factor authentication is no longer
@@ -717,7 +717,7 @@ When troubleshooting, ensure you are on the latest version of SecureDrop
 in your *Admin Workstation*. This is done by accepting the update
 when prompted at boot in the GUI that appears.
 
-.. _troubleshooting_admin_connectivity: 
+.. _troubleshooting_admin_connectivity:
 
 I can't SSH into my servers over Tor from my Admin Workstation. What do I do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

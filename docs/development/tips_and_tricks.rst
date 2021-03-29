@@ -1,6 +1,8 @@
 Tips & Tricks
 =============
 
+.. _using_tor_with_dev_env:
+
 Using Tor Browser with the Development Environment
 --------------------------------------------------
 
