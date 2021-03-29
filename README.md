@@ -1,4 +1,4 @@
-![SecureDrop logo](images/sdlogo.png) ![Freedom of the Press Foundation's logo](images/fpflogo.png)
+![SecureDrop logo](images/sdlogo.png)![Freedom of the Press Foundation's logo](images/fpflogo.png)
 
 # SecureDrop Redmine Support Documentation
 
