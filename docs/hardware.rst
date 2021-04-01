@@ -361,7 +361,8 @@ Specific Hardware Recommendations
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We currently recommend Intel 7- and 8-series NUCS for SecureDrop servers.
+We currently recommend Intel 7-, 8-series and 10-series NUCS for SecureDrop
+servers.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
     extraneous hardware as physically possible from your servers. This
@@ -382,6 +383,36 @@ NUC before it can be used. We recommend:
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
 
+.. _nuc10_recommendation:
+
+Intel 10th-gen NUC
+~~~~~~~~~~~~~~~~~~
+We have tested and can recommend the `Intel NUC10i5FNH <https://ark.intel.com/content/www/us/en/ark/products/189239/intel-nuc-10-performance-kit-nuc10i5fnh.html>`__.
+It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
+option (SSD or HDD).
+
+The NUC10's AX201 wireless hardware is not removable. Before installation of the
+RAM and storage, we recommend that you disconnect the wireless antennae leads
+from the AX201 component. They're the black and gray wires highlighted in
+the red box in the picture. Cover the free ends with electrical tape
+after disconnecting them.
+
+|NUC10 leads|
+
+Before the initial OS installation, boot into the BIOS by pressing **F2** at
+startup and adjust the system configuration:
+
+- Under **Advanced ▸ Onboard Devices**, disable all onboard devices
+  other than LAN: HD audio, microphone, Thunderbolt, WLAN, Bluetooth,
+  SD card controller, and enhanced consumer infrared.
+
+- Under **Security ▸ Security Features**, disable SGX support, which is not used
+  by SecureDrop and may be targeted by active CPU exploits.
+
+- Under **Boot ▸ Secure Boot**, uncheck the **Secure Boot** checkbox.
+
+.. |NUC10 leads| image:: images/hardware/nuc10_leads.jpg
+
 .. _nuc8_recommendation:
 
 Intel 8th-gen NUC
@@ -391,33 +422,24 @@ We have tested and can recommend the `NUC8i5BEK <https://www.intel.com/content/w
 It provides a single storage option: an M.2 NVMe or SATA SSD.
 
 The NUC8i5BEK has soldered-on wireless components, which cannot easily be
-removed. For security reasons, we recommend that you take the following steps
-to disable wireless functionality:
-
-- before installation of the RAM and storage, disconnect the wireless antennae
-  leads:
+removed. Before installation of the RAM and storage, we recommend that you
+disconnect the wireless antennae leads:
 
 |NUC8 leads|
 
-- before the initial OS installation, boot into the BIOS by pressing **F2** at
-  startup, navigate to **Advanced > Devices > Onboard Devices**, and disable
-  unwanted hardware - everything except **LAN**:
+Before the initial OS installation, boot into the BIOS by pressing **F2** at
+startup and adjust the system configuration:
 
-|NUC8 VisualBios1|
+- Under **Advanced ▸ Devices ▸ Onboard Devices**, disable all onboard devices
+  other than LAN: audio, audio DSP, microphone, Thunderbolt, WLAN, Bluetooth,
+  and SD card.
 
-- navigate to **Advanced > Security** in the BIOS and disable SGX support, which is not used by 
-  SecureDrop and may be targeted by active CPU exploits:
+- Under **Advanced ▸ Security**, disable SGX support, which is not used by
+  SecureDrop and may be targeted by active CPU exploits.
 
-|NUC8 VisualBios2|
-
-- navigate to **Advanced > Boot > Secure Boot** and uncheck the **Secure Boot** checkbox:
-
-|NUC8 VisualBIOS SecureBoot|
+- Under **Advanced ▸ Boot ▸ Secure Boot**, uncheck the **Secure Boot** checkbox.
 
 .. |NUC8 leads| image:: images/hardware/nuc8_leads.jpg
-.. |NUC8 VisualBIOS1| image:: images/hardware/nuc8_visualbios1.png
-.. |NUC8 VisualBIOS2| image:: images/hardware/nuc8_visualbios2.png
-.. |NUC8 VisualBIOS SecureBoot| image:: images/hardware/nuc8_visualbios_secureboot.png
 
 .. _nuc7_recommendation:
 
@@ -427,28 +449,19 @@ Intel 7th-gen NUC
 We have tested and can recommend the `NUC7i5BNH <https://ark.intel.com/content/www/us/en/ark/products/95067/intel-nuc-kit-nuc7i5bnh.html>`__.
 
 The NUC7i5BNH has soldered-on wireless components, which cannot easily be
-removed. For security reasons, we recommend that you take the following steps
-to disable wireless functionality:
-
-- before installation of the RAM and storage, disconnect the wireless antennae
-  leads.
+removed. Before installation of the RAM and storage, we recommend that you
+disconnect the wireless antennae leads:
 
 |NUC7 leads|
 
-- before the initial OS installation, boot into the BIOS by pressing **F2** at
-  startup, navigate to **Advanced > Devices > Onboard Devices**, and disable
-  unwanted hardware - everything except **LAN**.
+Before the initial OS installation, boot into the BIOS by pressing **F2** at
+startup and adjust the system configuration:
 
-|Visual Bios|
-
+- Under **Advanced ▸ Devices ▸ Onboard Devices**, disable all onboard devices
+  other than LAN: audio, audio DSP, microphone, Thunderbolt, WLAN, Bluetooth,
+  and SD card.
 
 .. |NUC7 leads| image:: images/hardware/nuc7-leads.jpg
-.. |Visual BIOS| image:: images/hardware/visualbios.png
-
-Other 7th-generation NUCs have also been reported to work, although we have not
-tested them. For example, the `NUC7i5DNHE <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc7i5dnhe.html>`__ uses the same Ethernet chipset as the NUC7i5BNH,
-and also has a removable wireless card, simplifying the server setup process.
-However, it may be harder to find a retail source for this model.
 
 Previous Server Recommendations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -463,8 +476,8 @@ test SecureDrop on this hardware, but if you are building a new SecureDrop
 instance we recommend using 7th- or 8th-generation NUCs instead.
 
 .. note:: If you encounter issues booting Ubuntu on the NUC5, try
-	  updating the BIOS according to `these instructions
-	  <https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
+      updating the BIOS according to `these instructions
+      <https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
 
 2014 Mac Minis
 ~~~~~~~~~~~~~~
@@ -565,15 +578,15 @@ laptops from other manufacturers, as long as the wireless components are
 removable.
 
 Just as with the servers, you can also use an Intel NUC for the *SVS*. As noted
-before, NUCs do not ship with a hard drive, and older models can be configured 
-without any wireless components. However, NUCs *do* contain an IR receiver, 
+before, NUCs do not ship with a hard drive, and older models can be configured
+without any wireless components. However, NUCs *do* contain an IR receiver,
 which we recommend taping over with opaque masking tape.
 
-If you choose to use an Intel NUC, you must use an older model that offers wireless 
-as an **option** (described as something like ``M.2 22×30 slot and wireless antenna 
-pre-assembled (for wireless card support)``). If a model is advertised as having 
-"integrated wireless" (most newer NUC models), this means the wireless 
-components are not physically removable, and these machines are not a suitable 
+If you choose to use an Intel NUC, you must use an older model that offers wireless
+as an **option** (described as something like ``M.2 22×30 slot and wireless antenna
+pre-assembled (for wireless card support)``). If a model is advertised as having
+"integrated wireless" (most newer NUC models), this means the wireless
+components are not physically removable, and these machines are not a suitable
 choice for the *SVS*.
 
 Tails USBs

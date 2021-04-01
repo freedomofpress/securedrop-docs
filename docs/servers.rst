@@ -28,6 +28,9 @@ Legacy and UEFI boot modes, with UEFI preferred. You should also disable Secure
 Boot. SecureDrop uses a custom kernel with security patches, which is unsigned
 and will not boot if Secure Boot is enabled.
 
+Our :ref:`specific hardware recommendations <Specific Hardware Recommendations>`
+enumerate recommended BIOS settings for hardware that we have tested.
+
 Install Ubuntu
 --------------
 
@@ -275,7 +278,7 @@ Set up SSH access
 
 On the **SSH Setup** screen, enable **Install OpenSSH server**. Verify that **No**
 is selected for the **Import SSH Identity** option, as a custom SSH key will be created
-for the administration account later in the installation process. 
+for the administration account later in the installation process.
 
 Verify that **Allow password authentication over SSH** is selected, and choose **Done**
 to proceed.
