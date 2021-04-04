@@ -314,25 +314,14 @@ Migrating Using a V2+V3 or V3-Only Backup
        ./securedrop-admin restore sd-backup-old.tar.gz
 
    The restore task will proceed for some time, removing v2 services if a v2+v3
-   backup was used, and then will fail with the message:
+   backup was used.
 
-   .. code-block:: none
-
-     ssh_exchange_identification: Connection closed by remote host
-
-   during the ``Wait for Tor to reload`` task. This is expected; the
-   *Application Server*'s SSH onion service address was updated to the old
-   instance's address during the restore process, leaving it temporarily
-   unreachable.
-
-#. Copy the old instance's v3 onion service details into place on the
-   *Admin Workstation* and repair SSH access using the Terminal commands:
+#. Synchronize the server and *Admin Workstation's* web interface config and
+   authentication keys using the Terminal commands:
 
    .. code:: sh
 
-      cd ~/Persistent/securedrop
-      cp $SD_OLD/app-{journalist,ssh}.auth_private $SD_NEW/
-      cp $SD_OLD/app-sourcev3-ths $SD_NEW/
+      ./securedrop-admin install
       ./securedrop-admin tailsconfig
 
 #. :doc:`Test the new instance <test_the_installation>` to verify that the
