@@ -167,6 +167,12 @@ Moving a SecureDrop instance to new hardware involves:
 All new SecureDrop instances must use v3 onion services only, so the final
 configuration will only include v3 onion services regardless of the backup state.
 
+.. note:: If you need to restore from a backup from an instance configured to
+   use SSH-over-LAN onto an SSH-over-Tor instance, you must either first update
+   the target instance to use SSH-over-LAN or perform a data-only backup.
+   See :ref:`Data-only Restores <additional_restore_info>` for more information.
+
+
 The restore process differs based on the onion services that were configured on
 the old instance and preserved in the backup:
 
