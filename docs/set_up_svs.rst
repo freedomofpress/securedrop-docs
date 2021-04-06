@@ -36,7 +36,7 @@ session. To do so, click the **+** button under "Additional Settings". Click
 **Administration Password** in the list of settings. Enter the password twice,
 click **Add**, then click **Start Tails**.
 
-.. note:: The Tail administration password is a one-time password. It
+.. note:: The Tails administration password is a one-time password. It
           is reset every time you shut down Tails. Pick a password you will be
           able to remember for the length of this session.
 
