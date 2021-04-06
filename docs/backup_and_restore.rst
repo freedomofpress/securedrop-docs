@@ -167,6 +167,12 @@ Moving a SecureDrop instance to new hardware involves:
 All new SecureDrop instances must use v3 onion services only, so the final
 configuration will only include v3 onion services regardless of the backup state.
 
+.. note:: If you need to restore from a backup from an instance configured to
+   use SSH-over-LAN onto an SSH-over-Tor instance, you must either first update
+   the target instance to use SSH-over-LAN or perform a data-only backup.
+   See :ref:`Data-only Restores <additional_restore_info>` for more information.
+
+
 The restore process differs based on the onion services that were configured on
 the old instance and preserved in the backup:
 
@@ -314,25 +320,14 @@ Migrating Using a V2+V3 or V3-Only Backup
        ./securedrop-admin restore sd-backup-old.tar.gz
 
    The restore task will proceed for some time, removing v2 services if a v2+v3
-   backup was used, and then will fail with the message:
+   backup was used.
 
-   .. code-block:: none
-
-     ssh_exchange_identification: Connection closed by remote host
-
-   during the ``Wait for Tor to reload`` task. This is expected; the
-   *Application Server*'s SSH onion service address was updated to the old
-   instance's address during the restore process, leaving it temporarily
-   unreachable.
-
-#. Copy the old instance's v3 onion service details into place on the
-   *Admin Workstation* and repair SSH access using the Terminal commands:
+#. Synchronize the server and *Admin Workstation's* web interface config and
+   authentication keys using the Terminal commands:
 
    .. code:: sh
 
-      cd ~/Persistent/securedrop
-      cp $SD_OLD/app-{journalist,ssh}.auth_private $SD_NEW/
-      cp $SD_OLD/app-sourcev3-ths $SD_NEW/
+      ./securedrop-admin install
       ./securedrop-admin tailsconfig
 
 #. :doc:`Test the new instance <test_the_installation>` to verify that the
