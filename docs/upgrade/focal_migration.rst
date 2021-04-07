@@ -115,6 +115,12 @@ Check your SecureDrop version (workstations)
    with the version indicated on the `Tails website <https://tails.boum.org/index.en.html>`_.
    If the installed Tails version is outdated, follow our
    :doc:`guide to updating Tails USBs <../update_tails_usbs>`.
+
+   .. important::
+      If your version of Tails is 4.14 or older, you will need to follow
+      `these steps <https://tails.boum.org/news/version_4.14/broken_upgrades/index.en.html>`__
+      to correct an issue with automatic updates.
+
 6. Run the command ``git status`` in the ``~/Persistent/securedrop`` directory.
    The output should include the following text:
 
