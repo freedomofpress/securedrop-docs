@@ -12,6 +12,18 @@ SecureDrop is written in English and translated into multiple
 other languages. Translations are managed using **Weblate**,
 a web platform that enables collaborative translation projects.
 
+.. _getting_help_translations:
+
+Getting help
+^^^^^^^^^^^^
+
+If you're interested in helping with translation and have questions
+about anything in this document, here's how to ask for help:
+
+* Post a message in the `translation category of the SecureDrop forum`_
+* Chat in the `SecureDrop instant messaging channel`_
+* Read the `Weblate documentation`_
+
 .. _get_started_using_weblate:
 
 Get started using Weblate
@@ -45,17 +57,6 @@ if they notice something wrong.
 SecureDrop translations are a collaborative endeavour!
 
 Learn :ref:`how to translate SecureDrop using Weblate <how_to_translate_a_language_weblate>`.
-
-.. _getting_help_translations:
-
-Getting help
-^^^^^^^^^^^^
-
-Should you need help, you can do one of the following:
-
-* Post a message in the `translation category of the SecureDrop forum`_
-* Chat in the `SecureDrop instant messaging channel`_
-* Read the `Weblate documentation`_
 
 Background Information
 ----------------------
