@@ -118,7 +118,7 @@ Check your SecureDrop version (workstations)
 
    .. important::
       If your version of Tails is 4.14 or older, you will need to follow
-      `these steps <https://tails.boum.org/news/version_4.15/index.en.html#issues>`__ 
+      `these steps <https://tails.boum.org/news/version_4.14/broken_upgrades/index.en.html>`__
       to correct an issue with automatic updates.
 
 6. Run the command ``git status`` in the ``~/Persistent/securedrop`` directory.
