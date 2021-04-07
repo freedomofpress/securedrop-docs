@@ -20,7 +20,7 @@ Getting help
 If you're interested in helping with translation and have questions
 about anything in this document, here's how to ask for help:
 
-* Post a message in the `translation category of the SecureDrop forum`_
+* Post a message in the `translations category of the SecureDrop forum`_
 * Chat in the `SecureDrop instant messaging channel`_
 * Read the `Weblate documentation`_
 
@@ -334,14 +334,21 @@ Self-Defense glossary`_, but the glossary sidebar says ``No related strings foun
 we'd really appreciate it if you could add those terms to
 the glossary of the language you're working with.
 
+.. _how_to_become_a_reviewer:
+
+How to become a reviewer
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can ask to become a reviewer for a language by posting a message
+in the `translations category of the SecureDrop forum`_.
+
 .. _how_to_add_a_new_language:
 
 How to add a new language to SecureDrop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We love seeing SecureDrop translated into new languages. Just ask us
-to add yours by posting in the `translation category of the SecureDrop
-forum`_.
+to add yours by posting in the `translations category of the SecureDrop forum`_.
 
 .. _weblate_glossary:
 
@@ -378,6 +385,7 @@ Reviewer
 ^^^^^^^^
 
 Reviewers are people who are trusted to review and accept new translations into SecureDrop.
+Learn :ref:`how to become a reviewer <how_to_become_a_reviewer>`.
 
 .. _weblate_glossary_source_string:
 
@@ -392,7 +400,7 @@ Source strings are English phrases and are automatically extracted from SecureDr
 .. _`SecureDrop Weblate instance`: https://weblate.securedrop.org/
 .. _`Weblate registration page`: https://weblate.securedrop.org/accounts/register/
 .. _`Weblate dashboard`: https://weblate.securedrop.org/
-.. _`translation category of the SecureDrop forum`: https://forum.securedrop.org/c/translations
+.. _`translations category of the SecureDrop forum`: https://forum.securedrop.org/c/translations
 .. _`SecureDrop instant messaging channel`: https://gitter.im/freedomofpress/securedrop
 .. _`Weblate documentation`: https://docs.weblate.org/
 .. _`EFF Surveillance Self-Defense glossary`: https://ssd.eff.org/en/glossary/
