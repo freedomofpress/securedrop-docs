@@ -102,8 +102,8 @@ Contributing
 
 Our open issues are `on GitHub <https://github.com/freedomofpress/securedrop-client/issues>`_.
 
-Please remember that we have a code of conduct and expect all contributors to
-abide by it.
+Please remember that we have a `Code of Conduct <https://github.com/freedomofpress/.github/blob/main/CODE_OF_CONDUCT.md>`__
+and expect all contributors to abide by it.
 
 Before submitting a pull request, make sure the test suite passes
 (``make check``), because our CI tools will flag broken tests before we're able

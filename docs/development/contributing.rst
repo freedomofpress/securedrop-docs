@@ -24,7 +24,7 @@ participate in longer discussions.
 
    The SecureDrop GitHub repositories and other project resources are managed
    by `Freedom of the Press Foundation employees <https://freedom.press/about/staff>`__.
-   All SecureDrop contributors are required to abide by the project's `Code of Conduct <https://github.com/freedomofpress/securedrop/blob/develop/CODE_OF_CONDUCT.md>`__.
+   All SecureDrop contributors are required to abide by the project's `Code of Conduct <https://github.com/freedomofpress/.github/blob/main/CODE_OF_CONDUCT.md>`__.
 
 
 * To start contributing to the `codebase <https://github.com/freedomofpress>`__, see our :doc:`contributing guidelines <contributor_guidelines>`.
