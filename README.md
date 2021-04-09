@@ -1,3 +1,5 @@
+> By contributing to this project, you agree to abide by our [Code of Conduct](https://github.com/freedomofpress/.github/blob/main/CODE_OF_CONDUCT.md).
+
 ![SecureDrop logo](images/sdlogo.png)![Freedom of the Press Foundation's logo](images/fpflogo.png)
 
 # SecureDrop Redmine Support Documentation
