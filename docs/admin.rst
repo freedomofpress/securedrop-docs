@@ -137,7 +137,12 @@ passphrase, and two-factor authentication token to log in.
 
 By default, you will be logged in to the *Journalist Interface*'s source list page:
 
-|SecureDrop main page|
+.. figure:: images/manual/screenshots/journalist-admin_index_no_documents.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   Journalist Interface's source list page. Click on the image to see it full-size.
 
 In the course of normal administration operations you should not need to view source
 communications, but if you do, you can find information on managing submissions in
@@ -167,7 +172,7 @@ After logging in, you can add new user accounts for the journalists at your orga
 who will be checking the system for submissions. Make sure the journalist is
 physically in the same room as you when you do this, as they will have to be present
 to enable two-factor authentication. SecureDrop supports the use of either a
-smartphone authenticator app or a Yubikey for two-factor authentication. If an
+smartphone authenticator app or a YubiKey for two-factor authentication. If an
 app is to be used, the journalist should install it before proceeding with the
 account setup.
 
@@ -175,11 +180,21 @@ account setup.
 
 * First, click **Admin** in the top right corner of the page to load the *Admin Interface*:
 
-  |SecureDrop admin home|
+.. figure:: images/manual/screenshots/journalist-admin_interface_index.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   Admin interface. Click on the image to see it full-size.
 
 *  Once there, click **Add User** to add a new user:
 
-|Add a new user|
+.. figure:: images/manual/screenshots/journalist-admin_add_user_totp.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   User account creation screen, as seen by an admin. Click on the image to see it full-size.
 
 * Next, hand the keyboard over to the journalist so they can
   create their own username.
@@ -189,7 +204,7 @@ account setup.
     have been deleted from the system.
 
 * Once they’re done entering a username for themselves, have them save their
-  pre-generated diceware passphrase to their password manager.
+  pre-generated Diceware passphrase to their password manager.
 
 * If the new account should also have admin privileges, allowing them to add or
   delete other journalist accounts, select **Is Admin**.
@@ -203,7 +218,12 @@ FreeOTP
 * If the journalist is using FreeOTP or another app for two-factor authentication,
   click **Add User** to proceed to the next page.
 
-|Enable FreeOTP|
+.. figure:: images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   FreeOTP enablement screen, as seen by an admin. Click on the image to see it full-size.
 
 * Next, the journalist should open FreeOTP on their smartphone and scan the barcode
   displayed on the screen.
@@ -230,13 +250,23 @@ YubiKey
   OATH-HOTP Secret Key. For more information on how to retrieve this key, read
   the :doc:`YubiKey Setup Guide <yubikey_setup>`.
 
-|Enable YubiKey|
+.. figure:: images/manual/screenshots/journalist-admin_add_user_hotp.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
 
-* Once you've entered the Yubikey's OATH-HOTP Secret Key, click **Add User**.
+   User account creation screen with YubiKey OATH-HOTP Secret Key, as seen by an admin. Click on the image to see it full-size.
+
+* Once you've entered the YubiKey's OATH-HOTP Secret Key, click **Add User**.
   On the next page, have the journalist authenticate using their YubiKey, by
   inserting it into a USB port on the workstation and pressing its button.
 
-|Verify YubiKey|
+.. figure:: images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   YubiKey OATH-HOTP enablement screen, as seen by an admin. Click on the image to see it full-size.
 
 * If everything was set up correctly, you will be redirected back to the
   *Admin Interface*, where you should see a flashed message that says "The
@@ -280,12 +310,17 @@ for their account:
   * Click **Reset Mobile App Credentials** for accounts using FreeOTP or a similar
     authentication app.
 
-  * Click **Reset Security Key Credentials** for accounts using a Yubikey.
+  * Click **Reset Security Key Credentials** for accounts using a YubiKey.
 
 * Follow the on-screen instructions to complete the process and verify their new
   two-factor authentication credentials.
 
-|Reset Passphrase|
+.. figure:: images/manual/screenshots/journalist-edit_account_user.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   User account edition form, as seen by an admin. Click on the image to see it full-size.
 
 Off-boarding Users
 ^^^^^^^^^^^^^^^^^^
@@ -323,7 +358,12 @@ PNG-format images are supported. To update the logo image:
 
 You should see a message appear indicating the change was a success:
 
-|Logo Update|
+.. figure:: images/manual/screenshots/journalist-admin_changes_logo_image.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   Instance configuration screen after a successful logo update, as seen by an admin. Click on the image to see it full-size.
 
 .. _submission prefs:
 
@@ -333,7 +373,7 @@ Setting Submission Preferences
 By default, SecureDrop supports both text submissions and document uploads. If you
 only want to receive text messages, you can disable uploads as follows:
 
-* check the the **Prevent sources from uploading documents** checkbox
+* check the **Prevent sources from uploading documents** checkbox
 * click **Update Submission Preferences**
 
 This change will be applied immediately on the *Source Interface*. Documents that
@@ -344,10 +384,15 @@ were previously uploaded will still be available via the **Journalist Interface*
 Testing OSSEC Alerts
 ^^^^^^^^^^^^^^^^^^^^
 
-To verify that the OSSEC monitoring sysstem's functionality, you can send a test
+To verify that the OSSEC monitoring system's functionality, you can send a test
 OSSEC alert by clicking **Send Test OSSEC Alert**:
 
-          |Test Alert|
+.. figure:: images/manual/screenshots/journalist-admin_ossec_alert_button.png
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+
+   Instance configuration screen after sending an OSSEC test alert, as seen by an admin. Click on the image to see it full-size.
 
 You should receive an OSSEC alert email at the address specified during the
 installation of SecureDrop. The email may take several minutes to arrive. If
@@ -667,8 +712,8 @@ revert the server configuration to an older version.
 
 The simplest approach to keeping workstations in sync is to inform other admins
 of changes as you make them, for example via a secure Signal group chat. Any such
-communications should happen over a platform that provides E2EE, as you may need to
-share sensitive information.
+communications should happen over a platform that provides end-to-end encryption,
+as you may need to share sensitive information.
 
 Configuration information is stored in several files on the *Admin Workstation* under
 ``~/Persistent/securedrop/``:
@@ -774,14 +819,3 @@ impact of re-rerunning ``./securedrop-admin install`` more than once. The
 command will simply check which tasks have been completed, and pick up where it
 left off. However, if the same issue persists, you will need to investigate
 further.
-
-.. |Reset Passphrase| image:: images/manual/screenshots/journalist-edit_account_user.png
-.. |Test Alert| image:: images/manual/screenshots/journalist-admin_ossec_alert_button.png
-.. |SecureDrop main page| image:: images/manual/screenshots/journalist-admin_index_no_documents.png
-.. |SecureDrop admin home| image:: images/manual/screenshots/journalist-admin_interface_index.png
-.. |Add a new user| image:: images/manual/screenshots/journalist-admin_add_user_totp.png
-.. |Enable FreeOTP| image:: images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
-.. |Enable YubiKey| image:: images/manual/screenshots/journalist-admin_add_user_hotp.png
-.. |Verify YubiKey| image:: images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
-.. |System Config Page| image:: images/manual/screenshots/journalist-admin_system_config_page.png
-.. |Logo Update| image:: images/manual/screenshots/journalist-admin_changes_logo_image.png
