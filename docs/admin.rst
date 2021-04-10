@@ -216,7 +216,11 @@ passphrase, and two-factor authentication token to log in.
 
 By default, you will be logged in to the *Journalist Interface*'s source list page.
 
-|SecureDrop main page|
+.. figure:: images/manual/screenshots/journalist-admin_index_no_documents.png
+   :align: center
+   :alt: The top navigation of the Journalist Interface says 'Logged on as Journalist' and displays an 'Admin' link.
+   :figwidth: 80%
+   :width: 100%
 
 In the course of normal administration operations you should not need to view source
 communications, but if you do, you can find information on managing submissions in
@@ -254,11 +258,19 @@ account setup.
 
 #. Click **Admin** in the top right corner of the page to load the *Admin Interface*.
 
-   |SecureDrop admin home|
+   .. figure:: images/manual/screenshots/journalist-admin_interface_index.png
+      :align: center
+      :alt: The Admin Interface displays an 'Add User' button.
+      :figwidth: 80%
+      :width: 100%
 
 #. Click **Add User** to add a new user.
 
-   |Add a new user|
+   .. figure:: images/manual/screenshots/journalist-admin_add_user_totp.png
+      :align: center
+      :alt: The form used to create new users displays a pre-generated Diceware passphrase.
+      :figwidth: 80%
+      :width: 100%
 
 #. Hand the keyboard over to the journalist so they can create their own username.
 #. Once they’re done entering a username for themselves, have them save their pre-generated Diceware passphrase to their password manager.
@@ -275,7 +287,13 @@ FreeOTP
 
 #. If the journalist is using FreeOTP or another app for two-factor authentication, click **Add User** to proceed to the next page.
 
-   |Enable FreeOTP|
+   .. figure:: images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
+      :align: center
+      :alt: The form used to enable FreeOTP displays a barcode and a two-factor secret.
+      :figwidth: 80%
+      :width: 100%
+
+      Click on the image to see it full-size.
 
 #. Next, the journalist should open FreeOTP on their smartphone and scan the barcode displayed on the screen.
 #. If they have difficulty scanning the barcode, they can tap on the icon at the top that shows a plus and the symbol of a key and use their phone's keyboard to input the two-factor secret into the ``Secret`` input field, without whitespace.
@@ -290,11 +308,21 @@ YubiKey
 
 #. If the journalist wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide <yubikey_setup>`.
 
-   |Enable YubiKey|
+   .. figure:: images/manual/screenshots/journalist-admin_add_user_hotp.png
+      :align: center
+      :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
+      :figwidth: 80%
+      :width: 100%
+
+      User account creation screen with YubiKey OATH-HOTP Secret Key, as seen by an admin. Click on the image to see it full-size.
 
 #. Once you've entered the Yubikey's OATH-HOTP Secret Key, click **Add User**.  On the next page, have the journalist authenticate using their YubiKey, by inserting it into a USB port on the workstation and pressing its button.
 
-   |Verify YubiKey|
+   .. figure:: images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
+      :align: center
+      :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
+      :figwidth: 80%
+      :width: 100%
 
 #. If everything was set up correctly, you will be redirected back to the *Admin Interface*, where you should see a flashed message that says "The two-factor code for user *new username* was verified successfully.".
 
@@ -323,7 +351,13 @@ can reset their account as follows:
 #. Select *Admin* at the top right to open the *Admin Interface*
 #. Find the user's account name and select **Edit**
 
-|Reset Passphrase|
+   .. figure:: images/manual/screenshots/journalist-edit_account_user.png
+      :align: center
+      :alt: The account edition form allows to change name, reset password, and reset two-factor authentication.
+      :figwidth: 80%
+      :width: 100%
+
+      Click on the image to see it full-size.
 
 Next, you can either rotate their passphrase or reset two-factor authentication
 for their account.
@@ -342,7 +376,6 @@ To reset two-factor authentication:
      * Click **Reset Security Key Credentials** for accounts using a Yubikey
 
   #. Follow the on-screen instructions to complete the process and verify their new two-factor authentication credentials.
-
 
 Off-boarding Users
 ^^^^^^^^^^^^^^^^^^
@@ -380,7 +413,13 @@ PNG-format images are supported. To update the logo image:
 
 You should see a message appear indicating the change was a success.
 
-|Logo Update|
+.. figure:: images/manual/screenshots/journalist-admin_changes_logo_image.png
+   :align: center
+   :alt: The Instance Configuration form displays 'Image updated' after the logo was updated successfully.
+   :figwidth: 80%
+   :width: 100%
+
+   Click on the image to see it full-size.
 
 .. _submission prefs:
 
@@ -404,7 +443,13 @@ Testing OSSEC Alerts
 To verify that the OSSEC monitoring system's functionality, you can send a test
 OSSEC alert by clicking **Send Test OSSEC Alert**.
 
-|Test Alert|
+.. figure:: images/manual/screenshots/journalist-admin_ossec_alert_button.png
+   :align: center
+   :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
+   :figwidth: 80%
+   :width: 100%
+
+   Click on the image to see it full-size.
 
 You should receive an OSSEC alert email at the address specified during the
 installation of SecureDrop. The email may take several minutes to arrive. If
@@ -798,22 +843,3 @@ impact of re-rerunning ``./securedrop-admin install`` more than once. The
 command will simply check which tasks have been completed, and pick up where it
 left off. However, if the same issue persists, you will need to investigate
 further.
-
-.. |Reset Passphrase| image:: images/manual/screenshots/journalist-edit_account_user.png
-   :alt: The account editing form allows admins to change name, reset passphrase, and reset two-factor authentication.
-.. |Test Alert| image:: images/manual/screenshots/journalist-admin_ossec_alert_button.png
-   :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
-.. |SecureDrop main page| image:: images/manual/screenshots/journalist-admin_index_no_documents.png
-   :alt: The top navigation of the Journalist Interface says 'Logged on as Journalist' and displays an 'Admin' link.
-.. |SecureDrop admin home| image:: images/manual/screenshots/journalist-admin_interface_index.png
-   :alt: The Admin Interface displays an 'Add User' button.
-.. |Add a new user| image:: images/manual/screenshots/journalist-admin_add_user_totp.png
-   :alt: The form used to create new users displays a pre-generated Diceware passphrase.
-.. |Enable FreeOTP| image:: images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
-   :alt: The form used to enable FreeOTP displays a barcode and a two-factor secret.
-.. |Enable YubiKey| image:: images/manual/screenshots/journalist-admin_add_user_hotp.png
-   :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
-.. |Verify YubiKey| image:: images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
-   :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
-.. |Logo Update| image:: images/manual/screenshots/journalist-admin_changes_logo_image.png
-   :alt: The Instance Configuration form displays 'Image updated' after the logo was updated successfully.
