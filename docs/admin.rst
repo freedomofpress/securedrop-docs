@@ -250,7 +250,7 @@ After logging in, you can add new user accounts for the journalists at your orga
 who will be checking the system for submissions. Make sure the journalist is
 physically in the same room as you when you do this, as they will have to be present
 to enable two-factor authentication. SecureDrop supports the use of either a
-smartphone authenticator app or a Yubikey for two-factor authentication. If an
+smartphone authenticator app or a YubiKey for two-factor authentication. If an
 app is to be used, the journalist should install it before proceeding with the
 account setup.
 
@@ -310,17 +310,17 @@ YubiKey
 
    .. figure:: images/manual/screenshots/journalist-admin_add_user_hotp.png
       :align: center
-      :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
+      :alt: The form used to create new users, filled with the 40-character HOTP secret key of a YubiKey.
       :figwidth: 80%
       :width: 100%
 
       User account creation screen with YubiKey OATH-HOTP Secret Key, as seen by an admin. Click on the image to see it full-size.
 
-#. Once you've entered the Yubikey's OATH-HOTP Secret Key, click **Add User**.  On the next page, have the journalist authenticate using their YubiKey, by inserting it into a USB port on the workstation and pressing its button.
+#. Once you've entered the YubiKey's OATH-HOTP Secret Key, click **Add User**.  On the next page, have the journalist authenticate using their YubiKey, by inserting it into a USB port on the workstation and pressing its button.
 
    .. figure:: images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
       :align: center
-      :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
+      :alt: The form used to verify the setup of the YubiKey requests a 6-digit verification code.
       :figwidth: 80%
       :width: 100%
 
@@ -373,7 +373,7 @@ To reset two-factor authentication:
   #. Click the button that corresponds to the user's chosen two-factor authentication method:
 
      * Click **Reset Mobile App Credentials** for accounts using FreeOTP or a similar authentication app
-     * Click **Reset Security Key Credentials** for accounts using a Yubikey
+     * Click **Reset Security Key Credentials** for accounts using a YubiKey
 
   #. Follow the on-screen instructions to complete the process and verify their new two-factor authentication credentials.
 
@@ -759,8 +759,8 @@ revert the server configuration to an older version.
 
 The simplest approach to keeping workstations in sync is to inform other admins
 of changes as you make them, for example via a secure Signal group chat. Any such
-communications should happen over a platform that provides E2EE, as you may need to
-share sensitive information.
+communications should happen over a platform that provides end-to-end encryption,
+as you may need to share sensitive information.
 
 Configuration information is stored in several files on the *Admin Workstation* under
 ``~/Persistent/securedrop/``:
