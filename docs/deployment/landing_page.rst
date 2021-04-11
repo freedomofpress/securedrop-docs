@@ -308,6 +308,42 @@ the attack surface.
 .. _`fail2ban` : https://github.com/fail2ban/fail2ban
 .. _`sshguard` : https://bitbucket.org/sshguard/sshguard/
 
+How to test your *Landing Page* using Tor Browser
+-------------------------------------------------
+
+*Sources* may visit your *Landing Page* using Tor.
+
+Many websites are configured with security measures that only apply
+when Tor is in use. For example, Tor visitors may be requested to solve
+a CAPTCHA, may trigger warnings that are specific to some Tor exit nodes,
+or may be unable to load the page altogether because of
+Tor-specific DDoS protections.
+
+The effect of such measures cannot be tested without using Tor, and it is
+a very bad experience for a *source* if visiting a *Landing Page* doesn't work
+as expected. Because of that, we **recommended strongly** that you test
+your organization's *Landing Page* using Tor *before* you start advertising it.
+
+You can do it using Tor Browser:
+
+#. Download Tor Browser from the `Tor Project website`_.
+#. Visit your *Landing Page*.
+#. Ensure the `Tor Browser security level`_ is set to "Safest"
+   by clicking on the shield icon. Click on "Advanced Security Settings"
+   and select "Safest" if necessary.
+#. Verify that everything works as expected
+
+Repeat the test several times after reloading the page `using a different Tor circuit`_ each time.
+
+#. Reload the page using a new Tor circuit by clicking on "New Tor Circuit for this Site"
+   in the site information menu (padlock icon in the URL bar) or in the hamburger menu.
+#. Verify that everything still works as expected
+   when the Tor Browser security level is set to "Safest".
+
+.. _`Tor Project website`: https://www.torproject.org/
+.. _`Tor Browser security level`: https://tb-manual.torproject.org/security-settings/
+.. _`using a different Tor circuit`: https://tb-manual.torproject.org/managing-identities/
+
 *Landing Page* Content Suggestions
 ----------------------------------
 
