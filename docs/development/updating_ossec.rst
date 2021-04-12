@@ -82,6 +82,98 @@ a failing test which you then can make pass with a patch to the OSSEC rules:
 .. _syscheck: https://ossec-docs.readthedocs.io/en/latest/docs/manual/syscheck/index.html
 .. _2134: https://github.com/freedomofpress/securedrop/issues/2134
 
+
+How to add a new OSSEC rule?
+=============================
+
+There are two main files involved in this.
+
+- `install_files/securedrop-ossec-server/var/ossec/rules/local_rules.xml` the rules file
+- `install_files/securedrop-ossec-server/var/ossec/etc/local_decoder.xml` the decoder file
+
+
+The decoder file
+-----------------
+
+::
+
+    <!--
+      The default fwupd tries to auto-update and generates error.
+    -->
+    <decoder name="fwupd">
+      <program_name>fwupd</program_name>
+    </decoder>
+
+In the above example, we are creating a new `decoder` based on the
+`program_name` value. We can find this `program_name` value using the
+`/var/ossec/bin/ossec-logtest` command, you can paste the login as input to
+this, and it will give you some parsed output.
+
+::
+
+    **Phase 1: Completed pre-decoding.
+        full event: 'Mar  1 13:22:53 app fwupd[133921]: 13:22:53:0883 FuPluginUefi         Error opening directory â€œ/sys/firmware/efi/esrt/entriesâ€�: No such file or directory'
+        hostname: 'app'
+        program_name: 'fwupd'
+        log: '13:22:53:0883 FuPluginUefi         Error opening directory â€œ/sys/firmware/efi/esrt/entriesâ€�: No such file or directory'
+
+    **Phase 2: Completed decoding.
+        No decoder matched.
+
+    **Phase 3: Completed filtering (rules).
+        Rule id: '1002'
+        Level: '2'
+        Description: 'Unknown problem somewhere in the system.'
+    **Alert to be generated.
+    
+
+The rules
+---------
+
+We decided to use the above mentioned `decoder` along with a group of rules.
+Here, we are making sure that the rules have proper unique `id` number, and
+they are written in the correct (sorted) place in the rules XML file.
+
+
+::
+
+    <group name="fwupd">
+    <rule id="100111" level="0">
+        <decoded_as>fwupd</decoded_as>
+        <match>Error opening directory</match>
+        <description>fwupd error</description>
+        <options>no_email_alert</options>
+    </rule>
+    <rule id="100112" level="0">
+        <decoded_as>fwupd</decoded_as>
+        <match>Failed to load SMBIOS</match>
+        <description>fwupd error for auto updates</description>
+        <options>no_email_alert</options>
+    </rule>
+    </group>
+
+
+Verify the configuration change
+--------------------------------
+
+On the monitor server you can use the following command as `root` to verify the changes.
+
+::
+
+    /var/ossec/bin/ossec-analysisd -t
+
+
+Adding an automated test for staging
+-------------------------------------
+
+You can then add a test for the `molecule/testinfra/mon/test_ossec_ruleset.py`
+file. Here the test loops over different log lines mentioned in
+`log_events_without_ossec_alerts` variable in
+`molecule/testinfra/vars/staging.yml`, and makes sure that the `rule_id` and
+`level` matches. 
+
+
+
 Deployment
 ----------
 
