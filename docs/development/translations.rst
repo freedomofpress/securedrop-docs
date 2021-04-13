@@ -188,8 +188,10 @@ How to translate a phrase on Weblate
 #. :ref:`Select a language <how_to_translate_a_language_weblate>`.
 #. Read the translatable string in the text area labelled **Source**.
 #. Review the suggested translations if there are any in the **Glossary** sidebar.
-#. Review the contextual information about the :ref:`source string <weblate_glossary_source_string>` in the **Source information** sidebar, like its location in our source code.
+#. Review the contextual information about the :ref:`source string <weblate_glossary_source_string>`
+   in the **Source information** sidebar, like its location in our source code.
 #. If a screenshot of the SecureDrop user interface is available, read the *source string* in context.
+   You can also use `SecureDrop's demo server`_ to preview the source string in context.
 #. Input your translation in the **Translation** test area near the *source string*.
 #. Click **Save**. The next untranslated string will appear automatically.
 
@@ -203,6 +205,7 @@ How to translate a phrase on Weblate
 - :ref:`Learn more about translating phrases with placeholders <how_to_translate_a_phrase_with_placeholders>`
 - :ref:`Learn more about translating phrases with HTML code <how_to_translate_a_phrase_with_html_code>`
 - :ref:`Learn more about using language glossaries on Weblate <how_to_use_language_glossaries_on_weblate>`
+- :ref:`Learn more about using SecureDrop's demo server <how_to_use_securedrop_demo_server>`
 
 .. _how_to_change_an_existing_translation:
 
@@ -333,6 +336,36 @@ If you find that a *source string* contains terms from the
 Self-Defense glossary`_, but the glossary sidebar says ``No related strings found in the glossary.``,
 we'd really appreciate it if you could add those terms to
 the glossary of the language you're working with.
+
+.. _how_to_use_securedrop_demo_server:
+
+How to use SecureDrop's demo server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The demo server always showcases the latest release candidate of SecureDrop.
+
+Unlike a real SecureDrop instance, you can access the demo server using any
+web browser.
+
+You can use it to review new *source strings* in the context in which either
+a *source*, or a *journalist* would read them. Those two experiences are called
+the *Source Interface* and the *Journalist Interface*.
+
+In order to review the demo server as a *source*:
+
+#. Visit `SecureDrop's demo server`_.
+#. Click on the "Source Interface" link.
+
+In order to review the demo server as a *journalist*:
+
+#. Visit `SecureDrop's demo server`_.
+#. Take note of the **username**, **passphrase** and **current TOTP token**
+   at the bottom of the page; you will need them to log in.
+#. Click on the "Journalist Interface" link.
+#. Input the **username**, **passphrase** and **current TOTP token**
+   ("Two-factor Code") to log in.
+
+.. _`SecureDrop's demo server`: https://demo.securedrop.org
 
 .. _how_to_become_a_reviewer:
 
