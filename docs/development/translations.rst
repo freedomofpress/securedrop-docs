@@ -343,6 +343,10 @@ How to use SecureDrop's demo server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The demo server always showcases the latest release candidate of SecureDrop.
+
+Unlike a real SecureDrop instance, you can access the demo server using any
+web browser.
+
 You can use it to review new *source strings* in the context in which either
 a *source*, or a *journalist* would read them. Those two experiences are called
 the *Source Interface* and the *Journalist Interface*.
@@ -356,7 +360,7 @@ In order to review the demo server as a *journalist*:
 
 #. Visit `SecureDrop's demo server`_.
 #. Take note of the **username**, **passphrase** and **current TOTP token**
-   at the bottom of the page, you will need them to log in.
+   at the bottom of the page; you will need them to log in.
 #. Click on the "Journalist Interface" link.
 #. Input the **username**, **passphrase** and **current TOTP token**
    ("Two-factor Code") to log in.
