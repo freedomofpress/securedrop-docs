@@ -300,6 +300,11 @@ Migrating Using a V2+V3 or V3-Only Backup
    settings, test connectivity, and set up SSH keys to allow for
    *Admin Workstation* access.
 
+   .. note::
+
+      You may need to wait approximately 10-15 minutes after installing 
+      Ubuntu 20.04 for the servers to become reachable via SSH.
+
 #. Reinstall SecureDrop on the servers, following the :doc:`installation
    instructions <install>`. During the configuration stage
    (``./securedrop-admin sdconfig``), the values will be prepopulated based on
@@ -307,8 +312,9 @@ Migrating Using a V2+V3 or V3-Only Backup
    except when you are asked if you want to enable v2 onion services: there,
    ensure the answer is ``no``.
 
-   Proceed through the installation, finishing with
-   ``./securedrop-admin tailsconfig``. If SSH-over-Tor is configured, run
+   Proceed through the installation by running 
+   ``./securedrop-admin install`` then ``./securedrop-admin tailsconfig``. 
+   If SSH-over-Tor is configured, run
    ``ssh app uptime`` and ``ssh mon uptime``  in the Terminal to verify SSH
    connectivity.
 
@@ -521,6 +527,11 @@ source accounts, and journalist accounts. To do so, follow the steps below:
    settings, test connectivity, and set up SSH keys to allow for
    *Admin Workstation* access.
 
+   .. note::
+
+      You may need to wait approximately 10-15 minutes after installing 
+      Ubuntu 20.04 for the servers to become reachable via SSH.
+
 #. Reinstall SecureDrop on the servers, following the :doc:`installation
    instructions <../install>`. During the configuration stage
    (``./securedrop-admin sdconfig``), the values will be prepopulated based on
@@ -528,13 +539,16 @@ source accounts, and journalist accounts. To do so, follow the steps below:
    except for the the v2 and v3 onion service options - type ``no`` for v2 and
    ``yes`` for v3.
 
-   .. note:: if your old instance served the *Source Interface* over HTTPS,
+   .. note:: 
+
+      If your old instance served the *Source Interface* over HTTPS,
       you will need to set up your new instance using HTTP instead, and update
       it to use HTTPS after the initial migration. The web interface addresses
       change as part of the process, and so your certificate is no longer valid.
 
-   Proceed through the installation, finishing with
-   ``./securedrop-admin tailsconfig``. If SSH-over-Tor is configured, run
+   Proceed through the installation by running 
+   ``./securedrop-admin install`` then ``./securedrop-admin tailsconfig``. 
+   If SSH-over-Tor is configured, run
    ``ssh app uptime`` and ``ssh mon uptime``  in the Terminal to verify SSH
    connectivity and add the new onion URLs to your ``known_hosts`` file.
 
