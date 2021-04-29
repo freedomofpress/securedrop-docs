@@ -12,9 +12,57 @@ The SecureDrop architecture contains multiple machines and hardened servers.
 While many of the installation and maintenance tasks have been automated, a
 skilled Linux admin is required to responsibly run the system.
 
-This section outlines the tasks the admin is responsible for in order to
-ensure that their SecureDrop instance continues to be a safe place for sources to
-talk to journalists.
+Responsibilities of SecureDrop administrators
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+As a SecureDrop administrator, it is your responsibility to:
+
+* :ref:`manage users <manage_users>`
+* :ref:`manage the system configuration <manage_config>`
+* :ref:`ensure that servers and workstations are kept up-to-date <manage_updates>`
+* :ref:`monitor OSSEC alerts <monitoring_ossec>`
+* :ref:`monitor the SecureDrop team's release and security-related
+  communications <monitoring_comms>`
+* investigate and respond to security incidents
+* schedule and perform required maintenance tasks, such as operating system
+  upgrades
+* ensure that SecureDrop users adhere to the documented processes for checking
+  SecureDrop, communicating with sources, and reviewing documents
+* verify the integrity of SecureDrop code
+* avoid the installation of unsupported code or patches
+* :doc:`decommission SecureDrop after it is no longer in use <decommission>`
+
+Responsibilities of the SecureDrop team
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The SecureDrop team employed by Freedom of the Press Foundation (FPF) and the
+SecureDrop community maintain and develop the SecureDrop software, which
+is offered as open source software, free of charge, and at your own risk.
+
+FPF offers :doc:`paid priority support services <getting_support>`. We are
+happy to provide assistance with installing the system, with training of
+administrators and journalists, and with investigation of technical issues
+and incidents.
+
+.. note::
+
+   Freedom of the Press Foundation does not offer systems administration,
+   hosting or "remote hands" services.
+
+When the SecureDrop team becomes aware of a security vulnerability in SecureDrop
+or its software dependencies, we assess the impact of the vulnerability in the
+context of existing security mitigations and :doc:`our threat model <threat_model/threat_model>`.
+Based on this assessment, we prioritize technical work and external communications.
+
+For high severity issues that require technical changes to SecureDrop, we will
+issue a point release as soon as possible. As part of issuing a release or
+advisory, we will post further details on the SecureDrop website and to the support
+portal.
+
+In rare circumstances, we may provide signed patches to impacted SecureDrop
+instances to allow for immediate resolution of a security incident or a technical
+issue. Even in these cases, we ask that you never install code provided to you
+that is not signed using the current `SecureDrop release key <http://securedrop.org/securedrop-release-key.asc>`__.
+
+.. _manage_users:
 
 Managing Users
 ~~~~~~~~~~~~~~
@@ -26,6 +74,8 @@ and two-factor authentication method (using a smartphone application or YubiKey)
 
 See :ref:`User Management<User Management>` for more information on adding and managing
 users.
+
+.. _manage_config:
 
 Managing the System Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,6 +91,7 @@ are available to support this:
   to configure and install SecureDrop, to perform operations including server backups and restores,
   and to update the server configuration after installation.
 
+.. _manage_updates:
 
 Keeping the System Updated
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,6 +155,8 @@ Upgrade Documentation`_ on how to upgrade the drives.
 .. _`Tails
    Upgrade Documentation`: https://tails.boum.org/doc/upgrade/index.en.html
 
+.. _monitoring_ossec:
+
 Monitoring OSSEC Alerts
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -119,6 +172,21 @@ See the :doc:`OSSEC Guide <ossec_alerts>` for more information on common OSSEC a
 .. _`SecureDrop Support Portal`: https://support-docs.securedrop.org/
 
 .. _The Admin Interface:
+
+.. _monitoring_comms:
+
+Monitoring SecureDrop-related communications
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release announcements and security advisories are posted to the
+`SecureDrop blog <https://securedrop.org/news>`__, which is also available as
+an `RSS feed <https://securedrop.org/news/feed/>`__. You can also follow us on
+our social media accounts (`Twitter <https://twitter.com/securedrop>`__ and
+`Mastodon <https://securedrop.org/news/feed/>`__).
+
+We strongly recommend :doc:`joining the SecureDrop support portal <getting_support>`.
+As a member of the support portal, you will receive email notifications related
+to all major announcements, and you can open tickets in case of technical issues.
+Membership is free of charge.
 
 The Admin Interface
 -------------------------
