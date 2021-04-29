@@ -203,10 +203,11 @@ Migrating Using a V2+V3 or V3-Only Backup
       mv ~/Persistent/securedrop ~/Persistent/sd.bak
 
 #. Move the existing *Admin Workstation* SSH configuration out of the way via
-   the Terminal, using the command:
+   the Terminal, using the commands:
 
    .. code:: sh
 
+      ssh-add -D
       find ~/.ssh/ -type f -exec mv {} {}.bak \;
 
    .. note::
@@ -391,6 +392,7 @@ process.
 
    .. code:: sh
 
+       ssh-add -D
        find ~/.ssh/ -type f -exec mv {} {}.bak \;
 
 #. From the LUKS-encrypted USB, copy ``~/.ssh/id_rsa`` and
@@ -454,6 +456,7 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
    .. code:: sh
 
+       ssh-add -D
        find ~/.ssh/ -type f -exec mv {} {}.bak \;
 
 #. Reinstall SecureDrop on the *Admin Workstation* using the following Terminal
