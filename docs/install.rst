@@ -52,18 +52,6 @@ parentheses.
           French to be available to read the documents and follow up in that
           language.
 
-Onion Service Options
----------------------
-SecureDrop supports the use of tradtional (v2)  or next-generation (v3) onion
-services for the *Source* and *Journalist Interfaces*, as well as the SSH proxy
-services if they are configured. Either or both may be enabled, but we recommend
-the use of v3 onion services for any new instances, as they offer greater
-security.
-
-For more information on v3 onion services, including upgrade options 
-for existing instances, see 
-:doc:`SecureDrop v3 onion services <v3_services>`.
-
 Configure the Installation
 --------------------------
 
@@ -171,32 +159,6 @@ Once the installation is complete, addresses and credentials for each
 onion service will be available in the following files under
 ``install_files/ansible-base``:
 
-V2 onion services
-^^^^^^^^^^^^^^^^^
-
-- ``app-source-ths`` contains the ``.onion`` address of the *Source
-  Interface*.
-- ``app-journalist-aths`` contains the ``HidServAuth``
-  configuration line for the *Journalist Interface*. During a later
-  step, this will be automatically added to your Tor configuration
-  file in order to exclusively limit connections to the hidden
-  service.
-- ``app-ssh-aths`` contains the ``HidServAuth`` for SSH access to the
-  *Application Server*.
-- ``mon-ssh-aths`` contains the ``HidServAuth`` for SSH access to the
-  *Monitor Server*.
-
-.. warning:: The ``app-journalist-aths``, ``app-ssh-aths``, and
-             ``mon-ssh-aths`` files contain passwords for their corresponding
-             authenticated onion services. They should not be shared with
-             third parties or copied from the *Admin Workstation* for any
-             reason other than well-defined administrative tasks such as
-             onboarding new users or performing backups.
-
-If v3 onion services are not enabled, the dynamic inventory file will 
-automatically read the Onion URLs from the ``app-ssh-aths`` and ``mon-ssh-aths``
-files and use them to connect to the servers over SSH during subsequent playbook
-runs.
 
 V3 onion services
 ^^^^^^^^^^^^^^^^^

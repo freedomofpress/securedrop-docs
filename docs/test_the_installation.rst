@@ -22,11 +22,11 @@ try using the verbose command format to troubleshoot: ::
    ssh <username>@<app .onion>
    ssh <username>@<mon .onion>
 
-.. tip:: If your instance uses v2 onion services, you can find the Onion
-         URLs for SSH in ``app-ssh-aths`` and ``mon-ssh-aths`` inside the
-         ``install_files/ansible-base`` directory. If your instance uses v3
-         onion services, check the ``app-ssh.auth_private`` and
-         ``mon-ssh.auth_private`` files instead.
+.. tip:: Check the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files
+         in the ``install_files/ansible-base`` directory to find the ssh onion
+         service addresses. The files contain one line with 4 colon-delimited
+         fields. The address is the first 56-character field, just add a
+         ``.onion`` at the end.
 
 Log in to Both Servers via TTY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
