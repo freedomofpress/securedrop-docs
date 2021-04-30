@@ -58,7 +58,7 @@ directly, please:
   #. Commit both the ``securedrop/requirements/python3/*.in`` and
      ``securedrop/requirements/python3/*.txt`` files
 
-Note that application dependency changes are suject to closer review, using
+Note that application dependency changes are subject to closer review, using
 `diffoscope` or a similar tool to compare the old and updated dependencies. You
 can request a review when submitting a PR.
 
