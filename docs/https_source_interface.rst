@@ -17,9 +17,7 @@ encryption and authentication via HTTPS:
 
 * SecureDrop supports v3 onion services, which use updated cryptographic
   primitives that provide better transport-layer encryption than those used
-  by v2 onion services. It is **strongly** recommended that you configure your
-  instance to use :doc:`v3 onion services <v3_services>`, but if you cannot
-  switch your instance to v3, using HTTPS on the source interface will provide
+  by v2 onion services. Using HTTPS on the source interface will provide
   an extra layer of encryption for data in transit.
 
 .. _`SecureDrop Directory`: https://securedrop.org/directory/
@@ -27,7 +25,10 @@ encryption and authentication via HTTPS:
 Obtaining an HTTPS certificate for Onion URLs
 ---------------------------------------------
 
-DigiCert is currently the only Certificate Authority (CA) that issues HTTPS
+Digicert
+~~~~~~~~
+
+DigiCert is one of only two Certificate Authorities (CA) that issue HTTPS
 certificates for ``.onion`` sites. DigiCert requires organizations to follow
 the Extended Validation (EV) process in order to obtain a certificate for an
 Onion URL, so you should start by reviewing `DigiCert's documentation`_ for
@@ -83,11 +84,19 @@ certificate a validity period of 12 months.
    Workstation, and avoiding copying the ``.key`` to any insecure removable
    media or other computers.
 
+Harica
+~~~~~~
+The Greek CA `Harica`_ is now providing Domain Validation (DV) certificates for
+``.onion`` addresses. DV certificates are less useful for authentication purposes,
+but may still be used to provide another layer of encryption for source traffic.
+
 .. _`specific URL`: https://docs.digicert.com/manage-certificates/organization-domain-management/managing-domains-cc-guide/add-authorize-domain-http-dcv/
 .. _`DigiCert's documentation`: https://www.digicert.com/dc/blog/ordering-a-onion-certificate-from-digicert/
 .. |HTTPS Onion cert| image:: images/screenshots/onion-url-certificate.png
 .. _`contact DigiCert directly`: https://www.digicert.com/dc/blog/ordering-a-onion-certificate-from-digicert/
 .. _`CAB Forum`: https://cabforum.org/2015/02/18/ballot-144-validation-rules-dot-onion-names/
+.. _`Harica`: https://www.harica.gr/
+
 
 Activating HTTPS in SecureDrop
 ------------------------------

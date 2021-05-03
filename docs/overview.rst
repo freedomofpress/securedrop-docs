@@ -27,7 +27,7 @@ SecureDrop application environment consists of three dedicated computers:
    Onion Service, to send messages and documents to the journalist. The
    journalist connects to the *Journalist Interface*, an `authenticated Tor
    Onion Service
-   <https://gitweb.torproject.org/torspec.git/tree/rend-spec-v2.txt#n851>`__, to
+   <https://community.torproject.org/onion-services/advanced/client-auth/>`__, to
    download encrypted documents and respond to sources.
 - *Monitor Server*:
    An Ubuntu server that monitors the *Application Server*

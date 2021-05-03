@@ -44,91 +44,23 @@ Upgrading or Adding Python Dependencies
 
 We use a `pip-compile <https://nvie.com/posts/better-package-management/>`_
 based workflow for adding Python dependencies. If you would like to add a Python
-dependency, instead of editing the ``securedrop/requirements/*.txt`` files
+dependency, instead of editing the ``securedrop/requirements/python3/*.txt`` files
 directly, please:
 
-  #. Edit the relevant ``*.in`` file in ``securedrop/requirements/``
+  #. Edit the relevant ``*.in`` file in ``securedrop/requirements/python3``
   #. Use the following shell script to generate
-     ``securedrop/requirements/*.txt`` files:
+     ``securedrop/requirements/python3/*.txt`` files:
 
      .. code:: sh
 
         make update-pip-requirements
 
-  #. Commit both the ``securedrop/requirements/*.in`` and
-     ``securedrop/requirements/*.txt`` files
+  #. Commit both the ``securedrop/requirements/python3/*.in`` and
+     ``securedrop/requirements/python3/*.txt`` files
 
-.. _ssh_over_tor:
-
-Connecting to VMs via SSH Over Tor
-----------------------------------
-
-Ubuntu/Debian Setup
-~~~~~~~~~~~~~~~~~~~
-You will need to install a specific variant of the ``nc`` tool
-in order to support the ``-x`` option for specifying a proxy host.
-macOS already runs the OpenBSD variant by default.
-
-.. code:: sh
-
-   sudo apt-get install netcat-openbsd
-
-After installing ``netcat-openbsd`` and appending the Tor config options
-to your local torrc, you can export the environment variable
-``SECUREDROP_SSH_OVER_TOR=1`` in order to use ``vagrant ssh`` to access the
-staging or prod instances over Tor. Here is an example of how that works:
-
-.. code:: sh
-
-    $ vagrant up --provision /prod/     # restricts SSH to Tor after final reboot
-    $ vagrant ssh-config app-prod       # will show incorrect info due to lack of env var
-    Host app-prod
-      HostName 127.0.0.1
-      User vagrant
-      Port 2201
-      UserKnownHostsFile /dev/null
-      StrictHostKeyChecking no
-      PasswordAuthentication no
-      IdentityFile /home/conor/.vagrant.d/insecure_private_key
-      IdentitiesOnly yes
-      LogLevel FATAL
-
-    $ vagrant ssh app-prod -c 'echo hello'   # will fail due to incorrect ssh-config
-    ssh_exchange_identification: read: Connection reset by peer
-
-    $ export SECUREDROP_SSH_OVER_TOR=1       # instruct Vagrant to use Tor for SSH
-    $ vagrant ssh-config app-prod            # will show correct info, with ProxyCommand
-    Host app-prod
-      HostName l57xhqhltlu323vi.onion
-      User vagrant
-      Port 22
-      UserKnownHostsFile /dev/null
-      StrictHostKeyChecking no
-      PasswordAuthentication no
-      IdentityFile /home/conor/.vagrant.d/insecure_private_key
-      IdentitiesOnly yes
-      LogLevel FATAL
-      ProxyCommand nc -x 127.0.0.1:9050 %h %p
-
-    $ # ensure ATHS values are active in local Tor config:
-    $ cat *-aths | sudo tee -a /etc/tor/torrc > /dev/null && sudo service tor reload
-    $ vagrant ssh app-prod -c 'echo hello'   # works
-    hello
-    Connection to l57xhqhltlu323vi.onion closed.
-
-If ``SECUREDROP_SSH_OVER_TOR`` is true, Vagrant will look up the ATHS URLs
-for each server by examining the contents of ``app-ssh-aths`` and ``mon-ssh-aths``
-in ``./install_files/ansible-base``. You can manually inspect these files
-to append values to your local ``torrc``, as in the ``cat`` example above.
-Note that the ``cat`` example above will also add the ATHS info for the
-*Journalist Interface*, as well, which is useful for testing.
-
-.. note:: The instructions above refer to VMs set up with v2 onion services. If
-          v3 onion services are configured instead, the steps required for the
-          local ``tor`` setup will differ. You will need to add a
-          ``ClientOnionAuthDir`` directive to ``torrc``, pointing to a directory
-          containing the ``*.auth_private`` files created during the installation
-          process under ``install_files/ansible-base``.
+Note that application dependency changes are subject to closer review, using
+`diffoscope` or a similar tool to compare the old and updated dependencies. You
+can request a review when submitting a PR.
 
 Architecture Diagrams
 ---------------------

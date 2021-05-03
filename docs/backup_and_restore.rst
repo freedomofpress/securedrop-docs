@@ -164,8 +164,8 @@ Moving a SecureDrop instance to new hardware involves:
   - Installing SecureDrop on new hardware;
   - Restoring the backup to the new instance and repairing credentials.
 
-All new SecureDrop instances must use v3 onion services only, so the final
-configuration will only include v3 onion services regardless of the backup state.
+SecureDrop now supports only v3 onion services, so the final configuration will
+only include v3 onion services regardless of the backup state.
 
 .. note:: If you need to restore from a backup from an instance configured to
    use SSH-over-LAN onto an SSH-over-Tor instance, you must either first update
@@ -303,18 +303,16 @@ Migrating Using a V2+V3 or V3-Only Backup
 
    .. note::
 
-      You may need to wait approximately 10-15 minutes after installing 
+      You may need to wait approximately 10-15 minutes after installing
       Ubuntu 20.04 for the servers to become reachable via SSH.
 
 #. Reinstall SecureDrop on the servers, following the :doc:`installation
    instructions <install>`. During the configuration stage
    (``./securedrop-admin sdconfig``), the values will be prepopulated based on
-   the old instance's configuration. Press **Enter** to accept each value,
-   except when you are asked if you want to enable v2 onion services: there,
-   ensure the answer is ``no``.
+   the old instance's configuration. Press **Enter** to accept each value.
 
-   Proceed through the installation by running 
-   ``./securedrop-admin install`` then ``./securedrop-admin tailsconfig``. 
+   Proceed through the installation by running
+   ``./securedrop-admin install`` then ``./securedrop-admin tailsconfig``.
    If SSH-over-Tor is configured, run
    ``ssh app uptime`` and ``ssh mon uptime``  in the Terminal to verify SSH
    connectivity.
@@ -425,8 +423,8 @@ process.
 Migrating Using a V2-Only Backup
 ''''''''''''''''''''''''''''''''
 
-V2 onion services are no longer supported for new SecureDrop installs, so
-*Source* and *Journalist Interface* addresses will change when you perform a
+V2 onion services are no longer supported by SecureDrop, so v2 *Source* and
+*Journalist Interface* addresses will be replaced by v3 addresses when you perform a
 migration using a v2-only backup. However, it is possible to migrate submissions,
 source accounts, and journalist accounts. To do so, follow the steps below:
 
@@ -538,19 +536,17 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 #. Reinstall SecureDrop on the servers, following the :doc:`installation
    instructions <../install>`. During the configuration stage
    (``./securedrop-admin sdconfig``), the values will be prepopulated based on
-   the old instance's configuration. Press **Enter** to accept each value,
-   except for the the v2 and v3 onion service options - type ``no`` for v2 and
-   ``yes`` for v3.
+   the old instance's configuration. Press **Enter** to accept each value.
 
-   .. note:: 
+   .. note::
 
       If your old instance served the *Source Interface* over HTTPS,
       you will need to set up your new instance using HTTP instead, and update
       it to use HTTPS after the initial migration. The web interface addresses
       change as part of the process, and so your certificate is no longer valid.
 
-   Proceed through the installation by running 
-   ``./securedrop-admin install`` then ``./securedrop-admin tailsconfig``. 
+   Proceed through the installation by running
+   ``./securedrop-admin install`` then ``./securedrop-admin tailsconfig``.
    If SSH-over-Tor is configured, run
    ``ssh app uptime`` and ``ssh mon uptime``  in the Terminal to verify SSH
    connectivity and add the new onion URLs to your ``known_hosts`` file.

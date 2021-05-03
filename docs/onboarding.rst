@@ -69,20 +69,12 @@ Set Up Automatic Access to the *Journalist Interface*
 -----------------------------------------------------
 
 Since the *Journalist Interface* is an authenticated onion service, you must
-set up the *Journalist Workstation* to auto-configure Tor, similarly to 
+set up the *Journalist Workstation* to auto-configure Tor, similarly to
 the *Admin Workstation*. The procedure is essentially identical, except the
 SSH configuration will be skipped, since only admins need
 to access the servers over SSH.
 
-- First, boot into the *Admin Workstation*. If your instance has not been set up
-  to use v3 onion services, copy the following v2 service files to a *Transfer Device*:
-
-  .. code-block:: none
- 
-    ~/Persistent/securedrop/install_files/ansible_base/app-source-ths
-    ~/Persistent/securedrop/install_files/ansible_base/app-journalist-aths
-
-  If your instance was set up to use v3 services, copy the following files instead:
+- First, boot into the *Admin Workstation* and copy the following v3 service files to a *Transfer Device*:
 
   .. code-block:: none
 
@@ -91,9 +83,9 @@ to access the servers over SSH.
 
   Then, boot into the new *Journalist Workstation* USB.
 
-.. warning:: Do **not** copy the ``app-ssh-aths``, ``mon-ssh-aths``,
-             ``app-ssh.auth_private``, ``mon-ssh.auth_private``, or ``tor_v3_keys.json``
-             files to the *Journalist Workstation*. Those files contain private
+.. warning:: Do **not** copy the ``app-ssh.auth_private``,
+             ``mon-ssh.auth_private``, or ``tor_v3_keys.json`` files
+             to the *Journalist Workstation*. Those files contain private
              keys and authentication information for SSH server access.
              Only the *Admin Workstation* should have shell access to the
              servers.
@@ -116,17 +108,17 @@ to access the servers over SSH.
             due to network issues. If so, run it again before proceeding.
 
 - Once the ``tailsconfig`` command is complete, verify that the *Source* and
-  *Journalist Interfaces* are accessible at their v2 addresses via the 
+  *Journalist Interfaces* are accessible at their v3 addresses via the
   SecureDrop desktop shortcuts.
 
 - Securely wipe the files on the *Transfer Device*, by right-clicking them
   in the file manager and selecting **Wipe**.
 
 
-.. warning:: The ``app-journalist-aths`` and ``app-journalist.auth_private`` 
-             files contain secret authentication information for the
-             authenticated onion service used by the *Journalist Interface*,
-             and should not be shared except through the onboarding process.
+.. warning:: The ``app-journalist.auth_private`` file contains secret
+             authentication information for the authenticated onion service used
+             by the *Journalist Interface*, and should not be shared except
+             through the onboarding process.
 
 Add an account on the *Journalist Interface*
 --------------------------------------------

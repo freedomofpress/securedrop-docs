@@ -680,17 +680,6 @@ Configuration information is stored in several files on the *Admin Workstation* 
   should be updated on other *Admin Workstations*.
 * Onion service information is stored in several files:
 
-  * v2 onion services:
-
-    .. code-block:: none
-
-      install_files/ansible-base/app-ssh-aths
-      install_files/ansible-base/mon-ssh-aths
-      install_files/ansible-base/app-journalist-aths
-      install_files/ansible-base/app-source-ths
-
-  * v3 onion services:
-
     .. code-block:: none
 
       install_files/ansible-base/app-ssh.auth_private
@@ -735,19 +724,7 @@ into your Admin Workstation, you should first perform the following troubleshoot
 #. **Ensure that SSH aliases and onion service authentication are configured:**
 
    - First, ensure that the correct configuration files are present in
-     ``~/Persistent/securedrop/install_files/ansible-base``.
-
-     If v2 onion services
-     are configured, you should have 4 files:
-
-     - ``app-ssh-aths``
-     - ``mon-ssh-aths``
-     - ``app-journalist-aths``
-     - ``app-source-ths``
-
-
-     If v3 onion services are
-     enabled, you should have the following 5 files:
+     ``~/Persistent/securedrop/install_files/ansible-base``:
 
      - ``app-ssh.auth_private``
      - ``mon-ssh.auth_private``

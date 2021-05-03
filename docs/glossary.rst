@@ -125,9 +125,7 @@ The third generation of onion services (v3) provides stronger cryptographic
 algorithms than v2 onion services, and includes redesigned protocols that
 guard against service information leaks on the Tor network.
 
-Support for v2 onion services will start to be removed from SecureDrop in
-February 2021, and we strongly recommend :doc:`upgrading SecureDrop
-instances to v3 onion services <v3_services>` as soon as possible.
+Only v3 onion services are supported by SecureDrop.
 
 OSSEC Alert Public Key
 ----------------------
