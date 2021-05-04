@@ -18,10 +18,12 @@ As a SecureDrop administrator, it is your responsibility to:
 
 * :ref:`manage users <manage_users>`
 * :ref:`manage the system configuration <manage_config>`
-* :ref:`ensure that servers and workstations are kept up-to-date <manage_updates>`
+* :ref:`ensure that servers, firewall and workstations are kept up-to-date <manage_updates>`
 * :ref:`monitor OSSEC alerts <monitoring_ossec>`
 * :ref:`monitor the SecureDrop team's release and security-related
   communications <monitoring_comms>`
+* apply available firmware updates to all SecureDrop hardware
+* ensure that the SecureDrop environment is physically secure and monitored
 * investigate and respond to security incidents
 * schedule and perform required maintenance tasks, such as operating system
   upgrades
@@ -44,8 +46,9 @@ and incidents.
 
 .. note::
 
-   Freedom of the Press Foundation does not offer systems administration,
-   hosting or "remote hands" services.
+   Each SecureDrop instance is hosted and operated independently. Freedom of the
+   Press  Foundation does not offer systems administration, hosting or "remote
+   hands" services.
 
 When the SecureDrop team becomes aware of a security vulnerability in SecureDrop
 or its software dependencies, we assess the impact of the vulnerability in the
@@ -57,10 +60,16 @@ issue a point release as soon as possible. As part of issuing a release or
 advisory, we will post further details on the SecureDrop website and to the support
 portal.
 
-In rare circumstances, we may provide signed patches to impacted SecureDrop
-instances to allow for immediate resolution of a security incident or a technical
-issue. Even in these cases, we ask that you never install code provided to you
-that is not signed using the current `SecureDrop release key <http://securedrop.org/securedrop-release-key.asc>`__.
+In rare circumstances when a technical fix is extremely time sensitive, we may
+provide signed patches to impacted SecureDrop instances. Even in these cases, we
+ask that you never install code provided to you that is not signed using the
+current `SecureDrop release key <http://securedrop.org/securedrop-release-key.asc>`__.
+
+When in doubt how to resolve an issue, please avoid following technical
+instructions that have not been vetted by the SecureDrop team. If you encounter
+bugs, please `report them <https://github.com/freedomofpress/securedrop/issues/new/choose>`__.
+For sensitive matters, you can contact us via the `SecureDrop Support Portal`_
+or via our `contact form <https://securedrop.org/help/>`__.
 
 .. _manage_users:
 
