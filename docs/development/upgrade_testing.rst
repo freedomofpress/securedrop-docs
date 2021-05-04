@@ -19,10 +19,9 @@ You can use this scenario to test the upgrade process, using using either
 locally-built .debs or packages from the FPF test repo at
 https://apt-test.freedom.press/. Both options are described below.
 
-.. note:: The upgrade scenario uses QEMU/KVM via Vagrant's libvirt provider, in
-   place of the  default Virtualbox provider. If you haven't already done so,
-   you'll need to set up the libvirt provider before proceeding. For
-   more information, see :ref:`libvirt_provider`.
+.. note:: The upgrade scenario uses QEMU/KVM via Vagrant's libvirt provider.
+   If you haven't already done so, you'll need to set up the libvirt provider
+   before proceeding. For more information, see :ref:`libvirt_provider`.
 
 .. _upgrade_testing_local:
 

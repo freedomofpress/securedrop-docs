@@ -8,11 +8,9 @@ Overview
 
 SecureDrop is a multi-machine design. To make development and testing
 easy, we provide a set of virtual environments, each tailored for a
-specific type of development task. We use Vagrant, VirtualBox, and
+specific type of development task. We use Vagrant, Molecule, and
 Docker and our Ansible playbooks can provision these environments on
 either virtual machines or physical hardware.
-
-.. note:: SecureDrop is written in Python 3 only.
 
 Quick Start
 -----------
@@ -188,7 +186,7 @@ Setting Up a Multi-Machine Environment
 .. note:: You do not need this step if you only plan to work on the
    web application or the documentation.
 
-To get started, you will need to install Vagrant, VirtualBox, Docker, and
+To get started, you will need to install Vagrant, Libvirt, Docker, and
 Ansible on your development workstation.
 
 
@@ -201,7 +199,7 @@ Ubuntu or Debian GNU/Linux
 
    sudo apt-get update
    sudo apt-get install -y build-essential libssl-dev libffi-dev python3-dev \
-       dpkg-dev git linux-headers-$(uname -r) virtualbox
+       dpkg-dev git linux-headers-$(uname -r)
 
 We recommend using the most recent version of Vagrant available in your distro's
 package repositories. For Debian Stable, that's ``2.2.3`` at the time
@@ -226,9 +224,6 @@ from the `Vagrant Downloads page`_ and then install it.
             which conflicts with the tasks in the Ansible playbooks. The
             instructions in Vagrantfile that would enable vagrant-cachier are
             currently commented out.
-
-VirtualBox should be at least version 5.x. See `GitHub #1381`_ for documentation
-of incompatibility with the older VirtualBox 4.x release series.
 
 Finally, install Ansible so it can be used with Vagrant to automatically
 provision VMs. We recommend installing Ansible from PyPi with ``pip`` to ensure
@@ -259,41 +254,8 @@ development-related tooling. Using `virtualenvwrapper
 macOS
 ~~~~~
 
-Install the dependencies for the development environment:
-
-#. Vagrant_
-#. VirtualBox_
-#. Ansible_
-#. rsync >= 3.1.0
-
-If you use homebrew-cask_ to manage macOS apps, you can install Vagrant and
-VirtualBox that way. As for Ansible, we strongly recommend installing it
-in a virtual environment using ``virtualenvwrapper`` and ``pip``, so as not to
-install the older version we use system-wide. You should create your virtualenv
-using the Python 3 install on your system. If you are using a
-different version, the path to ``virtualenvwrapper.sh`` will differ. Running
-``pip show virtualenvwrapper`` should help you find it.
-
-.. code:: sh
-
-    sudo easy_install pip # if you don't already have pip
-    sudo -H pip install -U virtualenvwrapper --ignore-installed six
-    source /usr/local/bin/virtualenvwrapper.sh
-    mkvirtualenv -p python3 securedrop
-
-.. note:: You'll want to add the command to source ``virtualenvwrapper.sh``
-          to your ``~/.bashrc`` (or whatever your default shell configuration
-          file is) so that the command-line utilities ``virtualenvwrapper``
-          provides are automatically available in the future.
-
-The version of rsync installed by default on macOS is extremely out-of-date, as is Apple's custom. We recommend using Homebrew_ to install a modern version (3.1.0 or greater): ``brew install rsync``.
-
-.. _Vagrant: https://www.vagrantup.com/downloads
-.. _VirtualBox: https://www.virtualbox.org/wiki/Downloads
-.. _Ansible: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
-.. _Homebrew: https://brew.sh/
-.. _homebrew-cask: https://sourabhbajaj.com/mac-setup/Vagrant/README.html
-
+Developers on macOS should use the Docker-based container environment.
+We don't support running VMs on macOS.
 
 Fork & Clone the Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -325,6 +287,6 @@ Qubes
 
 To configure a multi-machine evironment in Qubes, follow the Quick Start instructions above to
 create a standalone VM named ``sd-dev``, then follow the Linux instructions above to install the
-required packages, *omitting* Virtualbox.
+required packages.
 
 Then, complete the steps described in :doc:`qubes_staging`.
