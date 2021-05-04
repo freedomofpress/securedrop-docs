@@ -437,15 +437,6 @@ VERSION_CODENAME is "focal"
 
   sudo unattended-upgrades
 
-
-VERSION_CODENAME is "xenial"
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code:: sh
-
-  sudo cron-apt -i -s
-
-
 .. note::
 
    Depending on the nature of the update (e.g., if the ``tor`` package is

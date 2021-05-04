@@ -89,7 +89,6 @@ Run ``make help`` to see the full list of CI commands in the Makefile:
     Makefile for developing and testing SecureDrop.
     Subcommands:
         ci-go                      Creates, provisions, tests, and destroys GCE host for testing staging environment.
-        ci-go-xenial               Creates, provisions, tests, and destroys GCE host for testing staging environment under xenial.
         ci-lint                    Runs linting in linting container.
         ci-teardown                Destroys GCE host for testing staging environment.
 
@@ -117,48 +116,48 @@ of a commit to apply to a branch in order disable the deletion for the Focal sta
 
 .. code:: Diff
 
-    diff --git a/.circleci/config.yml b/.circleci/config.yml
-    index 4a9b0bd4c..d9aea01b8 100644
-    --- a/.circleci/config.yml
-    +++ b/.circleci/config.yml
-    @@ -354,13 +354,6 @@ jobs:
-               BASE_OS=focal make ci-go
-             no_output_timeout: 35m
+   diff --git a/.circleci/config.yml b/.circleci/config.yml
+   index 4d61769f1..af74672bc 100644
+   --- a/.circleci/config.yml
+   +++ b/.circleci/config.yml
+   @@ -251,13 +251,6 @@ jobs:
+                make ci-go
+              no_output_timeout: 35m
 
-    -      - run:
-    -          name: Ensure environment torn down
-    -          # Always report true, since env should will destroyed already
-    -          # if all tests passed.
-    -          command: make ci-teardown || true
-    -          when: always
-    -
-         - store_test_results:
-             path: ~/sd/junit
+   -      - run:
+   -          name: Ensure environment torn down
+   -          # Always report true, since env should will destroyed already
+   -          # if all tests passed.
+   -          command: make ci-teardown || true
+   -          when: always
+   -
+          - store_test_results:
+              path: ~/sd/junit
 
-    diff --git a/devops/gce-nested/ci-go.sh b/devops/gce-nested/ci-go.sh
-    index 850324ecc..776120df4 100755
-    --- a/devops/gce-nested/ci-go.sh
-    +++ b/devops/gce-nested/ci-go.sh
-    @@ -16,4 +16,3 @@ export BASE_OS="${BASE_OS:-xenial}"
+   diff --git a/devops/gce-nested/ci-go.sh b/devops/gce-nested/ci-go.sh
+   index ff80aa107..65bbcd7b9 100755
+   --- a/devops/gce-nested/ci-go.sh
+   +++ b/devops/gce-nested/ci-go.sh
+   @@ -16,4 +16,3 @@ export BASE_OS="${BASE_OS:-focal}"
 
     ./devops/gce-nested/gce-start.sh
     ./devops/gce-nested/gce-runner.sh
-    -./devops/gce-nested/gce-stop.sh
-    diff --git a/devops/scripts/create-staging-env b/devops/scripts/create-staging-env
-    index 3b9a2c7f8..df2ccfe3d 100755
-    --- a/devops/scripts/create-staging-env
-    +++ b/devops/scripts/create-staging-env
-    @@ -33,7 +33,7 @@ printf "Creating staging environment via '%s'...\\n" "${securedrop_staging_scena
+   -./devops/gce-nested/gce-stop.sh
+   diff --git a/devops/scripts/create-staging-env b/devops/scripts/create-staging-env
+   index 8b296be94..df8a4d674 100755
+   --- a/devops/scripts/create-staging-env
+   +++ b/devops/scripts/create-staging-env
+   @@ -32,7 +32,7 @@ printf "Creating staging environment via '%s'...\\n" "${securedrop_staging_scena
     virtualenv_bootstrap
     # Are we in CI? Then lets do full testing post install!
     if [ "$USER" = "sdci" ]; then
-    -    molecule test -s "${securedrop_staging_scenario}"
-    +    molecule test --destroy=never -s "${securedrop_staging_scenario}"
+   -    molecule test -s "${securedrop_staging_scenario}"
+   +    molecule test --destroy=never -s "${securedrop_staging_scenario}"
     else
-       molecule "${MOLECULE_ACTION:-converge}" -s "${securedrop_staging_scenario}" "${EXTRA_ANSIBLE_ARGS[@]}"
+        molecule "${MOLECULE_ACTION:-converge}" -s "${securedrop_staging_scenario}" "${EXTRA_ANSIBLE_ARGS[@]}"
     fi
 
-Once that commit is pushed, run the appropriate ``staging-test-with-rebase`` job
+Once that commit is pushed, run the ``staging-test-with-rebase`` job
 with ssh using with CircleCI. Once logged into that container, you can ssh into the
 Google Compute host:
 

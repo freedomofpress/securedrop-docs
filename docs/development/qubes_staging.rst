@@ -1,9 +1,9 @@
 Virtual Environments: Using Qubes
 =================================
 
-SecureDrop currently uses Ubuntu Xenial as its server OS, and Focal support is under
-development. The instructions below cover setting up a SecureDrop staging environment
-using either Xenial or Focal under Qubes.
+SecureDrop currently uses Ubuntu Focal as its server OS.
+The instructions below cover setting up a SecureDrop staging environment
+using Focal under Qubes.
 
 It is assumed that you have an up-to-date Qubes installation on a compatible
 laptop, with at least 16GB RAM and 60GB free disk space. The SecureDrop server VMs
@@ -12,21 +12,18 @@ accurately for Tor to start and hidden services to be available.
 
 Overview
 --------
-.. note:: Throughout the following instructions, ``$SERVER_OS`` will refer to your choice
-  of either ``xenial`` or ``focal``.
-
 Follow the the Qubes platform instructions in :doc:`setup_development`
 to create a Debian 10 ``sd-dev`` Standalone VM. Once done, we'll create three new
 Standalone (HVM) Qubes VMs for use with staging:
 
-- ``sd-staging-base-$SERVER_OS``, a base VM for cloning reusable staging VMs
-- ``sd-staging-app-base-$SERVER_OS``, a base VM for the *SecureDrop Application Server*
-- ``sd-staging-mon-base-$SERVER_OS``, a base VM for the *SecureDrop Monitor Server*
+- ``sd-staging-base-focal``, a base VM for cloning reusable staging VMs
+- ``sd-staging-app-base-focal``, a base VM for the *SecureDrop Application Server*
+- ``sd-staging-mon-base-focal``, a base VM for the *SecureDrop Monitor Server*
 
 Download Ubuntu server ISO
 ----------------------------
 
-On ``sd-dev``, download the latest Ubuntu server ISO for either Xenial or Focal,
+On ``sd-dev``, download the latest Ubuntu server ISO for Focal,
 along with corresponding checksum and signature files. See the
 :ref:`hardware installation docs <download_ubuntu>`
 for detailed instructions. If you opt for the command line instructions, omit
@@ -42,11 +39,11 @@ In ``dom0``, do the following:
 
 .. code:: sh
 
-   qvm-create sd-staging-base-$SERVER_OS --class StandaloneVM --property virt_mode=hvm --label green
-   qvm-volume extend sd-staging-base-$SERVER_OS:root 20g
-   qvm-prefs sd-staging-base-$SERVER_OS memory 2000
-   qvm-prefs sd-staging-base-$SERVER_OS maxmem 2000
-   qvm-prefs sd-staging-base-$SERVER_OS kernel ''
+   qvm-create sd-staging-base-focal --class StandaloneVM --property virt_mode=hvm --label green
+   qvm-volume extend sd-staging-base-focal:root 20g
+   qvm-prefs sd-staging-base-focal memory 2000
+   qvm-prefs sd-staging-base-focal maxmem 2000
+   qvm-prefs sd-staging-base-focal kernel ''
 
 The commands above will create a new StandaloneVM, expand the storage space
 and memory available to it, as well as disable the integrated kernel support.
@@ -59,7 +56,7 @@ In ``dom0``:
 
 .. code:: sh
 
-   qvm-start sd-staging-base-$SERVER_OS --cdrom=sd-dev:$ISO_PATH
+   qvm-start sd-staging-base-focal --cdrom=sd-dev:$ISO_PATH
 
 where ``ISO_PATH`` is the full path to the Ubuntu ISO previously downloaded on ``sd-dev``.
 
@@ -68,11 +65,11 @@ Next, choose **Install Ubuntu**.
 For the most part, the install process matches the
 :ref:`hardware install flow <install_ubuntu>`, with a few exceptions:
 
-  -  Server IP address: use value returned by ``qvm-prefs sd-staging-base-$SERVER_OS ip``,
+  -  Server IP address: use value returned by ``qvm-prefs sd-staging-base-focal ip``,
      with ``/24`` netmask suffix
-  -  Gateway: use value returned by ``qvm-prefs sd-staging-base-$SERVER_OS visible_gateway``
+  -  Gateway: use value returned by ``qvm-prefs sd-staging-base-focal visible_gateway``
   -  For DNS, use Qubes's DNS servers: ``10.139.1.1`` and ``10.139.1.2``.
-  -  Hostname: ``sd-staging-base-$SERVER_OS``
+  -  Hostname: ``sd-staging-base-focal``
   -  Domain name should be left blank
 
 Make sure to configure LVM and use **Virtual disk 1 (xvda 20.0GB Xen Virtual Block device)**
@@ -86,7 +83,7 @@ Once installation is done, let the machine shut down and then restart it with
 
 .. code:: sh
 
-   qvm-start sd-staging-base-$SERVER_OS
+   qvm-start sd-staging-base-focal
 
 in ``dom0``. You should get a login prompt.
 
@@ -94,7 +91,7 @@ Initial VM configuration
 ------------------------
 
 Before cloning this machine, we'll update software to reduce provisioning time
-on the staging VMs. In the new ``sd-staging-base-$SERVER_OS`` VM's console, do:
+on the staging VMs. In the new ``sd-staging-base-focal`` VM's console, do:
 
 .. code:: sh
 
@@ -122,7 +119,7 @@ to
 
    GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 
-When initial configuration is done, run ``qvm-shutdown sd-staging-base-$SERVER_OS`` to shut it down.
+When initial configuration is done, run ``qvm-shutdown sd-staging-base-focal`` to shut it down.
 
 Clone VMs
 ---------
@@ -134,19 +131,19 @@ documented below. Run the following in ``dom0``:
 
 .. code:: sh
 
-   qvm-clone sd-staging-base-$SERVER_OS sd-staging-app-base-$SERVER_OS
-   qvm-clone sd-staging-base-$SERVER_OS sd-staging-mon-base-$SERVER_OS
-   qvm-prefs sd-staging-app-base-$SERVER_OS ip 10.137.0.50
-   qvm-prefs sd-staging-mon-base-$SERVER_OS ip 10.137.0.51
-   qvm-tags sd-staging-app-base-$SERVER_OS add created-by-sd-dev
-   qvm-tags sd-staging-mon-base-$SERVER_OS add created-by-sd-dev
+   qvm-clone sd-staging-base-focal sd-staging-app-base-focal
+   qvm-clone sd-staging-base-focal sd-staging-mon-base-focal
+   qvm-prefs sd-staging-app-base-focal ip 10.137.0.50
+   qvm-prefs sd-staging-mon-base-focal ip 10.137.0.51
+   qvm-tags sd-staging-app-base-focal add created-by-sd-dev
+   qvm-tags sd-staging-mon-base-focal add created-by-sd-dev
 
 Now start both new VMs:
 
 .. code:: sh
 
-   qvm-start sd-staging-app-base-$SERVER_OS
-   qvm-start sd-staging-mon-base-$SERVER_OS
+   qvm-start sd-staging-app-base-focal
+   qvm-start sd-staging-mon-base-focal
 
 On the consoles which eventually appear, you should be able to log in with
 ``sdadmin/securedrop``.
@@ -154,11 +151,8 @@ On the consoles which eventually appear, you should be able to log in with
 Configure cloned VMs
 ~~~~~~~~~~~~~~~~~~~~
 
-We'll need to fix each machine's idea of its own IP. The config location differs
-on your OS choice:
-
-- **Xenial:** In the console for each machine, edit ``/etc/network/interfaces`` to update the ``address`` line with the machine's IP.
-- **Focal:** In the console for each machine, edit ``/etc/netplan/00-installer-config.yaml`` to update the ``addresses`` entry with the machine's IP.
+We'll need to fix each machine's idea of its own IP. In the console for each machine,
+edit ``/etc/netplan/00-installer-config.yaml`` to update the ``addresses`` entry with the machine's IP.
 
 Edit ``/etc/hosts`` on each host to include the hostname and IP for itself.
 Use ``app-staging`` and ``mon-staging`` as appropriate.
@@ -245,8 +239,9 @@ to set up the development environment.
 
 Once finished, build the Debian packages for installation on the staging VMs:
 
-- **Xenial:** use the command ``make build-debs``
-- **Focal:** use the command ``make build-debs-focal``
+.. code::  sh
+
+    make build-debs
 
 Managing Qubes RPC for Admin API capability
 -------------------------------------------
@@ -293,25 +288,26 @@ Creating staging instance
 After creating the StandaloneVMs as described above:
 
 * ``sd-dev``
-* ``sd-staging-base-$SERVER_OS``
-* ``sd-staging-app-base-$SERVER_OS``
-* ``sd-staging-mon-base-$SERVER_OS``
+* ``sd-staging-base-focal``
+* ``sd-staging-app-base-focal``
+* ``sd-staging-mon-base-focal``
 
 And after building the SecureDrop .debs, we can finally provision the staging
 environment:
 
-- **Xenial:** run the command ``make staging``
-- **Focal:** run the command ``make staging-focal``
+.. code:: sh
 
-The commands invoke the appropriate Molecule scenario for your choice of ``$SERVER_OS``.
+    make staging
+
+The commands invoke the appropriate Molecule scenario for your choice of ``focal``.
 You can also run constituent Molecule actions directly, rather than using
 the Makefile target:
 
 .. code:: sh
 
-   molecule create -s qubes-staging-$SERVER_OS
-   molecule converge -s qubes-staging-$SERVER_OS
-   molecule test -s qubes-staging-$SERVER_OS
+   molecule create -s qubes-staging-focal
+   molecule converge -s qubes-staging-focal
+   molecule test -s qubes-staging-focal
 
 That's it. You should now have a running, configured SecureDrop staging instance
 running on your Qubes machine. For day-to-day operation, you should run
@@ -320,7 +316,7 @@ to provision staging VMs on-demand. To remove the staging instance, use the Mole
 
 .. code:: sh
 
-   molecule destroy -s qubes-staging-$SERVER_OS
+   molecule destroy -s qubes-staging-focal
 
 Accessing the Journalist Interface (Staging) in Whonix-based VMs
 ----------------------------------------------------------------
@@ -383,22 +379,3 @@ At this point, you should be able to access the *Journalist Interface*
 
 Note that you will have to replace the ``app-journalist.auth_private`` file
 and reload Tor on the Whonix gateway every time you rebuild the staging environment.
-
-Switching between Xenial and Focal
-----------------------------------
-
-Both environments may be set up on your Qubes workstation, but they cannot be run
-simultaneously. To switch between them:
-
-- Use the appropriate ``molecule destroy`` command to bring down the active environment.
-- Remove SSH known host entries for the servers with the commands:
-
-  .. code:: sh
-
-    ssh-keygen -f "/home/user/.ssh/known_hosts" -R "10.137.0.50"
-    ssh-keygen -f "/home/user/.ssh/known_hosts" -R "10.137.0.51"
-
-
-- Build environment-specific packages first if necessary with ``make build-debs``
-  or ``make build-debs-focal``.
-- Run ``make staging`` or ``make staging-focal`` as appropriate.

@@ -42,16 +42,12 @@ Debian packages on the staging machines:
 
    make build-debs
    make staging
-   # Use the proper backend for your developer environment:
-   molecule login -s virtualbox-staging-xenial -h app-staging
-   # or:
-   molecule login -s libvirt-staging-xenial -h app-staging
+   molecule login -s libvirt-staging-focal -h app-staging
    sudo -u www-data bash
    cd /var/www/securedrop
    ./manage.py add-admin
-   pytest -v tests/
 
-To rebuild the local packages for the app code and update on Xenial staging: 
+To rebuild the local packages for the app code and update the staging VMs:
 
 .. code:: sh
 
@@ -139,7 +135,7 @@ alert emails.
 
 Direct SSH access is available for staging hosts, so you can use
 ``molecule login -s <scenario> -h app-staging``, where ``<scenario>``
-is either ``virtualbox-staging-xenial`` or ``libvirt-staging-xenial``, depending
+is either ``libvirt-staging-focal`` or ``qubes-staging-focal``, depending
 on your environment.
 
 By default, the staging environments are created with an empty submissions database. If you want to set up a staging environment with a preexisting submissions database, you can do so using a SecureDrop backup file as follows:
@@ -189,7 +185,7 @@ Switching to the Vagrant libvirt provider
 Make sure you've already installed Vagrant, as described
 in the :ref:`multi-machine setup docs <multi_machine_environment>`.
 
-Ubuntu 16.04 setup
+Ubuntu 20.04 setup
 ^^^^^^^^^^^^^^^^^^
 
 Install libvirt and QEMU:
@@ -276,12 +272,12 @@ Set the default Vagrant provider to ``libvirt``:
 
 Convert Vagrant boxes to libvirt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Convert the VirtualBox images for Xenial from ``virtualbox`` to ``libvirt`` format:
+Convert the VirtualBox images for Focal from ``virtualbox`` to ``libvirt`` format:
 
 .. code:: sh
 
-   vagrant box add --provider virtualbox bento/ubuntu-16.04
-   vagrant mutate bento/ubuntu-16.04 libvirt
+   vagrant box add --provider virtualbox bento/ubuntu-20.04
+   vagrant mutate bento/ubuntu-20.04 libvirt
 
 You can now use the libvirt-backed VM images to develop against
 the SecureDrop multi-machine environment.
