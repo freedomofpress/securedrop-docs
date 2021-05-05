@@ -255,7 +255,7 @@ Release Process
 #. In a clone of the private
    `securedrop-debian-packages-lfs <https://github.com/freedomofpress/securedrop-debian-packages-lfs>`_
    repository, create a branch from ``main`` called ``release``.
-#. In your local branch, commit the built packages to the ``core/xenial``
+#. In your local branch, commit the built packages to the ``core/focal``
    directory.
 
    * If the release includes a Tor update, make sure to include the

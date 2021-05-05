@@ -195,7 +195,7 @@ Ansible on your development workstation.
 Ubuntu or Debian GNU/Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Tested on: Ubuntu 16.04 and Debian GNU/Linux stretch
+.. note:: Tested on: Debian GNU/Linux 10 Buster
 
 .. code:: sh
 
@@ -203,9 +203,9 @@ Ubuntu or Debian GNU/Linux
    sudo apt-get install -y build-essential libssl-dev libffi-dev python3-dev \
        dpkg-dev git linux-headers-$(uname -r) virtualbox
 
-We recommend using the latest stable version of Vagrant, ``1.8.5`` at the time
-of this writing, which might be newer than what is in your distro's package
-repositories. Older versions of Vagrant has been known to cause problems
+We recommend using the most recent version of Vagrant available in your distro's
+package repositories. For Debian Stable, that's ``2.2.3`` at the time
+of this writing. Older versions of Vagrant has been known to cause problems
 (`GitHub #932`_, `GitHub #1381`_). If ``apt-cache policy vagrant`` says your
 candidate version is not at least 1.8.5, you should download the current version
 from the `Vagrant Downloads page`_ and then install it.
