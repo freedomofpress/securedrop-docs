@@ -40,6 +40,7 @@ Debian packages on the staging machines:
 
 .. code:: sh
 
+   sudo apt install python-enchant
    make build-debs
    make staging
    molecule login -s libvirt-staging-focal -h app-staging
