@@ -11,13 +11,44 @@ any questions, please email securedrop@freedom.press.
 Hardware Overview
 -----------------
 
+.. _Required Hardware:
+
 For an installation of SecureDrop, you must acquire:
 
-.. include:: includes/pre-install-hardware-required.txt
+* 2 computers with memory and hard drives to use as the SecureDrop servers.
+* Mouse, keyboard, monitor (and necessary dongle or adapter) for
+  installing the servers.
+* At least 2 dedicated physical computers that can boot to Tails: one
+  computer for the *Secure Viewing Station*, and one or more computers for the
+  *Admin Workstation(s)/Journalist Workstation(s)*.
+* Dedicated airgapped hardware for the mouse, keyboard, and monitor (only if you
+  are using a desktop for the *Secure Viewing Station*).
+* Network firewall.
+* At least 3 ethernet cables.
+* Plenty of USB sticks: 1 drive for the master Tails stick, 1 drive for each
+  Secure Viewing Station, 1 drive for each *Transfer Device*, 1 drive for each
+  *Export Device*, and 1 drive for each admin and journalist.
+
+.. _Optional Hardware:
 
 Additionally, you may want to consider the following purchases:
 
-.. include:: includes/pre-install-hardware-optional.txt
+* a printer without wireless network support, to use in combination with the
+  *Secure Viewing Station*.
+* an external hard drive to expand the storage capacity of the
+  *Secure Viewing Station*.
+* an external hard drive for server backups.
+* a USB drive to store :ref:`backups of your Tails workstation drives <backup_workstations>`.
+* a network switch, if you use a firewall with fewer than four ports.
+* a security key for HOTP authentication, such as a YubiKey, if you want to
+  use hardware-based two-factor authentication instead of a mobile app.
+* a USB drive with a physical write protection switch, or a USB write blocker,
+  if you want to mitigate the risk of introducing malware from your network to
+  your *Secure Viewing Station* during repeated use of an *Export Device*.
+* CD-R/DVD-R writers, if you want to use CD-Rs/DVD-Rs as transfer or export
+  media, and a CD shredder that can destroy media consistent with your threat
+  model.
+
 
 In the sections that follow, we provide additional details on most of these
 items.
