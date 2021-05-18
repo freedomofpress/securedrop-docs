@@ -83,7 +83,6 @@ anonymous sources.
    getting_support
    v3_services
    update_bios
-   upgrade_to_tails_4
    offboarding
    decommission
 
@@ -93,10 +92,10 @@ anonymous sources.
    :maxdepth: 2
 
    upgrade/focal_migration.rst
+   upgrade/1.8.1_to_1.8.2.rst
    upgrade/1.8.0_to_1.8.1.rst
    upgrade/1.7.1_to_1.8.0.rst
    upgrade/1.7.0_to_1.7.1.rst
-   upgrade/1.6.0_to_1.7.0.rst
 
 .. toctree::
    :caption: Developer Documentation

@@ -1,19 +1,21 @@
-Upgrade from 1.7.0 to 1.7.1
+Upgrade from 1.8.1 to 1.8.2
 ===========================
 
-SecureDrop 1.7.1 is a bugfix release to address an issue introduced in
-SecureDrop 1.7.0 which caused an outage for some long-running SecureDrop
-instances.
+.. important::
 
-Automatic server upgrades
--------------------------
-As with previous releases, your servers will be upgraded to the latest version
-of SecureDrop automatically within 24 hours of the release.
+   If you have not migrated your servers to Ubuntu 20.04 yet, you must do so
+   at the earliest opportunity. Servers running on Ubuntu 16.04 no longer
+   receive operating system or SecureDrop software updates at this point.
 
-Because this release resolves an ongoing outage for some instances, you may
-want to :ref:`apply it immediately <immediate_update>`.
+   Please see our :doc:`migration guide <focal_migration>` for instructions
+   for performing a migration, or :doc:`reinstall SecureDrop <../overview>`.
 
-Updating Workstations to SecureDrop 1.7.1
+Updating Servers to SecureDrop 1.8.2
+------------------------------------
+Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
+automatically within 24 hours of the release.
+
+Updating Workstations to SecureDrop 1.8.2
 -----------------------------------------
 
 Using the graphical updater
@@ -23,7 +25,7 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 1.7.1 by clicking "Update Now":
+Perform the update to 1.8.2 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
@@ -43,7 +45,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2224 5C81 E3BA EB41 38B3 6061 310F 5612 00F4 AD77"
-  git tag -v 1.7.1
+  git tag -v 1.8.2
 
 The output should include the following two lines: ::
 
@@ -54,9 +56,9 @@ Please verify that each character of the fingerprint above matches what is
 on the screen of your workstation. If it does, you can check out the
 new release: ::
 
-    git checkout 1.7.1
+    git checkout 1.8.2
 
-.. important:: If you do see the warning "refname '1.7.1' is ambiguous" in the
+.. important:: If you do see the warning "refname '1.8.2' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -64,6 +66,18 @@ Finally, run the following commands: ::
 
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
+
+Updating Tails
+--------------
+Check the version of Tails on your *Admin* and *Journalist Workstations*
+(**Applications ▸ Tails ▸ About Tails**). If your workstations are running Tails
+version 4.14 or earlier, you will not receive an update notification due to a
+bug. Perform a :ref:`manual update <Update Tails Manually>`, or reinstate
+automatic updates by following the steps in the
+`Tails advisory <https://tails.boum.org/news/version_4.14/broken_upgrades/index.en.html>`__.
+
+If you are running Tails 4.15 or later, follow the graphical prompts to update
+to the latest version.
 
 Getting Support
 ---------------
