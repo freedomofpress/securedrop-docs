@@ -7,10 +7,11 @@ Overview
 --------
 
 SecureDrop is a multi-machine design. To make development and testing
-easy, we provide a set of virtual environments, each tailored for a
-specific type of development task. We use Vagrant, Molecule, and
-Docker and our Ansible playbooks can provision these environments on
-either virtual machines or physical hardware.
+easier, we provide a set of virtual environments, each tailored for a
+specific type of development task. We use Ansible playbooks to provision
+these environments on either virtual machines or physical hardware. We
+use Libvirt to manage our virtual machines, Docker to run them, and
+Molecule to test the provisioning logic.
 
 Quick Start
 -----------
