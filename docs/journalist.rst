@@ -142,27 +142,6 @@ the *Submission Private Key*. To recall the conversation history between your
 organization and sources, you can also download replies and transfer them to
 the *Secure Viewing Station* for decryption.
 
-Flag for Reply
-~~~~~~~~~~~~~~
-
-If the server experiences a large number of new sources signing up at
-once and is overloaded with submissions, you will need to flag sources
-for reply before you can communicate with them. Click the **Flag this
-source for reply** button.
-
-|Flag for reply button|
-
-After clicking the **Flag this source for reply** button, you will see
-this confirmation page. Click through to get back to the page that
-displays that source's documents and replies.
-
-|Flag for reply notification|
-
-You will not be able to reply until after the source logs in again and
-sees that you would like to talk to them. So you may have to sit and wait.
-After the source sees that you'd like to reply, a GPG key pair will
-automatically be generated and you can log back in and send a reply.
-
 Moving Documents to the *Secure Viewing Station*
 ------------------------------------------------
 
@@ -709,8 +688,6 @@ bottom of the page. You will be prompted for confirmation:
 .. |Decrypted documents| image:: images/manual/viewing3.png
 .. |Opened document| image:: images/manual/viewing4.png
 .. |Sent reply| image:: images/manual/screenshots/journalist-composes_reply.png
-.. |Flag for reply button| image:: images/manual/screenshots/journalist-col_has_no_key.png
-.. |Flag for reply notification| image:: images/manual/screenshots/journalist-col_flagged.png
 .. |Delete sources| image:: images/manual/screenshots/journalist-delete_sources.png
 .. |Delete individual submissions| image:: images/manual/screenshots/journalist-delete_submissions.png
 .. |Delete source account| image:: images/manual/screenshots/journalist-delete_source_account.png

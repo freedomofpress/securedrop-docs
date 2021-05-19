@@ -553,23 +553,6 @@ Response 200:
     "message": "Star removed"
   }
 
-Flag a source
-^^^^^^^^^^^^^
-
-Requires authentication.
-
-.. code:: sh
-
-  POST /api/v1/sources/<source_uuid>/flag
-
-Response 200:
-
-.. code:: json
-
-  {
-    "message": "Source flagged for reply"
-  }
-
 Submissions
 -----------
 
