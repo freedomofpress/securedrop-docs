@@ -15,9 +15,6 @@ one.
 .. note:: If you plan to alter the configuration of any of these machines, make sure to
           review the :ref:`config_tests` documentation.
 
-.. note:: If you see test failures due to ``Too many levels of symbolic links``
-          and you are using VirtualBox, try restarting VirtualBox.
-
 .. _staging_vms:
 
 Staging
@@ -56,48 +53,6 @@ To rebuild the local packages for the app code and update the staging VMs:
 
 The Debian packages will be rebuilt from the current state of your
 local git repository and then installed on the staging servers.
-
-.. note:: If you are using macOS and you run into errors from Ansible
-          such as ``OSError: [Errno 24] Too many open files``, you may need to
-          increase the maximum number of open files. Some guides online suggest
-          a procedure to do this that involves booting to recovery mode
-          and turning off System Integrity Protection (``csrutil disable``).
-          However this is a critical security feature and should not be
-          disabled. Instead follow this procedure to increase the file limit.
-
-          Set ``/Library/LaunchDaemons/limit.maxfiles.plist`` to the following:
-
-          .. code:: sh
-
-              <?xml version="1.0" encoding="UTF-8"?>
-              <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-                <plist version="1.0">
-                  <dict>
-                    <key>Label</key>
-                      <string>limit.maxfiles</string>
-                    <key>ProgramArguments</key>
-                      <array>
-                        <string>launchctl</string>
-                        <string>limit</string>
-                        <string>maxfiles</string>
-                        <string>65536</string>
-                        <string>65536</string>
-                      </array>
-                    <key>RunAtLoad</key>
-                      <true/>
-                    <key>ServiceIPC</key>
-                      <false/>
-                  </dict>
-                </plist>
-
-          The plist file should be owned by ``root:wheel``:
-
-          .. code:: sh
-
-            sudo chown root:wheel /Library/LaunchDaemons/limit.maxfiles.plist
-
-          This will increase the maximum open file limits system wide on macOS
-          (last tested on 10.11.6).
 
 The web interfaces and SSH are available over Tor. A copy of the the Onion URLs
 for *Source* and *Journalist Interfaces*, as well as SSH access, are written to the
@@ -173,8 +128,7 @@ playbook from running with Vagrant-specific info.
 You can provision production VMs from an Admin Workstation (most realistic),
 or from your host. If your host OS is Linux-based and you plan to use an Admin
 Workstation, you will need to switch Vagrant's default virtualization provider
-from ``virtualbox`` to  ``libvirt``.  The Admin Workstation VM configuration
-under Linux uses QEMU/KVM, which cannot run simultaneously with Virtualbox.
+to  ``libvirt``.
 
 Instructions for both installation methods follow.
 
@@ -370,4 +324,3 @@ SSH Access
 By default, direct SSH access is not enabled in the prod environment. You will need to log
 in over Tor after initial provisioning or set ``enable_ssh_over_tor`` to "false"
 during ``./securedrop-admin tailsconfig``.
-
