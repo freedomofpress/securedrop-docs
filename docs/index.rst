@@ -55,13 +55,6 @@ anonymous sources.
    deployment/sample_privacy_policy.rst
 
 .. toctree::
-   :caption: Checklists
-   :name: checklists
-   :maxdepth: 2
-
-   checklists/pre_install_hardware
-
-.. toctree::
    :caption: Topic Guides
    :name: topictoc
    :maxdepth: 2
