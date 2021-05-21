@@ -323,8 +323,6 @@ Release Process
    <https://support.freedom.press>`_ are notified about the release.
 #. Make sure that version string monitored by FPF's Icinga monitoring system
    is updated by the infrastructure team.
-#. Update the upgrade testing boxes following this process:
-   :ref:`updating_upgrade_boxes`.
 
 Post-Release
 ------------
