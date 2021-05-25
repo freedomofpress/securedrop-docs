@@ -12,8 +12,8 @@ backup exists, it is possible to rebuild one. In order to do so, you'll need
 
 The process requires experience with the Linux command line and Tails, and
 can take up to 3 hours. If a backup of the SecureDrop application server is available,
-:doc:`reinstalling the instance and restoring the backup <backup_and_restore>` 
-may be simpler. An outline of the steps involved in rebuilding an 
+:doc:`reinstalling the instance and restoring the backup <backup_and_restore>`
+may be simpler. An outline of the steps involved in rebuilding an
 *Admin Workstation* is as follows:
 
  #. Prepare the USB sticks.
@@ -23,7 +23,7 @@ may be simpler. An outline of the steps involved in rebuilding an
  #. Retrieve SecureDrop configuration settings from the *Application* and *Monitor Server*.
  #. Back up and configure the SecureDrop application.
  #. (Recommended) Re-enable SSH-over-Tor.
- #. Run the ``./securedrop-admin install`` and ``./securedrop-admin tailsconfig`` 
+ #. Run the ``./securedrop-admin install`` and ``./securedrop-admin tailsconfig``
     commands from the new *Admin Workstation*.
  #. Complete post-rebuild tasks.
 
@@ -65,11 +65,11 @@ server by booting in single user mode. In order to do so, you'll need physical
 access to the server, a keyboard, and a monitor.
 
 First, connect a monitor and keyboard to the *Monitor Server*. Then reboot the server.
-Enter the GRUB menu (instructions vary by hardware), ensure the **Ubuntu** 
+Enter the GRUB menu (instructions vary by hardware), ensure the **Ubuntu**
 entry is highlighted, and press **e** to edit boot options.
 
 In the boot options for Ubuntu, find the line that starts with ``linux`` and ends
-with ``noefi ipv6.disable=1 quiet``. Add ``single`` after ``quiet``, separated 
+with ``noefi ipv6.disable=1 quiet``. Add ``single`` after ``quiet``, separated
 by a space, and press **F10** to boot in single user mode.
 
 Reset the SecureDrop admin user's password
@@ -167,8 +167,8 @@ and deleting the line:
 
 Then, restart ``sshd`` using the command ``sudo service sshd restart``.
 
-Finally, check the file ``/etc/netplan/00-installer-config.yaml``, and note 
-the network settings for the default Ethernet interface. You'll need 
+Finally, check the file ``/etc/netplan/00-installer-config.yaml``, and note
+the network settings for the default Ethernet interface. You'll need
 them in the next step.
 
 Repeat the process above for the *Monitor Server*, making sure to note down its
@@ -238,8 +238,8 @@ In addition to the account and networking information retrieved from the servers
 so far, you'll need to retrieve the following files and info:
 
  - Tor Onion Service URLs and tokens
- - GPG *Submission Public Key*, OSSEC Alerts public key, and (optional) 
-   Journalist Alerts public key
+ - GPG *Submission Public Key*, *OSSEC Alert Public Key*, and (optional)
+   *Journalist Alert Public Key*
  - OSSEC alert configuration details
  - (Optional) HTTPS configuration details
 
@@ -281,23 +281,23 @@ using the command:
 
  curl http://$(cat app-sourcev3-ths)/metadata
 
-Next, note the OSSEC Alerts email address (``OSSEC_EMAIL``) and, if applicable, 
-the Journalist Alerts email address (``JOURNALIST_EMAIL``):  
+Next, note the OSSEC Alerts email address (``OSSEC_EMAIL``) and, if applicable,
+the Journalist Alerts email address (``JOURNALIST_EMAIL``):
 
 .. code:: sh
 
  ssh mon sudo cat /var/ossec/send_encrypted_alarm.sh | grep _EMAIL= | cut -f7 -d' '
 
-Import the *OSSEC Alert Public Key* using the following 
+Import the *OSSEC Alert Public Key* using the following
 commands (substituting the
 appropriate email address for ``alerts@example.com``):
 
 .. code:: sh
 
  ssh mon sudo gpg --homedir=/var/ossec/.gnupg --export --armor alerts@example.com > ossec.pub
- gpg --import ossec.pub 
+ gpg --import ossec.pub
 
-If a Journalist Alerts address has been configured, repeat this step for the 
+If a Journalist Alerts address has been configured, repeat this step for the
 *Journalist Alert Public Key*, naming it ``journalist.pub`` or similar.
 
 You will require the fingerprints for these keys during the next step, which you
@@ -371,7 +371,7 @@ previous steps. To do so, connect to the Tor network on the
 The ``sdconfig`` command will prompt you to fill in configuration details
 about your instance. Use the information retrieved in the previous steps.
 When prompted whether or not to enable SSH-over-Tor, type **no** to ensure
-that SSH-over-LAN remains enabled. 
+that SSH-over-LAN remains enabled.
 
 Next, back up the Application server by running the following command in the terminal:
 
@@ -384,34 +384,34 @@ Ensure the backup command completes successfully.
 Step 6 (Recommended): Re-enable SSH-over-Tor
 ============================================
 
-We recommend enabling SSH over Tor and disabling SSH-over-LAN. 
-To do so, run: 
+We recommend enabling SSH over Tor and disabling SSH-over-LAN.
+To do so, run:
 
 .. code:: sh
 
  ./securedrop-admin sdconfig
 
 Press "Enter" to accept the prepopulated values until you reach the
-SSH-over-Tor settings, this time typing **yes** to enable SSH-over-Tor. 
+SSH-over-Tor settings, this time typing **yes** to enable SSH-over-Tor.
 
-Step 7: Use the installer to fetch the server configuration
-===========================================================
+Step 7: Use the installer to complete the configuration
+=======================================================
 
 Run:
 
 .. code:: sh
 
- ./securedrop-admin install 
+ ./securedrop-admin install
 
 Once the command completes successfully, run
 
 .. code:: sh
 
- ./securedrop-admin tailsconfig 
+ ./securedrop-admin tailsconfig
 
 Once this command is complete:
 
- - verify that the Hostname references in ``~/.ssh/config`` have been updated 
+ - verify that the Hostname references in ``~/.ssh/config`` have been updated
    to refer to Onion URLs instead of direct IP addresses
  - verify that you can connect to
    the servers using ``ssh app`` and ``ssh mon``
@@ -436,7 +436,7 @@ We recommend completing the following tasks after the rebuild:
  - Verify that submissions can be decrypted, by going through the decryption
    workflow with a new submission.
  - Back up your *Admin Workstation* using the process
-   :ref:`documented here <backup_workstations>`. 
+   :ref:`documented here <backup_workstations>`.
  - Delete invalid admin accounts in the *Journalist Interface*.
  - Restrict SSH access to the *Application* and *Monitor Servers* to valid
    *Admin Workstions*. If your new *Admin Workstation* USB stick
