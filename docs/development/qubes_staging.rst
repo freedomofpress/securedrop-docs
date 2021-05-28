@@ -333,23 +333,23 @@ to the *Journalist Interface* (staging).
 In ``sd-dev``
 ~~~~~~~~~~~~~
 
-You will have to copy the ``app-journalist.auth_private`` file (located in 
-your ``sd-dev`` VM in ``${SECUREDROP_HOME}/install_files/ansible_base`` and 
-generated after a successful staging build) into your Whonix gateway 
+You will have to copy the ``app-journalist.auth_private`` file (located in
+your ``sd-dev`` VM in ``${SECUREDROP_HOME}/install_files/ansible-base`` and
+generated after a successful staging build) into your Whonix gateway
 VM. On standard Qubes installations this VM is called ``sys-whonix``.
 
 To do this, in an ``sd-dev`` terminal, run the command:
 
 .. code:: sh
-   
-   qvm-copy ${SECUREDROP_HOME})/install_files/ansible_base/app-journalist.auth_private
 
-and select ``sys-whonix`` in the resulting permissions dialog. 
+   qvm-copy ${SECUREDROP_HOME})/install_files/ansible-base/app-journalist.auth_private
+
+and select ``sys-whonix`` in the resulting permissions dialog.
 
 In the Whonix Gateway
 ~~~~~~~~~~~~~~~~~~~~~
 
-Open a terminal in ``sys-whonix`` and create a directory with appropriate 
+Open a terminal in ``sys-whonix`` and create a directory with appropriate
 ownership and permissions, then move your credential file there:
 
 .. code:: sh
@@ -358,7 +358,7 @@ ownership and permissions, then move your credential file there:
    sudo mv ~/QubesIncoming/sd-dev/app-journalist.auth_private /var/lib/tor/onion_auth
    sudo chown --recursive debian-tor:debian-tor /var/lib/tor/onion_auth
 
-Next, edit the Tor configuration so it recognizes the directory 
+Next, edit the Tor configuration so it recognizes the directory
 containing your credentials:
 
 .. code:: sh

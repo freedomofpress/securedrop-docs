@@ -212,7 +212,7 @@ On the Admin Workstation
 #. Take the *Transfer Device* with the new *Submission Public Key* and
    fingerprint to your *Admin Workstation*. As you did during the initial
    install, copy the public key, ``SecureDrop.asc``, to the
-   ``install_files/ansible_base/`` directory, replacing the existing public
+   ``install_files/ansible-base/`` directory, replacing the existing public
    key file that is there.
 
 
@@ -222,7 +222,7 @@ On the Admin Workstation
 
       ./securedrop-admin sdconfig
 
-   If the new public key that you placed in ``install_files/ansible_base``
+   If the new public key that you placed in ``install_files/ansible-base``
    has the same name as the old public key, ``SecureDrop.asc``, the
    only part of the configuration you will change is the SecureDrop
    *Submission Key* fingerprint, which you will update with the fingerprint
@@ -262,7 +262,7 @@ Return to the Secure Viewing Station
 
 
 #. If you have any other *Admin Workstations*, make sure that you have copied
-   the new *Submission Public Key* into the ``install_files/ansible_base``
+   the new *Submission Public Key* into the ``install_files/ansible-base``
    directory, replacing the old public key file, and updated the *Submission
    Public Key* fingerprint by running
 

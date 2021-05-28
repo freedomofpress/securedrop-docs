@@ -78,8 +78,8 @@ to access the servers over SSH.
 
   .. code-block:: none
 
-    ~/Persistent/securedrop/install_files/ansible_base/app-sourcev3-ths
-    ~/Persistent/securedrop/install_files/ansible_base/app-journalist.auth_private
+    ~/Persistent/securedrop/install_files/ansible-base/app-sourcev3-ths
+    ~/Persistent/securedrop/install_files/ansible-base/app-journalist.auth_private
 
   Then, boot into the new *Journalist Workstation* USB.
 
@@ -99,7 +99,7 @@ to access the servers over SSH.
 - Open a terminal and run the following commands:
 
   .. code:: sh
- 
+
     cd ~/Persistent/securedrop
     ./securedrop-admin setup
     ./securedrop-admin tailsconfig
