@@ -502,6 +502,23 @@ Response 200:
     "message": "Source and submissions deleted"
   }
 
+Delete a source conversation (messages/files/replies) while preserving the source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Requires authentication.
+
+.. code:: sh
+
+  DELETE /api/v1/sources/<source_uuid>/conversation
+
+Response 200:
+
+.. code:: json
+
+  {
+    "message": "Source data deleted"
+  }
+
 Star a source
 ^^^^^^^^^^^^^
 
