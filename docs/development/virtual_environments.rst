@@ -121,16 +121,7 @@ Production
 
 This is a production installation with all of the system hardening active, but
 virtualized, rather than running on hardware. You will need to
-:ref:`configure prod-like secrets<configure_securedrop>`, or export
-``ANSIBLE_ARGS="--skip-tags validate"`` to skip the tasks that prevent the prod
-playbook from running with Vagrant-specific info.
-
-You can provision production VMs from an Admin Workstation (most realistic),
-or from your host. If your host OS is Linux-based and you plan to use an Admin
-Workstation, you will need to switch Vagrant's default virtualization provider
-to  ``libvirt``.
-
-Instructions for both installation methods follow.
+use a virtualized Admin Workstation in order to provision these machines.
 
 .. _libvirt_provider:
 
@@ -221,9 +212,6 @@ Set the default Vagrant provider to ``libvirt``:
    export VAGRANT_DEFAULT_PROVIDER=libvirt
 
 
-.. note:: To explicitly specify the ``libvirt``  provider below, use the command
-   ``vagrant up --provider=libvirt /prod/``
-
 Convert Vagrant boxes to libvirt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Convert the VirtualBox images for Focal from ``virtualbox`` to ``libvirt`` format:
@@ -250,7 +238,7 @@ Once you're prepared the *Admin Workstation*, you can start each VM:
 
 .. code:: sh
 
-  vagrant up --no-provision /prod/
+  molecule create -s libvirt-focal-prod
 
 At this point you should be able to SSH into both ``app-prod`` and ``mon-prod``.
 From here you can follow the :ref:`server configuration instructions
@@ -278,49 +266,3 @@ After install you can configure your Admin Workstation to SSH into each VM via:
 .. code:: sh
 
   ./securedrop-admin tailsconfig
-
-Install from Host OS
-~~~~~~~~~~~~~~~~~~~~
-
-If you are not virtualizing Tails, you can manually modify ``site-specific``,
-and then provision the machines. You should set the following options in
-``site-specific``:
-
-.. code:: sh
-
-  ssh_users: "vagrant"
-  monitor_ip: "10.0.1.5"
-  monitor_hostname: "mon-prod"
-  app_hostname: "app-prod"
-  app_ip: "10.0.1.4"
-
-Note that you will also need to generate Submission and OSSEC PGP public keys,
-and provide email credentials to send emails to. Refer to
-:ref:`this document on configuring prod-like secrets<configure_securedrop>`
-for more details on those steps.
-
-To create the prod servers, run:
-
-.. code:: sh
-
-   vagrant up /prod/
-   vagrant ssh app-prod
-   sudo -u www-data bash
-   cd /var/www/securedrop/
-   ./manage.py add-admin
-
-A copy of the Onion URLs for Source and Journalist Interfaces, as well as
-SSH access, are written to the Vagrant host's ``install_files/ansible-base``
-directory, named:
-
-* ``app-sourcev3-ths``
-* ``app-journalist.auth_private``
-* ``app-ssh.auth_private``
-* ``mon-ssh.auth_private``
-
-SSH Access
-~~~~~~~~~~
-
-By default, direct SSH access is not enabled in the prod environment. You will need to log
-in over Tor after initial provisioning or set ``enable_ssh_over_tor`` to "false"
-during ``./securedrop-admin tailsconfig``.

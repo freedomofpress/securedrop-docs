@@ -9,15 +9,10 @@ existing system. This document explains how to work with this scenario to test
 features that make potentially release-breaking changes such as database
 schema updates.
 
-The Molecule upgrade scenario sets up a predefined staging Securedrop virtual
-environment using Vagrant boxes built with the latest application release.
-It also creates a virtualized APT repository, and modifies
-the SecureDrop environment to use this APT repository instead of the FPF main
-repo at https://apt.freedom.press/.
-
-You can use this scenario to test the upgrade process, using using either
-locally-built .debs or packages from the FPF test repo at
-https://apt-test.freedom.press/. Both options are described below.
+The Molecule upgrade scenario sets up a local apt server, to imitate
+how new package versions will be installed in production. You'll need
+to use a virtualized Admin Workstation to configure the base server VMs
+with the current stable version, prior to testing the upgrade.
 
 .. note:: The upgrade scenario uses QEMU/KVM via Vagrant's libvirt provider.
    If you haven't already done so, you'll need to set up the libvirt provider
@@ -28,102 +23,74 @@ https://apt-test.freedom.press/. Both options are described below.
 Upgrade testing using locally-built packages
 --------------------------------------------
 
-First, build the app code packages and create the environment:
+First, create prod VMs for use with the current stable version.
+These machines will be upgraded with newer, locally built deb packages
+in a subsequent step.
+
+.. code:: sh
+
+  molecule create -s libvirt-prod-focal
+
+Next, boot your Admin Workstation VM and proceed with a full install
+on these VMs, via ``./securedrop-admin install``. Make sure to run
+``./securedrop-admin tailsconfig`` to finalize the installation.
+
+Next, build the app code packages and create the environment:
 
 .. code:: sh
 
  make build-debs
  make upgrade-start
 
-The playbook will return the source interface Onion address. You can use this to
-check the application version displayed in the source interface footer.
-Alternatively, you can log into the *Application Server* VM and check the deployed
-package version directly:
+The playbook will create a local apt server on your host machine, and
+serve the locally built deb packages from that local endpoint.
+In order to add the local apt server to the VMs, switch back to
+the Admin Workstation and run:
 
 .. code:: sh
 
-   molecule login -s upgrade -h app-staging
+   source admin/.venv3/bin/activate
+   cd install_files/ansible-base
+   ansible-playbook -vv --diff securedrop-apt-local.yml
+
+Both VMs will now be able to be able to view newer, locally built packages.
+To confirm:
+
+.. code:: sh
+
+   molecule login -s libvirt-prod-focal -h app-prod
 
 From the *Application Server*:
 
 .. code:: sh
 
-   apt-cache-policy securedrop-config
+   apt-cache-policy securedrop-app-code
 
-The installed package version should match the latest release version.
-
-To perform an upgrade using the virtualized APT repository, log out of the
-*Application Server* and run the Molecule side-effect action:
-
-.. code:: sh
-
-   make upgrade-test-local
-
-This will upgrade the SecureDrop packages on the *Application* and
-*Monitor Servers*, using your locally-built packages and apt VM instead of the
-FPF production apt repository.
-
-You can verify that the application version has changed either by checking the
-source interface's footer or directly on the *Application Server* as described
-above.
-
-.. _upgrade_testing_apt:
+The installed package version should match the latest stable version,
+but the locally built package with higher version should be available
+as a candidate for installation.
 
 Upgrade testing using apt-test.freedom.press
 --------------------------------------------
 
-You can use the upgrade scenario to test upgrades using official release
-candidate packages from the FPF test APT repository. First,
-create the environment:
+You can also evaluate packages on the https://apt-test.freedom.press/
+repository. As above, create prod VMs and configure them via the
+Admin Workstation. After installation, you can enable the ``apt-test``
+repo like so:
 
 .. code:: sh
 
-   make upgrade-start-qa
+   source admin/.venv3/bin/activate
+   cd install_files/ansible-base
+   ansible-playbook -vv --diff securedrop-qa.yml
 
 Then, log into the *Application Server*:
 
 .. code:: sh
 
-   molecule login -s upgrade -h app-staging
-
-From the *Application Server*:
-
-.. code:: sh
-
-   sudo apt-get update
+   molecule login -s libvirt-prod-focal -h app-prod
    apt-cache policy securedrop-config
 
-The installed package version should match the current release version.
-To install the latest packages from the apt-test proxy:
-
-.. code:: sh
-
-   make upgrade-test-qa
-
-Log back into the *Application Server*, and repeat the previous commands:
-
-.. code:: sh
-
-   sudo apt-get update
-   apt-cache policy securedrop-config
-
-Navigate to the Source Interface URL again, and confirm you see the upgraded
-version in the footer. Then proceed with testing the new version.
-
-.. _updating_upgrade_boxes:
-
-Updating the base boxes used for upgrade testing
-------------------------------------------------
-
-When a new version of SecureDrop is released, we must create and upload
-new VM images, to enable testing against that base version in future upgrade
-testing. The procedure is as follows:
-
-1. ``make clean`` to remove any previous artifacts (which would also be pushed)
-#. ``git checkout <version>``
-#. ``make vagrant-package``
-#. ``cd molecule/vagrant-packager && ./push.yml`` to upload to S3
-#. Commit the local changes to JSON files and open a PR.
-
-Subsequent invocations of ``make upgrade-start`` will pull the latest
-version of the box.
+The installed package version should match the latest stable version,
+with the locally built package of a higher version available
+as a candidate for installation.

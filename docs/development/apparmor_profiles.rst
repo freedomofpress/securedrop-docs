@@ -3,8 +3,8 @@ Generating AppArmor Profiles for Tor and Apache
 
 .. code:: sh
 
-    vagrant up /staging$/
-    vagrant ssh app-staging
+    make staging
+    molecule login -s libvirt-staging-focal -h app-staging
     sudo su
     cd /var/www/securedrop
 
