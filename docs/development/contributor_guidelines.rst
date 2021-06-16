@@ -96,6 +96,22 @@ our HTML templates in ``securedrop/source_templates`` and
 
       make html-lint
 
+Accessibility
+^^^^^^^^^^^^^
+
+SecureDrop's accessibility guidelines and tooling are a work in progress.  At
+a minimum, if you make changes involving images, make sure they have ``alt``
+attributes in accordance with the W3C's `"alt decision tree"
+<https://www.w3.org/WAI/tutorials/images/decision-tree/>`_, so that the
+interfaces will be navigable by people using screen-readers. For more-involved
+changes to the UIs, consult resources such as `the A11y Project checklist
+<https://www.a11yproject.com/checklist/>`_.
+
+If you have accessibility expertise to offer, the `"a11y" label
+<https://github.com/freedomofpress/securedrop/labels/a11y>`_ in GitHub is a
+great place to contribute.
+
+
 YAML
 ~~~~
 
