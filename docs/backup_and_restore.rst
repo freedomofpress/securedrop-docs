@@ -229,7 +229,7 @@ Migrating Using a V2+V3 or V3-Only Backup
 
       cd ~/Persistent/securedrop/
       git fetch --tags
-      git tag -v 1.8.2
+      git tag -v 2.0.0
 
    The output should include the following two lines:
 
@@ -239,6 +239,7 @@ Migrating Using a V2+V3 or V3-Only Backup
       gpg: Good signature from "SecureDrop Release Signing Key"
 
 
+   .. include:: includes/release-key-transition.txt
    .. important::
       If you do not see the message above, signature verification has failed
       and you should **not** proceed with the installation. If this happens,
@@ -250,10 +251,10 @@ Migrating Using a V2+V3 or V3-Only Backup
 
    .. code:: sh
 
-      git checkout 1.8.2
+      git checkout 2.0.0
 
    .. important::
-      If you see the warning ``refname '1.8.2' is ambiguous`` in the
+      If you see the warning ``refname '2.0.0' is ambiguous`` in the
       output, we recommend that you contact us immediately at
       securedrop@freedom.press
       (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
@@ -471,7 +472,7 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
       cd ~/Persistent/securedrop/
       git fetch --tags
-      git tag -v 1.8.2
+      git tag -v 2.0.0
 
    The output should include the following two lines:
 
@@ -480,7 +481,7 @@ source accounts, and journalist accounts. To do so, follow the steps below:
       gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
       gpg: Good signature from "SecureDrop Release Signing Key"
 
-
+   .. include:: includes/release-key-transition.txt
    .. important::
        If you do not see the message above, signature verification has failed
        and you should **not** proceed with the installation. If this happens,
@@ -491,11 +492,11 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
    .. code:: sh
 
-      git checkout 1.8.2
+      git checkout 2.0.0
 
 
    .. important::
-      If you see the warning ``refname '1.8.2' is ambiguous`` in the
+      If you see the warning ``refname '2.0.0' is ambiguous`` in the
       output, we recommend that you contact us immediately at
       securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -530,7 +531,7 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
    .. note::
 
-      You may need to wait approximately 10-15 minutes after installing 
+      You may need to wait approximately 10-15 minutes after installing
       Ubuntu 20.04 for the servers to become reachable via SSH.
 
 #. Reinstall SecureDrop on the servers, following the :doc:`installation

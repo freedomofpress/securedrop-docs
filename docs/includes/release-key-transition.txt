@@ -1,0 +1,5 @@
+.. note::
+
+   The release key above will be allowed to expire on June 30, 2021. Future
+   releases will be signed using a new key with a new fingerprint. See our dual-signed
+   `transition statement <https://media.securedrop.org/media/documents/signing-key-transition.txt>`_.
