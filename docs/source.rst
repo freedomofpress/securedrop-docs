@@ -16,21 +16,21 @@ Source Guide
    communications with them. If you plan to use SecureDrop to maintain your
    anonymity, you should not discuss your own use of it with others via unsafe
    methods, including email to Freedom of the Press Foundation.
-   
+
 What is SecureDrop?
 ---------------------------
 
-Dozens of news organizations — from *ProPublica* to *The New York Times* — use 
-SecureDrop to accept tips securely and anonymously. You can reach out and share 
-files, and messages, but for real anonymity, it’s important to take some extra 
-precautions. This resource will describe things you can do to help protect your 
+Dozens of news organizations — from *ProPublica* to *The New York Times* — use
+SecureDrop to accept tips securely and anonymously. You can reach out and share
+files, and messages, but for real anonymity, it’s important to take some extra
+precautions. This resource will describe things you can do to help protect your
 anonymity when using SecureDrop.
 
-Before moving ahead, note that your Internet Service Provider, or ISP (e.g., 
-Comcast), may already have a record of your visit to this website, 
-docs.securedrop.org. Likewise, any related activity should be conducted outside 
-of your workplace; if you are reading this page on a workplace device or 
-network, they may also have a record of that. 
+Before moving ahead, note that your Internet Service Provider, or ISP (e.g.,
+Comcast), may already have a record of your visit to this website,
+docs.securedrop.org. Likewise, any related activity should be conducted outside
+of your workplace; if you are reading this page on a workplace device or
+network, they may also have a record of that.
 
 Here are some things you can do to further minimize risk.
 
@@ -40,9 +40,9 @@ Choosing the Right Location
 
 If you don’t have sensitive information to send to a news organization, it may
 be okay to use a traditional computer when reaching out. But when sensitive
-disclosures (e.g., national security) are involved, we suggest you buy a new 
-computer and a USB flash drive, using cash. Either way, you should then find a 
-busy cafe you don’t regularly go to and sit at a place with your back to a 
+disclosures (e.g., national security) are involved, we suggest you buy a new
+computer and a USB flash drive, using cash. Either way, you should then find a
+busy cafe you don’t regularly go to and sit at a place with your back to a
 wall to avoid cameras capturing information on your screen or keystrokes.
 
 Get Tor Browser
@@ -75,14 +75,14 @@ last time you used Tor Browser.
 
 In general, when you are trying to stay anonymous, many time-saving features of
 your computer or phone turn into threats: bookmarks, recommendations,
-synchronization features, shortcuts to frequently opened files, and so on. This 
+synchronization features, shortcuts to frequently opened files, and so on. This
 is why using a dedicated computer for whistleblowing activities is generally safer.
 
 For greater deniability and security, we recommend booting the computer into the
 `Tails operating system`_ (typically from a USB stick). Tails is specifically
 designed to run on your computer without leaving traces of your activity or
 saving logs. It automatically routes all of your Internet browsing through Tor
-so you can easily access SecureDrop safely. This may take some additional 
+so you can easily access SecureDrop safely. This may take some additional
 technical steps, but it’s safer, and fairly simple to get started.
 
 Even if you are using a dedicated computer for your SecureDrop activity that you
@@ -107,8 +107,8 @@ We recommend conducting all research related to your submission in Tor Browser.
 If you are unsure whether you are using Tor, you can visit the address
 https://check.torproject.org.
 
-All organizations operating SecureDrop have a *landing page* that provides their 
-own organization-specific recommendations for using SecureDrop. We encourage 
+All organizations operating SecureDrop have a *landing page* that provides their
+own organization-specific recommendations for using SecureDrop. We encourage
 you to consider an organization’s *landing page* before submitting to them.
 
 .. note::
@@ -149,9 +149,9 @@ Browser to visit the organization's SecureDrop.
 Making Your First Submission
 ----------------------------
 
-Open Tor Browser and navigate to the .onion address for the SecureDrop you wish 
-to make a submission to. The page should look similar to the screenshot below, 
-although it will probably have a logo specific to the organization you are 
+Open Tor Browser and navigate to the .onion address for the SecureDrop you wish
+to make a submission to. The page should look similar to the screenshot below,
+although it will probably have a logo specific to the organization you are
 submitting to:
 
 |Source Interface with Javascript Disabled|
@@ -270,17 +270,6 @@ below message.
 
 |Delete received messages|
 
-If the server is experiencing a surge in traffic, you may see the message below:
-
-|Check for an initial response|
-
-This will only happen once for a given codename. It means that the journalist
-wants to reply to your submission, but for security reasons, they cannot do so
-until you've seen this message. Log in again at a later time to see if the
-journalist has responded.
-
-Repeat these steps to continue communicating with the journalist.
-
 .. |Source Interface Security Slider Warning| image:: images/manual/securedrop-security-slider-warning.png
 .. |Security Slider| image:: images/manual/source-turn-slider-to-high.png
 .. |Fix Javascript warning| image:: images/manual/security-slider-high.png
@@ -301,5 +290,3 @@ Repeat these steps to continue communicating with the journalist.
   image:: images/manual/screenshots/source-checks_for_reply.png
 .. |Delete received messages|
   image:: images/manual/screenshots/source-deletes_reply.png
-.. |Check for an initial response|
-  image:: images/manual/screenshots/source-flagged.png

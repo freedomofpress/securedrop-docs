@@ -553,23 +553,6 @@ Response 200:
     "message": "Star removed"
   }
 
-Flag a source
-^^^^^^^^^^^^^
-
-Requires authentication.
-
-.. code:: sh
-
-  POST /api/v1/sources/<source_uuid>/flag
-
-Response 200:
-
-.. code:: json
-
-  {
-    "message": "Source flagged for reply"
-  }
-
 Submissions
 -----------
 
@@ -793,3 +776,21 @@ response body:
 
 None of the requested items will be marked seen if any of them cannot
 be found.
+
+
+Removed functionality
+~~~~~~~~~~~~~~~~~~~~~
+
+Flagging sources
+----------------
+
+Previous versions of the API supported flagging sources for reply, which would
+generate a reply keypair for the source upon their next login. This
+functionality was removed in SecureDrop 2.0.0.
+
+The ``/api/v1/sources/<source_uuid>/flag`` endpoint (``POST``) and the
+``is_flagged`` property for sources are retained for backwards compatibility,
+but no longer function. ``is_flagged`` is always ``false``.
+
+The endpoint and the ``is_flagged`` property will be fully removed from the API
+in a future release.
