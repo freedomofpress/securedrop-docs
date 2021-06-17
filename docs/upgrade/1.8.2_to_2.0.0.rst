@@ -12,6 +12,12 @@ Updating Servers to SecureDrop 2.0.0
 Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
 automatically within 24 hours of the release.
 
+.. important::
+
+   If your servers are still running Ubuntu 16.04, you will not receive this
+   update, as the operating system has reached its end-of-life. Please
+   contact us if you require assistance reinstalling SecureDrop.
+
 Updating Workstations to SecureDrop 2.0.0
 -----------------------------------------
 
