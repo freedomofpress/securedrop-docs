@@ -22,7 +22,6 @@ may be simpler. An outline of the steps involved in rebuilding an
  #. Set up SSH access for the new *Admin Workstation*.
  #. Retrieve SecureDrop configuration settings from the *Application* and *Monitor Server*.
  #. Back up and configure the SecureDrop application.
- #. (Recommended) Re-enable SSH-over-Tor.
  #. Run the ``./securedrop-admin install`` and ``./securedrop-admin tailsconfig``
     commands from the new *Admin Workstation*.
  #. Complete post-rebuild tasks.
@@ -165,14 +164,13 @@ and deleting the line:
 
   PasswordAuthentication no
 
-Then, restart ``sshd`` using the command ``sudo service sshd restart``.
+Restart ``sshd`` using the command ``sudo service sshd restart``.
 
-Finally, check the file ``/etc/netplan/00-installer-config.yaml``, and note
-the network settings for the default Ethernet interface. You'll need
-them in the next step.
+Then, use the command ``ip a`` to note the local IP address of the 
+default Ethernet interface. You'll need it in the next step.
 
-Repeat the process above for the *Monitor Server*, making sure to note down its
-network settings as well.
+Repeat the process above for the *Monitor Server*, making sure to note its
+local IP address as well.
 
 .. _rebuild_ssh_over_lan:
 
@@ -189,13 +187,13 @@ First, log on to the *Application Server* via the console and edit the file
 
   PasswordAuthentication no
 
-Then, restart ``sshd`` using the command ``sudo service sshd restart``.
+Restart ``sshd`` using the command ``sudo service sshd restart``.
 
-Finally, check the file ``/etc/netplan/00-installer-config.yaml``, and note down the network
-settings for the default Ethernet interface. You'll need them in the next step.
+Then, use the command ``ip a`` to note the local IP address for the 
+default Ethernet interface. You'll need it in the next step.
 
-Repeat the process above for the *Monitor Server*, making sure to note down its
-network settings as well.
+Repeat the process above for the *Monitor Server*, making sure to note its
+local IP address as well.
 
 .. _enabling_access_from_admin:
 
@@ -237,24 +235,10 @@ Step 4: Retrieve SecureDrop configuration info from the servers
 In addition to the account and networking information retrieved from the servers
 so far, you'll need to retrieve the following files and info:
 
- - Tor Onion Service URLs and tokens
  - GPG *Submission Public Key*, *OSSEC Alert Public Key*, and (optional)
    *Journalist Alert Public Key*
  - OSSEC alert configuration details
  - (Optional) HTTPS configuration details
-
-Retrieve Onion Service Info
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In order to connect to the onion services used by your instance, you will
-need to copy their details to the *Admin Workstation*. To do so, run the following
-commands from a Terminal window:
-
-.. code:: sh
-
- cd ~/Persistent/securedrop/install_files/ansible-base
- echo "$(ssh app sudo cat /var/lib/tor/services/journalistv3/hostname)" \
-    > app-journalistv3-ths
- echo "$(ssh app sudo cat /var/lib/tor/services/sourcev3/hostname)" > app-sourcev3-ths
 
 Retrieve GPG Public Keys
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -263,8 +247,9 @@ Copy the *Submission Public Key* with the following commands:
 
 .. code:: sh
 
+ echo "$(ssh app sudo cat /var/lib/tor/services/sourcev3/hostname)" > /tmp/sourcev3
  cd ~/Persistent/securedrop/install_files/ansible-base
- curl http://$(cat app-sourcev3-ths)/public-key > SecureDrop.asc
+ curl http://$(cat /tmp/sourcev3)/public-key > SecureDrop.asc
  gpg --import SecureDrop.asc
 
 Validate that the imported key's fingerprint matches the one on your
@@ -279,7 +264,7 @@ using the command:
 
 .. code:: sh
 
- curl http://$(cat app-sourcev3-ths)/metadata
+ curl http://$(cat /tmp/sourcev3)/metadata
 
 Next, note the OSSEC Alerts email address (``OSSEC_EMAIL``) and, if applicable,
 the Journalist Alerts email address (``JOURNALIST_EMAIL``):
@@ -370,8 +355,7 @@ previous steps. To do so, connect to the Tor network on the
 
 The ``sdconfig`` command will prompt you to fill in configuration details
 about your instance. Use the information retrieved in the previous steps.
-When prompted whether or not to enable SSH-over-Tor, type **no** to ensure
-that SSH-over-LAN remains enabled.
+When prompted whether or not to enable SSH-over-Tor, type **yes** (recommended).
 
 Next, back up the Application server by running the following command in the terminal:
 
@@ -381,20 +365,7 @@ Next, back up the Application server by running the following command in the ter
 
 Ensure the backup command completes successfully.
 
-Step 6 (Recommended): Re-enable SSH-over-Tor
-============================================
-
-We recommend enabling SSH over Tor and disabling SSH-over-LAN.
-To do so, run:
-
-.. code:: sh
-
- ./securedrop-admin sdconfig
-
-Press "Enter" to accept the prepopulated values until you reach the
-SSH-over-Tor settings, this time typing **yes** to enable SSH-over-Tor.
-
-Step 7: Use the installer to complete the configuration
+Step 6: Use the installer to complete the configuration
 =======================================================
 
 Run:
@@ -429,6 +400,14 @@ should reboot the servers, by issuing the following commands in a terminal:
 Step 8: Post-rebuild tasks
 ==========================
 
+.. important:: 
+   Rebuilding an Admin Workstation makes changes that will prevent
+   your other Tails workstations from connecting to your SecureDrop
+   servers.
+   If you rebuild your Admin Workstation, you must also provision 
+   all other existing Tails Workstation USBs with updated Tor 
+   credentials (see below).    
+   
 We recommend completing the following tasks after the rebuild:
 
  - Set up a new administration account on the *Journalist Interface*, by following
@@ -454,3 +433,22 @@ We recommend completing the following tasks after the rebuild:
    sure not to remove the public key belonging to your new *Admin Workstation*.
  - :doc:`Back up the Application server <backup_and_restore>` once SSH-over-Tor has
    been restored. Ensure that server and workstation backups happen regularly.
+ - Provision all other Tails Workstation USBs (*Journalist* and/or *Admin Workstations*)
+   with updated Tor credentials, so that they can access SecureDrop after this rebuild.
+   
+   You will need to copy the following file(s) to all other *Admin* and 
+   *Journalist Workstations*, replacing the existing files of the same name: 
+
+   .. code:: sh
+  
+    ~/Persistent/securedrop/install_files/ansible-base/app-journalist.auth_private  
+    ~/Persistent/securedrop/install_files/ansible-base/tor-v3-keys.json # for Admin Workstations only  
+
+   You may copy these files using a *Trasnfer Device* (which must be wiped afterwards), 
+   or boot into each of your additional Tails workstations, plug in and unlock your 
+   *Admin Workstation*'s encrypted partition via the **Places** app, and manually copy
+   the file(s) from the Admin Workstation to the same directory on the target Tails 
+   workstation.   
+
+ 
+      
