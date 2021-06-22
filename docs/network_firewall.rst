@@ -737,11 +737,9 @@ If you see that an update is available, we recommend installing it. Most
 of these updates are for minor bugfixes, but occasionally they can
 contain important security fixes. You should keep apprised of updates
 yourself by checking the `pfSense Blog posts with the "releases"
-tag <https://www.netgate.com/blog/category.html#releases>`__.
+tag <https://www.netgate.com/blog/tag/releases>`__.
 
-.. note:: Protip: Subscribe to the `RSS feed`_.
-
-.. _RSS feed: https://www.netgate.com/feed.xml
+.. note:: You can subscribe to email updates on https://www.netgate.com.
 
 To install the update, click the Download icon next to the update then click
 the "Confirm" button:
