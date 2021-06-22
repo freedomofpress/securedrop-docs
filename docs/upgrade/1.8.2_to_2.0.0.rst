@@ -23,6 +23,14 @@ Updating Workstations to SecureDrop 2.0.0
 
 Using the graphical updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. important::
+
+   Attempting to update to 2.0.0 using the graphical updater will fail
+   after June 29, 2021. This is due to the expiry of the signing key used for
+   this release. If you are updating a *Journalist Workstation* or
+   *Admin Workstation* after June 29, you must do so manually; see below.
+
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
 the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
@@ -35,7 +43,7 @@ Perform the update to 2.0.0 by clicking "Update Now":
 Performing a manual update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If the graphical updater fails and you want to perform a manual update instead,
+If the graphical updater fails and you need to perform a manual update instead,
 first delete the graphical updater's temporary flag file, if it exists (the
 ``.`` before ``securedrop`` is not a typo): ::
 
