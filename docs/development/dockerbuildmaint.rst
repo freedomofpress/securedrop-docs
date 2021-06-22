@@ -4,9 +4,9 @@ Build container
 ===============
 We use a Docker build container to build our debian packages for SecureDrop (via ``make build-debs``
 in the ``securedrop`` Github repository root directory). We keep images of this our container in a
-Docker repository at **quay.io/freedomofpress**. The images are organized by Ubuntu release
+Docker repository at https://quay.io/freedomofpress. The images are organized by Ubuntu release
 version. For instance, you can find the images for Focal at
-**quay.io/freedomofpress/sd-docker-builder-focal**.
+https://quay.io/freedomofpress/sd-docker-builder-focal.
 
 Maintaining images of our build container for each release is our way of recording the exact version
 of each dependency used to build our production debian packages for SecureDrop.
