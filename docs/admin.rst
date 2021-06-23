@@ -133,13 +133,15 @@ network, the admin should ensure that critical security patches are applied to t
 firewall.
 
 Be informed of potential updates to your network firewall. If you're using the
-network firewall recommended by FPF, you can subscribe to email updates from the `Netgate homepage`_
-to be alerted when releases occur. If critical security updates need to be
-applied, you can do so through the firewall's pfSense WebGUI. Refer to our
-:ref:`Keeping pfSense up to date` documentation or the official `pfSense
-Upgrade Docs`_ for further details on how to update the suggested firewall.
+network firewall recommended by FPF, you can subscribe to email updates from
+the `Netgate homepage`_ or follow the `Netgate blog`_ to be alerted when
+releases occur. If critical security updates need to be applied, you can do so
+through the firewall's pfSense WebGUI. Refer to our :ref:`Keeping pfSense up to
+date` documentation or the official `pfSense Upgrade Docs`_ for further details
+on how to update the suggested firewall.
 
 .. _`Netgate homepage`: https://www.netgate.com/
+.. _`Netgate blog`: https://www.netgate.com/blog/
 .. _`pfSense Upgrade Docs`: https://docs.netgate.com/pfsense/en/latest/install/upgrade-guide.html
 
 Updates: Workstations
