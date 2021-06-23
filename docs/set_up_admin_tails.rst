@@ -83,6 +83,8 @@ command:
    gpg --keyserver hkps://keys.openpgp.org --recv-key \
     "2224 5C81 E3BA EB41 38B3 6061 310F 5612 00F4 AD77"
 
+.. include:: includes/release-key-transition.txt
+
 If you are not copy-pasting this command, we recommend you double-check you have
 entered it correctly before pressing enter. GPG will implicitly verify that the
 fingerprint of the key received matches the argument passed.
@@ -137,7 +139,7 @@ signed with the release signing key:
 
     cd ~/Persistent/securedrop/
     git fetch --tags
-    git tag -v 1.8.2
+    git tag -v 2.0.0
 
 The output should include the following two lines:
 
@@ -158,9 +160,9 @@ screen of your workstation. If it does, you can check out the new release:
 
 .. code:: sh
 
-    git checkout 1.8.2
+    git checkout 2.0.0
 
-.. important:: If you see the warning ``refname '1.8.2' is ambiguous`` in the
+.. important:: If you see the warning ``refname '2.0.0' is ambiguous`` in the
                output, we recommend that you contact us immediately at
                securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 

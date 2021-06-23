@@ -1,0 +1,8 @@
+.. note::
+
+   The release key above will be allowed to expire on June 30, 2021. This means
+   that you will see the output "Note: This key has expired!" when verifying
+   tag ``2.0.0`` or any older tag after the expiration date.
+
+   Future releases will be signed using a new key with a new fingerprint. See our dual-signed
+   `transition statement <https://media.securedrop.org/media/documents/signing-key-transition.txt>`_.
