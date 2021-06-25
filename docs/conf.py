@@ -3,6 +3,7 @@
 # SecureDrop documentation build configuration file.
 
 import os
+import subprocess
 
 # Download URL for git-lfs, required when building in RTD container
 GIT_LFS_VERSION = "v2.12.0"
@@ -20,13 +21,14 @@ on_rtd = os.environ.get("READTHEDOCS", None) == "True"
 # screenshots).
 if on_rtd:
     test_image = "docs/images/manual/screenshots/source-index.png"
+    print("Attempt 1/2 to read the filetype:")
+    subprocess.check_call("file {}".format(test_image).split())
+    subprocess.check_call("git lfs install".split())
+    subprocess.check_call("git lfs pull".split())
+    subprocess.check_call("git lfs env".split())
+    subprocess.check_call("file {}".format(test_image).split())
+    print("Attempt 2/2 to read the filetype:")
     os.system("file {}".format(test_image))
-
-    os.system("git-lfs install")
-    os.system("git-lfs pull")
-
-    os.system("file {}".format(test_image))
-
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
