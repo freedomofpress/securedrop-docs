@@ -830,5 +830,4 @@ further.
 .. |Enable FreeOTP| image:: images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
 .. |Enable YubiKey| image:: images/manual/screenshots/journalist-admin_add_user_hotp.png
 .. |Verify YubiKey| image:: images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
-.. |System Config Page| image:: images/manual/screenshots/journalist-admin_system_config_page.png
 .. |Logo Update| image:: images/manual/screenshots/journalist-admin_changes_logo_image.png
