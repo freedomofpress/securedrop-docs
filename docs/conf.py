@@ -19,12 +19,13 @@ on_rtd = os.environ.get("READTHEDOCS", None) == "True"
 # Install git-lfs when running in RTD context, and check out all binaries (e.g.,
 # screenshots).
 if on_rtd:
-    if not os.path.exists("./git-lfs"):
-        os.system("wget {}".format(GIT_LFS_URL))
-        os.system("tar xvfz {}".format(GIT_LFS_PATH))
-        os.system("./git-lfs install")
-        os.system("./git-lfs fetch")
-        os.system("./git-lfs checkout")
+    test_image = "docs/images/manual/screenshots/source-index.png"
+    os.system("file {}".format(test_image))
+
+    os.system("git-lfs install")
+    os.system("git-lfs pull")
+
+    os.system("file {}".format(test_image))
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
