@@ -29,6 +29,7 @@ if on_rtd:
     subprocess.check_call("file {}".format(test_image).split())
     print("Attempt 2/2 to read the filetype:")
     os.system("file {}".format(test_image))
+    subprocess.check_call("git fetch --unshallow".split())
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
