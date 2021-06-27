@@ -250,20 +250,20 @@ smartphone authenticator app or a Yubikey for two-factor authentication. If an
 app is to be used, the journalist should install it before proceeding with the
 account setup.
 
-  .. include:: includes/otp-app.txt
+.. include:: includes/otp-app.txt
 
-* Click **Admin** in the top right corner of the page to load the *Admin Interface*.
+#. Click **Admin** in the top right corner of the page to load the *Admin Interface*.
 
-  |SecureDrop admin home|
+   |SecureDrop admin home|
 
-* Click **Add User** to add a new user.
+#. Click **Add User** to add a new user.
 
-  |Add a new user|
+   |Add a new user|
 
-* Hand the keyboard over to the journalist so they can create their own username.
-* Once they’re done entering a username for themselves, have them save their pre-generated diceware passphrase to their password manager.
-* If the new account should also have admin privileges, allowing them to add or delete other journalist accounts, select **Is Admin**.
-* Finally, set up two-factor authentication for the account, following one of the two procedures below for your chosen method.
+#. Hand the keyboard over to the journalist so they can create their own username.
+#. Once they’re done entering a username for themselves, have them save their pre-generated Diceware passphrase to their password manager.
+#. If the new account should also have admin privileges, allowing them to add or delete other journalist accounts, select **Is Admin**.
+#. Finally, set up two-factor authentication for the account, following one of the two procedures below for your chosen method.
 
 .. note::
    The username **deleted** is reserved, as it is used to mark accounts which
@@ -273,13 +273,13 @@ account setup.
 FreeOTP
 #######
 
-* If the journalist is using FreeOTP or another app for two-factor authentication, click **Add User** to proceed to the next page.
+#. If the journalist is using FreeOTP or another app for two-factor authentication, click **Add User** to proceed to the next page.
 
    |Enable FreeOTP|
 
-* Next, the journalist should open FreeOTP on their smartphone and scan the barcode displayed on the screen.
-* If they have difficulty scanning the barcode, they can tap on the icon at the top that shows a plus and the symbol of a key and use their phone's keyboard to input the two-factor secret into the ``Secret`` input field, without whitespace.
-* Inside the FreeOTP app, a new entry for this account will appear on the main screen, with a six-digit number that recycles to a new number every thirty seconds.  The journalist should enter the six-digit number in the  **Verification code** field at the bottom of the **Enable FreeOTP** form and click **Submit**.
+#. Next, the journalist should open FreeOTP on their smartphone and scan the barcode displayed on the screen.
+#. If they have difficulty scanning the barcode, they can tap on the icon at the top that shows a plus and the symbol of a key and use their phone's keyboard to input the two-factor secret into the ``Secret`` input field, without whitespace.
+#. Inside the FreeOTP app, a new entry for this account will appear on the main screen, with a six-digit number that recycles to a new number every thirty seconds.  The journalist should enter the six-digit number in the  **Verification code** field at the bottom of the **Enable FreeOTP** form and click **Submit**.
 
 If two-factor authentication was set up successfully, you will be redirected back
 to the *Admin Interface* and will see a confirmation that the two-factor code was
@@ -288,15 +288,15 @@ verified.
 YubiKey
 #######
 
-* If the journalist wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide <yubikey_setup>`.
+#. If the journalist wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide <yubikey_setup>`.
 
    |Enable YubiKey|
 
-* Once you've entered the Yubikey's OATH-HOTP Secret Key, click **Add User**.  On the next page, have the journalist authenticate using their YubiKey, by inserting it into a USB port on the workstation and pressing its button.
+#. Once you've entered the Yubikey's OATH-HOTP Secret Key, click **Add User**.  On the next page, have the journalist authenticate using their YubiKey, by inserting it into a USB port on the workstation and pressing its button.
 
    |Verify YubiKey|
 
-* If everything was set up correctly, you will be redirected back to the *Admin Interface*, where you should see a flashed message that says "The two-factor code for user *new username* was verified successfully.".
+#. If everything was set up correctly, you will be redirected back to the *Admin Interface*, where you should see a flashed message that says "The two-factor code for user *new username* was verified successfully.".
 
 The journalist will require their username, passphrase, and two-factor authentication
 method whenever they check SecureDrop. Make sure that they have memorised their
@@ -319,27 +319,29 @@ can happen if, for example, they lose their two-factor device or if they
 forget the passphrase to their password manager. When this happens, you
 can reset their account as follows:
 
-* Log in as an administrator to the *Journalist Interface* and select *Admin* at
-  the top right to open the *Admin Interface*.
+#. Log in as an administrator to the *Journalist Interface*
+#. Select *Admin* at the top right to open the *Admin Interface*
+#. Find the user's account name and select **Edit**
 
 |Reset Passphrase|
 
 Next, you can either rotate their passphrase or reset two-factor authentication
 for their account.
 
-* To change their passphrase to the randomly-generated passphrase shown, first
-  make sure the new passphrase is saved in a password manager, then select **Reset Password**.
+To change their passphrase to the randomly-generated passphrase shown:
 
-* To reset two-factor authentication, click the button that corresponds to the user's
-  chosen two-factor authentication method:
+  #. Have the journalist enter their current passphrase and two-factor code.
+  #. Make sure the new passphrase is saved in a password manager.
+  #. Click **Reset Password**
 
-  * Click **Reset Mobile App Credentials** for accounts using FreeOTP or a similar
-    authentication app.
+To reset two-factor authentication:
 
-  * Click **Reset Security Key Credentials** for accounts using a Yubikey.
+  #. Click the button that corresponds to the user's chosen two-factor authentication method:
 
-* Follow the on-screen instructions to complete the process and verify their new
-  two-factor authentication credentials.
+     * Click **Reset Mobile App Credentials** for accounts using FreeOTP or a similar authentication app
+     * Click **Reset Security Key Credentials** for accounts using a Yubikey
+
+  #. Follow the on-screen instructions to complete the process and verify their new two-factor authentication credentials.
 
 
 Off-boarding Users
@@ -372,9 +374,9 @@ You can update the system logo shown on the web interfaces of your SecureDrop
 instance via the *Admin Interface*. We recommend a size of ``500px x 450px``. Only
 PNG-format images are supported. To update the logo image:
 
-* copy the logo image to your admin workstation
-* click **Browse** and select the image from your workstation's filesystem
-* click **Update Logo** to upload and set the new logo.
+#. Copy the logo image to your admin workstation
+#. Click **Browse** and select the image from your workstation's filesystem
+#. Click **Update Logo** to upload and set the new logo
 
 You should see a message appear indicating the change was a success.
 
@@ -388,8 +390,8 @@ Setting Submission Preferences
 By default, SecureDrop supports both text submissions and document uploads. If you
 only want to receive text messages, you can disable uploads as follows:
 
-* check the the **Prevent sources from uploading documents** checkbox
-* click **Update Submission Preferences**
+#. Check the **Prevent sources from uploading documents** checkbox
+#. Click **Update Submission Preferences**
 
 This change will be applied immediately on the *Source Interface*. Documents that
 were previously uploaded will still be available via the **Journalist Interface**.
@@ -619,9 +621,9 @@ to perform common server administration tasks, including:
 
 To use ``securedrop-admin``:
 
-#. boot the *Admin Workstation* with persistence enabled and an admin password set
-#. open a terminal via **Applications > System Tools > Terminal**
-#. change directory to the SecureDrop installation directory: ``cd ~/Persistent/securedrop``
+#. Boot the *Admin Workstation* with persistence enabled and an admin password set
+#. Open a terminal via **Applications > System Tools > Terminal**
+#. Change directory to the SecureDrop installation directory: ``cd ~/Persistent/securedrop``
 
 You can list all available ``securedrop-admin`` actions using the command
 ``./securedrop-admin --help``
