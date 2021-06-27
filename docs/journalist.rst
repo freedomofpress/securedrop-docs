@@ -53,8 +53,8 @@ computer, unless explicitly configured with an access token.
 
 To visit the *Journalist Interface*, click the *Journalist Interface* icon on
 the desktop. This will open Tor Browser to an ".onion" address. Log in with
-your username, passphrase, and two-factor authentication token, as
-shown in the first screenshot below. (If you have been provided with a YubiKey,
+your username, passphrase, and two-factor authentication token.
+(If you have been provided with a YubiKey,
 see :doc:`Using YubiKey with the Journalist Interface <yubikey_setup>` for
 detailed setup and usage information.)
 
@@ -62,6 +62,7 @@ detailed setup and usage information.)
 
 Reset Passphrase or Two-factor Authentication Credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If necessary, journalists may reset their user passphrase or two-factor
 authentication token in their user profile. To navigate to your user profile,
 log in to the *Journalist Interface* and click on the link in the upper right
@@ -150,7 +151,7 @@ Step 1: Download the encrypted submission
 
 Documents and messages sent by sources can only be decrypted and viewed on the
 *Secure Viewing Station*. After clicking on an individual source, you will see
-the page below with any documents or messages the source has sent you. Documents
+a page with any documents or messages the source has sent you. Documents
 always end with ``-doc.gz.gpg``, while messages always end with ``-msg.gpg``.
 
 Click on a document or message name to save it, or select a number of documents
@@ -158,25 +159,24 @@ and save them all at once by clicking **Download Selected**.
 
 |Load external content|
 
-A dialog box with two choices will appear, **Cancel** and **Save file**:
+A dialog box with two choices will appear, **Cancel** and **Save file**.
 
 |Download selected|
 
-Click **Save file**. In the save dialog, select one
-of the two folders highlighted in red in the screenshot below:
+Click **Save file**. In the save dialog, select one of the two folders
+called **Tor Browser** and **Tor Browser (persistent)**.
+Note that the names may be abbreviated; you can view the full name by hovering
+the mouse over the shortcut.
 
 |Download to sandbox folder|
 
 The difference between these two folders is as follows:
 
-- **Tor Browser**. Downloads saved to this folder will be stored in memory,
+- **Tor Browser**: Downloads saved to this folder will be stored in memory,
   which means that they will only be available for the duration of your current
-  Tails session. In the screenshot, this is the currently selected folder.
-  The full path to this folder is ``/home/amnesia/Tor Browser``.
+  Tails session. The full path to this folder is ``/home/amnesia/Tor Browser``.
 
-- **Tor Browser (persistent)**: Note that the name may be abbreviated, as shown
-  in the screenshot; you can view the full name by hovering the mouse over the
-  shortcut. Downloads saved to this folder will be stored
+- **Tor Browser (persistent)**: Downloads saved to this folder will be stored
   on your Tails USB drive in the special persistent volume that is only
   available if you have unlocked it on the Tails welcome screen. The full path
   to this folder is ``/home/amnesia/Persistent/Tor Browser``.
@@ -213,7 +213,7 @@ device is known as your *Transfer Device*.
     accessible to you whenever you need it.
 
 You can right-click the file and select **Copy to**, then select the *Transfer
-Device*, as shown in the screenshots below.
+Device* in the **Select Copy Destination** dialog.
 
 |Copy to transfer device 1|
 
@@ -244,7 +244,7 @@ Click on the **Home** icon on your desktop, then on the *Transfer
 Device*. Copy the file into your **Persistent** folder. You can do so by
 opening a new window with the **Persistent** folder and dragging the file from
 one window to another. A faster method is to drag the file to the
-**Persistent** shortcut, as in the screenshot below:
+**Persistent** shortcut in the list of places.
 
 |Copy files to persistent|
 
@@ -256,14 +256,14 @@ one window to another. A faster method is to drag the file to the
 
 After successfully copying them to the *Secure Viewing Station*, erase the
 files from your *Transfer Device*. Ensure you're viewing the *Transfer Device* folder, then right click on the files that need removal and click "Wipe" to
-securely delete the files from your device:
+securely delete the files from your device.
 
 |Wiping documents|
 
 To decrypt and view documents or messages, return to your **Persistent** folder.
 All key actions are initiated by double-clicking:
 
-- Double-clicking archives in ZIP or gzip format will open the "Archive Manager"
+- Double-clicking archives in ZIP or gzip format will open the **Archive Manager**
   application (called ``file-roller`` on the command line), which allows you to extract the contents.
 
 - Double-clicking files that end in ``.gpg`` will attempt to decrypt the
@@ -281,7 +281,7 @@ a document with an incorrect or missing file extension.
 
 .. tip::
 
-   Always extract gzip archives with the "Archive Manager" application, which is
+   Always extract gzip archives with the **Archive Manager** application, which is
    the default when double-clicking the archive. Other methods may not preserve
    the filename contained in the archive.
 
@@ -292,7 +292,7 @@ a document with an incorrect or missing file extension.
    problems when attempting to open the file due to the loss of its file
    extension.
 
-When you double-click an archive to open it, you should see it in the "Archive Manager" application. It looks like this:
+When you double-click an archive to open it, you should see it in the **Archive Manager** application.
 
 |Opened archive|
 
@@ -564,7 +564,7 @@ To open the *Export Device* on the *Secure Viewing Station*, follow these steps:
 4. Under "Partitions and Drives", select the *Export Device* and click
    **Unlock**.
 5. Enter your passphrase, which we recommend keeping in your own personal
-   password manager (e.g., on your smartphone), not on KeePassXC.
+   password manager (e.g., on your smartphone), not on **KeePassXC**.
 6. Under "Partitions and Drives", open the encrypted drive by clicking
    **Open**.
 
@@ -594,7 +594,7 @@ Decrypting and Preparing to Publish
 .. note::
 
    To decrypt a VeraCrypt drive on a Windows or Mac workstation, you need
-   to have the VeraCrypt software installed. If you are unsure if you have the
+   to have the **VeraCrypt** software installed. If you are unsure if you have the
    software installed or how to use it, ask your administrator, or see
    the `Freedom of the Press Foundation guide <https://freedom.press/training/encryption-toolkit-media-makers/veracrypt-guide/>`__
    for working with VeraCrypt.
@@ -604,7 +604,7 @@ To access the *Export Device* on your everyday workstation, follow these steps:
 1. If your *Export Device* has a physical write protection switch, make sure it
    is in the *locked* position.
 2. Plug the *Export Device* into your everyday workstation.
-3. Launch the VeraCrypt application.
+3. Launch the **VeraCrypt** application.
 4. Click **Select Device** and select the *Export Device*, then click **OK**.
 5. Click **Mount**.
 6. Enter the passphrase for your *Export Device*. You should find this in your
@@ -615,7 +615,7 @@ To access the *Export Device* on your everyday workstation, follow these steps:
 As a security precaution, we recommend deleting the files on the *Export
 Device* after each copy operation. If you are using write protection, you have to perform this step on the *Secure Viewing Station* to get the security benefits of write protection.
 
-When you are done, switch back to the VeraCrypt window, and click **Dismount**.
+When you are done, switch back to the **VeraCrypt** window, and click **Dismount**.
 
 You are now ready to write articles and blog posts, edit video and
 audio, and begin publishing important, high-impact work!
@@ -636,7 +636,7 @@ details are compromised.
 To delete sources, first select them in the list of all sources in the
 *Journalist Interface*, then click the **Delete** button. You will be
 given a choice to delete all messages and files for the selected sources, or to
-delete the source accounts:
+delete the source accounts.
 
 |Delete sources|
 
@@ -665,43 +665,66 @@ see a list of source messages (filenames end with ``-msg.gpg``), file submission
 ``--reply.gpg``).
 
 Select the source data you wish to delete, then click the **Delete** button.
-You will be prompted for confirmation:
+You will be prompted for confirmation.
 
 |Delete individual submissions|
 
 From the same page, you also have the option to delete the entire source
 account. To do so, click the button labeled **Delete Source Account** at the
-bottom of the page. You will be prompted for confirmation:
+bottom of the page. You will be prompted for confirmation.
 
 |Delete source account|
 
 .. |Journalist Interface Login| image:: images/manual/screenshots/journalist-index_with_text.png
+   :alt: Login page to access the journalist interface. It requires a username, passphrase and two-factor authentication token.
 .. |Journalist Interface| image:: images/manual/screenshots/journalist-index_javascript.png
+   :alt: Example home page displaying a list of sources who sent documents or messages.
 .. |Load external content| image:: images/manual/screenshots/journalist-clicks_on_source_and_selects_documents.png
+   :alt: Example source page displaying two files: a document and a message, both selected. A button 'Download Selected' is visible above the list of files.
 .. |Download selected| image:: images/manual/tbb_Document5.png
+   :alt: Dialog box asking for confirmation before saving a file.
 .. |Download to sandbox folder| image:: images/manual/tbb_Document6.png
+   :alt: Files application displaying the name of the file to be saved and a 'Save' button. Two shortcuts named 'Tor Browser' and 'Tor Browser (...' are visible in the list of places on the left.
 .. |Copy to transfer device 1| image:: images/manual/copy-to-transfer-device-1.png
+   :alt: Files application displaying the menu that opens after a right-click on a file. The 'Copy to...' entry is selected.
 .. |Copy to transfer device 2| image:: images/manual/copy-to-transfer-device-2.png
+   :alt: Dialog box that opens after selecting 'Copy to', the Transfer Device is selected in the list of places on the left.
 .. |Copy files to persistent| image:: images/manual/viewing1.png
+   :alt: Files application displaying the content of the Transfer Device. A file is being dragged over a shortcut named 'Persistent' in the list of places on the left.
 .. |Opened archive| image:: images/manual/tails-archive.png
-.. |Decrypting| image:: images/manual/viewing2.png
+   :alt: Archive Manager application displaying an archive and the 'Extract' button on the top left.
 .. |Decrypted documents| image:: images/manual/viewing3.png
+   :alt: Files application displaying a decrypted file next to its encrypted version.
 .. |Opened document| image:: images/manual/viewing4.png
+   :alt: Text editor displaying a decrypted message. The file that was double-clicked is visible below in the Files application.
 .. |Sent reply| image:: images/manual/screenshots/journalist-composes_reply.png
+   :alt: Example source page displaying a form with a 'Submit' button for the journalist to write a reply.
 .. |Delete sources| image:: images/manual/screenshots/journalist-delete_sources.png
+   :alt: Example source page after sources were selected and the 'Delete' button clicked. Two buttons are visible: 'Files and Messages' and 'Source Accounts'.
 .. |Delete individual submissions| image:: images/manual/screenshots/journalist-delete_submissions.png
+   :alt: Example source page displaying a dialog box that asks for confirmation before deleting the selected submissions.
 .. |Delete source account| image:: images/manual/screenshots/journalist-delete_source_account.png
+   :alt: Example source page displaying a dialog box that asks for confirmation before deleting the source account.
 
 .. |mat2 context menu| image:: images/manual/screenshots/mat2_context_menu.png
+   :alt: Files application displaying the menu that opens after a right-click on a file. The 'Remove metadata' entry is selected.
 .. |mat2 cleaned| image:: images/manual/screenshots/mat2_cleaned.png
+   :alt: Files application displaying a cleaned image file next to its original version.
 .. |mat2 cli show| image:: images/manual/screenshots/mat2_cli_show.png
+   :alt: Terminal application displaying the metadata of a file.
 
 .. |Wiping documents| image:: images/manual/viewing5.png
+   :alt: Files application displaying the menu that opens after a right-click on a file. The 'Wipe' entry is selected.
 .. |Journalist account profile| image:: images/manual/screenshots/journalist-edit_account_user.png
+   :alt: Example user profile page of a journalist. It displays forms to reset their passhrase and two-factor authentication.
 .. |Unlock VeraCrypt in Tails 1| image:: images/manual/unlock_veracrypt_in_tails_1.png
+   :alt: The Applications menu on the Tails desktop. The 'Unlock VeraCrypt Volumes' entry is selected.
 .. |Unlock VeraCrypt in Tails 2| image:: images/manual/unlock_veracrypt_in_tails_2.png
+   :alt: Dialog box called 'Unlock VeraCrypt Volumes'. It displays an 'Unlock' button next to a drive name.
 .. |Unlock VeraCrypt in Tails 3| image:: images/manual/unlock_veracrypt_in_tails_3.png
+   :alt: Dialog box asking for a passphrase to unlock a VeraCrypt volume. The 'Unlock VeraCrypt Volumes' dialog box can be seen underneath.
 .. |Unlock VeraCrypt in Tails 4| image:: images/manual/unlock_veracrypt_in_tails_4.png
+   :alt: Dialog box called 'Unlock VeraCrypt Volumes'. It displays an 'Open' button next to a drive name.
 .. |br| raw:: html
 
     <br>

@@ -150,9 +150,9 @@ Making Your First Submission
 ----------------------------
 
 Open Tor Browser and navigate to the .onion address for the SecureDrop you wish
-to make a submission to. The page should look similar to the screenshot below,
-although it will probably have a logo specific to the organization you are
-submitting to:
+to make a submission to. The page will invite you to get started with your
+first submission or to log in. It should have a logo specific to the organization
+you are submitting to.
 
 |Source Interface with Javascript Disabled|
 
@@ -160,17 +160,18 @@ If this is the first time you're using Tor Browser, it's likely that you
 have JavaScript enabled and that the Tor Browser's security level is set
 to "Low". In this case, there will be a purple warning banner at the top of
 the page that encourages you to disable JavaScript and change the security
-level to "Safest":
+level to "Safest".
 
 |Source Interface Security Slider Warning|
 
 Click the **Security Level** link in the warning banner, and a message bubble
-will pop up explaining how to adjust this setting:
+will pop up explaining how to increase the security level to **Safest**.
 
 |Fix Javascript warning|
 
-Follow the instructions, and the security setting in Tor Browser should look
-similar to this screenshot:
+1. Click the shield icon in the toolbar
+2. Select **Advanced Security Settings**
+3. Select **Safest**
 
 |Security Slider|
 
@@ -183,9 +184,9 @@ similar to this screenshot:
    "Safest" during the entirety of the session in which you access an
    organization's SecureDrop instance.
 
-The SecureDrop page should now refresh automatically and look
-similar to the screenshot below. If this is the first time you are using
-SecureDrop, click the **Get Started** button.
+The SecureDrop page should now refresh automatically and stop displaying
+the warning. If this is the first time you are using SecureDrop,
+click the **Get Started** button.
 
 |Source Interface with Javascript Disabled|
 
@@ -194,6 +195,8 @@ generated for you. Note that your codename will not be the same as the codename
 shown in the image below. It is extremely important that you both remember this
 code and keep it secret. After submitting documents, you will need to provide
 this code to log back in and check for responses.
+
+|Memorizing your codename|
 
 The best way to protect your codename is to memorize it. If you cannot memorize
 it right away, we recommend writing it down and keeping it in a safe place at
@@ -206,8 +209,6 @@ it, you should destroy the written copy.
 Once you have generated a codename and put it somewhere safe, click
 **Submit Documents**.
 
-|Memorizing your codename|
-
 You will next be brought to the submission page, where you may
 upload a document, enter a message to send to journalists, or both. You
 can only submit one document at a time, so you may want to combine
@@ -217,9 +218,9 @@ limit, we recommend that you send a message to the journalist explaining
 this, so that they can set up another method for transferring the
 documents.
 
-When your submission is ready, click **Submit**.
-
 |Submit a document|
+
+When your submission is ready, click **Submit**.
 
 After clicking **Submit**, a confirmation page should appear, showing
 that your message and/or documents have been sent successfully. On this
@@ -229,16 +230,18 @@ messages.
 |Confirmation page|
 
 Once you are finished submitting documents, be certain you have saved your
-secret codename and then click the **Log out** button. You should see the
-screen below:
+secret codename and then click the **Log out** button.
+
+The final step to clearing your session is to restart Tor Browser for
+optimal security. After logging out, you should see a new page recommending
+you to click the **New Identity** button in the Tor Browser toolbar.
 
 |Logout|
 
-The final step to clearing your session is to restart Tor Browser for
-optimal security. You can either close the browser entirely or follow
-the instructions on the page: click on the "New Identity" button in the toolbar
-and then click **Yes** in the dialog box that appears to confirm you'd like to
-restart Tor Browser:
+You can either close the browser entirely or follow the instructions on the page:
+
+1. Click on the **New Identity** button in the Tor Browser toolbar
+2. Click **Yes** in the dialog box that appears to confirm you'd like to restart Tor Browser
 
 |Restart TBB|
 
@@ -265,28 +268,40 @@ correspondences you had with journalists.
 
 |Check for a reply|
 
-After you delete the message from the journalist, make sure you see the
-below message.
+After you delete the reply from the journalist, make sure you see the
+confirmation message: "Reply deleted".
 
 |Delete received messages|
 
 .. |Source Interface Security Slider Warning| image:: images/manual/securedrop-security-slider-warning.png
+   :alt: Warning banner: Your Tor Browser's Security Level is too low.
 .. |Security Slider| image:: images/manual/source-turn-slider-to-high.png
+   :alt: Advanced Security Settings in Tor Browser.
 .. |Fix Javascript warning| image:: images/manual/security-slider-high.png
+   :alt: Example home page displaying instructions to increase Tor Browser's Security Level.
 .. |Source Interface with Javascript Disabled|
   image:: images/manual/screenshots/source-index.png
+     :alt: Example home page of a SecureDrop instance.
 .. |Memorizing your codename|
   image:: images/manual/screenshots/source-generate.png
+     :alt: Example welcome page displaying a codename.
 .. |Submit a document|
   image:: images/manual/screenshots/source-submission_entered_text.png
+    :alt: Example submission page, where documents and messages can be submitted.
 .. |Confirmation page|
   image:: images/manual/screenshots/source-lookup.png
+    :alt: Example submission page, displaying a confirmation message after a submission was sent successfully.
 .. |Logout|
   image:: images/manual/screenshots/source-logout_new_identity.png
+   :alt: Page displaying instructions to clear your Tor Browser session by resetting your identity.
 .. |Restart TBB| image:: images/manual/restart-tor-browser.png
+   :alt: Dialog box asking for confirmation before Tor Browser is restarted.
 .. |Check for response|
   image:: images/manual/screenshots/source-enter-codename-in-login.png
+    :alt: Example login page asking you to enter your secret codename.
 .. |Check for a reply|
   image:: images/manual/screenshots/source-checks_for_reply.png
+    :alt: Example submission page, displaying a reply from a journalist.
 .. |Delete received messages|
   image:: images/manual/screenshots/source-deletes_reply.png
+    :alt: Example submission page, displaying a confirmation message after a reply was deleted.
