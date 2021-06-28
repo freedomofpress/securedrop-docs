@@ -19,6 +19,7 @@ on_rtd = os.environ.get("READTHEDOCS", None) == "True"
 # Install git-lfs when running in RTD context, and check out all binaries (e.g.,
 # screenshots).
 if on_rtd:
+    os.environ['PATH'] += os.pathsep + os.getcwd()
     if not os.path.exists("./git-lfs"):
         os.system("wget {}".format(GIT_LFS_URL))
         os.system("tar xvfz {}".format(GIT_LFS_PATH))
