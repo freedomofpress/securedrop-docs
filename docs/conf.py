@@ -4,33 +4,14 @@
 
 import os
 
-# Download URL for git-lfs, required when building in RTD container
-GIT_LFS_VERSION = "v2.12.0"
-GIT_LFS_BASE = "https://github.com/git-lfs/git-lfs/releases/download/{0}/".format(
-    GIT_LFS_VERSION
-)
-GIT_LFS_PATH = "git-lfs-linux-amd64-{0}.tar.gz".format(GIT_LFS_VERSION)
-GIT_LFS_URL = GIT_LFS_BASE + GIT_LFS_PATH
-
-# Detect if we're being built by Read the Docs
-# https://docs.readthedocs.io/en/latest/faq.html#how-do-i-change-behavior-when-building-with-read-the-docs
-on_rtd = os.environ.get("READTHEDOCS", None) == "True"
-
-# Install git-lfs when running in RTD context, and check out all binaries (e.g.,
-# screenshots).
-if on_rtd:
-    if not os.path.exists("./git-lfs"):
-        os.system("wget {}".format(GIT_LFS_URL))
-        os.system("tar xvfz {}".format(GIT_LFS_PATH))
-        os.system("./git-lfs install")
-        os.system("./git-lfs fetch")
-        os.system("./git-lfs checkout")
-
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 # sys.path.insert(0, os.path.abspath('.'))
+
+# Detect if we're being built by Read the Docs
+# https://docs.readthedocs.io/en/latest/faq.html#how-do-i-change-behavior-when-building-with-read-the-docs
+on_rtd = os.environ.get("READTHEDOCS", None) == "True"
 
 # -- General configuration ------------------------------------------------
 
