@@ -32,6 +32,10 @@ docutils==0.16 \
     --hash=sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af \
     --hash=sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc
     # via sphinx
+git-lfs==1.6 \
+    --hash=sha256:2fecacaefc93ab278933b7755d4a48972f0deca7f9ff27439594ad835decf8ed \
+    --hash=sha256:93a5e8a2bf71d66a9a5bae0d28c8137dd40c108dc3e1031fa6d30511794fae3a
+    # via -r requirements.in
 idna==2.10 \
     --hash=sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6 \
     --hash=sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0

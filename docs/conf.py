@@ -3,30 +3,23 @@
 # SecureDrop documentation build configuration file.
 
 import os
+import sys
 
-# Download URL for git-lfs, required when building in RTD container
-GIT_LFS_VERSION = "v2.12.0"
-GIT_LFS_BASE = "https://github.com/git-lfs/git-lfs/releases/download/{0}/".format(
-    GIT_LFS_VERSION
-)
-GIT_LFS_PATH = "git-lfs-linux-amd64-{0}.tar.gz".format(GIT_LFS_VERSION)
-GIT_LFS_URL = GIT_LFS_BASE + GIT_LFS_PATH
+DOC_SOURCES_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(DOC_SOURCES_DIR))
+sys.path.insert(0, DOC_SOURCES_DIR)
+print('PROJECT_ROOT_DIR', PROJECT_ROOT_DIR)
 
 # Detect if we're being built by Read the Docs
 # https://docs.readthedocs.io/en/latest/faq.html#how-do-i-change-behavior-when-building-with-read-the-docs
 on_rtd = os.environ.get("READTHEDOCS", None) == "True"
 
-# Install git-lfs when running in RTD context, and check out all binaries (e.g.,
-# screenshots).
-if on_rtd:
-    os.environ['PATH'] += os.pathsep + os.getcwd()
-    if not os.path.exists("./git-lfs"):
-        os.system("wget {}".format(GIT_LFS_URL))
-        os.system("tar xvfz {}".format(GIT_LFS_PATH))
-        os.system("./git-lfs install")
-        os.system("./git-lfs fetch")
-        os.system("./git-lfs checkout")
+# fetch blobs via git_lfs when running in RTD context
 
+if on_rtd:
+    print('Fetching files with git_lfs')
+    from git_lfs import fetch
+    fetch(PROJECT_ROOT_DIR)
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
