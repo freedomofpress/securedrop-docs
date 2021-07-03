@@ -394,7 +394,7 @@ only want to receive text messages, you can disable uploads as follows:
 #. Click **Update Submission Preferences**
 
 This change will be applied immediately on the *Source Interface*. Documents that
-were previously uploaded will still be available via the **Journalist Interface**.
+were previously uploaded will still be available via the *Journalist Interface*.
 
 .. _test OSSEC alert:
 

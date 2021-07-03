@@ -281,7 +281,7 @@ a document with an incorrect or missing file extension.
 
 .. tip::
 
-   Always extract gzip archives with the **Archive Manager** application, which is
+   Always extract gzip archives with the *Archive Manager* application, which is
    the default when double-clicking the archive. Other methods may not preserve
    the filename contained in the archive.
 
@@ -292,7 +292,7 @@ a document with an incorrect or missing file extension.
    problems when attempting to open the file due to the loss of its file
    extension.
 
-When you double-click an archive to open it, you should see it in the **Archive Manager** application.
+When you double-click an archive to open it, you should see it in the *Archive Manager* application.
 
 |Opened archive|
 
@@ -425,10 +425,10 @@ and flac. We recommend using this and other tools to work with documents within
 Tails for as much of your workflow as possible.
 
 Tails 4 replaces MAT with MAT2, which is usable via the command line and via a
-context menu in the **Files** application (called ``nautilus`` on the command
+context menu in the *Files* application (called ``nautilus`` on the command
 line).
 
-You can use MAT2 via the **Files** application by browsing to **Places ▸
+You can use MAT2 via the *Files* application by browsing to **Places ▸
 (Your file's location)** and right-clicking on your file. In the context
 menu, select **Remove metadata**.
 
@@ -564,7 +564,7 @@ To open the *Export Device* on the *Secure Viewing Station*, follow these steps:
 4. Under "Partitions and Drives", select the *Export Device* and click
    **Unlock**.
 5. Enter your passphrase, which we recommend keeping in your own personal
-   password manager (e.g., on your smartphone), not on **KeePassXC**.
+   password manager (e.g., on your smartphone), not on *KeePassXC*.
 6. Under "Partitions and Drives", open the encrypted drive by clicking
    **Open**.
 
@@ -594,7 +594,7 @@ Decrypting and Preparing to Publish
 .. note::
 
    To decrypt a VeraCrypt drive on a Windows or Mac workstation, you need
-   to have the **VeraCrypt** software installed. If you are unsure if you have the
+   to have the *VeraCrypt* software installed. If you are unsure if you have the
    software installed or how to use it, ask your administrator, or see
    the `Freedom of the Press Foundation guide <https://freedom.press/training/encryption-toolkit-media-makers/veracrypt-guide/>`__
    for working with VeraCrypt.
@@ -604,7 +604,7 @@ To access the *Export Device* on your everyday workstation, follow these steps:
 1. If your *Export Device* has a physical write protection switch, make sure it
    is in the *locked* position.
 2. Plug the *Export Device* into your everyday workstation.
-3. Launch the **VeraCrypt** application.
+3. Launch the *VeraCrypt* application.
 4. Click **Select Device** and select the *Export Device*, then click **OK**.
 5. Click **Mount**.
 6. Enter the passphrase for your *Export Device*. You should find this in your
@@ -615,7 +615,7 @@ To access the *Export Device* on your everyday workstation, follow these steps:
 As a security precaution, we recommend deleting the files on the *Export
 Device* after each copy operation. If you are using write protection, you have to perform this step on the *Secure Viewing Station* to get the security benefits of write protection.
 
-When you are done, switch back to the **VeraCrypt** window, and click **Dismount**.
+When you are done, switch back to the *VeraCrypt* window, and click **Dismount**.
 
 You are now ready to write articles and blog posts, edit video and
 audio, and begin publishing important, high-impact work!
