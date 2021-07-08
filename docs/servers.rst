@@ -206,7 +206,7 @@ If you did not, adjust these settings accordingly.
   -  **Address:** 10.20.2.2
   -  **Gateway:** 10.20.2.1
   -  **Name servers:** 8.8.8.8, 8.8.4.4
-  -  **Search Domains:** *should be left blank*
+  -  **Search domains:** *should be left blank*
 
 -  *Monitor Server*:
 
@@ -214,7 +214,7 @@ If you did not, adjust these settings accordingly.
   -  **Address:** 10.20.3.2
   -  **Gateway:** 10.20.3.1
   -  **Name servers:** 8.8.8.8, 8.8.4.4
-  -  **Search Domains:** *should be left blank*
+  -  **Search domains:** *should be left blank*
 
 Select **Save** and press **Enter** to apply your settings. Then select **Done** and press **Enter**.
 

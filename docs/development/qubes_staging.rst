@@ -65,12 +65,12 @@ Next, choose **Install Ubuntu**.
 For the most part, the install process matches the
 :ref:`hardware install flow <install_ubuntu>`, with a few exceptions:
 
-  -  Server IP address: use value returned by ``qvm-prefs sd-staging-base-focal ip``,
-     with ``/24`` netmask suffix
-  -  Gateway: use value returned by ``qvm-prefs sd-staging-base-focal visible_gateway``
-  -  For DNS, use Qubes's DNS servers: ``10.139.1.1`` and ``10.139.1.2``.
-  -  Hostname: ``sd-staging-base-focal``
-  -  Domain name should be left blank
+  -  **Subnet:** 10.136.0.0/14
+  -  **Address:** use value returned by ``qvm-prefs sd-staging-base-focal ip``
+  -  **Gateway:** use value returned by ``qvm-prefs sd-staging-base-focal visible_gateway``
+  -  **Name servers:** 10.139.1.1,10.139.1.2
+  -  **Search domains:** *should be left blank*
+  -  **Your server's name:** ``sd-staging-base-focal``
 
 Make sure to configure LVM and use **Virtual disk 1 (xvda 20.0GB Xen Virtual Block device)**
 when asked for a target partition during installation. It should be the default option.
