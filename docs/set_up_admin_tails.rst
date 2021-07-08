@@ -81,7 +81,7 @@ command:
 .. code:: sh
 
    gpg --keyserver hkps://keys.openpgp.org --recv-key \
-    "2224 5C81 E3BA EB41 38B3 6061 310F 5612 00F4 AD77"
+   "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
 
 .. include:: includes/release-key-transition.txt
 
@@ -145,8 +145,8 @@ The output should include the following two lines:
 
 .. code:: sh
 
-    gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
-    gpg: Good signature from "SecureDrop Release Signing Key"
+   gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
+   gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
 
 
 .. important::

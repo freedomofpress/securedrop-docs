@@ -235,8 +235,8 @@ Migrating Using a V2+V3 or V3-Only Backup
 
    .. code:: sh
 
-      gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
-      gpg: Good signature from "SecureDrop Release Signing Key"
+      gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
+      gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
 
 
    .. include:: includes/release-key-transition.txt
@@ -478,8 +478,8 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
    .. code:: sh
 
-      gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
-      gpg: Good signature from "SecureDrop Release Signing Key"
+      gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
+      gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
 
    .. include:: includes/release-key-transition.txt
    .. important::
