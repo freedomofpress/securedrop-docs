@@ -229,14 +229,14 @@ Migrating Using a V2+V3 or V3-Only Backup
 
       cd ~/Persistent/securedrop/
       git fetch --tags
-      git tag -v 2.0.0
+      git tag -v 2.0.1
 
    The output should include the following two lines:
 
    .. code:: sh
 
-      gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
-      gpg: Good signature from "SecureDrop Release Signing Key"
+      gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
+      gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
 
 
    .. include:: includes/release-key-transition.txt
@@ -251,10 +251,10 @@ Migrating Using a V2+V3 or V3-Only Backup
 
    .. code:: sh
 
-      git checkout 2.0.0
+      git checkout 2.0.1
 
    .. important::
-      If you see the warning ``refname '2.0.0' is ambiguous`` in the
+      If you see the warning ``refname '2.0.1' is ambiguous`` in the
       output, we recommend that you contact us immediately at
       securedrop@freedom.press
       (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
@@ -472,14 +472,14 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
       cd ~/Persistent/securedrop/
       git fetch --tags
-      git tag -v 2.0.0
+      git tag -v 2.0.1
 
    The output should include the following two lines:
 
    .. code:: sh
 
-      gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
-      gpg: Good signature from "SecureDrop Release Signing Key"
+      gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
+      gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
 
    .. include:: includes/release-key-transition.txt
    .. important::
@@ -492,11 +492,11 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
    .. code:: sh
 
-      git checkout 2.0.0
+      git checkout 2.0.1
 
 
    .. important::
-      If you see the warning ``refname '2.0.0' is ambiguous`` in the
+      If you see the warning ``refname '2.0.1' is ambiguous`` in the
       output, we recommend that you contact us immediately at
       securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 

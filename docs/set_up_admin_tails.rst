@@ -81,7 +81,7 @@ command:
 .. code:: sh
 
    gpg --keyserver hkps://keys.openpgp.org --recv-key \
-    "2224 5C81 E3BA EB41 38B3 6061 310F 5612 00F4 AD77"
+   "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
 
 .. include:: includes/release-key-transition.txt
 
@@ -139,14 +139,14 @@ signed with the release signing key:
 
     cd ~/Persistent/securedrop/
     git fetch --tags
-    git tag -v 2.0.0
+    git tag -v 2.0.1
 
 The output should include the following two lines:
 
 .. code:: sh
 
-    gpg:                using RSA key 22245C81E3BAEB4138B36061310F561200F4AD77
-    gpg: Good signature from "SecureDrop Release Signing Key"
+   gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
+   gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
 
 
 .. important::
@@ -160,9 +160,9 @@ screen of your workstation. If it does, you can check out the new release:
 
 .. code:: sh
 
-    git checkout 2.0.0
+    git checkout 2.0.1
 
-.. important:: If you see the warning ``refname '2.0.0' is ambiguous`` in the
+.. important:: If you see the warning ``refname '2.0.1' is ambiguous`` in the
                output, we recommend that you contact us immediately at
                securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
