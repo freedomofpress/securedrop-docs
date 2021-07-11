@@ -22,22 +22,16 @@ Updating Documentation
 
 To get started editing the docs:
 
-1. Enable LFS:
-
-   The SecureDrop docs repository stores binaries such as screenshots via
-   Git Large File Storage (LFS). If not already present, install Git LFS
-   by following the `install guide <https://github.com/git-lfs/git-lfs/wiki/Installation>`_.
-
 .. _clone_the_rep:
 
-2. Clone the SecureDrop documentation repository:
+#. Clone the SecureDrop documentation repository:
 
    .. code:: sh
 
       git clone https://github.com/freedomofpress/securedrop-docs.git
 
 
-3. Install the dependencies:
+#. Install the dependencies:
 
    .. include:: ../includes/virtualenv.txt
 
@@ -46,9 +40,9 @@ To get started editing the docs:
       pip install --require-hashes -r requirements/requirements.txt
 
 
-.. _build_the_docs:
+   .. _build_the_docs:
 
-4. Build the docs for viewing in your web browser:
+#. Build the docs for viewing in your web browser:
 
    .. code:: sh
 
@@ -95,13 +89,6 @@ As a maintainer, you can push directly to a contributor fork, as long as there
 is an active Pull Request corresponding to the branch you are pushing to, and
 you have added the contributor remote with authentication enabled (i.e. the ``url``
 value in ``.git/config`` starts with ``git@github.com``).
-
-In addition, to avoid encountering a permission error with LFS file locking,
-you have to disable lock verification for the contributor fork:
-
-.. code:: sh
-
-   git config 'lfs.https://github.com/<contributor>/securedrop-docs/info/lfs.locksverify' false
 
 .. _updating_screenshots:
 
