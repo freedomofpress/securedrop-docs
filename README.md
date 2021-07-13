@@ -8,13 +8,12 @@ This repository is used to build the [public documentation](https://docs.secured
 
 ## Quickstart
 
-1. This repository stores binaries such as screenshots via LFS. If not already present, install `git-lfs` by following the [install guide](https://github.com/git-lfs/git-lfs/wiki/Installation). After installation, download the binaries with `git-lfs fetch && git-lfs checkout`.
-2. Create a virtual environment with `python3 -m venv .venv` or the tooling of your choice
-3. Activate your virtual environment (e.g., `source .venv/bin/activate`)
-4. Ensure you are using an up-to-date version of `pip` in the virtual environment (e.g., `pip install --upgrade pip`)
-5. Install the project requirements with `pip install --require-hashes -r requirements/requirements.txt`
-6. Run `make docs` to start a live build of the documentation at http://localhost:8000
-7. Edit RST files under the docs directory - your changes will be reflected in the live build
+1. Create a virtual environment with `python3 -m venv .venv` or the tooling of your choice
+2. Activate your virtual environment (e.g., `source .venv/bin/activate`)
+3. Ensure you are using an up-to-date version of `pip` in the virtual environment (e.g., `pip install --upgrade pip`)
+4. Install the project requirements with `pip install --require-hashes -r requirements/requirements.txt`
+5. Run `make docs` to start a live build of the documentation at http://localhost:8000
+6. Edit RST files under the docs directory - your changes will be reflected in the live build
 
 ## License
 
