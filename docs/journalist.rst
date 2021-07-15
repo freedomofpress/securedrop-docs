@@ -8,6 +8,32 @@ journalist. It covers the core functions necessary to start working
 with the platform: logging in securely, viewing documents, editing
 documents, and interacting with sources.
 
+Connecting to the Tor network in Tails
+--------------------------------------
+
+After you connect to the Internet in Tails 4.20, the Tor Connection assistant
+will start.
+
+If you are operating in an environment with a high degree of political freedom,
+and you are able to access the Tor network reliably, you can accept the defaults:
+
+1. Click **"Connect to Tor automatically (easier)"**
+2. Leave the checkbox **"Configure a Tor bridge"** unchecked
+3. Click **"Connect to Tor"**
+
+|Connect to Tor in Tails|
+
+For more information about alternative ways to connect to the Tor network, please
+see the section `"Connecting to the Tor network" <https://tails.boum.org/doc/anonymous_internet/tor/index.en.html>`__
+in the Tails documentation.
+
+.. note::
+
+   The Tor Connection assistant may display an error message after
+   connecting to the Tor network successfully. If the error message disappears
+   after a few seconds, you can safely ignore it. The error is caused
+   by SecureDrop-specific changes that briefly interrupt Tor connectivity.
+
 Updating Your Workstation
 -------------------------
 
@@ -675,6 +701,8 @@ bottom of the page. You will be prompted for confirmation.
 
 |Delete source account|
 
+.. |Connect to Tor in Tails| image:: images/tails_4x/tails_4-tca_with_default_settings.png
+   :alt: Tor Connection Assistant with default settings.
 .. |Journalist Interface Login| image:: images/manual/screenshots/journalist-index_with_text.png
    :alt: Login page to access the journalist interface. It requires a username, passphrase and two-factor authentication token.
 .. |Journalist Interface| image:: images/manual/screenshots/journalist-index_javascript.png

@@ -397,8 +397,8 @@ Fill in the static networking information for the *Admin Workstation*:
 Click **Apply**. If the network does not come up within 15 seconds or
 so, try disconnecting and reconnecting your network cable to trigger the
 change. You will need you have succeeded in connecting with your new
-static IP when you see a pop-up notification that says "Tor is ready.
-You can now access the Internet".
+static IP when you are able to connect using the Tor Connection assistant,
+and you see the message "Connected to Tor successfully".
 
 Troubleshooting: DNS Servers and the Unsafe Browser
 '''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -414,8 +414,8 @@ To do this, click the network icon in the system toolbar, and click
 connection, which is displayed in bold. After it disconnects, click
 the network icon again and click the name of the connection to
 reconnect. You should see a popup notification that says "Connection
-Established", followed several seconds later by the "Tor is ready"
-popup notification.
+Established", and the Tor Connection assistant should show the message "Connected
+to Tor successfully".
 
 For the next step, SecureDrop Configuration, you will manually configure the
 firewall for SecureDrop, using screenshots or XML templates as a reference.
