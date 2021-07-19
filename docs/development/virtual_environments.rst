@@ -249,19 +249,40 @@ the key onto the servers.
 .. note:: If you have trouble SSHing to the servers from Ansible, remember
           to remove any old ATHS files in ``install_files/ansible-base``.
 
-Now from your Admin workstation:
+Now from your *Admin Workstation*, set up the administration environment with:
 
 .. code:: sh
 
   cd ~/Persistent/securedrop
   ./securedrop-admin setup
+
+If you want to enable HTTPS for the source interface, you can generate a test CA cert,
+server key, and server cert using the following commands:
+
+.. code:: sh
+
+  sudo apt-get install make
+  make self-signed-https-certs
+
+This will generate the files ``securedrop_source_onion.ca``, ``securedrop_source_onion.crt``,
+and ``securedrop_source_onion.key`` in the ``install_files/ansible-base`` directory, ready
+for use in the next step.
+
+.. important:: The self-signed certificates should not be used in a live instance. They are
+  provided for development and testing purposes only.
+
+Finally, configure and install SecureDrop on the VMs using the commands:
+
+.. code:: sh
+
   ./securedrop-admin sdconfig
   ./securedrop-admin install
 
 .. note:: The sudo password for the ``app-prod`` and ``mon-prod`` servers is by
           default ``vagrant``.
 
-After install you can configure your Admin Workstation to SSH into each VM via:
+After the installation is complete, you can configure your Admin Workstation to SSH
+into each VM via:
 
 .. code:: sh
 
