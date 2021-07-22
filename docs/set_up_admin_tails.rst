@@ -83,8 +83,6 @@ command:
    gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
 
-.. include:: includes/release-key-transition.txt
-
 If you are not copy-pasting this command, we recommend you double-check you have
 entered it correctly before pressing enter. GPG will implicitly verify that the
 fingerprint of the key received matches the argument passed.
