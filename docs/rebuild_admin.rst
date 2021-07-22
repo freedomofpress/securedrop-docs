@@ -166,7 +166,7 @@ and deleting the line:
 
 Restart ``sshd`` using the command ``sudo service sshd restart``.
 
-Then, use the command ``ip a`` to note the local IP address of the 
+Then, use the command ``ip a`` to note the local IP address of the
 default Ethernet interface. You'll need it in the next step.
 
 Repeat the process above for the *Monitor Server*, making sure to note its
@@ -189,7 +189,7 @@ First, log on to the *Application Server* via the console and edit the file
 
 Restart ``sshd`` using the command ``sudo service sshd restart``.
 
-Then, use the command ``ip a`` to note the local IP address for the 
+Then, use the command ``ip a`` to note the local IP address for the
 default Ethernet interface. You'll need it in the next step.
 
 Repeat the process above for the *Monitor Server*, making sure to note its
@@ -400,14 +400,14 @@ should reboot the servers, by issuing the following commands in a terminal:
 Step 8: Post-rebuild tasks
 ==========================
 
-.. important:: 
+.. important::
    Rebuilding an Admin Workstation makes changes that will prevent
    your other Tails workstations from connecting to your SecureDrop
    servers.
-   If you rebuild your Admin Workstation, you must also provision 
-   all other existing Tails Workstation USBs with updated Tor 
-   credentials (see below).    
-   
+   If you rebuild your Admin Workstation, you must also provision
+   all other existing Tails Workstation USBs with updated Tor
+   credentials (see below).
+
 We recommend completing the following tasks after the rebuild:
 
  - Set up a new administration account on the *Journalist Interface*, by following
@@ -435,20 +435,17 @@ We recommend completing the following tasks after the rebuild:
    been restored. Ensure that server and workstation backups happen regularly.
  - Provision all other Tails Workstation USBs (*Journalist* and/or *Admin Workstations*)
    with updated Tor credentials, so that they can access SecureDrop after this rebuild.
-   
-   You will need to copy the following file(s) to all other *Admin* and 
-   *Journalist Workstations*, replacing the existing files of the same name: 
+
+   You will need to copy the following file(s) to all other *Admin* and
+   *Journalist Workstations*, replacing the existing files of the same name:
 
    .. code:: sh
-  
-    ~/Persistent/securedrop/install_files/ansible-base/app-journalist.auth_private  
-    ~/Persistent/securedrop/install_files/ansible-base/tor-v3-keys.json # for Admin Workstations only  
 
-   You may copy these files using a *Trasnfer Device* (which must be wiped afterwards), 
-   or boot into each of your additional Tails workstations, plug in and unlock your 
+    ~/Persistent/securedrop/install_files/ansible-base/app-journalist.auth_private
+    ~/Persistent/securedrop/install_files/ansible-base/tor-v3-keys.json # for Admin Workstations only
+
+   You may copy these files using a *Transfer Device* (which must be wiped afterwards), 
+   or boot into each of your additional Tails workstations, plug in and unlock your
    *Admin Workstation*'s encrypted partition via the **Places** app, and manually copy
-   the file(s) from the Admin Workstation to the same directory on the target Tails 
-   workstation.   
-
- 
-      
+   the file(s) from the Admin Workstation to the same directory on the target Tails
+   workstation.
