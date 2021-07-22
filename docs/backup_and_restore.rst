@@ -239,7 +239,6 @@ Migrating Using a V2+V3 or V3-Only Backup
       gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
 
 
-   .. include:: includes/release-key-transition.txt
    .. important::
       If you do not see the message above, signature verification has failed
       and you should **not** proceed with the installation. If this happens,
@@ -481,7 +480,6 @@ source accounts, and journalist accounts. To do so, follow the steps below:
       gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
       gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
 
-   .. include:: includes/release-key-transition.txt
    .. important::
        If you do not see the message above, signature verification has failed
        and you should **not** proceed with the installation. If this happens,
