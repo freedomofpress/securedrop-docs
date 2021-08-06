@@ -22,8 +22,9 @@ may be simpler. An outline of the steps involved in rebuilding an
  #. Set up SSH access for the new *Admin Workstation*.
  #. Retrieve SecureDrop configuration settings from the *Application* and *Monitor Server*.
  #. Back up and configure the SecureDrop application.
- #. Run the ``./securedrop-admin install`` and ``./securedrop-admin tailsconfig``
-    commands from the new *Admin Workstation*.
+ #. Run ``./securedrop-admin install`` and ``./securedrop-admin tailsconfig``
+    from the new *Admin Workstation*.
+ #. Configure SSH-over-TOR. 
  #. Complete post-rebuild tasks.
 
 
@@ -355,7 +356,7 @@ previous steps. To do so, connect to the Tor network on the
 
 The ``sdconfig`` command will prompt you to fill in configuration details
 about your instance. Use the information retrieved in the previous steps.
-When prompted whether or not to enable SSH-over-Tor, type **yes** (recommended).
+When prompted whether or not to enable SSH-over-Tor, type **no**.
 
 Next, back up the Application server by running the following command in the terminal:
 
@@ -382,10 +383,6 @@ Once the command completes successfully, run
 
 Once this command is complete:
 
- - verify that the Hostname references in ``~/.ssh/config`` have been updated
-   to refer to Onion URLs instead of direct IP addresses
- - verify that you can connect to
-   the servers using ``ssh app`` and ``ssh mon``
  - verify that the desktop shortcuts for the *Source* and *Journalist Interfaces*
    work correctly, opening their respective homepages in Tor Browser.
 
@@ -396,6 +393,39 @@ should reboot the servers, by issuing the following commands in a terminal:
 
  ssh app sudo reboot
  ssh mon sudo reboot
+
+Step 7: Set up SSH-over Tor
+===========================
+
+Rerun the command:
+
+.. code:: sh
+
+ ./securedrop-admin sdconfig
+
+Press "Enter" to use the pre-populated values, but when asked whether to 
+configure SSH-over-Tor, type **yes** (recommended).
+
+Then, re-run
+
+.. code:: sh
+
+ ./securedrop-admin install
+
+When the installation completes, run:
+
+.. code:: sh
+
+ ./securedrop-admin tailsconfig
+
+Once this command completes:
+
+ - verify that the Hostname references in ``~/.ssh/config`` have been updated
+   to refer to Onion URLs instead of direct IP addresses
+ - verify that you can connect to
+   the servers using ``ssh app`` and ``ssh mon``
+ - verify that the desktop shortcuts for the *Source* and *Journalist Interfaces*
+   work correctly, opening their respective homepages in Tor Browser. 
 
 Step 8: Post-rebuild tasks
 ==========================
