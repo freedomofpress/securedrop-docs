@@ -87,7 +87,7 @@ If you are not copy-pasting this command, we recommend you double-check you have
 entered it correctly before pressing enter. GPG will implicitly verify that the
 fingerprint of the key received matches the argument passed.
 
-.. _Tails is connected to Tor: https://tails.boum.org/doc/anonymous_internet/tor_status/index.en.html
+.. _Tails is connected to Tor: https://tails.boum.org/doc/anonymous_internet/tor/index.en.html#index5h1
 
 If GPG warns you that the fingerprint of the key received does not
 match the one requested, do **not** proceed with the installation. If this
