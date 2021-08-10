@@ -24,7 +24,7 @@ may be simpler. An outline of the steps involved in rebuilding an
  #. Back up and configure the SecureDrop application.
  #. Run ``./securedrop-admin install`` and ``./securedrop-admin tailsconfig``
     from the new *Admin Workstation*.
- #. Configure SSH-over-TOR. 
+ #. Configure SSH-over-TOR.
  #. Complete post-rebuild tasks.
 
 
@@ -397,13 +397,19 @@ should reboot the servers, by issuing the following commands in a terminal:
 Step 7: Set up SSH-over Tor
 ===========================
 
+.. note::
+
+   Without performing this step, you will not be able to access your SecureDrop
+   servers from outside the local network. See  :doc:`ssh_over_local_net`
+   for more information.
+
 Rerun the command:
 
 .. code:: sh
 
  ./securedrop-admin sdconfig
 
-Press "Enter" to use the pre-populated values, but when asked whether to 
+Press "Enter" to use the pre-populated values, but when asked whether to
 configure SSH-over-Tor, type **yes** (recommended).
 
 Then, re-run
@@ -425,7 +431,7 @@ Once this command completes:
  - verify that you can connect to
    the servers using ``ssh app`` and ``ssh mon``
  - verify that the desktop shortcuts for the *Source* and *Journalist Interfaces*
-   work correctly, opening their respective homepages in Tor Browser. 
+   work correctly, opening their respective homepages in Tor Browser.
 
 Step 8: Post-rebuild tasks
 ==========================
@@ -474,7 +480,7 @@ We recommend completing the following tasks after the rebuild:
     ~/Persistent/securedrop/install_files/ansible-base/app-journalist.auth_private
     ~/Persistent/securedrop/install_files/ansible-base/tor-v3-keys.json # for Admin Workstations only
 
-   You may copy these files using a *Transfer Device* (which must be wiped afterwards), 
+   You may copy these files using a *Transfer Device* (which must be wiped afterwards),
    or boot into each of your additional Tails workstations, plug in and unlock your
    *Admin Workstation*'s encrypted partition via the **Places** app, and manually copy
    the file(s) from the Admin Workstation to the same directory on the target Tails
