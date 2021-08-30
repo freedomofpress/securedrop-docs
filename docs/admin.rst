@@ -293,8 +293,6 @@ FreeOTP
       :figwidth: 80%
       :width: 100%
 
-      Click on the image to see it full-size.
-
 #. Next, the journalist should open FreeOTP on their smartphone and scan the barcode displayed on the screen.
 #. If they have difficulty scanning the barcode, they can tap on the icon at the top that shows a plus and the symbol of a key and use their phone's keyboard to input the two-factor secret into the ``Secret`` input field, without whitespace.
 #. Inside the FreeOTP app, a new entry for this account will appear on the main screen, with a six-digit number that recycles to a new number every thirty seconds.  The journalist should enter the six-digit number in the  **Verification code** field at the bottom of the **Enable FreeOTP** form and click **Submit**.
@@ -314,8 +312,7 @@ YubiKey
       :figwidth: 80%
       :width: 100%
 
-      User account creation screen with YubiKey OATH-HOTP Secret Key, as seen by an admin. Click on the image to see it full-size.
-
+      User account creation screen with YubiKey OATH-HOTP Secret Key, as seen by an admin.
 #. Once you've entered the YubiKey's OATH-HOTP Secret Key, click **Add User**.  On the next page, have the journalist authenticate using their YubiKey, by inserting it into a USB port on the workstation and pressing its button.
 
    .. figure:: images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
@@ -356,8 +353,6 @@ can reset their account as follows:
       :alt: The account edition form allows to change name, reset password, and reset two-factor authentication.
       :figwidth: 80%
       :width: 100%
-
-      Click on the image to see it full-size.
 
 Next, you can either rotate their passphrase or reset two-factor authentication
 for their account.
@@ -419,8 +414,6 @@ You should see a message appear indicating the change was a success.
    :figwidth: 80%
    :width: 100%
 
-   Click on the image to see it full-size.
-
 .. _submission prefs:
 
 Setting Submission Preferences
@@ -448,8 +441,6 @@ OSSEC alert by clicking **Send Test OSSEC Alert**.
    :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
    :figwidth: 80%
    :width: 100%
-
-   Click on the image to see it full-size.
 
 You should receive an OSSEC alert email at the address specified during the
 installation of SecureDrop. The email may take several minutes to arrive. If
