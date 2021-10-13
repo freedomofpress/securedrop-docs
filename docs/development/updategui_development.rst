@@ -8,18 +8,18 @@ using Python3.
 Installing the Dependencies in a Virtual Environment
 -----------------------------------------------------
 
-You can use the `pipenv tool <https://pipenv.kennethreitz.org/>`_ to create a virtualenv and install the dependencies. The first step
-is to `install pipenv <https://pipenv.kennethreitz.org/#install-pipenv-today>`_ itself. After that, the following commands can be
-used to create the environment:
+You can use Python's built-in ``venv`` module to install the dependencies
+in a virtual environment. From the ``journalist_gui`` directory:
 
 ::
 
-    $ pipenv install
-    $ pipenv shell
+    $ python3 -m venv .venv && source .venv/bin/activate
+    $ pip install --require-hashes -r dev-requirements.txt
 
-
-The first command will create the virtualenv and install the dependencies. The second command is used to
-enable the Pipenv shell.
+The first command will create a virtual environment and activate it.
+The second command will install the dependencies, using the exact hashes
+specified in ``dev-requirements.txt``. Make sure you are using at least
+Python 3.8.
 
 .. note:: The Updater GUI does not use a virtual environment on the Tails
    Workstations. As such, you can only use dependencies present in Tails.
