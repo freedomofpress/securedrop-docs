@@ -7,9 +7,6 @@ Upgrade from 2.0.0 to 2.0.1
    at the earliest opportunity. Servers running on Ubuntu 16.04 no longer
    receive operating system or SecureDrop software updates at this point.
 
-   Please see our :doc:`migration guide <focal_migration>` for instructions
-   for performing a migration, or :doc:`reinstall SecureDrop <../overview>`.
-
 Updating Servers to SecureDrop 2.0.1
 ------------------------------------
 Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
@@ -22,7 +19,7 @@ Updating Workstations to SecureDrop 2.0.1
 
    If you encounter errors with the graphical updater, perform a
    manual update. This will ensure that you have imported the new
-   `SecureDrop release signing key <https://media.securedrop.org/media/documents/signing-key-transition.txt>`_. 
+   `SecureDrop release signing key <https://media.securedrop.org/media/documents/signing-key-transition.txt>`_.
 
 Using the graphical updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

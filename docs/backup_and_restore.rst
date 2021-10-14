@@ -560,9 +560,10 @@ source accounts, and journalist accounts. To do so, follow the steps below:
    The new instance's onion service addresses will be unchanged, but the
    old instance's data and accounts will now be available.
 
-#. As part of this process, your .onion URLs have changed, and *Journalist* and
-   *Admin Workstations* will be out of date, and will need to be
-   :ref:`updated <update_tails_v3>`.
+#. As part of this process, your .onion URLs have changed, and any old
+   *Journalist* and *Admin Workstations* will no longer work. To create
+   additional  *Journalist Workstations*, see our
+   :doc:`onboarding documentation <onboarding>`.
 
 #. If you have migrated to new hardware, ensure your old servers have been
    decommissioned and/or destroyed by following the relevant sections of
