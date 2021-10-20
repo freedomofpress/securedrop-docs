@@ -229,7 +229,7 @@ Migrating Using a V2+V3 or V3-Only Backup
 
       cd ~/Persistent/securedrop/
       git fetch --tags
-      git tag -v 2.0.2
+      git tag -v 2.1.0
 
    The output should include the following two lines:
 
@@ -250,10 +250,10 @@ Migrating Using a V2+V3 or V3-Only Backup
 
    .. code:: sh
 
-      git checkout 2.0.2
+      git checkout 2.1.0
 
    .. important::
-      If you see the warning ``refname '2.0.2' is ambiguous`` in the
+      If you see the warning ``refname '2.1.0' is ambiguous`` in the
       output, we recommend that you contact us immediately at
       securedrop@freedom.press
       (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
@@ -471,7 +471,7 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
       cd ~/Persistent/securedrop/
       git fetch --tags
-      git tag -v 2.0.2
+      git tag -v 2.1.0
 
    The output should include the following two lines:
 
@@ -490,11 +490,11 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 
    .. code:: sh
 
-      git checkout 2.0.2
+      git checkout 2.1.0
 
 
    .. important::
-      If you see the warning ``refname '2.0.2' is ambiguous`` in the
+      If you see the warning ``refname '2.1.0' is ambiguous`` in the
       output, we recommend that you contact us immediately at
       securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -560,9 +560,10 @@ source accounts, and journalist accounts. To do so, follow the steps below:
    The new instance's onion service addresses will be unchanged, but the
    old instance's data and accounts will now be available.
 
-#. As part of this process, your .onion URLs have changed, and *Journalist* and
-   *Admin Workstations* will be out of date, and will need to be
-   :ref:`updated <update_tails_v3>`.
+#. As part of this process, your .onion URLs have changed, and any old
+   *Journalist* and *Admin Workstations* will no longer work. To create
+   additional  *Journalist Workstations*, see our
+   :doc:`onboarding documentation <onboarding>`.
 
 #. If you have migrated to new hardware, ensure your old servers have been
    decommissioned and/or destroyed by following the relevant sections of

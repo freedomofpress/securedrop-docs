@@ -74,7 +74,6 @@ anonymous sources.
    rebuild_admin
    kernel_troubleshooting
    getting_support
-   v3_services
    update_bios
    offboarding
    decommission
@@ -84,11 +83,9 @@ anonymous sources.
    :name: upgradetoc
    :maxdepth: 2
 
-   upgrade/focal_migration.rst
+   upgrade/2.0.2_to_2.1.0.rst
    upgrade/2.0.1_to_2.0.2.rst
    upgrade/2.0.0_to_2.0.1.rst
-   upgrade/1.8.2_to_2.0.0.rst
-   upgrade/1.8.1_to_1.8.2.rst
 
 .. toctree::
    :caption: Developer Documentation
