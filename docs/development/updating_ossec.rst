@@ -86,11 +86,25 @@ a failing test which you then can make pass with a patch to the OSSEC rules:
 How to add a new OSSEC rule?
 =============================
 
-There are two main files involved in this.
+OSSEC processes events in two steps:
 
-- `install_files/securedrop-ossec-server/var/ossec/rules/local_rules.xml` the rules file
-- `install_files/securedrop-ossec-server/var/ossec/etc/local_decoder.xml` the decoder file
+1. `Decoders <https://ossec-documentation.readthedocs.io/en/latest/manual/lids/decoders.html>`_
+   parse and filter log events that meet certain criteria for subsequent processing.
+   SecureDrop's custom rules are defined in
+   ``install_files/securedrop-ossec-server/var/ossec/rules/local_rules.xml``.
 
+2. `Rules <https://ossec-documentation.readthedocs.io/en/latest/manual/lids/rules.html>`_
+   check decoded events against conditions and optionally yield alerts.
+   SecureDrop's custom rules are defined in
+   ``install_files/securedrop-ossec-server/var/ossec/etc/local_decoder.xml``.
+
+A basic decoder filters log events by ``program_name`` (e.g., ``fwupd``).
+If a decoder is already defined for the program of interest, you can go straight
+to :ref:`defining a new rule <the_rules>` unless you have a reason to add additional
+:ref:`decoders <the_decoder_file>` for further filtering.
+
+
+.. _the_decoder_file:
 
 The decoder file
 -----------------
@@ -125,7 +139,8 @@ this, and it will give you some parsed output.
         Level: '2'
         Description: 'Unknown problem somewhere in the system.'
     **Alert to be generated.
-    
+
+.. _the_rules:
 
 The rules
 ---------
