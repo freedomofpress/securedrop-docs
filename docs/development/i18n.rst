@@ -87,6 +87,8 @@ SecureDrop.
 Development tasks
 -----------------
 
+.. _add_a_new_language:
+
 Add a new language
 ^^^^^^^^^^^^^^^^^^
 
@@ -402,19 +404,38 @@ When features for a new SecureDrop release are frozen, the localization manager 
 * :ref:`merge_develop_to_weblate`.
 * `Update Weblate screenshots`_ so translators can see new or modified source strings in context.
 * Update the `i18n timeline`_ in the translation section of the forum.
-* Post an announcement `to the translation section of the forum <https://forum.securedrop.org/c/translations>`__ (see `an example  <https://forum.securedrop.org/t/4-securedrop-strings-need-work-march-2018-string-freeze/461>`__).
-* Remind all developers about the string freeze in `Gitter <https://gitter.im/freedomofpress/securedrop>`__.
 * Add a `Weblate announcement`_ with the translation timeline for the release.
+  **Important:** make sure the ``Notify users`` box is checked, so that translators receive an email alert.
+* Remind all developers about the string freeze in `Gitter <https://gitter.im/freedomofpress/securedrop>`__.
+* Remind all translators about the string freeze in the ``Localization Lab`` channel in the
+  `IFF Mattermost <https://internetfreedomfestival.org/wiki/index.php/IFF_Mattermost>`__.
 * Create a pull request for every source string suggestion coming from translators.
+
+Remember that :ref:`supported languages <add_a_new_language>` are the
+priority during this period.  That is, while translation contributions
+are welcome for all languages, the pre-release goal is to keep the
+current set of supported languages at 100% translation in Weblate.
+Localization Lab can marshal individual translators to help meet this
+goal.
 
 Release day
 ^^^^^^^^^^^
 
-* :ref:`merge_weblate_to_develop`.
+Prior to cutting the final release, the localization manager must:
+
+* :ref:`merge_weblate_to_develop`
+  (`see example PR <https://github.com/freedomofpress/securedrop/pull/6014>`__)
+* Submit a backport PR of these changes into the release branch
+  (`see example PR <https://github.com/freedomofpress/securedrop/pull/6016>`__)
 * :ref:`Update the documentation screenshots <updating_screenshots>`.
-* Remove the `Weblate announcement`_ about this release's translation timeline.
 * Provide translator credits to add to the SecureDrop release announcement.
+
+Then, post-release, either same day or day-after, the localization manager should:
+
+* Remove the `Weblate announcement`_ about this release's translation timeline
+  (if you set an end-date on the original announcement, this may happen automatically)
 * Update the `i18n timeline`_ in the forum.
+* :ref:`merge_develop_to_weblate`, which will update the `Demo Instance <https://demo.securedrop.org/>`__
 
 Translator credits
 ^^^^^^^^^^^^^^^^^^
