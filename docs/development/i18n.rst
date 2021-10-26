@@ -87,6 +87,8 @@ SecureDrop.
 Development tasks
 -----------------
 
+.. _add_a_new_language:
+
 Add a new language
 ^^^^^^^^^^^^^^^^^^
 
@@ -408,6 +410,13 @@ When features for a new SecureDrop release are frozen, the localization manager 
 * Remind all translators about the string freeze in the ``Localization Lab`` channel in the
   `IFF Mattermost <https://internetfreedomfestival.org/wiki/index.php/IFF_Mattermost>`__.
 * Create a pull request for every source string suggestion coming from translators.
+
+Remember that :ref:`supported languages <add_a_new_language>` are the
+priority during this period.  That is, while translation contributions
+are welcome for all languages, the pre-release goal is to keep the
+current set of supported languages at 100% translation in Weblate.
+Localization Lab can marshal individual translators to help meet this
+goal.
 
 Release day
 ^^^^^^^^^^^
