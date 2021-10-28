@@ -113,7 +113,7 @@ to :ref:`defining a new rule <the_rules>` unless you have a reason to add additi
 The decoder file
 -----------------
 
-For example, to add a decoder for log events from ``fwupd``, we can add to
+For example, to add a decoder for log events from ``fwupd``, you can add to
 ``local_decoder.xml``:
 
 ::
@@ -125,7 +125,7 @@ For example, to add a decoder for log events from ``fwupd``, we can add to
       <program_name>fwupd</program_name>
     </decoder>
 
-We can find this ``program_name`` value using the :ref:`"ossec-logtest" command
+You can find this ``program_name`` value using the :ref:`"ossec-logtest" command
 <using_ossec_logtest>`.  Copy-paste the log event as input to this command, and
 it will give you some parsed output:
 
@@ -153,9 +153,9 @@ it will give you some parsed output:
 The rules
 ---------
 
-We decided to use the above mentioned `decoder` along with a group of rules.
-Here, we are making sure that the rules have proper unique `id` number, and
-they are written in the correct (sorted) place in the rules XML file.
+Next, you can add one or more rules corresponding to the new decoder, making
+sure that the rules have proper unique `id` numbers and are written in the
+correct (sorted) place in the ``local_rules.xml`` file.
 
 
 ::
@@ -187,7 +187,7 @@ the new rule:
     /var/ossec/bin/ossec-analysisd -t
 
 ``ossec-analysisd`` will receive log messages and compare them to our rules,
-including the new rule we just added. Then it creates alerts when a log message
+including the new rule you just added. Then it creates alerts when a log message
 matches an applicable rule.
 
 
