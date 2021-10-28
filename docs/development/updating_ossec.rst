@@ -23,6 +23,8 @@ suggesting a rule for it. Each additional alert that admins must read and/or
 respond to takes time. Alerts that are unimportant or otherwise require no action
 can lead to alert fatigue and thus to critical alerts being ignored.
 
+.. _using_ossec_logtest :
+
 Using ``ossec-logtest``
 -----------------------
 
@@ -109,6 +111,9 @@ to :ref:`defining a new rule <the_rules>` unless you have a reason to add additi
 The decoder file
 -----------------
 
+For example, to add a decoder for log events from ``fwupd``, we can add to
+``local_decoder.xml``:
+
 ::
 
     <!--
@@ -118,13 +123,14 @@ The decoder file
       <program_name>fwupd</program_name>
     </decoder>
 
-In the above example, we are creating a new `decoder` based on the
-`program_name` value. We can find this `program_name` value using the
-`/var/ossec/bin/ossec-logtest` command, you can paste the login as input to
-this, and it will give you some parsed output.
+We can find this ``program_name`` value using the :ref:`"ossec-logtest" command
+<using_ossec_logtest>`.  Copy-paste the log event as input to this command, and
+it will give you some parsed output:
 
 ::
 
+    $ echo "Mar  1 13:22:53 app fwupd[133921]: 13:22:53:0883 FuPluginUefi         Error opening directory â€œ/sys/firmware/efi/esrt/entriesâ€�: No such file or directory" | sudo /var/ossec/bin/ossec-logtest
+    [...]
     **Phase 1: Completed pre-decoding.
         full event: 'Mar  1 13:22:53 app fwupd[133921]: 13:22:53:0883 FuPluginUefi         Error opening directory â€œ/sys/firmware/efi/esrt/entriesâ€�: No such file or directory'
         hostname: 'app'
