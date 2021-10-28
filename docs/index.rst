@@ -36,6 +36,8 @@ anonymous sources.
    generate_submission_key
    set_up_admin_tails
    network_firewall
+   firewall_pfsense
+   firewall_opnsense
    servers
    install
    configure_admin_workstation_post_install
