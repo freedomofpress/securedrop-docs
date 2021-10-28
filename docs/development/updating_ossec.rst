@@ -59,6 +59,8 @@ level, you can simply pass the event to ``ossec-logtest``:
 
 This is the utility we use in automated tests of OSSEC.
 
+.. _writing_automated_tests_for_ossec_rules :
+
 Writing Automated Tests for OSSEC Rules
 ---------------------------------------
 
@@ -174,24 +176,30 @@ they are written in the correct (sorted) place in the rules XML file.
     </group>
 
 
-Verify the configuration change
---------------------------------
+Verify the new OSSEC rule
+-------------------------
 
-On the monitor server you can use the following command as `root` to verify the changes.
+On the monitor server you can use the following command as `root` to verify
+the new rule:
 
 ::
 
     /var/ossec/bin/ossec-analysisd -t
 
+``ossec-analysisd`` will receive log messages and compare them to our rules,
+including the new rule we just added. Then it creates alerts when a log message
+matches an applicable rule.
+
 
 Adding an automated test for staging
 -------------------------------------
 
-You can then add a test for the `molecule/testinfra/mon/test_ossec_ruleset.py`
-file. Here the test loops over different log lines mentioned in
-`log_events_without_ossec_alerts` variable in
-`molecule/testinfra/vars/staging.yml`, and makes sure that the `rule_id` and
-`level` matches. 
+You can then add tests in the ``molecule/testinfra/mon/test_ossec_ruleset.py``
+file. Here the test loops over the entries in the
+``log_events_with_ossec_alerts`` and ``log_events_without_ossec_alerts``
+variables in ``molecule/testinfra/vars/staging.yml`` and makes sure that the
+``rule_id`` and ``level`` match.  See :ref:`writing_automated_tests_for_ossec_rules`
+for details.
 
 
 
