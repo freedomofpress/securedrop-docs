@@ -174,6 +174,17 @@ Pre-Release
      release, it's the release manager's responsibility to either fix it
      or find someone who can.
 
+   * You may, at your discretion, escalate a `"release blocker"
+     <https://github.com/freedomofpress/securedrop/labels/release%20blocker>`_
+     to "coordinated response" status.  In this case, you (or the person you
+     designate, such as the issue's reporter) should coordinate an
+     incident-response–style investigation and resolution of the bug, using
+     tools like Etherpad and Google Docs/Sheets to consolidate information in
+     real time and convening short sync-up meetings as often as needed.  After
+     a coordinated response, make sure that the findings gathered in these
+     venues are reported back out publicly (i.e., in the original GitHub issues)
+     for transparency and for future reference.
+
    * Backport release QA fixes merged into ``develop`` into the release
      branch using ``git cherry-pick -x <commit>`` to clearly indicate
      where the commit originated from.
