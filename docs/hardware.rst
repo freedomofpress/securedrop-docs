@@ -648,6 +648,14 @@ for additional background.
 Network Firewall
 ^^^^^^^^^^^^^^^^
 
+.. note::
+
+   The recommended SG-3100 has reached End-of-Sale as of November 2021.
+   We are currently testing alternatives. If you are in the process of setting
+   up SecureDrop and have not already procured an SG-3100, please
+   get in touch via securedrop@freedom.press or our support portal if you
+   require assistance identifying a comparable firewall.
+
 We recommend the `pfSense SG-3100
 <https://shop.netgate.com/products/3100-base-pfsense>`__. It has 3 NICs and an internal
 switch, increasing the number of available ports to 6.
