@@ -67,6 +67,14 @@ If possible, please use `Python type hints <https://docs.python.org/3.5/library/
 for new code. We're going to transition the code base to this style in the
 not-too-distant future.
 
+Client Database Structure
+-------------------------
+
+For a better understanding of the SecureDrop Client application architecture, a high-level view of its database structure has been provided: 
+
+.. image:: ../diagrams/securedrop-client-database.png
+  :width: 100%
+
 Tests
 -----
 
