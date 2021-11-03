@@ -20,6 +20,10 @@ an entry here:
   SecureDrop SQLite database
 - `securedrop-database.mwb`: MySQL Workshop file used to generate
   and update the diagram
+- `securedrop-client-database.png`: An entity relationship diagram of the
+  SecureDrop-Client SQLite database
+- `securedrop-client-database.mwb`: MySQL Workshop file used to generate
+  and update the diagram
 - `SecureDrop_DataFlow.png`: Data flow diagram for SecureDrop.
 - `SecureDrop_DataFlow.draw`: XML used to generate with [Draw.io][].
 [SecureDrop website FAQ]: https://securedrop.org/faq#how_works
