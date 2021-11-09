@@ -115,6 +115,13 @@ or not there has been submission activity in the past 24 hours.
 If the email shows submissions were received, the journalist can
 connect to the *Journalist Interface* to get them.
 
+.. note::
+
+   For security reasons, the email will be sent every 24 hours, regardless
+   of whether there are new submissions or not. The subject of the email will
+   always be "Submissions in the past 24h". To find out whether there were
+   submissions or not, you must decrypt the contents of the email.
+
 This is an optional feature that must be activated :doc:`by the
 administrator <admin>`. In the simplest case a journalist provides
 their email and GPG public key to the admin. If a team of journalist
