@@ -112,7 +112,7 @@ Create USB *Transfer Device*
 
 The easiest and recommended option for a *Transfer Device* is a USB
 drive. If you have a large team of journalists you may want to :doc:`create
-several <onboarding>` of these. Here we'll just walk through
+several <onboarding_journalists>` of these. Here we'll just walk through
 making one *Transfer Device* [#]_.
 
 .. note:: This process will destroy all data currently on the drive.

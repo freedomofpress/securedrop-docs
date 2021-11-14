@@ -12,7 +12,7 @@ Most of the work of installing, administering, and using SecureDrop is
 done from computers using Tails, so the first thing you need to do is
 set up several USB drives with the Tails operating system. To get
 started, you'll need two Tails drives: one for the *Admin Workstation*
-and one for the *Secure Viewing Station*. :doc:`Later <onboarding>`,
+and one for the *Secure Viewing Station*. :doc:`Later <onboarding_journalists>`,
 you'll set up a bunch more Tails drives for your journalists and
 backups, but for now you just need two.
 
@@ -34,7 +34,7 @@ drives which were created via the Tails Installer*.
 
 The `Tails website <https://tails.boum.org/>`__ has detailed and
 up-to-date instructions on how to download and verify Tails, and how to
-create a bootable Tails USB drive. 
+create a bootable Tails USB drive.
 
 .. important:: Make sure you verify the Tails .iso using one of the methods described on the Tails website.
 
@@ -99,7 +99,7 @@ Some other things to keep in mind:
 
 -  Each journalist will need their own Tails drive with their own
    persistent volume secured with their own passphrase — but :doc:`that comes
-   later <onboarding>`.
+   later <onboarding_journalists>`.
 
 -  Journalists and admins will eventually need to remember these
    passphrases. We recommend using `spaced-repetition

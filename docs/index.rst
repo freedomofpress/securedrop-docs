@@ -43,7 +43,8 @@ anonymous sources.
    configure_admin_workstation_post_install
    create_admin_account
    test_the_installation
-   onboarding
+   onboarding_journalists
+   onboarding_admins
 
 .. toctree::
    :caption: Deployment Best Practices
