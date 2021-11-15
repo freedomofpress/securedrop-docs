@@ -174,7 +174,7 @@ Test your new login credentials
 
 To verify that your new password and OTP secret are working, navigate to **System >
 Access > Tester**. Select ``TOTP Local`` from the **Authentication Server** dropdown,
-enter the ``root`` username in the the **Username** field, and enter your OTP token and password concatenated like ``123456PASSWORD`` in the **Password** field. Then click **Test**.
+enter the ``root`` username in the **Username** field, and enter your OTP token and password concatenated like ``123456PASSWORD`` in the **Password** field. Then click **Test**.
 
 |OPNSense - testuserhappy|
 
@@ -412,7 +412,7 @@ physical OPT1 port and the *Monitor Server* to the OPT2 port.
 Next, navigate to **Interfaces > Assignments**. LAN and WAN will alaready be enabled.
 Click the **+** button in the **New Interface** section to enable the OPT1 interface
 on the next available NIC (``igb2`` in the screenshot below). Once OPT1 has been
-added, click ***+** again to add OPT2 (on ``igb3`` in the screenshot below)
+added, click **+** again to add OPT2 (on ``igb3`` in the screenshot below)
 
 Finally, click **Save**.
 
@@ -527,7 +527,7 @@ the table below (assuming recommended values for IP addresses):
 
    * - antilockout_ports
      - Port(s)
-     - 80,443
+     - 80, 443
 
 When complete, the **Aliases** page should look like this:
 
