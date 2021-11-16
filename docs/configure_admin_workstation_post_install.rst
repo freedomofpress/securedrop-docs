@@ -42,11 +42,6 @@ collected from files in
 ``~/Persistent/securedrop/install_files/ansible-base`` and stored in
 ``~/Persistent/.securedrop/torrc_additions`` thereafter.
 
-.. tip:: Copy the files ``app-journalist-aths`` and ``app-source-ths`` to
-         the Transfer Device in preparation for setting up the Journalist
-         Workstation. Then you can use the ``securedrop-admin`` tool to configure
-         access for Journalists as well.
-
 In addition, the script creates desktop and menu shortcuts for the Source
 and *Journalist Interfaces*, directs Tails to install Ansible at the
 beginning of every session, and sets up SSH host aliases for the servers.
