@@ -286,7 +286,8 @@ Release Process
 #. A reviewer must verify the build logs, obtain and sign the generated ``Release``
    file, and append the detached signature to the PR. The PR should remain in
    draft mode. The packages on ``apt-qa.freedom.press`` are now installable.
-#. Coordinate with one or more team members to `confirm a successful clean install in production VMs <https://github.com/freedomofpress/securedrop/wiki/QA-Procedures#preflight-testing>`__
+#. Coordinate with one or more team members to `confirm a successful clean install in production VMs
+   <https://github.com/freedomofpress/securedrop/wiki/QA-Procedures#user-content-preflight-testing>`__
    using the packages on ``apt-qa.freedom.press``.
 #. If no issues are discovered in final QA, promote the packaging PR out of draft
    mode.
