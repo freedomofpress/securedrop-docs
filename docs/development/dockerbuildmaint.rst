@@ -12,7 +12,7 @@ Maintaining images of our build container for each release is our way of recordi
 of each dependency used to build our production debian packages for SecureDrop.
 
 Who can update the build container?
-===================================
+-----------------------------------
 There are tight restrictions over who can make edits to our Docker repository. If you have
 permissions to do so, you'll need to make sure your local Docker client has credentials to push.
 
@@ -24,7 +24,7 @@ permissions to do so, you'll need to make sure your local Docker client has cred
 * Proceed with update instructions
 
 Updating the build container
-============================
+----------------------------
 We know the build container needs to be updated when **test_ensure_no_updates_avail** fails during
 ``make build-debs`` in the ``securedrop`` Github reprository root directory. This test fails if any
 of the dependencies required to build the debian packages have security updates. If you have access

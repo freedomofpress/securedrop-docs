@@ -87,8 +87,8 @@ a failing test which you then can make pass with a patch to the OSSEC rules:
 .. _2134: https://github.com/freedomofpress/securedrop/issues/2134
 
 
-How to add a new OSSEC rule?
-=============================
+Adding new OSSEC rules
+----------------------
 
 OSSEC processes events in two steps:
 
@@ -111,7 +111,7 @@ to :ref:`defining a new rule <the_rules>` unless you have a reason to add additi
 .. _the_decoder_file:
 
 The decoder file
------------------
+~~~~~~~~~~~~~~~~
 
 For example, to add a decoder for log events from ``fwupd``, you can add to
 ``local_decoder.xml``:
@@ -151,7 +151,7 @@ it will give you some parsed output:
 .. _the_rules:
 
 The rules
----------
+~~~~~~~~~
 
 Next, you can add one or more rules corresponding to the new decoder, making
 sure that the rules have proper unique `id` numbers and are written in the
@@ -177,7 +177,7 @@ correct (sorted) place in the ``local_rules.xml`` file.
 
 
 Verify the new OSSEC rule
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the monitor server you can use the following command as `root` to verify
 the new rule:
@@ -192,7 +192,7 @@ matches an applicable rule.
 
 
 Adding an automated test for staging
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can then add tests in the ``molecule/testinfra/mon/test_ossec_ruleset.py``
 file. Here the test loops over the entries in the

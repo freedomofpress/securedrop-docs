@@ -23,7 +23,7 @@ For an installation of SecureDrop, you must acquire:
   *Admin Workstation(s)/Journalist Workstation(s)*.
 * Dedicated airgapped hardware for the mouse, keyboard, and monitor (only if you
   are using a desktop for the *Secure Viewing Station*).
-* Network firewall.
+* A dedicated network firewall with at least 3 NICs.
 * At least 3 ethernet cables.
 * Plenty of USB sticks: 1 drive for the master Tails stick, 1 drive for each
   Secure Viewing Station, 1 drive for each *Transfer Device*, 1 drive for each
@@ -656,8 +656,11 @@ Network Firewall
    get in touch via securedrop@freedom.press or our support portal if you
    require assistance identifying a comparable firewall.
 
-We recommend the `pfSense SG-3100
-<https://shop.netgate.com/products/3100-base-pfsense>`__. It has 3 NICs and an internal
+
+We currently recommend 2 network firewalls:
+* the `TekLager APU4D4 <https://teklager.se/en/products/routers/apu4d4-open-source-router>`__, running `OPNSense <https://opnsense.org/>`. It has 4 NICs and ports.
+* the `Netgate SG-3100
+<https://shop.netgate.com/products/3100-base-pfsense>`__ running `pfSense <https://www.pfsense.org/>`__. It has 3 NICs and an internal
 switch, increasing the number of available ports to 6.
 
 Network Switch

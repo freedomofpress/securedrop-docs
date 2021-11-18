@@ -5,7 +5,7 @@ This document contains brief descriptions of the Debian packages
 hosted and maintained by Freedom of the Press Foundation in our apt
 repository (`apt.freedom.press`_).
 
-linux-image-4.4.*-grsec
+linux-image-\*-grsec
     This package contains the Linux kernel image, patched with grsecurity.
     Listed as a dependency of ``securedrop-grsec``.
 
