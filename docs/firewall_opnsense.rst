@@ -197,7 +197,7 @@ Set Alternate Hostnames
 Before you can set up the hardware firewall, you will need to set the
 **Alternate Hostnames** setting.
 
-First, navigate to **System > Settings > Advanced**.  In the **Web GUI** section,
+First, navigate to **System > Settings > Administration**.  In the **Web GUI** section,
 update the **Alternate Hostnames** field with the values ``192.168.1.1`` and the
 IP address of the *Admin Gateway* (``10.20.1.1`` if you are using the recommended
 default values), separated by a space.
@@ -289,8 +289,8 @@ the Unsafe Browser and visit a host that you expect to be up (e.g. ``google.com`
 Update OPNSense to the latest version
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You should update OPNSense to the latest version available before proceeding
-with the rest of the configuration. Click **Click to check for updates** on
-**Lobby > Dashboard** to start the process, and follow any on-screen instructions
+with the rest of the configuration. Navigate to **Lobby > Dashboard** and click
+**Click to check for updates** to start the process, and follow any on-screen instructions
 to complete the update. Note that a reboot may be required, and you may also need
 to apply several updates in a row to get to the latest version.
 
@@ -311,7 +311,7 @@ Workstation instead.
 Disable DHCP Server on the LAN Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To disable DHCP, navigate to **Services > DHCP > [LAN]** in the Web GUI.
+To disable DHCP, navigate to **Services > DHCPv4 > [LAN]** in the Web GUI.
 Uncheck the **Enable DHCP server on the LAN interface** checkbox, scroll down,
 and click **Save**.
 
@@ -499,35 +499,35 @@ the table below (assuming recommended values for IP addresses):
 
    * - admin_workstation
      - Host(s)
-     - 10.20.1.2
+     - ``10.20.1.2``
 
    * - app_server
      - Host(s)
-     - 10.20.2.2
+     - ``10.20.2.2``
 
    * - external_dns_servers
      - Host(s)
-     - 8.8.8.8, 8.8.4.4
+     - ``8.8.8.8``, ``8.8.4.4``
 
    * - monitor_server
      - Host(s)
-     - 10.20.3.2
+     - ``10.20.3.2``
 
    * - local_servers
      - Host(s)
-     - app_server, monitor_server
+     - ``app_server``, ``monitor_server``
 
    * - OSSEC
      - Port(s)
-     - 1514
+     - ``1514``
 
    * - ossec_agent_auth
      - Port(s)
-     - 1515
+     - ``1515``
 
    * - antilockout_ports
      - Port(s)
-     - 80, 443
+     - ``80``, ``443``
 
 When complete, the **Aliases** page should look like this:
 
@@ -554,21 +554,24 @@ The rules needed are described in this table:
    :header-rows: 1
 
    * - Action
+     - TCP/IP Version
      - Protocol
      - Src
      - Src port
      - Dest
      - Dest port
      - Description
-   * - Allow
-     - IPv4 TCP
+   * - Pass
+     - IPv4
+     - TCP
      - admin_workstation
      - *
      - local_servers
      - 22 (SSH)
      - SSH access for initial install
-   * - Allow
-     - IPv4 TCP
+   * - Pass
+     - IPv4
+     - TCP
      - admin_workstation
      - *
      - *
@@ -597,6 +600,7 @@ on this interface. Add the rules below:
    :header-rows: 1
 
    * - Action
+     - TCP/IP Version
      - Protocol
      - Src
      - Src port
@@ -604,49 +608,56 @@ on this interface. Add the rules below:
      - Dest port
      - Description
    * - Pass
-     - IPv4 UDP
+     - IPv4
+     - UDP
      - app_server
      - *
      - monitor_server
      - OSSEC
      - OSSEC Agent
    * - Pass
-     - IPv4 TCP
+     - IPv4
+     - TCP
      - app_server
      - *
      - monitor_server
      - ossec_agent_auth
      - OSSEC initial auth
    * - **Block**
-     - IPv4 any
+     - IPv4
+     - any
      - OPT1 net
      - *
      - LAN net
      - *
      - Block between OPT1 and LAN by default
    * - **Block**
-     - IPv4 any
+     - IPv4
+     - any
      - OPT1 net
      - *
      - OPT2 net
      - *
      - Block between OPT1 and OPT2 by default
    * - Pass
-     - IPv4 TCP
+     - IPv4
+     - TCP
      - app_server
      - *
      - *
      - *
      - Tor from App Server
    * - Pass
-     - IPv4 TCP/UDP
+     - IPv4
+     - TCP/UDP
      - app_server
      - *
      - external_dns_servers
      - 53 (DNS)
      - Allow DNS
    * - Pass
-     - IPv4 UDP
+     - IPv4
+     - UDP
      - app_server
      - *
      - *
@@ -668,6 +679,7 @@ in the screenshot:
    :header-rows: 1
 
    * - Action
+     - TCP/IP Version
      - Protocol
      - Src
      - Src port
@@ -675,35 +687,40 @@ in the screenshot:
      - Dest port
      - Description
    * - **Block**
-     - IPv4 any
+     - IPv4
+     - any
      - OPT2 net
      - *
      - LAN net
      - *
      - Block between OPT2 and LAN by default
    * - **Block**
-     - IPv4 any
+     - IPv4
+     - any
      - OPT2 net
      - *
      - OPT1 net
      - *
      - Block between OPT2 and OPT1 by default
    * - Pass
-     - IPv4 TCP
+     - IPv4
+     - TCP
      - monitor_server
      - *
      - *
      - *
      - Tor, SMTP from Monitor Server
    * - Pass
-     - IPv4 TCP/UDP
+     - IPv4
+     - TCP/UDP
      - monitor_server
      - *
      - external_dns_servers
      - 53 (DNS)
      - Allow DNS
    * - Pass
-     - IPv4 UDP
+     - IPv4
+     - UDP
      - monitor_server
      - *
      - *
