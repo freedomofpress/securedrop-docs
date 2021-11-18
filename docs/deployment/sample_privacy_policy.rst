@@ -27,13 +27,11 @@ Collection of Information From Sources
   message is automatically deleted.
 
 * Journalists decrypt and read each message offline. They are encouraged to
-  delete messages from the server on a regular basis. The date and time of any
-  message will be securely deleted from the server when the message is deleted.
+  delete messages from the server on a regular basis.
 
 * Please keep in mind that the actual messages you send and receive through
   SecureDrop may include personally identifying information. For this reason,
-  once you read a journalist’s message, we recommend you delete it. It will
-  then be securely deleted from the file system.
+  once you read a journalist’s message, we recommend you delete it.
 
 Also please note that when you submit certain types of files through SecureDrop,
 you may be sending us metadata associated with that file.
