@@ -129,6 +129,15 @@ You can find this ``program_name`` value using the :ref:`"ossec-logtest" command
 <using_ossec_logtest>`.  Copy-paste the log event as input to this command, and
 it will give you some parsed output:
 
+..
+    Warning to editors:  The instances of "â€œ" in this example come verbatim
+    from actual OSSEC alerts reported (and reproduced) in
+    freedomofpress/securedrop#5835.  Whether or not they should be considered
+    invalid *output* from OSSEC, they are valid *input* for the purpose of this
+    example and documentation.  See
+    <https://github.com/freedomofpress/securedrop-docs/pull/199#pullrequestreview-634460996>
+    for a prior discussion on this point.
+
 ::
 
     $ echo "Mar  1 13:22:53 app fwupd[133921]: 13:22:53:0883 FuPluginUefi         Error opening directory â€œ/sys/firmware/efi/esrt/entriesâ€�: No such file or directory" | sudo /var/ossec/bin/ossec-logtest
