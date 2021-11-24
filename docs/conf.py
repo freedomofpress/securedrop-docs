@@ -220,7 +220,26 @@ latex_elements = {
     # The font size ('10pt', '11pt' or '12pt').
     # 'pointsize': '10pt',
     # Additional stuff for the LaTeX preamble.
-    # 'preamble': '',
+    # Neither of:
+    #     \usepackage[T1]{fontenc}
+    #     \usepackage{textcomp}
+    # seem to make this magically work, so define individual characters.
+    # Also,
+    #     \usepackage{svg}
+    # does not seem to allow inclusion of the Weblate status badge (over HTTPS,
+    # which may be the problem).
+    'preamble': r'''
+    \DeclareUnicodeCharacter{25B6}{$\blacktriangleright$}
+    \DeclareUnicodeCharacter{25B8}{$\blacktriangleright$}
+    \DeclareUnicodeCharacter{2B06}{$\uparrow$}
+    \DeclareUnicodeCharacter{2B07}{$\downarrow$}
+    \DeclareUnicodeCharacter{201C}{\textquotedblleft}
+    \DeclareUnicodeCharacter{201D}{\textquotedblright}
+    \DeclareUnicodeCharacter{00E2}{\^a}
+    \DeclareUnicodeCharacter{20AC}{\euro}
+    \DeclareUnicodeCharacter{0153}{\oe}
+    \DeclareUnicodeCharacter{FFFD}{$\blacklozenge$}
+    ''',
     # Latex figure (float) alignment
     # 'figure_align': 'htbp',
 }

@@ -1,10 +1,13 @@
 # sha256 as of 2021-11-09
 FROM python:3.9-slim-bullseye@sha256:408de0cf1a057f5501ee6642ad24a4762738f63bacf09fb4c8d861669260b01e AS sphinx
 
-RUN apt-get -q update && apt-get -qy upgrade && apt-get install make
+RUN apt-get -q update && apt-get -qy upgrade && apt-get -qy install make latexmk texlive-latex-extra
 COPY ./ .
 RUN pip install -r requirements/requirements.txt
+
+# TODO: run this twice, for stable and latest
 RUN make html
+RUN yes '' | make latexpdf || true
 
 # sha256 as of 2021-11-09
 FROM nginx:mainline-alpine@sha256:af466e4f12e3abe41fcfb59ca0573a3a5c640573b389d5287207a49d1324abd8
@@ -14,3 +17,4 @@ RUN mkdir -p /opt/nginx/run /opt/nginx/webroot && chown -R nginx:nginx /opt/ngin
 
 USER nginx
 COPY --from=sphinx docs/_build/html/html/ /opt/nginx/webroot/
+COPY --from=sphinx docs/_build/html/latex/SecureDrop.pdf /opt/nginx/webroot/
