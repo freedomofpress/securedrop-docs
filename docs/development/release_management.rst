@@ -43,12 +43,10 @@ Pre-Release
    goal is to make sure we test against the lastest Tails release, including release candidates,
    so that we can report bugs early to Tails.
 
-#. Check the Tor blog for new
-   `release candidates <https://blog.torproject.org/category/tags/release-candidate>`_ and new
-   `stable releases <https://blog.torproject.org/category/tags/stable-release>`_. Let the team
-   know about any new release candidates during the SecureDrop release process in case there are
-   critical bug fixes. For a new stable release, file an issue and upgrade Tor following these
-   steps:
+#. Check the `Tor blog <https://blog.torproject.org/category/applications/>`_ for new release
+   candidates and new stable releases. Let the team know about any new release candidates during the
+   SecureDrop release process in case there are critical bug fixes. For a new stable release, file
+   an issue and upgrade Tor following these steps:
 
       a. Bump the version in `fetch-tor-packages
          <https://github.com/freedomofpress/securedrop/blob/develop/molecule/fetch-tor-packages/
