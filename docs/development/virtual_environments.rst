@@ -6,8 +6,13 @@ stack available in order to develop and test some features. To make this easier,
 the project includes a Vagrantfile that can be used to create two predefined 
 virtual environments:
 
-* :ref:`Staging <staging_vms>`
-* :ref:`Production <production_vms>`
++------------------------------------------------+-----------------------------------------------------+--------------------------------+----------------------------------------+
+| The...                                         | ...is provisioned via...                            | ...with packages from...       | ...and with Tails access configured... |
++================================================+=====================================================+================================+========================================+
+| :ref:`Staging environment <staging_vms>`       | host-level ``make staging``                         | host-level ``make build-debs`` | manually                               |
++------------------------------------------------+-----------------------------------------------------+--------------------------------+----------------------------------------+
+| :ref:`Production environment <production_vms>` | Tails-level ``securedrop-admin {sdconfig,install}`` | ``apt.freedom.press``          | via ``securedrop-admin tailsconfig``   |
++------------------------------------------------+-----------------------------------------------------+--------------------------------+----------------------------------------+
 
 This document explains the purpose of, and how to get started working with, each
 one.
