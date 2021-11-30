@@ -7,7 +7,9 @@ set -e
 
 
 latest_branch=main
-stable_tag=$(git tag --sort=version:refname | tail -1)
+# TEMPORARY: override for CI testing
+#stable_tag=$(git tag --sort=version:refname | tail -1)
+stable_tag=stable-plus-k8s-container
 
 do_build() {
     git checkout "$1"
