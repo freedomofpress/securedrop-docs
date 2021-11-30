@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Run the docs build process twice, producing `build/latest` and
+# `build/stable` instead of `docs/_build`.
+
+set -e
+
+
+latest_branch=main
+stable_tag=$(git tag --sort=version:refname | tail -1)
+
+do_build() {
+    git checkout "$1"
+    export SECUREDROP_DOCS_RELEASE="$2"
+
+    make html
+    # Due to remote SVG includes not working (they didn't work on RTD either),
+    # the LaTeX build will pause and wait for the user to press enter. It will
+    # also exit with an error status.
+    yes '' | make latexpdf || :
+
+    mkdir -p build
+    mv docs/_build "build/${2}"
+}
+
+do_build "$stable_tag" stable
+do_build "$latest_branch" latest
