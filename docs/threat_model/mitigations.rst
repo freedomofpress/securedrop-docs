@@ -18,7 +18,7 @@ regional and political specificity.
 Application Code — SecureDrop Repository/Release
 ------------------------------------------------
 
-Attacks to the Application Code — SecureDrop Respository/Release
+Attacks to the Application Code — SecureDrop Repository/Release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Malicious code introduced in SecureDrop repository
 -  Malicious code introduced in SecureDrop release
