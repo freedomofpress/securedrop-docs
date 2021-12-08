@@ -699,6 +699,8 @@ codes. For example: ::
 You'll need to list all languages you now want to support, adding or removing
 languages as needed. Locale changes will be applied after the next reboot.
 
+.. _multiple_admins:
+
 Managing Configuration Updates with Multiple Admins
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

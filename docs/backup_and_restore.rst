@@ -563,7 +563,7 @@ source accounts, and journalist accounts. To do so, follow the steps below:
 #. As part of this process, your .onion URLs have changed, and any old
    *Journalist* and *Admin Workstations* will no longer work. To create
    additional  *Journalist Workstations*, see our
-   :doc:`onboarding documentation <onboarding>`.
+   :doc:`onboarding documentation <onboarding_journalists>`.
 
 #. If you have migrated to new hardware, ensure your old servers have been
    decommissioned and/or destroyed by following the relevant sections of
