@@ -64,7 +64,7 @@ From the *Application Server*:
 
 .. code:: sh
 
-   apt-cache-policy securedrop-app-code
+   apt-cache policy securedrop-app-code
 
 The installed package version should match the latest stable version,
 but the locally built package with higher version should be available
