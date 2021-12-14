@@ -61,8 +61,8 @@ Countermeasures on both *Source* and *Journalist Interfaces*
 -  All *Interface* session data (except language and locale selection) is discarded at logout, and fully deleted upon exiting Tor Browser
 -  A number of mitigations are in place as protection against malicious input vulnerabilities on the Source and Journalist Interfaces:
 
-    - X-XSS-PROTECTION is enabled
-    - Content-Security-Policy is set to "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
+    - ``Cross-Origin-*`` headers are maximally restrictive
+    - ``Content-Security-Policy`` header is maximally restrictive
     - SQLAlchemy is used as ORM for all database queries
     - Application does not execute uploaded submission data
 -  A number of mitigations are in place as protection against the risk of an HTTP misconfiguration on the *Source* and *Journalist Interfaces*:
@@ -70,8 +70,8 @@ Countermeasures on both *Source* and *Journalist Interfaces*
     - Cache control header is set to “no store;”
     - HTTP headers do not expose version information of system components
     - X-Content-Type is set to "nosniff;"
-    - Content-Security-Policy is set to "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
-    - X-XSS-Protection is set to "1"
+    - ``Cross-Origin-*`` headers are maximally restrictive
+    - ``Content-Security-Policy`` header is maximally restrictive
 
 Countermeasures unique to *Source Interface*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
