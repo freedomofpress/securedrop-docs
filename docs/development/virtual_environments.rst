@@ -238,7 +238,7 @@ Once you're prepared the *Admin Workstation*, you can start each VM:
 
 .. code:: sh
 
-  molecule create -s libvirt-focal-prod
+  molecule create -s libvirt-prod-focal
 
 At this point you should be able to SSH into both ``app-prod`` and ``mon-prod``.
 From here you can follow the :ref:`server configuration instructions
