@@ -2,8 +2,8 @@ Virtual Environments: Servers
 =============================
 
 SecureDrop is a multi-server system, and  you may need the full server
-stack available in order to develop and test some features. To make this easier, 
-the project includes a Vagrantfile that can be used to create two predefined 
+stack available in order to develop and test some features. To make this easier,
+the project includes a Vagrantfile that can be used to create two predefined
 virtual environments:
 
 * :ref:`Staging <staging_vms>`
@@ -58,10 +58,10 @@ The web interfaces and SSH are available over Tor. A copy of the the Onion URLs
 for *Source* and *Journalist Interfaces*, as well as SSH access, are written to the
 Vagrant host's ``install_files/ansible-base`` directory.
 
-To access the *Source Interface* from Tor Browser, use the v3 onion URL from the file 
+To access the *Source Interface* from Tor Browser, use the v3 onion URL from the file
 ``install_files/ansible-base/app-sourcev3-ths``.
 
-To use the *Journalist Interface*, you will need to modify Tor Browser's 
+To use the *Journalist Interface*, you will need to modify Tor Browser's
 configuration to allow access to an authenticated onion service:
 
 - First, add the following line to your Tor Browser's ``torrc`` file, typically
@@ -79,7 +79,7 @@ configuration to allow access to an authenticated onion service:
     chmod 0700 tor-browser_en-US/Browser/TorBrowser/Data/Tor/onion_auth
 
 - Finally, copy the file ``install_files/ansible-base/app-journalist.auth_private``
-  to the ``onion_auth`` directory and restart Tor Browser. You should now be able 
+  to the ``onion_auth`` directory and restart Tor Browser. You should now be able
   to visit the v3 onion address in ``app-journalist.auth_private`` from Tor Browser.
 
 
@@ -98,7 +98,7 @@ By default, the staging environments are created with an empty submissions datab
 - Create a directory ``install_files/ansible-base/test-data``.
 - Copy the backup file to the directory above.
 - Define an environmental variable ``TEST_DATA_FILE`` whose value is the name  of the backup file - for example ``sd-backup.tar.gz`` - and run ``make staging``:
-  
+
   .. code:: sh
 
     TEST_DATA_FILE="sd-backup.tar.gz" make staging
@@ -199,7 +199,7 @@ supports KVM:
 
    sudo libvirtd --version
    [ `egrep -c 'flags\s*:.*(vmx|svm)' /proc/cpuinfo` -gt 0 ] &&  \
-   echo "KVM supported!" || echo "KVM not supported..." 
+   echo "KVM supported!" || echo "KVM not supported..."
 
 Set libvirt as the default provider
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -238,7 +238,7 @@ Once you're prepared the *Admin Workstation*, you can start each VM:
 
 .. code:: sh
 
-  molecule create -s libvirt-focal-prod
+  molecule create -s libvirt-prod-focal
 
 At this point you should be able to SSH into both ``app-prod`` and ``mon-prod``.
 From here you can follow the :ref:`server configuration instructions
