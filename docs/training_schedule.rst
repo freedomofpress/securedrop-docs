@@ -1,141 +1,136 @@
 SecureDrop On-Site Training Schedule
 ====================================
 
-This is a high level schedule for what happens for the 2 days during an
-on-site install.
-
-Day 1: Preparation and Install
-------------------------------
-
-Setup and Introductions
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Time: 30min
-
-Participants: all
-
-Required: projector, WiFi access, pre-configured demo SecureDrop
-instance and 2 laptops to act as the Journalist Workstation and *SVS*
-
--  The demo instance has multiple sources to try and give a feel of what
-   it will look like at 2 weeks past being public with sources in
-   different states of the reply process
-
-Overview of SecureDrop
-~~~~~~~~~~~~~~~~~~~~~~
-
-Time: 2 hours
-
-Participants: journalists, editors, SecureDrop admins, OSSEC alert
-recipients and anyone else interested
-
--  Go over the SecureDrop `FAQs <https://securedrop.org/faq>`__
--  Go over the SecureDrop :ref:`environment diagrams <securedrop_architecture_diagram>`
--  Importance of the *Landing Page* security and Twitter feedback
--  Demo the source submission process
--  Demo the journalist's processes for checking the *Journalist Interface*
--  Demo the journalist's processes for replies
--  Demo working with submissions on the *SVS*
--  Discuss scrubbing submitted documents prior to publication
--  Options for distributing with other news organizations
--  Show example of an OSSEC alert, briefly cover what it does
--  Show example of 'is it up?' Nagios monitoring alerts for Source
-   Interface
--  Explain why the *Journalist Interface* does not have 'is it up?'
-   monitoring
--  Overview of `onion names <https://securedrop.org/news/introducing-onion-names-securedrop/>`__
--  How to brand the *Source Interface* and *Journalist Interface*
--  Physical security of servers and *SVS*
--  How to securely publicize the organization's Source Interface Tor URL
--  Distribute important info:
-
-   -  Third-party security mailing lists to subscribe to
-   -  https://freedom.press/about/staff
-   -  https://securedrop.org
-   -  https://docs.securedrop.org
-   -  :doc:`Hardware for SecureDrop <hardware>`
-   -  :ref:`Deployment` guidelines
-   -  :doc:`Source Best Practice Guide <source>`
-   -  :doc:`Journalist Best Practice Guide <journalist>`
-   -  :doc:`Admin Best Practice Guide <admin>`
--  Answering the client vs. server side crypto debate
--  Link to security audits
-
-Questions
-~~~~~~~~~
-
-Time: 30 min
+Day 1: Install
+--------------
 
 Installing SecureDrop
 ~~~~~~~~~~~~~~~~~~~~~
 
-Time: 6 hours
+Installation may be started by admins ahead of schedule to save on-site time.
+
+**Time**: 6+ hours
+
+**Participants**: SecureDrop Admins
+
+**Format**: For assisted installs, in-person or hybrid-remote (FPF remote, admins in-person)
 
 -  Follow :doc:`Installing SecureDrop <install>`
 
-Day 2: Journalist and Admin Training
-------------------------------------
-
-Journalist Training
-~~~~~~~~~~~~~~~~~~~
-
-Time: 2 separate sessions, about 2 hours each
-
-Participants: journalists and admins
-
--  Check access to previously created Tails USB
--  Generate personnel GPG keys
--  Setup KeyPassX manager (one for *SVS*, one for personnel Tails)
--  Options between YubiKey/FreeOTP app for 2FA (SSH,
-   *Journalist Interface*, FDE and password managers)
--  Secure-deleting and difference between wipe and erase free space on
-   Tails, and when to use each
--  Disaster recovery for 2FA and password manager, personnel GPG keys
--  Updating Tails
--  Backing up the *SVS*
--  If needed, process for distributing the Application's private GPG key
-   to a distant journalist's air-gapped *SVS*
--  Do complete journalist process walk through twice, either on
-   different days or between morning/afternoon sessions
--  Using MAT (Metadata Anonymisation Toolkit)
--  What to do for unsupported formats
+Day 2: Admin and Digital Security Training
+------------------------------------------
 
 Admin Training
 ~~~~~~~~~~~~~~
 
-Time: 2 hours
+**Time**: 4+ hours
 
-Participants: admins
+**Participants**: SecureDrop Admins
+
+**Format**: In-person or hybrid-remote (FPF remote, admins in-person)
 
 -  Check access to previously created Tails USB
--  Generate personnel GPG keys
--  Setup KeyPassX manager (one for *SVS*, one for personnel Tails)
--  Options between YubiKey/FreeOTP app for 2FA (SSH,
-   *Journalist Interface*, FDE and password managers)
--  Secure-deleting and difference between wipe and erase free space on
-   Tails, and when to use each
--  Disaster recovery for 2FA and password manager, personnel GPG keys
 -  Updating Tails
--  Setting up SSH aliases for the *Admin Workstation*
--  How to use screen or tmux to help prevent being locked out of the
-   system
--  Adding packages to Tails
+-  Setup KeyPassXC manager (one for *SVS*, one for *Admin Workstation*)
+-  Setting up SSH aliases for the *Admin Workstation* if needed
 -  Go over common OSSEC alerts for security updates and daily reports
--  Disaster recovery for application, remote access and *SVS*
--  Common admin actions
--  Adding/removing users
--  Enabling logging
--  Sending logs to FPF
--  Generating new Tor onion services
--  Updating application's GPG key
--  Re-IP'ing
+-  Adding/removing SecureDrop users
 -  Backups
 -  Disk space monitoring
--  Updating SMTP and OSSEC alert configs
 -  Changing passphrases (for FDE, persistent volumes, 2FA, KeePassXC
    managers...)
--  What will happen to local modifications to prod system after updates
+-  Enabling logging for troubleshooting
+-  Sending logs to FPF support team
+-  Preparing *Journalist Workstation* drives
 -  Updating SecureDrop Application
 
    -  Unattended upgrades
    -  Upgrades that require admin intervention
+
+-  Distribute important info:
+
+   -  https://docs.securedrop.org
+   -  :doc:`Admin Best Practice Guide <admin>`
+   -  :doc:`Hardware for SecureDrop <hardware>`
+   -  :ref:`Deployment` guidelines
+
+
+Digital Security 101
+~~~~~~~~~~~~~~~~~~~~
+
+**Time**: 2 hours
+
+**Participants**: Journalists to be onboarded to SecureDrop, admins, OSSEC alert
+recipients and anyone else interested
+
+**Format**: In-person or remote
+
+- Risk assesment and threat modeling
+- Account security fundamentals
+
+   - Passphrases and Password Managers
+   - Two-factor authentication (2FA)
+- Phishing prevention
+- Web browser security
+- IP address privacy, VPNs and Tor
+- Secure communication tools for colleagues and sources
+- Q & A
+
+Day 3: Journalist Training and Onboarding
+-----------------------------------------
+
+Journalist Training, Part 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Time**: 2.5 hours
+
+**Participants**: Journalists to be onboarded to SecureDrop, admins, OSSEC alert
+recipients and anyone else interested
+
+**Format**: In-person or remote
+
+-  Introduction to Tails and its features
+-  Importance of the *Landing Page* security
+-  Demo of source submission process
+-  Demo of journalist's processes for checking the *Journalist Interface*
+-  Demo of journalist's processes for replies
+-  Demo working with submissions on the *SVS*
+-  Secure-deleting and difference between wipe and erase free space on
+   Tails, and when to use each
+-  Discuss scrubbing submitted documents prior to publication
+
+   -  Using MAT (Metadata Anonymisation Toolkit)
+   -  Converting files to more benign formats
+   -  What to do for unsupported formats
+-  Options for distributing with other news organizations
+-  Show example of an OSSEC alert, briefly cover what it does
+-  Overview of `onion names <https://securedrop.org/news/introducing-onion-names-securedrop/>`__
+-  Physical security of servers and *SVS*
+-  How to securely publicize the organization's *Source Interface* Tor URL
+-  Distribute important info:
+
+   -  https://securedrop.org
+   -  :doc:`Source Best Practice Guide <source>`
+   -  :doc:`Journalist Best Practice Guide <journalist>`
+
+-  Link to security audits
+- Q & A
+
+Journalist Training, Part 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Time**: 1+ hours, depending on the number of journalists being onboarded
+
+**Participants**: Journalists to be onboarded to SecureDrop, admins
+
+**Format**: In-person or hybrid-remote (FPF remote, journalists and admins in-person)
+
+-  Check access to previously created Tails USB drives
+-  Create SecureDrop accounts for individual journalists
+-  Setup KeyPassXC for *Journalist Workstation* drive
+-  Disaster recovery for 2FA and password manager
+-  Updating Tails
+-  If needed, process for distributing the SecureDrop Application's private GPG key
+   to a remote journalist's air-gapped *SVS*
+-  Do complete journalist process walk through once, and repeat for each individual journalist being oboarded
+
