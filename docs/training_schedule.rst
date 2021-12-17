@@ -31,7 +31,7 @@ Admin Training
 
 -  Check access to previously created Tails USB
 -  Updating Tails
--  Setup KeyPassXC manager (one for *SVS*, one for *Admin Workstation*)
+-  Setup KeePassXC manager (one for *Secure Viewing Station*, one for *Admin Workstation*)
 -  Setting up SSH aliases for the *Admin Workstation* if needed
 -  Go over common OSSEC alerts for security updates and daily reports
 -  Adding/removing SecureDrop users
@@ -42,7 +42,7 @@ Admin Training
 -  Enabling logging for troubleshooting
 -  Sending logs to FPF support team
 -  Preparing *Journalist Workstation* drives
--  Updating SecureDrop Application
+-  Updating SecureDrop
 
    -  Unattended upgrades
    -  Upgrades that require admin intervention
@@ -94,7 +94,7 @@ recipients and anyone else interested
 -  Demo of source submission process
 -  Demo of journalist's processes for checking the *Journalist Interface*
 -  Demo of journalist's processes for replies
--  Demo working with submissions on the *SVS*
+-  Demo working with submissions on the *Secure Viewing Station*
 -  Secure-deleting and difference between wipe and erase free space on
    Tails, and when to use each
 -  Discuss scrubbing submitted documents prior to publication
@@ -105,7 +105,7 @@ recipients and anyone else interested
 -  Options for distributing with other news organizations
 -  Show example of an OSSEC alert, briefly cover what it does
 -  Overview of `onion names <https://securedrop.org/news/introducing-onion-names-securedrop/>`__
--  Physical security of servers and *SVS*
+-  Physical security of servers and *Secure Viewing Station*
 -  How to securely publicize the organization's *Source Interface* Tor URL
 -  Distribute important info:
 
@@ -127,10 +127,9 @@ Journalist Training, Part 2
 
 -  Check access to previously created Tails USB drives
 -  Create SecureDrop accounts for individual journalists
--  Setup KeyPassXC for *Journalist Workstation* drive
+-  Setup KeePassXC for *Journalist Workstation* drive
 -  Disaster recovery for 2FA and password manager
 -  Updating Tails
--  If needed, process for distributing the SecureDrop Application's private GPG key
-   to a remote journalist's air-gapped *SVS*
+-  If needed, process for distributing the *Submission Private Key*
+   to a remote journalist's air-gapped *Secure Viewing Station*
 -  Do complete journalist process walk through once, and repeat for each individual journalist being oboarded
-
