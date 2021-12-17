@@ -240,11 +240,17 @@ Once you're prepared the *Admin Workstation*, you can start each VM:
 
   molecule create -s libvirt-prod-focal
 
-At this point you should be able to SSH into both ``app-prod`` and ``mon-prod``.
+At this point you should be able to SSH into both ``app-prod`` and ``mon-prod``
+with the user ``vagrant`` and the password ``vagrant``.
+
 From here you can follow the :ref:`server configuration instructions
-<test_connectivity>` to test connectivity and prepare the servers. These
-instructions will have you generate SSH keys and use ``ssh-copy-id`` to transfer
-the key onto the servers.
+<test_connectivity>` to test connectivity and prepare the servers.
+
+These instructions will have you generate SSH keys and use ``ssh-copy-id`` to
+transfer the key onto the servers. By default, the Vagrant boxes authorize a
+publicly provided `SSH keypair <https://github.com/hashicorp/vagrant/tree/master/keys>`__,
+which you can download on Tails and import via ``ssh-add`` instead of
+generating a new SSH keypair.
 
 .. note:: If you have trouble SSHing to the servers from Ansible, remember
           to remove any old ATHS files in ``install_files/ansible-base``.
@@ -271,19 +277,34 @@ for use in the next step.
 .. important:: The self-signed certificates should not be used in a live instance. They are
   provided for development and testing purposes only.
 
-Finally, configure and install SecureDrop on the VMs using the commands:
+To proceed with a full install, you will need, at a minimum:
+
+- The IP addresses of the two virtualized servers, ``app-prod`` and ``mon-prod``.
+  You can obtain them via ``virsh domifaddr libvirt-prod-focal_app-prod`` and
+  ``virsh domifaddr libvirt-prod-focal_mon-prod``.
+- The username and sudo password (both default to ``vagrant`` for both servers)
+- A *Submission Public Key*. ``securedrop-admin`` will reject the key included
+  with the development environment. For testing purposes only, you can create a new
+  keypair within the Tails VM.
+- An *OSSEC Alert Public Key*. We recommend using your own public key if you intend
+  to test OSSEC email functionality.
+
+Configure and install SecureDrop on the server VMs using the commands:
 
 .. code:: sh
 
   ./securedrop-admin sdconfig
   ./securedrop-admin install
 
-.. note:: The sudo password for the ``app-prod`` and ``mon-prod`` servers is by
-          default ``vagrant``.
-
-After the installation is complete, you can configure your Admin Workstation to SSH
-into each VM via:
+After the installation is complete, you can configure your *Admin Workstation*
+to SSH into each VM via:
 
 .. code:: sh
 
   ./securedrop-admin tailsconfig
+
+``securedrop-admin`` will write the SecureDrop configuration to
+``~/Persistent/securedrop/install_files/ansible-base/group_vars/all/site-specific``.
+To simplify subsequent installs, you may wish to make a copy of this file, as well
+as the two required public keys, in a directory in ``~/Persistent`` or outside
+the Tails VM.
