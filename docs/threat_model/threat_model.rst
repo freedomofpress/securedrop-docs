@@ -12,7 +12,7 @@ to securedrop@freedom.press.
 Actors
 ------
 
-The SecureDrop ecosystem comprises a host of actors, organzed by the following high-level categories: :ref:`Users <users>`, :ref:`Adversaries <adversaries>`, and :ref:`Systems <systems>`.
+The SecureDrop ecosystem comprises a host of actors, organized by the following high-level categories: :ref:`Users <users>`, :ref:`Adversaries <adversaries>`, and :ref:`Systems <systems>`.
 
 .. _users:
 
