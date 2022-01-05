@@ -340,7 +340,7 @@ Workstation* was set up with `SSH Client Persistence`_, this key will be saved
 on the *Admin Workstation* and can be used in the future to authenticate to
 the servers in order to perform administrative tasks.
 
-.. _SSH Client Persistence: https://tails.boum.org/doc/first_steps/persistence/configure/index.en.html#index3h2
+.. _SSH Client Persistence: https://tails.boum.org/doc/first_steps/persistence/index.en.html#index12h2
 
 First, generate the new SSH keypair:
 
