@@ -1,0 +1,35 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="_static/releases.css" type="text/css" />
+{% endblock %}
+
+{% block extrabody %}
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book">SecureDrop Docs</span>
+        v: {{ release }}
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Versions</dt>
+            <dd{% if release == "stable" %} class="current-release"{% endif %}>
+                <a href="/en/stable/{{ pagename }}.html">stable</a>
+            </dd>
+            <dd{% if release == "latest" %} class="current-release"{% endif %}>
+                <a href="/en/latest/{{ pagename }}.html">latest</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>Downloads</dt>
+            <dd><a href="/en/{{ release }}/SecureDrop.pdf">PDF</a></dd>
+        </dl>
+        <hr>
+        <small>
+            A project of <a href="https://freedom.press/">Freedom of the Press Foundation</a> ·
+            <a href="https://freedom.press/privacy-policy/">Privacy Policy</a>
+        </small>
+    </div>
+</div>
+{% endblock %}
