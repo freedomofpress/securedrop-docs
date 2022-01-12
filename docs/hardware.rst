@@ -635,7 +635,7 @@ Anything more than that is probably overkill.
 
 Transfer Device(s) and Export Device(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-For USB drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/storage-accessories/kanguru-ss3-high-performance-usb-flash-drive-with-physical-write-protect-switch.shtml>`__
+For USB drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__
 on Tails, and it works well with and without encryption.
 
 If you want to use a setup based on CD-Rs or DVD-Rs, we've found the CDR/DVD
