@@ -39,6 +39,9 @@ be installed via the official documentation links:
 
 Make sure to follow the `post-installation steps for Linux`_.
 
+Experimental support for using `Podman`_ is available, set the ``USE_PODMAN=1``
+environment variable to enable it.
+
 
 Fedora Linux
 ~~~~~~~~~~~~
@@ -58,10 +61,14 @@ be installed via the official documentation link:
 
 Make sure to follow the `post-installation steps for Linux`_.
 
+Experimental support for using `Podman`_ is available, set the ``USE_PODMAN=1``
+environment variable to enable it.
+
 .. _`Docker CE for Ubuntu`: https://docs.docker.com/engine/install/ubuntu/
 .. _`Docker CE for Debian`: https://docs.docker.com/engine/install/debian/
 .. _`Docker CE for Fedora`: https://docs.docker.com/engine/install/fedora/
 .. _`post-installation steps for Linux`: https://docs.docker.com/engine/install/linux-postinstall/
+.. _`Podman`: https://podman.io/
 
 
 macOS
