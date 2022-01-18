@@ -9,6 +9,9 @@ can achieve. This document is always a work in progress. If you have
 questions or comments, please open an issue on GitHub or send an email
 to securedrop@freedom.press.
 
+The threat model for the `SecureDrop Workstation based on Qubes OS <https://workstation.securedrop.org/>`__
+is summarized in a `separate document <https://github.com/freedomofpress/securedrop-workstation/#user-content-threat-model>`__.
+
 Actors
 ------
 
@@ -270,7 +273,7 @@ What a Comprommise of the *Monitor Server* Can Surrender
 
 -  The server stores the plaintext alerts on disk, data may also reside
    in RAM.
--  The server stores the *OSSEC Alert Public Key* the OSSEC alerts are 
+-  The server stores the *OSSEC Alert Public Key* the OSSEC alerts are
    encrypted to.
 -  The server stores plaintext credentials for the SMTP relay used to
    send OSSEC alerts.
