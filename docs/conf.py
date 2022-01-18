@@ -136,6 +136,15 @@ else:
 # documentation.
 #html_theme_options = {}
 
+html_context = {
+    "display_github": True,
+    "github_user": "freedomofpress",
+    "github_repo": "redmine_docs",
+    "github_version": "main",
+    "conf_py_path": "/docs/",
+    "source_suffix": source_suffix,
+}
+
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
