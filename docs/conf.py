@@ -52,8 +52,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'SecureDrop Support'
-copyright = u'2016, Freedom of the Press Foundation'
-author = u'Freedom of the Press Foundation'
+copyright = u'2016-2022, Freedom of the Press Foundation and Contributors'
+author = u'Freedom of the Press Foundation and Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
