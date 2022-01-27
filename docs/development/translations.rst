@@ -8,8 +8,14 @@ SecureDrop is a system that lets people share sensitive information
 with investigative journalists anonymously and securely.
 Learn :ref:`more about SecureDrop <what_is_securedrop>`.
 
-SecureDrop is written in English and translated into multiple
-other languages. Translations are managed using **Weblate**,
+The SecureDrop Client is a component of the `SecureDrop Workstation`_, a new
+tool to enable journalists to communicate with anonymous sources and manage
+submitted documents via their SecureDrop, while providing mitigations against
+malware and other security risks.  The Workstation and its components, including
+the Client, are currently in a limited beta phase.
+
+Both SecureDrop and the SecureDrop Client are written in English and translated
+into multiple other languages. Translations are managed using **Weblate**,
 a web platform that enables collaborative translation projects.
 
 .. _getting_help_translations:
@@ -37,9 +43,15 @@ to make it easier to work with your preferred languages.
 Learn :ref:`how to choose your preferred languages on Weblate <how_to_manage_your_preferred_languages_weblate>`.
 
 Our Weblate instance only contains one project, SecureDrop, which has
-two translation components: the main SecureDrop web application (labeled
-"SecureDrop"), and the translations for the desktop icons of the admin
-and journalist workstations used by news organizations (labeled "desktop").
+four translation components:
+
+#. **SecureDrop:**  The main SecureDrop web application.
+#. **desktop:**  The translations for the desktop icons of the admin
+   and journalist workstations used by news organizations.
+#. **SecureDrop Glossary:**  Weblate's internal :ref:`glossary
+   <weblate_glossary>` for SecureDrop terms.
+#. **SecureDrop Client:**  The SecureDrop Client interface of the `SecureDrop
+   Workstation`_.
 
 .. figure:: ../images/weblate/project.png
    :align: center
@@ -437,3 +449,4 @@ Source strings are English phrases and are automatically extracted from SecureDr
 .. _`SecureDrop instant messaging channel`: https://gitter.im/freedomofpress/securedrop
 .. _`Weblate documentation`: https://docs.weblate.org/
 .. _`EFF Surveillance Self-Defense glossary`: https://ssd.eff.org/en/glossary/
+.. _`SecureDrop Workstation`: https://workstation.securedrop.org
