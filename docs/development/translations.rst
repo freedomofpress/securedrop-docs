@@ -229,7 +229,14 @@ How to translate a phrase on Weblate
 #. Review the contextual information about the :ref:`source string <weblate_glossary_source_string>`
    in the **Source information** sidebar, like its location in our source code.
 #. If a screenshot of the SecureDrop user interface is available, read the *source string* in context.
-   You can also use `SecureDrop's demo server`_ to preview the source string in context.
+
+   * For SecureDrop, you can also use `SecureDrop's demo server`_ to preview the
+     source string in context.
+   * For the (beta) SecureDrop Client, consult the screenshots published with
+     the `SecureDrop Workstation documentation`_.  Feel free to :ref:`contact
+     the SecureDrop team <getting_help_translations>` with any questions or
+     feedback.
+
 #. Input your translation in the **Translation** test area near the *source string*.
 #. Click **Save**. The next untranslated string will appear automatically.
 
@@ -476,3 +483,4 @@ Source strings are English phrases and are automatically extracted from SecureDr
 .. _`Weblate documentation`: https://docs.weblate.org/
 .. _`EFF Surveillance Self-Defense glossary`: https://ssd.eff.org/en/glossary/
 .. _`SecureDrop Workstation`: https://workstation.securedrop.org
+.. _`SecureDrop Workstation documentation`: https://workstation.securedrop.org
