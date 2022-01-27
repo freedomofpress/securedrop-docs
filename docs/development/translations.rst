@@ -28,6 +28,13 @@ about anything in this document, here's how to ask for help:
 
 * Post a message in the `translations category of the SecureDrop forum`_
 * Chat in the `SecureDrop instant messaging channel`_
+
+   * Localization Lab, with whom we :ref:`coordinate SecureDrop's
+     translation<when_is_securedrop_translated>`, also maintains `their own
+     channel
+     <https://community.internetfreedomfestival.org/community/channels/localization-lab-chat>`_,
+     hosted by the Internet Freedom Festival.
+
 * Read the `Weblate documentation`_
 
 .. _get_started_using_weblate:
@@ -107,6 +114,25 @@ How is SecureDrop translated?
 SecureDrop is translated using the **Weblate** platform. :ref:`Get started using Weblate <get_started_using_weblate>`
 
 Sources, journalists and admins use localized versions of SecureDrop. A malicious actor could attempt to modify their behavior by creating misleading translations. In order to mitigate that risk, all translations must be reviewed and accepted by designated :ref:`reviewers <weblate_glossary_reviewer>` before they become part of SecureDrop.
+
+.. _when_is_securedrop_translated:
+
+When does SecureDrop's translation happen?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Most of SecureDrop's components :ref:`components <get_started_using_weblate>`
+are translated during SecureDrop's periodic releases, when the latest
+:ref:`source strings <weblate_glossary_source_string>` are made available for
+translation in Weblate.
+
+The SecureDrop Client can be translated continuously, as new code and source
+strings are merged into the project.  Translations are then finalized during
+the release process.
+
+Both processes are coordinated in collaboration with `Localization Lab
+<https://www.localizationlab.org/>`_.  You can watch for the announcements
+published in :ref:`multiple locations <getting_help_translations>`.
+
 
 How-to Guides
 -------------
