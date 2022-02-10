@@ -127,7 +127,7 @@ recovery purposes), see :ref:`Migrating Using a Backup <migrating>`.
 For other data recovery scenarios, see
 :ref:`Additional Information <additional_restore_info>` or `contact Support`_.
 
-.. _contact Support: https://securedrop-support.readthedocs.io/en/latest/
+.. _contact Support: https://support-docs.securedrop.org/
 
 .. _restore_data:
 
@@ -415,7 +415,7 @@ process.
    **Wipe**. Then, reformat the device using the
    **Disks** utility.
 
-.. _contact Support: https://securedrop-support.readthedocs.io/en/latest/
+.. _contact Support: https://support-docs.securedrop.org/
 .. _an administration password: https://tails.boum.org/doc/first_steps/welcome_screen/administration_password
 
 .. _migrate_v2:
@@ -597,7 +597,7 @@ v3 onion services.
 If you require any assistance with migration or data recovery, please
 `contact Support`_.
 
-.. _contact Support: https://securedrop-support.readthedocs.io/en/latest/
+.. _contact Support: https://support-docs.securedrop.org/
 .. |br| raw:: html
 
     <br>
