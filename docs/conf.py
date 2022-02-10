@@ -330,6 +330,7 @@ linkcheck_ignore = [
     r"http://127.0.0.1(:\d+)?/?",
     r"http://localhost(:\d+)?/?",
     "https://forum.securedrop.org/admin/users/list/active",
+    "https://weblate.securedrop.org/projects/securedrop/securedrop/#announcement",
     "https://weblate.securedrop.org/projects/securedrop/securedrop/#repository",
     "https://github.com/freedomofpress/securedrop-debian-packages-lfs",
     r"https://weblate.securedrop.org/accounts/profile/.*",
