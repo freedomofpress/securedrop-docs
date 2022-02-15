@@ -2,17 +2,18 @@ Documentation Guidelines
 ========================
 
 SecureDrop's documentation is available at https://docs.securedrop.org. It is
-written in `reStructuredText`_ (reST),
-and is built by and hosted on `Read the Docs`_ (RTD). The documentation files
+written in `reStructuredText`_ (reST) and hosted by `Freedom of the Press Foundation`_
+using a theme by `Read the Docs`_. The documentation files
 are stored in the ``docs/`` directory of the `SecureDrop docs repository
 <https://github.com/freedomofpress/securedrop-docs>`_.
 
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+.. _Freedom of the Press Foundation: https://freedom.press/
 .. _Read the Docs: https://docs.readthedocs.io/en/latest/index.html
 
 
-Integration with Read the Docs
-------------------------------
+Documentation versions
+----------------------
 
 .. include:: ../includes/docs-branches.txt
 
@@ -228,8 +229,8 @@ Capitalize all section headings in title case:
      Before You Begin
      ================
 
-     Read the Docs
-     -------------
+     Set up the Environment
+     ----------------------
 
   not
 
@@ -238,5 +239,5 @@ Capitalize all section headings in title case:
      Before you begin
      ================
 
-     Read the docs
-     -------------
+     Set up the environment
+     ----------------------

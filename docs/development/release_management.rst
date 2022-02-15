@@ -320,9 +320,9 @@ Release Process
     in the format ``<major>.<minor>.<patch>-1``,  ``<major>.<minor>.<patch>-2``,
     and so on.
 
-#. Verify that the public documentation has been updated, by checking the
-   `ReadTheDocs build history <https://readthedocs.org/projects/securedrop/builds/>`_.
-   If necessary, restart the build.
+#. Verify that the public documentation has been updated. Inspecting or
+   restarting builds requires Codefresh access; if you lack access, a tech lead
+   or infra team member can do so on your behalf.
 #. Create a `release
    <https://github.com/freedomofpress/securedrop/releases>`_ on GitHub
    with a brief summary of the changes in this release.
