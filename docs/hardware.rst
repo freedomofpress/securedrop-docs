@@ -515,11 +515,10 @@ instance we recommend using 7th- or 8th-generation NUCs instead.
 
 .. important::
 
-   SecureDrop 2.2.0 will be the last regular release of SecureDrop
-   with support for Mac Mini hardware, and this section of the documentation
-   will be removed from a future release. If you are still using Mac Mini servers,
-   you must move to a supported hardware platform as soon as possible to
-   continue using SecureDrop.
+   SecureDrop 2.2.x will be the last release series with support for Mac Mini
+   hardware, and this section of the documentation will be removed from a future
+   release. If you are still using Mac Mini servers, you must move to a supported
+   hardware platform as soon as possible to continue using SecureDrop.
 
 We previously recommended the 2014 Apple Mac Minis (part number MGEM2)
 for installing SecureDrop. These will soon be `officially obsolete <https://support.apple.com/en-us/HT201624>`__. Unfortunately
