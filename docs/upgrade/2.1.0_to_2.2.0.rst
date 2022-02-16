@@ -82,6 +82,13 @@ operating system on your *Admin* and *Journalist Workstations*.
    :ref:`manual update <Update Tails Manually>`. If this also fails, please
    don't hesitate to contact us.
 
+Mac Mini Deprecation
+--------------------
+The SecureDrop 2.2.x series will be the last regular releases of SecureDrop
+with support for Mac Mini hardware. If you are still using Mac Mini servers,
+you must move to a :ref:`supported hardware <Specific Hardware Recommendations>`
+platform as soon as possible to continue using SecureDrop.
+
 Troubleshooting Kernel Issues
 -----------------------------
 SecureDrop 2.2.0 includes a kernel update on the *Application* and *Monitor
