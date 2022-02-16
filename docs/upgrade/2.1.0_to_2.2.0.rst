@@ -84,10 +84,10 @@ operating system on your *Admin* and *Journalist Workstations*.
 
 Mac Mini Deprecation
 --------------------
-The SecureDrop 2.2.x series will be the last regular releases of SecureDrop
-with support for Mac Mini hardware. If you are still using Mac Mini servers,
-you must move to a :ref:`supported hardware <Specific Hardware Recommendations>`
-platform as soon as possible to continue using SecureDrop.
+SecureDrop 2.2.x will be the last release series with support for Mac Mini
+hardware. If you are still using Mac Mini servers, you must move to a
+:ref:`supported hardware <Specific Hardware Recommendations>` platform as soon
+as possible to continue using SecureDrop.
 
 Troubleshooting Kernel Issues
 -----------------------------
