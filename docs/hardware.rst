@@ -392,7 +392,7 @@ Specific Hardware Recommendations
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We currently recommend Intel 7-, 8-series and 10-series NUCS for SecureDrop
+We currently recommend Intel 7-, 8-, 10-, and 11-series NUCs for SecureDrop
 servers.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
@@ -413,6 +413,38 @@ NUC before it can be used. We recommend:
 -  2x 240GB SSDs (2.5" or M.2, depending on your choice of kit)
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
+
+.. _nuc11_recommendation:
+
+Intel 11th-gen NUC
+~~~~~~~~~~~~~~~~~~
+We have tested and can recommend the `Intel NUC11PAHi3 <https://ark.intel.com/content/www/us/en/ark/products/205033/intel-nuc-11-performance-kit-nuc11pahi3.html>`__.
+It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
+option (SSD or HDD).
+
+The NUC11's AX201 wireless hardware is not removable. Before installation of the
+RAM and storage, we recommend that you disconnect the wireless antennae leads
+from the AX201 component. They're the black wires highlighted in the red box in
+the picture. Cover the free ends with electrical tape after disconnecting them.
+
+|NUC11 leads|
+
+Before the initial OS installation, boot into the BIOS by pressing **F2** at
+startup and adjust the system configuration:
+
+- Under **Advanced ▸ Onboard Devices**, disable all onboard devices
+  other than LAN: HD audio, microphone, Thunderbolt, WLAN, Bluetooth,
+  SD card controller, and enhanced consumer infrared.
+
+- Under **Boot ▸ Secure Boot**, disable **Secure Boot** using the drop-down menu.
+
+.. note:: Unlike some previous generation NUCs we recommended, the NUC11PAHi3
+      does not support SGX. However, if you use a different type of 11th
+      generation NUC that does have SGX support, disable it under **Security
+      ▸ Security Features**, as it is not used by SecureDrop but may be targeted
+      by active CPU exploits.
+
+.. |NUC11 leads| image:: images/hardware/nuc11_leads.jpg
 
 .. _nuc10_recommendation:
 
