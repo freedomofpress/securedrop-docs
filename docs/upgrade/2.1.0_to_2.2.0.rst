@@ -82,12 +82,13 @@ operating system on your *Admin* and *Journalist Workstations*.
    :ref:`manual update <Update Tails Manually>`. If this also fails, please
    don't hesitate to contact us.
 
-Mac Mini Deprecation
---------------------
+Mac Mini and Intel 5th-gen NUC Deprecation
+------------------------------------------
 SecureDrop 2.2.x will be the last release series with support for Mac Mini
-hardware. If you are still using Mac Mini servers, you must move to a
-:ref:`supported hardware <Specific Hardware Recommendations>` platform as soon
-as possible to continue using SecureDrop.
+or Intel NUC5 hardware. If you are still using Mac Mini or Intel 5th-gen NUC servers,
+you must move to a :ref:`supported hardware <Specific Hardware Recommendations>`
+platform as soon as possible to continue using SecureDrop. Newer Intel NUC models will
+continue to be supported.
 
 Troubleshooting Kernel Issues
 -----------------------------
