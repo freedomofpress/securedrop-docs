@@ -392,7 +392,7 @@ Specific Hardware Recommendations
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We currently recommend Intel 7-, 8-, 10-series and 11-series NUCs for SecureDrop
+We currently recommend Intel 7-, 8-, 10-, and 11-series NUCs for SecureDrop
 servers.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
@@ -436,7 +436,7 @@ startup and adjust the system configuration:
   other than LAN: HD audio, microphone, Thunderbolt, WLAN, Bluetooth,
   SD card controller, and enhanced consumer infrared.
 
-- Under **Boot ▸ Secure Boot**, uncheck the **Secure Boot** checkbox.
+- Under **Boot ▸ Secure Boot**, disable **Secure Boot** using the drop-down menu.
 
 .. note:: Unlike some previous generation NUCs we recommended, the NUC11PAHi3
       does not support SGX. However, if you use a different type of 11th
