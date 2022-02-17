@@ -441,7 +441,7 @@ startup and adjust the system configuration:
 .. note:: Unlike some previous generation NUCs we recommended, the NUC11PAHi3
       does not support SGX. However, if you use a different type of 11th
       generation NUC that does have SGX support, disable it under **Security
-      ▸ Security Features**, as it isn't used by SecureDrop but may be targeted
+      ▸ Security Features**, as it is not used by SecureDrop but may be targeted
       by active CPU exploits.
 
 .. |NUC11 leads| image:: images/hardware/nuc11_leads.jpg
