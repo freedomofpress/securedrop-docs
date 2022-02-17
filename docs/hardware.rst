@@ -532,30 +532,39 @@ Previous Server Recommendations
 Intel 5th-gen NUC
 ~~~~~~~~~~~~~~~~~
 
-We previously recommended the
-`NUC5i5MYHE <https://web.archive.org/web/20190102175756/https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc5i5myhe.html>`__,
-however, it has now reached end-of-life. We will continue to support and
-test SecureDrop on this hardware, but if you are building a new SecureDrop
-instance we recommend using 7th- or 8th-generation NUCs instead.
+.. important::
 
-.. note:: If you encounter issues booting Ubuntu on the NUC5, try
-      updating the BIOS according to `these instructions
-      <https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
+   We previously recommended the
+   `NUC5i5MYHE <https://web.archive.org/web/20190102175756/https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc5i5myhe.html>`__,
+   however, it has now reached end-of-life.
+
+   SecureDrop 2.2.x will be the last release series with support for Intel NUC5
+   hardware, and this section of the documentation will be removed from a future
+   release. If you are still using NUC5 hardware, you must move to a supported
+   hardware platform as soon as possible to continue using SecureDrop.
+
+If you encounter issues booting Ubuntu on the NUC5, try
+updating the BIOS according to `these instructions
+<https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
 
 2014 Mac Minis
 ~~~~~~~~~~~~~~
+
+.. important::
+
+   SecureDrop 2.2.x will be the last release series with support for Mac Mini
+   hardware, and this section of the documentation will be removed from a future
+   release. If you are still using Mac Mini servers, you must move to a supported
+   hardware platform as soon as possible to continue using SecureDrop.
 
 We previously recommended the 2014 Apple Mac Minis (part number MGEM2)
 for installing SecureDrop. These will soon be `officially obsolete <https://support.apple.com/en-us/HT201624>`__. Unfortunately
 the 2018 revision of the Mac Mini is not a viable candidate for use with
 SecureDrop, as security features of the device prevent Linux from being
-installed on its internal storage. We will continue to support existing
-instances using 2014 Mac Minis, but if you are building a new instance we
-recommend using Intel NUCs.
+installed on its internal storage.
 
-2014 Mac Minis have removable wireless cards that you
-should remove. This requires a screwdriver for non-standard
-`TR6 Torx security screws <https://www.amazon.com/Mini-Torx-Security-Screwdriver-Tool/dp/B01BG8P2Q6>`__.
+Mac Minis have removable wireless cards that you should remove. This requires a
+screwdriver for non-standard `TR6 Torx security screws <https://www.amazon.com/Mini-Torx-Security-Screwdriver-Tool/dp/B01BG8P2Q6>`__.
 
 However, on the first install of Ubuntu Server
 the Mac Minis will not boot: this is a known issue.
