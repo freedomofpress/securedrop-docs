@@ -500,15 +500,20 @@ Previous Server Recommendations
 Intel 5th-gen NUC
 ~~~~~~~~~~~~~~~~~
 
-We previously recommended the
-`NUC5i5MYHE <https://web.archive.org/web/20190102175756/https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc5i5myhe.html>`__,
-however, it has now reached end-of-life. We will continue to support and
-test SecureDrop on this hardware, but if you are building a new SecureDrop
-instance we recommend using 7th- or 8th-generation NUCs instead.
+.. important::
 
-.. note:: If you encounter issues booting Ubuntu on the NUC5, try
-      updating the BIOS according to `these instructions
-      <https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
+   We previously recommended the
+   `NUC5i5MYHE <https://web.archive.org/web/20190102175756/https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc5i5myhe.html>`__,
+   however, it has now reached end-of-life.
+
+   SecureDrop 2.2.x will be the last release series with support for Intel NUC5
+   hardware, and this section of the documentation will be removed from a future
+   release. If you are still using NUC5 hardware, you must move to a supported
+   hardware platform as soon as possible to continue using SecureDrop.
+
+If you encounter issues booting Ubuntu on the NUC5, try
+updating the BIOS according to `these instructions
+<https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
 
 2014 Mac Minis
 ~~~~~~~~~~~~~~
