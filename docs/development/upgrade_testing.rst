@@ -58,7 +58,7 @@ To confirm:
 
 .. code:: sh
 
-   molecule login -s libvirt-prod-focal -h app-prod
+   ssh app
 
 From the *Application Server*:
 
@@ -88,7 +88,7 @@ Then, log into the *Application Server*:
 
 .. code:: sh
 
-   molecule login -s libvirt-prod-focal -h app-prod
+   ssh app
    apt-cache policy securedrop-config
 
 The installed package version should match the latest stable version,
