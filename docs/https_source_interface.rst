@@ -34,12 +34,12 @@ the Extended Validation (EV) process in order to obtain a certificate for an
 Onion URL, so you should start by reviewing `DigiCert's documentation`_ for
 obtaining a ``.onion`` certificate.
 
-The EV certificates display in browsers with a green trust bar, including
-information about the organization:
+The EV certificates display information about an organization under the
+certificate icon beside the URL bar:
 
 |HTTPS Onion cert|
 
-The additional information about the organization, such as name and geographic
+Additional information about the organization, such as name and geographic
 location, are checked by the CA during the EV process. A Source can use this
 information to confirm the authenticity of a SecureDrop instance, beyond the
 verification already available in the `SecureDrop Directory`_.
@@ -50,39 +50,60 @@ you will be required both to confirm your affiliation with the organization,
 and to demonstrate control over the Onion URL for your Source Interface.
 
 In order for you to demonstrate control over the Onion URL for your Source
-Interface, DigiCert will provide you with some text and ask you to make it
-available at a `specific URL`_:
-``<onion_url>/.well-known/pki-validation/<unique_hash>.txt``.
-We have support for this workflow:
+Interface, you will need to perform a signing operation leveraging the
+private key of the Onion service used on the Source Interface.
+DigiCert will provide you with some text and request that you use that text
+in a signing operation. At a high level, obtaining a certificate from DigiCert
+involves:
+
+1. Generating an HTTPS keypair and CSR via ``openssl``.
+2. Submitting the CSR to DigiCert.
+3. Scheduling a phone call and verifying your relationship to the organization.
+4. Generating another CSR, using a custom tool, leveraging the Onion service private key.
+5. Submitting the second CSR to DigiCert.
+6. Downloading the certificate from the DigiCert panel.
+7. Installing the cert on the SecureDrop Application Server, via ``securedrop-admin``.
+
+For SecureDrop, you should perform these steps on the Admin Workstation.
+Below are detailed steps for use on Tails:
 
 .. code:: sh
 
-    # From the Admin Workstation, SSH to the Application Server
-    $ ssh app
+    # On the Admin Workstation, generate the first CSR
+    $ mkdir ~/Persistent/sd-https-key-generation
+    $ cd ~/Persistent/sd-https-key-generation
+    $ openssl req -new -newkey rsa:4096 -nodes -keyout sd.key -out sd.csr
 
-    # Edit the validation file with content the CA provides
-    # Replace <unique_hash> with the token provided by Digicert
-    $ sudo vi /var/www/securedrop/.well-known/pki-validation/<unique_hash>.txt
+Upload that CSR to the DigiCert website, to begin the request.
+After passing the EV organization verification, you'll receive
+an email with a nonce. Use that value to generate the second CSR:
 
-.. note:: If you see "File Not Found" when navigating to this file in Tor Browser,
-    check out the latest release in your *Admin Workstation* and re-run
-    ``./securedrop-admin install``.
+.. code:: sh
 
-While the `CAB forum`_ has specified that ``.onion`` certificates may have a
-maximum lifetime of 15 months, we have heard that some folks have run into
-issues with such certificates, and currently it seems safest to give the
-certificate a validity period of 12 months.
+    # On the Admin Workstation, generate the second CSR
+    $ cd ~/
+    $ git clone --recurse-submodules https://github.com/HARICA-official/onion-csr.git
+    $ cd onion-csr
+    $ sudo apt-get update && sudo apt-get install -y ruby-dev rubygems build-essential
+    # If prompted, choose to install the packages "Only once"
+    $ torify gem install --user-install ffi
+    $ gcc -shared -o libed25519.so -fPIC ed25519/src/*.c
+    # Confirm the binary works by checking that "help" info is displayed:
+    $ ./onion-csr.rb -h
 
-.. tip:: Be patient! HTTPS certificates for ``.onions`` are a recent and fairly
-   niche development, so you may run into various issues while trying to obtain
-   the certificate.
+    # Copy the Onion service key material to the Admin Workstation:
+    $ mkdir hsdir
+    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hostname > hsdir/hostname
+    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_public_key > hsdir/hs_ed25519_public_key
+    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_secret_key > hsdir/hs_ed25519_secret_key
 
-.. warning:: As part of the process for obtaining an HTTPS certificate, you
-   will need to generate a private key. This is usually stored in a file with a
-   ``.key`` extension. It is **critical** that you protect this key from
-   unauthorized access. We recommend doing this entire process on the Admin
-   Workstation, and avoiding copying the ``.key`` to any insecure removable
-   media or other computers.
+    # Generate (second) CSR
+    $ ./onion-csr.rb -n <nonce> -d ./hsdir
+
+
+The CSR will be printed to stdout, starting with ``BEGIN CERTIFICATE REQUEST``. Save
+that CSR, and send it via email reply to DigiCert. After you receive your final certificate,
+see instructions below for installing the certificate on the SecureDrop Application Server.
 
 Harica
 ~~~~~~
