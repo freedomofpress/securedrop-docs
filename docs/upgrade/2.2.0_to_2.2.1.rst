@@ -1,12 +1,14 @@
-Upgrade from 2.1.0 to 2.2.0
+.. _latest_upgrade_guide:
+
+Upgrade from 2.2.0 to 2.2.1
 ===========================
 
-Updating Servers to SecureDrop 2.2.0
+Updating Servers to SecureDrop 2.2.1
 ------------------------------------
 Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
 automatically within 24 hours of the release.
 
-Updating Workstations to SecureDrop 2.2.0
+Updating Workstations to SecureDrop 2.2.1
 -----------------------------------------
 
 .. note::
@@ -22,7 +24,7 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 2.2.0 by clicking "Update Now":
+Perform the update to 2.2.1 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
@@ -42,7 +44,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
-  git tag -v 2.2.0
+  git tag -v 2.2.1
 
 The output should include the following two lines: ::
 
@@ -54,9 +56,9 @@ Please verify that each character of the fingerprint above matches what is
 on the screen of your workstation. If it does, you can check out the
 new release: ::
 
-    git checkout 2.2.0
+    git checkout 2.2.1
 
-.. important:: If you do see the warning "refname '2.2.0' is ambiguous" in the
+.. important:: If you do see the warning "refname '2.2.1' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -90,8 +92,8 @@ continue to be supported.
 
 Troubleshooting Kernel Issues
 -----------------------------
-SecureDrop 2.2.0 includes a kernel update on the *Application* and *Monitor
-Servers*, from version 5.4.136 to version 5.15.18. As with all kernel updates,
+SecureDrop 2.2.1 includes a kernel update on the *Application* and *Monitor
+Servers*, from version 5.15.18 to version 5.15.26. As with all kernel updates,
 we have extensively tested this update against
 :ref:`recommended hardware <Specific Hardware Recommendations>`.
 
