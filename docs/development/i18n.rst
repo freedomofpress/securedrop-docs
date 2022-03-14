@@ -404,12 +404,34 @@ When features for a new SecureDrop release are frozen, the localization manager 
 * :ref:`merge_develop_to_weblate`.
 * `Update Weblate screenshots`_ so translators can see new or modified source strings in context.
 * Update the `i18n timeline`_ in the translation section of the forum.
-* Add a `Weblate announcement`_ with the translation timeline for the release.
-  **Important:** make sure the ``Notify users`` box is checked, so that translators receive an email alert.
-* Remind all developers about the string freeze in `Gitter <https://gitter.im/freedomofpress/securedrop>`__.
-* Remind all translators about the string freeze in the ``Localization Lab`` channel in the
-  `IFF Mattermost <https://internetfreedomfestival.org/wiki/index.php/IFF_Mattermost>`__.
-* Create a pull request for every source string suggestion coming from translators.
+* Add a `Weblate announcement`_ for the ``securedrop/securedrop`` component with
+  the translation timeline for the release.
+
+  * **Important:** Make sure the ``Notify users`` box is checked, so that
+    translators receive an email alert.
+
+  * You can view a history of past announcements in Weblate's `Django admin
+    panel`_, or use this template:
+
+      Translation for the SecureDrop X.Y.Z release has begun.  If you have
+      suggestions for source strings, please get them to us by YYYY-MM-DD.
+      Translation will end on YYYY-MM-DD.
+
+  * Set the **Expiry date** to release day itself (the day *after* the translation deadline).
+* Remind all developers about the string freeze in `Gitter <https://gitter.im/freedomofpress/securedrop>`__,
+  for example using this template:
+
+    Hello! We've just opened translations for the upcoming SecureDrop 2.3.0
+    release.  If you have suggestions for source strings, please get them to us
+    by 2022-03-20.  Translation will end on 2022-03-27.
+
+    Translations are done using Weblate (https://weblate.securedrop.org/projects/securedrop/securedrop/).  If you haven't used it before, <https://docs.securedrop.org/en/stable/development/translations.html> has instructions on how to get started.
+
+* Update Localization Lab via the
+  `SecureDrop Coordination <https://community.internetfreedomfestival.org/community/channels/securedrop-coordination>`__ channel
+  in the `IFF Mattermost <https://internetfreedomfestival.org/wiki/index.php/IFF_Mattermost>`__.
+* During the feedback period, monitor Weblate comments and suggestions, and open
+  a pull request for every source string suggestion coming from translators.
 
 Remember that :ref:`supported languages <add_a_new_language>` are the
 priority during this period.  That is, while translation contributions
@@ -538,6 +560,7 @@ with a release looming, the server can be rebooted.
 .. _`Weblate desktop translation creation page`: https://weblate.securedrop.org/new-lang/securedrop/desktop/
 .. _`i18n timeline`: https://forum.securedrop.org/t/about-the-translations-category/16
 .. _`Weblate announcement`: https://weblate.securedrop.org/projects/securedrop/securedrop/#announcement
+.. _`Django admin panel`: https://weblate/securedrop.org/admin/trans/announcement/
 
 .. |Weblate commit Lock| image:: ../images/weblate/admin-lock.png
 .. |Weblate commit Locked| image:: ../images/weblate/admin-locked.png
