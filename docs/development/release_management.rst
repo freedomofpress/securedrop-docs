@@ -43,26 +43,6 @@ Pre-Release
    goal is to make sure we test against the lastest Tails release, including release candidates,
    so that we can report bugs early to Tails.
 
-#. Check the `Tor blog <https://blog.torproject.org/category/applications/>`_ for new release
-   candidates and new stable releases. Let the team know about any new release candidates during the
-   SecureDrop release process in case there are critical bug fixes. For a new stable release, file
-   an issue and upgrade Tor following these steps:
-
-      a. Bump the version in `fetch-tor-packages
-         <https://github.com/freedomofpress/securedrop/blob/develop/molecule/fetch-tor-packages/
-         playbook.yml>`_ and open a PR.
-
-      b. Run ``make fetch-tor-packages`` to download the new debs. The script uses
-         apt under the hood, so the Release file on the Tor packages is verified according
-         to Tor's signature, ensuring package integrity.
-
-      c. Copy the downloaded packages into the ``securedrop-dev-packages-lfs`` repo,
-         and open a PR so that a reviewer can verify that the checksums match the checksums
-         of the packages hosted on the
-         `Tor apt repo <https://deb.torproject.org/torproject.org/pool/main/>`_. Once the PR is
-         merged, the packages will be resigned with our an FPF-managed test-only signing key,
-         replacing the Tor signature, and served from ``apt-test.freedom.press``.
-
 #. Create a release branch.
 
    For a regular release, create a release branch off of ``develop``::
@@ -267,8 +247,6 @@ Release Process
 #. In your local branch, commit the built packages to the ``core/focal``
    directory.
 
-   * If the release includes a Tor update, make sure to include the
-     new Tor Debian packages.
    * If the release includes a kernel update, make sure to add the
      corresponding grsecurity-patched kernel packages, including both
      ``linux-image-*`` and ``linux-firmware-image-*`` packages as
