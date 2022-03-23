@@ -53,8 +53,9 @@ The output should include the following two lines: ::
 
 
 Please verify that each character of the fingerprint above matches what is
-on the screen of your workstation. If it does, you can check out the
-new release: ::
+on the screen of your workstation. A warning that the key is not certified
+is normal and expected. If the output includes the lines above, you can check
+out the new release: ::
 
     git checkout 2.3.0
 
