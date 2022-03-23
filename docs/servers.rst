@@ -273,6 +273,11 @@ servers:
 
 Select **Done** and press **Enter** to proceed.
 
+Ignore Enable Ubuntu Advantage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+On the **Enable Ubuntu Advantage** screen, choose **Done** to proceed without entering
+a token. The SecureDrop servers should not be registered with Ubuntu Advantage.
+
 Set up SSH access
 ~~~~~~~~~~~~~~~~~
 
