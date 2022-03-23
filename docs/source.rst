@@ -170,7 +170,7 @@ will pop up explaining how to increase the security level to **Safest**.
 |Fix Javascript warning|
 
 1. Click the shield icon in the toolbar
-2. Select **Advanced Security Settings**
+2. Click **Change**
 3. Select **Safest**
 
 |Security Slider|
