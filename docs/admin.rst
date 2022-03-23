@@ -382,20 +382,6 @@ You should see a message appear indicating the change was a success.
 
 |Logo Update|
 
-.. _submission prefs:
-
-Setting Submission Preferences
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-By default, SecureDrop supports both text submissions and document uploads. If you
-only want to receive text messages, you can disable uploads as follows:
-
-#. Check the **Prevent sources from uploading documents** checkbox
-#. Click **Update Submission Preferences**
-
-This change will be applied immediately on the *Source Interface*. Documents that
-were previously uploaded will still be available via the *Journalist Interface*.
-
 .. _test OSSEC alert:
 
 Testing OSSEC Alerts
@@ -410,6 +396,63 @@ You should receive an OSSEC alert email at the address specified during the
 installation of SecureDrop. The email may take several minutes to arrive. If
 you don't receive it, refer to the :doc:`OSSEC Guide<ossec_alerts>` for information on
 troubleshooting steps.
+
+
+.. _submission prefs:
+
+Submission Preferences
+~~~~~~~~~~~~~~~~~~~~~~
+
+The Submission Preferences subsection allows you to restrict the types of submissions
+accepted by your instance.
+
+Disabling Document Uploads
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By default, SecureDrop supports both text submissions and document uploads. If you
+only want to receive text messages, you can disable uploads as follows:
+
+#. Check the **Prevent sources from uploading documents** checkbox
+#. Click **Update Submission Preferences**
+
+This change will be applied immediately on the *Source Interface*. Documents that
+were previously uploaded will still be available via the *Journalist Interface*.
+
+Preventing Short Initial Messages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By default, SecureDrop does not apply a mimimum length requirement to messages. If
+your instance is experiencing a high volume of short one-time messages with no actionable
+content, or if you would like to indicate to sources that their initial message
+should include enough information for journalists to respond to them effectively, you
+can set an initial message length as follows:
+
+#. Check the **Prevent sources from sending initial messages shorter than the minimum required length** checkbox
+#. Enter the desired minimum length in the field below the checkbox
+#. Click **Update Submission Preferences**
+
+This change will be applied immediately on the Source Interface. Initial messages that
+are too short will be rejected, with an error message informing sources of the
+requirement. This requirement will not be applied to initial messages that also include a document,
+or to subsequent messages in the conversation.
+
+To remove the requirement, uncheck the checkbox and click **Update Submission Preferences**.
+
+Preventing Initial Messages Containing the Source's Codename
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sources should never need to share their seven-word codename with journalists. If
+your instance is receiving one-time messages consisting of the source's codename,
+you can optionally reject those messages, before they are stored, as follows:
+
+#. Check the **Prevent sources from submitting their codename as an initial message** checkbox
+#. Click **Update Submission Preferences**
+
+This change will be applied immediately on the Source Interface. Initial messages that
+contain the source's codename will be rejected, with an error message reminding sources
+to protect their codename and keep it secret. To remove this restriction, uncheck the
+checkbox and click **Update Submission Preferences**.
+
 
 .. _server SSH access:
 
