@@ -57,10 +57,10 @@ in a signing operation. At a high level, obtaining a certificate from DigiCert
 involves:
 
 1. Generating an HTTPS keypair and CSR via ``openssl``.
-2. Submitting the CSR to DigiCert.
+2. Submitting the CSR to DigiCert. (This CSR demonstrates control over the private key used for HTTPS.)
 3. Scheduling a phone call and verifying your relationship to the organization.
 4. Generating another CSR, using a custom tool, leveraging the Onion service private key.
-5. Submitting the second CSR to DigiCert.
+5. Submitting the second CSR to DigiCert. (This CSR demonstrates control over the private key for the onion service.)
 6. Downloading the certificate from the DigiCert panel.
 7. Installing the cert on the SecureDrop Application Server, via ``securedrop-admin``.
 
@@ -74,6 +74,10 @@ Below are detailed steps for use on Tails:
     $ cd ~/Persistent/sd-https-key-generation
     $ openssl req -new -newkey rsa:4096 -nodes -keyout sd.key -out sd.csr
 
+That command will generate two files: ``sd.key``, the private key
+that will be used by the SecureDrop Application Server; and ``sd.csr``,
+the certificate signing request (CSR), that will be sent to certificate authority
+in order to receive a certificate.
 Upload that CSR to the DigiCert website, to begin the request.
 After passing the EV organization verification, you'll receive
 an email with a nonce. Use that value to generate the second CSR:
