@@ -85,6 +85,31 @@ an email with a nonce. Use that value to generate the second CSR:
 .. code:: sh
 
     # On the Admin Workstation, generate the second CSR
+    $ source ~/Persistent/securedrop/admin/.venv3/bin/activate
+    $ torify pip install onionmaker
+    # Copy the Onion service key material to the Admin Workstation:
+    $ mkdir hsdir
+    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hostname > hsdir/hostname
+    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_public_key > hsdir/hs_ed25519_public_key
+    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_secret_key > hsdir/hs_ed25519_secret_key
+    # Generate (second) CSR
+    $ onionmaker <nonce> hsdir
+
+The CSR will be printed to stdout, starting with ``BEGIN CERTIFICATE REQUEST``. Save
+that CSR, and send it via email reply to DigiCert. After you receive your final certificate,
+see instructions below for installing the certificate on the SecureDrop Application Server.
+
+Harica
+~~~~~~
+The Greek CA `Harica`_ is now providing Domain Validation (DV) certificates for
+``.onion`` addresses. DV certificates are less useful for authentication purposes,
+but may still be used to provide another layer of encryption for source traffic.
+The commands provide detail on how to obtain a DV certificate from Harica on
+the Admin Workstation:
+
+.. code:: sh
+
+    # On the Admin Workstation
     $ cd ~/
     $ git clone --recurse-submodules https://github.com/HARICA-official/onion-csr.git
     $ cd onion-csr
@@ -101,19 +126,8 @@ an email with a nonce. Use that value to generate the second CSR:
     $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_public_key > hsdir/hs_ed25519_public_key
     $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_secret_key > hsdir/hs_ed25519_secret_key
 
-    # Generate (second) CSR
+    # Generate CSR
     $ ./onion-csr.rb -n <nonce> -d ./hsdir
-
-
-The CSR will be printed to stdout, starting with ``BEGIN CERTIFICATE REQUEST``. Save
-that CSR, and send it via email reply to DigiCert. After you receive your final certificate,
-see instructions below for installing the certificate on the SecureDrop Application Server.
-
-Harica
-~~~~~~
-The Greek CA `Harica`_ is now providing Domain Validation (DV) certificates for
-``.onion`` addresses. DV certificates are less useful for authentication purposes,
-but may still be used to provide another layer of encryption for source traffic.
 
 .. _`specific URL`: https://docs.digicert.com/manage-certificates/organization-domain-management/managing-domains-cc-guide/add-authorize-domain-http-dcv/
 .. _`DigiCert's documentation`: https://www.digicert.com/dc/blog/ordering-a-onion-certificate-from-digicert/
