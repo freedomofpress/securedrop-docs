@@ -110,6 +110,49 @@ repository checkout, where they will replace the existing screenshots. Stage for
 commit any screenshots you wish to update. If you wish to update all screenshots,
 simply stage for commit all changed files in that directory.
 
+Prior to generating screenshots as part of a release update:
+
+1. Ensure that the version string shown in the screenshots is the version that
+   will be released. You can manually edit ``securedrop/version.py`` in your
+   SecureDrop repository checkout if it currently contains a release candidate
+   string.
+2. Configure the `New York World sample instance <https://github.com/freedomofpress/securedrop-ux/blob/main/User%20Testing/NYWorld%20Demo%20Site/logo.png>`__
+   logo. Because the functional tests used to generate the logo may themselves
+   update the logo, it is safest to temporarily overwrite the stock logo in
+   ``securedrop/static/i/logo.png`` in your SecureDrop repository checkout.
+
+.. note::
+
+   The automated screenshots update does not update screenshots for Tails,
+   the Tor Browser UI, the firewall captive portal, etc. If you notice
+   discrepancies in those screenshots, please open issues so they can be
+   addressed at a later point.
+
+.. _updating_upgrade_guides:
+
+Updating Upgrade Guides
+-----------------------
+We ship an upgrade guide for each release; see the :ref:`latest guide <latest_upgrade_guide>`
+as an example. As part of updating the documentation for a release:
+
+1. Create a new upgrade guide copied from the most recent one and add it to the
+   index.
+2. Ensure that the ``latest_upgrade_guide`` reference at the top of the document
+   is only present in the latest upgrade guide.
+3. If this is a `major-level or minor-level <https://semver.org/>`__ release,
+   remove the oldest upgrade guide and associated patch-level guides from the
+   documentation.
+
+   **Example:** If you are adding a guide to upgrade from 4.5.0 to 4.6.0, and the
+   oldest guide present is from 4.2.0 to 4.3.0, remove it along with any guides
+   for 4.2.1, 4.2.2, etc.).
+4. If this is a major-level or minor-level release, make sure to include the
+   reminders in ``docs/includes/backup-and-update-reminders.txt`` towards the
+   end of the document.
+5. If this release includes a kernel update, make sure to include a reference
+   to the :doc:`Kernel Troubleshooting Guide <../kernel_troubleshooting>`.
+6. If you are not also the release manager, check with them about any other
+   pertinent release-specific instructions that should be included.
 
 Style Guide
 -----------

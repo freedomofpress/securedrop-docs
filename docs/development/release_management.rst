@@ -207,8 +207,8 @@ Pre-Release
 
      - bumps the SecureDrop version of the documentation using the ``update_version.sh``
        script in that repository;
-     - adds upgrade instructions and other release-specific technical documentation;
-     - updates the screenshots, if warranted;
+     - adds :ref:`upgrade instructions and other release-specific technical documentation <updating_upgrade_guides>`;
+     - :ref:`updates the screenshots <updating_screenshots>`.
 
 Release Process
 ---------------
