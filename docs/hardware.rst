@@ -699,10 +699,11 @@ Network Firewall
 
 
 We currently recommend 2 network firewalls:
-* the `TekLager APU4D4 <https://teklager.se/en/products/routers/apu4d4-open-source-router>`__, running `OPNSense <https://opnsense.org/>`. It has 4 NICs and ports.
-* the `Netgate SG-3100
-<https://shop.netgate.com/products/3100-base-pfsense>`__ running `pfSense <https://www.pfsense.org/>`__. It has 3 NICs and an internal
-switch, increasing the number of available ports to 6.
+
+* the `TekLager APU4D4 <https://teklager.se/en/products/routers/apu4d4-open-source-router>`__, running `OPNSense <https://opnsense.org/>`__. It has 4 NICs and ports.
+* the `Netgate SG-3100 <https://shop.netgate.com/products/3100-base-pfsense>`__
+  running `pfSense <https://www.pfsense.org/>`__. It has 3 NICs and an internal
+  switch, increasing the number of available ports to 6.
 
 Network Switch
 ^^^^^^^^^^^^^^
