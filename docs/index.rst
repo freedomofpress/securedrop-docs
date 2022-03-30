@@ -122,6 +122,7 @@ anonymous sources.
    development/portable_demo
    development/release_management
    development/dockerbuildmaint
+   development/updating_tor
 
 .. toctree::
   :caption: Threat Model
