@@ -180,7 +180,7 @@ uncommitted changes committed and pushed, to avoid conflicts:
     $ git fetch i18n
     $ git checkout -b i18n i18n/i18n
     $ git merge origin/develop
-    $ git commit -a -m 'l10n: sync with upstream origin/develop'
+    $ git commit --amend -m 'l10n: sync with upstream origin/develop'
     $ git push i18n i18n
 
 
@@ -335,7 +335,7 @@ When you're happy with the state of language commits on your merge branch:
 .. code:: sh
 
     $ git commit -m "l10n: compile desktop icons' translations" # if needed
-    $ git push i18n-merge
+    $ git push -u origin i18n-merge
 
 .. note:: The CI job ``translation-tests`` will automatically run the
           above page layout tests in all supported languages on
