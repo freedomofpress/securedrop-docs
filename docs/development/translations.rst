@@ -29,10 +29,8 @@ about anything in this document, here's how to ask for help:
 * Post a message in the `translations category of the SecureDrop forum`_
 * Chat in the `SecureDrop instant messaging channel`_
 
-   * Localization Lab, with whom we :ref:`coordinate SecureDrop's
-     translation<when_is_securedrop_translated>`, also maintains `their own
-     channel
-     <https://community.internetfreedomfestival.org/community/channels/localization-lab-chat>`_,
+   * `Localization Lab`_, with whom we coordinate SecureDrop's translation, also
+     maintains `their own channel <https://community.internetfreedomfestival.org/community/channels/localization-lab-chat>`_,
      hosted by the Internet Freedom Festival.
 
 * Read the `Weblate documentation`_
@@ -129,9 +127,9 @@ The SecureDrop Client can be translated continuously, as new code and source
 strings are merged into the project.  Translations are then finalized during
 the release process.
 
-Both processes are coordinated in collaboration with `Localization Lab
-<https://www.localizationlab.org/>`_.  You can watch for the announcements
-published in :ref:`multiple locations <getting_help_translations>`.
+Both processes are coordinated in collaboration with `Localization Lab`_.  You
+can watch for the announcements published in :ref:`multiple locations
+<getting_help_translations>`.
 
 
 How-to Guides
@@ -484,3 +482,4 @@ Source strings are English phrases and are automatically extracted from SecureDr
 .. _`EFF Surveillance Self-Defense glossary`: https://ssd.eff.org/en/glossary/
 .. _`SecureDrop Workstation`: https://workstation.securedrop.org
 .. _`SecureDrop Workstation documentation`: https://workstation.securedrop.org
+.. _`Localization Lab`: https://www.localizationlab.org/
