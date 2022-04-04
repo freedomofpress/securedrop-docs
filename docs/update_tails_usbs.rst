@@ -86,7 +86,7 @@ Plug your *primary Tails USB* into the airgapped computer and boot into Tails.
 
 You can then perform the `manual update steps`_.
 
-.. _manual update steps: https://tails.boum.org/upgrade/clone-overview/index.en.html
+.. _manual update steps: https://tails.boum.org/upgrade/clone/index.en.html
 
 
 If you encounter issues
