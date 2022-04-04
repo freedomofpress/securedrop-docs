@@ -8,8 +8,14 @@ SecureDrop is a system that lets people share sensitive information
 with investigative journalists anonymously and securely.
 Learn :ref:`more about SecureDrop <what_is_securedrop>`.
 
-SecureDrop is written in English and translated into multiple
-other languages. Translations are managed using **Weblate**,
+The SecureDrop Client is a component of the `SecureDrop Workstation`_, a new
+tool to enable journalists to communicate with anonymous sources and manage
+submitted documents via their SecureDrop, while providing mitigations against
+malware and other security risks.  The Workstation and its components, including
+the Client, are currently in a limited beta phase.
+
+Both SecureDrop and the SecureDrop Client are written in English and translated
+into multiple other languages. Translations are managed using **Weblate**,
 a web platform that enables collaborative translation projects.
 
 .. _getting_help_translations:
@@ -22,6 +28,11 @@ about anything in this document, here's how to ask for help:
 
 * Post a message in the `translations category of the SecureDrop forum`_
 * Chat in the `SecureDrop instant messaging channel`_
+
+   * `Localization Lab`_, with whom we coordinate SecureDrop's translation, also
+     maintains `their own channel <https://community.internetfreedomfestival.org/community/channels/localization-lab-chat>`_,
+     hosted by the Internet Freedom Festival.
+
 * Read the `Weblate documentation`_
 
 .. _get_started_using_weblate:
@@ -37,9 +48,15 @@ to make it easier to work with your preferred languages.
 Learn :ref:`how to choose your preferred languages on Weblate <how_to_manage_your_preferred_languages_weblate>`.
 
 Our Weblate instance only contains one project, SecureDrop, which has
-two translation components: the main SecureDrop web application (labeled
-"SecureDrop"), and the translations for the desktop icons of the admin
-and journalist workstations used by news organizations (labeled "desktop").
+four translation components:
+
+#. **SecureDrop:**  The main SecureDrop web application.
+#. **desktop:**  The translations for the desktop icons of the admin
+   and journalist workstations used by news organizations.
+#. **SecureDrop Glossary:**  Weblate's internal :ref:`glossary
+   <weblate_glossary>` for SecureDrop terms.
+#. **SecureDrop Client:**  The SecureDrop Client interface of the `SecureDrop
+   Workstation`_.
 
 .. figure:: ../images/weblate/project.png
    :align: center
@@ -95,6 +112,25 @@ How is SecureDrop translated?
 SecureDrop is translated using the **Weblate** platform. :ref:`Get started using Weblate <get_started_using_weblate>`
 
 Sources, journalists and admins use localized versions of SecureDrop. A malicious actor could attempt to modify their behavior by creating misleading translations. In order to mitigate that risk, all translations must be reviewed and accepted by designated :ref:`reviewers <weblate_glossary_reviewer>` before they become part of SecureDrop.
+
+.. _when_is_securedrop_translated:
+
+When does SecureDrop's translation happen?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Most of SecureDrop's components :ref:`components <get_started_using_weblate>`
+are translated during SecureDrop's periodic releases, when the latest
+:ref:`source strings <weblate_glossary_source_string>` are made available for
+translation in Weblate.
+
+The SecureDrop Client can be translated continuously, as new code and source
+strings are merged into the project.  Translations are then finalized during
+the release process.
+
+Both processes are coordinated in collaboration with `Localization Lab`_.  You
+can watch for the announcements published in :ref:`multiple locations
+<getting_help_translations>`.
+
 
 How-to Guides
 -------------
@@ -191,7 +227,14 @@ How to translate a phrase on Weblate
 #. Review the contextual information about the :ref:`source string <weblate_glossary_source_string>`
    in the **Source information** sidebar, like its location in our source code.
 #. If a screenshot of the SecureDrop user interface is available, read the *source string* in context.
-   You can also use `SecureDrop's demo server`_ to preview the source string in context.
+
+   * For SecureDrop, you can also use `SecureDrop's demo server`_ to preview the
+     source string in context.
+   * For the (beta) SecureDrop Client, consult the screenshots published with
+     the `SecureDrop Workstation documentation`_.  Feel free to :ref:`contact
+     the SecureDrop team <getting_help_translations>` with any questions or
+     feedback.
+
 #. Input your translation in the **Translation** test area near the *source string*.
 #. Click **Save**. The next untranslated string will appear automatically.
 
@@ -437,3 +480,6 @@ Source strings are English phrases and are automatically extracted from SecureDr
 .. _`SecureDrop instant messaging channel`: https://gitter.im/freedomofpress/securedrop
 .. _`Weblate documentation`: https://docs.weblate.org/
 .. _`EFF Surveillance Self-Defense glossary`: https://ssd.eff.org/en/glossary/
+.. _`SecureDrop Workstation`: https://workstation.securedrop.org
+.. _`SecureDrop Workstation documentation`: https://workstation.securedrop.org
+.. _`Localization Lab`: https://www.localizationlab.org/

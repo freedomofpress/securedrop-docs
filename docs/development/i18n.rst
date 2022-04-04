@@ -46,8 +46,7 @@ identical to ``securedrop/translations/messages.pot`` except for the
 There's one last type of file in the `gettext`_ system, a
 machine-readable version of the `.po`_ translations called a `.mo`_
 file. Applications use these to get translations at runtime. The `.po`_
-files are compiled to `.mo`_ files when the SecureDrop package is
-installed.
+files are compiled to `.mo`_ files when the SecureDrop package is built.
 
 The desktop icons installed on SecureDrop workstations are also
 translated.  The icon templates are in the
