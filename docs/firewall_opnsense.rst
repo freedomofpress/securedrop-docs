@@ -16,7 +16,7 @@ particular private network is also a very common choice for home and
 office routers. If you are connecting the firewall to a router with the
 same subnet (common in a small office, home, or testing environment),
 you will probably be unable to connect to the network at first. However,
-you will be able to connect from the LAN to the firewal's Web GUI,
+you will be able to connect from the LAN to the firewall's Web GUI,
 and from there you will be able to configure the network so it is working correctly.
 
 The recommended TekLager APU4D4 has 4 NICs: WAN, LAN,
