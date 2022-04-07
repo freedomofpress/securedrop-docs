@@ -56,10 +56,10 @@ Create the Key
 Export the *Submission Public Key*
 ----------------------------------
 
-To manage GPG keys using the graphical interface (a program called "Passwords
-and Keys"), click the clipboard icon |gpgApplet| in the top right corner and
-select "Manage Keys". Click "GnuPG keys" and you should see the key that you just
-generated.
+Navigate to **Applications ▸ Utilities ▸ Passwords and Keys** to open a
+graphical interface to manage GPG keys. Click the clipboard icon |gpgApplet|
+in the top right corner and select "Manage Keys". Click "GnuPG keys" and you
+should see the key that you just generated.
 
 |My Keys|
 
