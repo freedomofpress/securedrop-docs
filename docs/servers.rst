@@ -135,28 +135,26 @@ following output in your terminal. ::
 Create the Ubuntu Installation Media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create the Ubuntu installation media, you can either burn the ISO image to a
-CD-R or create a bootable USB stick.  The ``dd`` command can be used to copy the
-hybrid ISO directly to a USB drive, instead of a utility like UNetbootin which
-can result in errors. Once you have a CD or USB with an ISO image of Ubuntu on
-it, you may begin the Ubuntu installation on both SecureDrop servers.
+To create the Ubuntu installation media on a bootable USB stick, open the
+**Disks** program (**Applications ▸ Utilities ▸ Disks**) used earlier.
 
-To use `dd` you first need to find where the USB device you wish to install
-Ubuntu on has been mapped. Simply running the command ``lsblk`` in the terminal
-will give you a list of your block storage device mappings (this includes hard
-drives and USB). If the USB you are writing the Ubuntu installer to is of a
-different size or brand than the USB you are running Tails from, it should be
-easy to identify which USB has which sdX identifier. If you are unsure, try
-running ``lsblk`` before and after plugging in the USB you are using for the
-Ubuntu installer. Note that you should use the main block device (e.g. ``/dev/sdb``)
-rather than any listed partitions (e.g. ``/dev/sdb2``).
+Select the USB device you would like to use and then open the menu in the top
+right, selecting **Restore Disk Image**. This list includes all disks connected
+to the machine, so it is important to select the right one to avoid accidentally
+overwriting other data.
 
-If your USB is mapped to /dev/sdX and you are currently in the directory that
-contains the Ubuntu ISO, you would use dd like so: ::
+|screenshot of restore disk image|
 
-   sudo dd conv=fdatasync if=ubuntu-20.04.4-live-server-amd64.iso of=/dev/sdX
+Select the Ubuntu ``.iso`` file downloaded earlier and click **Start Restoring**.
+
+|screenshot of start restoring|
+
+Once it finishes, you can remove USB stick as it is ready to use.
 
 .. _install_ubuntu:
+
+.. |screenshot of restore disk image| image:: images/screenshots/disks_restore_image.png
+.. |screenshot of start restoring| image:: images/screenshots/disks_start_restoring.png
 
 Perform the Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~
