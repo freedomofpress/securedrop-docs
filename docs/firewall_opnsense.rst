@@ -449,7 +449,7 @@ Scroll down and click **Save**, then click **Apply changes** when prompted.
 Configure the OPT1 interface
 '''''''''''''''''''''''''''''
 Next, navigate to **Interfaces > [OPT1]**. In the **Basic configuration** section,
-check the checkbox labeled **Prevent interface removal**.
+check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
 In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4
 Configuration Type** dropdown, and ``None`` in the **IPV6 Configuration Type**
@@ -464,7 +464,7 @@ Click **Save**, then click **Apply changes** when prompted.
 Configure the OPT2 interface
 '''''''''''''''''''''''''''''
 Finally, navigate to **Interfaces > [OPT2]**. In the **Basic configuration** section,
-check the checkbox labeled **Prevent interface removal**.
+check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
 In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4
 Configuration Type** dropdown, and ``None`` in the **IPV6 Configuration Type**
@@ -794,4 +794,3 @@ to the `OPNSense Blog RSS feed <https://opnsense.org/blog/rss>`__.
 .. |Tails Network Settings| image:: images/firewall/tails_network_settings.png
 .. |Tails Manual Network Settings| image:: images/firewall/tails-manual-network-with-highlights.png
 .. |4 NIC Admin Workstation Static IP Configuration| image:: images/firewall/four_nic_admin_workstation_static_ip_configuration.png
-
