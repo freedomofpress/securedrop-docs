@@ -221,6 +221,10 @@ Setup Wizard
    enter here. For many environments, the default of DHCP will work and the
    rest of the fields can be left blank. Click **Next**.
 
+   * If your firewall is behind another firewall or NAT device, you will need
+     to deselect the **Block private networks** option to allow traffic to and
+     from your upstream network.
+
 #.
 
    a. **4 NIC Example:**
