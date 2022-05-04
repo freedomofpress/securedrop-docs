@@ -584,9 +584,8 @@ If you are unsure, ask your administrator.
 
 .. note::
 
-   VeraCrypt support was added to Tails in `version 3.9 <https://tails.boum.org/news/version_3.9/index.en.html>`__.
-   We strongly recommend keeping your *Secure Viewing Station* up-to-date with
-   each release of Tails.
+   VeraCrypt support was added to Tails in version 3.9. We strongly recommend
+   keeping your *Secure Viewing Station* up-to-date with each release of Tails.
 
 To open the *Export Device* on the *Secure Viewing Station*, follow these steps:
 

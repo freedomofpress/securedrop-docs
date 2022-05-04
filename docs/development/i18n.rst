@@ -559,7 +559,7 @@ with a release looming, the server can be rebooted.
 .. _`Weblate desktop translation creation page`: https://weblate.securedrop.org/new-lang/securedrop/desktop/
 .. _`i18n timeline`: https://forum.securedrop.org/t/about-the-translations-category/16
 .. _`Weblate announcement`: https://weblate.securedrop.org/projects/securedrop/securedrop/#announcement
-.. _`Django admin panel`: https://weblate/securedrop.org/admin/trans/announcement/
+.. _`Django admin panel`: https://weblate.securedrop.org/admin/trans/announcement/
 
 .. |Weblate commit Lock| image:: ../images/weblate/admin-lock.png
 .. |Weblate commit Locked| image:: ../images/weblate/admin-locked.png
