@@ -75,8 +75,12 @@ information and settings in the free space that is left on your Tails
 drive. This information will remain available to you even if you reboot
 Tails. (Tails securely erases all other data on every shutdown.)
 
-You will need to create a persistent storage on each Tails drive, with a
-unique passphrase for each.
+You will need to create a persistent storage on each Tails drive. Each 
+drive's persistent storage partition needs their own unique, complex 
+passphrase that's easy to write down or remember. 
+
+For instructions on how to generate a strong passphrase, see :doc:`the 
+Passphrases page <passphrases>`.
 
 Please use the instructions on the `Tails website
 <https://tails.boum.org/doc/first_steps/persistence/index.en.html>`__
@@ -90,12 +94,6 @@ Some other things to keep in mind:
 -  Right now, you need to create a persistent volume on both the *Admin
    Workstation* Tails drive and the *Secure Viewing Station* Tails
    drive.
-
--  Each Tails persistent volume should have an unique and complex
-   passphrase that's easy to write down or remember. We recommend using
-   `Diceware
-   passphrases.
-   <https://theintercept.com/2015/03/26/passphrases-can-memorize-attackers-cant-guess/>`__
 
 -  Each journalist will need their own Tails drive with their own
    persistent volume secured with their own passphrase — but :doc:`that comes
