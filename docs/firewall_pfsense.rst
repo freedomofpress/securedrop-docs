@@ -128,7 +128,7 @@ Connect to the pfSense WebGUI
         the only option because Tails `intentionally disables LAN
         access`_ in the **Tor Browser**.
 
-#. A dialog will ask "Do you really want to launch the Unsafe
+#. A dialog will ask if you really want to "Launch the Unsafe
    Browser?". Click **Launch**.
 
    |You really want to launch the Unsafe Browser|
@@ -156,10 +156,10 @@ Connect to the pfSense WebGUI
       However, make sure not to configure your Tails device to have the same IP
       as the firewall (``192.168.1.1``).
 
-#. The firewall uses a self-signed certificate, so you will see a "This
-   Connection Is Untrusted" warning when you connect. This is expected.
-   You can safely continue by clicking **Advanced**, **Add
-   Exception...**, and **Confirm Security Exception**.
+#. The firewall uses a self-signed certificate, so you will see a "Potential
+   Security Risk Ahead" warning when you connect. This is expected.
+   You can safely continue by clicking **Advanced**, then **Accept
+   the Risk and Continue**.
 
    |Your Connection is Insecure|
 
@@ -776,7 +776,7 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Firewall Update Progress| image:: images/firewall/system_is_updating.png
 .. |Firewall Update Complete| image:: images/firewall/system_update_complete.png
 
-.. [#] Tails screenshots were taken on Tails 4.0-rc1. Please make an issue on
+.. [#] Tails screenshots are current as of Tails 5.0. Please make an issue on
        GitHub if you are using the most recent version of Tails and the
        interface is different from what you see here.
 
