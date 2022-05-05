@@ -299,9 +299,13 @@ All key actions are initiated by double-clicking:
 - Double-clicking archives in ZIP or gzip format will open the **Archive Manager**
   application (called ``file-roller`` on the command line), which allows you to extract the contents.
 
-- Double-clicking files that end in ``.gpg`` will attempt to decrypt the
-  contents to the same directory. If you have configured a passphrase for your
+- On Tails 4, double-clicking files that end in ``.gpg`` will attempt to decrypt
+  the contents to the same directory. If you have configured a passphrase for your
   *Submission Key*, you will be prompted for it.
+
+  On Tails 5, you must first launch Kleopatra (**Applications ▶ Accessories**)
+  and click the **Decrypt/Verify...** button. You will then be able to select
+  the file to decrypt it.
 
 - Double-clicking decrypted messages or documents will attempt to open them in a
   default application suitable for the file type.
@@ -330,9 +334,13 @@ When you double-click an archive to open it, you should see it in the *Archive M
 |Opened archive|
 
 Click the **Extract** button to unpack the archive. Navigate to the folder
-containing the encrypted document message or document (ends with ``.gpg``)
-and double-click it to decrypt it. The decrypted file it will have the same
-filename, but without ``.gpg`` at the end.
+containing the encrypted document message or document (ends with ``.gpg``).
+
+On Tails 4, double-click it to decrypt it. On Tails 5, open Kleopatra
+(**Applications ▶ Accessories**) and click **Decrypt/Verify**. Select the file
+in Kleopatra to decrypt it.
+
+The decrypted file will have the same filename, but without ``.gpg`` at the end.
 
 |Decrypted documents|
 
