@@ -25,9 +25,10 @@ Configuring Your Firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since our recommended firewalls have at least 4 NICs, we will refer to the
-relevant ports as WAN1, LAN1, LAN2, and LAN3. In this case, we can now use a
-dedicated port on the network firewall for each component of SecureDrop
-(*Application Server*, *Monitor Server*, and *Admin Workstation*).
+relevant ports as WAN[1], LAN[1], LAN2, and LAN3.  (Bracketed numbers may be
+present on the physical ports' labels but not in the pfSense UI.) In this case,
+we can now use a dedicated port on the network firewall for each component of
+SecureDrop (*Application Server*, *Monitor Server*, and *Admin Workstation*).
 
 Depending on your network configuration, you should define the following
 values before continuing.
@@ -40,7 +41,7 @@ values before continuing.
 
 -  Admin Subnet: ``10.20.1.0/24``
 -  Admin Gateway: ``10.20.1.1``
--  Admin Workstation (LAN1): ``10.20.1.2``
+-  Admin Workstation (LAN[1]): ``10.20.1.2``
 
 .. raw:: html
 
@@ -71,7 +72,7 @@ the same subnet and gateway.
 
 -  Admin Subnet: ``10.20.2.0/24``
 -  Admin Gateway: ``10.20.2.1``
--  Admin Workstation (LAN1): ``10.20.2.3``
+-  Admin Workstation (LAN[1]): ``10.20.2.3``
 
 .. raw:: html
 
@@ -222,13 +223,13 @@ Setup Wizard
    rest of the fields can be left blank. Click **Next**.
 
    * If your firewall is behind another firewall or NAT device, you will need
-     to deselect the **Block private networks** option to allow traffic to and
-     from your upstream network.
+     to deselect the **Block private networks from entering via WAN** option to
+     allow traffic to and from your upstream network.
 
 #.
 
    a. **4 NIC Example:**
-   For "Configure LAN1 Interface", use the IP address of the *Admin Gateway*
+   For "Configure LAN Interface", use the IP address of the *Admin Gateway*
    (``10.20.1.1``) and the subnet mask (``/24``) of the *Admin Subnet*. Click
    **Next**.
 
@@ -428,7 +429,7 @@ rules.
 Set Up LAN2
 '''''''''''
 
-We set up the LAN1 interface during the initial configuration. We now
+We set up the LAN[1] interface during the initial configuration. We now
 need to set up the LAN2 interface for the *Application Server*. Start by
 connecting the *Application Server* to the LAN2 port. Then use the WebGUI
 to configure the LAN2 interface. Go to **Interfaces ▸ LAN2**, and check
@@ -440,7 +441,7 @@ the box to **Enable Interface**. Use these settings:
 Make sure that the CIDR routing prefix is correct (``/24``). Leave everything else
 as the default. **Save** and **Apply Changes**.
 
-|OPT1|
+|LAN2|
 
 Set Up LAN3
 '''''''''''
@@ -456,7 +457,7 @@ section. Use these settings:
 Make sure that the CIDR routing prefix is correct (``/24``). Leave everything else
 as the default. **Save** and **Apply Changes**.
 
-|OPT2|
+|LAN3|
 
 Use Screenshots of Firewall Configuration
 '''''''''''''''''''''''''''''''''''''''''
@@ -511,17 +512,17 @@ Rules** to add firewall rules for the LAN1, LAN2, and LAN3 interfaces.
 Add or remove rules until they match the following screenshots by clicking **Add**
 to add a rule.
 
-**LAN1 interface:**
+**LAN[1] interface:**
 
 |Firewall LAN Rules|
 
 **LAN2 interface:**
 
-|Firewall OPT1 Rules|
+|Firewall LAN2 Rules|
 
 **LAN3 interface:**
 
-|Firewall OPT2 Rules|
+|Firewall LAN3 Rules|
 
 Finally, click **Apply Changes**. This will save your changes. You should see a
 message "The changes have been applied successfully". Once you've set up the
@@ -748,8 +749,8 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Firewall Port Aliases| image:: images/firewall/port_aliases.png
 .. |Firewall IP Aliases| image:: images/firewall/ip_aliases_with_opt2.png
 .. |Firewall LAN Rules| image:: images/firewall/lan_rules.png
-.. |Firewall OPT1 Rules| image:: images/firewall/opt1_firewall_rules.png
-.. |Firewall OPT2 Rules| image:: images/firewall/opt2_firewall_rules.png
+.. |Firewall LAN2 Rules| image:: images/firewall/lan2_firewall_rules.png
+.. |Firewall LAN3 Rules| image:: images/firewall/lan3_firewall_rules.png
 .. |3 NIC Firewall Alias| image::  images/firewall/three_nic_add_firewall_alias.png
 .. |3 NIC Firewall IP Aliases Pre Save| image:: images/firewall/three_nic_ip_aliases_pre_save.png
 .. |3 NIC Firewall IP Aliases Post Save| image:: images/firewall/three_nic_ip_aliases_post_save.png
@@ -761,8 +762,8 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Tails Network Settings| image:: images/firewall/tails_network_settings.png
 .. |Tails Manual Network Settings| image:: images/firewall/tails-manual-network-with-highlights.png
 .. |Disable DHCP| image:: images/firewall/disable_DHCP.png
-.. |OPT1| image:: images/firewall/opt1.png
-.. |OPT2| image:: images/firewall/opt2.png
+.. |LAN2| image:: images/firewall/lan2.png
+.. |LAN3| image:: images/firewall/lan3.png
 .. |3 NIC OPT1| image:: images/firewall/three_nic_opt1.png
 .. |3 NIC LAN Interface| image:: images/firewall/three_nic_lan_interface.png
 .. |3 NIC Firewall OPT1 Interface| image:: images/firewall/three_nic_opt1.png
