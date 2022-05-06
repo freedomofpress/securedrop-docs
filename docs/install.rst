@@ -16,10 +16,9 @@ command:
 The package installation will take approximately 10 minutes or longer, depending
 on network speed and computing power.
 
-.. note:: On Tails 3.9 or later, the apt persistence feature will prompt
-          to install the package automatically from persistent storage on
-          each boot. These apt packages don't need to persist, click on
-          `Install Only Once`:
+.. note:: The apt persistence feature will prompt to install the package
+          automatically from persistent storage on each boot. Click
+          **Install Every Time**:
 
           |Tails Apt Persistence|
 
@@ -76,7 +75,7 @@ submission activity for journalists. These help journalists avoid spending time
 checking the *Journalist Interface* when there are no submissions. For this you
 will need:
 
--  the *Journalist Alert Public Key* 
+-  the *Journalist Alert Public Key*
 -  the *Journalist Alert Public Key*  fingerprint
 -  the email address that will receive the journalist alerts
 
@@ -155,7 +154,7 @@ an email to securedrop@freedom.press.
 
 .. _`Source Offer`: https://github.com/freedomofpress/securedrop/blob/develop/SOURCE_OFFER
 
-Once the installation is complete, addresses and credentials for each 
+Once the installation is complete, addresses and credentials for each
 onion service will be available in the following files under
 ``install_files/ansible-base``:
 
@@ -172,10 +171,10 @@ V3 onion services
 - ``mon-ssh.auth_private`` contains the ``onion`` address and private key
   providing SSH access to the *Monitor Server*.
 - ``tor_v3_keys.json`` contains the keypairs required for access to the
-  *Journalist Interface* and SSH access to the servers - it is required for 
+  *Journalist Interface* and SSH access to the servers - it is required for
   future runs of ``./securedrop-admin install``.
 
-.. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file 
+.. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file
              contain secret keys that should not be shared with third parties,
              or copied from the *Admin Workstation* for any purpose other than
              tasks such as performing backups or onboarding new users.

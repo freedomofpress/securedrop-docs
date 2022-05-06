@@ -263,6 +263,8 @@ disappear), then unplug the *Transfer Device*. "Ejecting" the drive in this
 manner ensures that all write operations are completed before you physically
 unplug it.
 
+.. _Decrypting:
+
 Step 3: Decrypt and view the submission on the *Secure Viewing Station*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
