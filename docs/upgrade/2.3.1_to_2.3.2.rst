@@ -1,12 +1,14 @@
-Upgrade from 2.3.0 to 2.3.1
+.. _latest_upgrade_guide:
+
+Upgrade from 2.3.1 to 2.3.2
 ===========================
 
-Update Servers to SecureDrop 2.3.1
+Update Servers to SecureDrop 2.3.2
 ----------------------------------
-Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
-automatically within 24 hours of the release.
+Your servers will be updated to the latest version of SecureDrop automatically
+within 24 hours of the release.
 
-Update Workstations to SecureDrop 2.3.1
+Update Workstations to SecureDrop 2.3.2
 ---------------------------------------
 
 .. note::
@@ -22,7 +24,7 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 2.3.1 by clicking "Update Now":
+Perform the update to 2.3.2 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
@@ -42,7 +44,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
-  git tag -v 2.3.1
+  git tag -v 2.3.2
 
 The output should include the following two lines: ::
 
@@ -55,9 +57,9 @@ on the screen of your workstation. A warning that the key is not certified
 is normal and expected. If the output includes the lines above, you can check
 out the new release: ::
 
-    git checkout 2.3.1
+    git checkout 2.3.2
 
-.. important:: If you do see the warning "refname '2.3.1' is ambiguous" in the
+.. important:: If you do see the warning "refname '2.3.2' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -66,20 +68,49 @@ Finally, run the following commands: ::
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
 
-Update Tails
-------------
-Follow the graphical prompts to update to the latest version of the Tails
-operating system on your *Admin* and *Journalist Workstations*.
+Upgrade to Tails 5.0
+--------------------
 
-.. important ::
+.. important::
 
-   Older versions of Tails had problems with automatic updates, which SecureDrop
-   tries to correct automatically. Check the version of Tails on your *Admin* and
-   *Journalist Workstations* (**Applications ▸ Tails ▸ About Tails**). If you are
-   running a version older than Tails 4.23, and did not receive an automatic
-   upgrade prompt after connecting to the Internet, perform a
-   :ref:`manual update <Update Tails Manually>`. If this also fails, please
-   don't hesitate to contact us.
+   You must upgrade your workstations to SecureDrop 2.3.2 by following the steps
+   above *before* upgrading to Tails 5.0. You can verify the version of SecureDrop
+   by running ``git status`` in your ``~/Persistent/securedrop`` directory. The
+   output should include "HEAD detached at 2.3.2".
+
+Tails 5.0 is the first version of Tails to be based on Debian 11 ("Bullseye").
+Among the most noticeable changes is the switch to a new frontend for GnuPG
+called Kleopatra. Once you upgrade your *Secure Viewing Station*, you will need
+to use Kleopatra to open ``.gpg`` files. Please see our :ref:`Journalist Guide <decrypting>`
+for more information.
+
+You must perform the upgrade to Tails 5.0 manually. You need a blank USB drive
+that you can install Tails 5.0 USB on from scratch. You will use this drive
+to upgrade your *Journalist Workstation(s)*, your *Admin Workstation(s)*, and your
+*Secure Viewing Station(s)*.
+
+The persistent storage volumes of your USB drives will be migrated as part of
+this upgrade, but we still highly recommend backing them up first. Follow the
+steps for :ref:`updating Tails manually <Update Tails Manually>`.
+
+Fore each *Journalist* and *Admin Workstation*, perform the following additional
+steps to complete the upgrade:
+
+1. Boot the USB drive
+2. On the Tails welcome screen, unlock the persistent volume and configure an
+   administrator password
+3. Open a terminal (**Applications ▸ Utilities ▸ Terminal**)
+4. Run the following commands:
+
+::
+
+  cd ~/Persistent/securedrop/admin
+  rm -rf .venv3
+  cd ..
+  ./securedrop-admin setup
+
+When prompted by Tails to "Install Only Once" or "Install Every Time", click
+**Install Every Time** (this is a change from previous versions of Tails).
 
 Getting Support
 ---------------

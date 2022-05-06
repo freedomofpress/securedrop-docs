@@ -62,7 +62,10 @@ Follow the instructions to :ref:`back up your existing Tails USB <backup_worksta
 2. Get the latest version of Tails
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you have an existing *primary Tails USB*, boot into it on your *Admin Workstation* computer and follow the graphical updater prompts that guide you through the `update process`_.
+If you have an existing *primary Tails USB* and the version of Tails you are
+updating to supports automatic updates, boot into it on your *Admin Workstation*
+computer and follow the graphical updater prompts that guide you through the
+`update process`_.
 
 Alternatively, you can also download and :ref:`install the newest version of Tails from scratch <setup_install_tails>` (as you did when you first installed SecureDrop). This may be faster if your *primary Tails USB* has not been updated in a while.
 
