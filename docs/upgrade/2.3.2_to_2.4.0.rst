@@ -1,12 +1,14 @@
-Upgrade from 2.3.1 to 2.3.2
+.. _latest_upgrade_guide:
+
+Upgrade from 2.3.2 to 2.4.0
 ===========================
 
-Update Servers to SecureDrop 2.3.2
+Update Servers to SecureDrop 2.4.0
 ----------------------------------
-Your servers will be updated to the latest version of SecureDrop automatically
-within 24 hours of the release.
+Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
+automatically within 24 hours of the release.
 
-Update Workstations to SecureDrop 2.3.2
+Update Workstations to SecureDrop 2.4.0
 ---------------------------------------
 
 .. note::
@@ -22,7 +24,7 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 2.3.2 by clicking "Update Now":
+Perform the update to 2.4.0 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
@@ -42,7 +44,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
-  git tag -v 2.3.2
+  git tag -v 2.4.0
 
 The output should include the following two lines: ::
 
@@ -55,9 +57,9 @@ on the screen of your workstation. A warning that the key is not certified
 is normal and expected. If the output includes the lines above, you can check
 out the new release: ::
 
-    git checkout 2.3.2
+    git checkout 2.4.0
 
-.. important:: If you do see the warning "refname '2.3.2' is ambiguous" in the
+.. important:: If you do see the warning "refname '2.4.0' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -69,12 +71,14 @@ Finally, run the following commands: ::
 Upgrade to Tails 5.0
 --------------------
 
+If you have not already done so, you must manually upgrade to Tails 5.0.
+
 .. important::
 
-   You must upgrade your workstations to SecureDrop 2.3.2 by following the steps
-   above *before* upgrading to Tails 5.0. You can verify the version of SecureDrop
+   You must upgrade your workstations to the latest version of SecureDrop by following
+   the steps above *before* upgrading to Tails 5.0. You can verify the version of SecureDrop
    by running ``git status`` in your ``~/Persistent/securedrop`` directory. The
-   output should include "HEAD detached at 2.3.2".
+   output should include "HEAD detached at 2.4.0".
 
 Tails 5.0 is the first version of Tails to be based on Debian 11 ("Bullseye").
 Among the most noticeable changes is the switch to a new frontend for GnuPG
@@ -109,6 +113,24 @@ steps to complete the upgrade:
 
 When prompted by Tails to "Install Only Once" or "Install Every Time", click
 **Install Every Time** (this is a change from previous versions of Tails).
+
+Language support changes
+------------------------
+
+We are pleased to announce support for Portuguese (Portugal). To enable this language,
+on the *Admin Workstation* run: ::
+
+  ./securedrop-admin sdconfig
+
+When prompted, add ``pt_PT`` to the list of locales. Then run: ::
+
+  ./securedrop-admin install
+
+We are currently lacking translators for Hindi and Romanian, which are both at risk
+of being removed in the next SecureDrop release. If you speak either language or know
+someone who does, please see our instructions on :ref:`contributing translations<Translations>`.
+
+.. include:: ../includes/backup-and-update-reminders.txt
 
 Getting Support
 ---------------
