@@ -13,6 +13,7 @@
 * Norwegian (``nb_NO``)
 * Dutch (``nl``)
 * Portuguese, Brasil (``pt_BR``)
+* Portuguese, Portuguese (``pt_PT``)
 * Romanian (``ro``)
 * Russian (``ru``)
 * Slovak (``sk``)
