@@ -68,6 +68,17 @@ Finally, run the following commands: ::
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
 
+Tor Browser security issue
+--------------------------
+
+Tails has `published an advisory <https://tails.boum.org/security/prototype_pollution/>`__
+for a serious security issue in Tor Browser affecting all versions of Tails. Administrators
+and journalists should disable JavaScript by `setting Tor Browser’s security level to “Safest”
+<https://tails.boum.org/doc/anonymous_internet/Tor_Browser/index.en.html#security-level>`__
+until a fix is available (expected on May 31, 2022). If you are using Tor Browser in Tails
+for non-SecureDrop browsing, we recommend restarting Tor Browser before and after using it
+for SecureDrop.
+
 Upgrade to Tails 5.0
 --------------------
 
