@@ -195,8 +195,8 @@ The **Edit eno1 IPv4 configuration** dialog will be displayed. In the
   remember to propagate your choices through the rest of the installation process.
 
 Below are the configurations you should enter, assuming you used the
-network settings from the network firewall guide for a 3 NIC or 4 NIC firewall.
-If you did not, adjust these settings accordingly.
+default network settings from the network firewall guide. If you did not,
+adjust these settings accordingly.
 
 -  *Application Server*:
 

@@ -23,7 +23,7 @@ For an installation of SecureDrop, you must acquire:
   *Admin Workstation(s)/Journalist Workstation(s)*.
 * Dedicated airgapped hardware for the mouse, keyboard, and monitor (only if you
   are using a desktop for the *Secure Viewing Station*).
-* A dedicated network firewall with at least 3 NICs.
+* A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
 * Plenty of USB sticks: 1 drive for the master Tails stick, 1 drive for each
   Secure Viewing Station, 1 drive for each *Transfer Device*, 1 drive for each
@@ -39,7 +39,6 @@ Additionally, you may want to consider the following purchases:
   *Secure Viewing Station*.
 * an external hard drive for server backups.
 * a USB drive to store :ref:`backups of your Tails workstation drives <backup_workstations>`.
-* a network switch, if you use a firewall with fewer than four ports.
 * a security key for HOTP authentication, such as a YubiKey, if you want to
   use hardware-based two-factor authentication instead of a mobile app.
 * a USB drive with a physical write protection switch, or a USB write blocker,
@@ -340,15 +339,6 @@ backups, it should *not* be the same drive used for *Offline Storage*.
 
 .. include:: includes/encrypting-drives.txt
 
-Network Switch
-^^^^^^^^^^^^^^
-If you follow our firewall recommendations, you do not need to purchase a
-switch.
-
-If you use a firewall with fewer than four ports, you will need an additional
-Ethernet switch to perform installation and maintenance tasks with the
-*Admin Workstation* without disconnecting one of your servers.
-
 Labeling Equipment
 ^^^^^^^^^^^^^^^^^^
 
@@ -602,29 +592,13 @@ for additional background.
 Network Firewall
 ^^^^^^^^^^^^^^^^
 
-.. note::
-
-   The recommended SG-3100 has reached End-of-Sale as of November 2021.
-   We are currently testing alternatives. If you are in the process of setting
-   up SecureDrop and have not already procured an SG-3100, please
-   get in touch via securedrop@freedom.press or our support portal if you
-   require assistance identifying a comparable firewall.
-
-
-We currently recommend 2 network firewalls:
+We currently recommend 3 network firewalls:
 
 * the `TekLager APU4D4 <https://teklager.se/en/products/routers/apu4d4-open-source-router>`__, running `OPNSense <https://opnsense.org/>`__. It has 4 NICs and ports.
-* the `Netgate SG-3100 <https://shop.netgate.com/products/3100-base-pfsense>`__
-  running `pfSense <https://www.pfsense.org/>`__. It has 3 NICs and an internal
-  switch, increasing the number of available ports to 6.
-
-Network Switch
-^^^^^^^^^^^^^^
-
-This is optional, for people who are using a firewall with less than 4
-ports.  Any old switch with more than 3 ports will do, such as the
-`5-port Netgear ProSafe Ethernet Switch
-<https://www.amazon.com/NETGEAR-Ethernet-Unmanaged-Protection-GS105NA/dp/B0000BVYT3>`__.
+* the `Netgate SG-4100 <https://shop.netgate.com/products/4100-base-pfsense>`__
+  running `pfSense <https://www.pfsense.org/>`__. It has 4 discrete LAN ports and two dedicated WAN ports.
+* the `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__
+  running `pfSense <https://www.pfsense.org/>`__. It also has 4 discrete LAN ports with multiple WAN port options. It has more ports than are typically required for SecureDrop, but can be used if the other cheaper firewalls can't be procured.
 
 .. _printers_tested_by_fpf:
 

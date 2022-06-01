@@ -9,10 +9,7 @@ Unfortunately, due to the wide variety of firewalls that may be used, we
 do not provide specific instructions to cover every type or variation in
 software or hardware. However, if you have the necessary expertise, we
 provide `abstract firewall rules`_ that can be implemented with iptables, Cisco
-IOS etc. We recommend that you use a firewall with at least three physical interfaces.
-You will need at least 4 ports - if your 3-NIC firewall does not have an internal switch
-for at least one of its interfaces, you will need an external switch to complete the
-installation.
+IOS etc. We recommend that you use a firewall with at least four physical interfaces.
 
 The documentation linked below describes the configuration procedure for pfSense-
 and OPNSense-based firewalls. One option not covered in this guide is to build
@@ -22,11 +19,13 @@ or `OPNSense <https://opnsense.org/download/>`__ on it. However, for most
 installations, we recommend buying a dedicated firewall appliance with
 your firewall OS of choice pre-installed.
 
-We currently recommend two firewalls in our :ref:`Hardware Guide <hardware_guide>`:
+We currently recommend three firewalls in our :ref:`Hardware Guide <hardware_guide>`:
 
-* The `Netgate SG-3100 <https://shop.netgate.com/products/3100-base-pfsense>`__,
-  a pfSense-based firewall with 3 network interfaces and 6 ports: WAN, OPT1, LAN1,
-  LAN2, LAN3, and LAN4. This firewall comes with an internal switch on the LAN interface.
+* The `Netgate SG-4100 <https://shop.netgate.com/products/4100-base-pfsense>`__,
+  a pfSense-based firewall with 6 network interfaces: 2 WAN ports and 4 LAN ports.
+
+* The `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__,
+  a pfSense-based firewall with 8 network interfaces: 4 WAN ports and 4 LAN ports.
 
 * The `TekLager APU4D4 <https://teklager.se/en/products/routers/apu4d4-open-source-router>`__,
   an OPNSense-based open-source hardware firewall with 4 network interfaces: WAN,
@@ -34,7 +33,7 @@ We currently recommend two firewalls in our :ref:`Hardware Guide <hardware_guide
 
 Configuration: pfSense
 ----------------------
-If you are using a pfSense-based firewall such as the recommended SG-3100, follow
+If you are using a pfSense-based firewall such as the recommended SG-4100, follow
 the instructions to :ref:`Configure a pfSense firewall for use with SecureDrop <firewall_pfsense>`.
 
 Configuration: OPNSense
@@ -50,8 +49,7 @@ use the same overall configuration and ruleset as defined for the supported mode
 
 The *Application* and *Monitor Servers* should be set up on separate subnets configured on
 separate physical NICs, with the *Admin Workstation* also on a separate subnet if possible.
-Including the WAN connection, a minimum of 3 NICs must be available. If only 3 are
-available, the *Admin Workstation* may share a subnet with th *Application Server*.
+Including the WAN connection, a minimum of 4 NICs must be available.
 
 The abstract ruleset required by SecureDrop can be described as follows:
 
