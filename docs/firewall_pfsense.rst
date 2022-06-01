@@ -24,23 +24,24 @@ network so it is working correctly.
 Configuring Your Firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If your firewall has at least 4 NICs, we will refer to the ports as WAN, LAN,
-OPT1, and OPT2. In this case, we can now use a dedicated port on the network
-firewall for each component of SecureDrop (*Application Server*,
-*Monitor Server*, and *Admin Workstation*).
+Since our recommended firewalls have at least 4 NICs, we will refer to the
+relevant ports as WAN[1], LAN[1], LAN2, and LAN3.  (Bracketed numbers may be
+present on the physical ports' labels but not in the pfSense UI.) In this case,
+we can now use a dedicated port on the network firewall for each component of
+SecureDrop (*Application Server*, *Monitor Server*, and *Admin Workstation*).
 
 Depending on your network configuration, you should define the following
 values before continuing.
 
-4 NIC Example
-'''''''''''''
+4 NIC Example (SG-4100 or SG-6100)
+''''''''''''''''''''''''''''''''''
 .. raw:: html
 
    <!-- -->
 
 -  Admin Subnet: ``10.20.1.0/24``
 -  Admin Gateway: ``10.20.1.1``
--  Admin Workstation: ``10.20.1.2``
+-  Admin Workstation (LAN[1]): ``10.20.1.2``
 
 .. raw:: html
 
@@ -48,7 +49,7 @@ values before continuing.
 
 -  Application Subnet: ``10.20.2.0/24``
 -  Application Gateway: ``10.20.2.1``
--  Application Server (OPT1): ``10.20.2.2``
+-  Application Server (LAN2): ``10.20.2.2``
 
 .. raw:: html
 
@@ -56,7 +57,7 @@ values before continuing.
 
 -  Monitor Subnet: ``10.20.3.0/24``
 -  Monitor Gateway: ``10.20.3.1``
--  Monitor Server (OPT2) : ``10.20.3.2``
+-  Monitor Server (LAN3) : ``10.20.3.2``
 
 3 NIC Example (SG-3100)
 '''''''''''''''''''''''
@@ -71,7 +72,7 @@ the same subnet and gateway.
 
 -  Admin Subnet: ``10.20.2.0/24``
 -  Admin Gateway: ``10.20.2.1``
--  Admin Workstation (LAN1): ``10.20.2.3``
+-  Admin Workstation (LAN[1]): ``10.20.2.3``
 
 .. raw:: html
 
@@ -104,7 +105,7 @@ Connect to the pfSense WebGUI
    Tails using its designated USB drive. Make sure to enable the unsafe browser
    on the "Welcome to Tails" screen under "Additional settings".
 
-#. Connect the *Admin Workstation* to the LAN interface. You should see
+#. Connect the *Admin Workstation* to the LAN[1] interface. You should see
    a popup notification in Tails that says "Connection Established". If you click
    on the network icon in the upper right of the Tails Desktop, you should see
    "Wired Connected":
@@ -127,7 +128,7 @@ Connect to the pfSense WebGUI
         the only option because Tails `intentionally disables LAN
         access`_ in the **Tor Browser**.
 
-#. A dialog will ask "Do you really want to launch the Unsafe
+#. A dialog will ask if you really want to "Launch the Unsafe
    Browser?". Click **Launch**.
 
    |You really want to launch the Unsafe Browser|
@@ -155,10 +156,10 @@ Connect to the pfSense WebGUI
       However, make sure not to configure your Tails device to have the same IP
       as the firewall (``192.168.1.1``).
 
-#. The firewall uses a self-signed certificate, so you will see a "This
-   Connection Is Untrusted" warning when you connect. This is expected.
-   You can safely continue by clicking **Advanced**, **Add
-   Exception...**, and **Confirm Security Exception**.
+#. The firewall uses a self-signed certificate, so you will see a "Potential
+   Security Risk Ahead" warning when you connect. This is expected.
+   You can safely continue by clicking **Advanced**, then **Accept
+   the Risk and Continue**.
 
    |Your Connection is Insecure|
 
@@ -221,6 +222,10 @@ Setup Wizard
    enter here. For many environments, the default of DHCP will work and the
    rest of the fields can be left blank. Click **Next**.
 
+   * If your firewall is behind another firewall or NAT device, you will need
+     to deselect the **Block private networks from entering via WAN** option to
+     allow traffic to and from your upstream network.
+
 #.
 
    a. **4 NIC Example:**
@@ -245,11 +250,11 @@ Setup Wizard
    click the corresponding "here" link to "continue on to the pfSense
    webConfigurator".
 
-At this point, since you (probably) changed the LAN subnet settings from
+At this point, since you (probably) changed the LAN[1] subnet settings from
 their defaults, you will no longer be able to connect after reloading
 the firewall and the next request will probably time out. This is not an
 error - the firewall has reloaded and is working correctly. To connect
-to the new LAN interface, unplug and reconnect your network cable to get
+to the new LAN[1] interface, unplug and reconnect your network cable to get
 a new network address assigned via DHCP. Note that if you used a subnet
 with fewer addresses than ``/24``, the default DHCP configuration in
 pfSense may not work. In this case, you should assign the Admin
@@ -266,7 +271,7 @@ Connect Interfaces and Test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now that the initial configuration is completed, you can connect the WAN
-port without potentially conflicting with the default LAN settings (as
+port without potentially conflicting with the default LAN[1] settings (as
 explained earlier). Connect the WAN port to the external network. You
 can watch the WAN entry in the Interfaces table on the pfSense WebGUI
 homepage to see as it changes from down (red arrow pointing down) to up
@@ -283,7 +288,7 @@ that you expect to be up (e.g. ``google.com``) and click "Ping".
 Disable DHCP on the LAN
 -----------------------
 
-pfSense runs a DHCP server on the LAN interface by default. At this
+pfSense runs a DHCP server on the LAN[1] interface by default. At this
 stage in the documentation, the *Admin Workstation* likely has an IP address
 assigned via that DHCP server.
 
@@ -421,13 +426,13 @@ If you are using a firewall that has a dedicated interface for each component of
 SecureDrop, you can follow the below screenshots for setting up your firewall
 rules.
 
-Set Up OPT1
+Set Up LAN2
 '''''''''''
 
-We set up the LAN interface during the initial configuration. We now
-need to set up the OPT1 interface for the *Application Server*. Start by
-connecting the *Application Server* to the OPT1 port. Then use the WebGUI
-to configure the OPT1 interface. Go to **Interfaces ▸ OPT1**, and check
+We set up the LAN[1] interface during the initial configuration. We now
+need to set up the LAN2 interface for the *Application Server*. Start by
+connecting the *Application Server* to the LAN2 port. Then use the WebGUI
+to configure the LAN2 interface. Go to **Interfaces ▸ LAN2**, and check
 the box to **Enable Interface**. Use these settings:
 
 -  IPv4 Configuration Type: Static IPv4
@@ -436,14 +441,14 @@ the box to **Enable Interface**. Use these settings:
 Make sure that the CIDR routing prefix is correct (``/24``). Leave everything else
 as the default. **Save** and **Apply Changes**.
 
-|OPT1|
+|LAN2|
 
-Set Up OPT2
+Set Up LAN3
 '''''''''''
 
-Next, you will have to enable the OPT2 interface. Go to
-**Interfaces ▸ OPT2**, and check the box to **Enable Interface**. OPT2
-interface is set up similarly to how we set up OPT1 in the previous
+Next, you will have to enable the LAN3 interface. Go to
+**Interfaces ▸ LAN3**, and check the box to **Enable Interface**. LAN3
+interface is set up similarly to how we set up LAN2 in the previous
 section. Use these settings:
 
 -  IPv4 Configuration Type: Static IPv4
@@ -452,7 +457,7 @@ section. Use these settings:
 Make sure that the CIDR routing prefix is correct (``/24``). Leave everything else
 as the default. **Save** and **Apply Changes**.
 
-|OPT2|
+|LAN3|
 
 Use Screenshots of Firewall Configuration
 '''''''''''''''''''''''''''''''''''''''''
@@ -499,25 +504,25 @@ Your configuration should match this screenshot:
 |Port Aliases|
 
 Next we will configure firewall rules for each interface. Navigate to **Firewall ▸
-Rules** to add firewall rules for the LAN, OPT1, and OPT2 interfaces.
+Rules** to add firewall rules for the LAN1, LAN2, and LAN3 interfaces.
 
-.. warning:: Be sure not to delete the Anti-Lockout Rule on the LAN interface.
+.. warning:: Be sure not to delete the Anti-Lockout Rule on the LAN1 interface.
     Deleting this rule will lock you out of the pfSense WebGUI.
 
 Add or remove rules until they match the following screenshots by clicking **Add**
 to add a rule.
 
-**LAN interface:**
+**LAN[1] interface:**
 
 |Firewall LAN Rules|
 
-**OPT1 interface:**
+**LAN2 interface:**
 
-|Firewall OPT1 Rules|
+|Firewall LAN2 Rules|
 
-**OPT2 interface:**
+**LAN3 interface:**
 
-|Firewall OPT2 Rules|
+|Firewall LAN3 Rules|
 
 Finally, click **Apply Changes**. This will save your changes. You should see a
 message "The changes have been applied successfully". Once you've set up the
@@ -744,8 +749,8 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Firewall Port Aliases| image:: images/firewall/port_aliases.png
 .. |Firewall IP Aliases| image:: images/firewall/ip_aliases_with_opt2.png
 .. |Firewall LAN Rules| image:: images/firewall/lan_rules.png
-.. |Firewall OPT1 Rules| image:: images/firewall/opt1_firewall_rules.png
-.. |Firewall OPT2 Rules| image:: images/firewall/opt2_firewall_rules.png
+.. |Firewall LAN2 Rules| image:: images/firewall/lan2_firewall_rules.png
+.. |Firewall LAN3 Rules| image:: images/firewall/lan3_firewall_rules.png
 .. |3 NIC Firewall Alias| image::  images/firewall/three_nic_add_firewall_alias.png
 .. |3 NIC Firewall IP Aliases Pre Save| image:: images/firewall/three_nic_ip_aliases_pre_save.png
 .. |3 NIC Firewall IP Aliases Post Save| image:: images/firewall/three_nic_ip_aliases_post_save.png
@@ -757,8 +762,8 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Tails Network Settings| image:: images/firewall/tails_network_settings.png
 .. |Tails Manual Network Settings| image:: images/firewall/tails-manual-network-with-highlights.png
 .. |Disable DHCP| image:: images/firewall/disable_DHCP.png
-.. |OPT1| image:: images/firewall/opt1.png
-.. |OPT2| image:: images/firewall/opt2.png
+.. |LAN2| image:: images/firewall/lan2.png
+.. |LAN3| image:: images/firewall/lan3.png
 .. |3 NIC OPT1| image:: images/firewall/three_nic_opt1.png
 .. |3 NIC LAN Interface| image:: images/firewall/three_nic_lan_interface.png
 .. |3 NIC Firewall OPT1 Interface| image:: images/firewall/three_nic_opt1.png
@@ -771,7 +776,7 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Firewall Update Progress| image:: images/firewall/system_is_updating.png
 .. |Firewall Update Complete| image:: images/firewall/system_update_complete.png
 
-.. [#] Tails screenshots were taken on Tails 4.0-rc1. Please make an issue on
+.. [#] Tails screenshots are current as of Tails 5.0. Please make an issue on
        GitHub if you are using the most recent version of Tails and the
        interface is different from what you see here.
 
