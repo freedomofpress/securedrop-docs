@@ -456,7 +456,6 @@ Then, post-release, either same day or day-after, the localization manager shoul
 * Remove the `Weblate announcement`_ about this release's translation timeline
   (if you set an end-date on the original announcement, this may happen automatically)
 * Update the `i18n timeline`_ in the forum.
-* :ref:`merge_develop_to_weblate`, which will update the `Demo Instance <https://demo.securedrop.org/>`__
 
 Translator credits
 ^^^^^^^^^^^^^^^^^^
