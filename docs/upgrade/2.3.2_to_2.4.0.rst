@@ -79,28 +79,29 @@ until a fix is available (expected on May 31, 2022). If you are using Tor Browse
 for non-SecureDrop browsing, we recommend restarting Tor Browser before and after using it
 for SecureDrop.
 
-Upgrade to Tails 5.0
---------------------
+Upgrade from Tails 4 to Tails 5
+-------------------------------
 
-If you have not already done so, you must manually upgrade to Tails 5.0.
+If you have not already done so, you must manually upgrade from the Tails 4 release
+series to the Tails 5 series.
 
 .. important::
 
    You must upgrade your workstations to the latest version of SecureDrop by following
-   the steps above *before* upgrading to Tails 5.0. You can verify the version of SecureDrop
-   by running ``git status`` in your ``~/Persistent/securedrop`` directory. The
-   output should include "HEAD detached at 2.4.0".
+   the steps above *before* upgrading to the Tails 5 series. You can verify the version
+   of SecureDrop by running ``git status`` in your ``~/Persistent/securedrop`` directory.
+   The output should include "HEAD detached at 2.4.0".
 
-Tails 5.0 is the first version of Tails to be based on Debian 11 ("Bullseye").
-Among the most noticeable changes is the switch to a new frontend for GnuPG
-called Kleopatra. Once you upgrade your *Secure Viewing Station*, you will need
-to use Kleopatra to open ``.gpg`` files. Please see our :ref:`Journalist Guide <decrypting>`
+The Tails 5 series is based on Debian 11 ("Bullseye"). Among the most noticeable
+changes is the switch to a new frontend for GnuPG called Kleopatra. Once you
+upgrade your *Secure Viewing Station*, you will need to use Kleopatra to open
+``.gpg`` files. Please see our :ref:`Journalist Guide <decrypting>`
 for more information.
 
-You must perform the upgrade to Tails 5.0 manually. You need a blank USB drive
-that you can install Tails 5.0 USB on from scratch. You will use this drive
-to upgrade your *Journalist Workstation(s)*, your *Admin Workstation(s)*, and your
-*Secure Viewing Station(s)*.
+You must perform the upgrade to Tails 5 manually. You need a blank USB drive
+that you can install the latest release in the Tails 5 series on from scratch.
+You will use this drive to upgrade your *Journalist Workstation(s)*, your
+*Admin Workstation(s)*, and your *Secure Viewing Station(s)*.
 
 The persistent storage volumes of your USB drives will be migrated as part of
 this upgrade, but we still highly recommend backing them up first. Follow the
