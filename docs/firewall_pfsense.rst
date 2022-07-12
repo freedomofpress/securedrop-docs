@@ -30,11 +30,12 @@ present on the physical ports' labels but not in the pfSense UI.) In this case,
 we can now use a dedicated port on the network firewall for each component of
 SecureDrop (*Application Server*, *Monitor Server*, and *Admin Workstation*).
 
-Depending on your network configuration, you should define the following
-values before continuing.
+Depending on your network configuration, you should define the IP and subnet
+values your instance will use before continuing. We recommend the default values
+below:
 
-4 NIC Example (SG-4100 or SG-6100)
-''''''''''''''''''''''''''''''''''
+IP and subnet definitions:
+''''''''''''''''''''''''''
 .. raw:: html
 
    <!-- -->
@@ -58,37 +59,6 @@ values before continuing.
 -  Monitor Subnet: ``10.20.3.0/24``
 -  Monitor Gateway: ``10.20.3.1``
 -  Monitor Server (LAN3) : ``10.20.3.2``
-
-3 NIC Example (SG-3100)
-'''''''''''''''''''''''
-
-As described earlier, the SG-3100 has an internal switch on the LAN interface
-which means we can place the *Application Server* and *Admin Workstation* on
-the same subnet and gateway.
-
-.. raw:: html
-
-   <!-- -->
-
--  Admin Subnet: ``10.20.2.0/24``
--  Admin Gateway: ``10.20.2.1``
--  Admin Workstation (LAN[1]): ``10.20.2.3``
-
-.. raw:: html
-
-   <!-- -->
-
--  Application Subnet: ``10.20.2.0/24``
--  Application Gateway: ``10.20.2.1``
--  Application Server (LAN2): ``10.20.2.2``
-
-.. raw:: html
-
-   <!-- -->
-
--  Monitor Subnet: ``10.20.3.0/24``
--  Monitor Gateway: ``10.20.3.1``
--  Monitor Server (OPT1) : ``10.20.3.2``
 
 Initial Configuration
 ---------------------
@@ -182,15 +152,7 @@ defaults for the *Admin Gateway*, you should include that value here. After
 saving these settings you should be able to go back to **System** and
 select **Setup Wizard**.
 
-4 NIC Example
-'''''''''''''
-
 |Alternate Hostnames|
-
-3 NIC Example (SG-3100)
-'''''''''''''''''''''''
-
-|3 NIC Alternate Hostnames|
 
 .. note:: If you are using a different IP for the Admin Gateway you should
  enter that IP in the Alternate Hostname field. Failure to do so will result in
@@ -226,21 +188,11 @@ Setup Wizard
      to deselect the **Block private networks from entering via WAN** option to
      allow traffic to and from your upstream network.
 
-#.
-
-   a. **4 NIC Example:**
-   For "Configure LAN Interface", use the IP address of the *Admin Gateway*
+#. For "Configure LAN Interface", use the IP address of the *Admin Gateway*
    (``10.20.1.1``) and the subnet mask (``/24``) of the *Admin Subnet*. Click
    **Next**.
 
    |Configure LAN Interface|
-
-   b.  **3 NIC Example (SG-3100):**
-   For "Configure LAN Interface", use the IP address of the *Admin Gateway*
-   (``10.20.2.1``) and the subnet mask (``/24``) of the *Admin Subnet*. Click
-   **Next**.
-
-   |3 NIC Configure LAN Interface|
 
 #. Set a strong admin passphrase. We recommend generating a strong passphrase
    with KeePassXC, and saving it in the Tails Persistent folder using the
@@ -343,9 +295,6 @@ that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
 	  servers that you used for the network firewall in the setup
 	  wizard.
 
-4 NIC Example
-'''''''''''''
-
 Fill in the static networking information for the *Admin Workstation*:
 
 -  Address: ``10.20.1.2``
@@ -353,17 +302,6 @@ Fill in the static networking information for the *Admin Workstation*:
 -  Gateway : ``10.20.1.1``
 
 |4 NIC Admin Workstation Static IP Configuration|
-
-3 NIC Example (SG-3100)
-'''''''''''''''''''''''
-
-Fill in the static networking information for the *Admin Workstation*:
-
--  Address: ``10.20.2.3``
--  Netmask: ``255.255.255.0``
--  Gateway : ``10.20.2.1``
-
-|3 NIC Admin Workstation Static IP Configuration|
 
 Click **Apply**. If the network does not come up within 15 seconds or
 so, try disconnecting and reconnecting your network cable to trigger the
@@ -416,15 +354,6 @@ rules to match every use case.
 The easiest way to set up your firewall rules is to look at the screenshots of
 a correctly configured firewall and edit the interfaces, aliases, and firewall
 rules on your firewall to match them.
-
-
-
-4 NIC Example
-~~~~~~~~~~~~~
-
-If you are using a firewall that has a dedicated interface for each component of
-SecureDrop, you can follow the below screenshots for setting up your firewall
-rules.
 
 Set Up LAN2
 '''''''''''
@@ -529,128 +458,6 @@ message "The changes have been applied successfully". Once you've set up the
 firewall, exit the Unsafe Browser, and continue with the "Keeping pfSense up
 to date" section below.
 
-3 NIC Example (SG-3100)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-The below guide assumes you are using a 3 NIC firewall such as the SG-3100.
-While the SG-3100 has an integrated switch, you may need to add a switch to
-the LAN interface if you use a different firewall.
-
-Set Up LAN
-''''''''''
-
-Although we set up the LAN interface during the Setup Wizard we need to make
-a few revisions. Navigate in the WebGUI to configure the LAN interface. Go to
-**Interfaces ▸ LAN**, and ensure the **Enable Interface** box is checked. Use
-these settings:
-
--  IPv4 Configuration Type: Static IPv4
--  IPv4 Address: ``10.20.2.1`` (Application Gateway IP)
-
-Make sure that the CIDR routing prefix is correct (``/24``). Leave everything else
-as the default. **Save** and **Apply Changes**.
-
-|3 NIC LAN Interface|
-
-Disable Anti-Lockout Rule
-'''''''''''''''''''''''''
-
-In order to further lockdown communication we will disable the rule that allows
-traffic to the firewall over the local network. Navigate to
-**System ▸ Advanced** and find the "Anti-lockout" rule. Ensure the box is
-checked and save the configuration.
-
-|Disable Anti-Lockout Rule|
-
-.. warning:: Do not reboot the firewall until after you have set the firewall
- rules based on the screenshots below. If you get locked out of the firewall
- you may have to factory reset it by connecting to it over the serial console.
-
-Set Up OPT1
-'''''''''''
-
-Next, you will have to enable the OPT1 interface. Go to
-**Interfaces ▸ OPT1**, and check the box to **Enable Interface**. Use these
-settings:
-
-
--  IPv4 Configuration Type: Static IPv4
--  IPv4 Address: ``10.20.3.1`` (Monitor Gateway IP)
-
-Make sure that the CIDR routing prefix is correct (``/24``). Leave everything else
-as the default. **Save** and **Apply Changes**.
-
-|3 NIC Firewall OPT1 Interface|
-
-
-Use Screenshots of Firewall Configuration
-'''''''''''''''''''''''''''''''''''''''''
-
-Here are some example screenshots of a working pfSense firewall
-configuration. You will add the firewall rules until they match what is
-shown on the screenshots.
-
-First, we will configure IP and port aliases. Navigate to **Firewall ▸ Aliases**
-and you should see a screen with no currently defined IP aliases:
-
-|Blank IP Aliases|
-
-Next you will click **Add** to add each IP alias.
-You should leave the **Type** as **Host**.
-Make aliases for the following:
-
-- ``admin_workstation``: ``10.20.2.3``
-- ``app_server``: ``10.20.2.2``
-- ``external_dns_servers``: ``8.8.8.8, 8.8.4.4``
-- ``monitor_server``: ``10.20.3.2``
-- ``local_servers``: ``app_server, monitor_server``
-
-|3 NIC Firewall Alias|
-
-Click **Save** to add the alias.
-
-Keep adding aliases until the screenshot matches what is shown here:
-
-|3 NIC Firewall IP Aliases Pre Save|
-
-Finally, click **Apply Changes**. This will save your changes. You should see a
-message "The changes have been applied successfully":
-
-|3 NIC Firewall IP Aliases Post Save|
-
-Next click "Ports" for the port aliases, and add the following ports:
-
-- OSSEC: ``1514``
-- ossec_agent_auth: ``1515``
-
-Your configuration should match this screenshot:
-
-|Port Aliases|
-
-Next we will configure firewall rules for each interface. Navigate to
-**Firewall ▸ Rules** to add firewall rules for the LAN and OPT1
-interfaces.
-
-.. warning:: Be sure not to delete the Anti-Lockout Rule on the LAN interface.
-    Deleting this rule will lock you out of the pfSense WebGUI.
-
-Add or remove rules until they match the following screenshots by clicking **Add**
-to add a rule.
-
-**LAN interface:**
-
-|3 NIC Firewall LAN Rules|
-
-**OPT1 interface:**
-
-|3 NIC Firewall OPT1 Rules|
-
-Finally, click **Apply Changes**. This will save your changes. You should see a
-message "The changes have been applied successfully". Once you've set up the
-firewall, exit the Unsafe Browser, and continue with the "Keeping pfSense up
-to date" section below.
-
-
 Configuration Reference Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -739,34 +546,23 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Unsafe Browser Homepage| image:: images/firewall/unsafe_browser.png
 .. |Default pfSense| image:: images/firewall/default_pfsense.png
 .. |Alternate Hostnames| image:: /images/firewall/alternate_hostnames.png
-.. |3 NIC Alternate Hostnames| image:: /images/firewall/three_nic_alternate_hostnames.png
 .. |Configure LAN Interface| image:: images/firewall/configure_lan_interface.png
-.. |3 NIC Configure LAN Interface| image:: images/firewall/three_nic_configure_lan_interface.png
 .. |pfSense General Info| image:: images/firewall/pfsense_general_information.png
 .. |Ping| image:: images/firewall/pfsense_diagnostics_ping.png
 .. |4 NIC Admin Workstation Static IP Configuration| image:: images/firewall/four_nic_admin_workstation_static_ip_configuration.png
-.. |3 NIC Admin Workstation Static IP Configuration| image:: images/firewall/three_nic_admin_workstation_static_ip_configuration.png
 .. |Firewall Port Aliases| image:: images/firewall/port_aliases.png
 .. |Firewall IP Aliases| image:: images/firewall/ip_aliases_with_opt2.png
 .. |Firewall LAN Rules| image:: images/firewall/lan_rules.png
 .. |Firewall LAN2 Rules| image:: images/firewall/lan2_firewall_rules.png
 .. |Firewall LAN3 Rules| image:: images/firewall/lan3_firewall_rules.png
-.. |3 NIC Firewall Alias| image::  images/firewall/three_nic_add_firewall_alias.png
-.. |3 NIC Firewall IP Aliases Pre Save| image:: images/firewall/three_nic_ip_aliases_pre_save.png
-.. |3 NIC Firewall IP Aliases Post Save| image:: images/firewall/three_nic_ip_aliases_post_save.png
 .. |Disable Anti-Lockout Rule| image:: images/firewall/disable_anti_lockout.png
 .. |Update available| image:: images/firewall/pfsense_update_available.png
-.. |3 NIC Firewall LAN Rules| image:: images/firewall/three_nic_firewall_rules.png
-.. |3 NIC Firewall OPT1 Rules| image:: images/firewall/three_nic_opt1_firewall_rules.png
 .. |Wired Settings| image:: images/firewall/wired_settings.png
 .. |Tails Network Settings| image:: images/firewall/tails_network_settings.png
 .. |Tails Manual Network Settings| image:: images/firewall/tails-manual-network-with-highlights.png
 .. |Disable DHCP| image:: images/firewall/disable_DHCP.png
 .. |LAN2| image:: images/firewall/lan2.png
 .. |LAN3| image:: images/firewall/lan3.png
-.. |3 NIC OPT1| image:: images/firewall/three_nic_opt1.png
-.. |3 NIC LAN Interface| image:: images/firewall/three_nic_lan_interface.png
-.. |3 NIC Firewall OPT1 Interface| image:: images/firewall/three_nic_opt1.png
 .. |Blank IP Aliases| image:: images/firewall/pfsense_blank_ip_aliases.png
 .. |Add Firewall Alias| image:: images/firewall/add_firewall_alias.png
 .. |Firewall IP Aliases Pre Save| image:: images/firewall/ip_aliases_pre_save.png
