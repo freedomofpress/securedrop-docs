@@ -101,20 +101,20 @@ which should be accessible using their smartphone.
 How to Generate a Strong, Unique Passphrase
 -------------------------------------------
 
-We recommend using a unique, 7-word passphrase for each case described above. 
+We recommend using a unique, 7-word passphrase for each case described above.
 You can create these passphrases either by using `physical dice
-<https://www.eff.org/dice>`__ or KeePassXC, a password manager included 
+<https://www.eff.org/dice>`__ or with KeePassXC, a password manager included
 with Tails.
 
 *Using KeePassXC to Generate a Passphrase*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To create a random passphrase using KeePassXC, launch the application,
-then click the **dice icon**. Then click the **"Passphrase" tab** and set the 
-**"Word Count" to 7**. You can optionally set a "Word Separator", for example a 
+then click the **dice icon**. Then click the **Passphrase** tab and set the
+**Word Count** to 7. You can optionally set a **Word Separator**, for example a
 space or hyphen.
 
-|screenshot of KeePassXC passphrase generation feature, showing a 
+|screenshot of KeePassXC passphrase generation feature, showing a
 randomly generated 7-word passphrase|
 
 .. |screenshot of KeePassXC passphrase generation feature, showing a randomly generated 7-word passphrase| image:: images/screenshots/keepassxc-diceware.png
