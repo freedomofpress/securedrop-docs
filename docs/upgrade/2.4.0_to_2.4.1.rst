@@ -63,8 +63,8 @@ Finally, run the following commands: ::
   ./securedrop-admin tailsconfig
 
 
-Enabling codename filtering
----------------------------
+Re-enabling codename filtering (if you previously disabled it)
+--------------------------------------------------------------
 This release fixes a bug in the feature to prevent initial messages
 containing the source's seven word secret codename. If you have
 previously disabled this feature, you can safely re-enable it in
