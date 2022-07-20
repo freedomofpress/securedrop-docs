@@ -5,7 +5,7 @@ SecureDrop currently uses Ubuntu Focal as its server OS.
 The instructions below cover setting up a SecureDrop staging environment
 using Focal under Qubes.
 
-It is assumed that you have an up-to-date Qubes installation on a compatible
+It is assumed that you have an up-to-date Qubes R4.1 installation on a compatible
 laptop, with at least 16GB RAM and 60GB free disk space. The SecureDrop server VMs
 run Tor locally instead of using ``sys-whonix``, so the system clock must be set
 accurately for Tor to start and hidden services to be available.
@@ -266,15 +266,12 @@ respective policy files, before other more general rules:
 
 .. code:: sh
 
-   /etc/qubes-rpc/policy/include/admin-local-rwx:
+   /etc/qubes/policy.d/include/admin-local-rwx:
      sd-dev @tag:created-by-sd-dev allow,target=@adminvm
 
-   /etc/qubes-rpc/policy/include/admin-global-rwx:
+   /etc/qubes/policy.d/include/admin-global-rwx:
      sd-dev @adminvm allow,target=@adminvm
      sd-dev @tag:created-by-sd-dev allow,target=@adminvm
-
-   /etc/qubes-rpc/policy/admin.vm.device.mic.List:
-     sd-dev @anyvm deny
 
 .. tip::
 
