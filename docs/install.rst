@@ -5,26 +5,9 @@ Install Prerequisites
 ---------------------
 
 SecureDrop has dependencies that need to be loaded onto the *Admin Workstation*
-before installing the servers.
-
-On Tails 5.1 or older, prior to installing the dependencies, you need to manually download
-the latest version of the Tor signing key. Run the following commands in a terminal,
-in your home directory (``/home/amnesia``):
-
-.. code:: sh
-
-    wget https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc
-    cat A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | sudo apt-key add -
-
-You may see a deprecation warning for the ``apt-key`` tool, which you can safely ignore.
-These commands will download the latest version of the signing key directly from
-the Tor Project and install it in apt's legacy keychain.
-
-This key update will not persist across Tails reboots, so you should complete
-the setup in the same session.
-
-To install the required dependencies, from the base of the SecureDrop repository
-(``~/Persistent/securedrop/``), run the following command:
+before installing the servers. To install these dependencies, from the base of
+the SecureDrop repository (``~/Persistent/securedrop/``) run the following
+command:
 
 .. code:: sh
 
