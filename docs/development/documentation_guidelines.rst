@@ -153,6 +153,12 @@ as an example. As part of updating the documentation for a release:
    to the :doc:`Kernel Troubleshooting Guide <../kernel_troubleshooting>`.
 6. If you are not also the release manager, check with them about any other
    pertinent release-specific instructions that should be included.
+7. Finally, ensure that mentions of the current version are up to date. You can use
+   the ``update_version.sh`` convenience script to do so.
+
+   **Example:** If you are adding a guide to upgrade to 2.4.2, you can run
+   ``./update_version.sh 2.4.2``, then verify that the version changes are pertinent
+   and save them.
 
 Style Guide
 -----------
