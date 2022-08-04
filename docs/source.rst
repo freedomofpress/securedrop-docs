@@ -18,24 +18,25 @@ Source Guide
    methods, including email to Freedom of the Press Foundation.
 
 What is SecureDrop?
----------------------------
+-------------------
 
-SecureDrop is a tool that news organizations and NGOs use that enables secure and anonymous communication between whistleblowers and journalists. No personal information is collected; SecureDrop's servers are encrypted, and SecureDrop is not a “cloud” service. If you don’t have sensitive information to send to a news organization, it may be okay to use a traditional computer when reaching out. 
+SecureDrop is a tool that news organizations and NGOs use that enables secure and anonymous communication between whistleblowers and journalists. No personal information is collected; SecureDrop's servers are encrypted, and SecureDrop is not a “cloud” service. If you don’t have sensitive information to send to a news organization, it may be okay to use a traditional methods such as phone or email when reaching out.
 
-SecureDrop can accept both messages and individual file uploads (up to 500mb). If you have multiple files to submit, you may do that As a source, you can also return to receive follow-up correspondence with an organization, or to send additional information. Dozens of news organizations — from *ProPublica* to *The New York Times* — use SecureDrop to accept tips securely and anonymously.
+SecureDrop can accept both messages and individual file uploads (up to 500MB). If you have multiple files to submit, you may do that. As a source, you can also return to receive follow-up correspondence with an organization, or to send additional information. Dozens of news organizations — from *ProPublica* to *The New York Times* — use SecureDrop to accept tips securely and anonymously.
 
-To truly protect your anonymity, it is important for you to take some extra precautions in advance. This resource will describe things you can do to help protect your anonymity when using SecureDrop. Note that your Internet Service Provider, or ISP (e.g., Comcast, Cox, Xfinity, Wave, etc), may already have a record of your visit to this website, docs.securedrop.org. 
+To truly protect your anonymity, it is important for you to take some extra precautions in advance. This resource will describe things you can do to help protect your anonymity when using SecureDrop. Note that your Internet Service Provider, or ISP (e.g., Comcast/Xfinity, Cox, Wave, etc), may already have a record of your visit to this website, docs.securedrop.org.
 
 **Before you begin...**
+
 * DO NOT access SecureDrop on your employer's network.
 * DO NOT access SecureDrop using your employer's hardware.
 * DO NOT access SecureDrop on your home internet network.
 
-**DO** carefully read the reamining instructions, that will carefully step-through the reasons why we advise the above, and provide guidance to minimize risk when using SecureDrop.
+* **DO** carefully read the remaining instructions, that will carefully step-through the reasons why we advise the above, and provide guidance to minimize risk when using SecureDrop.
 
 Suggested Devices for Using SecureDrop
----------------------------
-When sensitive disclosures such as government improprieties are involved, we suggest you buy a new computer and at least one new USB flash drive. You should only use cash to make those purchases. 
+--------------------------------------
+When sensitive disclosures such as government improprieties are involved, we suggest you buy a new computer and at least one new USB flash drive. You should only use cash to make those purchases.
 
 Many time-saving features of computers and phones can easily compromise your anonymity: bookmarks, recommendations, synchronization features, shortcuts to frequently opened files, etc. Those reasons and more are why using a dedicated computer for whistleblowing activities can be safer.
 
@@ -43,15 +44,15 @@ To build an even stronger buffer for yourself, we recommend booting the computer
 
 
 Choose the Right Location
----------------------------
+-------------------------
 
-Find a busy cafe you don’t regularly go to and sit at a place with your back to a wall to avoid cameras capturing information on your screen or keystrokes. Be sure to also make any purchases while there (wifi, tea, snacks) or on your way to the cafe (bus, train, gas) with cash. 
+Find a busy cafe you don’t regularly go to and sit at a place with your back to a wall to avoid cameras capturing information on your screen or keystrokes. Be sure to also make any purchases while there (WiFi, tea, snacks) or on your way to the cafe (bus, train, gas) with cash.
 
 
 Use Tor Browser
--------------------
+---------------
 
-Each SecureDrop may **only** be reached through the Tor Browser. SecureDrop pages are only available as onion services—encrypted web pages that end in ".onion," and only the Tor browser is able to open these pages. 
+Each SecureDrop may **only** be reached through the Tor Browser. SecureDrop pages are only available as onion services—encrypted web pages that end in ".onion," and only the Tor browser is able to open these pages.
 
 Tor is an anonymizing network that makes it difficult for anybody observing the network to associate a user's identity (e.g., the computer's IP address) with their activity. Tor Browser can be downloaded from the `Tor Project's website`_. Tor Browser is a modified version of the Firefox web browser that also includes features protect your security and anonymity. If there is a chance that visiting the Tor Project's website to download Tor Browser might raise suspicion, you have a couple alternatives:
 
@@ -59,10 +60,10 @@ Tor is an anonymizing network that makes it difficult for anybody observing the 
   gettor@torproject.org with the text "linux", "windows" or "osx" in the body
   (for your preferred operating system) and a bot will answer with instructions.
 * You can download a copy of Tor Browser for your operating system from the
-  `GitLab mirror <https://gitlab.com/thetorproject/gettorbrowser/tree/torbrowser-releases>`__.
+  `GitLab mirror <https://gitlab.com/thetorproject/gettorbrowser/tree/torbrowser-releases>`__
   maintained by the Tor team.
 
-While using Tor Browser on your personal computer helps hide your activity on the network, it will leave traces of its own installation on yourlocal
+While using Tor Browser on your personal computer helps hide your activity on the network, it will leave traces of its own installation on your local
 machine. Most operating systems keep logs, for example, any time an application is used. The sensitivity of the information you share and the capabilities of those who may not want you to share that information, should be considered when making these decisions.
 
 
@@ -74,7 +75,7 @@ machine. Most operating systems keep logs, for example, any time an application 
    recommend using Tor Browser from a cafe you do not
    visit regularly.
 
-.. _`Tor Project website`: https://www.torproject.org/
+.. _`Tor Project's website`: https://www.torproject.org/
 .. _`Tails operating system`: https://tails.boum.org/
 
 Choose Who to Submit To
