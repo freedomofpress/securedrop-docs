@@ -96,7 +96,7 @@ their activity. Tor Browser can be downloaded from the `Tor Project's website`_.
 Tor Browser is a modified version of the Firefox web browser that also includes
 features protect your security and anonymity. If there is a chance that visiting
 the Tor Project's website to download Tor Browser might raise suspicion,
-you have a couple alternatives:
+you have a couple of alternatives:
 
 * If your mail provider is less likely to be monitored, you can send a mail to
   gettor@torproject.org with the text "linux", "windows" or "osx" in the body
