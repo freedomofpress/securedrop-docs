@@ -56,28 +56,28 @@ Create the Key
 Export the *Submission Public Key*
 ----------------------------------
 
-Navigate to **Applications ▸ Utilities ▸ Passwords and Keys** to open a
-graphical interface to manage GPG keys. Click the clipboard icon |gpgApplet|
-in the top right corner and select "Manage Keys". Click "GnuPG keys" and you
-should see the key that you just generated.
+Navigate to **Applications ▸ Accessories ▸ Kleopatra** to open a
+graphical interface to manage GPG keys. Once Kleopatra opens you will find
+a list of keys, including the SecureDrop Submission Key you just created.
+
+Click to select the key, then click the "Export…" button in the toolbar
+above.
 
 |My Keys|
 
-#. Select the key you just generated and click "File" then "Export".
-#. Save the key to the *Transfer Device* as ``SecureDrop.asc``, and make
-   sure you change the file type from "PGP keys" to "Armored PGP keys" which
-   can be switched at the bottom of the Save window. Click the 'Export' button
-   after switching to armored keys.
+Save the key to the *Transfer Device* by changing the location to
+``/media/amnesia/Transfer Device``, then set the filename to 
+``SecureDrop.asc``. Once that is set, click the *Save* button to finish 
+exporting the key to the transfer device.
 
 .. note:: This is the public key only.
 
 |Export Key|
 
-|Export Key 2|
-
-You'll need to provide the fingerprint of this new key during the
-installation.  Double-click on the newly generated key and change to the
-*Details* tab. Write down the 40 hexadecimal digits under *Fingerprint*.
+After exporting the public key, you will be returned back to the list of keys.
+You'll need to provide the fingerprint of the *Submission Key* during the
+installation. Go ahead and double-click on the *Submission Key*, then
+write down the 40 hexadecimal digits under *Fingerprint*.
 
 |Fingerprint|
 
@@ -85,7 +85,7 @@ installation.  Double-click on the newly generated key and change to the
           screenshot.
 
 At this point, you are done with the *Secure Viewing Station* for now. You
-can shut down Tails, grab the *Admin Workstation* Tails USB and move over to your regular
+can shut down Tails, grab the *Admin Workstation* Tails USB, and move over to your regular
 workstation.
 
 .. |GPG generate key| image:: images/install/run_gpg_gen_key.png
@@ -94,6 +94,5 @@ workstation.
 .. |gpgApplet| image:: images/gpgapplet.png
 .. |My Keys| image:: images/install/keyring.png
 .. |Export Key| image:: images/install/exportkey.png
-.. |Export Key 2| image:: images/install/exportkey2.png
 .. |Fingerprint| image:: images/install/fingerprint.png
 .. |Terminal| image:: images/terminal.png
