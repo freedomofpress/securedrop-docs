@@ -56,9 +56,9 @@ Create the Key
 Export the *Submission Public Key*
 ----------------------------------
 
-Navigate to **Applications ▸ Utilities ▸ Kleopatra** to open a
-graphical interface to manage GPG keys. At the bottom of the list
-of keys, you will find the SecureDrop Submission Key you just created.
+Navigate to **Applications ▸ Accessories ▸ Kleopatra** to open a
+graphical interface to manage GPG keys. Once Kleopatra opens you will find
+a list of keys, including the SecureDrop Submission Key you just created.
 
 Click to select the key, then click the "Export…" button in the toolbar
 above.
