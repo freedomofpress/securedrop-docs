@@ -49,11 +49,7 @@ Connect the printer to your Tails-booted computer via USB, then turn the printer
 on.
 
 Now, you'll want to single-click your way through **Applications ▸
-System Tools ▸ Settings**, then select **Devices ▸ Printers**. The screenshot
-below highlights the "Devices" section in which the printer settings can be
-found:
-
-|select devices from settings|
+System Tools ▸ Settings**, then select **Printers**. 
 
 If this is the first time you've tried to install a printer, the "Printers"
 section will look like this:
@@ -65,10 +61,10 @@ printers, you should see a list of printers that Tails has auto-detected:
 
 |select printer to add|
 
-In this example, we've connected an HP ENVY-5530 (not a model we recommend for
-production use). Clicking on this printer will select it for installation. The
-installation can take a few seconds, during which it looks like nothing is
-happening.
+In this example we've connected a virtual printer, but the process for adding
+a real printer is identical. Clicking on the name of your printer in the list
+will select it for installation. The installation can take a few seconds,
+during which it looks like nothing is happening.
 
 Assuming you receive no errors in this process, you will then see a screen like
 the following one, which indicates that the printer is ready for printing.
@@ -106,6 +102,5 @@ it's equally straightforward from the command line, if you prefer that
 environment.
 
 .. |select printer to add| image:: images/printer_setup_guide/select_printer_to_add.png
-.. |select devices from settings| image:: images/printer_setup_guide/select_devices_from_settings.png
 .. |printer ready| image:: images/printer_setup_guide/printer_ready.png
 .. |add printer| image:: images/printer_setup_guide/add_printer.png

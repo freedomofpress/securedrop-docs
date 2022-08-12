@@ -166,42 +166,39 @@ was in effect.
 On the Secure Viewing Station
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. First, change the UID of the current SecureDrop submission key to avoid
-   mixing up the old and new keys.
-
-   From the *Secure Viewing Station* Applications Menu, choose **Utilities ▸
-   Passwords and Keys**, and select the SecureDrop Application Key from the
+#. From the *Secure Viewing Station* Applications Menu, choose **Accessories ▸
+   Kleopatra**, and select the SecureDrop Application Key from the
    list of available keys.
 
 
    |select securedrop key|
+   
+#. From the details view that appears, click the *Add email address* button.
 
+   |key details|
+   
+#. In the dialog window that appears, choose *Advanced*.
 
-#. Double-click the key, and in the **Names and Signature** tab, add a name
-   such as "OLD <Your Organization> SecureDrop Submission Key - Do Not Delete
-   - Retired <Date>". (This is a local-only change to stop you from mixing up
-   the old and new keys).
+   |add email|
 
-
+#. Change the name of the key to "OLD <Your Organization> SecureDrop Submission
+   Key - Do Not Delete", and set the comment to "Retired <Date of Retirement>".
+   
    |edit key name|
-
-
-#. Once you have done that, you can delete the original name for the key (but
-   not the key itself!), so that the only name you see is "OLD <Your
-   Organization> Submission Key - Do Not Delete - Retired <Date>".
-
-
-   |delete key name|
-
+   
+   .. note:: This is a local-only change to stop you from mixing up
+          the old and new keys
 
 #. Now :doc:`follow the instructions <generate_submission_key>` to create a
    PGP key on the *Secure Viewing Station*. This will be your new *Submission
    Key.* Copy the fingerprint and new *Submission Public Key* to your
    *Transfer Device*.
 
-.. |select securedrop key| image:: images/offboard/passwords_keys_sd_key.png
-.. |edit key name| image:: images/offboard/add_key_name.png
-.. |delete key name| image:: images/offboard/delete_key_name.png
+.. |select securedrop key| image:: images/offboard/key_list.png
+.. |key details| image:: images/offboard/key_details.png
+.. |add email| image:: images/offboard/add_email.png
+.. |edit key name| image:: images/offboard/change_name.png
+.. |new list| image:: images/offboard/new_list.png
 
 On the Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -250,16 +247,7 @@ Return to the Secure Viewing Station
 
 #. **Do not delete your old submission key!** You'll want to maintain it on
    the *SVS* so that you can still decrypt old submissions that were made
-   before you changed keys. If you like, you can revoke the key by
-   selecting the key in the **Passwords and Keys** application, opening the
-   **Details** tab, highlighting the first key entry and clicking
-   **Revoke**. This also makes local-only changes and does not stop you or
-   anyone else from using the key, but it is a reminder that your key has
-   changed.
-
-
-   |revoke key|
-
+   before you changed keys.
 
 #. If you have any other *Admin Workstations*, make sure that you have copied
    the new *Submission Public Key* into the ``install_files/ansible-base``
