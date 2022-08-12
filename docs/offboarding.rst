@@ -262,9 +262,6 @@ Return to the Secure Viewing Station
    ``./securedrop-admin install`` again, since you have already pushed the
    changes to the server.
 
-.. |revoke key| image:: images/offboard/revoke_key.png
-
-
 .. _getting_support:
 
 Getting Support
