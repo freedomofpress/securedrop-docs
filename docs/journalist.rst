@@ -11,7 +11,7 @@ documents, and interacting with sources.
 Connecting to the Tor network in Tails
 --------------------------------------
 
-After you connect to the Internet in Tails 4.20, the Tor Connection assistant
+After you connect to the Internet, the Tor Connection assistant
 will start.
 
 If you are operating in an environment with a high degree of political freedom,
