@@ -167,8 +167,8 @@ On the Secure Viewing Station
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. From the *Secure Viewing Station* Applications Menu, choose **Accessories ▸
-   Kleopatra**, and select the SecureDrop Application Key from the
-   list of available keys.
+   Kleopatra**, and select the *Submission Key* from the list of available
+   keys.
 
 
    |select securedrop key|
