@@ -173,21 +173,81 @@ On the Secure Viewing Station
 
    |select securedrop key|
    
-#. From the details view that appears, click the *Add email address* button.
+#. From the details view that appears, click the **Add email address** button.
 
    |key details|
    
-#. In the dialog window that appears, choose *Advanced*.
+#. In the dialog window that appears, choose **Advanced**.
 
    |add email|
 
-#. Change the name of the key to "OLD <Your Organization> SecureDrop Submission
-   Key - Do Not Delete", and set the comment to "Retired <Date of Retirement>".
+#. Set the name field to "OLD SecureDrop Submission Key - Do Not Delete",
+   and set the comment field to "Retired <Date of Retirement>".
+   Click **OK** to add this information to the key.
    
    |edit key name|
    
    .. note:: This is a local-only change to stop you from mixing up
           the old and new keys
+          
+#. Return to the Terminal, then run:
+
+   .. code:: sh
+
+      gpg --list-keys
+
+   In the output, locate the Retired SecureDrop Submission Key. It should
+   look similar to this:
+
+   .. code:: sh
+   
+      pub   rsa4096/0x1CB396626CA370AB 2022-08-16 [SC]
+            Key fingerprint = 6A7F 116B 3C22 4F36 7275 236A 1CB3 9662 6CA3 70AB
+      uid         [ultimate] OLD SecureDrop Submission Key (Retired 2022-08-16)
+      uid         [ultimate] SecureDrop (SecureDrop Submission Key)
+      sub   rsa4096/0x228C92459E3D16DE 2022-08-16 [E]
+
+   Make note of the ID of the key, which is the portion of the key after the slash
+   in the first line. In this example, the key ID would be: `0x1CB396626CA370AB`
+
+#. Generate a revocation certificate, by running the command below
+   (replacing <KEY_ID> with the ID you noted in the step above):
+
+   .. code:: sh
+
+      gpg --output revoke.asc --gen-revoke <KEY_ID>
+
+   This will launch an interactive prompt, where you can supply the following
+   values:
+
+   .. code:: sh
+   
+      Create a revocation certificate for this key? (y/N) y
+      Please select the reason for the revocation:
+        0 = No reason specified
+        1 = Key has been compromised
+        2 = Key is superseded
+        3 = Key is no longer used
+        Q = Cancel
+      (Probably you want to select 1 here)
+      Your decision? 2
+      Enter an optional description; end it with an empty line:
+      > <Just Press Enter>
+      Reason for revocation: Key is superseded
+      (No description given)
+      Is this okay? (y/N) y
+      ASCII armored output forced.
+      Revocation certificate created.
+
+#. Import the revocation certificate:
+
+   .. code:: sh
+   
+      gpg --import revoke.asc
+
+#. Return to Kleopatra, and make sure the key is now marked as **Revoked**.
+
+   |revoked|
 
 #. Now :doc:`follow the instructions <generate_submission_key>` to create a
    PGP key on the *Secure Viewing Station*. This will be your new *Submission
@@ -199,6 +259,7 @@ On the Secure Viewing Station
 .. |add email| image:: images/offboard/add_email.png
 .. |edit key name| image:: images/offboard/change_name.png
 .. |new list| image:: images/offboard/new_list.png
+.. |revoked| image:: images/offboard/revoked.png
 
 On the Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~
