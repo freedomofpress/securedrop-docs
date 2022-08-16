@@ -166,7 +166,7 @@ your new *Transfer Device* should be ready for use. If you haven't already, make
 sure to label it.
 
 .. |Disk Utility icon| image:: images/icons/disk-utility.png
-.. |screenshot of the Applications menu in Tails, highlighting Disk Utility| image:: images/tails_4x/disks_utility_applications_menu.png
+.. |screenshot of the Applications menu in Tails, highlighting Disk Utility| image:: images/tails_5x/disks_utility_applications_menu.png
 .. |screenshot of Disk Utility application| image:: images/screenshots/disk-utility.png
 .. |screenshot of the menu to create a new partition in the Disk Utility application| image:: images/screenshots/create-partition.png
 .. |screenshot of partition format options| image:: images/screenshots/disks_format_partition.png

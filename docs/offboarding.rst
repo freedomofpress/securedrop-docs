@@ -166,42 +166,100 @@ was in effect.
 On the Secure Viewing Station
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. First, change the UID of the current SecureDrop submission key to avoid
-   mixing up the old and new keys.
-
-   From the *Secure Viewing Station* Applications Menu, choose **Utilities ▸
-   Passwords and Keys**, and select the SecureDrop Application Key from the
-   list of available keys.
+#. From the *Secure Viewing Station* Applications Menu, choose **Accessories ▸
+   Kleopatra**, and select the *Submission Key* from the list of available
+   keys.
 
 
    |select securedrop key|
 
+#. From the details view that appears, click the **Add email address** button.
 
-#. Double-click the key, and in the **Names and Signature** tab, add a name
-   such as "OLD <Your Organization> SecureDrop Submission Key - Do Not Delete
-   - Retired <Date>". (This is a local-only change to stop you from mixing up
-   the old and new keys).
+   |key details|
 
+#. In the dialog window that appears, choose **Advanced**.
+
+   |add email|
+
+#. Set the name field to "OLD SecureDrop Submission Key - Do Not Delete",
+   and set the comment field to "Retired <Date of Retirement>".
+   Click **OK** to add this information to the key.
 
    |edit key name|
 
+   .. note:: This is a local-only change to stop you from mixing up
+          the old and new keys
 
-#. Once you have done that, you can delete the original name for the key (but
-   not the key itself!), so that the only name you see is "OLD <Your
-   Organization> Submission Key - Do Not Delete - Retired <Date>".
+#. Return to the Terminal, then run:
 
+   .. code:: sh
 
-   |delete key name|
+      gpg --list-keys
 
+   In the output, locate the Retired SecureDrop Submission Key. It should
+   look similar to this:
+
+   .. code:: text
+
+      pub   rsa4096/0x1CB396626CA370AB 2022-08-16 [SC]
+            Key fingerprint = 6A7F 116B 3C22 4F36 7275 236A 1CB3 9662 6CA3 70AB
+      uid         [ultimate] OLD SecureDrop Submission Key (Retired 2022-08-16)
+      uid         [ultimate] SecureDrop (SecureDrop Submission Key)
+      sub   rsa4096/0x228C92459E3D16DE 2022-08-16 [E]
+
+   Make note of the ID of the key, which is the portion of the key after the slash
+   in the first line. In this example, the key ID would be: ``0x1CB396626CA370AB``
+
+#. Generate a revocation certificate, by running the command below
+   (replacing ``<KEY_ID>`` with the ID you noted in the step above):
+
+   .. code:: sh
+
+      gpg --output revoke.asc --gen-revoke <KEY_ID>
+
+   This will launch an interactive prompt, where you can supply the following
+   values:
+
+   .. code:: text
+
+      Create a revocation certificate for this key? (y/N) y
+      Please select the reason for the revocation:
+        0 = No reason specified
+        1 = Key has been compromised
+        2 = Key is superseded
+        3 = Key is no longer used
+        Q = Cancel
+      (Probably you want to select 1 here)
+      Your decision? 2
+      Enter an optional description; end it with an empty line:
+      > <Just Press Enter>
+      Reason for revocation: Key is superseded
+      (No description given)
+      Is this okay? (y/N) y
+      ASCII armored output forced.
+      Revocation certificate created.
+
+#. Import the revocation certificate:
+
+   .. code:: sh
+
+      gpg --import revoke.asc
+
+#. Return to Kleopatra, and make sure the key is now marked as **Revoked**.
+
+   |revoked|
 
 #. Now :doc:`follow the instructions <generate_submission_key>` to create a
    PGP key on the *Secure Viewing Station*. This will be your new *Submission
    Key.* Copy the fingerprint and new *Submission Public Key* to your
    *Transfer Device*.
 
-.. |select securedrop key| image:: images/offboard/passwords_keys_sd_key.png
-.. |edit key name| image:: images/offboard/add_key_name.png
-.. |delete key name| image:: images/offboard/delete_key_name.png
+.. |select securedrop key| image:: images/offboard/key_list.png
+.. |key details| image:: images/offboard/key_details.png
+.. |add email| image:: images/offboard/add_email.png
+.. |edit key name| image:: images/offboard/change_name.png
+.. |new list| image:: images/offboard/new_list.png
+.. |revoked| image:: images/offboard/revoked.png
 
 On the Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -250,16 +308,7 @@ Return to the Secure Viewing Station
 
 #. **Do not delete your old submission key!** You'll want to maintain it on
    the *SVS* so that you can still decrypt old submissions that were made
-   before you changed keys. If you like, you can revoke the key by
-   selecting the key in the **Passwords and Keys** application, opening the
-   **Details** tab, highlighting the first key entry and clicking
-   **Revoke**. This also makes local-only changes and does not stop you or
-   anyone else from using the key, but it is a reminder that your key has
-   changed.
-
-
-   |revoke key|
-
+   before you changed keys.
 
 #. If you have any other *Admin Workstations*, make sure that you have copied
    the new *Submission Public Key* into the ``install_files/ansible-base``
@@ -273,9 +322,6 @@ Return to the Secure Viewing Station
    and updating the fingerprint when prompted. You do not have to run
    ``./securedrop-admin install`` again, since you have already pushed the
    changes to the server.
-
-.. |revoke key| image:: images/offboard/revoke_key.png
-
 
 .. _getting_support:
 

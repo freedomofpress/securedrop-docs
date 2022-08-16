@@ -211,7 +211,7 @@ You may now repeat the restore process for any other USBs that you wish to
 restore, or shut down the host Tails USB and test your new workstation USB by
 booting it with persistence unlocked and verifying its functionality.
 
-.. |Browse to Places Computer| image:: images/upgrade_to_tails_3x/browse_to_places_computer.png
+.. |Browse to Places Computer| image:: images/tails_5x/browse_to_places_computer.png
 .. |Click Cogs| image:: images/tails_4x/disks_format_partition.png
 .. |Fill in Passphrase| image:: images/upgrade_to_tails_3x/fill_in_passphrase.png
 .. |Format Backup Drive| image:: images/tails_4x/format_backup_drive.png
@@ -219,6 +219,6 @@ booting it with persistence unlocked and verifying its functionality.
 .. |Start Nautilus| image:: images/screenshots/root_terminal_nautilus_cli.png
 .. |Make Folders for All Drives| image:: images/upgrade_to_tails_3x/make_folders_for_all_drives.png
 .. |Backup and TailsData Mounted| image:: images/upgrade_to_tails_3x/backup_and_tailsdata_mounted.png
-.. |Applications Utilities Disks| image:: images/upgrade_to_tails_3x/navigate_to_applications.png
+.. |Applications Utilities Disks| image:: images/tails_5x/disks_utility_applications_menu.png
 .. |Select the Disk| image:: images/tails_4x/disks_select_drive.png
 .. |Two Partitions Appear| image:: images/tails_4x/two_partitions_appear.png

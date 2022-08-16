@@ -11,7 +11,7 @@ documents, and interacting with sources.
 Connecting to the Tor network in Tails
 --------------------------------------
 
-After you connect to the Internet in Tails 4.20, the Tor Connection assistant
+After you connect to the Internet, the Tor Connection assistant
 will start.
 
 If you are operating in an environment with a high degree of political freedom,
@@ -717,7 +717,7 @@ bottom of the page. You will be prompted for confirmation.
 
 |Delete source account|
 
-.. |Connect to Tor in Tails| image:: images/tails_4x/tails_4-tca_with_default_settings.png
+.. |Connect to Tor in Tails| image:: images/tails_5x/tails_5-tca_with_default_settings.png
    :alt: Tor Connection Assistant with default settings.
 .. |Journalist Interface Login| image:: images/manual/screenshots/journalist-index_with_text.png
    :alt: Login page to access the journalist interface. It requires a username, passphrase and two-factor authentication token.
