@@ -25,58 +25,40 @@ them throughout this installation. Label immediately. Always.
 Install Tails
 -------------
 
-We recommend creating an initial Tails Live DVD or USB, and then using
-that to create additional Tails drives with the *Tails Installer*, a
-special program that is only available from inside Tails. All of your
-Tails drives will need persistence: a way of safely saving files and so
-on between reboots. *It is only possible to set up persistence on USB
-drives which were created via the Tails Installer*.
-
 The `Tails website <https://tails.boum.org/>`__ has detailed and
 up-to-date instructions on how to download and verify Tails, and how to
 create a bootable Tails USB drive.
 
-.. important:: Make sure you verify the Tails .iso using one of the methods described on the Tails website.
+Follow the instructions at these links and then return to this page:
 
-Follow the instructions at these
-links and then return to this page:
+-  `Download and verify the Tails image
+   file <https://tails.boum.org/install/download/index.en.html>`__
+-  `Install onto a USB drive <https://tails.boum.org/install/index.en.html>`__
 
--  `Download and verify the Tails
-   .iso <https://tails.boum.org/install/download/index.en.html>`__
--  `Install onto a USB
-   drive <https://tails.boum.org/install/index.en.html>`__
+.. important:: Make sure you verify the Tails .img file using one of the methods
+   described on the Tails website.
 
-You will need to create 3 Tails USBs to perform the SecureDrop installation:
+You will need to create 2 Tails USBs to perform the SecureDrop installation:
 
-#. A "master" Tails USB, which you will create by copying a Tails .iso
-   onto a USB drive, using one of the techniques outlined in the Tails
-   documentation. This Tails USB is only used for creating other Tails
-   USBs with the **Tails Installer**.
 #. The *Secure Viewing Station* Tails USB.
 #. The *Admin Workstation* Tails USB.
 
 .. tip:: This process will take some time, most of which will be spent
-	 waiting around. Once you have the "master" copy of Tails, you
-	 have to boot it, create another Tails drive with the **Tails
-	 Installer**, shut down, and boot into the new Tails USB to
-	 complete the next step of setting up the persistence - for
-	 each additional Tails USB.
-
-.. note:: Tails doesn't always completely shut down and reboot
-	  properly when you click "restart", so if you notice a
-	  significant delay, you may have to manually power off and
-	  restart your computer for it to work properly.
+	 waiting around.
 
 Enable Persistent Storage
 -------------------------
 
+By default, everything you save while running Tails will be securely
+erased and discarded when you power off or reboot your system.
+
+Because we will need to keep certain settings and files saved between
+sessions, you will need to enable persistence.
+
 Creating an encrypted persistent volume will allow you to securely save
 information and settings in the free space that is left on your Tails
-drive. This information will remain available to you even if you reboot
-Tails. (Tails securely erases all other data on every shutdown.)
-
-You will need to create a persistent storage on each Tails drive. Each 
-drive's persistent storage partition needs their own unique, complex 
+drive. You will need to create a persistent storage on each Tails drive. Each
+drive's persistent storage partition needs its own unique, complex 
 passphrase that's easy to write down or remember. 
 
 For instructions on how to generate a strong passphrase, see :doc:`the 
@@ -103,6 +85,11 @@ Some other things to keep in mind:
    passphrases. We recommend using `spaced-repetition
    <https://en.wikipedia.org/wiki/Spaced_repetition>`__  to memorize
    Diceware passphrases.
+   
+.. note:: Tails doesn't always completely shut down and reboot
+	  properly when you click "restart", so if you notice a
+	  significant delay, you may have to manually power off and
+	  restart your computer for it to work properly.
 
 .. warning:: Make sure that you never use the *Secure Viewing Station*
 	     Tails drive on a computer connected to the Internet or a
