@@ -8,7 +8,11 @@ Ready for review / Work in progress
 
 * Description: 
 
-* Fixes Issue#
+* Resolves #
+<!-- Add an issue number immediately after the # symbol to link to an existing issue report --> 
+
+* Related Issues
+<!-- List any other unresolved, but relevant issues that this PR addresses -->
 
 
 ## Testing
