@@ -267,11 +267,11 @@ respective policy files, before other more general rules:
 .. code:: sh
 
    /etc/qubes/policy.d/include/admin-local-rwx:
-     sd-dev @tag:created-by-sd-dev allow,target=@adminvm
+     sd-dev @tag:created-by-sd-dev allow target=@adminvm
 
    /etc/qubes/policy.d/include/admin-global-rwx:
-     sd-dev @adminvm allow,target=@adminvm
-     sd-dev @tag:created-by-sd-dev allow,target=@adminvm
+     sd-dev @adminvm allow target=@adminvm
+     sd-dev @tag:created-by-sd-dev allow target=@adminvm
 
 .. tip::
 
