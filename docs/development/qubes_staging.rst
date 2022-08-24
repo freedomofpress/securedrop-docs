@@ -167,13 +167,13 @@ Inter-VM networking
 ~~~~~~~~~~~~~~~~~~~
 
 We want to be able to SSH connections from ``sd-dev`` to these new standalone VMs.
-In order to do so, we have to adjust the firewall on ``sys-firewall``.
+In order to do so, we have to adjust the firewall rules. Make the following changes on
+``fedora-36-dvm``, which is the template for ``sys-firewall`` under a default setup.
 
-.. tip::
+.. note::
 
-   See the official Qubes guide on configuring `inter-VM networking`_ for details.
-
-.. _`inter-VM networking`: https://www.qubes-os.org/doc/firewall/#enabling-networking-between-two-qubes
+   These changes to the firewall rules will also apply to all other DispVMs based off
+   ``fedora-36-dvm``, and are meant for a testing/development machine only.
 
 Let's get the IP address of ``sd-dev``. On ``dom0``:
 
@@ -181,7 +181,7 @@ Let's get the IP address of ``sd-dev``. On ``dom0``:
 
    qvm-prefs sd-dev ip
 
-Get a shell on ``sys-firewall``. Create or edit
+Get a shell on ``fedora-36-dvm``. Create or edit
 ``/rw/config/qubes-firewall-user-script``, to include the following:
 
 .. code:: sh
@@ -195,11 +195,7 @@ Get a shell on ``sys-firewall``. Create or edit
    iptables -I FORWARD 2 -s "$sd_app" -d "$sd_mon" -j ACCEPT
    iptables -I FORWARD 2 -s "$sd_mon" -d "$sd_app" -j ACCEPT
 
-Run those commands on ``sys-firewall`` with
-
-.. code:: sh
-
-   sudo sh /rw/config/qubes-firewall-user-script
+Shut down ``fedora-36-dvm``, then restart ``sys-firewall``.
 
 Now from ``sd-dev``, you should be able to do
 
@@ -208,6 +204,12 @@ Now from ``sd-dev``, you should be able to do
    ssh sdadmin@10.137.0.50
 
 and log in with the password ``securedrop``.
+
+.. tip::
+
+   See the official Qubes guide on configuring `inter-VM networking`_ for more details.
+
+.. _`inter-VM networking`: https://www.qubes-os.org/doc/firewall/#enabling-networking-between-two-qubes
 
 SSH using keys
 ~~~~~~~~~~~~~~
