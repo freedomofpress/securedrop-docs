@@ -30,7 +30,7 @@ anonymous sources.
    passphrases
    hardware
    before_you_begin
-   set_up_tails
+   create_usb_boot_disks
    set_up_svs
    set_up_transfer_and_export_device
    generate_submission_key

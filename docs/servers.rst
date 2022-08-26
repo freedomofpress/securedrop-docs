@@ -31,130 +31,20 @@ and will not boot if Secure Boot is enabled.
 Our :ref:`specific hardware recommendations <Specific Hardware Recommendations>`
 enumerate recommended BIOS settings for hardware that we have tested.
 
-Install Ubuntu
---------------
+.. _install_ubuntu:
 
-.. note:: Installing Ubuntu is simple and may even be something you are very familiar
-  with, but it is **strongly** encouraged that you read and follow this documentation
-  exactly as there are some "gotchas" that may cause your SecureDrop setup to break.
+Install Ubuntu
+---------------
 
 The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu Server
 20.04.4 LTS (Focal Fossa)**. To install Ubuntu on the servers, you must first
-download and verify the Ubuntu installation media. You should use the *Admin
-Workstation* to download and verify the Ubuntu installation media.
+download and verify the Ubuntu installation media.
 
-.. _download_ubuntu:
+You should have already performed this step while setting up the Tails USB
+Disks, but if not, or if you would like a refresher, please review the
+:doc:`Create USB Boot Disk documentation. <create_usb_boot_disks>`
 
-Download the Ubuntu Installation Media
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The installation media and the files required to verify it are available on the
-`Ubuntu Releases page`_. You will need to download the following files:
-
-* `ubuntu-20.04.4-live-server-amd64.iso`_
-* `SHA256SUMS`_
-* `SHA256SUMS.gpg`_
-
-If you're reading this documentation in Tor Browser on the *Admin
-Workstation*, you can just click the links above and follow the prompts to save
-them to your Admin Workstation. Save them to the ``/home/amnesia/Persistent/Tor Browser``
-directory on the *Admin Workstation*, because it can be useful to have a copy of
-the installation media readily available.
-
-Alternatively, you can use the command line:
-
-.. code:: sh
-
-   cd ~/Persistent
-   torify curl -OOO https://releases.ubuntu.com/20.04.4/{ubuntu-20.04.4-live-server-amd64.iso,SHA256SUMS{,.gpg}}
-
-.. note:: Downloading Ubuntu on the *Admin Workstation* can take a while
-   because Tails does everything over Tor, and Tor is typically slow relative
-   to the speed of your upstream Internet connection.
-
-.. _Ubuntu Releases page: https://releases.ubuntu.com/
-.. _ubuntu-20.04.4-live-server-amd64.iso: https://releases.ubuntu.com/20.04/ubuntu-20.04.4-live-server-amd64.iso
-.. _SHA256SUMS: https://releases.ubuntu.com/20.04/SHA256SUMS
-.. _SHA256SUMS.gpg: https://releases.ubuntu.com/20.04/SHA256SUMS.gpg
-
-Verify the Ubuntu Installation Media
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You should verify the Ubuntu image you downloaded hasn't been modified by
-a malicious attacker or otherwise corrupted. To do so, check its integrity with
-cryptographic signatures and hashes.
-
-First, download both *Ubuntu Image Signing Keys* and verify their
-fingerprints. ::
-
-    gpg --recv-key --keyserver hkps://keyserver.ubuntu.com \
-    "C598 6B4F 1257 FFA8 6632 CBA7 4618 1433 FBB7 5451" \
-    "8439 38DF 228D 22F7 B374 2BC0 D94A A3F0 EFE2 1092"
-
-.. note:: It is important you type this out correctly. If you are not
-          copy-pasting this command, double-check you have
-          entered it correctly before pressing enter.
-
-Again, when passing the full public key fingerprint to the ``--recv-key`` command, GPG
-will implicitly verify that the fingerprint of the key received matches the
-argument passed.
-
-.. caution:: If GPG warns you that the fingerprint of the key received
-             does not match the one requested **do not** proceed with
-             the installation. If this happens, please email us at
-             securedrop@freedom.press.
-
-Next, verify the ``SHA256SUMS`` file. ::
-
-    gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
-
-Move on to the next step if you see "Good Signature" in the output, as
-below. Note that any other message (such as "Can't check signature: no public
-key") means that you are not ready to proceed. ::
-
-    gpg: Signature made Thu 11 Feb 2021 02:07:58 PM EST
-    gpg:                using RSA key 843938DF228D22F7B3742BC0D94AA3F0EFE21092
-    gpg: Good signature from "Ubuntu CD Image Automatic Signing Key (2012) <cdimage@ubuntu.com>" [unknown]
-    gpg: WARNING: This key is not certified with a trusted signature!
-    gpg:          There is no indication that the signature belongs to the owner.
-    Primary key fingerprint: 8439 38DF 228D 22F7 B374  2BC0 D94A A3F0 EFE2 1092
-
-The next and final step is to verify the Ubuntu image. ::
-
-    sha256sum -c <(grep ubuntu-20.04.4-live-server-amd64.iso SHA256SUMS)
-
-If the final verification step is successful, you should see the
-following output in your terminal. ::
-
-    ubuntu-20.04.4-live-server-amd64.iso: OK
-
-.. caution:: If you do not see the line above it is not safe to proceed with the
-             installation. If this happens, please contact us at
-             securedrop@freedom.press.
-
-Create the Ubuntu Installation Media
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To create the Ubuntu installation media on a bootable USB stick, open the
-**Disks** program (**Applications ▸ Utilities ▸ Disks**) used earlier.
-
-Select the USB device you would like to use and then open the menu in the top
-right, selecting **Restore Disk Image**. This list includes all disks connected
-to the machine, so it is important to select the right one to avoid accidentally
-overwriting other data.
-
-|screenshot of restore disk image|
-
-Select the Ubuntu ``.iso`` file downloaded earlier and click **Start Restoring**.
-
-|screenshot of start restoring|
-
-Once it finishes, you can remove USB stick as it is ready to use.
-
-.. _install_ubuntu:
-
-.. |screenshot of restore disk image| image:: images/screenshots/disks_restore_image.png
-.. |screenshot of start restoring| image:: images/screenshots/disks_start_restoring.png
+With the Ubuntu Server install USB ready, you may now proceed to the installation.
 
 Perform the Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~
