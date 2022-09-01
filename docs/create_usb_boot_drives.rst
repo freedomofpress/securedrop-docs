@@ -1,22 +1,21 @@
-Create USB Boot Disks
-=====================
+Create USB Boot Drives
+======================
 
 Overview
 -------------
-For the initial SecureDrop setup, you will need three USB disks.
+For the initial SecureDrop setup, you will need three USB drives.
 
 Two of them will will be used for the Tails operating system,
 for creating the *Admin Workstation* and *Secure Viewing Station*.
 
-The other USB disk will have the Ubuntu Server installer,
+The other USB drive will have the Ubuntu Server installer,
 which is needed to install the underlying server OS for your
-*application* and *monitor* servers.
+*Application* and *Monitor Servers*.
 
-Although the Ubuntu Server disk will be used later in the setup process,
-we recommend downloading and creating the disk at the same time you create
-the Tails USB disks to avoid having to repeat steps, and to avoid slower
-download speeds later that would be introduced by trying to download Ubuntu
-over the TOR network from the *Admin Workstation.*
+.. important:: As soon as you create a new drive, be sure to
+    *label it immediately*. USB drives all look alike and you're
+    going to be juggling a whole bunch of them throughout this
+    installation. Label immediately. Always.
 
 .. _set_up_tails:
 
@@ -36,9 +35,7 @@ and one for the *Secure Viewing Station*. :doc:`Later <onboarding_journalists>`,
 you'll set up a bunch more Tails drives for your journalists and
 backups, but for now you just need two.
 
-As soon as you create a new Tails drive, *label it immediately*. USB
-drives all look alike and you're going to be juggling a whole bunch of
-them throughout this installation. Label immediately. Always.
+
 
 .. _setup_install_tails:
 
@@ -120,7 +117,7 @@ Ubuntu Introduction
   exactly as there are some "gotchas" that may cause your SecureDrop setup to break.
 
 The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu Server
-20.04.4 LTS (Focal Fossa)**. To install Ubuntu on the servers, you must first
+20.04.5 LTS (Focal Fossa)**. To install Ubuntu on the servers, you must first
 download and verify the Ubuntu installation media.
 
 .. _download_ubuntu:
@@ -131,7 +128,7 @@ Download the Ubuntu Installation Media
 The installation media and the files required to verify it are available on the
 `Ubuntu Releases page`_. You will need to download the following files:
 
-* `ubuntu-20.04.4-live-server-amd64.iso`_
+* `ubuntu-20.04.5-live-server-amd64.iso`_
 * `SHA256SUMS`_
 * `SHA256SUMS.gpg`_
 
@@ -140,10 +137,10 @@ Alternatively, you can use the command line:
 .. code:: sh
 
    cd ~/Downloads
-   curl -OOO https://releases.ubuntu.com/20.04.4/{ubuntu-20.04.4-live-server-amd64.iso,SHA256SUMS{,.gpg}}
+   curl -OOO https://releases.ubuntu.com/20.04.5/{ubuntu-20.04.5-live-server-amd64.iso,SHA256SUMS{,.gpg}}
 
 .. _Ubuntu Releases page: https://releases.ubuntu.com/
-.. _ubuntu-20.04.4-live-server-amd64.iso: https://releases.ubuntu.com/20.04/ubuntu-20.04.4-live-server-amd64.iso
+.. _ubuntu-20.04.5-live-server-amd64.iso: https://releases.ubuntu.com/20.04/ubuntu-20.04.5-live-server-amd64.iso
 .. _SHA256SUMS: https://releases.ubuntu.com/20.04/SHA256SUMS
 .. _SHA256SUMS.gpg: https://releases.ubuntu.com/20.04/SHA256SUMS.gpg
 
@@ -191,12 +188,12 @@ key") means that you are not ready to proceed. ::
 
 The next and final step is to verify the Ubuntu image. ::
 
-    sha256sum -c <(grep ubuntu-20.04.4-live-server-amd64.iso SHA256SUMS)
+    sha256sum -c <(grep ubuntu-20.04.5-live-server-amd64.iso SHA256SUMS)
 
 If the final verification step is successful, you should see the
 following output in your terminal. ::
 
-    ubuntu-20.04.4-live-server-amd64.iso: OK
+    ubuntu-20.04.5-live-server-amd64.iso: OK
 
 .. caution:: If you do not see the line above it is not safe to proceed with the
              installation. If this happens, please contact us at
@@ -209,6 +206,6 @@ to create a bootable Ubuntu Server USB drive.
 
 Follow the instructions at the link below, then return to this page:
     
--  `Create a bootable Ubuntu USB disk on Ubuntu, 
+-  `Create a bootable Ubuntu USB drive on Ubuntu, 
    Windows, or Mac <https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview>`__
 

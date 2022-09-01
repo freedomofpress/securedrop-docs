@@ -42,7 +42,7 @@ download and verify the Ubuntu installation media.
 
 You should have already performed this step while setting up the Tails USB
 Disks, but if not, or if you would like a refresher, please review the
-:doc:`Create USB Boot Disk documentation. <create_usb_boot_disks>`
+:doc:`Create USB Boot Disk documentation. <create_usb_boot_drives>`
 
 With the Ubuntu Server install USB ready, you may now proceed to the installation.
 
