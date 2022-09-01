@@ -49,7 +49,7 @@ Workstation*, which is the computer they use to boot their Tails USB.
 
 To create a *Journalist Interface* Tails USB, just follow the same procedure you
 used to create a Tails USB with persistence for the *Admin Workstation*,
-as documented in the :doc:`Tails Setup Guide <set_up_tails>`.
+as documented in the :ref:`Tails Setup Guide <set_up_tails>`.
 
 .. note::
 

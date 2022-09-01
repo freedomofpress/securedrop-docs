@@ -25,7 +25,7 @@ Download Ubuntu server ISO
 
 On ``sd-dev``, download the latest Ubuntu server ISO for Focal,
 along with corresponding checksum and signature files. See the
-:ref:`hardware installation docs <download_ubuntu>`
+:ref:`USB boot disk creation documentation <download_ubuntu>`
 for detailed instructions. If you opt for the command line instructions, omit
 the ``torify`` prepended to the ``curl`` command.
 
