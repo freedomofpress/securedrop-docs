@@ -14,12 +14,8 @@ do_build() {
     export SECUREDROP_DOCS_RELEASE="$2"
 
     make html
-    # Due to remote SVG includes not working (they didn't work on RTD either),
-    # the LaTeX build will pause and wait for the user to press enter. It will
-    # also exit with an error status. Because of this failure, the TOC will
-    # not be correctly generated on the first run, and we must do it twice.
-    yes '' | make latexpdf || :
-    yes '' | make latexpdf || :
+    # Remote-loaded SVGs will cause a build failure unless we use force-mode.
+    LATEXMKOPTS="-interaction=nonstopmode -f" make latexpdf || true
 
     mkdir -p build
     mv docs/_build "build/${2}"
