@@ -533,7 +533,8 @@ VERSION_CODENAME is "focal"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: sh
-
+   
+  sudo apt update
   sudo unattended-upgrades
 
 .. note::
