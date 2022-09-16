@@ -35,6 +35,8 @@ SecureDrop application environment consists of three dedicated computers:
 
 These computers should all physically be in your organization's office.
 
+|Full SecureDrop setup example|
+
 In addition to these dedicated computers, each journalist will also need a
 computer to connect to SecureDrop:
 
@@ -181,4 +183,7 @@ SecureDrop *Landing Page* and our guide to
 :doc:`promoting your SecureDrop instance <getting_the_most_out_of_securedrop>`.
 
 .. |SecureDrop architecture overview diagram| image:: ./diagrams/SecureDrop.png
+  :width: 100%
+
+.. |Full SecureDrop setup example| image:: ./images/SecureDropSetup.png
   :width: 100%
