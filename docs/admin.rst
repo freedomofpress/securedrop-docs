@@ -522,15 +522,7 @@ update `is announced`_, you can opt to fetch the update immediately.
 
 
 To update your servers immediately, you can SSH
-into each server (via ``ssh app`` and ``ssh mon``) and run the following command,
-noting the value of ``VERSION_CODENAME``:
-
-.. code:: sh
-
-  cat /etc/os-release
-
-VERSION_CODENAME is "focal"
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+into each server (via ``ssh app`` and ``ssh mon``) and run the following commands:
 
 .. code:: sh
    
