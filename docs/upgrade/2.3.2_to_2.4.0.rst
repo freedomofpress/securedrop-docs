@@ -138,7 +138,7 @@ When prompted, add ``pt_PT`` to the list of locales. Then run: ::
 
 We are currently lacking translators for Hindi and Romanian, which are both at risk
 of being removed in the next SecureDrop release. If you speak either language or know
-someone who does, please see our instructions on `contributing translations <https://developers.securedrop.org/en/latest/development/translations.html>`_.
+someone who does, please see our instructions on `contributing translations <https://developers.securedrop.org/en/latest/translations.html>`_.
 
 .. include:: ../includes/backup-and-update-reminders.txt
 
