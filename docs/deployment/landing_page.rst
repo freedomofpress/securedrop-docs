@@ -15,6 +15,40 @@ your organization.
           implement minimum security requirements is sure to be noticed, and
           could undermine trust, discouraging possible sources.
 
+SecureDrop `maintains a directory of instances that meet our strict guidelines.
+<https://securedrop.org/directory/>`__ If you would like to be considered for
+inclusion in this directory, make sure your landing page is in compliance with
+the requirements below, then `send us a request using this form.
+<https://securedrop.org/directory/submit/>`__
+
+There are several benefits to being included in the SecureDrop directory. The
+most significant benefit is that it will be easier for potential sources to
+find your SecureDrop instance. Additionally, being included in the directory
+makes you eligible for `an onion 
+name. <https://securedrop.org/faq/getting-onion-name-your-securedrop/>`__
+This improves the experience by turning a lengthy, non-descriptive address
+into one that is short and memorable. For example, a long .onion address 
+might look like: ::
+
+    sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion
+
+whereas the shorter onion name might look like: ::
+
+    nyworld.securedrop.tor.onion
+
+If you wish to receive an onion name, one can be provided during the
+instance verification process. The format for short onion addresses is: ::
+
+    organization.securedrop.tor.onion
+
+where ``organization`` can be any name you request, within reason.
+
+Being included in the SecureDrop directory may make your instance more visible,
+which could result in an uptick of illegitimate (spam) submissions.
+If you notice an increase in spam after being included in the directory, please
+let us know and we can remove your instance from the directory.
+
+
 URL and Location
 ----------------
 
@@ -31,6 +65,9 @@ in Apache by the encapsulating these settings within a
 block, which can be defined similarly in nginx by using the
 `location {} <https://nginx.org/en/docs/http/ngx_http_core_module.html#location>`__
 directive.
+
+.. warning:: Except for rare extenuating circumstances, this is a requirement
+             for inclusion in the SecureDrop Directory
 
 HTTPS Only (No Mixed Content)
 -----------------------------
@@ -58,6 +95,9 @@ Consider submitting your domain to be included in the `Chrome HSTS
 preload list <https://hstspreload.org/>`__ if you can meet all
 of the requirements. This will tell web browsers that the site is only
 ever to be reached over HTTPS.
+
+.. warning:: This is a strict requirement for inclusion in
+             the SecureDrop Directory
 
 Perfect Forward Secrecy
 -----------------------
@@ -116,7 +156,11 @@ Incapsula, Amazon CloudFront, etc.) for the SecureDrop *Landing Page*. These
 services intercept requests between a potential source and the SecureDrop
 *Landing Page* and can be used to `track`_ or collect information on sources.
 
+.. warning:: This is a strict requirement for inclusion in
+             the SecureDrop Directory
+
 .. _`track`: https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
+
 
 Do Not Hyperlink .onion Addresses
 ---------------------------------
@@ -128,6 +172,19 @@ SecureDrop-related behavior.
 
 Instead, we recommend including .onion addresses in plain text, without a
 hyperlink.
+
+If you have been provided a short onion name for your instance, this address
+will also need to be plain text, without a hyperlink. We recommend using the
+text below to provide maximum clarity: ::
+
+    The SecureDrop instance can be found by entering the following address in
+    the desktop version of Tor Browser: <short onion name>
+
+    Alternately, you can access the instance by entering: <long onion address>
+
+
+.. warning:: This is a strict requirement for inclusion in
+             the SecureDrop Directory
 
 Avoid Direct Links to SecureDrop.org
 ------------------------------------
@@ -142,6 +199,9 @@ We suggest offering a reference to the SecureDrop Onion Service in
 plain text, without a hyperlink (as per the preceding section):
 
 **sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion**
+
+.. warning:: This is a strict requirement for inclusion in
+             the SecureDrop Directory
 
 Apply Security Headers
 ----------------------
@@ -171,6 +231,7 @@ If you use Apache, you can use these:
     Header set X-Permitted-Cross-Domain-Policies: master-only
     Header set Content-Security-Policy: "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
     Header set Referrer-Policy "no-referrer"
+    Header set Permissions-Policy "camera 'none'; display-capture 'none'; geolocation 'none'; microphone 'none'; payment 'none'; usb 'none';"
 
 If you intend to run nginx as your webserver instead, this will work:
 
@@ -186,6 +247,7 @@ If you intend to run nginx as your webserver instead, this will work:
     add_header X-Permitted-Cross-Domain-Policies master-only;
     add_header Content-Security-Policy "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';";
     add_header Referrer-Policy "no-referrer";
+    add_header Permissions-Policy "camera 'none'; display-capture 'none'; geolocation 'none'; microphone 'none'; payment 'none'; usb 'none';";
 
 
 Additional Apache Configuration
@@ -248,6 +310,13 @@ use ``server_tokens off;`` so that the webserver doesn't leak extra information.
 If you use nginx, `you can follow this
 link <https://gist.github.com/mtigas/8601685>`__ and use the
 configuration example provided by ProPublica.
+
+.. warning:: Setting the ``Referrer-policy`` header to ``no-referrer`` is a
+             strict requirement for inclusion in the SecureDrop directory. 
+             Setting the remaining headers as described is strongly
+             recommended, but will be reviewed on a case-by-case basis
+             for inclusion in the directory and does not necessarily prevent
+             the instance from being included.
 
 Change detection monitoring for the web application configuration and *Landing Page* content
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
