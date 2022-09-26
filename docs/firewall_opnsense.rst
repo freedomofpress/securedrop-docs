@@ -385,7 +385,7 @@ Established", and the Tor Connection assistant should show the message "Connecte
 to Tor successfully".
 
 For the next step, SecureDrop Configuration, you will manually configure the
-firewall for SecureDrop, using screenshots or XML templates as a reference.
+firewall for SecureDrop, using screenshots as a reference.
 
 SecureDrop Configuration
 ------------------------

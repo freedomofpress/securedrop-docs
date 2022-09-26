@@ -327,7 +327,7 @@ Established", and the Tor Connection assistant should show the message "Connecte
 to Tor successfully".
 
 For the next step, SecureDrop Configuration, you will manually configure the
-firewall for SecureDrop, using screenshots or XML templates as a reference.
+firewall for SecureDrop, using screenshots as a reference.
 
 SecureDrop Configuration
 ------------------------
@@ -457,21 +457,6 @@ Finally, click **Apply Changes**. This will save your changes. You should see a
 message "The changes have been applied successfully". Once you've set up the
 firewall, exit the Unsafe Browser, and continue with the "Keeping pfSense up
 to date" section below.
-
-Configuration Reference Templates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-As an alternative to the provided screenshots, you can examine the provided
-``.xml`` templates as a reference:
-
-- Interfaces config: ``install_files/network_firewall/interfaces-config-pfSense.xml``
-- Aliases: ``install_files/network_firewall/aliases-config-pfSense.xml``
-- Firewall rules: ``install_files/network_firewall/filter-config-pfSense.xml``
-
-.. note:: These will not load using pfSense Restore and are here as a reference
-          only. See `GitHub #2282`_ for more info.
-
-.. _`GitHub #2282`: https://github.com/freedomofpress/securedrop/pull/2282
 
 Tips for Setting Up pfSense Firewall Rules
 ------------------------------------------
