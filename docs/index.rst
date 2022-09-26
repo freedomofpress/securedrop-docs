@@ -10,6 +10,10 @@ SecureDrop is an open-source whistleblower submission system that media
 organizations can use to securely accept documents from and communicate with
 anonymous sources.
 
+This documentation is intended for sources, journalists, and administrators.
+If you would like to contribute to SecureDrop, please see our
+`developer documentation <https://developers.securedrop.org/>`_.
+
 .. toctree::
    :caption: User Guides
    :name: userguidetoc
@@ -93,40 +97,6 @@ anonymous sources.
    upgrade/2.3.0_to_2.3.1.rst
    upgrade/2.2.1_to_2.3.0.rst
    upgrade/2.2.0_to_2.2.1.rst
-
-.. toctree::
-   :caption: Developer Documentation
-   :name: devdocs
-   :maxdepth: 2
-
-   development/contributing
-   development/setup_development
-   development/making_pr
-   development/admin_development
-   development/updategui_development
-   development/client
-   development/journalist_api
-   development/virtual_environments
-   development/virtualizing_tails
-   development/qubes_staging
-   development/upgrade_testing
-   development/contributor_guidelines
-   development/tips_and_tricks
-   development/database_migrations
-   development/translations
-   development/i18n
-   development/documentation_guidelines
-   development/testing_securedrop
-   development/testing_application_tests
-   development/testing_configuration_tests
-   development/testing_continuous_integration
-   development/apt_repo
-   development/updating_ossec
-   development/apparmor_profiles
-   development/portable_demo
-   development/release_management
-   development/dockerbuildmaint
-   development/updating_tor
 
 .. toctree::
   :caption: Threat Model
