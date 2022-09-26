@@ -24,17 +24,19 @@ the requirements below, then `send us a request using this form.
 There are several benefits to being included in the SecureDrop directory. The
 most significant benefit is that it will be easier for potential sources to
 find your SecureDrop instance. Additionally, being included in the directory
-makes you eligible for a short onion address. This improves the experience by
-turning a lengthy, non-descriptive address into one that is short and 
-memorable. For example, a long .onion address might look like: ::
+makes you eligible for `an onion 
+name. <https://securedrop.org/faq/getting-onion-name-your-securedrop/>`__
+This improves the experience by turning a lengthy, non-descriptive address
+into one that is short and memorable. For example, a long .onion address 
+might look like: ::
 
-    xp44cagis447k3lpb4wwhcqukix6cgqokbuys24vmxmbzmaq2gjvc2yd.onion
+    sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion
 
-whereas the short onion address might look like: ::
+whereas the shorter onion name might look like: ::
 
-     theguardian.securedrop.tor.onion
+    nyworld.securedrop.tor.onion
 
-If you wish to receive a short onion address, one can be provided during the
+If you wish to receive an onion name, one can be provided during the
 instance verification process. The format for short onion addresses is: ::
 
     organization.securedrop.tor.onion
@@ -175,10 +177,10 @@ If you have been provided a short onion name for your instance, this address
 will also need to be plain text, without a hyperlink. We recommend using the
 text below to provide maximum clarity: ::
 
-    The SecureDrop instance can be found by entering the following address
-     in Tor browser: <short onion address>
+    The SecureDrop instance can be found by entering the following address in
+    the desktop version of Tor Browser: <short onion name>
 
-    Alternately, you can access the instance in Tor browser via: <long onion address>
+    Alternately, you can access the instance by entering: <long onion address>
 
 
 .. warning:: This is a strict requirement for inclusion in
