@@ -96,8 +96,6 @@ If you would like to contribute to SecureDrop, please see our
    upgrade/2.3.2_to_2.4.0.rst
    upgrade/2.3.1_to_2.3.2.rst
    upgrade/2.3.0_to_2.3.1.rst
-   upgrade/2.2.1_to_2.3.0.rst
-   upgrade/2.2.0_to_2.2.1.rst
 
 .. toctree::
   :caption: Threat Model
