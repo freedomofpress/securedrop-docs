@@ -90,6 +90,7 @@ If you would like to contribute to SecureDrop, please see our
    :name: upgradetoc
    :maxdepth: 2
 
+   upgrade/2.4.2_to_2.5.0.rst
    upgrade/2.4.1_to_2.4.2.rst
    upgrade/2.4.0_to_2.4.1.rst
    upgrade/2.3.2_to_2.4.0.rst
