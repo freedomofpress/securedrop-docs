@@ -109,6 +109,8 @@ steps to complete the upgrade:
 When prompted by Tails to "Install Only Once" or "Install Every Time", click
 **Install Every Time** (this is a change from previous versions of Tails).
 
+.. include:: ../includes/backup-and-update-reminders.txt
+
 Getting Support
 ---------------
 
