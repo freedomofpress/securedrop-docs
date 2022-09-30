@@ -140,7 +140,8 @@ Set a Strong Password
 Navigate to **System > Access > Users** and click the edit button for the ``root``
 user. On the subsequent page, set a strong admin password. We recomend generating
 a strong passphrase with KeePassXC and saving it in the Tails Persistent folder using
-the provided KeePassXC database template. 
+the provided KeePassXC database template. Two-factor authentication will be enabled 
+in a later step.
 
 Set Alternate Hostnames
 ~~~~~~~~~~~~~~~~~~~~~~~
