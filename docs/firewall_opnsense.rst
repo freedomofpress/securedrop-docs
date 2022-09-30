@@ -134,62 +134,14 @@ displayed. You should not step through it at this point, however, as there are
 other tasks to complete. To exit, click the OPNSense logo in the top left corner
 of the screen.
 
-Enable Two-Factor Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Set a Strong Password
+~~~~~~~~~~~~~~~~~~~~~
 
-OPNSense supports two-factor authentication (2FA) via mobile apps such as Google Authenticator
-or FreeOTP. To set it up, first make sure you have a mobile device available with
-your choice of 2FA app.
-
-Next, in the OPNSense Web GUI, navigate to **System > Access > Servers** and
-click **+** to add a new server.
-
-|OPNSense - auth server|
-
-On the next page, enter ``TOTP Local`` in the **Descriptive name** field and choose
-``Local + Timebased One Time Password`` from the **Type** dropdown. Leave the other
-fields at their default values and click **Save**
-
-Next, navigate to **System > Access > Users** and click the edit button for the ``root``
-user. On the subsequent page, first set a strong admin password. We recomend generating
+Navigate to **System > Access > Users** and click the edit button for the ``root``
+user. On the subsequent page, set a strong admin password. We recomend generating
 a strong passphrase with KeePassXC and saving it in the Tails Persistent folder using
-the provided KeePassXC database template. Then scroll down the page to the **OTP seed**
-section and check the **Generate new secret (160bit)** checkbox. Finally, click **Save**.
-
-|OPNSense - otpcheck|
-
-Once the page has reloaded, scroll down to the **OTP QR code** section and click
-**Click to unhide**, then scan the generated QR code with your mobile auth application
-of choice.
-
-|OPNSense - qrscan|
-
-If you wish, you may also save the OTP seed value displayed above the QR code in
-your Tails KeePassXC database - this isn't required, but will allow you to set up TOTP
-on another mobile device if you need to in the future.
-
-
-Test your new login credentials
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To verify that your new password and OTP secret are working, navigate to **System >
-Access > Tester**. Select ``TOTP Local`` from the **Authentication Server** dropdown,
-enter the ``root`` username in the **Username** field, and enter your OTP token and password concatenated like ``123456PASSWORD`` in the **Password** field. Then click **Test**.
-
-|OPNSense - testuserhappy|
-
-If the test fails, make sure you have used the correct OTP code and password, and
-edit the ``root`` user record as necessary.
-
-.. warning:: Do not skip this test, or proceed further until it passes, as you
-  will be locked out of the firewall Web GUI and console if the account is not
-  set up correctly!
-
-Finally,  navigate to **System > Settings > Administration** and scroll down to the
-**Authentication** section at the bottom of the page. In the **Server** dropdown,
-select ``TOTP Local`` and deselect ``Local Database.``. Click **Save**.
-
-   |OPNSense - totp server|
+the provided KeePassXC database template. Two-factor authentication will be enabled 
+in a later step.
 
 Set Alternate Hostnames
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -265,9 +217,6 @@ The Web GUI will now be available on the *Admin Gateway* IP address. Navigate
 to ``https://<Admin Gateway IP>`` in the *Unsafe Browser* and log in to the ``root``
 account using an OTP token and the passphrase you just set.
 
-.. note:: If 2FA is enabled, you must enter the OTP token and passphrase
-  concatenated as a single string like ``123456PASSWORD`` in the **Password** field.
-
 Once you've logged in to the Web GUI, you are ready to continue configuring
 the firewall.
 
@@ -295,6 +244,68 @@ to complete the update. Note that a reboot may be required, and you may also nee
 to apply several updates in a row to get to the latest version.
 
 |OPNSense - no updates|
+
+Enable Two-Factor Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+OPNSense supports two-factor authentication (2FA) via mobile apps such as Google Authenticator
+or FreeOTP. To set it up, first make sure you have a mobile device available with
+your choice of 2FA app.
+
+Next, in the OPNSense Web GUI, navigate to **System > Access > Servers** and
+click **+** to add a new server.
+
+|OPNSense - auth server|
+
+.. note:: The time on your firewall must be set correctly for 2FA to work properly.
+    This should happen automatically once the WAN connection is established.
+
+On the next page, enter ``TOTP Local`` in the **Descriptive name** field and choose
+``Local + Timebased One Time Password`` from the **Type** dropdown. Leave the other
+fields at their default values and click **Save**
+
+Next, navigate to **System > Access > Users** and click the edit button for the ``root``
+user. Scroll down the page to the **OTP seed** section and check the 
+**Generate new secret (160bit)** checkbox. Finally, click **Save**.
+
+|OPNSense - otpcheck|
+
+Once the page has reloaded, scroll down to the **OTP QR code** section and click
+**Click to unhide**, then scan the generated QR code with your mobile auth application
+of choice.
+
+|OPNSense - qrscan|
+
+If you wish, you may also save the OTP seed value displayed above the QR code in
+your Tails KeePassXC database - this isn't required, but will allow you to set up TOTP
+on another mobile device if you need to in the future.
+
+Test your new login credentials
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To verify that your new password and OTP secret are working, navigate to **System >
+Access > Tester**. Select ``TOTP Local`` from the **Authentication Server** dropdown,
+enter the ``root`` username in the **Username** field, and enter your OTP token and 
+password concatenated like ``123456PASSWORD`` in the **Password** field.
+Then click **Test**.
+
+|OPNSense - testuserhappy|
+
+If the test fails, make sure you have used the correct OTP code and password, and
+edit the ``root`` user record as necessary.
+
+.. note:: You must enter the OTP token and passphrase concatenated as a single
+    string like ``123456PASSWORD`` in the **Password** field.
+
+.. warning:: Do not skip this test, or proceed further until it passes, as you
+  will be locked out of the firewall Web GUI and console if the account is not
+  set up correctly!
+
+Finally,  navigate to **System > Settings > Administration** and scroll down to the
+**Authentication** section at the bottom of the page. In the **Server** dropdown,
+select ``TOTP Local`` and deselect ``Local Database.``. Click **Save**.
+
+   |OPNSense - totp server|
 
 
 Disable DHCP on the Firewall
