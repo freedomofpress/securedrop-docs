@@ -37,7 +37,7 @@ Install Ubuntu
 ---------------
 
 The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu Server
-20.04.4 LTS (Focal Fossa)**. To install Ubuntu on the servers, you must first
+20.04.5 LTS (Focal Fossa)**. To install Ubuntu on the servers, you must first
 download and verify the Ubuntu installation media.
 
 You should have already performed this step while setting up the Tails USB
