@@ -649,3 +649,30 @@ servers, since you will need to connect them to a monitor to do the
 initial Ubuntu installation.
 
 You should use a wired (USB) keyboard and mouse, not wireless.
+
+
+Hardware End-of-Life
+^^^^^^^^^^^^^^^^^^^^
+
+No matter what hardware you decide to use, it's important to be mindful of
+how long it will continue to receive security updates. Given the security
+requirements for a SecureDrop instance, any hardware that is no longer
+receiving security updates from the manufacturer will become more and more
+vulnerable over time. Once your hardware has reached its end-of-life (EOL),
+we recommend upgrading to newer, supported hardware.
+
+For the hardware we recommend, you can find a list of end-of-life dates below:
+
+================  ====================================================
+Hardware          End-of-Life (EOL)                                       
+================  ====================================================
+Intel NUC11PAHi3  June 30, 2025                                       
+Intel NUC10i5FNH  June 25, 2024                                       
+Intel NUC8i5BEK   March 26, 2024                                      
+Intel NUC7i5BNH   April 30, 2023                                      
+Thinkpad T420     Already EOL; last BIOS update 2018                  
+Thinkpad T440     No official EOL; last BIOS update 2020              
+TekLager APU4D4   Not yet confirmed
+Netgate SG-4100   Not yet confirmed (will be 2 years after sales stop)
+Netgate SG-6100   Not yet confirmed (will be 2 years after sales stop)
+================  ====================================================
