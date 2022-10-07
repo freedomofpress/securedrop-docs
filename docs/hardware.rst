@@ -663,16 +663,16 @@ we recommend upgrading to newer, supported hardware.
 
 For the hardware we recommend, you can find a list of end-of-life dates below:
 
-================  ====================================================
-Hardware          End-of-Life (EOL)                                       
-================  ====================================================
-Intel NUC11PAHi3  June 30, 2025                                       
-Intel NUC10i5FNH  June 25, 2024                                       
-Intel NUC8i5BEK   March 26, 2024                                      
-Intel NUC7i5BNH   April 30, 2023                                      
-Thinkpad T420     Already EOL; last BIOS update 2018                  
-Thinkpad T440     No official EOL; last BIOS update 2020              
-TekLager APU4D4   Not yet confirmed
-Netgate SG-4100   Not yet confirmed (will be 2 years after sales stop)
-Netgate SG-6100   Not yet confirmed (will be 2 years after sales stop)
-================  ====================================================
+===================  ====================================================
+Hardware             End-of-Life (EOL)                                       
+===================  ====================================================
+Intel NUC11PAHi3     June 30, 2025                                       
+Intel NUC10i5FNH     June 25, 2024                                       
+Intel NUC8i5BEK      March 26, 2024                                      
+Intel NUC7i5BNH      April 30, 2023                                      
+Thinkpad T420 (SVS)  Already EOL; use only for airgapped SVS                 
+Thinkpad T Series    EOL dates vary; consult with manufacturer           
+TekLager APU4D4      Not yet confirmed
+Netgate SG-4100      Not yet confirmed (will be 2 years after sales stop)
+Netgate SG-6100      Not yet confirmed (will be 2 years after sales stop)
+===================  ====================================================
