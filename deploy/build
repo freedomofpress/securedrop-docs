@@ -6,7 +6,6 @@
 set -e
 
 
-latest_branch=main
 stable_tag=$(git tag --sort=version:refname | tail -1)
 
 do_build() {
@@ -22,4 +21,4 @@ do_build() {
 }
 
 do_build "$stable_tag" stable
-do_build "$latest_branch" latest
+do_build "$1" latest
