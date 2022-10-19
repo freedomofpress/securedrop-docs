@@ -45,7 +45,7 @@ author = u"SecureDrop Team and Contributors"
 # built documents.
 #
 # The short X.Y version.
-version = "2.4.2"
+version = "2.5.0"
 # The full version, including alpha/beta/rc tags.
 # On the live site, this will be overridden to "stable" or "latest".
 release = os.environ.get("SECUREDROP_DOCS_RELEASE", version)
