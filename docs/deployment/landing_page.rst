@@ -5,9 +5,10 @@
 
 SecureDrop itself runs as a Tor Onion Service. Organizations also need to
 create a SecureDrop *Landing Page* that will:
-    * explain how SecureDrop works
-    * give sources instructions on how to access the Tor Onion Service
-    * disclose the risks of accessing the SecureDrop instance or submitting documents
+
+* explain how SecureDrop works
+* give sources instructions on how to access the Tor Onion Service
+* disclose the risks of accessing the SecureDrop instance or submitting documents
 
 We also recommend including a privacy policy (see our :ref:`Sample
 Privacy Policy`) describing what data is collected and how it will be used by
