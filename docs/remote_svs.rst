@@ -6,17 +6,16 @@ organization, and for administrators to retain direct physical access in order
 to perform any necessary maintenance or troubleshooting tasks, it is possible
 for journalists to use SecureDrop in remote locations.
 
-This may be a good option for organizations with a distributed staff or a
-strong work-from-home culture, although it's important to weight the risks
-and benefits of setting up remote access by adding additional Secure Viewing
-Stations (SVS).
-
-
 Risk Mitigation for Remote Secure Viewing Stations
 --------------------------------------------------
 
 One option to allow uninterrupted access to SecureDrop is to set up a remote
-Secure Viewing Station for the use by individual journalists.
+Secure Viewing Station for use by individual journalists.
+
+This may be a good option for organizations with a distributed staff or a
+strong work-from-home culture, although it's important to weigh the risks
+and benefits of setting up remote access by adding additional Secure Viewing
+Stations (SVS).
 
 .. warning:: This increases the risk of the SVS—and its Submission Key—being
              compromised.
@@ -44,9 +43,9 @@ follow to minimize the associated risks:
    while your team works remotely. If the office will be completely unattended,
    consider storing the original SVS USB with senior staff or legal counsel.
 6. Prepare to respond to the loss or compromise of the remote SVS. At a
-   minimum, this would involve rotating the Submission Key, which would
-   prevent an adversary from decrypting future submissions using the
-   compromised key.
+   minimum, this would involve :ref:`rotating the Submission Key 
+   <rotate_submission_key>`, which would prevent an adversary from 
+   decrypting future submissions using the compromised key.
 
 Necessary Equipment
 -------------------
@@ -77,12 +76,12 @@ To create the new SVS USB:
 1. Boot into Tails using the primary Tails USB on the air-gapped workstation.
    When you see the welcome dialog, you can proceed without enabling persistence
    or setting an admin password.
-2. Install Tails on the new SVS USB, following the instructions here.
+2. Install Tails on the new SVS USB, following the instructions  
+   `here. <https://tails.boum.org/install/clone/pc/index.en.html>`_
 3. Boot into the new SVS USB and enable persistence with a strong passphrase
    (a 6-word Diceware passphrase is recommended). In the Persistent volume
    configuration wizard, be sure to enable persistence for “GnuPG - GnuPG
    Keyrings and configuration”.
-
 4. Temporarily store the persistent volume passphrase in your password manager.
    You should delete it once you have given the USB and passphrase to the
    journalist who will be using them.
@@ -96,7 +95,8 @@ To create the new SVS USB:
 9. Copy the current SVS’s GPG keychain (which includes the Submission Key) to
    the new SVS USB using the following command (without linebreaks):
 
-   `sudo bash -c "rsync -a --no-specials --no-devices /media/amnesia/TailsData/gnupg/ /live/persistence/TailsData_unlocked/gnupg/"`
+   ``sudo bash -c "rsync -a --no-specials --no-devices 
+   /media/amnesia/TailsData/gnupg/ /live/persistence/TailsData_unlocked/gnupg/"``
 
 10. Eject and remove the current SVS USB.
 11. Verify that the Submission Key is present with the correct fingerprint on 
@@ -121,19 +121,22 @@ If printing is an option, printing and re-scanning a document is the most
 effective mitigation against many of these risks.
 
 If you want to transfer files electronically, you can take steps on the
-Secure Viewing Station to mitigate against these risks (e.g., stripping
-metadata from files and converting them to other formats). If you decide to
-copy files off the Secure Viewing Station, we recommend using an encrypted
-Export Device, as described here.
+Secure Viewing Station to mitigate against these risks (e.g., 
+:ref:`stripping metadata from files <removing_metadata>` and converting
+them to other formats). If you decide to copy files off the Secure Viewing
+Station, we recommend using an encrypted Export Device, as 
+:ref:`described here <create_usb_transfer_device>`.
 
 If you want to transfer files to another journalist using your day-to-day work
 computer, we strongly recommend using end-to-end encrypted communication tools
-like Signal and Wire, both of which have desktop apps, instead of more common
-tools like Slack or unencrypted email.
+like `Signal <https://signal.org/>`_ and `Wire <https://app.wire.com/>`_, both
+of which have desktop apps, instead of more common tools like Slack or 
+unencrypted email.
 
 For security reasons, we advise against taking photos of documents using your
-phone, but if you decide to do so, please see our guide to taking private 
-photos with Signal.
+phone, but if you decide to do so, please `see our guide to taking private 
+photos with Signal 
+<https://freedom.press/training/taking-private-photos-signal/>`_.
 
 
 Protecting, Moving, or Taking Down Your SecureDrop Instance
@@ -153,7 +156,7 @@ servers and associated hardware:
    servers are compromised (this is good general practice in any case).
 5. If your SecureDrop instance is set up to allow SSH-over-LAN admin access,
    consider switching it to SSH-over-Tor access instead. To do so, you will
-   need to update the server configuration using the Admin Workstation.
+   need to :doc:`update the server configuration using the Admin Workstation <ssh_over_local_net>`.
 
 In some cases, if you are not able to ensure the security of your instance
 during periods of prolonged absence, it may be better to relocate it, or in
@@ -167,7 +170,8 @@ your SecureDrop instance, we recommend the following steps:
    or a page linked from there) to let prospective sources know that the
    outage is coming, and optionally to redirect them to other contact
    methods, such as a shared Signal tipline.
-3. Back up your servers and your workstation USBs.
+3. :doc:`Back up your servers <backup_and_restore>`  and 
+   :doc:`your workstation USBs <backup_workstations>`. 
 4. Power down the servers, and remove them and the network firewall from the
    server room. Store the equipment securely offsite.
 
