@@ -527,9 +527,8 @@ from exhaustive.
 
 We advise against using Macs, as there are many Tails compatibility issues both
 with older and with newer models. Instead, we recommend the
-`ThinkPad T series <https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-t-series/c/thinkpadt>`__,
-and have had good experiences specifically with the T420 and T440. The
-`ThinkWiki <https://www.thinkwiki.org/wiki/ThinkWiki>`__ is an excellent,
+`ThinkPad T series <https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-t-series/c/thinkpadt>`__.
+The `ThinkWiki <https://www.thinkwiki.org/wiki/ThinkWiki>`__ is an excellent,
 independently maintained resource for verifying general Linux compatibility of
 almost any ThinkPad model.
 
