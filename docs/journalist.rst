@@ -367,6 +367,17 @@ submitted malware.
    many of which relate to these topics, and offers `digital security training <https://freedom.press/training/request-training/>`__
    for news organization staff.
 
+.. warning::
+
+   Do not scan any QR codes you receive as part of your submissions. Scanning
+   a QR code with an internet connected device (such as a smart phone) can
+   alert third-parties to your actions, reveal the identities of your sources,
+   and breach the air gap that is in place with the *Secure Viewing Station*.
+   For maximum safety, it is recommended that cell phones and personal 
+   electronic devices be left outside of the secure environment where the
+   *Secure Viewing Station* is used.
+
+
 Organizing submissions
 ~~~~~~~~~~~~~~~~~~~~~~
 
