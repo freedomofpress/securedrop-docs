@@ -367,17 +367,6 @@ submitted malware.
    many of which relate to these topics, and offers `digital security training <https://freedom.press/training/request-training/>`__
    for news organization staff.
 
-.. warning::
-
-   Do not scan any QR codes you receive as part of your submissions. Scanning
-   a QR code with an internet connected device (such as a smart phone) can
-   alert third-parties to your actions, reveal the identities of your sources,
-   and breach the air gap that is in place with the *Secure Viewing Station*.
-   For maximum safety, it is recommended that cell phones and personal 
-   electronic devices be left outside of the secure environment where the
-   *Secure Viewing Station* is used.
-
-
 Organizing submissions
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -556,11 +545,14 @@ are important steps you can take to protect yourself:
    device.**
 
    `QR codes can contain malicious links`_ that your device will automatically
-   visit.
+   visit. This can alert third-parties to your actions, reveal the identities
+   of your sources, and breach the air gap that is in place with the
+   *Secure Viewing Station*. 
+
    In general, be careful when opening any links provided in a SecureDrop
-   submission, as this can leak information to third parties. If you are unsure
-   if a link is safe to click, you should consult internally, or contact
-   Freedom of the Press Foundation for assistance.
+   submission. If you are unsure if a link is safe to click, you should
+   consult internally, or contact Freedom of the Press Foundation for
+   assistance.
    |br| |br|
 
 5. **Don't photograph submissions using your smartphone, and be careful with all
@@ -574,6 +566,12 @@ are important steps you can take to protect yourself:
    reveal sensitive information about your SecureDrop usage patterns
    (potentially including GPS coordinates) to anyone who gains access
    to the file.
+
+.. warning::
+
+   For maximum safety, it is recommended that cell phones and personal 
+   electronic devices be left outside of the secure environment where the
+   *Secure Viewing Station* is used.
 
 Fully mitigating the risks of malware received via SecureDrop is beyond the
 scope of this documentation. If you have questions, you can contact us at
