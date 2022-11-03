@@ -11,6 +11,11 @@ drive. Journalists download encrypted submissions using their
 drive or a DVD) and physically transfer the *Transfer Device* to
 the *Secure Viewing Station*.
 
+We recommend storing your *Secure Viewing Station* in a secure area on-site,
+and ensuring it does not leave this area. If you have journalists working 
+outside of your premises, you may want to consider setting up a 
+:doc:`remote Secure Viewing Station <remote>`.
+
 Since the *Secure Viewing Station* never uses a network connection or an
 internal hard drive, we recommend that you physically remove any internal
 storage devices or networking hardware such as wireless cards or Bluetooth
@@ -24,6 +29,8 @@ ultrasonic audio
 which cannot be heard by humans. If you have questions about repurposing
 hardware for the *Secure Viewing Station*, contact the `Freedom of the Press
 Foundation <https://securedrop.org/help>`__.
+
+
 
 You should have a Tails drive clearly labeled “SecureDrop Secure Viewing
 Station”. If it's not labeled, label it right now, then boot it on the
