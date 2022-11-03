@@ -4,17 +4,15 @@ Accessing SecureDrop Remotely
 While it's necessary for SecureDrop servers to be hosted on-premise within your
 organization, and for administrators to retain direct physical access to
 troubleshoot any potential network-related issues that might arise, there are
-methods available for both admins and journalists to access the system 
+methods available for both admins and journalists to access the system
 remotely.
 
 SSH Over Tor
 ^^^^^^^^^^^^
-For admins, there are multiple methods available for remotely accessing
-SecureDrop servers.
-
 By default, SSH access to SecureDrop servers is routed through the Tor
 network, allowing you to access the servers using an *Admin Workstation*
-from anywhere in the world where you have a stable internet connection.
+from anywhere in the world where you have a stable internet connection and
+are able to access the Tor network.
 
 To do so, simply open a Terminal from your *Admin Workstation* and run either
 the ``ssh app`` or ``ssh mon`` command, depending on which server you are intending
@@ -31,8 +29,9 @@ If you'd like to make adjustments to the SSH configuration, or disable SSH
 access over Tor, you can do so by
 :doc:`following the steps here <ssh_over_local_net>`.
 
-In addition to remote SSH access, the *Admin Interface* is also available from 
-an *Admin Workstation* from any location with a network connection.
+In addition to remote SSH access, the web-based *Admin Interface* is also available
+from an *Admin Workstation* from any location with a network connection and access
+to the Tor network.
 
 
 Remote *Secure Viewing Station*
@@ -65,10 +64,10 @@ follow to minimize the associated risks:
    personal hardware. Provide assistance to journalists to ensure the physical
    and digital security of sensitive devices and documents.
 3. Provision a new *Secure Viewing Station* USB drive. This USB should be on the
-   latest version of Tails, and should contain only the *Submission Key*. Keep 
+   latest version of Tails, and should contain only the *Submission Key*. Keep
    an inventory of any provisioned SVS USBs for later decommissioning purposes.
    Please see below for a step-by-step guide.
-4. Provide a secure communications method for SecureDrop users and 
+4. Provide a secure communications method for SecureDrop users and
    administrators. The chosen procedure should provide end-to-end encryption
    and ideally guard against the threat of malware. Please see below for some
    considerations for sharing files securely.
@@ -76,8 +75,8 @@ follow to minimize the associated risks:
    while your team works remotely. If the office will be completely unattended,
    consider storing the original SVS USB with senior staff or legal counsel.
 6. Prepare to respond to the loss or compromise of the remote SVS. At a
-   minimum, this would involve :ref:`rotating the Submission Key 
-   <rotate_submission_key>`, which would prevent an adversary from 
+   minimum, this would involve :ref:`rotating the Submission Key
+   <rotate_submission_key>`, which would prevent an adversary from
    decrypting future submissions using the compromised key.
 
 Necessary Equipment
@@ -88,13 +87,13 @@ In order to create a new SVS for remote use, you will need the following:
 * An air-gapped computer similar to the computer being used for your current
   *Secure Viewing Station*. This workstation will be used for provisioning the
   new SVS USB, and will also be used as part of the remote SVS system.
-      
+
 .. warning:: Any computer used as an SVS must be air-gapped by removing or
              physically disabling all networking hardware (including
              Bluetooth), and by removing or physically disabling speakers
              and microphones. A computer used as an SVS should never be used
              for any other purpose.
-    
+
 * An up-to-date Tails USB (the primary Tails USB). You do not need to set up
   persistent storage on this device, as it will not be used during the SVS
   setup process.
@@ -109,7 +108,7 @@ To create the new SVS USB:
 1. Boot into Tails using the primary Tails USB on the air-gapped workstation.
    When you see the welcome dialog, you can proceed without enabling persistence
    or setting an admin password.
-2. Install Tails on the new SVS USB, following the instructions  
+2. Install Tails on the new SVS USB, following the instructions
    `here. <https://tails.boum.org/install/clone/pc/index.en.html>`_
 3. Boot into the new SVS USB and enable persistence with a strong passphrase
    (a 6-word Diceware passphrase is recommended). In the Persistent volume
@@ -133,7 +132,7 @@ To create the new SVS USB:
       sudo bash -c "rsync -a --no-specials --no-devices \
       /media/amnesia/TailsData/gnupg/ \
       /live/persistence/TailsData_unlocked/gnupg/"
-   
+
 
 10. Eject and remove the current SVS USB.
 11. Verify that the *Submission Key* is present with the correct fingerprint on
@@ -158,20 +157,20 @@ If printing is an option, printing and re-scanning a document is the most
 effective mitigation against many of these risks.
 
 If you want to transfer files electronically, you can take steps on the
-*Secure Viewing Station* to mitigate against these risks (e.g., 
+*Secure Viewing Station* to mitigate against these risks (e.g.,
 :ref:`stripping metadata from files <removing_metadata>` and converting
 them to other formats). If you decide to copy files off the *Secure Viewing
-Station*, we recommend using an encrypted Export Device, as 
+Station*, we recommend using an encrypted Export Device, as
 :ref:`described here <create_usb_transfer_device>`.
 
 If you want to transfer files to another journalist using your day-to-day work
 computer, we strongly recommend using end-to-end encrypted communication tools
 like `Signal <https://signal.org/>`_ and `Wire <https://app.wire.com/>`_, both
-of which have desktop apps, instead of more common tools like Slack or 
+of which have desktop apps, instead of more common tools like Slack or
 unencrypted email.
 
 For security reasons, we advise against taking photos of documents using your
-phone, but if you decide to do so, please `see our guide to taking private 
+phone, but if you decide to do so, please `see our guide to taking private
 photos with Signal 
 <https://freedom.press/training/taking-private-photos-signal/>`_.
 
@@ -207,13 +206,13 @@ your SecureDrop instance, we recommend the following steps:
    or a page linked from there) to let prospective sources know that the
    outage is coming, and optionally to redirect them to other contact
    methods, such as a shared Signal tipline.
-3. :doc:`Back up your servers <backup_and_restore>`  and 
-   :doc:`your workstation USBs <backup_workstations>`. 
+3. :doc:`Back up your servers <backup_and_restore>`  and
+   :doc:`your workstation USBs <backup_workstations>`.
 4. Power down the servers, and remove them and the network firewall from the
    server room. Store the equipment securely offsite.
 
 .. warning:: By default the SecureDrop servers are not set up with full disk
-             encryption enabled, to allow for hands-off reboots. This means 
+             encryption enabled, to allow for hands-off reboots. This means
              that it is crucial that they be kept secure. If the servers are
              lost or stolen, an adversary would gain access to all encrypted
              submissions and messages. While they would not be able to decrypt
