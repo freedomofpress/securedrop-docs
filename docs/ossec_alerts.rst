@@ -49,7 +49,7 @@ The SMTP relay that you use should support SASL authentication and SMTP
 TLS protocols TLSv1.2, TLSv1.1, and TLSv1. Most enterprise email
 solutions should be able to meet those requirements.
 
-Below are the values you must specify in to configure OSSEC correctly.
+Below are the values you must specify to configure OSSEC correctly.
 For first-time installs, you can use the
 :ref:`configuration playbook<configure_securedrop>`, or edit
 ``install_files/ansible-base/group_vars/all/site-specific`` manually.
