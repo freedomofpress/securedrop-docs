@@ -414,7 +414,7 @@ right hostnames in the Common Name or Subject Alternative Names, in
 which case you will need to generate a new CSR with the correct
 hostnames and then obtain a new certificate and install it. Etc., etc.
 
-If you are *not* using the the default verification setup, and
+If you are *not* using the default verification setup, and
 intentionally do not want to use a certificate signed by one of the
 default CA's in Ubuntu, you can still use ``openssl`` to test whether
 you can successfully negotiate a secure connection. Begin by copying
