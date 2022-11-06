@@ -689,7 +689,7 @@ In both cases, follow these steps:
    followed by the version number displayed in the footer of your *Source Interface*,
    you are running the applicable version of the SecureDrop code on your
    workstation, and can proceed to the next step.
-   If not, **it is not not safe to proceed**. Follow the upgrade instructions
+   If not, **it is not safe to proceed**. Follow the upgrade instructions
    associated with the `release notes for the most recent release of
    SecureDrop <https://securedrop.org/news/release-announcement/>`__. Apply all
    available updates, including for the Tails operating system.
