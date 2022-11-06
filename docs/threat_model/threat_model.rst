@@ -268,8 +268,8 @@ What a Compromise of the *Application Server* Can Surrender
 -  The server can connect to the *Monitor Server* using an SSH key and a
    passphrase.
 
-What a Comprommise of the *Monitor Server* Can Surrender
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What a Compromise of the *Monitor Server* Can Surrender
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The server stores the plaintext alerts on disk, data may also reside
    in RAM.
