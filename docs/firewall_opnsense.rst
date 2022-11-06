@@ -420,7 +420,7 @@ The OPT1 and OPT2 interfaces will be used for the *Application Server* and *Moni
 Server* respectively. To enable them, first connect the *Application Server* to the
 physical OPT1 port and the *Monitor Server* to the OPT2 port.
 
-Next, navigate to **Interfaces > Assignments**. LAN and WAN will alaready be enabled.
+Next, navigate to **Interfaces > Assignments**. LAN and WAN will already be enabled.
 Click the **+** button in the **New Interface** section to enable the OPT1 interface
 on the next available NIC (``igb2`` in the screenshot below). Once OPT1 has been
 added, click **+** again to add OPT2 (on ``igb3`` in the screenshot below)
