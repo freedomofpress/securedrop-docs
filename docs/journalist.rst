@@ -760,7 +760,7 @@ bottom of the page. You will be prompted for confirmation.
 .. |Wiping documents| image:: images/manual/viewing5.png
    :alt: Files application displaying the menu that opens after a right-click on a file. The 'Wipe' entry is selected.
 .. |Journalist account profile| image:: images/manual/screenshots/journalist-edit_account_user.png
-   :alt: Example user profile page of a journalist. It displays forms to reset their passhrase and two-factor authentication.
+   :alt: Example user profile page of a journalist. It displays forms to reset their passphrase and two-factor authentication.
 .. |Unlock VeraCrypt in Tails 1| image:: images/manual/unlock_veracrypt_in_tails_1.png
    :alt: The Applications menu on the Tails desktop. The 'Unlock VeraCrypt Volumes' entry is selected.
 .. |Unlock VeraCrypt in Tails 2| image:: images/manual/unlock_veracrypt_in_tails_2.png
