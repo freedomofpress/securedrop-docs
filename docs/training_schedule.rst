@@ -65,7 +65,7 @@ recipients and anyone else interested
 
 **Format**: In-person or remote
 
-- Risk assesment and threat modeling
+- Risk assessment and threat modeling
 - Account security fundamentals
 
    - Passphrases and Password Managers
