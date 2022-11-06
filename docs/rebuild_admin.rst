@@ -115,7 +115,7 @@ interface and checking the settings under **Firewall ▸ Aliases**.
 .. note:: If you do not have login credentials for your pfSense firewall, check
  its user manual for instructions on resetting the administration password.
 
-Next, determine whether your instance was set up to allow adminstrative access
+Next, determine whether your instance was set up to allow administrative access
 via SSH over Tor, or via SSH over LAN. If you don't know which option was originally
 chosen, you can check as follows:
 
