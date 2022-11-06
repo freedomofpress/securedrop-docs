@@ -5,7 +5,7 @@ Overview
 -------------
 For the initial SecureDrop setup, you will need three USB drives.
 
-Two of them will will be used for the Tails operating system,
+Two of them will be used for the Tails operating system,
 for creating the *Admin Workstation* and *Secure Viewing Station*.
 
 The other USB drive will have the Ubuntu Server installer,
