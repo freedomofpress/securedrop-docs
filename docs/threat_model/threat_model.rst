@@ -251,7 +251,7 @@ What a Compromise of the *Application Server* Can Surrender
    is enabled on the source interface)
 -  The server stores hashes of codenames, created with scrypt and
    randomly-generated salts.
--  The server stores journalist password hashes, created with scrupt and
+-  The server stores journalist password hashes, created with script and
    randomly-generated salts, as well as TOTP seeds.
 -  The server stores only encrypted submissions and communication on
    disk.
