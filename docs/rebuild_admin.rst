@@ -454,7 +454,7 @@ We recommend completing the following tasks after the rebuild:
    :ref:`documented here <backup_workstations>`.
  - Delete invalid admin accounts in the *Journalist Interface*.
  - Restrict SSH access to the *Application* and *Monitor Servers* to valid
-   *Admin Workstions*. If your new *Admin Workstation* USB stick
+   *Admin Workstations*. If your new *Admin Workstation* USB stick
    is the only one that should have SSH access to the servers, you can remove
    access for any previous *Admin Workstations* from the terminal, using the
    commands:
