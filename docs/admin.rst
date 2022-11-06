@@ -421,7 +421,7 @@ were previously uploaded will still be available via the *Journalist Interface*.
 Preventing Short Initial Messages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By default, SecureDrop does not apply a mimimum length requirement to messages. If
+By default, SecureDrop does not apply a minimum length requirement to messages. If
 your instance is experiencing a high volume of short one-time messages with no actionable
 content, or if you would like to indicate to sources that their initial message
 should include enough information for journalists to respond to them effectively, you
