@@ -109,7 +109,7 @@ appropriate Ethernet port, and set up its static IP address. For more informatio
 on how to do so, see :ref:`this section in the firewall setup documentation
 <assign_static_ip_to_workstation>`. If you do not know the correct static IP
 address for the *Admin Workstation*, and you are using a recommended pfSense-based
-*Hardware Firewall*, you can retrieve the address by loggging into its admin
+*Hardware Firewall*, you can retrieve the address by logging into its admin
 interface and checking the settings under **Firewall ▸ Aliases**.
 
 .. note:: If you do not have login credentials for your pfSense firewall, check
