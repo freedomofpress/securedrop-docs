@@ -136,7 +136,7 @@ Attacks on SecureDrop Dependencies
 -  Known vulnerabilities in Tor (incl. Onion Service cryptography, authentication)
 -  Malicious apt package installed at install-time or during updates
 -  Known weakness in Onion Service cryptography
--  Github is compromised
+-  GitHub is compromised
 -  Firewall is not up-to-date
 -  Tails ISO malicious
 -  Ubuntu ISO malicious
