@@ -49,7 +49,7 @@ The SMTP relay that you use should support SASL authentication and SMTP
 TLS protocols TLSv1.2, TLSv1.1, and TLSv1. Most enterprise email
 solutions should be able to meet those requirements.
 
-Below are the values you must specify in to configure OSSEC correctly.
+Below are the values you must specify to configure OSSEC correctly.
 For first-time installs, you can use the
 :ref:`configuration playbook<configure_securedrop>`, or edit
 ``install_files/ansible-base/group_vars/all/site-specific`` manually.
@@ -414,7 +414,7 @@ right hostnames in the Common Name or Subject Alternative Names, in
 which case you will need to generate a new CSR with the correct
 hostnames and then obtain a new certificate and install it. Etc., etc.
 
-If you are *not* using the the default verification setup, and
+If you are *not* using the default verification setup, and
 intentionally do not want to use a certificate signed by one of the
 default CA's in Ubuntu, you can still use ``openssl`` to test whether
 you can successfully negotiate a secure connection. Begin by copying

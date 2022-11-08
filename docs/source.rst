@@ -177,7 +177,7 @@ to make a submission to. The page will invite you to get started with your
 first submission or to log in. It should have a logo specific to the organization
 you are submitting to.
 
-|Source Interface with Javascript Disabled|
+|Source Interface with JavaScript Disabled|
 
 If this is the first time you're using Tor Browser, it's likely that you
 have JavaScript enabled and that the Tor Browser's security level is set
@@ -190,7 +190,7 @@ level to "Safest".
 Click the **Security Level** link in the warning banner, and a message bubble
 will pop up explaining how to increase the security level to **Safest**.
 
-|Fix Javascript warning|
+|Fix JavaScript warning|
 
 1. Click the shield icon in the toolbar
 2. Click **Change**
@@ -211,7 +211,7 @@ The SecureDrop page should now refresh automatically and stop displaying
 the warning. If this is the first time you are using SecureDrop,
 click the **Get Started** button.
 
-|Source Interface with Javascript Disabled|
+|Source Interface with JavaScript Disabled|
 
 You should now see a screen that shows the unique codename that SecureDrop has
 generated for you. Note that your codename will not be the same as the codename
@@ -276,7 +276,7 @@ If you have already submitted a document and would like to check for
 responses, click the **Log in** button on the media
 organization's SecureDrop page.
 
-|Source Interface with Javascript Disabled|
+|Source Interface with JavaScript Disabled|
 
 The next page will ask for your secret codename. Enter it and click
 **Continue**.
@@ -300,9 +300,9 @@ confirmation message: "Reply deleted".
    :alt: Warning banner: Your Tor Browser's Security Level is too low.
 .. |Security Slider| image:: images/manual/source-turn-slider-to-high.png
    :alt: Advanced Security Settings in Tor Browser.
-.. |Fix Javascript warning| image:: images/manual/security-slider-high.png
+.. |Fix JavaScript warning| image:: images/manual/security-slider-high.png
    :alt: Example home page displaying instructions to increase Tor Browser's Security Level.
-.. |Source Interface with Javascript Disabled|
+.. |Source Interface with JavaScript Disabled|
   image:: images/manual/screenshots/source-index.png
      :alt: Example home page of a SecureDrop instance.
 .. |Memorizing your codename|

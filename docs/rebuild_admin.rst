@@ -109,13 +109,13 @@ appropriate Ethernet port, and set up its static IP address. For more informatio
 on how to do so, see :ref:`this section in the firewall setup documentation
 <assign_static_ip_to_workstation>`. If you do not know the correct static IP
 address for the *Admin Workstation*, and you are using a recommended pfSense-based
-*Hardware Firewall*, you can retrieve the address by loggging into its admin
+*Hardware Firewall*, you can retrieve the address by logging into its admin
 interface and checking the settings under **Firewall ▸ Aliases**.
 
 .. note:: If you do not have login credentials for your pfSense firewall, check
  its user manual for instructions on resetting the administration password.
 
-Next, determine whether your instance was set up to allow adminstrative access
+Next, determine whether your instance was set up to allow administrative access
 via SSH over Tor, or via SSH over LAN. If you don't know which option was originally
 chosen, you can check as follows:
 
@@ -454,7 +454,7 @@ We recommend completing the following tasks after the rebuild:
    :ref:`documented here <backup_workstations>`.
  - Delete invalid admin accounts in the *Journalist Interface*.
  - Restrict SSH access to the *Application* and *Monitor Servers* to valid
-   *Admin Workstions*. If your new *Admin Workstation* USB stick
+   *Admin Workstations*. If your new *Admin Workstation* USB stick
    is the only one that should have SSH access to the servers, you can remove
    access for any previous *Admin Workstations* from the terminal, using the
    commands:

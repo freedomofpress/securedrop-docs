@@ -65,7 +65,7 @@ recipients and anyone else interested
 
 **Format**: In-person or remote
 
-- Risk assesment and threat modeling
+- Risk assessment and threat modeling
 - Account security fundamentals
 
    - Passphrases and Password Managers
@@ -132,4 +132,4 @@ Journalist Training, Part 2
 -  Updating Tails
 -  If needed, process for distributing the *Submission Private Key*
    to a remote journalist's air-gapped *Secure Viewing Station*
--  Do complete journalist process walk through once, and repeat for each individual journalist being oboarded
+-  Do complete journalist process walk through once, and repeat for each individual journalist being onboarded

@@ -69,7 +69,7 @@ Once that's done, let the installation process continue.
 Configure the Network
 ~~~~~~~~~~~~~~~~~~~~~
 
-On the **Network conections** screen, the installer will ask you to configure
+On the **Network connections** screen, the installer will ask you to configure
 at least one interface for use by the server. Your server should only have one
 available, corresponding to its Ethernet, usually named ``eno1``. Select its list
 entry using the arrow keys and press **Enter**, then select **Edit IPv4** and press

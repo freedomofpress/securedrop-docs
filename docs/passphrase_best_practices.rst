@@ -37,7 +37,7 @@ General Best Practices
 For Sources
 -----------
 
-Your passphrase is associated with your pseudononymous account and all of your
+Your passphrase is associated with your pseudonymous account and all of your
 activity on the SecureDrop server. In order to preserve your anonymity, you
 should avoid creating physical or digital associations between yourself and your
 passphrase as much as possible.
