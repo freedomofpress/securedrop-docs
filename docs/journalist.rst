@@ -454,6 +454,8 @@ Journalists should take care to research submissions using the Tor
 Browser, ideally in a new Tails session on your *Journalist Workstation* for
 highly sensitive submissions.
 
+.. _removing_metadata:
+
 Removing Metadata
 ~~~~~~~~~~~~~~~~~
 

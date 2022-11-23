@@ -70,6 +70,7 @@ If you would like to contribute to SecureDrop, please see our
    what_makes_securedrop_unique
    logging
    ossec_alerts
+   remote
    tails_printing_guide
    https_source_interface
    ssh_over_local_net

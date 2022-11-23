@@ -107,6 +107,8 @@ if you are not currently using one.
    `EFF guide <https://ssd.eff.org/en/module/creating-strong-passwords#1>`__
    for information on how to do it yourself.
 
+.. _create_usb_transfer_device:
+
 Create USB *Transfer Device*
 ----------------------------
 
