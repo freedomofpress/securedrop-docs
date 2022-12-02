@@ -1,12 +1,14 @@
-Upgrade from 2.4.0 to 2.4.1
+.. _latest_upgrade_guide:
+
+Upgrade from 2.4.2 to 2.5.0
 ===========================
 
-Update Servers to SecureDrop 2.4.1
+Update Servers to SecureDrop 2.5.0
 ----------------------------------
 Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
 automatically within 24 hours of the release.
 
-Update Workstations to SecureDrop 2.4.1
+Update Workstations to SecureDrop 2.5.0
 ---------------------------------------
 
 Using the graphical updater
@@ -16,9 +18,9 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 2.4.1 by clicking "Update Now":
+Perform the update to 2.5.0 by clicking "Update Now":
 
-.. image:: ../images/securedrop-updater.png
+.. image:: images/securedrop-updater.png
 
 Performing a manual update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,7 +38,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
-  git tag -v 2.4.1
+  git tag -v 2.5.0
 
 The output should include the following two lines: ::
 
@@ -49,9 +51,9 @@ on the screen of your workstation. A warning that the key is not certified
 is normal and expected. If the output includes the lines above, you can check
 out the new release: ::
 
-    git checkout 2.4.1
+    git checkout 2.5.0
 
-.. important:: If you do see the warning "refname '2.4.1' is ambiguous" in the
+.. important:: If you do see the warning "refname '2.5.0' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -59,15 +61,6 @@ Finally, run the following commands: ::
 
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
-
-
-Re-enabling codename filtering (if you previously disabled it)
---------------------------------------------------------------
-This release fixes a bug in the feature to prevent initial messages
-containing the source's seven word secret codename. If you have
-previously disabled this feature, you can safely re-enable it in
-the :ref:`submission preferences <submission prefs>` section of the
-*Admin Interface*.
 
 Upgrade from Tails 4 to Tails 5
 -------------------------------
@@ -80,7 +73,7 @@ series to the Tails 5 series.
    You must upgrade your workstations to the latest version of SecureDrop by following
    the steps above *before* upgrading to the Tails 5 series. You can verify the version
    of SecureDrop by running ``git status`` in your ``~/Persistent/securedrop`` directory.
-   The output should include "HEAD detached at 2.4.1".
+   The output should include "HEAD detached at 2.5.0".
 
 The Tails 5 series is based on Debian 11 ("Bullseye"). Among the most noticeable
 changes is the switch to a new frontend for GnuPG called Kleopatra. Once you
@@ -116,10 +109,13 @@ steps to complete the upgrade:
 When prompted by Tails to "Install Only Once" or "Install Every Time", click
 **Install Every Time** (this is a change from previous versions of Tails).
 
+.. include:: includes/backup-and-update-reminders.txt
+
 Getting Support
 ---------------
 
 Should you require further support with your SecureDrop installation, we are
 happy to help!
 
-.. include:: ../includes/getting-support.txt
+.. include:: includes/getting-support.txt
+

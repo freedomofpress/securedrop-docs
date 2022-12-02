@@ -72,14 +72,12 @@ Get Started
    firewall_opnsense
    onboarding_journalists
    onboarding_admins
-   
-   2.4.2_to_2.5.0
+   upgrading_to_the_latest_version
    logging
    ossec_alerts
    tails_printing_guide
    https_source_interface
    ssh_over_local_net
-   
    yubikey_setup
    backup_and_restore
    backup_workstations
