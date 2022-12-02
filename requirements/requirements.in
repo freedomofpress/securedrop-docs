@@ -6,3 +6,4 @@ babel>=2.9.1
 sphinx
 sphinx-autobuild
 sphinx_rtd_theme
+sphinx_rtd_dark_mode

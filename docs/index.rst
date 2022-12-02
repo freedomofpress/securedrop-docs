@@ -10,29 +10,43 @@ SecureDrop is an open-source whistleblower submission system that media
 organizations can use to securely accept documents from and communicate with
 anonymous sources.
 
-This documentation is intended for sources, journalists, and administrators.
-If you would like to contribute to SecureDrop, please see our
-`developer documentation <https://developers.securedrop.org/>`_.
+Get Started
+^^^^^^^^^^^
+
+
+|learn image| :doc:`I want to learn more about how SecureDrop works. <overview>`
+
+|submit image| :doc:`I have information I want to share, and would like to learn how to do so safely. <source>`
+
+|install image| :doc:`I am looking to set up a SecureDrop installation. <before_you_begin>`
+
+|next image| :doc:`I have a SecureDrop installation and am interested in next steps. <getting_the_most_out_of_securedrop>`
+
+|journalist image| :doc:`I am a journalist and would like information about how to best use this system. <journalist>`
+
+
+
 
 .. toctree::
-   :caption: User Guides
-   :name: userguidetoc
-   :maxdepth: 2
+   :caption: Learn About SecureDrop
+   :name: learn
+   :maxdepth: 1
+   :hidden:
 
+   overview
+   what_makes_securedrop_unique
    source
    journalist
    admin
-   passphrase_best_practices
+   hardware
+   
 
 .. toctree::
-   :caption: Install SecureDrop
-   :name: installtoc
-   :maxdepth: 2
+   :caption: Installation Guide
+   :name: installationguide
+   :maxdepth: 1
+   :hidden:
 
-   overview
-   glossary
-   passphrases
-   hardware
    before_you_begin
    create_usb_boot_drives
    set_up_svs
@@ -40,40 +54,32 @@ If you would like to contribute to SecureDrop, please see our
    generate_submission_key
    set_up_admin_tails
    network_firewall
-   firewall_pfsense
-   firewall_opnsense
    servers
    install
    configure_admin_workstation_post_install
    create_admin_account
    test_the_installation
-   onboarding_journalists
-   onboarding_admins
+   
 
 .. toctree::
-   :caption: Deployment Best Practices
-   :name: deploymenttoc
-   :maxdepth: 2
-
-   deployment_practices
-   deployment/landing_page.rst
-   deployment/minimum_security_requirements.rst
-   deployment/whole_site_changes.rst
-   deployment/sample_privacy_policy.rst
-
-.. toctree::
-   :caption: Topic Guides
-   :name: topictoc
-   :maxdepth: 2
+   :caption: How-To Guides
+   :name: howtoguides
+   :maxdepth: 0
+   :hidden:
 
    getting_the_most_out_of_securedrop
-   what_makes_securedrop_unique
+   firewall_pfsense
+   firewall_opnsense
+   onboarding_journalists
+   onboarding_admins
+   
+   2.4.2_to_2.5.0
    logging
    ossec_alerts
    tails_printing_guide
    https_source_interface
    ssh_over_local_net
-   training_schedule
+   
    yubikey_setup
    backup_and_restore
    backup_workstations
@@ -86,27 +92,47 @@ If you would like to contribute to SecureDrop, please see our
    decommission
 
 .. toctree::
-   :caption: Upgrade SecureDrop
-   :name: upgradetoc
-   :maxdepth: 2
+  :caption: Reference
+  :name: reference
+  :maxdepth: 1
+  :hidden:
 
-   upgrade/2.4.2_to_2.5.0.rst
-   upgrade/2.4.1_to_2.4.2.rst
-   upgrade/2.4.0_to_2.4.1.rst
-   upgrade/2.3.2_to_2.4.0.rst
-   upgrade/2.3.1_to_2.3.2.rst
-   upgrade/2.3.0_to_2.3.1.rst
-
-.. toctree::
-  :caption: Threat Model
-  :name: threatdoc
-  :maxdepth: 2
-
+  glossary
+  passphrases
+  passphrase_best_practices
+  deployment_practices
+  deployment/landing_page.rst
+  deployment/minimum_security_requirements.rst
+  deployment/whole_site_changes.rst
+  deployment/sample_privacy_policy.rst
   threat_model/threat_model.rst
   threat_model/dataflow.rst
   threat_model/mitigations.rst
+  training_schedule
 
-Two versions of this documentation are available:
+Get Involved
+^^^^^^^^^^^^
 
-- ``latest`` - built from the ``develop`` branch of the SecureDrop repository, containing updates that have been tested but not yet released.
-- ``stable`` - built from the ``stable`` branch of the SecureDrop repository, and up to date with the most recent release, |version|.
+SecureDrop is an open source project. If you would like to contribute
+to SecureDrop, please see our
+`developer documentation <https://developers.securedrop.org/>`_.
+
+.. |learn image| image:: images/index/learn.png
+   :scale: 50%
+   :class: no-scaled-link
+
+.. |install image| image:: images/index/install.png
+   :scale: 50%
+   :class: no-scaled-link
+
+.. |submit image| image:: images/index/submit.png
+   :scale: 50%
+   :class: no-scaled-link
+
+.. |journalist image| image:: images/index/journalist.png
+   :scale: 50%
+   :class: no-scaled-link
+
+.. |next image| image:: images/index/next.png
+   :scale: 50%
+   :class: no-scaled-link
