@@ -1,3 +1,5 @@
+.. _latest_upgrade_guide:
+
 Upgrade from 2.5.0 to 2.5.1
 ===========================
 
