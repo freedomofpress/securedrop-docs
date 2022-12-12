@@ -415,17 +415,8 @@ It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a
 The NUC12's AX211 wireless hardware is removable. Doing so requires the use of
 a 5mm nut driver. Before installation of the RAM and storage, we recommend that
 you remove the wireless card and disconnect the wireless antennae leads
-from the AX211 component, as demonstrated in the video below.
-
-.. raw:: html
-
-  <video style="display: block; margin: 0 auto; margin-bottom: 20px;" width="500" height="500" controls>
-    <source src="_static/hardware/nuc12_wireless_removal.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-
-Cover the free ends with electrical tape after disconnecting them.
+from the AX211 component. Be sure to cover the free ends with electrical tape
+after disconnecting them.
 
 .. figure:: images/hardware/nuc12_leads.jpg
 
