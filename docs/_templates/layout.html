@@ -33,3 +33,11 @@
     </div>
 </div>
 {% endblock %}
+
+{% block footer %} {{ super() }}
+
+    <style>
+        .wy-nav-content { display: block; margin: 0 auto; }
+    </style>
+
+{% endblock %}
