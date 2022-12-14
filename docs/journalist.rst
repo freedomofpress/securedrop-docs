@@ -569,9 +569,13 @@ are important steps you can take to protect yourself:
 
 .. warning::
 
-   For maximum safety, it is recommended that cell phones and personal 
-   electronic devices be left outside of the secure environment where the
-   *Secure Viewing Station* is used.
+   If you have not memorized the passphrases to unlock the USB drives
+   for the Secure Viewing Station or the Transfer Device, you may need
+   to access a password manager on your phone or laptop to do so. We
+   recommend switching any required electronic devices into airplane mode,
+   and securely storing any devices you do not need outside the environment
+   in which you access the Secure Viewing Station. This further mitigates
+   the risk of accidentally compromising the air-gap.
 
 Fully mitigating the risks of malware received via SecureDrop is beyond the
 scope of this documentation. If you have questions, you can contact us at
