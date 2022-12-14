@@ -382,7 +382,7 @@ Specific Hardware Recommendations
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We currently recommend Intel 7-, 8-, 10-, and 11-series NUCs for SecureDrop
+We currently recommend Intel 7-, 8-, 10-, 11-, and 12-series NUCs for SecureDrop
 servers.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
@@ -403,6 +403,24 @@ NUC before it can be used. We recommend:
 -  2x 240GB SSDs (2.5" or M.2, depending on your choice of kit)
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
+
+.. _nucc12_recommendation:
+
+Intel 12th-gen NUC
+~~~~~~~~~~~~~~~~~~
+We have tested and can recommend the `Intel NUC12WSKi5 <https://ark.intel.com/content/www/us/en/ark/products/121625/intel-nuc-12-pro-mini-pc-nuc12wski5.html>`__.
+It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
+22x42 port for a SATA drive.
+
+The NUC12's AX211 wireless hardware is removable. Doing so requires the use of
+a 5mm nut driver. Before installation of the RAM and storage, we recommend that
+you remove the wireless card and disconnect the wireless antennae leads
+from the AX211 component. Be sure to cover the free ends with electrical tape
+after disconnecting them.
+
+.. figure:: images/hardware/nuc12_leads.jpg
+
+  The location of the wireless card within the NUC12
 
 .. _nuc11_recommendation:
 
@@ -665,6 +683,7 @@ For the hardware we recommend, you can find a list of end-of-life dates below:
 ===================  ====================================================
 Hardware             End-of-Life (EOL)                                       
 ===================  ====================================================
+Intel NUC12WSKi5     Not yet confirmed
 Intel NUC11PAHi3     June 30, 2025                                       
 Intel NUC10i5FNH     June 25, 2024                                       
 Intel NUC8i5BEK      March 26, 2024                                      
