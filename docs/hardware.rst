@@ -410,7 +410,7 @@ Intel 12th-gen NUC
 ~~~~~~~~~~~~~~~~~~
 We have tested and can recommend the `Intel NUC12WSKi5 <https://ark.intel.com/content/www/us/en/ark/products/121625/intel-nuc-12-pro-mini-pc-nuc12wski5.html>`__.
 It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
-22x42 port for a  SATA drive.
+22x42 port for a SATA drive.
 
 The NUC12's AX211 wireless hardware is removable. Doing so requires the use of
 a 5mm nut driver. Before installation of the RAM and storage, we recommend that
