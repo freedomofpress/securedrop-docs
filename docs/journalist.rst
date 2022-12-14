@@ -547,11 +547,14 @@ are important steps you can take to protect yourself:
    device.**
 
    `QR codes can contain malicious links`_ that your device will automatically
-   visit.
+   visit. This can alert third-parties to your actions, reveal the identities
+   of your sources, and breach the air gap that is in place with the
+   *Secure Viewing Station*. 
+
    In general, be careful when opening any links provided in a SecureDrop
-   submission, as this can leak information to third parties. If you are unsure
-   if a link is safe to click, you should consult internally, or contact
-   Freedom of the Press Foundation for assistance.
+   submission. If you are unsure if a link is safe to click, you should
+   consult internally, or contact Freedom of the Press Foundation for
+   assistance.
    |br| |br|
 
 5. **Don't photograph submissions using your smartphone, and be careful with all
@@ -565,6 +568,16 @@ are important steps you can take to protect yourself:
    reveal sensitive information about your SecureDrop usage patterns
    (potentially including GPS coordinates) to anyone who gains access
    to the file.
+
+.. warning::
+
+   If you have not memorized the passphrases to unlock the USB drives
+   for the *Secure Viewing Station* or the *Transfer Device*, you may need
+   to access a password manager on your phone or laptop to do so. We
+   recommend switching any required electronic devices into airplane mode,
+   and securely storing any devices you do not need outside the environment
+   in which you access the *Secure Viewing Station*. This further mitigates
+   the risk of accidentally compromising the air-gap.
 
 Fully mitigating the risks of malware received via SecureDrop is beyond the
 scope of this documentation. If you have questions, you can contact us at
