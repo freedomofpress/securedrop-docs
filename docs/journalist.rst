@@ -570,11 +570,11 @@ are important steps you can take to protect yourself:
 .. warning::
 
    If you have not memorized the passphrases to unlock the USB drives
-   for the Secure Viewing Station or the Transfer Device, you may need
+   for the *Secure Viewing Station* or the *Transfer Device*, you may need
    to access a password manager on your phone or laptop to do so. We
    recommend switching any required electronic devices into airplane mode,
    and securely storing any devices you do not need outside the environment
-   in which you access the Secure Viewing Station. This further mitigates
+   in which you access the *Secure Viewing Station*. This further mitigates
    the risk of accidentally compromising the air-gap.
 
 Fully mitigating the risks of malware received via SecureDrop is beyond the
