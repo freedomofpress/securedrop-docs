@@ -217,3 +217,4 @@ Follow the instructions at the link below, then return to this page:
    Windows, or Mac <https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview>`__
 
 .. |Persistent Storage App| image:: images/tails_5x/persistent_storage_app.png
+    :alt: The Persistent Storage app in Tails 5.8 and later, displaying settings for which persistent storage features should be enabled
