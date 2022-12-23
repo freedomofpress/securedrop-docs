@@ -88,6 +88,13 @@ creating the persistence volume, you will be asked to select from a
 list of features, such as 'Personal Data'. You should enable **all** features by
 selecting each item in the list.
 
+Beginning with Tails 5.8, a Persistent Storage application is provided
+which will allow you to enable or disable features without requiring
+a restart. You can also use this tool to change the passphrase of the
+persistent volume (provided you still know the original passphrase).
+
+|Persistent Storage App|
+
 Some other things to keep in mind:
 
 -  Right now, you need to create a persistent volume on both the *Admin
@@ -209,3 +216,5 @@ Follow the instructions at the link below, then return to this page:
 -  `Create a bootable Ubuntu USB drive on Ubuntu, 
    Windows, or Mac <https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview>`__
 
+.. |Persistent Storage App| image:: images/tails_5x/persistent_storage_app.png
+    :alt: The Persistent Storage app in Tails 5.8 and later, displaying settings for which persistent storage features should be enabled

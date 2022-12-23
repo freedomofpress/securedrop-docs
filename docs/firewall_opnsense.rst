@@ -64,7 +64,9 @@ Connect to the OPNSense Web GUI
 
 #. If you have not already done so, boot the *Admin Workstation* into
    Tails using its designated USB drive. Make sure to enable the unsafe browser
-   on the "Welcome to Tails" screen under "Additional settings".
+   on the "Welcome to Tails" screen under "Additional settings" if you are
+   using a version of Tails prior to 5.8. Tails 5.8 and newer enables the
+   unsafe browser automatically.
 
 #. Connect the *Admin Workstation* to the LAN interface. You should see
    a popup notification in Tails that says "Connection Established". If you click

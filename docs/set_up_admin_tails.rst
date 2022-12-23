@@ -25,7 +25,9 @@ specific Tails session, and click **Add**.
       will reset every time you shut down Tails.
 
 During the installation, you will need the unsafe browser to access the firewall
-configuration. To enable it, click "Unsafe Browser" and click **Add**:
+configuration. If you are using Tails 5.8 or newer, the unsafe browser is
+enabled automatically. If you are using an eariler version, you can enable it
+by clicking "Unsafe Browser" and then clicking **Add**:
 
 |UnsafeBrowser|
 
