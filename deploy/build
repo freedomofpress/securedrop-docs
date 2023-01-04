@@ -6,8 +6,6 @@
 set -e
 
 
-latest_branch=main
-
 do_build() {
     git checkout "$1"
 
@@ -20,4 +18,4 @@ do_build() {
 }
 
 export SECUREDROP_DOCS_RELEASE=latest
-do_build "$latest_branch" latest
+do_build "$1" latest
