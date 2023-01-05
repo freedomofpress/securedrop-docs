@@ -371,7 +371,7 @@ Here's a similar example for nginx:
 ::
 
     add_header Strict-Transport-Security max-age=16070400;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_protocols TLSv1.2;
     ssl_prefer_server_ciphers on;
     ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
 
