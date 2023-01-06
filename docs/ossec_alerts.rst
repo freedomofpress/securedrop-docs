@@ -182,23 +182,22 @@ First you should `sign up for a new
 account <https://accounts.google.com/SignUp?service=mail>`__. While it's
 technically possible to use an existing Gmail account, it's best to
 compartmentalize these alerts from any of your other activities. Choose
-a strong and random passphrase for the new account. 
+a strong and random passphrase for the new account.
 
 Next, enable `Google's 2-Step Verification
-<https://www.google.com/landing/2step/>`__. This is required in order to 
-use SMTP with a username and password, which is needed for SecureDrop. 
+<https://safety.google/authentication/>`__. This is required in order to
+use SMTP with a username and password, which is needed for SecureDrop.
 
 After enabling 2-Step Verification, you'll then need to generate a new
 app password to use exclusively with SecureDrop. To do so,
-you will first want to `open the app password settings
-<https://myaccount.google.com/apppasswords>`__. From there, click "Select App",
-choose "Custom", assign it a name (such as "SecureDrop"), then click 
-"Generate."
+`open the app password settings <https://myaccount.google.com/apppasswords>`__.
+From there, click "Select App", choose "Custom", assign it a name (such as
+"SecureDrop"), then click "Generate."
 
 This will provide you with a 16-character password that you will need to use
 for the SMTP settings to enable OSSEC alerts.
 
-.. tip:: SMTP through Gmail will only work with a generated app password. 
+.. tip:: SMTP through Gmail will only work with a generated app password.
          The password for the Gmail account itself is not sufficient, and will
          not allow mail to be sent. In order to be able to create an app
          password, you must have 2-Step Verification enabled on the Gmail account.
