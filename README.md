@@ -13,7 +13,7 @@ This repository is used to build the [public documentation](https://docs.secured
 3. Ensure you are using an up-to-date version of `pip` in the virtual environment (e.g., `pip install --upgrade pip`)
 4. Install the project requirements with `pip install --require-hashes -r requirements/requirements.txt`
 5. Run `make docs` to start a live build of the documentation at http://localhost:8000
-6. Edit RST files under the docs directory - your changes will be reflected in the live build
+6. Edit [RST](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) files under the docs directory - your changes will be reflected in the live build
 
 ## License
 
