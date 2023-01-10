@@ -15,17 +15,19 @@ If you would like to contribute to SecureDrop, please see our
 `developer documentation <https://developers.securedrop.org/>`_.
 
 .. toctree::
-   :caption: User Guides
-   :name: userguidetoc
+   :caption: Overview
+   :name: overviewtoc
    :maxdepth: 2
 
+   what_makes_securedrop_unique
    source
    journalist
-   admin
-   passphrase_best_practices
+   getting_the_most_out_of_securedrop
+   training_schedule
+   getting_support
 
 .. toctree::
-   :caption: Install SecureDrop
+   :caption: SecureDrop Installation Guide
    :name: installtoc
    :maxdepth: 2
 
@@ -47,44 +49,42 @@ If you would like to contribute to SecureDrop, please see our
    configure_admin_workstation_post_install
    create_admin_account
    test_the_installation
-   onboarding_journalists
-   onboarding_admins
 
 .. toctree::
-   :caption: Deployment Best Practices
-   :name: deploymenttoc
+   :caption: Admin Guide
+   :name: adminguidetoc
+   :maxdepth: 2
+
+   admin
+   onboarding_journalists
+   onboarding_admins
+   yubikey_setup
+   logging
+   ossec_alerts
+   backup_and_restore
+   backup_workstations
+   update_tails_usbs
+   kernel_troubleshooting
+   https_source_interface
+   ssh_over_local_net
+   rebuild_admin
+   remote
+   tails_printing_guide
+   update_bios
+   offboarding
+   decommission
+
+.. toctree::
+   :caption: Best Practices
+   :name: bestpracticestoc
    :maxdepth: 2
 
    deployment_practices
+   passphrase_best_practices
    deployment/landing_page.rst
    deployment/minimum_security_requirements.rst
    deployment/whole_site_changes.rst
    deployment/sample_privacy_policy.rst
-
-.. toctree::
-   :caption: Topic Guides
-   :name: topictoc
-   :maxdepth: 2
-
-   getting_the_most_out_of_securedrop
-   what_makes_securedrop_unique
-   logging
-   ossec_alerts
-   remote
-   tails_printing_guide
-   https_source_interface
-   ssh_over_local_net
-   training_schedule
-   yubikey_setup
-   backup_and_restore
-   backup_workstations
-   update_tails_usbs
-   rebuild_admin
-   kernel_troubleshooting
-   getting_support
-   update_bios
-   offboarding
-   decommission
 
 .. toctree::
    :caption: Upgrade SecureDrop
