@@ -20,14 +20,25 @@ If you would like to contribute to SecureDrop, please see our
    :maxdepth: 2
 
    what_makes_securedrop_unique
-   source
-   journalist
    getting_the_most_out_of_securedrop
+   passphrase_best_practices
+   threat_model/threat_model.rst
+   threat_model/dataflow.rst
+   threat_model/mitigations.rst
    training_schedule
    getting_support
+   
+.. toctree::
+   :caption: User Guides
+   :name: userguidetoc
+   :maxdepth: 2
+
+   source
+   journalist
+   admin
 
 .. toctree::
-   :caption: SecureDrop Installation Guide
+   :caption: Installation Guide
    :name: installtoc
    :maxdepth: 2
 
@@ -51,43 +62,41 @@ If you would like to contribute to SecureDrop, please see our
    test_the_installation
 
 .. toctree::
-   :caption: Admin Guide
-   :name: adminguidetoc
+   :caption: Deployment Guide
+   :name: deploymentguide
    :maxdepth: 2
 
-   admin
+   deployment_practices
+   deployment/landing_page.rst
+   deployment/minimum_security_requirements.rst
+   deployment/whole_site_changes.rst
+   deployment/sample_privacy_policy.rst
    onboarding_journalists
    onboarding_admins
    yubikey_setup
+   https_source_interface
+   ssh_over_local_net
+   remote
+   tails_printing_guide
+   offboarding
+   
+.. toctree::
+   :caption: Maintenance Guide
+   :name: maintenance
+   :maxdepth: 2
+
    logging
    ossec_alerts
    backup_and_restore
    backup_workstations
    update_tails_usbs
    kernel_troubleshooting
-   https_source_interface
-   ssh_over_local_net
    rebuild_admin
-   remote
-   tails_printing_guide
    update_bios
-   offboarding
    decommission
 
 .. toctree::
-   :caption: Best Practices
-   :name: bestpracticestoc
-   :maxdepth: 2
-
-   deployment_practices
-   passphrase_best_practices
-   deployment/landing_page.rst
-   deployment/minimum_security_requirements.rst
-   deployment/whole_site_changes.rst
-   deployment/sample_privacy_policy.rst
-
-.. toctree::
-   :caption: Upgrade SecureDrop
+   :caption: Upgrades
    :name: upgradetoc
    :maxdepth: 2
 
@@ -97,15 +106,6 @@ If you would like to contribute to SecureDrop, please see our
    upgrade/2.4.0_to_2.4.1.rst
    upgrade/2.3.2_to_2.4.0.rst
    upgrade/2.3.1_to_2.3.2.rst
-
-.. toctree::
-  :caption: Threat Model
-  :name: threatdoc
-  :maxdepth: 2
-
-  threat_model/threat_model.rst
-  threat_model/dataflow.rst
-  threat_model/mitigations.rst
 
 Two versions of this documentation are available:
 
