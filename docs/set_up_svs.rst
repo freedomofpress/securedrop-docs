@@ -37,11 +37,10 @@ Station”. If it's not labeled, label it right now, then boot it on the
 *Secure Viewing Station*. After it loads, you should see  the Tails
 `Welcome Screen <https://tails.boum.org/doc/first_steps/welcome_screen/index.en.html>`__.
 
-Enter your passphrase to unlock the persistent storage, then press **Unlock**.
 Before starting Tails, set an administration password for use with this Tails
 session. To do so, click the **+** button under "Additional Settings". Click
 **Administration Password** in the list of settings. Enter the password twice,
-click **Add**, then click **Start Tails**.
+click **Add**. Now you need to enable persistence with a strong passphrase  (a 6-word Diceware passphrase is recommended). In the Persistent volume configuration wizard, be sure to enable persistence for “GnuPG - GnuPG Keyrings and configuration”. Then click **Start Tails**.
 
 .. note:: The Tails administration password is a one-time password. It
           is reset every time you shut down Tails. Pick a password you will be
