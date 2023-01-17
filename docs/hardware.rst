@@ -424,6 +424,11 @@ after disconnecting them.
 
 .. _nuc11_recommendation:
 
+Because of the newer hardware and the drivers required, you will need to use a
+newer Linux kernel than the one that ships by default in the version of Ubuntu
+Server we recommend. To do so, select the "Boot and Install with the HWE
+Kernel" option in the boot menu for Ubuntu Server.
+
 Intel 11th-gen NUC
 ~~~~~~~~~~~~~~~~~~
 We have tested and can recommend the `Intel NUC11PAHi3 <https://ark.intel.com/content/www/us/en/ark/products/205033/intel-nuc-11-performance-kit-nuc11pahi3.html>`__.
