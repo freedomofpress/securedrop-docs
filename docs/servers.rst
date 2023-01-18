@@ -61,6 +61,12 @@ display a message on boot that shows which key should be pressed to
 enter the boot menu. Once you've entered the boot menu, select the
 installation media (USB or CD) and press Enter to boot it.
 
+On newer hardware, such as the NUC12s, you may need to use a newer Linux
+Kernel than the one that ships by default in **Ubuntu Server 20.04.5** in
+order to have more up-to-date hardware drivers. To use a newer Linux kernel,
+select **Boot and Install with the HWE Kernel** in the initial OS boot menu
+that appears prior to booting the Ubuntu image.
+
 After booting the Ubuntu image, select **Install Ubuntu Server**.
 
 Follow the steps to select your language, country and keyboard settings.
