@@ -384,6 +384,10 @@ You should see a message appear indicating the change was a success.
 
 .. _test OSSEC alert:
 
+It may be necessary to hold the Shift key while pressing the Reload button in 
+the browser, which will force it to purge the cached version of the logo
+in order to see the new one.
+
 Testing OSSEC Alerts
 ^^^^^^^^^^^^^^^^^^^^
 
