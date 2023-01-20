@@ -20,7 +20,6 @@ If you would like to contribute to SecureDrop, please see our
    :maxdepth: 2
 
    what_makes_securedrop_unique
-   getting_the_most_out_of_securedrop
    passphrase_best_practices
    threat_model/threat_model.rst
    threat_model/dataflow.rst
@@ -46,6 +45,7 @@ If you would like to contribute to SecureDrop, please see our
    glossary
    passphrases
    hardware
+   minimum_security_requirements
    before_you_begin
    create_usb_boot_drives
    set_up_svs
@@ -68,9 +68,9 @@ If you would like to contribute to SecureDrop, please see our
 
    deployment_practices
    deployment/landing_page.rst
-   deployment/minimum_security_requirements.rst
    deployment/whole_site_changes.rst
    deployment/sample_privacy_policy.rst
+   getting_the_most_out_of_securedrop
    onboarding_journalists
    onboarding_admins
    yubikey_setup
