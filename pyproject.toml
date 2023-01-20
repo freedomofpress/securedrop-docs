@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "support-docs"
+version = "0.1.0"
+description = ""
+authors = ["SecureDrop team <securedrop@freedom.press>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+sphinx = "<6.0.0"
+sphinx-autobuild = "^2021.3.14"
+sphinx-rtd-theme = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
