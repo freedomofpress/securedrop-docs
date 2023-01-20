@@ -361,7 +361,7 @@ to give preference to the most secure cipher suites:
 ::
 
     Header set Strict-Transport-Security "max-age=16070400;"
-    SSLProtocol all -SSLv2 -SSLv3
+    SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
     SSLHonorCipherOrder on
     SSLCompression off
     SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
@@ -371,7 +371,7 @@ Here's a similar example for nginx:
 ::
 
     add_header Strict-Transport-Security max-age=16070400;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_protocols TLSv1.2;
     ssl_prefer_server_ciphers on;
     ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
 
