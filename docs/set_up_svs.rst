@@ -30,9 +30,13 @@ which cannot be heard by humans. If you have questions about repurposing
 hardware for the *Secure Viewing Station*, contact the `Freedom of the Press
 Foundation <https://securedrop.org/help>`__.
 
+The steps below assume you have already
+:doc:`created a Tails USB drive with Persistent Storage
+enabled <create_usb_boot_drives>`. If that is not the case, please review
+the previous page in the installation guide, then return here once the new
+Tails drive is ready.
 
-
-You should have a Tails drive clearly labeled “SecureDrop Secure Viewing
+The Tails drive should be clearly labeled “SecureDrop Secure Viewing
 Station”. If it's not labeled, label it right now, then boot it on the
 *Secure Viewing Station*. After it loads, you should see  the Tails
 `Welcome Screen <https://tails.boum.org/doc/first_steps/welcome_screen/index.en.html>`__.
