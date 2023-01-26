@@ -7,7 +7,7 @@ COPY ./ .
 RUN pip install --upgrade pip
 RUN pip install poetry
 RUN poetry install
-RUN poetry run deploy/build $GIT_BRANCH
+RUN deploy/build $GIT_BRANCH
 
 # sha256 as of 2023-01-09
 

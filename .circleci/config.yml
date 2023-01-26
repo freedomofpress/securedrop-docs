@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Run lint
           command: |
-            poetry run make docs-lint
+            make docs-lint
 
   linkcheck:
     docker:
@@ -32,7 +32,7 @@ jobs:
       - run:
           name: Run link check
           command: |
-            poetry run make docs-linkcheck
+            make docs-linkcheck
 
   build:
     docker:

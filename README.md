@@ -10,5 +10,4 @@ This repository holds the [documentation](https://support-docs.securedrop.org/) 
 
 1. [Install poetry](https://python-poetry.org/docs/#installation)
 2. Install the dependencies using `poetry install`
-3. Enter the virtual environment using `poetry shell`
-4. Run `make docs` to preview the documentation.
+3. Run `make docs` to preview the documentation.
