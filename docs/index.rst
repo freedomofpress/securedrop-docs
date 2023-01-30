@@ -20,12 +20,11 @@ If you would like to contribute to SecureDrop, please see our
    :maxdepth: 2
 
    what_makes_securedrop_unique
-   passphrase_best_practices
    threat_model/threat_model.rst
    threat_model/dataflow.rst
    threat_model/mitigations.rst
-   training_schedule
    getting_support
+   training_schedule
    
 .. toctree::
    :caption: User Guides
@@ -35,6 +34,7 @@ If you would like to contribute to SecureDrop, please see our
    source
    journalist
    admin
+   passphrase_best_practices
 
 .. toctree::
    :caption: Installation Guide
