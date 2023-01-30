@@ -19,6 +19,7 @@ If you would like to contribute to SecureDrop, please see our
    :name: overviewtoc
    :maxdepth: 2
 
+   overview
    what_makes_securedrop_unique
    threat_model/threat_model.rst
    threat_model/dataflow.rst
