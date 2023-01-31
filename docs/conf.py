@@ -326,7 +326,7 @@ linkcheck_ignore = [
     "https://forum.securedrop.org/admin/users/list/active",
     "https://weblate.securedrop.org/projects/securedrop/securedrop/#announcement",
     "https://weblate.securedrop.org/projects/securedrop/securedrop/#repository",
-    "https://github.com/freedomofpress/securedrop-debian-packages-lfs",
+    "https://github.com/freedomofpress/securedrop-apt-prod",
     r"https://weblate.securedrop.org/accounts/profile/.*",
     r"https://github.com/freedomofpress/securedrop/issues/.*",
     r"https://github.com/freedomofpress/securedrop/tree/.*",
