@@ -7,17 +7,29 @@ anonymous sources. It was originally created by the late Aaron Swartz and is
 currently managed by `Freedom of the Press Foundation
 <https://freedom.press>`__.
 
+There are four main components of SecureDrop: the servers, the admins,
+the sources, and the journalists.
+
+|SecureDrop architecture highlevel overview diagram|
+
+This diagram shows the process of using SecureDrop from the perspective of
+sources and journalists. Sources and journalists connect to SecureDrop using
+the Tor network (represented by the onion symbol). The SecureDrop software
+is running on premises on dedicated infrastructure.
+
+A source (bottom left) uploads a submission to the news organization using
+Tor Browser. A journalist connects to SecureDrop using their Journalist
+Workstation (booted from a USB drive) and physically transfers files to
+the air-gapped Secure Viewing Station, a machine that is never connected
+on the Internet. On this computer, they can process or print documents, or
+export them to a dedicated device.
+
 .. seealso:: Check out
           :doc:`What makes SecureDrop Unique <what_makes_securedrop_unique>`
           to read more about SecureDrop's approach to keeping sources safe.
 
 Infrastructure
 --------------
-
-There are four main components of SecureDrop: the servers, the admins,
-the sources, and the journalists.
-
-|SecureDrop architecture highlevel overview diagram|
 
 Servers
 ~~~~~~~
@@ -173,3 +185,4 @@ SecureDrop *Landing Page* and our guide to
 
 .. |SecureDrop architecture highlevel overview diagram| image:: ./diagrams/securedrop_overview_highlevel.png
   :width: 100%
+

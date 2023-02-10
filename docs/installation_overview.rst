@@ -21,8 +21,10 @@ Technical Summary
 
 |SecureDrop architecture overview diagram|
 
-SecureDrop is a tool for sources to communicate securely with journalists. The
-SecureDrop application environment consists of three dedicated computers:
+This installation guide will walk you through the process of setting up
+the computers and services needed for a functional SecureDrop.
+
+During this process, you'll set up the following devices:
 
 - *Secure Viewing Station*:
    A physically-secured and air-gapped laptop running
@@ -39,23 +41,6 @@ SecureDrop application environment consists of three dedicated computers:
 - *Monitor Server*:
    An Ubuntu server that monitors the *Application Server*
    with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
-
-These computers should all physically be in your organization's office.
-
-In addition to these dedicated computers, each journalist will also need a
-computer to connect to SecureDrop:
-
-- *Journalist Workstation:*
-   The computer used by the journalist to connect to
-   the *Journalist Interface* to download encrypted documents that they will
-   transfer to the *Secure Viewing Station*. The *Journalist Workstation*
-   is also used to respond to sources via the *Journalist Interface*.
-
-Depending on the news organization's threat model, the *Journalist Workstation*
-can either be the journalist's every-day laptop or a dedicated computer. In
-either case, it is recommended that journalists always use the
-`Tails operating system`_ on their *Journalist Workstation* when connecting
-to the *Journalist Interface*.
 
 As an administrator, you will also require a computer to connect to SecureDrop
 and perform administrative tasks via SSH or the *Journalist Interface*.

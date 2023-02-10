@@ -21,6 +21,7 @@ If you would like to contribute to SecureDrop, please see our
 
    what_is_securedrop
    what_makes_securedrop_unique
+   glossary
    threat_model/threat_model.rst
    threat_model/dataflow.rst
    threat_model/mitigations.rst
@@ -43,7 +44,6 @@ If you would like to contribute to SecureDrop, please see our
    :maxdepth: 2
 
    installation_overview
-   glossary
    passphrases
    hardware
    minimum_security_requirements
