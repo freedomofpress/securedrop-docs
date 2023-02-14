@@ -11,6 +11,18 @@
  * Modified by Nathan Dyer: 20230103
  */
 
+:root {
+    --dm-text-color: white;
+    --dm-link-new: #7dbdff;
+    --dm-link-visited: #7dbdff;
+    --dm-menu-border: #222;
+    --dm-menuhover-bg: #c1c1c1;
+    --dm-menuparent-bg: black;
+    --dm-parenthover-bg: #202020;
+    --dm-expandeditem-bg: #313131;
+    --dm-submenu-bg: #404040;
+}
+
 @media (prefers-color-scheme: dark) {
 
 	a {
@@ -23,6 +35,57 @@
 	pre {
 		background-color: #2d2d2d !important;
 	}
+
+
+/*
+** Vertical menu color overrides
+*/
+
+        .wy-menu-vertical li.current {
+            background: var(--dm-expandeditem-bg);
+            color: var(--dm-text-color);
+        }
+
+        .wy-menu-vertical li.current > a,
+        .wy-menu-vertical li.on a {
+            background: var(--dm-menuparent-bg);
+            color: var(--dm-text-color);
+        }
+
+        .wy-menu-vertical li.toctree-l1.current > a,
+        .wy-menu-vertical li.current.a {
+            border-color: var(--dm-menu-border);
+        }
+
+        .wy-menu-vertical li.current a {
+            color: var(--dm-text-color);
+        }
+
+        .wy-menu-vertical li.current a:hover {
+            background: var(--dm-menuhover-bg);
+        }
+
+        .wy-menu-vertical a:hover,
+        .wy-menu-vertical li.current > a.hover,
+        .wy-menu-vertical li.on a:hover {
+            background: var(--dm-parenthover-bg);
+        }
+
+        .wy-menu-vertical li.toctree-l2.current > a,
+        .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a,
+        .wy-menu-vertical li.toctree-l2.current li.toctree-l3.current li.toctree-l4 > a {
+            background: var(--dm-submenu-bg);
+        }
+
+        .wy-menu-vertical li.toctree-l1 > a:hover,
+        .wy-menu-vertical li.toctree-l2 > a:hover,
+        .wy-menu-vertical li.toctree-l2.current > a:hover,
+        .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a:hover,
+        .wy-menu-vertical li.toctree-l2.current
+        li.toctree-l3.current li.toctree-l4 > a:hover {
+            background: var(--dm-parenthover-bg);
+        }
+
 
 	.wy-nav-content {
 		background: #3c3c3c;
