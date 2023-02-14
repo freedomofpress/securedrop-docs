@@ -7,22 +7,27 @@ anonymous sources. It was originally created by the late Aaron Swartz and is
 currently managed by `Freedom of the Press Foundation
 <https://freedom.press>`__.
 
-There are four main components of SecureDrop: the servers, the admins,
-the sources, and the journalists.
-
 |SecureDrop architecture highlevel overview diagram|
 
-This diagram shows the process of using SecureDrop from the perspective of
-sources and journalists. Sources and journalists connect to SecureDrop using
-the Tor network (represented by the onion symbol). The SecureDrop software
-is running on premises on dedicated infrastructure.
+Sources and journalists connect to SecureDrop using the Tor network
+(represented in the diagram above by the onion symbol). The SecureDrop software
+is running on premises on dedicated infrastructure (two physical servers and
+a firewall).
 
-A source (bottom left) uploads a submission to the news organization using
-Tor Browser. A journalist connects to SecureDrop using their Journalist
-Workstation (booted from a USB drive) and physically transfers files to
-the air-gapped Secure Viewing Station, a machine that is never connected
-on the Internet. On this computer, they can process or print documents, or
-export them to a dedicated device.
+The following steps describe how a SecureDrop submission is submitted,
+received and reviewed:
+
+1. A source (bottom left in the diagram) uploads a submission to the news
+   organization using Tor Browser.
+
+2. A journalist connects to SecureDrop using their *Journalist
+   Workstation* (booted from a USB drive) and physically transfers files to
+   the air-gapped Secure Viewing Station, a machine that is never connected
+   on the Internet.
+
+3. On the *Secure Viewing Station*, the journalist can view the document,
+   process it (e.g., to remove metadata or potential malware), print it, or
+   export it to a dedicated device.
 
 .. seealso:: Check out
           :doc:`What makes SecureDrop Unique <what_makes_securedrop_unique>`
@@ -30,6 +35,9 @@ export them to a dedicated device.
 
 Infrastructure
 --------------
+
+There are four main components of SecureDrop: the servers, the admins,
+the sources, and the journalists.
 
 Servers
 ~~~~~~~
