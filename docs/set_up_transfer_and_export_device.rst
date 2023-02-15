@@ -89,8 +89,8 @@ Decide how to manage encryption passphrases
 -------------------------------------------
 Because files are copied between multiple computers, KeePassXC in Tails is not
 necessarily the most convenient option for managing the encryption passphrases for
-your *Transfer Device* or your *Export Device*. While Tails itself gives you the
-option to "remember" passphrases, this option does not work across reboots.
+your *Transfer Device* or your *Export Device*. Tails itself gives you the option 
+to "remember" passphrases, this will save it to your keyring in the persistent volume.
 
 A simple alternative is to make sure that every journalist stores the
 *Transfer Device* and *Export Device* passphrases in their own password manager,
