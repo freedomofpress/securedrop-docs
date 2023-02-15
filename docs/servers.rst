@@ -182,7 +182,7 @@ for the administration account later in the installation process.
 Verify that **Allow password authentication over SSH** is selected, and choose **Done**
 to proceed.
 
-Finish the installation
+Finish the Installation
 ~~~~~~~~~~~~~~~~~~~~~~~
 On the **Featured server snaps** screen, ensure that no snaps are selected and
 choose **Done** to start the server installation process.
