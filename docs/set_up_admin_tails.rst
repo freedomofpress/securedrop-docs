@@ -1,4 +1,4 @@
-Set up the *Admin Workstation*
+Set Up the *Admin Workstation*
 ==============================
 
 .. _set_up_admin_tails:
