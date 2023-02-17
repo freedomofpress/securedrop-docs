@@ -33,20 +33,10 @@ received and reviewed:
           :doc:`What makes SecureDrop Unique <what_makes_securedrop_unique>`
           to read more about SecureDrop's approach to keeping sources safe.
 
-Infrastructure
+User Roles
 --------------
 
-There are four main components of SecureDrop: the servers, the admins,
-the sources, and the journalists.
-
-Servers
-~~~~~~~
-
-At SecureDrop's heart is a pair of servers: the *Application (“App”) Server*,
-which runs the core SecureDrop software, and the *Monitor (“Mon”) Server*,
-which keeps track of the *Application Server* and sends out alerts if there's a
-problem. These two servers run on dedicated hardware connected to a dedicated
-firewall appliance. They are typically located physically inside the newsroom.
+There are three main user roles that interact with a SecureDrop instance:
 
 Admins
 ~~~~~~
@@ -58,16 +48,16 @@ connects to the *Application* and *Monitor Servers* over  `authenticated onion s
 <https://tb-manual.torproject.org/onion-services/>`__, and manages them
 using `Ansible <https://www.ansible.com/>`__.
 
-Sources
-~~~~~~~
+:doc:`Sources <source>`
+~~~~~~~~~~~~~~~~~~~~~~~
 
 A source submits documents and messages by using `Tor Browser
 <https://www.torproject.org/download/>`__ (or Tails) to access
 the *Source Interface*: a public onion service. Submissions are encrypted
 in place on the *Application Server* as they are uploaded.
 
-Journalists
-~~~~~~~~~~~
+:doc:`Journalists <journalist>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Journalists working in the newsroom use two machines to interact with
 SecureDrop. First, they use a *Journalist Workstation* running Tails to connect
@@ -91,13 +81,16 @@ computer.
 Environment Overview
 --------------------
 
-The SecureDrop application environment consists of three dedicated computers,
-which should be physically located in your organization's office:
+Server Infrastructure
+~~~~~~~~~~~~~~~~~~~~~
 
-- *Secure Viewing Station*:
-   A physically-secured and air-gapped laptop running
-   the `Tails operating system`_ from a USB stick, that journalists use to
-   decrypt and view submitted documents.
+At SecureDrop's heart is a pair of servers: the *Application (“App”) Server*,
+which runs the core SecureDrop software, and the *Monitor (“Mon”) Server*,
+which keeps track of the *Application Server* and sends out alerts if there's a
+problem. These two servers run on dedicated hardware connected to a dedicated
+firewall appliance. They are typically located physically inside the newsroom,
+and must be physically located on-site within your organization's premises.
+
 - *Application Server*:
    An Ubuntu server running two segmented Tor hidden
    services. The source connects to the *Source Interface*, a public-facing Tor
@@ -110,8 +103,21 @@ which should be physically located in your organization's office:
    An Ubuntu server that monitors the *Application Server*
    with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
 
-In addition to these dedicated computers, each journalist will also need a
-computer to connect to SecureDrop:
+The servers connect to the network via a dedicated hardware firewall.
+
+Application Environment
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The SecureDrop application environment consists of at least two computers,
+in addition to the servers described above:
+
+- *Secure Viewing Station*:
+   A physically-secured and air-gapped laptop running
+   the `Tails operating system`_ from a USB stick, that journalists use to
+   decrypt and view submitted documents.
+
+In addition to the *Secure Viewing Station* computers, each journalist will
+also need a computer to connect to SecureDrop:
 
 - *Journalist Workstation:*
    The computer used by the journalist to connect to
