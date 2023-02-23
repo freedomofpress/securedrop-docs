@@ -4,8 +4,7 @@ FROM python:3.9-slim-bullseye@sha256:8b0502fe3a8ae9d26567f66e217223595ff6abe901c
 ARG GIT_BRANCH=main
 RUN apt-get -q update && apt-get -qy upgrade && apt-get -qy install git make latexmk texlive-latex-extra
 COPY ./ .
-RUN pip install --upgrade pip
-RUN pip install poetry
+RUN pip install poetry==1.3.2
 RUN poetry install
 RUN deploy/build $GIT_BRANCH
 
