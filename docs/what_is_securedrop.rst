@@ -18,7 +18,7 @@ The following steps describe how a SecureDrop submission is submitted,
 received and reviewed:
 
 1. A source (bottom left in the diagram) uploads a submission to the news
-   organization using Tor Browser.
+   organization using `Tor Browser <https://www.torproject.org/>`__.
 
 2. A journalist connects to SecureDrop using their *Journalist
    Workstation* (booted from a USB drive) and physically transfers files to
@@ -51,8 +51,7 @@ using `Ansible <https://www.ansible.com/>`__.
 :doc:`Sources <source>`
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-A source submits documents and messages by using `Tor Browser
-<https://www.torproject.org/download/>`__ (or Tails) to access
+A source submits documents and messages by using Tor Browser (or Tails) to access
 the *Source Interface*: a public onion service. Submissions are encrypted
 in place on the *Application Server* as they are uploaded.
 
