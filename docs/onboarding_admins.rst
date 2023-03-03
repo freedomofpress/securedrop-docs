@@ -25,7 +25,7 @@ To onboard an additional administrator, you will need:
 
 To set up AW2, follow these steps:
 
-1. Boot AW1, `unlock its persistent volume <https://tails.boum.org/doc/first_steps/persistence/index.en.html#use>`__,
+1. Boot AW1, `unlock its persistent volume <https://tails.boum.org/doc/persistent_storage/use/index.en.html>`__,
    and `set an admin password on the welcome screen <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`__
 2. Ensure that Tails and the SecureDrop version on AW1 are up-to-date.
    If not, update now by following the :ref:`most recent upgrade guide <latest_upgrade_guide>`.

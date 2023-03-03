@@ -82,7 +82,7 @@ For instructions on how to generate a strong passphrase, see :doc:`the
 Passphrases page <passphrases>`.
 
 Please use the instructions on the `Tails website
-<https://tails.boum.org/doc/first_steps/persistence/index.en.html>`__
+<https://tails.boum.org/doc/persistent_storage/index.en.html>`__
 to make the persistent volume on each Tails drive you create. When
 creating the persistence volume, you will be asked to select from a
 list of features, such as 'Personal Data'. You should enable **all** features by
