@@ -101,9 +101,8 @@ you have a couple of alternatives:
 * If your mail provider is less likely to be monitored, you can send a mail to
   gettor@torproject.org with the text "linux", "windows" or "osx" in the body
   (for your preferred operating system) and a bot will answer with instructions.
-* You can download a copy of Tor Browser for your operating system from the
-  `GitLab mirror <https://gitlab.com/thetorproject/gettorbrowser/tree/torbrowser-releases>`__
-  maintained by the Tor team.
+* You can request to receive the Tor Browser bundle via the
+  `@GetTor_bot on Telegram`_.
 
 While using Tor Browser on your personal computer helps hide your activity on
 the network, it will leave traces of its own installation on your local
@@ -123,6 +122,7 @@ making these decisions.
 
 .. _`Tor Project's website`: https://www.torproject.org/
 .. _`Tails operating system`: https://tails.boum.org/
+.. _`@GetTor_bot on Telegram`: https://t.me/gettor_bot
 
 Choose Who to Submit To
 -----------------------
