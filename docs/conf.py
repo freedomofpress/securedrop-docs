@@ -98,9 +98,6 @@ todo_include_todos = False
 # -- Options for HTML output ----------------------------------------------
 
 try:
-    # If you want to build the docs locally using the RTD theme,
-    # you may need to install it: ``pip install sphinx_rtd_theme``.
-    # https://github.com/snide/sphinx_rtd_theme#via-package
     import sphinx_rtd_theme
 
     html_theme = "sphinx_rtd_theme"
