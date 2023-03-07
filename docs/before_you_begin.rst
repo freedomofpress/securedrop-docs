@@ -1,7 +1,8 @@
 Before You Begin
 ================
 
-Before you get started, read the :doc:`Overview <overview>` and familiarize
+Before you get started, read the 
+:doc:`Installation Overview <installation_overview>` and familiarize
 yourself with the :doc:`glossary<glossary>` and the :doc:`passphrases
 <passphrases>` involved in SecureDrop's operations. You may wish to leave these
 documents open in other tabs for reference as you work.

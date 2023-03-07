@@ -15,6 +15,20 @@ If you would like to contribute to SecureDrop, please see our
 `developer documentation <https://developers.securedrop.org/>`_.
 
 .. toctree::
+   :caption: Overview
+   :name: overviewtoc
+   :maxdepth: 2
+
+   what_is_securedrop
+   what_makes_securedrop_unique
+   glossary
+   threat_model/threat_model.rst
+   threat_model/dataflow.rst
+   threat_model/mitigations.rst
+   getting_support
+   training_schedule
+   
+.. toctree::
    :caption: User Guides
    :name: userguidetoc
    :maxdepth: 2
@@ -25,14 +39,14 @@ If you would like to contribute to SecureDrop, please see our
    passphrase_best_practices
 
 .. toctree::
-   :caption: Install SecureDrop
+   :caption: Installation Guide
    :name: installtoc
    :maxdepth: 2
 
-   overview
-   glossary
+   installation_overview
    passphrases
    hardware
+   minimum_security_requirements
    before_you_begin
    create_usb_boot_drives
    set_up_svs
@@ -47,47 +61,43 @@ If you would like to contribute to SecureDrop, please see our
    configure_admin_workstation_post_install
    create_admin_account
    test_the_installation
-   onboarding_journalists
-   onboarding_admins
 
 .. toctree::
-   :caption: Deployment Best Practices
-   :name: deploymenttoc
+   :caption: Deployment Guide
+   :name: deploymentguide
    :maxdepth: 2
 
    deployment_practices
    deployment/landing_page.rst
-   deployment/minimum_security_requirements.rst
    deployment/whole_site_changes.rst
    deployment/sample_privacy_policy.rst
-
-.. toctree::
-   :caption: Topic Guides
-   :name: topictoc
-   :maxdepth: 2
-
    getting_the_most_out_of_securedrop
-   what_makes_securedrop_unique
-   logging
-   ossec_alerts
-   remote
-   tails_printing_guide
+   onboarding_journalists
+   onboarding_admins
+   yubikey_setup
    https_source_interface
    ssh_over_local_net
-   training_schedule
-   yubikey_setup
+   remote
+   tails_printing_guide
+   offboarding
+   
+.. toctree::
+   :caption: Maintenance Guide
+   :name: maintenance
+   :maxdepth: 2
+
+   logging
+   ossec_alerts
    backup_and_restore
    backup_workstations
    update_tails_usbs
-   rebuild_admin
    kernel_troubleshooting
-   getting_support
+   rebuild_admin
    update_bios
-   offboarding
    decommission
 
 .. toctree::
-   :caption: Upgrade SecureDrop
+   :caption: Upgrades
    :name: upgradetoc
    :maxdepth: 2
 
@@ -98,15 +108,6 @@ If you would like to contribute to SecureDrop, please see our
    upgrade/2.4.0_to_2.4.1.rst
    upgrade/2.3.2_to_2.4.0.rst
    upgrade/2.3.1_to_2.3.2.rst
-
-.. toctree::
-  :caption: Threat Model
-  :name: threatdoc
-  :maxdepth: 2
-
-  threat_model/threat_model.rst
-  threat_model/dataflow.rst
-  threat_model/mitigations.rst
 
 Two versions of this documentation are available:
 

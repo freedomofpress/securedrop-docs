@@ -1,5 +1,5 @@
-What Makes SecureDrop Unique
-============================
+What Makes SecureDrop Unique?
+=============================
 
 SecureDrop attempts to solve or mitigate several problems journalists and sources
 have faced in recent legal investigations, attacks from state actors, and other

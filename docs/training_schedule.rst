@@ -1,6 +1,18 @@
 SecureDrop On-Site Training Schedule
 ====================================
 
+Who is This For?
+----------------
+
+While SecureDrop is open source and available for anyone to install and set up,
+Freedom of the Press Foundation provides paid support contracts to assist with
+the initial setup of the system, as well as training and ongoing technical
+support.
+
+If you are considering a paid contract for your organization, the following
+will provide you with an idea of the typical on-site installation and training
+timeline.
+
 Day 1: Install
 --------------
 
