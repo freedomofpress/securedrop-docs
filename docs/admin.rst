@@ -132,13 +132,22 @@ Given all traffic first hits the network firewall as it faces the non-Tor public
 network, the admin should ensure that critical security patches are applied to the
 firewall.
 
-Be informed of potential updates to your network firewall. If you're using the
-network firewall recommended by FPF, you can subscribe to email updates from
-the `Netgate homepage`_ or follow the `Netgate blog`_ to be alerted when
-releases occur. If critical security updates need to be applied, you can do so
-through the firewall's pfSense WebGUI. Refer to our :ref:`Keeping pfSense up to
-date` documentation or the official `pfSense Upgrade Docs`_ for further details
-on how to update the suggested firewall.
+Because of recent changes to the frequency and scope of security updates, we do
+not recommend the use of pfSense Community Edition (CE). pfSense Plus continues
+to receive necessary security updates on a regular basis, and is provided
+with the purchase of most Netgate firewalls. If you wish to use a custom firewall
+or alternate option, we recommend using an OPNSense-based solution.
+
+If you're using one of the network firewalls recommended by FPF, you can 
+subscribe to email updates from the `Netgate homepage`_ or follow the
+`Netgate blog`_ to be alerted when releases occur. If critical security updates
+need to be applied, you can do so through the firewall's pfSense WebGUI.
+
+Refer to our :ref:`Keeping pfSense up to date` documentation or the official
+`pfSense Upgrade Docs`_ for further details on how to update the suggested firewall.
+
+No matter which vendor you go with, you should make it a priority to stay 
+informed of potential updates to your network firewall.
 
 .. _`Netgate homepage`: https://www.netgate.com/
 .. _`Netgate blog`: https://www.netgate.com/blog/
