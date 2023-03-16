@@ -13,11 +13,14 @@ IOS etc. We recommend that you use a firewall with at least four physical interf
 
 The documentation linked below describes the configuration procedure for pfSense-
 and OPNSense-based firewalls. One option not covered in this guide is to build
-your own network firewall and `install pfSense
-<https://docs.netgate.com/pfsense/en/latest/install/download-installer-image.html>`__
-or `OPNSense <https://opnsense.org/download/>`__ on it. However, for most
-installations, we recommend buying a dedicated firewall appliance with
-your firewall OS of choice pre-installed.
+your own network firewall and install `OPNSense <https://opnsense.org/download/>`__ 
+on it. However, for most installations, we recommend buying a dedicated firewall
+appliance with your firewall OS of choice pre-installed.
+
+Please note that we no longer recommend the use of pfSense Community Edition 
+(CE) due to changes in the frequency and scope of security updates made
+available there. pfSense Plus continues to receive necessary security updates
+on a regular basis, and is provided with the purchase of most Netgate firewalls.
 
 We currently recommend three firewalls in our :ref:`Hardware Guide <hardware_guide>`:
 
