@@ -98,6 +98,8 @@ Do not discuss leaking or whistleblowing, even with trusted contacts.
 
 ----
 
+.. _The SecureDrop Directory:
+
 The SecureDrop Directory
 ----------------------------------
 

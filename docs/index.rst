@@ -123,7 +123,7 @@ Get Started
    admin/deployment/remote
    admin/deployment/tails_printing_guide
    admin/deployment/offboarding
-   
+
 .. toctree::
    :caption: Admin Guide: Maintenance
    :name: maintenance
