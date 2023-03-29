@@ -9,6 +9,14 @@ Freedom of the Press Foundation provides paid support contracts to assist with
 the initial setup of the system, as well as training and ongoing technical
 support.
 
+We generally recommend that news organizations set aside two days for the setup
+and training process. The first day is primarily the installation with the
+administrators and the second day is the training for those journalists who will
+regularly check SecureDrop.
+
+Often, the entire process takes less time than two days but sometimes there are
+unique network or hardware issues that come up and delay completion.
+
 If you are considering a paid contract for your organization, the following
 will provide you with an idea of the typical on-site installation and training
 timeline.

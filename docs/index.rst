@@ -112,6 +112,7 @@ Get Started
 
    admin/deployment/deployment_practices
    admin/deployment/landing_page.rst
+   admin/deployment/onion_name.rst
    admin/deployment/whole_site_changes.rst
    admin/deployment/sample_privacy_policy.rst
    admin/deployment/getting_the_most_out_of_securedrop

@@ -3,9 +3,121 @@ What Is SecureDrop?
 
 SecureDrop is an open-source whistleblower submission system that media
 organizations can use to securely accept documents from and communicate with
-anonymous sources. It was originally created by the late Aaron Swartz and is
-currently managed by `Freedom of the Press Foundation
-<https://freedom.press>`__.
+anonymous sources.
+
+Purpose
+-------
+
+In many of the recent leak prosecutions in the United States, sources have been
+investigated because authorities are able to retrieve both metadata and content
+of communications from third parties like email and phone providers in secret. 
+SecureDrop attempts to completely eliminate third parties from the equation so
+that news organizations can challenge any legal orders before handing over any 
+data.
+
+SecureDrop also substantially limits the metadata trail that may exist from 
+journalist-source communications in the first place. In addition, it attempts
+to provide a safer environment for those communications than regular corporate
+news networks, which may be compromised.
+
+Project History
+---------------
+
+The web application, which was originally called DeadDrop, was developed by
+`Aaron Swartz <https://github.com/aaronsw>`_ 
+in 2012 before his tragic death. The hardening guide and security
+environment was architected by 
+`James Dolan <https://github.com/dolanjs>`_. 
+Investigative journalist
+`Kevin Poulsen <https://github.com/klpwired>`_ 
+originally managed the project. The New Yorker launched the first
+implementation and branded their version StrongBox in May 2013.
+
+In October 2013, Freedom of the Press Foundation took over management and
+development of the open source project and re-named it SecureDrop. In the
+project's early years at FPF, development was driven by James Dolan and
+`Garrett Robinson <https://github.com/garrettr>`_. 
+Today, SecureDrop is maintained by a small full-time development team at
+FPF and a growing volunteer community.
+
+What Technology Does SecureDrop Use?
+------------------------------------
+
+SecureDrop does not seek to re-invent the wheel. Instead it combines several
+well-respected tools into an application that is easier to use for sources
+and enforces the use of many security best practices by news organizations.
+
+Among the tools used in and around the SecureDrop application are: 
+`Tor <https://www.torproject.org/?>`_,
+`GnuPG encryption <https://gnupg.org/>`_,
+`Apache <https://httpd.apache.org/>`_,
+`OSSEC <https://ossec.github.io/>`_,
+`grsecurity <https://grsecurity.net/>`_,
+`Ubuntu Server <https://www.ubuntu.com/server>`_,
+`the Tails operating system <https://tails.boum.org/>`_,
+and an air-gap to minimize exfiltration risks.
+
+Privacy
+-------
+
+The SecureDrop application does not record your IP address, information about
+your browser, computer, or operating system. Furthermore, the SecureDrop pages
+do not embed third-party content or deliver persistent cookies to your browser.
+The server will only store the date and time of the newest message sent from
+each source. Once you send a new message, the time and date of your previous
+message is automatically deleted.
+
+Journalists are also encouraged to regularly delete all information from the
+SecureDrop server and store anything they would like saved in offline storage
+to minimize risk. More detailed information can be found in our
+:ref:`sample privacy policy <Sample Privacy Policy>`,
+which we encourage news organizations using SecureDrop to adopt from
+when creating their own. Make sure to also follow our
+:ref:`best practices for creating the SecureDrop landing page <Landing Page>`
+so that it logs as little information as possible as well.
+
+
+Security
+--------
+
+While we can't guarantee 100% security (no organization or product can), the
+goal of SecureDrop is to create a significantly more secure environment
+for sources to share information than exists through normal digital channels. 
+Of course, there are always risks. That said, each release of SecureDrop with 
+major architectural changes goes through a security audit by a reputable third
+party security firm.
+
+Audits
+------
+
+Before major code changes are shipped, our policy is to have SecureDrop 
+audited by a professional, third-party security firm. 
+Five audits of SecureDrop have been completed so far:
+
+1. The first audit of SecureDrop, conducted in the Spring of 2013, was
+   conducted by a group of University of Washington researchers and 
+   Bruce Schneier, and can be found 
+   `here <https://securedrop.org/documents/2/UW-CSE-13-08-02.PDF>`__.
+2. After significant changes to the system, the second audit of SecureDrop was
+   conducted by Cure53 at the end of 2013 and can be read 
+   `here <https://securedrop.org/documents/3/pentest-report_securedrop.pdf>`__.
+3. In the summer of 2014 iSEC Partners completed the third audit of SecureDrop.
+   Their report can be read 
+   `here <https://securedrop.org/documents/4/iSEC_OTF_FPF_SecureDrop_Deliverable_v1.1.pdf>`__
+   and you can also read about 
+   `how we resolved the issues they found <https://securedrop.org/news/announcing-new-version-securedrop-results-our-third-security-audit/>`__.
+4. The fourth audit was conducted in summer 2015, also by iSEC Partners, and
+   can be found in full 
+   `here <https://securedrop.org/documents/5/iSEC_OTF_FPF_SecureDrop_Deliverable_v1.2.pdf>`__.
+5. The most recent audit was independently undertaken by Leviathan Security
+   on behalf of Sofwerx in late 2018, and can be found in full 
+   `here <https://securedrop.org/documents/14/Sofwerx_SecureDrop_Security_Review_-_Public_Distribution_.pdf>`__.
+
+In addition to these audits, we also have a 
+`bug bounty program <https://bugcrowd.com/freedomofpress>`__ hosted by Bugcrowd.
+
+How It Works
+------------
 
 |SecureDrop architecture highlevel overview diagram|
 
@@ -199,3 +311,34 @@ SecureDrop *Landing Page* and our guide to
 .. |SecureDrop architecture highlevel overview diagram| image:: ./diagrams/securedrop_overview_highlevel.png
   :width: 100%
 
+
+Sharing Access
+--------------
+
+With Other Journalists In Your Organization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+While SecureDrop supports having multiple journalist accounts for the document
+interface, all accounts will access the same inbox. To avoid confusion, we
+recommend news organizations assign 1-3 journalists to regularly check
+SecureDrop and make sure that they all are in contact as to who is responsible
+for responding to each source. 
+
+We are considering alternative workflows for future SecureDrop releases; 
+please visit our 
+`development roadmap <https://github.com/freedomofpress/securedrop/wiki/Development-Roadmap>`_ 
+for up-to-date information.
+
+
+With Other Organizations
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Currently you cannot use SecureDrop with multiple organizations for security
+reasons. One of the benefits of SecureDrop is that it completely eliminates
+third parties from your communication channel. The media organization owns and
+operates the server that both the source and journalist connect to.
+
+Any legal request or order has to be served on the media organization operating
+the SecureDrop server, giving them a chance to challenge it before handing over
+any data. If a third party operated a SecureDrop server which multiple
+organizations used, a legal order could be served on the operator without the
+media organizations knowing.
