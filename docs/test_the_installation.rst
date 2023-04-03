@@ -65,7 +65,7 @@ Test the Web Interfaces
      generation (copy this down somewhere) and submit a
      test message or file.
    - Usage of the Source Interface is covered by our :doc:`Source User
-     Manual <source>`.
+     Manual <source/source>`.
 
 #. Test that you can access the *Journalist Interface*, and that you can log
    in as the admin user you just created.
@@ -83,7 +83,7 @@ Test the Web Interfaces
    - While logged in as an admin, you can send a reply to the test
      source submission you made earlier.
    - Usage of the *Journalist Interface* is covered by our :doc:`Journalist
-     User Manual <journalist>`.
+     User Manual <journalist/journalist>`.
 
 #. Test that the source received the reply.
 
@@ -97,4 +97,4 @@ Test the Web Interfaces
    click **Delete selected**.
 
 Once you've tested the installation and verified that everything is
-working, see :doc:`How to Use SecureDrop <journalist>`.
+working, see :doc:`How to Use SecureDrop <journalist/journalist>`.

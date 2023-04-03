@@ -48,15 +48,15 @@ connects to the *Application* and *Monitor Servers* over  `authenticated onion s
 <https://tb-manual.torproject.org/onion-services/>`__, and manages them
 using `Ansible <https://www.ansible.com/>`__.
 
-:doc:`Sources <source>`
-~~~~~~~~~~~~~~~~~~~~~~~
+:doc:`Sources <source/source>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A source submits documents and messages by using Tor Browser (or Tails) to access
 the *Source Interface*: a public onion service. Submissions are encrypted
 in place on the *Application Server* as they are uploaded.
 
-:doc:`Journalists <journalist>`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:doc:`Journalists <journalist/journalist>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Journalists working in the newsroom use two machines to interact with
 SecureDrop. First, they use a *Journalist Workstation* running Tails to connect

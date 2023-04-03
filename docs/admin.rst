@@ -1,5 +1,5 @@
-Admin Guide
-===========
+SecureDrop for Administrators
+=============================
 
 .. include:: ./includes/provide-feedback.txt
 
@@ -229,7 +229,7 @@ By default, you will be logged in to the *Journalist Interface*'s source list pa
 
 In the course of normal administration operations you should not need to view source
 communications, but if you do, you can find information on managing submissions in
-the :doc:`journalist guide <journalist>`.
+the :doc:`journalist guide <journalist/journalist>`.
 
 .. note::
   If you have lost your login information or your two-factor authentication is no longer

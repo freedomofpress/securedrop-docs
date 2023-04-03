@@ -31,7 +31,7 @@ transfer decrypted documents from the *Secure Viewing Station* to a journalist's
 everyday workstation, or to another computer for additional processing.
 
 Please see the detailed security recommendations for the choice, configuration
-and use of your *Export Device* in the :doc:`journalist guide <journalist>`
+and use of your *Export Device* in the :doc:`journalist guide <journalist/journalist>`
 and in the :doc:`setup guide <set_up_transfer_and_export_device>`.
 
 
@@ -47,7 +47,7 @@ they can be prepared for publication on the *Secure Viewing Station* before
 being transferred to an Internet-connected computer.
 
 Instructions for using SecureDrop as a *Journalist* are available in our
-:doc:`Journalist Guide <journalist>`.
+:doc:`Journalist Guide <journalist/journalist>`.
 
 
 Journalist Alert Public Key
@@ -66,7 +66,7 @@ this was called the *Document Interface*, but we have renamed it to avoid
 ambiguity.
 
 Instructions for using the *Journalist Interface* are available in our
-:doc:`Journalist Guide <journalist>`.
+:doc:`Journalist Guide <journalist/journalist>`.
 
 
 Journalist Workstation
@@ -78,7 +78,7 @@ documents, and move them to the *Secure Viewing Station* using the
 *Transfer Device*.
 
 Instructions for using the *Journalist Workstation* are available in our
-:doc:`Journalist Guide <journalist>`.
+:doc:`Journalist Guide <journalist/journalist>`.
 
 .. _glossary_landing_page:
 
@@ -166,7 +166,7 @@ SecureDrop to communicate with a *Journalist*. A *Source* will always
 access SecureDrop through the *Source Interface* and must do so using Tor.
 
 Instructions for using SecureDrop as a *Source* are available in our
-:doc:`Source Guide <source>`.
+:doc:`Source Guide <source/source>`.
 
 .. _glossary_source_interface:
 
@@ -177,7 +177,7 @@ submit documents and communicate with journalists. This site is
 hosted on the *Application Server* and can only be accessed through Tor.
 
 Instructions for using the *Source Interface* are available in our :doc:`Source Guide
-<source>`.
+<source/source>`.
 
 
 .. _submission-key:
@@ -205,7 +205,7 @@ to transfer encrypted documents from the *Journalist Workstation* to the
 *Secure Viewing Station*, where they can be decrypted.
 
 Please see the detailed security recommendations for the choice, configuration
-and use of your *Transfer Device* in the :doc:`journalist guide <journalist>`
+and use of your *Transfer Device* in the :doc:`journalist guide <journalist/journalist>`
 and in the :doc:`setup guide <set_up_transfer_and_export_device>`.
 
 

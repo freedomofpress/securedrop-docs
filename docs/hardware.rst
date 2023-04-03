@@ -218,9 +218,9 @@ submission to be newsworthy, they may need physical media (known as the
 
 Our standard recommendation is to use USB drives, in combination with
 volume-level encryption and careful data hygiene. Our documentation, including
-the :doc:`journalist guide <journalist>`, is based on this approach. We also
-urge the use of a secure printer or similar analog conversions to export
-documents from the *Secure Viewing Station*, whenever possible.
+the :doc:`journalist guide <journalist/journalist>`, is based on this approach. 
+We also urge the use of a secure printer or similar analog conversions to 
+export documents from the *Secure Viewing Station*, whenever possible.
 
 You may want to consider enforcing write protection on USB drives when only read
 access is needed, or you may want to implement a workflow based on CD-Rs or

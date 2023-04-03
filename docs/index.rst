@@ -10,14 +10,34 @@ SecureDrop is an open-source whistleblower submission system that media
 organizations can use to securely accept documents from and communicate with
 anonymous sources.
 
+SecureDrop is an open-source whistleblower submission system that media
+organizations can use to securely accept documents from and communicate with
+anonymous sources.
+
 This documentation is intended for sources, journalists, and administrators.
 If you would like to contribute to SecureDrop, please see our
 `developer documentation <https://developers.securedrop.org/>`_.
+
+
+Get Started
+^^^^^^^^^^^
+
+:doc:`I want to learn more about how SecureDrop works. <what_is_securedrop>`
+
+:doc:`I have information I want to share, and would like to learn how to do so safely. <source/source>`
+
+:doc:`I am looking to set up a SecureDrop installation. <before_you_begin>`
+
+:doc:`I have a SecureDrop installation and am interested in next steps. <getting_the_most_out_of_securedrop>`
+
+:doc:`I am a journalist and would like information about how to best use this system. <journalist/journalist>`
+
 
 .. toctree::
    :caption: Overview
    :name: overviewtoc
    :maxdepth: 2
+   :hidden:
 
    what_is_securedrop
    what_makes_securedrop_unique
@@ -27,21 +47,44 @@ If you would like to contribute to SecureDrop, please see our
    threat_model/mitigations.rst
    getting_support
    training_schedule
+   passphrase_best_practices
    
 .. toctree::
-   :caption: User Guides
-   :name: userguidetoc
+   :caption: Source Guide
+   :name: sourceguidetoc
    :maxdepth: 2
+   :hidden:
 
-   source
-   journalist
+   source/source
+   source/before_you_submit
+   source/how_to_submit
+   source/after_you_submit
+
+.. toctree::
+   :caption: Journalist Guide
+   :name: journalistguidetoc
+   :maxdepth: 2
+   :hidden:
+
+   journalist/journalist
+   journalist/workstation
+   journalist/svs
+   journalist/documents
+
+
+.. toctree::
+   :caption: Admin Guide
+   :name: adminguidetoc
+   :maxdepth: 2
+   :hidden:
+
    admin
-   passphrase_best_practices
 
 .. toctree::
    :caption: Installation Guide
    :name: installtoc
    :maxdepth: 2
+   :hidden:
 
    installation_overview
    passphrases
@@ -66,6 +109,7 @@ If you would like to contribute to SecureDrop, please see our
    :caption: Deployment Guide
    :name: deploymentguide
    :maxdepth: 2
+   :hidden:
 
    deployment_practices
    deployment/landing_page.rst
@@ -85,6 +129,7 @@ If you would like to contribute to SecureDrop, please see our
    :caption: Maintenance Guide
    :name: maintenance
    :maxdepth: 2
+   :hidden:
 
    logging
    ossec_alerts
@@ -100,6 +145,7 @@ If you would like to contribute to SecureDrop, please see our
    :caption: Upgrades
    :name: upgradetoc
    :maxdepth: 2
+   :hidden:
 
    upgrade/2.5.1_to_2.5.2.rst
    upgrade/2.5.0_to_2.5.1.rst
@@ -109,7 +155,17 @@ If you would like to contribute to SecureDrop, please see our
    upgrade/2.3.2_to_2.4.0.rst
    upgrade/2.3.1_to_2.3.2.rst
 
-Two versions of this documentation are available:
+Get Involved
+^^^^^^^^^^^^
 
-- ``latest`` - built from the ``develop`` branch of the SecureDrop repository, containing updates that have been tested but not yet released.
-- ``stable`` - built from the ``stable`` branch of the SecureDrop repository, and up to date with the most recent release, |version|.
+SecureDrop is an open source project. If you would like to contribute
+to SecureDrop, please see our
+`developer documentation <https://developers.securedrop.org/>`_.
+
+Two versions of this documentation are available, and can be selected in the 
+lower left corner using the version dropdown menu:
+
+- ``latest`` - built from the ``develop`` branch of the SecureDrop 
+  repository, containing updates that have been tested but not yet released.
+- ``stable`` - built from the ``stable`` branch of the SecureDrop repository,
+  and up to date with the most recent release, |version|.

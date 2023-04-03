@@ -70,7 +70,8 @@ continuing:
    can add more later)
 -  the username of the system admin
 
-Optionally, you can configure :doc:`daily email notifications <journalist>` of
+Optionally, you can configure 
+:doc:`daily email notifications <journalist/journalist>` of
 submission activity for journalists. These help journalists avoid spending time
 checking the *Journalist Interface* when there are no submissions. For this you
 will need:

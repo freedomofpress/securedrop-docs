@@ -119,7 +119,7 @@ Assumptions About the Source
 -  The source would like to remain anonymous, even against a forensic
    attacker.
 -  The source obtains an authentic copy of Tails and Tor Browser.
--  The source follows our :doc:`guidelines <../source>`
+-  The source follows our :doc:`guidelines <../source/source>`
    for using SecureDrop.
 -  The source is accessing an authentic SecureDrop site.
 
@@ -131,7 +131,7 @@ Assumptions About the Admin and the Journalist
    material to the attacker that would be unreasonable.
 -  The admin and the journalist obtain authentic copies of Tails.
 -  The journalist follows our
-   :doc:`guidelines <../journalist>` for using SecureDrop
+   :doc:`guidelines <../journalist/journalist>` for using SecureDrop
    and working with submitted documents.
 
 Assumptions About the Person Installing SecureDrop

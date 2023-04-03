@@ -122,8 +122,8 @@ recipients and anyone else interested
 -  Distribute important info:
 
    -  https://securedrop.org
-   -  :doc:`Source Best Practice Guide <source>`
-   -  :doc:`Journalist Best Practice Guide <journalist>`
+   -  :doc:`Source Best Practice Guide <source/source>`
+   -  :doc:`Journalist Best Practice Guide <journalist/journalist>`
 
 -  Link to security audits
 - Q & A
