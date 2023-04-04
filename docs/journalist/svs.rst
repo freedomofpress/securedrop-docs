@@ -178,12 +178,8 @@ default application.
 
 .. _working_with_documents:
 
-.. |Connect to Tor in Tails| image:: ../images/tails_5x/tails_5-tca_with_default_settings.png
-   :alt: Tor Connection Assistant with default settings.
-.. |Journalist Interface Login| image:: ../images/manual/screenshots/journalist-index_with_text.png
-   :alt: Login page to access the journalist interface. It requires a username, passphrase and two-factor authentication token.
-.. |Journalist Interface| image:: ../images/manual/screenshots/journalist-index_javascript.png
-   :alt: Example home page displaying a list of sources who sent documents or messages.
+.. |Wiping documents| image:: ../images/manual/viewing5.png
+   :alt: Files application displaying the menu that opens after a right-click on a file. The 'Wipe' entry is selected.
 .. |Load external content| image:: ../images/manual/screenshots/journalist-clicks_on_source_and_selects_documents.png
    :alt: Example source page displaying two files: a document and a message, both selected. A button 'Download Selected' is visible above the list of files.
 .. |Download selected| image:: ../images/manual/tbb_Document5.png
@@ -202,34 +198,6 @@ default application.
    :alt: Files application displaying a decrypted file next to its encrypted version.
 .. |Opened document| image:: ../images/manual/viewing4.png
    :alt: Text editor displaying a decrypted message. The file that was double-clicked is visible below in the Files application.
-.. |Sent reply| image:: ../images/manual/screenshots/journalist-composes_reply.png
-   :alt: Example source page displaying a form with a 'Submit' button for the journalist to write a reply.
-.. |Delete sources| image:: ../images/manual/screenshots/journalist-delete_sources.png
-   :alt: Example source page after sources were selected and the 'Delete' button clicked. Two buttons are visible: 'Files and Messages' and 'Source Accounts'.
-.. |Delete individual submissions| image:: ../images/manual/screenshots/journalist-delete_submissions.png
-   :alt: Example source page displaying a dialog box that asks for confirmation before deleting the selected submissions.
-.. |Delete source account| image:: ../images/manual/screenshots/journalist-delete_source_account.png
-   :alt: Example source page displaying a dialog box that asks for confirmation before deleting the source account.
-
-.. |mat2 context menu| image:: ../images/manual/screenshots/mat2_context_menu.png
-   :alt: Files application displaying the menu that opens after a right-click on a file. The 'Remove metadata' entry is selected.
-.. |mat2 cleaned| image:: ../images/manual/screenshots/mat2_cleaned.png
-   :alt: Files application displaying a cleaned image file next to its original version.
-.. |mat2 cli show| image:: ../images/manual/screenshots/mat2_cli_show.png
-   :alt: Terminal application displaying the metadata of a file.
-
-.. |Wiping documents| image:: ../images/manual/viewing5.png
-   :alt: Files application displaying the menu that opens after a right-click on a file. The 'Wipe' entry is selected.
-.. |Journalist account profile| image:: ../images/manual/screenshots/journalist-edit_account_user.png
-   :alt: Example user profile page of a journalist. It displays forms to reset their passphrase and two-factor authentication.
-.. |Unlock VeraCrypt in Tails 1| image:: ../images/manual/unlock_veracrypt_in_tails_1.png
-   :alt: The Applications menu on the Tails desktop. The 'Unlock VeraCrypt Volumes' entry is selected.
-.. |Unlock VeraCrypt in Tails 2| image:: ../images/manual/unlock_veracrypt_in_tails_2.png
-   :alt: Dialog box called 'Unlock VeraCrypt Volumes'. It displays an 'Unlock' button next to a drive name.
-.. |Unlock VeraCrypt in Tails 3| image:: ../images/manual/unlock_veracrypt_in_tails_3.png
-   :alt: Dialog box asking for a passphrase to unlock a VeraCrypt volume. The 'Unlock VeraCrypt Volumes' dialog box can be seen underneath.
-.. |Unlock VeraCrypt in Tails 4| image:: ../images/manual/unlock_veracrypt_in_tails_4.png
-   :alt: Dialog box called 'Unlock VeraCrypt Volumes'. It displays an 'Open' button next to a drive name.
 .. |br| raw:: html
 
     <br>

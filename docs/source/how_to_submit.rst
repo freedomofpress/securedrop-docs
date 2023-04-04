@@ -139,12 +139,3 @@ You can either close the browser entirely or follow the instructions on the page
    :alt: Page displaying instructions to clear your Tor Browser session by resetting your identity.
 .. |Restart TBB| image:: ../images/manual/restart-tor-browser.png
    :alt: Dialog box asking for confirmation before Tor Browser is restarted.
-.. |Check for response|
-  image:: ../images/manual/screenshots/source-enter-codename-in-login.png
-    :alt: Example login page asking you to enter your secret codename.
-.. |Check for a reply|
-  image:: ../images/manual/screenshots/source-checks_for_reply.png
-    :alt: Example submission page, displaying a reply from a journalist.
-.. |Delete received messages|
-  image:: ../images/manual/screenshots/source-deletes_reply.png
-    :alt: Example submission page, displaying a confirmation message after a reply was deleted.
