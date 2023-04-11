@@ -22,9 +22,9 @@ Get Started
 
 :doc:`I have information I want to share, and would like to learn how to do so safely. <source/source>`
 
-:doc:`I am looking to set up a SecureDrop installation. <before_you_begin>`
+:doc:`I am looking to set up a SecureDrop installation. <admin/installation/before_you_begin>`
 
-:doc:`I have a SecureDrop installation and am interested in next steps. <getting_the_most_out_of_securedrop>`
+:doc:`I have a SecureDrop installation and am interested in next steps. <admin/deployment/getting_the_most_out_of_securedrop>`
 
 :doc:`I am a journalist and would like information about how to best use this system. <journalist/journalist>`
 
@@ -66,79 +66,77 @@ Get Started
    journalist/workstation
    journalist/svs
    journalist/documents
-
-
 .. toctree::
-   :caption: Admin Guide
+   :caption: Admin Guide: Reference
    :name: adminguidetoc
    :maxdepth: 2
    :hidden:
 
-   admin
+   admin/reference/admin
 
 .. toctree::
-   :caption: Installation Guide
+   :caption: Admin Guide: Installation
    :name: installtoc
    :maxdepth: 2
    :hidden:
 
-   installation_overview
-   passphrases
-   hardware
-   minimum_security_requirements
-   before_you_begin
-   create_usb_boot_drives
-   set_up_svs
-   set_up_transfer_and_export_device
-   generate_submission_key
-   set_up_admin_tails
-   network_firewall
-   firewall_pfsense
-   firewall_opnsense
-   servers
-   install
-   configure_admin_workstation_post_install
-   create_admin_account
-   test_the_installation
+   admin/installation/installation_overview
+   admin/installation/passphrases
+   admin/installation/hardware
+   admin/installation/minimum_security_requirements
+   admin/installation/before_you_begin
+   admin/installation/create_usb_boot_drives
+   admin/installation/set_up_svs
+   admin/installation/set_up_transfer_and_export_device
+   admin/installation/generate_submission_key
+   admin/installation/set_up_admin_tails
+   admin/installation/network_firewall
+   admin/installation/firewall_pfsense
+   admin/installation/firewall_opnsense
+   admin/installation/servers
+   admin/installation/install
+   admin/installation/configure_admin_workstation_post_install
+   admin/installation/create_admin_account
+   admin/installation/test_the_installation
 
 .. toctree::
-   :caption: Deployment Guide
+   :caption: Admin Guide: Deployment
    :name: deploymentguide
    :maxdepth: 2
    :hidden:
 
-   deployment_practices
-   deployment/landing_page.rst
-   deployment/whole_site_changes.rst
-   deployment/sample_privacy_policy.rst
-   getting_the_most_out_of_securedrop
-   onboarding_journalists
-   onboarding_admins
-   yubikey_setup
-   https_source_interface
-   ssh_over_local_net
-   remote
-   tails_printing_guide
-   offboarding
+   admin/deployment/deployment_practices
+   admin/deployment/landing_page.rst
+   admin/deployment/whole_site_changes.rst
+   admin/deployment/sample_privacy_policy.rst
+   admin/deployment/getting_the_most_out_of_securedrop
+   admin/deployment/onboarding_journalists
+   admin/deployment/onboarding_admins
+   admin/deployment/yubikey_setup
+   admin/deployment/https_source_interface
+   admin/deployment/ssh_over_local_net
+   admin/deployment/remote
+   admin/deployment/tails_printing_guide
+   admin/deployment/offboarding
    
 .. toctree::
-   :caption: Maintenance Guide
+   :caption: Admin Guide: Maintenance
    :name: maintenance
    :maxdepth: 2
    :hidden:
 
-   logging
-   ossec_alerts
-   backup_and_restore
-   backup_workstations
-   update_tails_usbs
-   kernel_troubleshooting
-   rebuild_admin
-   update_bios
-   decommission
+   admin/maintenance/logging
+   admin/maintenance/ossec_alerts
+   admin/maintenance/backup_and_restore
+   admin/maintenance/backup_workstations
+   admin/maintenance/update_tails_usbs
+   admin/maintenance/kernel_troubleshooting
+   admin/maintenance/rebuild_admin
+   admin/maintenance/update_bios
+   admin/maintenance/decommission
 
 .. toctree::
-   :caption: Upgrades
+   :caption: Admin Guide: Upgrades
    :name: upgradetoc
    :maxdepth: 2
    :hidden:

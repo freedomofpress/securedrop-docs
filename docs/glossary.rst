@@ -32,7 +32,7 @@ everyday workstation, or to another computer for additional processing.
 
 Please see the detailed security recommendations for the choice, configuration
 and use of your *Export Device* in the :doc:`journalist guide <journalist/journalist>`
-and in the :doc:`setup guide <set_up_transfer_and_export_device>`.
+and in the :doc:`setup guide <admin/installation/set_up_transfer_and_export_device>`.
 
 
 Journalist
@@ -132,7 +132,7 @@ OSSEC Alert Public Key
 The *OSSEC Alert Public Key* is the GPG key that OSSEC will encrypt alerts to.
 The associated private key is used by the admin to access encrypted OSSEC alerts
 from the *Monitor Server*. Instructions for setting up OSSEC alerts can be found
-in the :doc:`OSSEC Guide <ossec_alerts>`.
+in the :doc:`OSSEC Guide <admin/maintenance/ossec_alerts>`.
 
 
 .. _svs:
@@ -206,7 +206,7 @@ to transfer encrypted documents from the *Journalist Workstation* to the
 
 Please see the detailed security recommendations for the choice, configuration
 and use of your *Transfer Device* in the :doc:`journalist guide <journalist/journalist>`
-and in the :doc:`setup guide <set_up_transfer_and_export_device>`.
+and in the :doc:`setup guide <admin/installation/set_up_transfer_and_export_device>`.
 
 
 Two-Factor Authentication

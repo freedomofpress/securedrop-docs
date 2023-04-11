@@ -37,8 +37,3 @@ the source away.
 
 For full details about what makes SecureDrop a unique and useful tool for
 Journalists, :doc:`see here. <../what_makes_securedrop_unique>`
-
-
-
-
-

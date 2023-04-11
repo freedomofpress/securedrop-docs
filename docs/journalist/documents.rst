@@ -246,7 +246,8 @@ Moving Documents to Your Everyday Workstation
    risks, and consider other methods to export the document (e.g., print).
 
 If you must copy a file from your *Secure Viewing Station* to your everyday
-workstation in digital form, our :doc:`recommendation <../set_up_transfer_and_export_device>`
+workstation in digital form, our 
+:doc:`recommendation <../admin/installation/set_up_transfer_and_export_device>`
 is that journalists are provided with an *Export Device*, typically a USB drive,
 which is encrypted using `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
 These instructions assume that you are following the recommended workflow.
@@ -323,8 +324,8 @@ You are now ready to write articles and blog posts, edit video and
 audio, and begin publishing important, high-impact work!
 
 .. tip:: Check out our SecureDrop :doc:`Promotion Guide
-         <../getting_the_most_out_of_securedrop>` to read about
-         encouraging sources to use SecureDrop.
+         <../admin/deployment/getting_the_most_out_of_securedrop>` to read
+         about encouraging sources to use SecureDrop.
 
 Deleting submissions and source accounts
 ----------------------------------------

@@ -27,7 +27,7 @@ Installation may be started by admins ahead of schedule to save on-site time.
 
 **Format**: For assisted installs, in-person or hybrid-remote (FPF remote, admins in-person)
 
--  Follow :doc:`Installing SecureDrop <install>`
+-  Follow :doc:`Installing SecureDrop <admin/installation/install>`
 
 Day 2: Admin and Digital Security Training
 ------------------------------------------
@@ -62,8 +62,8 @@ Admin Training
 -  Distribute important info:
 
    -  https://docs.securedrop.org
-   -  :doc:`Admin Best Practice Guide <admin>`
-   -  :doc:`Hardware for SecureDrop <hardware>`
+   -  :doc:`Admin Best Practice Guide <admin/reference/admin>`
+   -  :doc:`Hardware for SecureDrop <admin/installation/hardware>`
    -  :ref:`Deployment` guidelines
 
 

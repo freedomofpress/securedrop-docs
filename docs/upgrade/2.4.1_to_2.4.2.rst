@@ -81,7 +81,8 @@ temporarily downgrade to the previous kernel version.
    kernel version.
 
 For information on how to downgrade to the previous kernel, and for additional
-troubleshooting information, please see our :doc:`Kernel Troubleshooting Guide <../kernel_troubleshooting>`.
+troubleshooting information, please see our
+:doc:`Kernel Troubleshooting Guide <../admin/maintenance/kernel_troubleshooting>`.
 
 Upgrade from Tails 4 to Tails 5
 -------------------------------

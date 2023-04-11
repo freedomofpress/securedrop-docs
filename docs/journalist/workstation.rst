@@ -74,8 +74,8 @@ To visit the *Journalist Interface*, click the *Journalist Interface* icon on
 the desktop. This will open Tor Browser to an ".onion" address. Log in with
 your username, passphrase, and two-factor authentication token.
 (If you have been provided with a YubiKey,
-see :doc:`Using YubiKey with the Journalist Interface <../yubikey_setup>` for
-detailed setup and usage information.)
+see :doc:`Using YubiKey with the Journalist Interface <../admin/deployment/yubikey_setup>`
+for detailed setup and usage information.)
 
 |Journalist Interface Login|
 
@@ -116,8 +116,8 @@ connect to the *Journalist Interface* to get them.
    submissions or not, you must decrypt the contents of the email.
 
 This is an optional feature that must be activated :doc:`by the
-administrator <../admin>`. In the simplest case a journalist provides
-their email and GPG public key to the admin. If a team of journalist
+administrator <../admin/reference/admin>`. In the simplest case a journalist
+provides their email and GPG public key to the admin. If a team of journalist
 wants to receive these daily alerts, they should share a GPG key and
 ask the admin to setup a mail alias (SecureDrop does not provide that
 service) so they all receive the alerts and are able to decrypt them.

@@ -83,7 +83,8 @@ Systems
 ~~~~~~~
 
 For more information about the various systems involved in a SecureDrop
-deployment, please visit the :doc:`hardware section <../hardware>`.
+deployment, please visit the
+:doc:`hardware section <../admin/installation/hardware>`.
 
 +------------------+----------+-------------------------------------------------+
 | System           | Description                                                |
@@ -144,7 +145,7 @@ Assumptions About the Person Installing SecureDrop
 -  The person follows our guidelines for
    :ref:`deploying the system <deployment>`, setting
    up the :ref:`landing page <Landing Page>` for the
-   organization, and for :doc:`installing SecureDrop <../install>`.
+   organization, and for :doc:`installing SecureDrop <../admin/installation/install>`.
 
 Assumptions About the Source's Computer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -292,18 +293,18 @@ What a Compromise of the Workstations Can Surrender
 
 -  The *Admin Workstation* requires Tails with a persistent volume,
    which stores information such as GPG and SSH keys, as well as a
-   :doc:`database with passphrases <../passphrases>`
+   :doc:`database with passphrases <../admin/installation/passphrases>`
    for the *Application Server*, the *Monitor Server*, and the GPG key the
    *Monitor Server* will encrypt OSSEC alerts to.
 -  The *Journalist Workstation* requires Tails with a persistent
    volume, which stores information such as the onion service value
    required to connect to the *Journalist Interface*, as well as a :doc:`database
-   with passphrases <../passphrases>` for the
+   with passphrases <../admin/installation/passphrases>` for the
    *Journalist Interface*.
 -  The *Secure Viewing Station* requires Tails with a persistent
    volume, which stores information such as the SecureDrop application's
    GPG key, as well as a :doc:`database with the
-   passphrase <../passphrases>` for that key.
+   passphrase <../admin/installation/passphrases>` for that key.
 
 What a Compromise of the Source's Property Can Surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
