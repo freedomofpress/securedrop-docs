@@ -73,6 +73,11 @@ Get Started
    :hidden:
 
    admin/reference/admin
+   admin/reference/responsibilities
+   admin/reference/admin_interface
+   admin/reference/ssh_access
+   admin/reference/securedrop_admin
+   admin/reference/faq
 
 .. toctree::
    :caption: Admin Guide: Installation
