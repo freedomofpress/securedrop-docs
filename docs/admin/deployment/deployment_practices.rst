@@ -1,7 +1,7 @@
 .. _Deployment:
 
-Overview
-========
+Deployment Overview
+===================
 
 Once SecureDrop is installed on a news organization's servers, it's important
 for the administrator to configure it in a way that provides the greatest

@@ -38,16 +38,6 @@ User Roles
 
 There are three main user roles that interact with a SecureDrop instance:
 
-Admins
-~~~~~~
-
-The SecureDrop servers are managed by a systems admin; for larger
-newsrooms, there may be a team of systems admins. The admin
-uses a dedicated *Admin Workstation* running `Tails <https://tails.boum.org>`__,
-connects to the *Application* and *Monitor Servers* over  `authenticated onion services
-<https://tb-manual.torproject.org/onion-services/>`__, and manages them
-using `Ansible <https://www.ansible.com/>`__.
-
 :doc:`Sources <source/source>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -75,6 +65,16 @@ computer.
           a comprehensive :doc:`threat_model/threat_model`, and has a specific
           notion of the :doc:`roles <glossary>` that are involved in its
           operation.
+
+:doc:`Admins <admin/reference/admin>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The SecureDrop servers are managed by a systems admin; for larger
+newsrooms, there may be a team of systems admins. The admin
+uses a dedicated *Admin Workstation* running `Tails <https://tails.boum.org>`__,
+connects to the *Application* and *Monitor Servers* over  `authenticated onion services
+<https://tb-manual.torproject.org/onion-services/>`__, and manages them
+using `Ansible <https://www.ansible.com/>`__.
 
 
 Environment Overview
