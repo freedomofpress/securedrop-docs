@@ -1,7 +1,12 @@
-Server SSH Access
-=================
+Logging in via SSH
+==================
 
 .. _server SSH access:
+
+.. note::
+  You can access your *Application Server* and *Monitor Server* via SSH by
+  using either the `ssh app` or `ssh mon` commands (respectively) from an
+  *Admin Workstation*.
 
 Server SSH Access
 ------------------

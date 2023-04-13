@@ -39,7 +39,7 @@ upper right corner of the *Journalist Interface*.
 .. _Adding Users:
 
 Adding Users
-^^^^^^^^^^^^
+------------
 
 After logging in, you can add new user accounts for the journalists at your organization
 who will be checking the system for submissions. Make sure the journalist is
@@ -70,7 +70,7 @@ account setup.
 
 
 FreeOTP
-^^^^^^^
+~~~~~~~
 
 #. If the journalist is using FreeOTP or another app for two-factor authentication, click **Add User** to proceed to the next page.
 
@@ -85,7 +85,7 @@ to the *Admin Interface* and will see a confirmation that the two-factor code wa
 verified.
 
 YubiKey
-^^^^^^^
+~~~~~~~
 
 #. If the journalist wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide <../deployment/yubikey_setup>`.
 
@@ -101,6 +101,7 @@ The journalist will require their username, passphrase, and two-factor authentic
 method whenever they check SecureDrop. Make sure that they have memorised their
 username and passphrase, or stored them in their password manager, and that they
 can keep their two-factor authentication device secure.
+
 
 Passphrases and Two-Factor Resets
 ---------------------------------
@@ -149,7 +150,7 @@ Off-boarding Users
 See :doc:`our guide to off-boarding users from SecureDrop <../deployment/offboarding>`.
 
 Instance Configuration
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 The Instance Configuration section of the *Admin Interface* allows you to:
 

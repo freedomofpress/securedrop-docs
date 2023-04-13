@@ -11,6 +11,7 @@ Responsibilities of SecureDrop administrators
 ---------------------------------------------
 As a SecureDrop administrator, it is your responsibility to:
 
+* :doc:`install SecureDrop <../installation/install>`
 * :ref:`manage users <manage_users>`
 * :ref:`manage the system configuration <manage_config>`
 * :ref:`ensure that servers, firewall and workstations are kept up-to-date <manage_updates>`
