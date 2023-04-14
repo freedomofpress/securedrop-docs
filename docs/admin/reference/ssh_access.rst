@@ -3,11 +3,6 @@ Logging in via SSH
 
 .. _server SSH access:
 
-.. note::
-  You can access your *Application Server* and *Monitor Server* via SSH by
-  using either the `ssh app` or `ssh mon` commands (respectively) from an
-  *Admin Workstation*.
-
 Server SSH Access
 ------------------
 
@@ -15,6 +10,10 @@ Generally, you should avoid directly SSHing into the servers in favor of using
 the *Admin Interface* or ``securedrop-admin``. However, in some cases,
 you may need to SSH in order to troubleshoot and fix a problem that cannot be
 resolved via these tools.
+
+You can access your *Application Server* and *Monitor Server* via SSH by
+using either the ``ssh app`` or ``ssh mon`` commands (respectively) from an
+*Admin Workstation*.
 
 In this section we cover basic commands you may find useful when you SSH into
 the *Application Server* and *Monitor Server*.
