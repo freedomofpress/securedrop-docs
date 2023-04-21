@@ -2,9 +2,8 @@ Glossary
 ========
 
 A number of terms used in this guide, and in the `SecureDrop workflow
-diagram <https://docs.securedrop.org/en/latest/overview.html#infrastructure>`__,
-are specific to SecureDrop. The list below attempts to enumerate and
-define these terms.
+diagram <what_is_securedrop.html>`__, are specific to SecureDrop. 
+The list below attempts to enumerate and define these terms.
 
 
 Admin Workstation
