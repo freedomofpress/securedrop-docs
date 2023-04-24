@@ -38,25 +38,15 @@ User Roles
 
 There are three main user roles that interact with a SecureDrop instance:
 
-Admins
-~~~~~~
-
-The SecureDrop servers are managed by a systems admin; for larger
-newsrooms, there may be a team of systems admins. The admin
-uses a dedicated *Admin Workstation* running `Tails <https://tails.boum.org>`__,
-connects to the *Application* and *Monitor Servers* over  `authenticated onion services
-<https://tb-manual.torproject.org/onion-services/>`__, and manages them
-using `Ansible <https://www.ansible.com/>`__.
-
-:doc:`Sources <source>`
-~~~~~~~~~~~~~~~~~~~~~~~
+:doc:`Sources <source/source>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A source submits documents and messages by using Tor Browser (or Tails) to access
 the *Source Interface*: a public onion service. Submissions are encrypted
 in place on the *Application Server* as they are uploaded.
 
-:doc:`Journalists <journalist>`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:doc:`Journalists <journalist/journalist>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Journalists working in the newsroom use two machines to interact with
 SecureDrop. First, they use a *Journalist Workstation* running Tails to connect
@@ -75,6 +65,16 @@ computer.
           a comprehensive :doc:`threat_model/threat_model`, and has a specific
           notion of the :doc:`roles <glossary>` that are involved in its
           operation.
+
+:doc:`Admins <admin/reference/admin>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The SecureDrop servers are managed by a systems admin; for larger
+newsrooms, there may be a team of systems admins. The admin
+uses a dedicated *Admin Workstation* running `Tails <https://tails.boum.org>`__,
+connects to the *Application* and *Monitor Servers* over  `authenticated onion services
+<https://tb-manual.torproject.org/onion-services/>`__, and manages them
+using `Ansible <https://www.ansible.com/>`__.
 
 
 Environment Overview
@@ -147,10 +147,10 @@ Planning & Preparation
 Setting up SecureDrop is a multi-step process. Before getting started, you
 should make sure that you're prepared to operate and maintain it. You'll need
 a systems admin who's familiar with Linux, the GNU utilities, and the
-Bash shell. You'll need the :doc:`hardware <hardware>` on which SecureDrop
-runs — this will normally cost $2000-$3000. The journalists in your
-organization will need to be trained in the operation of SecureDrop, and
-you'll need to publish and promote your new SecureDrop instance afterwards —
+Bash shell. You'll need the :doc:`hardware <admin/installation/hardware>` 
+on which SecureDrop runs — this will normally cost $2000-$3000. The journalists
+in your organization will need to be trained in the operation of SecureDrop,
+and you'll need to publish and promote your new SecureDrop instance afterwards —
 using your existing websites, mailing lists, and social media.
 
 It is recommended that you have all of this planned out before you get started.
@@ -162,9 +162,9 @@ Technical Setup
 ~~~~~~~~~~~~~~~
 
 Once you are familiar with the architecture and have all the hardware,
-:doc:`setting up SecureDrop <install>` will take at least a day's work for your
-admin. We recommend that you set aside at least a week to
-:ref:`complete and test <Deployment>` your setup.
+:doc:`setting up SecureDrop <admin/installation/install>` will take at
+least a day's work for your admin. We recommend that you set aside at least
+a week to :ref:`complete and test <Deployment>` your setup.
 
 Provisioning & Training
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -194,7 +194,7 @@ Foundation <https://securedrop.org/help>`__ are happy to help you check that
 your SecureDrop setup is up-to-code and properly grounded. After that you'll want
 to check out the :ref:`best practices <Landing Page>` for your
 SecureDrop *Landing Page* and our guide to
-:doc:`promoting your SecureDrop instance <getting_the_most_out_of_securedrop>`.
+:doc:`promoting your SecureDrop instance <admin/deployment/getting_the_most_out_of_securedrop>`.
 
 .. |SecureDrop architecture highlevel overview diagram| image:: ./diagrams/securedrop_overview_highlevel.png
   :width: 100%
