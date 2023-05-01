@@ -405,12 +405,17 @@ configuration example provided by ProPublica.
              for inclusion in the directory and does not necessarily prevent
              the instance from being included.
 
-Change detection monitoring for the web application configuration and *Landing Page* content
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Set up change detection monitoring for the web application configuration and *Landing Page* content
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-OSSEC is a free and open source host-based intrusion detection suite
+If possible, you should set up monitoring to detect changes to the *Landing Page* and the
+configuration files of the web server hosting the page. If you do not have an existing
+monitoring system for your site, OSSEC is a free and open source host-based intrusion detection suite
 that includes a file integrity monitor. More information can be found
 `here. <https://www.ossec.net/>`__
+
+.. note:: We do not recommmend using the *Monitor Server* to monitor your landing page. It should be used
+  for the *Application Server* only.
 
 Don't log access to the *Landing Page* in the webserver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
