@@ -124,7 +124,7 @@ recipients and anyone else interested
    -  What to do for unsupported formats
 -  Options for distributing with other news organizations
 -  Show example of an OSSEC alert, briefly cover what it does
--  Overview of `onion names <https://securedrop.org/news/introducing-onion-names-securedrop/>`__
+-  Overview of :doc:`onion names <admin/deployment/onion_name>`
 -  Physical security of servers and *Secure Viewing Station*
 -  How to securely publicize the organization's *Source Interface* Tor URL
 -  Distribute important info:

@@ -18,7 +18,7 @@ An onion name for this SecureDrop instance could be:
 
 The general format for a SecureDrop onion name is:
 
-`<organization>.securedrop.tor.onion``
+``<organization>.securedrop.tor.onion``
 
 How They Work
 ^^^^^^^^^^^^^
@@ -51,7 +51,7 @@ which:
 We will generally approve onion names that meaningfully correspond to your name
 or that of your organization. Please note that, to disambiguate organizations
 in different countries with the same name, we may request the addition of a 
-country code (e.g. `<organization>.<country code>.securedrop.tor.onion`).
+country code (e.g. ``<organization>.<country code>.securedrop.tor.onion``).
 
 If your SecureDrop instance is not part of the directory yet, you can 
 :ref:`begin the process here<The SecureDrop Directory>`. In order to be
@@ -74,9 +74,8 @@ landing page. This allows sources to verify both addresses against the
 information included in our directory, and also provides a fallback should
 the onion name fail to load for any reason.
 
-Please note that as of March 2021, sources need to use the desktop version
-of Tor Browser to access onion names, which is also generally our security
-recommendation.
+Please note that the desktop version of Tor Browser is needed to access onion
+names, which is also generally our security recommendation.
 
 Updating an Onion Name
 ^^^^^^^^^^^^^^^^^^^^^^

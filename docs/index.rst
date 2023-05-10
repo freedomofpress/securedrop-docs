@@ -22,7 +22,7 @@ Get Started
 
 :doc:`I have information I want to share, and would like to learn how to do so safely. <source/source>`
 
-:doc:`I am looking to set up a SecureDrop installation. <admin/installation/before_you_begin>`
+:doc:`I am looking to set up a SecureDrop installation. <admin/installation/installation_overview>`
 
 :doc:`I have a SecureDrop installation and am interested in next steps. <admin/deployment/getting_the_most_out_of_securedrop>`
 
@@ -89,7 +89,6 @@ Get Started
    admin/installation/passphrases
    admin/installation/hardware
    admin/installation/minimum_security_requirements
-   admin/installation/before_you_begin
    admin/installation/create_usb_boot_drives
    admin/installation/set_up_svs
    admin/installation/set_up_transfer_and_export_device
