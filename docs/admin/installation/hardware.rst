@@ -374,6 +374,51 @@ also be possible to print and cut out labels using adhesive-backed paper and som
 -  :download:`Secure Viewing Station TAILS USB Drive Label <../../images/labels/usb_svs.png>`
 -  :download:`File Transfer USB Drive Label <../../images/labels/usb_file_transfer.png>`
 
+.. _SecureBoot:
+
+SecureBoot
+----------
+
+SecureBoot is a feature available on most systems that, when enabled,
+does not allow any operating system to boot that has not been signed by a
+trusted key. By only booting to operating systems that are properly signed,
+you can be sure that the OS itself has not been corrupted or tampered with,
+at least at the boot level.
+
+While preparing your hardware for a SecureDrop installation, you will want to
+make sure SecureBoot is enabled for the Workstations, and disabled for
+the Servers.
+
+For instructions on how to enable or disable the SecureBoot feature for your
+device, please consult the manufacturer's manual for BIOS settings, as they
+differ for each make and model.
+
+SecureBoot for Workstations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The **Secure Viewing Station**, **Admin Workstation**, and
+**Journalist Workstation** should all have SecureBoot enabled.
+
+Some systems, including recent ThinkPads, require you to specifically enable
+the Third-Party UEFI Certificate Authority within the SecureBoot settings to
+boot to Tails. If your system has SecureBoot enabled but is not booting to the
+device you select in the boot menu, go to the BIOS settings and look for the
+Third-Party CA Option.
+
+On ThinkPads, this can be found within the BIOS by going to
+**Security ▸ SecureBoot ▸ Allow Microsoft 3rd Party UEFI CA**, and setting
+the switch to the on position.
+
+
+SecureBoot for Servers
+^^^^^^^^^^^^^^^^^^^^^^
+
+**SecureBoot must be disabled on the server hardware.** During the installation,
+SecureDrop installs a hardened, security-focused version of the Linux kernel 
+(grsec) that does not support SecureBoot. If SecureBoot is enabled on either of
+the servers during the install, you will receive a pre-install error reminding
+you that it must be turned off before the installation can proceed.
+
 .. _Specific Hardware Recommendations:
 
 Specific Hardware Recommendations
