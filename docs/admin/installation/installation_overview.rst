@@ -45,8 +45,14 @@ Once you have all the necessary hardware,
 We recommend that you set aside at least a week to
 :ref:`complete and test <Deployment>` your setup.
 
+Tracking your progress
+----------------------
+
 To assist in the installation process, we offer a `SecureDrop Installation
-Worksheet`_.  It is **critical** that you destroy this worksheet when your
+Worksheet`_, which you can print out and complete as you go. Only complete
+this worksheet on paper, never electronically.
+
+It is **critical** that you destroy this worksheet when your
 installation is complete and all of your passphrases have been safely stored in
 a password manager.
 
