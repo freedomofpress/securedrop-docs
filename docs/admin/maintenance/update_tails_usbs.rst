@@ -10,12 +10,11 @@ Because the *Secure Viewing Station* (SVS) is airgapped, it cannot receive updat
 .. important::
         The *SVS* stores some of SecureDrop's most sensitive data (decrypted submissions, the *Submission Private Key*), so we **strongly** encourage you to manually update the *SVS* whenever a new version of Tails is released.
 
-The Tails project releases updates `every 6 to 8 weeks`_. Occasionally they
-release a new version ahead of the normal cycle in order to address a
+The Tails project typically releases updates every 6 to 8 weeks. Occasionally
+they release a new version ahead of the normal cycle in order to address a
 security issue. For regular Tails OS and security information, check out the
 Tails `Security page`_ and subscribe to the Tails RSS/Atom feed.
 
-.. _every 6 to 8 weeks: https://tails.boum.org/contribute/calendar/
 .. _Security page: https://tails.boum.org/security/index.en.html
 
 
