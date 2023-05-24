@@ -98,6 +98,8 @@ Do not discuss leaking or whistleblowing, even with trusted contacts.
 
 ----
 
+.. _The SecureDrop Directory:
+
 The SecureDrop Directory
 ----------------------------------
 
@@ -111,8 +113,7 @@ requirements below, then `send us a request using this form.
 There are several benefits to being included in the SecureDrop directory. The
 most significant benefit is that it will be easier for potential sources to
 find your SecureDrop instance. Additionally, being included in the directory
-makes you eligible for `an onion 
-name. <https://securedrop.org/faq/getting-onion-name-your-securedrop/>`__
+makes you eligible for :doc:`an onion name. <onion_name>`
 This improves the experience by turning a lengthy, non-descriptive address
 into one that is short and memorable. For example, a long .onion address 
 might look like: ::

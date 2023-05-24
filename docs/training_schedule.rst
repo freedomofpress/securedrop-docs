@@ -9,6 +9,14 @@ Freedom of the Press Foundation provides paid support contracts to assist with
 the initial setup of the system, as well as training and ongoing technical
 support.
 
+We generally recommend that news organizations set aside two days for the setup
+and training process. The first day is primarily the installation with the
+administrators and the second day is the training for those journalists who will
+regularly check SecureDrop.
+
+Often, the entire process takes less time than two days but sometimes there are
+unique network or hardware issues that come up and delay completion.
+
 If you are considering a paid contract for your organization, the following
 will provide you with an idea of the typical on-site installation and training
 timeline.
@@ -116,7 +124,7 @@ recipients and anyone else interested
    -  What to do for unsupported formats
 -  Options for distributing with other news organizations
 -  Show example of an OSSEC alert, briefly cover what it does
--  Overview of `onion names <https://securedrop.org/news/introducing-onion-names-securedrop/>`__
+-  Overview of :doc:`onion names <admin/deployment/onion_name>`
 -  Physical security of servers and *Secure Viewing Station*
 -  How to securely publicize the organization's *Source Interface* Tor URL
 -  Distribute important info:
