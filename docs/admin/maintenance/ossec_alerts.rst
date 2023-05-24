@@ -522,7 +522,7 @@ To verify this activity matches the package history, you can review the logs in
 ``/var/log/apt/history.log``. ::
 
     Received From: (app)
-    Rule: 2902 fired (level 7) -> "New (Debian Package) installed."
+    Rule: 2902 fired (level 7) -> "New dpkg (Debian Package) installed."
     Portion of the log(s):
 
     status installed <package name> <version>
@@ -540,9 +540,17 @@ about the specific changes to the files in these packages. ::
     Old sha1sum was: '<old sha1sum>'
     New sha1sum is : '<new sha1sum>'
 
-These are normal alerts, and tell you that your SecureDrop servers are
-properly up-to-date and patched. Changes to configuration files, or files
-files unrelated to an expected package may warrant further investigation.
+It may seem redundant to receive both ``New dpkg (Debian Package) installed``
+and ``Integrity checksum changed`` alerts.  This happens because OSSEC's alerts
+do not track root causation: OSSEC doesn't "know" that files have changed
+because new packages have been installed or updated, so it reports both sets of
+events independently.  As a result, these clusters of alerts are normal and
+expected: they tell you that your SecureDrop servers are properly up-to-date
+and patched.
+
+Keep an eye out for *exceptions* to this rule as you analyze your OSSEC alerts.
+Surprising changes to configuration files, or new or changed files unrelated to
+the daily updates, may warrant further investigation.
 
 Occasionally your SecureDrop Servers will send an alert for failing to connect
 to Tor relays. Since SecureDrop runs as a Tor Onion Service, it is possible
