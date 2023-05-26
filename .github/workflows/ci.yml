@@ -1,0 +1,28 @@
+---
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    container: debian:bullseye
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          apt-get update && apt-get install --yes --no-install-recommends make python3-pip
+          pip install poetry==1.4.0
+          poetry install --no-ansi
+      - name: Run lint
+        run: |
+          make docs-lint
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Build production deployment
+        run: |
+          podman build --build-arg GIT_BRANCH=$(git rev-parse HEAD) --file ./deploy/Dockerfile .
