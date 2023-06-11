@@ -63,7 +63,10 @@ Key*. This operation requires the Tails administration password to be set
 
 To set the system time:
 
-#. Click in the top left menu Applications, go to **System Tools** and select Settings
+#. Click **Applications** in the top left of the screen, then go to **System Tools** and select **Settings**.
+
+|selet settings|
+
 #. In the left section go all the way down, then click **Date & Time**.
 #. Click **Unlock** in the top right of the window. Type in the admin password you set when you
    started up Tails.
