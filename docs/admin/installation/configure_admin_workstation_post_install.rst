@@ -46,6 +46,8 @@ In addition, the script creates desktop and menu shortcuts for the Source
 and *Journalist Interfaces*, directs Tails to install Ansible at the
 beginning of every session, and sets up SSH host aliases for the servers.
 
+The script is also responsible for enabling the *SecureDrop Menu*.
+
 The only thing you need to remember to do is enable
 persistence when you boot the *Admin Workstation*. If you are
 using the *Admin Workstation* and are unable to connect to any

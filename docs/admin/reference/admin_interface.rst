@@ -8,10 +8,11 @@ instance's web interfaces.
 Logging in
 ^^^^^^^^^^
 
-To log in to the *Admin Interface*, start the *Admin Workstation* with persistence
-enabled and double-click the *Journalist Interface* icon on the Desktop. Tor Browser
-will start and load the login page for the *Journalist Interface*. Use your username,
-passphrase, and two-factor authentication token to log in.
+To log in to the *Admin Interface*, start the *Admin Workstation*
+with persistence enabled. Open the *SecureDrop Menu* and select the
+"Launch Journalist Interface" option. Tor Browser will start and load the login
+page for the *Journalist Interface*. Use your username, passphrase, and
+two-factor authentication token to log in.
 
 By default, you will be logged in to the *Journalist Interface*'s source list page.
 

@@ -14,8 +14,10 @@ network, allowing you to access the servers using an *Admin Workstation*
 from anywhere in the world where you have a stable internet connection and
 are able to access the Tor network.
 
-To do so, simply open a Terminal from your *Admin Workstation* and run either
-the ``ssh app`` or ``ssh mon`` command, depending on which server you are intending
+To do so, simply select the "SSH into the App Server" or "SSH into the Monitor
+Server" option in the *SecureDrop Menu* from your *Admin Workstation*.
+Alternately, you can open a Terminal and run either the ``ssh app`` or
+``ssh mon`` command, depending on which server you are intending
 to access.
 
 This is useful for routine maintenance and log investigation tasks, although

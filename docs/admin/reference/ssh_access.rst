@@ -15,6 +15,9 @@ You can access your *Application Server* and *Monitor Server* via SSH by
 using either the ``ssh app`` or ``ssh mon`` commands (respectively) from an
 *Admin Workstation*.
 
+For quick access, use the "SSH into the App Server" and "SSH into the Monitor
+Server" options in the *SecureDrop Menu*.
+
 In this section we cover basic commands you may find useful when you SSH into
 the *Application Server* and *Monitor Server*.
 
