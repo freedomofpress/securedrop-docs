@@ -22,7 +22,7 @@ you have strong passphrases.
 
 We have issued a Security Advisory, which provides detailed instructions for
 updating the Workstations, as well as any other encrypted drives. You can find
-that `advisory on the SecureDrop blog. 
+that `advisory on the SecureDrop website.
 <https://securedrop.org/news/security-advisory-update-encrypted-usb-drives-and-replace-short-passphrases/>`_
 
 
