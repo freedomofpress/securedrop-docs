@@ -146,13 +146,12 @@ Get Started
    :maxdepth: 2
    :hidden:
 
+   upgrade/2.5.2_to_2.6.0.rst
    upgrade/2.5.1_to_2.5.2.rst
    upgrade/2.5.0_to_2.5.1.rst
    upgrade/2.4.2_to_2.5.0.rst
    upgrade/2.4.1_to_2.4.2.rst
    upgrade/2.4.0_to_2.4.1.rst
-   upgrade/2.3.2_to_2.4.0.rst
-   upgrade/2.3.1_to_2.3.2.rst
 
 Get Involved
 ^^^^^^^^^^^^
