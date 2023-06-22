@@ -44,6 +44,9 @@ sometimes Tails upgrades are "manual," which means that you should follow the
 instructions in the `Tails Upgrade Documentation`_ to upgrade the drives. Talk
 to your SecureDrop administrator if you have trouble.
 
+You can also check for and install updates using the "Check for SecureDrop
+Updates" option from the *SecureDrop Menu*.
+
 .. include:: ../includes/update-gui.txt
 
 .. _`Tails
@@ -70,11 +73,11 @@ in Tor Browser. By design, this Onion Service address is only accessible
 from your *Journalist Workstation*; it will not work in Tor Browser on another
 computer, unless explicitly configured with an access token.
 
-To visit the *Journalist Interface*, click the *Journalist Interface* icon on
-the desktop. This will open Tor Browser to an ".onion" address. Log in with
-your username, passphrase, and two-factor authentication token.
-(If you have been provided with a YubiKey,
-see :doc:`Using YubiKey with the Journalist Interface <../admin/deployment/yubikey_setup>`
+To visit the *Journalist Interface*, open the *SecureDrop Menu* and select the
+"Launch Journalist Interface" option. This will open Tor Browser to an ".onion"
+address. Log in with your username, passphrase, and two-factor authentication
+token. (If you have been provided with a YubiKey, see
+:doc:`Using YubiKey with the Journalist Interface <../admin/deployment/yubikey_setup>`
 for detailed setup and usage information.)
 
 |Journalist Interface Login|

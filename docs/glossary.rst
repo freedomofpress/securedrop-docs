@@ -133,6 +133,23 @@ The associated private key is used by the admin to access encrypted OSSEC alerts
 from the *Monitor Server*. Instructions for setting up OSSEC alerts can be found
 in the :doc:`OSSEC Guide <admin/maintenance/ossec_alerts>`.
 
+.. _securedrop_menu:
+
+SecureDrop Menu
+---------------
+The *SecureDrop Menu* is a dedicated menu available in both the
+*Admin Workstation* and the *Journalist Workstation*. It is located on the top
+bar, and is available once a Tor connection has been established.
+
+|The SecureDrop Menu|
+
+It provides access to the *Source Interface* and *Journalist Interface*,
+allows you to check for updates to SecureDrop, and gives you quick access to
+a file browser and KeePassXC vault.
+
+On an *Admin Workstation*, it also allows quick SSH access to connect to the
+*Application Server* and *Monitor Server*.
+
 
 .. _svs:
 
@@ -220,3 +237,6 @@ authentication codes. We recommend using one of:
 -  A `YubiKey <https://www.yubico.com/products/>`__
 
 .. include:: includes/otp-app.txt
+
+.. |The SecureDrop Menu| image:: images/securedrop_menu.png
+   :alt: The SecureDrop Menu, showing all available options.
