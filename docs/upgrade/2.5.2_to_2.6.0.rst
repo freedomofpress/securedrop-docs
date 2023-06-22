@@ -11,14 +11,30 @@ automatically within 24 hours of the release.
 Update Workstations to SecureDrop 2.6.0
 ---------------------------------------
 
+Updating Tails and replacing short passphrases
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Before upgrading your Workstations to SecureDrop 2.6.0, we 
+strongly recommend that you first upgrade to Tails 5.14, which includes
+important updates to disk encryption and passphrase hashing algorithms. 
+
+We also recommend updating all other encrypted drives to LUKS2, and ensuring
+you have strong passphrases.
+
+We have issued a Security Advisory, which provides detailed instructions for
+updating the Workstations, as well as any other encrypted drives. You can find
+that `advisory on the SecureDrop blog. 
+<https://securedrop.org/news/security-advisory-update-encrypted-usb-drives-and-replace-short-passphrases/>`_
+
+
+Using the graphical updater
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. note::
 
    If you encounter errors with the graphical updater, perform a
    manual update. This will ensure that you have imported the new
    `SecureDrop release signing key <https://media.securedrop.org/media/documents/signing-key-transition.txt>`_.
 
-Using the graphical updater
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
 the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
