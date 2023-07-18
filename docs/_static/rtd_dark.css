@@ -1,0 +1,175 @@
+/*!
+ * @name          Readthedocs
+ * @namespace     http://userstyles.org
+ * @description	  Styles the documentation pages hosted on Readthedocs.io
+ * @author        Anthony Post
+ * @homepage      https://userstyles.org/styles/142968
+ * @version       0.20170529055029
+ *
+ * Modified by Aloïs Dreyfus: 20200527-1037
+ * Modified by Erik Kalkoken: 20220615
+ * Modified by Nathan Dyer: 20230103
+ */
+
+:root {
+    --dm-text-color: white;
+    --dm-link-new: #7dbdff;
+    --dm-link-visited: #7dbdff;
+    --dm-menu-border: #222;
+    --dm-menuhover-bg: #c1c1c1;
+    --dm-menuparent-bg: black;
+    --dm-parenthover-bg: #202020;
+    --dm-expandeditem-bg: #313131;
+    --dm-submenu-bg: #404040;
+}
+
+@media (prefers-color-scheme: dark) {
+
+	a {
+		color: #7dbdff;
+	}
+	a:visited {
+		color: #bf84d8;
+	}
+
+	pre {
+		background-color: #2d2d2d !important;
+	}
+
+
+/*
+** Vertical menu color overrides
+*/
+
+        .wy-menu-vertical li.current {
+            background: var(--dm-expandeditem-bg);
+            color: var(--dm-text-color);
+        }
+
+        .wy-menu-vertical li.current > a,
+        .wy-menu-vertical li.on a {
+            background: var(--dm-menuparent-bg);
+            color: var(--dm-text-color);
+        }
+
+        .wy-menu-vertical li.toctree-l1.current > a,
+        .wy-menu-vertical li.current.a {
+            border-color: var(--dm-menu-border);
+        }
+
+        .wy-menu-vertical li.current a {
+            color: var(--dm-text-color);
+        }
+
+        .wy-menu-vertical li.current a:hover {
+            background: var(--dm-menuhover-bg);
+        }
+
+        .wy-menu-vertical a:hover,
+        .wy-menu-vertical li.current > a.hover,
+        .wy-menu-vertical li.on a:hover {
+            background: var(--dm-parenthover-bg);
+        }
+
+        .wy-menu-vertical li.toctree-l2.current > a,
+        .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a,
+        .wy-menu-vertical li.toctree-l2.current li.toctree-l3.current li.toctree-l4 > a {
+            background: var(--dm-submenu-bg);
+        }
+
+        .wy-menu-vertical li.toctree-l1 > a:hover,
+        .wy-menu-vertical li.toctree-l2 > a:hover,
+        .wy-menu-vertical li.toctree-l2.current > a:hover,
+        .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a:hover,
+        .wy-menu-vertical li.toctree-l2.current
+        li.toctree-l3.current li.toctree-l4 > a:hover {
+            background: var(--dm-parenthover-bg);
+        }
+
+
+	.wy-nav-content {
+		background: #3c3c3c;
+		color: aliceblue;
+	}
+
+	.method dt, .class dt, .data dt, .attribute dt, .function dt,
+	.descclassname, .descname {
+		background-color: #525252 !important;
+		color: white !important;
+	}
+
+	.toc-backref {
+		color: #333333 !important;
+	}
+
+	code.literal {
+		background-color: #2d2d2d !important;
+		border: 1px solid #333333 !important;
+	}
+
+	.wy-nav-content-wrap {
+		background-color: rgba(0, 0, 0, 0.7) !important;
+	}
+
+	.sidebar {
+		background-color: #191919 !important;
+	}
+
+	.sidebar-title {
+		background-color: #2b2b2b !important;
+	}
+
+	.xref, .py-meth {
+		color: #7ec3e6 !important;
+	}
+
+	.admonition, .note {
+		background-color: #2d2d2d !important;
+	}
+
+	.wy-side-nav-search {
+		background-color: inherit;
+		border-bottom: 1px solid #fcfcfc;
+	}
+
+	.wy-table thead, .rst-content table.docutils thead, .rst-content table.field-list thead {
+		background-color: #b9b9b9;
+	}
+
+	.wy-table thead th, .rst-content table.docutils thead th, .rst-content table.field-list thead th {
+		border: solid 2px #e1e4e5;
+	}
+
+	.wy-table thead p, .rst-content table.docutils thead p, .rst-content table.field-list thead p {
+		margin: 0;
+	}
+
+	.wy-table-odd td, .wy-table-striped tr:nth-child(2n-1) td, .rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+		background-color: #343131;
+	}
+
+	.highlight .m {
+		color: inherit
+	}
+
+	.highlight .nv {
+		color: #7dbdff
+	}
+
+	.rst-content .section .admonition ul {
+		margin-bottom: 0;
+	}
+
+	li.toctree-l1 {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.wy-menu-vertical li code {
+		color: #E74C3C;
+	}
+
+	.wy-menu-vertical .xref {
+		color: #529ecf !important;
+	}
+}

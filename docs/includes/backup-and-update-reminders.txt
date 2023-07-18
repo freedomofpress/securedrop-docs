@@ -1,0 +1,17 @@
+Back Up the Tails Workstations
+-------------------------------
+USB flash drives degrade over time and vary in quality. To ensure continued
+access to SecureDrop by administrators and journalists, we recommend backing up
+the Tails Workstations on the occasion of a new SecureDrop release, after you
+have completed the upgrade process for each drive.
+
+You can use a single storage device for backups of multiple workstations. See
+our :doc:`Workstation Backup Guide <../admin/maintenance/backup_workstations>`
+for more information.
+
+Apply Any Available Firewall Updates
+------------------------------------
+As part of SecureDrop maintenance, we recommend checking for software
+updates for the hardware firewall, which may need to be applied manually. If
+you are using one of the recommended firewalls, see :ref:`Keeping pfSense up to date`
+or  see :ref:`Keeping OPNSense up to date`.

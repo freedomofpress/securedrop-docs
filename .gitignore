@@ -1,0 +1,5 @@
+# For building virtual environment in the project directory
+.venv
+
+# IDEs
+.vscode
