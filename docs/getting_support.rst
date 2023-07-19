@@ -3,8 +3,14 @@
 Getting Support
 ===============
 
-There are a several support options available if you need help installing
-SecureDrop, or are looking for help with your existing SecureDrop instance.
+Whether you are interested in learning more about SecureDrop, looking for
+help with an installation, or needing assistance with an existing
+SecureDrop instance, there are several support options available to you.
+
+Freedom of the Press Foundation offers direct support via the official
+:ref:`Support Portal <using_redmine>`.
+
+Additionally, there are multiple platforms available for :ref:`Community Support <community_support>`.
 
 .. note::
 
@@ -281,6 +287,8 @@ or fetch it from a `keyserver <https://keys.openpgp.org/vks/v1/by-fingerprint/D0
 .. |PGPUpload| image:: images/support/pgp_upload.png
 .. |PGPSave| image:: images/support/pgp_save.png
 
+
+.. _community_support:
 
 Community Based Support
 ^^^^^^^^^^^^^^^^^^^^^^^
