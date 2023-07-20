@@ -159,28 +159,93 @@ Once we're finished with the onboarding issue, you're ready to use the Support
 site. If you want to additionally set up encrypted email notifications, head
 over to the :ref:`Encrypted Email Overview <encrypted_email_overview>`.
 
-The rest of this documentation is for your reference.
-
 .. |OnboardingIssue| image:: images/support/onboarding_issue.png
 .. |EditIssue1| image:: images/support/edit_issue_1.png
 .. |EditIssue2| image:: images/support/edit_issue_2.png
 
-One of Redmine's strengths as a ticketing system is its powerful support
-for email-based workflow. You can use email to create new issues, reply
-to existing issues, and be notified of updates to issues that are
-relevant to you.
+Creating a new issue
+--------------------
 
-While many people find email-based workflows convenient, email is
-unfortunately insecure by default. Freedom of the Press Foundation takes
-the security of every SecureDrop instance seriously; therefore, we
-require the use of encryption for support requests because they may
-contain sensitive information about your SecureDrop instance.
+To create a new issue, click **New issue** and fill out the Subject and
+Description fields. All other fields can be left blank, although you can
+assign a priority if you want. When we see the issue, we will respond
+and assign it to the appropriate person. If we're waiting for a reply
+from someone in your organization, we may assign it back to you.
 
-The web interface workflow is automatically encrypted thanks to HTTPS.
-Supporting a secure email-based workflow is more difficult because email
-is unencrypted by default. Our solution is to combine Redmine's
-excellent email-based workflow with OpenPGP encryption, which we already
-use to communicate with many SecureDrop administrators and journalists.
+|NewIssue|
+
+.. |NewIssue| image:: images/support/new_issue.png
+
+Enabling two-factor authentication
+----------------------------------
+Two-factor authentication (2FA) protects your account in the event that your
+passphrase is compromised. Once enabled, you will be prompted to provide a
+one-time six digit code every time you log into the support portal, in addition
+to your passphrase.
+
+To enable 2FA:
+
+1. Choose an application to generate two-factor codes. We recommend the
+   `FreeOTP app <https://freeotp.github.io/>`__ for Android or iOS, but any
+   app that implements the Time-based One Time Password (TOTP) algorithm
+   should work.
+2. If you are not already logged in, log into the support portal.
+3. Click **My account** in the top right corner to navigate to your
+   account settings. On the settings page, click **Enable authenticator app**.
+
+   |2FA setting|
+
+4. You will see a page that shows a QR code, similar to the one below.
+   Use your 2FA app's QR code scanning function to scan the code on the page,
+   or manually enter the 2FA secret (called a "plain text key" here) in the 
+   app.
+
+   |2FA example|
+
+5. Select the account you have just added to your 2FA app, and generate a new
+   one-time token using the app. Enter it on the webpage and click 
+   **Activate**.
+6. You should see a success message like the one below. Follow the 
+   recommendation and click **generate backup codes**.
+
+   |2FA success|
+
+7. You will see a list of codes like the one below. Each code 
+   (e.g., ``ec96 a5d7 c678``) can be used once *instead of* a 2FA code
+   during the login sequence. Store these codes securely and separately
+   from your passphrase. The recommended method is to keep a printout of
+   the recovery codes in a secure location.
+
+   |2FA backup codes|
+
+8. Log out of your account and attempt to log in again. After entering your
+   passphrase, you will additionally be prompted for a two-factor code, which
+   you can generate using your 2FA app.
+
+If you have to reset your 2FA settings at any time, you can use a recovery 
+code. Once you are logged in, disable and then re-enable 2FA from your account
+settings.
+
+Please do not hesitate to open a ticket or email us at
+securedrop@freedom.press (`GPG-encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__)
+if you encounter difficulties using 2FA on the support portal.
+
+.. |2FA setting| image:: images/support/account_settings_with_2fa_highlighted.png
+.. |2FA example| image:: images/support/qr_code_example.png
+.. |2FA success| image:: images/support/2fa_success.png
+.. |2FA backup codes| image:: images/support/2fa_backup_codes.png
+
+Other account settings
+----------------------
+In addition to two-factor authentication, you can also configure your local
+time zone in the account settings.
+
+We encourage you to leave the notification setting as the default:
+"For any event on all my projects".
+
+|Account settings|
+
+.. |Account settings| image:: images/support/account_settings.png
 
 .. _encrypted_email_overview:
 
@@ -287,118 +352,12 @@ or fetch it from a `keyserver <https://keys.openpgp.org/vks/v1/by-fingerprint/D0
 .. |PGPUpload| image:: images/support/pgp_upload.png
 .. |PGPSave| image:: images/support/pgp_save.png
 
-
-.. _community_support:
-
-Community Based Support
-^^^^^^^^^^^^^^^^^^^^^^^
-
-The `SecureDrop forum <https://forum.securedrop.org/>`_ is a good place to
-discuss SecureDrop and to get help from the international community of
-SecureDrop users and developers.
-
-You can also connect directly with the SecureDrop development team and the larger
-SecureDrop community using the
-`SecureDrop Gitter channel <https://gitter.im/freedomofpress/securedrop>`_ .
-
-.. warning::
-
-   Remember that both the SecureDrop forum and the Gitter channel are
-   public. **Do not post any sensitive information through public channels.**
-
-Troubleshooting
-^^^^^^^^^^^^^^^
-
-Creating a new issue
---------------------
-
-To create a new issue, click **New issue** and fill out the Subject and
-Description fields. All other fields can be left blank, although you can
-assign a priority if you want. When we see the issue, we will respond
-and assign it to the appropriate person. If we're waiting for a reply
-from someone in your organization, we may assign it back to you.
-
-|NewIssue|
-
-.. |NewIssue| image:: images/support/new_issue.png
-
 Creating a new issue via email
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sending an email to support@freedom.press will automatically create a
 new issue in your project, using the subject line of the email for the
 Subject and the body of the email for the Description.
-
-Enabling two-factor authentication
-----------------------------------
-Two-factor authentication (2FA) protects your account in the event that your
-passphrase is compromised. Once enabled, you will be prompted to provide a
-one-time six digit code every time you log into the support portal, in addition
-to your passphrase.
-
-To enable 2FA:
-
-1. Choose an application to generate two-factor codes. We recommend the
-   `FreeOTP app <https://freeotp.github.io/>`__ for Android or iOS, but any
-   app that implements the Time-based One Time Password (TOTP) algorithm
-   should work.
-2. If you are not already logged in, log into the support portal.
-3. Click **My account** in the top right corner to navigate to your
-   account settings. On the settings page, click **Enable authenticator app**.
-
-   |2FA setting|
-
-4. You will see a page that shows a QR code, similar to the one below.
-   Use your 2FA app's QR code scanning function to scan the code on the page,
-   or manually enter the 2FA secret (called a "plain text key" here) in the 
-   app.
-
-   |2FA example|
-
-5. Select the account you have just added to your 2FA app, and generate a new
-   one-time token using the app. Enter it on the webpage and click 
-   **Activate**.
-6. You should see a success message like the one below. Follow the 
-   recommendation and click **generate backup codes**.
-
-   |2FA success|
-
-7. You will see a list of codes like the one below. Each code 
-   (e.g., ``ec96 a5d7 c678``) can be used once *instead of* a 2FA code
-   during the login sequence. Store these codes securely and separately
-   from your passphrase. The recommended method is to keep a printout of
-   the recovery codes in a secure location.
-
-   |2FA backup codes|
-
-8. Log out of your account and attempt to log in again. After entering your
-   passphrase, you will additionally be prompted for a two-factor code, which
-   you can generate using your 2FA app.
-
-If you have to reset your 2FA settings at any time, you can use a recovery 
-code. Once you are logged in, disable and then re-enable 2FA from your account
-settings.
-
-Please do not hesitate to open a ticket or email us at
-securedrop@freedom.press (`GPG-encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__)
-if you encounter difficulties using 2FA on the support portal.
-
-.. |2FA setting| image:: images/support/account_settings_with_2fa_highlighted.png
-.. |2FA example| image:: images/support/qr_code_example.png
-.. |2FA success| image:: images/support/2fa_success.png
-.. |2FA backup codes| image:: images/support/2fa_backup_codes.png
-
-Other account settings
-----------------------
-In addition to two-factor authentication, you can also configure your local
-time zone in the account settings.
-
-We encourage you to leave the notification setting as the default:
-"For any event on all my projects".
-
-|Account settings|
-
-.. |Account settings| image:: images/support/account_settings.png
 
 Always sign and encrypt your emails
 -----------------------------------
@@ -455,9 +414,26 @@ per-recipient rule should look like this:
 
 .. |Per-recipientRule| image:: images/support/per_recipient_rule.png
 
-
-Additional Documentation
-------------------------
+Additional Redmine Documentation
+--------------------------------
 
 For more information on using Redmine, consult their `User Guide
 <https://www.redmine.org/projects/redmine/wiki/User_Guide>`_.
+
+.. _community_support:
+
+Community Based Support
+^^^^^^^^^^^^^^^^^^^^^^^
+
+The `SecureDrop forum <https://forum.securedrop.org/>`_ is a good place to
+discuss SecureDrop and to get help from the international community of
+SecureDrop users and developers.
+
+You can also connect directly with the SecureDrop development team and the larger
+SecureDrop community using the
+`SecureDrop Gitter channel <https://gitter.im/freedomofpress/securedrop>`_.
+
+.. warning::
+
+   Remember that both the SecureDrop forum and the Gitter channel are
+   public. **Do not post any sensitive information through public channels.**
