@@ -2,6 +2,8 @@
   <img src="/static/i/logo.png" width="350" height="314">
 </p>
 
+> By contributing to this project, you agree to abide by our [Code of Conduct](https://github.com/freedomofpress/.github/blob/main/CODE_OF_CONDUCT.md).
+
 SecureDrop is an open-source whistleblower submission system that media organizations can use to securely accept documents from, and communicate with anonymous sources. It was originally created by the late Aaron Swartz and is currently managed by the [Freedom of the Press Foundation](https://freedom.press).
 
 This repository is used to build the [public end user documentation](https://docs.securedrop.org/) for SecureDrop.
