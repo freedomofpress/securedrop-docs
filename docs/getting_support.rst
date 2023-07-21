@@ -84,6 +84,82 @@ After your account is activated, you can login and continue to the next step.
 .. |Registration| image:: images/support/register.png
 .. |Activation| image:: images/support/activated.png
 
+Enabling two-factor authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Two-factor authentication (2FA) protects your account in the event that your
+passphrase is compromised. Once enabled, you will be prompted to provide a
+one-time six digit code every time you log into the support portal, in addition
+to your passphrase.
+
+To enable 2FA:
+
+1. Choose an application to generate two-factor codes. We recommend the
+   `FreeOTP app <https://freeotp.github.io/>`__ for Android or iOS, but any
+   app that implements the Time-based One Time Password (TOTP) algorithm
+   should work.
+2. If you are not already logged in, log into the support portal.
+3. Click **My account** in the top right corner to navigate to your
+   account settings. On the settings page, click **Enable authenticator app**.
+
+   |2FA setting|
+
+4. You will see a page that shows a QR code, similar to the one below.
+   Use your 2FA app's QR code scanning function to scan the code on the page,
+   or manually enter the 2FA secret (called a "plain text key" here) in the 
+   app.
+
+   |2FA example|
+
+5. Select the account you have just added to your 2FA app, and generate a new
+   one-time token using the app. Enter it on the webpage and click 
+   **Activate**.
+6. You should see a success message like the one below. Follow the 
+   recommendation and click **generate backup codes**.
+
+   |2FA success|
+
+7. You will see a list of codes like the one below. Each code 
+   (e.g., ``ec96 a5d7 c678``) can be used once *instead of* a 2FA code
+   during the login sequence. Store these codes securely and separately
+   from your passphrase. The recommended method is to keep a printout of
+   the recovery codes in a secure location.
+
+   |2FA backup codes|
+
+8. Log out of your account and attempt to log in again. After entering your
+   passphrase, you will additionally be prompted for a two-factor code, which
+   you can generate using your 2FA app.
+
+If you have to reset your 2FA settings at any time, you can use a recovery 
+code. Once you are logged in, disable and then re-enable 2FA from your account
+settings.
+
+Please do not hesitate to open a ticket or email us at
+securedrop@freedom.press (`GPG-encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__)
+if you encounter difficulties using 2FA on the support portal.
+
+.. |2FA setting| image:: images/support/account_settings_with_2fa_highlighted.png
+.. |2FA example| image:: images/support/qr_code_example.png
+.. |2FA success| image:: images/support/2fa_success.png
+.. |2FA backup codes| image:: images/support/2fa_backup_codes.png
+
+Other account settings
+~~~~~~~~~~~~~~~~~~~~~~
+
+In addition to two-factor authentication, you can also configure your local
+time zone in the account settings.
+
+We encourage you to leave the notification setting as the default:
+"For any event on all my projects".
+
+|Account settings|
+
+.. |Account settings| image:: images/support/account_settings.png
+
+.. _encrypted_email_overview:
+
+
 .. _Logging In:
 
 Logging In
@@ -176,79 +252,6 @@ from someone in your organization, we may assign it back to you.
 
 .. |NewIssue| image:: images/support/new_issue.png
 
-Enabling two-factor authentication
-----------------------------------
-Two-factor authentication (2FA) protects your account in the event that your
-passphrase is compromised. Once enabled, you will be prompted to provide a
-one-time six digit code every time you log into the support portal, in addition
-to your passphrase.
-
-To enable 2FA:
-
-1. Choose an application to generate two-factor codes. We recommend the
-   `FreeOTP app <https://freeotp.github.io/>`__ for Android or iOS, but any
-   app that implements the Time-based One Time Password (TOTP) algorithm
-   should work.
-2. If you are not already logged in, log into the support portal.
-3. Click **My account** in the top right corner to navigate to your
-   account settings. On the settings page, click **Enable authenticator app**.
-
-   |2FA setting|
-
-4. You will see a page that shows a QR code, similar to the one below.
-   Use your 2FA app's QR code scanning function to scan the code on the page,
-   or manually enter the 2FA secret (called a "plain text key" here) in the 
-   app.
-
-   |2FA example|
-
-5. Select the account you have just added to your 2FA app, and generate a new
-   one-time token using the app. Enter it on the webpage and click 
-   **Activate**.
-6. You should see a success message like the one below. Follow the 
-   recommendation and click **generate backup codes**.
-
-   |2FA success|
-
-7. You will see a list of codes like the one below. Each code 
-   (e.g., ``ec96 a5d7 c678``) can be used once *instead of* a 2FA code
-   during the login sequence. Store these codes securely and separately
-   from your passphrase. The recommended method is to keep a printout of
-   the recovery codes in a secure location.
-
-   |2FA backup codes|
-
-8. Log out of your account and attempt to log in again. After entering your
-   passphrase, you will additionally be prompted for a two-factor code, which
-   you can generate using your 2FA app.
-
-If you have to reset your 2FA settings at any time, you can use a recovery 
-code. Once you are logged in, disable and then re-enable 2FA from your account
-settings.
-
-Please do not hesitate to open a ticket or email us at
-securedrop@freedom.press (`GPG-encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__)
-if you encounter difficulties using 2FA on the support portal.
-
-.. |2FA setting| image:: images/support/account_settings_with_2fa_highlighted.png
-.. |2FA example| image:: images/support/qr_code_example.png
-.. |2FA success| image:: images/support/2fa_success.png
-.. |2FA backup codes| image:: images/support/2fa_backup_codes.png
-
-Other account settings
-----------------------
-In addition to two-factor authentication, you can also configure your local
-time zone in the account settings.
-
-We encourage you to leave the notification setting as the default:
-"For any event on all my projects".
-
-|Account settings|
-
-.. |Account settings| image:: images/support/account_settings.png
-
-.. _encrypted_email_overview:
-
 Encrypted Email
 ---------------
 
@@ -266,7 +269,7 @@ contain sensitive information about your SecureDrop instance.
 The web interface workflow is automatically encrypted thanks to HTTPS.
 Supporting a secure email-based workflow is more difficult because email
 is unencrypted by default. Our solution is to combine Redmine's
-excellent email-based workflow with OpenPGP encryption, which we already
+email-based workflow with OpenPGP encryption, which we already
 use to communicate with many SecureDrop administrators and journalists.
 
 What if I don't want to use encrypted email?
@@ -284,8 +287,7 @@ included. This is called a "filtered" email.
 
 We encourage you to use these filtered emails as a reminder to login to
 your Redmine account and check the content of the corresponding updates
-to an issue through the web interface. We like to think of them as "poor
-man's push notifications".
+to an issue through the web interface.
 
 .. note:: We welcome feedback on how we could make notifications for
           this Redmine system more convenient for you.
@@ -298,16 +300,16 @@ Setting up Encrypted Email
 In order to use this encrypted email workflow, you need to:
 
 1. Provide **your public key** to the support server
-2. Import the **server's public key** into your local GPG keyring.
+2. Import the **server's public key** into your local keyring.
 
 The following documentation explains how to perform these steps to get
 the encrypted email workflow working. This documentation assumes you are
 familiar with PGP/GPG. We encourage you to use your preferred GPG key
 management tool and email client.
 
-If you do not know how to do things like import and export GPG keys,
-the encrypted email workflow is not for you. We recommend you stick to
-the :ref:`web-based workflow <using_redmine>`.
+If you are not already familiar with using PGP/GPG keys, we would recommend
+using the :ref:`web-based workflow <using_redmine>` instead of the
+encrypted email workflow.
 
 Providing your public key
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -375,12 +377,7 @@ PGP/MIME vs. inline PGP
 -----------------------
 
 When you're replying to Redmine via email, you **must use PGP/MIME**
-instead of inline PGP. The default settings for the Enigmail plugin in
-Thunderbird should work.
-
-Check your mail client and GPG integration tool's settings to ensure you
-are using PGP/MIME. One notable exception to this is Mailvelope, which
-cannot send PGP/MIME (you shouldn't be using Mailvelope anyway).
+instead of inline PGP. The default settings for Thunderbird should work.
 
 Per-recipient Rules
 -------------------
@@ -389,30 +386,6 @@ You may not want to use these settings (PGP/MIME, always sign) for all
 of your email. If not, most email clients support the concept of
 "Per-recipient rules", which allow you to configure specific settings on
 a per-recipient basis.
-
-Below is an example of how to configure a per-recipient rule for
-support@freedom.press in Thunderbird/Enigmail. If you are not using
-Thunderbird/Enigmail, consult your mail client's documentation.
-
-Thunderbird
------------
-
-To check your global settings, go to Edit > Account Settings in
-Thunderbird. Navigate to the "OpenPGP Security" tab of the email account
-you are using for your Redmine account. Be sure that "Use PGP/MIME by
-default" is checked. If you do not want to enable "Sign messages by
-default" for everything, you should add a per-recipient rule for
-support@freedom.press.
-
-To do so, go to Enigmail > Edit Per-Recipient Rules > Add, and enter
-support@freedom.press. Set to Apply rule if "Contains" the above
-address, select our key, change all of the defaults (Encryption,
-Signing, PGP/MIME) to "Always", then click OK, and OK again. The
-per-recipient rule should look like this:
-
-|Per-recipientRule|
-
-.. |Per-recipientRule| image:: images/support/per_recipient_rule.png
 
 Additional Redmine Documentation
 --------------------------------
