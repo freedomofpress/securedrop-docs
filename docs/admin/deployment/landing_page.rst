@@ -320,6 +320,7 @@ If you use Apache, you can use these:
     Header set Content-Security-Policy: "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
     Header set Referrer-Policy "no-referrer"
     Header set Permissions-Policy "camera 'none'; display-capture 'none'; geolocation 'none'; microphone 'none'; payment 'none'; usb 'none';"
+    Header Request-OTR "?1"
 
 If you intend to run nginx as your webserver instead, this will work:
 
@@ -336,6 +337,7 @@ If you intend to run nginx as your webserver instead, this will work:
     add_header Content-Security-Policy "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';";
     add_header Referrer-Policy "no-referrer";
     add_header Permissions-Policy "camera 'none'; display-capture 'none'; geolocation 'none'; microphone 'none'; payment 'none'; usb 'none';";
+    add_header Request-OTR "?1";
 
 
 Additional Apache Configuration
