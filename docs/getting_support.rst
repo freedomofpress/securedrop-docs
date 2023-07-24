@@ -25,7 +25,7 @@ Support Portal
 
 Because of the sensitive nature of SecureDrop-related communications, we
 recommend that you request an account on the support portal at
-https://support.freedom.press/.
+https://support.freedom.press/ (also available as a Tor onion service: http://sup6h5iyiyenvjkfxbgrjynm5wsgijjoatvnvdgyyi7je3xqm4kh6uqd.onion/).
 
 As a member of the support portal, you will receive notifications regarding
 SecureDrop releases and security advisories, and you will be able to open
