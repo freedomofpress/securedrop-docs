@@ -379,6 +379,8 @@ PGP/MIME vs. inline PGP
 When you're replying to Redmine via email, you **must use PGP/MIME**
 instead of inline PGP. The default settings for Thunderbird should work.
 
+Note that Mailvelope does not support PGP/MIME.
+
 Per-recipient Rules
 -------------------
 
