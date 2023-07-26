@@ -179,6 +179,12 @@ servers:
 
 Select **Done** and press **Enter** to proceed.
 
+.. warning:: The username and password you choose must be the same on both the
+             *Application Server* and the *Monitor Server*. When you deploy
+             SecureDrop from your *Admin Workstation* in a later step, you will
+             only be allowed to enter one password, so it must be identical on
+             both servers.
+
 Ignore Enable Ubuntu Advantage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 On the **Enable Ubuntu Advantage** screen, choose **Done** to proceed without entering
