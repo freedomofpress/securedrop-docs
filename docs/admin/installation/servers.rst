@@ -115,6 +115,18 @@ Select **Save** and press **Enter** to apply your settings. Then select **Done**
 The default values on the **Configure Proxy** and **Configure Ubuntu archive mirror**
 screens should not need to be changed. Select **Done** for both.
 
+Continue Without Updating the Installer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+With the network connection now active, the installer may alert you that a
+newer version of Ubuntu Sever is now available.
+
+It is critical that you use the version of Ubuntu Server you downloaded and
+verified in the previous steps, rather than upgrading to the latest available
+version.
+
+Select the **Continue without updating** option when prompted.
+
 Full Disk Encryption - pros and cons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -166,6 +178,12 @@ servers:
 - **Confirm your password:** Enter the password chosen above.
 
 Select **Done** and press **Enter** to proceed.
+
+.. warning:: The username and password you choose must be the same on both the
+             *Application Server* and the *Monitor Server*. When you deploy
+             SecureDrop from your *Admin Workstation* in a later step, you will
+             only be allowed to enter one password, so it must be identical on
+             both servers.
 
 Ignore Enable Ubuntu Advantage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

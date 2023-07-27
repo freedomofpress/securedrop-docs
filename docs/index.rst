@@ -14,6 +14,9 @@ This documentation is intended for sources, journalists, and administrators.
 If you would like to contribute to SecureDrop, please see our
 `developer documentation <https://developers.securedrop.org/>`_.
 
+.. note:: This documentation is also available as a Tor Onion Service at
+          http://dftlffjdogaragaxkc6jqxpo77s7rrngimyoq7uuq3clowhmttblcoyd.onion/en/stable/.
+
 
 Get Started
 ^^^^^^^^^^^
