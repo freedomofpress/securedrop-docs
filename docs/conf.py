@@ -319,16 +319,17 @@ linkcheck_retries = 3
 linkcheck_workers = 32
 
 linkcheck_ignore = [
-    r"http://127.0.0.1(:\d+)?/?",
+    r"http://127\.0\.0\.1(:\d+)?/?",
     r"http://localhost(:\d+)?/?",
     "https://forum.securedrop.org/admin/users/list/active",
     "https://weblate.securedrop.org/projects/securedrop/securedrop/#announcement",
     "https://weblate.securedrop.org/projects/securedrop/securedrop/#repository",
     "https://github.com/freedomofpress/securedrop-apt-prod",
-    r"https://weblate.securedrop.org/accounts/profile/.*",
-    r"https://github.com/freedomofpress/securedrop/issues/.*",
-    r"https://github.com/freedomofpress/securedrop/tree/.*",
-    r"https://docs.securedrop.org/?$",
-    r"https://support-docs.securedrop.org/?$",
+    r"https://weblate\.securedrop\.org/accounts/profile/.*",
+    r"https://github\.com/freedomofpress/securedrop/issues/.*",
+    r"https://github\.com/freedomofpress/securedrop/tree/.*",
+    r"https://docs\.securedrop\.org/?$",
+    r"https://support-docs\.securedrop\.org/?$",
     "https://support.yubico.com/hc/en-us/articles/360016614780-OATH-HOTP-Yubico-Best-Practices-Guide",
+    r"http://.*\.onion/.*",
 ]
