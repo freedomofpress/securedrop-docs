@@ -80,6 +80,7 @@ to access the servers over SSH.
 
     ~/Persistent/securedrop/install_files/ansible-base/app-sourcev3-ths
     ~/Persistent/securedrop/install_files/ansible-base/app-journalist.auth_private
+    ~/Persistent/securedrop/install_files/ansible-base/group_vars/all/site-specific
 
   Then, boot into the new *Journalist Workstation* USB.
 
@@ -103,9 +104,15 @@ to access the servers over SSH.
     cd ~/Persistent/securedrop
     ./securedrop-admin setup
     ./securedrop-admin tailsconfig
+    rm install_files/ansible-base/group_vars/all/site-specific
 
   .. note:: The ``setup`` command may take several minutes, and may fail partway
             due to network issues. If so, run it again before proceeding.
+            
+            The ``site-specific`` file should be removed after running the
+            ``tailsconfig`` command, as it contains sensitive network and
+            user information that should not reside on the *Journalist
+            Workstation.*
 
 - Once the ``tailsconfig`` command is complete, verify that the *Source* and
   *Journalist Interfaces* are accessible at their v3 addresses via the
