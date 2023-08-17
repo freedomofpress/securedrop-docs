@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "securedrop-docs"
-version = "2.6.0"
+version = "2.6.1"
 description = "SecureDrop documentation for journalists, sources and administrators"
 authors = ["SecureDrop team <securedrop@freedom.press>"]
 readme = "README.md"
