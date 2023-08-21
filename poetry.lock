@@ -514,13 +514,13 @@ test = ["pytest"]
 
 [[package]]
 name = "sphinxcontrib-serializinghtml"
-version = "1.1.7"
+version = "1.1.9"
 description = "sphinxcontrib-serializinghtml is a sphinx extension which outputs \"serialized\" HTML files (json and pickle)"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "sphinxcontrib_serializinghtml-1.1.7-py3-none-any.whl", hash = "sha256:424164fc3a8b4355a29d5ea8b7f18199022d160c8f7b96e68bb6c50217729b87"},
-    {file = "sphinxcontrib_serializinghtml-1.1.7.tar.gz", hash = "sha256:ca31afee32e1508cff4034e258060ce2c81a3b1c49e77da60fdb61f0e7a73c22"},
+    {file = "sphinxcontrib_serializinghtml-1.1.9-py3-none-any.whl", hash = "sha256:9b36e503703ff04f20e9675771df105e58aa029cfcbc23b8ed716019b7416ae1"},
+    {file = "sphinxcontrib_serializinghtml-1.1.9.tar.gz", hash = "sha256:0c64ff898339e1fac29abd2bf5f11078f3ec413cfe9c046d3120d7ca65530b54"},
 ]
 
 [package.dependencies]
