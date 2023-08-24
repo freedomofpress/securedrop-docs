@@ -38,49 +38,42 @@ To set up AW2, follow these steps:
     (You will need to on-board the new admin's 2FA device to complete this step.
     If this is not possible yet, you can defer it until later.)
 4. Insert the empty AW2 USB drive.
-5. Launch the Tails installer (**Applications ▸ Tails ▸ Tails Installer**) and install Tails on AW2.
-   This will delete all data on the AW2 USB drive.
-6. Shut down AW1.
-7. Boot AW2.
-8. Configure its persistent volume (**Applications ▸ Tails ▸ Configure persistent volume**).
-   Set a unique passphrase for AW2 and record it securely. Enable all persistence options.
-9. Reboot AW2, unlock its persistent volume, and set an admin password on the welcome screen.
-10. Open the file manager (**Applications ▸ Accessories ▸ Files**).
-11. Insert AW1. It should show up in the list of storage devices in the file manager under
-    a label like "7.0 GB Encrypted". Click the label and enter the drive
-    password when prompted to unlock it.
-12. In a terminal, type the following command:
-
-    ``rsync -a /media/amnesia/TailsData/Persistent/securedrop ~/Persistent``
-
-    This will copy *only* the ``securedrop`` directory from AW1 to AW2.
-13. Generate a new keypair on AW2 using the following command:
+5. Launch the Tails installer (**Applications ▸ Tails ▸ Tails Installer**).
+   Select the option to **Clone the current Tails.** This will delete all data on the AW2 USB drive.
+6. Check the box marked **Clone the current Persistent Storage.**
+7. Click **Install**.
+8. Choose a unique passphrase for AW2 and record it securely.
+9. Shut down AW1.
+10. Boot AW2, set an Admin password on the welcome screen, unlock the Persistent Storage, and
+    enable all the options in the Persistent Storage settings.
+11. Record the new passphrase for AW2 securely.
+12. Generate a new keypair on AW2 using the following command:
 
     ``ssh-keygen -t rsa -b 4096``
 
     When prompted, store the keypair in the default location.
-14. Run the command ``./securedrop-admin tailsconfig`` in ``~/Persistent/securedrop``.
+13. Run the command ``./securedrop-admin tailsconfig`` in ``~/Persistent/securedrop``.
 
     This will set up desktop shortcuts and SSH access.
-15. Insert AW1. It should show up in the list of storage devices in the file manager under
+14. Insert AW1. It should show up in the list of storage devices in the file manager under
     a label like "7.0 GB Encrypted". Click the label and enter the drive
     password when prompted to unlock it.
-16. In a terminal, type the following commands to authorize the newly created SSH keypair
+15. In a terminal, type the following commands to authorize the newly created SSH keypair
     on your servers:
     ``ssh-add``
     ``ssh-add /media/amnesia/TailsData/openssh-client/id_rsa``
     ``ssh-copy-id app``
     ``ssh-copy-id mon``
     ``ssh-add -D``
-17. Confirm that you are able to access ``mon`` and ``app`` via SSH (``ssh app`` and ``ssh mon``).
-18. Confirm that you are able to access the *Source Interface* and the *Journalist
+16. Confirm that you are able to access ``mon`` and ``app`` via SSH (``ssh app`` and ``ssh mon``).
+17. Confirm that you are able to access the *Source Interface* and the *Journalist
     Interface* using the desktop shortcuts.
-19. :ref:`Initialize a passphrase database <keepassxc_setup>` on AW2.
+18. :ref:`Initialize a passphrase database <keepassxc_setup>` on AW2.
     Store the admin account details using KeePassXC, and other account
     information this admin will need in the course of administering this
     system.
-20. Shut down AW2.
-21. :doc:`Back up AW2 <../maintenance/backup_workstations>`.
+19. Shut down AW2.
+20. :doc:`Back up AW2 <../maintenance/backup_workstations>`.
 
 You can now provide AW2 to the new administrator. Ensure that they store the
 disk encryption passphrase in a secure manner: in most configurations, it is the
