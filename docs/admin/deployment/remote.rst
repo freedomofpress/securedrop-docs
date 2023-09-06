@@ -108,7 +108,7 @@ To create the new SVS USB:
    When you see the welcome dialog, unlock the persistent storage
    volume.
 2. Insert the new (empty) SVS USB.
-3. Launch the Tails installer (**Applications ▸ Tails ▸ Tails Installer**).
+3. Launch the Tails Cloner (**Applications ▸ Tails ▸ Tails Cloner**).
    Select the option to **Clone the current Tails**. 
    This will delete any data on the new SVS drive.
 4. Check the box marked **Clone the current Persistent Storage**.
