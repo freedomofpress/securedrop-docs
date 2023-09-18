@@ -659,13 +659,13 @@ for additional background.
 Network Firewall
 ^^^^^^^^^^^^^^^^
 
-We currently recommend 3 network firewalls:
+We recommend a 4 NIC network firewall and currently provide setup instructions for pfSense and OPNSense. Suitable models include:
 
-* the `TekLager APU4D4 <https://teklager.se/en/products/routers/apu4d4-open-source-router>`__, running `OPNSense <https://opnsense.org/>`__. It has 4 NICs and ports.
+* the `Protectli Vault 4-Port <https://protectli.com/vault-4-port/>`__, running `OPNSense <https://opnsense.org/>`__ configured with `coreboot <https://www.coreboot.org/>`__.
 * the `Netgate SG-4100 <https://shop.netgate.com/products/4100-base-pfsense>`__
-  running `pfSense <https://www.pfsense.org/>`__. It has 4 discrete LAN ports and two dedicated WAN ports.
+  running `pfSense Plus <https://www.pfsense.org/>`__.
 * the `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__
-  running `pfSense <https://www.pfsense.org/>`__. It also has 4 discrete LAN ports with multiple WAN port options. It has more ports than are typically required for SecureDrop, but can be used if the other cheaper firewalls can't be procured.
+  running `pfSense Plus <https://www.pfsense.org/>`__. This device is overspecced for SecureDrop's purposes, but can be used if the other cheaper firewalls can't be procured.
 
 .. _printers_tested_by_fpf:
 
