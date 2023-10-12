@@ -40,7 +40,7 @@ Localization of the *Source Interface* and *Journalist Interface*
 The *Source Interface* and *Journalist Interface* are translated in the following
 languages:
 
-.. include:: ../../includes/l10n.txt
+https://github.com/freedomofpress/securedrop/blob/develop/securedrop/i18n.rst
 
 During the installation you will be given the opportunity to choose from a
 list of supported languages to display using the codes shown in
