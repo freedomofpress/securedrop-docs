@@ -137,6 +137,7 @@ Get Started
    admin/maintenance/ossec_alerts
    admin/maintenance/backup_and_restore
    admin/maintenance/backup_workstations
+   admin/maintenance/update_workstations
    admin/maintenance/update_tails_usbs
    admin/maintenance/kernel_troubleshooting
    admin/maintenance/rebuild_admin

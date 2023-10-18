@@ -13,6 +13,7 @@ readonly OLD_VERSION=$(grep -oP '(?<=^version \= ")\d+\.\d+\.\d+' docs/conf.py)
 
 sed -i "s@$(echo "${OLD_VERSION}" | sed 's/\./\\./g')@$NEW_VERSION@g" docs/admin/installation/set_up_admin_tails.rst
 sed -i "s@$(echo "${OLD_VERSION}" | sed 's/\./\\./g')@$NEW_VERSION@g" docs/admin/maintenance/backup_and_restore.rst
+sed -i "s@$(echo "${OLD_VERSION}" | sed 's/\./\\./g')@$NEW_VERSION@g" docs/admin/maintenance/update_workstations.rst
 sed -i "s@$(echo "${OLD_VERSION}" | sed 's/\./\\./g')@$NEW_VERSION@g" docs/conf.py
 sed -i "s@$(echo "${OLD_VERSION}" | sed 's/\./\\./g')@$NEW_VERSION@g" pyproject.toml
 
