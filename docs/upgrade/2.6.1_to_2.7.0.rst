@@ -3,6 +3,31 @@
 Upgrade from 2.6.1 to 2.7.0
 ===========================
 
+.. note::
+
+   This release will remove support for submission PGP keys with legacy 
+   SHA-1-based binding signatures. The SecureDrop Journalist Interface
+   will not start when the instance has been configured with such a key.
+   If you have set up SecureDrop according to our documentation, you are
+   not using such keys; no SecureDrop instances known to us are affected
+   by this change.
+
+   If you are unsure if you will be affected by this change, you can 
+   reach out to us for support. Our recommended course of action is to
+   check your Submission Public Key, available at the /public-key
+   endpoint of your SecureDrop Source Interface onion url, using the
+   ``sq-keyring-linter`` program installable on your Admin Workstation.
+   If your key contains insecure SHA-1-based signatures, we suggest
+   creating a new Submission Keypair according to our documentation.
+   You should not delete the old key from your Secure Viewing Station,
+   so that you can still decrypt old submissions. We are happy to 
+   assist you with this process. As a reminder, all key material should
+   be generated on an air-gapped machine, and should never reside on a
+   network-connected device.
+
+   For more detailed information about why keys with SHA-1 signatures are
+   insecure, see https://sequoia-pgp.org/blog/2023/02/01/202302-happy-sha1-day/.
+
 Update Servers to SecureDrop 2.7.0
 ----------------------------------
 Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
