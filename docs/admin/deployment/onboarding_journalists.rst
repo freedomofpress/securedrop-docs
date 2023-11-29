@@ -99,7 +99,8 @@ to access the servers over SSH.
 - Open a terminal and run the following commands:
 
   .. code:: sh
-
+    
+    sudo apt update
     cd ~/Persistent/securedrop
     ./securedrop-admin setup
     ./securedrop-admin tailsconfig

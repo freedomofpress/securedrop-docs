@@ -11,6 +11,7 @@ command:
 
 .. code:: sh
 
+    sudo apt update
     ./securedrop-admin setup
 
 The package installation will take approximately 10 minutes or longer, depending

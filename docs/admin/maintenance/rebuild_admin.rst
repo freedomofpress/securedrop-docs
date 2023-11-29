@@ -347,6 +347,7 @@ previous steps. To do so, connect to the Tor network on the
 
 .. code:: sh
 
+ sudo apt update
  cd ~/Persistent/securedrop
  ./securedrop-admin setup
  ./securedrop-admin sdconfig
