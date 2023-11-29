@@ -45,5 +45,6 @@ out the new release: ::
 
 Finally, run the following commands: ::
 
+  sudo apt update
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
