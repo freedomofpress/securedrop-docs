@@ -1,11 +1,13 @@
 ---
 name: CI
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_call]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
+    # We use a standard Debian image to mirror a typical developer environment.
+    # This should be updated whenever a new Debian stable version is available.
     container: debian:bullseye
     steps:
       - uses: actions/checkout@v3
