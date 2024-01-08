@@ -13,7 +13,7 @@ jobs:
     # This should be updated whenever a new Debian stable version is available.
     container: debian:bullseye
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install dependencies
         run: |
           apt-get update && apt-get install --yes --no-install-recommends make python3-pip
