@@ -263,23 +263,13 @@ To open the *Export Device* on the *Secure Viewing Station*, follow these steps:
 1. If your *Export Device* has a physical write protection switch, make sure
    it is in the *unlocked* position.
 2. Plug the *Export Device* into the *Secure Viewing Station*.
-3. Click **Applications ▶ Utilities ▶ Unlock VeraCrypt Volumes**
-4. Under "Partitions and Drives", select the *Export Device* and click
-   **Unlock**.
-5. Enter your passphrase, which we recommend keeping in your own personal
+3. Enter your passphrase, which we recommend keeping in your own personal
    password manager (e.g., on your smartphone), not on *KeePassXC*.
-6. Under "Partitions and Drives", open the encrypted drive by clicking
-   **Open**.
+   
+|Unlock VeraCrypt|
 
-Steps 3-6 are illustrated below:
+4. Click Unlock. 
 
-|Unlock VeraCrypt in Tails 1|
-
-|Unlock VeraCrypt in Tails 2|
-
-|Unlock VeraCrypt in Tails 3|
-
-|Unlock VeraCrypt in Tails 4|
 
 The *Export Device* should now open in the file manager. If there are still
 files on the *Export Device* from your last copy operation,
@@ -395,14 +385,8 @@ bottom of the page. You will be prompted for confirmation.
 
 .. |Wiping documents| image:: ../images/manual/viewing5.png
    :alt: Files application displaying the menu that opens after a right-click on a file. The 'Wipe' entry is selected.
-.. |Unlock VeraCrypt in Tails 1| image:: ../images/manual/unlock_veracrypt_in_tails_1.png
-   :alt: The Applications menu on the Tails desktop. The 'Unlock VeraCrypt Volumes' entry is selected.
-.. |Unlock VeraCrypt in Tails 2| image:: ../images/manual/unlock_veracrypt_in_tails_2.png
-   :alt: Dialog box called 'Unlock VeraCrypt Volumes'. It displays an 'Unlock' button next to a drive name.
-.. |Unlock VeraCrypt in Tails 3| image:: ../images/manual/unlock_veracrypt_in_tails_3.png
-   :alt: Dialog box asking for a passphrase to unlock a VeraCrypt volume. The 'Unlock VeraCrypt Volumes' dialog box can be seen underneath.
-.. |Unlock VeraCrypt in Tails 4| image:: ../images/manual/unlock_veracrypt_in_tails_4.png
-   :alt: Dialog box called 'Unlock VeraCrypt Volumes'. It displays an 'Open' button next to a drive name.
+.. |Unlock VeraCrypt| image:: ../images/manual/unlock_veracrypt_in_tails6.png
+   :alt: The 'Authentication Required' menu that appears when you plug in a Veracrypt drive. The 'password' box is selected.
 .. |br| raw:: html
 
     <br>
