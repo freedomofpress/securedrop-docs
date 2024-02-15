@@ -427,8 +427,8 @@ Specific Hardware Recommendations
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We currently recommend Intel 7-, 8-, 10-, 11-, and 12-series NUCs for SecureDrop
-servers.
+We currently recommend 10-, 11-, and 12-series ASUS (formerly Intel) NUCs for
+SecureDrop servers.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
     extraneous hardware as physically possible from your servers. This
@@ -436,9 +436,9 @@ servers.
     wireless, and Bluetooth cards.
 
 
-The Intel NUC (Next Unit of Computing) is an inexpensive, quiet, low-power
+The NUC (Next Unit of Computing) is an inexpensive, quiet, low-power
 device that can be used for the SecureDrop servers. There are a
-`variety of models <https://www.intel.com/content/www/us/en/products/boards-kits/nuc.html>`__
+`variety of models <https://www.asus.com/us/content/nuc-overview/>`__
 to choose from.
 
 NUCs typically come as kits, and some assembly is required. You will need to
@@ -450,10 +450,11 @@ NUC before it can be used. We recommend:
    -  You can put one 8GB memory stick in each of the servers.
 
 .. _nucc12_recommendation:
+.. _intel-12th-gen-nuc:
 
-Intel 12th-gen NUC
-~~~~~~~~~~~~~~~~~~
-We have tested and can recommend the `Intel NUC12WSKi5 <https://ark.intel.com/content/www/us/en/ark/products/121625/intel-nuc-12-pro-mini-pc-nuc12wski5.html>`__.
+12th-gen NUC
+~~~~~~~~~~~~
+We have tested and can recommend the `NUC12WSKi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/nuc-12-pro-mini-pc/techspec/>`__.
 It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
 22x42 port for a SATA drive.
 
@@ -467,16 +468,17 @@ after disconnecting them.
 
   The location of the wireless card within the NUC12
 
-.. _nuc11_recommendation:
-
 Because of the newer hardware and the drivers required, you will need to use a
 newer Linux kernel than the one that ships by default in the version of Ubuntu
 Server we recommend. To do so, select the "Boot and Install with the HWE
 Kernel" option in the boot menu for Ubuntu Server.
 
-Intel 11th-gen NUC
-~~~~~~~~~~~~~~~~~~
-We have tested and can recommend the `Intel NUC11PAHi3 <https://ark.intel.com/content/www/us/en/ark/products/205033/intel-nuc-11-performance-kit-nuc11pahi3.html>`__.
+.. _nuc11_recommendation:
+.. _intel-11th-gen-nuc:
+
+11th-gen NUC
+~~~~~~~~~~~~
+We have tested and can recommend the `NUC11PAHi3 <https://www.asus.com/us/displays-desktops/nucs/nuc-kits/nuc-11-performance-kit/techspec/>`__.
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
 
@@ -505,10 +507,11 @@ startup and adjust the system configuration:
 .. |NUC11 leads| image:: ../../images/hardware/nuc11_leads.jpg
 
 .. _nuc10_recommendation:
+.. _intel-10th-gen-nuc:
 
-Intel 10th-gen NUC
-~~~~~~~~~~~~~~~~~~
-We have tested and can recommend the `Intel NUC10i5FNH <https://ark.intel.com/content/www/us/en/ark/products/189239/intel-nuc-10-performance-kit-nuc10i5fnh.html>`__.
+10th-gen NUC
+~~~~~~~~~~~~
+We have tested and can recommend the `NUC10i5FNH <https://simplynuc.com/product/nuc10i5fnhn-full/>`__.
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
 
@@ -535,54 +538,25 @@ startup and adjust the system configuration:
 .. |NUC10 leads| image:: ../../images/hardware/nuc10_leads.jpg
 
 .. _nuc8_recommendation:
+.. _intel-8th-gen-nuc:
 
-Intel 8th-gen NUC
-~~~~~~~~~~~~~~~~~
-
-We have tested and can recommend the `NUC8i5BEK <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc8i5bek.html>`__.
-It provides a single storage option: an M.2 NVMe or SATA SSD.
-
-The NUC8i5BEK has soldered-on wireless components, which cannot easily be
-removed. Before installation of the RAM and storage, we recommend that you
-disconnect the wireless antennae leads:
-
-|NUC8 leads|
-
-Before the initial OS installation, boot into the BIOS by pressing **F2** at
-startup and adjust the system configuration:
-
-- Under **Advanced ▸ Devices ▸ Onboard Devices**, disable all onboard devices
-  other than LAN: audio, audio DSP, microphone, Thunderbolt, WLAN, Bluetooth,
-  and SD card.
-
-- Under **Advanced ▸ Security**, disable SGX support, which is not used by
-  SecureDrop and may be targeted by active CPU exploits.
-
-- Under **Advanced ▸ Boot ▸ Secure Boot**, uncheck the **Secure Boot** checkbox.
-
-.. |NUC8 leads| image:: ../../images/hardware/nuc8_leads.jpg
+8th-gen NUC
+~~~~~~~~~~~~
+We previously recommended the NUC8i5BEK, however it is now end-of-life so we
+recommend replacing it with a version that the manufacturer supports. While SecureDrop
+will most likely continue working in the short-term, we will no longer be testing on
+this hardware.
 
 .. _nuc7_recommendation:
+.. _intel-7th-gen-nuc:
 
-Intel 7th-gen NUC
-~~~~~~~~~~~~~~~~~
+7th-gen NUC
+~~~~~~~~~~~~
+We previously recommended the NUC7i5BNH, however it is now end-of-life so we
+recommend replacing it with a version that the manufacturer supports. While SecureDrop
+will most likely continue working in the short-term, we will no longer be testing on
+this hardware.
 
-We have tested and can recommend the `NUC7i5BNH <https://ark.intel.com/content/www/us/en/ark/products/95067/intel-nuc-kit-nuc7i5bnh.html>`__.
-
-The NUC7i5BNH has soldered-on wireless components, which cannot easily be
-removed. Before installation of the RAM and storage, we recommend that you
-disconnect the wireless antennae leads:
-
-|NUC7 leads|
-
-Before the initial OS installation, boot into the BIOS by pressing **F2** at
-startup and adjust the system configuration:
-
-- Under **Advanced ▸ Devices ▸ Onboard Devices**, disable all onboard devices
-  other than LAN: audio, audio DSP, microphone, Thunderbolt, WLAN, Bluetooth,
-  and SD card.
-
-.. |NUC7 leads| image:: ../../images/hardware/nuc7-leads.jpg
 
 Journalist Workstation and Admin Workstation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -619,12 +593,12 @@ removed the wireless components with ease. It's possible to re-purpose old
 laptops from other manufacturers, as long as the wireless components are
 removable.
 
-Just as with the servers, you can also use an Intel NUC for the *SVS*. As noted
+Just as with the servers, you can also use a NUC for the *SVS*. As noted
 before, NUCs do not ship with a hard drive, and older models can be configured
 without any wireless components. However, NUCs *do* contain an IR receiver,
 which we recommend taping over with opaque masking tape.
 
-If you choose to use an Intel NUC, you must use an older model that offers wireless
+If you choose to use a NUC, you must use a model that offers wireless
 as an **option** (described as something like ``M.2 22×30 slot and wireless antenna
 pre-assembled (for wireless card support)``). If a model is advertised as having
 "integrated wireless" (most newer NUC models), this means the wireless
@@ -731,15 +705,15 @@ we recommend upgrading to newer, supported hardware.
 For the hardware we recommend, you can find a list of end-of-life dates below:
 
 ===================  ====================================================
-Hardware             End-of-Life (EOL)                                       
+Hardware             End-of-Life (EOL)
 ===================  ====================================================
-Intel NUC12WSKi5     Not yet confirmed
-Intel NUC11PAHi3     June 30, 2025                                       
-Intel NUC10i5FNH     June 25, 2024                                       
-Intel NUC8i5BEK      March 26, 2024                                      
-Intel NUC7i5BNH      April 30, 2023                                      
-Thinkpad T420 (SVS)  Already EOL; use only for airgapped SVS                 
-Thinkpad T Series    EOL dates vary; consult with manufacturer           
+NUC12WSKi5           Not yet confirmed
+NUC11PAHi3           June 30, 2025
+NUC10i5FNH           June 25, 2024
+NUC8i5BEK            March 26, 2024
+NUC7i5BNH            April 30, 2023 (already EOL)
+Thinkpad T420 (SVS)  Already EOL; use only for airgapped SVS
+Thinkpad T Series    EOL dates vary; consult with manufacturer
 TekLager APU4D4      Not yet confirmed
 Netgate SG-4100      Not yet confirmed (will be 2 years after sales stop)
 Netgate SG-6100      Not yet confirmed (will be 2 years after sales stop)
