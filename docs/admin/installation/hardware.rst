@@ -449,8 +449,33 @@ NUC before it can be used. We recommend:
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
 
-.. _nucc12_recommendation:
-.. _intel-12th-gen-nuc:
+.. _nuc13_recommendation:
+
+Intel 13th-gen NUC
+~~~~~~~~~~~~~~~~~~
+We have tested and can recommend the `Intel NUC13ANHi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-13-pro/>`__.
+It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
+22x42 port for a SATA drive. It also has a 2.5 inch drive bay for a SATA hard
+drive or SSD (if using this slot, we recommend choosing an SSD).
+
+The NUC13's AX211 wireless hardware is removable. Doing so requires the use of
+a 5mm nut driver. Before installation of the RAM and storage, we recommend that
+you remove the wireless card and disconnect the wireless antennae leads
+from the AX211 component. Be sure to cover the free ends with electrical tape
+after disconnecting them.
+
+.. figure:: ../../images/hardware/nuc13_leads.jpg
+
+  The location of the wireless card within the NUC13
+  
+.. note:: The wireless card is located underneath the 22x80 NVMe port
+
+Because of the newer hardware and the drivers required, you will need to use a
+newer Linux kernel than the one that ships by default in the version of Ubuntu
+Server we recommend. To do so, select the "Boot and Install with the HWE
+Kernel" option in the boot menu for Ubuntu Server.
+
+.. _nuc12_recommendation:
 
 12th-gen NUC
 ~~~~~~~~~~~~
@@ -474,11 +499,9 @@ Server we recommend. To do so, select the "Boot and Install with the HWE
 Kernel" option in the boot menu for Ubuntu Server.
 
 .. _nuc11_recommendation:
-.. _intel-11th-gen-nuc:
-
-11th-gen NUC
-~~~~~~~~~~~~
-We have tested and can recommend the `NUC11PAHi3 <https://www.asus.com/us/displays-desktops/nucs/nuc-kits/nuc-11-performance-kit/techspec/>`__.
+Intel 11th-gen NUC
+~~~~~~~~~~~~~~~~~~
+We have tested and can recommend the `Intel NUC11PAHi3 <https://ark.intel.com/content/www/us/en/ark/products/205033/intel-nuc-11-performance-kit-nuc11pahi3.html>`__.
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
 
@@ -707,13 +730,14 @@ For the hardware we recommend, you can find a list of end-of-life dates below:
 ===================  ====================================================
 Hardware             End-of-Life (EOL)
 ===================  ====================================================
-NUC12WSKi5           Not yet confirmed
-NUC11PAHi3           June 30, 2025
-NUC10i5FNH           June 25, 2024
-NUC8i5BEK            March 26, 2024
-NUC7i5BNH            April 30, 2023 (already EOL)
-Thinkpad T420 (SVS)  Already EOL; use only for airgapped SVS
-Thinkpad T Series    EOL dates vary; consult with manufacturer
+Intel NUC13ANHi5     Not yet confirmed
+Intel NUC12WSKi5     Not yet confirmed
+Intel NUC11PAHi3     June 30, 2025                                       
+Intel NUC10i5FNH     June 25, 2024                                       
+Intel NUC8i5BEK      March 26, 2024                                      
+Intel NUC7i5BNH      April 30, 2023                                      
+Thinkpad T420 (SVS)  Already EOL; use only for airgapped SVS                 
+Thinkpad T Series    EOL dates vary; consult with manufacturer           
 TekLager APU4D4      Not yet confirmed
 Netgate SG-4100      Not yet confirmed (will be 2 years after sales stop)
 Netgate SG-6100      Not yet confirmed (will be 2 years after sales stop)
