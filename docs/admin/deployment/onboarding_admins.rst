@@ -62,7 +62,7 @@ To set up AW2, follow these steps:
     When prompted, store the keypair in the default location.
 15. Run the command ``./securedrop-admin tailsconfig`` in ``~/Persistent/securedrop``.
 
-    This will set up desktop shortcuts and SSH access.
+    This will set up the *SecureDrop Menu* and SSH access.
 16. In a terminal, type the following commands to authorize the newly created SSH keypair
     on your servers:
     
@@ -81,7 +81,7 @@ To set up AW2, follow these steps:
         mon
 
 19. Confirm that you are able to access the *Source Interface* and the *Journalist
-    Interface* using the desktop shortcuts.
+    Interface* using the *SecureDrop Menu*.
 20. :ref:`Initialize a passphrase database <keepassxc_setup>` on AW2.
     Store the admin account details using KeePassXC, and other account
     information this admin will need in the course of administering this

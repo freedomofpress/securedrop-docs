@@ -42,11 +42,9 @@ collected from files in
 ``~/Persistent/securedrop/install_files/ansible-base`` and stored in
 ``~/Persistent/.securedrop/torrc_additions`` thereafter.
 
-In addition, the script creates desktop and menu shortcuts for the Source
-and *Journalist Interfaces*, directs Tails to install Ansible at the
-beginning of every session, and sets up SSH host aliases for the servers.
-
-The script is also responsible for enabling the *SecureDrop Menu*.
+In addition, the script creates the *SecureDrop Menu*, directs Tails to
+install Ansible at the beginning of every session, and sets up SSH host
+aliases for the servers.
 
 The only thing you need to remember to do is enable
 persistence when you boot the *Admin Workstation*. If you are
