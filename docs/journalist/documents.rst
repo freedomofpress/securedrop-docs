@@ -387,6 +387,7 @@ bottom of the page. You will be prompted for confirmation.
    :alt: Files application displaying the menu that opens after a right-click on a file. The 'Wipe' entry is selected.
 .. |Unlock VeraCrypt| image:: ../images/manual/unlock_veracrypt_in_tails6.png
    :alt: The 'Authentication Required' menu that appears when you plug in a Veracrypt drive. The 'password' box is selected.
+   :width: 100%
 .. |br| raw:: html
 
     <br>
