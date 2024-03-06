@@ -6,6 +6,9 @@ updates:
       interval: "weekly"
     allow:
       - dependency-type: "all"
+    groups:
+        dependencies:
+          patterns: ["*"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
