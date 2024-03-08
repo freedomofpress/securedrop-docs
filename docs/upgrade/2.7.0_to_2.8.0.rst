@@ -96,14 +96,16 @@ Follow our instructions to :ref:`update Tails manually <Update Tails Manually>`.
 
 Step 3: Apply SecureDrop-specific configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Boot up the updated workstation and run the following commands in a terminal: ::
+Boot up the updated workstation, connect to the Tor network, and run the
+following commands in a terminal: ::
 
   cd ~/Persistent/securedrop
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
 
-This will create a Python virtual environment compatible with Tails 6 and
-re-apply the SecureDrop-specific configuration on your workstation.
+You must run these commands on Tails 6 even if you have just run them on
+Tails 5. This will create a Python virtual environment compatible with Tails 6
+and re-apply the SecureDrop-specific configuration on your workstation.
 
 Step 4: Verify that the workstation works as expected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -116,6 +118,7 @@ you are booting a *Journalist Workstation* or an *Admin Workstation*.
 Confirm that all options work as expected.
 
 .. note:: Support for desktop shortcuts has been removed in Tails 6.
+  Use the *Securedrop Menu* to access all SecureDrop-related features.
 
 .. |The SecureDrop Menu| image:: ../images/securedrop_menu.png
    :alt: The SecureDrop Menu, showing all available options.
