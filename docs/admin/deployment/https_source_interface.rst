@@ -130,9 +130,9 @@ the Admin Workstation:
     $ ./onion-csr.rb -n <nonce> -d ./hsdir
 
 .. _`specific URL`: https://docs.digicert.com/manage-certificates/organization-domain-management/managing-domains-cc-guide/add-authorize-domain-http-dcv/
-.. _`DigiCert's documentation`: https://www.digicert.com/dc/blog/ordering-a-onion-certificate-from-digicert/
+.. _`DigiCert's documentation`: https://www.digicert.com/blog/ordering-a-onion-certificate-from-digicert
 .. |HTTPS Onion cert| image:: ../../images/screenshots/onion-url-certificate.png
-.. _`contact DigiCert directly`: https://www.digicert.com/dc/blog/ordering-a-onion-certificate-from-digicert/
+.. _`contact DigiCert directly`: https://www.digicert.com/blog/ordering-a-onion-certificate-from-digicert
 .. _`CAB Forum`: https://cabforum.org/2015/02/18/ballot-144-validation-rules-dot-onion-names/
 .. _`Harica`: https://www.harica.gr/
 
