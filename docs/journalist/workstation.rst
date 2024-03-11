@@ -172,7 +172,7 @@ the *Submission Private Key*. To recall the conversation history between your
 organization and sources, you can also download replies and transfer them to
 the *Secure Viewing Station* for decryption.
 
-.. |Connect to Tor in Tails| image:: ../images/tails_5x/tails_5-tca_with_default_settings.png
+.. |Connect to Tor in Tails| image:: ../images/tails_6x/tails_6-tca_with_default_settings.png
    :alt: Tor Connection Assistant with default settings.
 .. |Journalist Interface Login| image:: ../images/manual/screenshots/journalist-index_with_text.png
    :alt: Login page to access the journalist interface. It requires a username, passphrase and two-factor authentication token.

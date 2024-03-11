@@ -384,8 +384,8 @@ Once the command completes successfully, run
 
 Once this command is complete:
 
- - verify that the desktop shortcuts for the *Source* and *Journalist Interfaces*
-   work correctly, opening their respective homepages in Tor Browser.
+ - verify that the *SecureDrop Menu* for the *Source* and *Journalist Interfaces*
+   works correctly, opening their respective homepages in Tor Browser.
 
 To revert the changes made to enable temporary local SSH access, you
 should reboot the servers, by issuing the following commands in a terminal:
@@ -431,8 +431,8 @@ Once this command completes:
    to refer to Onion URLs instead of direct IP addresses
  - verify that you can connect to
    the servers using ``ssh app`` and ``ssh mon``
- - verify that the desktop shortcuts for the *Source* and *Journalist Interfaces*
-   work correctly, opening their respective homepages in Tor Browser.
+ - verify that the *SecureDrop Menu* for the *Source* and *Journalist Interfaces*
+   works correctly, opening their respective homepages in Tor Browser.
 
 Step 8: Post-rebuild tasks
 ==========================

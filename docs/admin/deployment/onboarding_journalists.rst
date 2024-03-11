@@ -110,7 +110,7 @@ to access the servers over SSH.
 
 - Once the ``tailsconfig`` command is complete, verify that the *Source* and
   *Journalist Interfaces* are accessible at their v3 addresses via the
-  SecureDrop desktop shortcuts.
+  SecureDrop Menu.
 
 - Securely wipe the files on the *Transfer Device*, by right-clicking them
   in the file manager and selecting **Wipe**.
