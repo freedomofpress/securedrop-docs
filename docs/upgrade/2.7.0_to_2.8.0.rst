@@ -84,6 +84,7 @@ out the new release: ::
 
 Finally, run the following commands: ::
 
+  sudo apt update
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
 
@@ -100,6 +101,7 @@ Boot up the updated workstation, connect to the Tor network, and run the
 following commands in a terminal: ::
 
   cd ~/Persistent/securedrop
+  sudo apt update
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
 
