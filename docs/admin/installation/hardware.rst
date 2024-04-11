@@ -451,9 +451,9 @@ NUC before it can be used. We recommend:
 
 .. _nuc13_recommendation:
 
-Intel 13th-gen NUC
+ASUS 13th-gen NUC
 ~~~~~~~~~~~~~~~~~~
-We have tested and can recommend the `Intel NUC13ANHi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-13-pro/>`__.
+We have tested and can recommend the `ASUS NUC13ANHi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-13-pro/>`__.
 It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
 22x42 port for a SATA drive. It also has a 2.5 inch drive bay for a SATA hard
 drive or SSD (if using this slot, we recommend choosing an SSD).
