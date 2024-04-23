@@ -428,7 +428,8 @@ Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We currently recommend 10-, 11-, and 12-series ASUS (formerly Intel) NUCs for
-SecureDrop servers.
+SecureDrop servers. 10-12th generation NUCs are produced by Intel, after which ASUS
+took over production beginning with the 13th generation.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
     extraneous hardware as physically possible from your servers. This
@@ -499,6 +500,7 @@ Server we recommend. To do so, select the "Boot and Install with the HWE
 Kernel" option in the boot menu for Ubuntu Server.
 
 .. _nuc11_recommendation:
+
 Intel 11th-gen NUC
 ~~~~~~~~~~~~~~~~~~
 We have tested and can recommend the `Intel NUC11PAHi3 <https://ark.intel.com/content/www/us/en/ark/products/205033/intel-nuc-11-performance-kit-nuc11pahi3.html>`__.
