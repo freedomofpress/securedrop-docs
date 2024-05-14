@@ -78,7 +78,7 @@ making these decisions.
    visit regularly.
 
 .. _`Tor Project's website`: https://www.torproject.org/
-.. _`Tails operating system`: https://tails.boum.org/
+.. _`Tails operating system`: https://tails.net/
 .. _`@GetTor_bot on Telegram`: https://t.me/gettor_bot
 
 Choose Who to Submit To

@@ -563,7 +563,7 @@ Journalist Workstation and Admin Workstation
 
 Both the *Journalist Workstation* and the *Admin Workstation* must be compatible
 with the Tails operating system. Compare any hardware you want to procure or
-allocate for this purpose against the `list of known issues <https://tails.boum.org/support/known_issues/index.en.html>`__
+allocate for this purpose against the `list of known issues <https://tails.net/support/known_issues/index.en.html>`__
 maintained by the Tails project, but please be advised that the list is far
 from exhaustive.
 

@@ -50,7 +50,7 @@ behind.
   even if your browser is compromised by malware, attackers cannot easily gain
   access to other data stored on the same computer.
 
-  See the Tails guide to `Browsing the web with Tor Browser <https://tails.boum.org/doc/anonymous_internet/Tor_Browser/index.en.html>`__
+  See the Tails guide to `Browsing the web with Tor Browser <https://tails.net/doc/anonymous_internet/Tor_Browser/index.en.html>`__
   for more information.
 
 Step 2: Copy the encrypted submission to the *Transfer Device*
@@ -115,10 +115,8 @@ one window to another. A faster method is to drag the file to the
    they could be recoverable in the future.
 
 After successfully copying them to the *Secure Viewing Station*, erase the
-files from your *Transfer Device*. Ensure you're viewing the *Transfer Device* folder, then right click on the files that need removal and click "Wipe" to
-securely delete the files from your device.
-
-|Wiping documents|
+files from your *Transfer Device*. Ensure you're viewing the *Transfer Device* folder, then right click on the files that need removal and click "Move to Trash", then navigate to "Trash" folder in
+the sidebar, and select "Empty Trash".
 
 To decrypt and view documents or messages, return to your **Persistent** folder.
 All key actions are initiated by double-clicking:
@@ -178,8 +176,6 @@ default application.
 
 .. _working_with_documents:
 
-.. |Wiping documents| image:: ../images/manual/viewing5.png
-   :alt: Files application displaying the menu that opens after a right-click on a file. The 'Wipe' entry is selected.
 .. |Load external content| image:: ../images/manual/screenshots/journalist-clicks_on_source_and_selects_documents.png
    :alt: Example source page displaying two files: a document and a message, both selected. A button 'Download Selected' is visible above the list of files.
 .. |Download selected| image:: ../images/manual/tbb_Document5.png

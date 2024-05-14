@@ -111,7 +111,7 @@ To create the new SVS USB:
    When you see the welcome dialog, you can proceed without enabling persistence
    or setting an admin password.
 2. Install Tails on the new SVS USB, following the instructions
-   `here. <https://tails.boum.org/install/clone/pc/index.en.html>`_
+   `here. <https://tails.net/install/clone/pc/index.en.html>`_
 3. Boot into the new SVS USB and enable persistence with a strong passphrase
    (a 6-word Diceware passphrase is recommended). In the Persistent volume
    configuration wizard, be sure to enable persistence for “GnuPG - GnuPG

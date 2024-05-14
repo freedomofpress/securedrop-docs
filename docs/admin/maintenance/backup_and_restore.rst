@@ -417,7 +417,7 @@ process.
    **Disks** utility.
 
 .. _contact Support: https://support-docs.securedrop.org/
-.. _an administration password: https://tails.boum.org/doc/first_steps/welcome_screen/administration_password
+.. _an administration password: https://tails.net/doc/first_steps/welcome_screen/administration_password
 
 .. _migrate_v2:
 

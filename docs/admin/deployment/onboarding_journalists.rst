@@ -112,8 +112,9 @@ to access the servers over SSH.
   *Journalist Interfaces* are accessible at their v3 addresses via the
   SecureDrop Menu.
 
-- Securely wipe the files on the *Transfer Device*, by right-clicking them
-  in the file manager and selecting **Wipe**.
+- Delete the files on the *Transfer Device* by right-clicking them
+  in the file manager, selecting **Move to Trash**, then navigating to **Trash**
+  in the sidebar and selecting **Empty Trash**.
 
 
 .. warning:: The ``app-journalist.auth_private`` file contains secret

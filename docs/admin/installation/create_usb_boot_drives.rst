@@ -22,7 +22,7 @@ which is needed to install the underlying server OS for your
 Tails Introduction
 ------------------
 
-`Tails <https://tails.boum.org>`__ is a privacy-enhancing live operating
+`Tails <https://tails.net>`__ is a privacy-enhancing live operating
 system that runs on removable media, such as a DVD or a USB stick. It
 sends all your Internet traffic through Tor, does not touch your
 computer's hard drive, and securely wipes unsaved work on shutdown.
@@ -43,15 +43,15 @@ backups, but for now you just need two.
 Install Tails
 ~~~~~~~~~~~~~
 
-The `Tails website <https://tails.boum.org/>`__ has detailed and
+The `Tails website <https://tails.net/>`__ has detailed and
 up-to-date instructions on how to download and verify Tails, and how to
 create a bootable Tails USB drive.
 
 Follow the instructions at these links and then return to this page:
 
 -  `Download and verify the Tails image
-   file <https://tails.boum.org/install/download/index.en.html>`__
--  `Install onto a USB drive <https://tails.boum.org/install/index.en.html>`__
+   file <https://tails.net/install/download/index.en.html>`__
+-  `Install onto a USB drive <https://tails.net/install/index.en.html>`__
 
 .. important:: Make sure you verify the Tails .img file using one of the methods
    described on the Tails website.
@@ -83,7 +83,7 @@ For instructions on how to generate a strong passphrase, see :doc:`the
 Passphrases page <passphrases>`.
 
 Please use the instructions on the `Tails website
-<https://tails.boum.org/doc/persistent_storage/index.en.html>`__
+<https://tails.net/doc/persistent_storage/index.en.html>`__
 to make the persistent volume on each Tails drive you create. When
 creating the persistence volume, you will be asked to select from a
 list of features, such as 'Personal Data'. You should enable **all** features by

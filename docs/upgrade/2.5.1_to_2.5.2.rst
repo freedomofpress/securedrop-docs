@@ -19,7 +19,7 @@ Using the graphical updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
 the *SecureDrop Workstation Updater* will alert you to workstation updates. You
-must have `configured an administrator password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`_
+must have `configured an administrator password <https://tails.net/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
 Perform the update to 2.5.2 by clicking "Update Now":
