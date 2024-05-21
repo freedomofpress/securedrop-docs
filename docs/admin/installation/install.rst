@@ -104,7 +104,7 @@ is mounted. From the root of the SecureDrop repository, run: ::
 where ``/media/[USB folder]/`` corresponds to the *Transfer Device*. (You can
 also use the copy and paste capabilities of the file manager.)
 
-Repeat this step for the Admin GPG key.
+Next, copy the *OSSEC Alert Public Key* into ``install_files/ansible-base`` as well.
 
 .. _ansible-site-specific:
 
