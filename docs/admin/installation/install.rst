@@ -33,8 +33,6 @@ on network speed and computing power.
                **not** as root. Contact the SecureDrop team if the package
                installation encounters repeated errors.
 
-.. _configure_securedrop:
-
 Localization of the *Source Interface* and *Journalist Interface*
 -----------------------------------------------------------------
 
@@ -51,6 +49,8 @@ parentheses.
           submitting documents are likely to expect a journalist fluent in
           French to be available to read the documents and follow up in that
           language.
+
+.. _configure_securedrop:
 
 Configure the Installation
 --------------------------

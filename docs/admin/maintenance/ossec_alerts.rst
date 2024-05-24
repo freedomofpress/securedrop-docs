@@ -31,12 +31,11 @@ the destination address can be securedrop@freedom.press.
 
 What you need:
 
-- The *OSSEC Alert Public Key*
-- The fingerprint of the key used when encrypting OSSEC alerts
+- The *OSSEC Alert Public Key* and its fingerprint
 - The email address that will receive alerts from OSSEC
 - The reachable hostname of your SMTP relay
 - The secure SMTP port of your SMTP relay
-  (typically 25, 587, or 465. must support TLS encryption)
+  (typically 25, 587, or 465; must support TLS encryption)
 - An email username to authenticate to the SMTP relay
 - The domain name of the email used to send OSSEC alerts
 - The password of the email used to send OSSEC alerts
@@ -56,8 +55,11 @@ solutions should be able to meet those requirements.
 
 These values must be set in the 
 :ref:`configuration playbook<configure_securedrop>` by running the
-``securedrop-admin sdconfig`` command, which will prompt for each of the
-items listed above.
+``./securedrop-admin sdconfig`` command, which will prompt for each of the
+items listed above. Please note, this command updates the configuration,
+but does not apply it to the servers. Any time you make changes to
+the configuration it is necessary to deploy them with the
+``./securedrop-admin install`` command.
 
 If you don't know what value to enter for one of these, please ask your
 organization's email admin for the full configuration before
@@ -82,7 +84,7 @@ although we've described some common scenarios in the
 
 If you have your *OSSEC Alert Public Key* public key handy, copy it to
 ``install_files/ansible-base`` and then specify the filename, e.g.
-``ossec.pub``, when prompted by ``securedrop-admin sdconfig``.
+``ossec.pub``, when prompted by ``./securedrop-admin sdconfig``.
 
 If you don't have your GPG key ready, you can run GnuPG on the command line in
 order to find, import, and export your public key. It's best to copy the key
@@ -141,8 +143,8 @@ send the alerts instead of where you're receiving them. If that e-mail
 is ossec@news-org.com, the SASL Username would be OSSEC and
 the SASL Domain would be news-org.com.
 
-After setting those values, ``securedrop-admin sdconfig`` will exit and return
-you to the command line. In most cases, you will then be ready to 
+After setting those values, ``./securedrop-admin sdconfig`` will exit and
+return you to the command line. In most cases, you will then be ready to 
 :ref:`proceed with the installation <Install SecureDrop Servers>`.
 
 The Postfix configuration enforces certificate verification, and
@@ -195,7 +197,7 @@ for the SMTP settings to enable OSSEC alerts.
          not allow mail to be sent. In order to be able to create an app
          password, you must have 2-Step Verification enabled on the Gmail account.
 
-Once the account is created you can log out and run ``securedrop-admin sdconfig``,
+Once the account is created you can log out and run ``./securedrop-admin sdconfig``,
 setting the SASL username as your new Gmail username (without the domain),
 the SASL domain to be either gmail.com or your custom Google
 Apps domain, and then finally your SASL password. Remember to use the app password
@@ -295,8 +297,8 @@ OSSEC service.
 
 .. tip:: If you change the SMTP relay port after installation for any
          reason, you must update the SMTP relay port using
-         ``securedrop-admin sdconfig`` and deploy using
-         ``securedrop-admin install``.
+         ``./securedrop-admin sdconfig`` and deploy using
+         ``./securedrop-admin install``.
 
 Useful log files for OSSEC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
