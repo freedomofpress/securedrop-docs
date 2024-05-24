@@ -168,9 +168,9 @@ Upgrade Documentation`_ on how to upgrade the drives.
 
 .. include:: ../../includes/update-gui.txt
 
-.. _`Tails RSS Feed`: https://tails.boum.org/news/index.en.rss
+.. _`Tails RSS Feed`: https://tails.net/news/index.en.rss
 .. _`Tails
-   Upgrade Documentation`: https://tails.boum.org/doc/upgrade/index.en.html
+   Upgrade Documentation`: https://tails.net/doc/upgrade/index.en.html
 
 .. _monitoring_ossec:
 

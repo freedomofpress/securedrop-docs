@@ -15,7 +15,7 @@ they release a new version ahead of the normal cycle in order to address a
 security issue. For regular Tails OS and security information, check out the
 Tails `Security page`_ and subscribe to the Tails RSS/Atom feed.
 
-.. _Security page: https://tails.boum.org/security/index.en.html
+.. _Security page: https://tails.net/security/index.en.html
 
 
 Update via Graphical Installer
@@ -69,7 +69,7 @@ computer and follow the graphical updater prompts that guide you through the
 Alternatively, you can also download and :ref:`install the newest version of Tails from scratch <setup_install_tails>` (as you did when you first installed SecureDrop). This may be faster if your *primary Tails USB* has not been updated in a while,
 and is necessary for Tails releases that do not support automatic updates.
 
-.. _update process: https://tails.boum.org/doc/upgrade/index.en.html
+.. _update process: https://tails.net/doc/upgrade/index.en.html
 
 .. _Step 3:
 
@@ -96,7 +96,7 @@ While writing to the USB disk, Tails may appear to be frozen, or a dialog may ap
 that the application is unresponsive. In the latter case, click **Wait**
 (repatedly if needed) until the operation is complete.
 
-.. _manual update steps: https://tails.boum.org/upgrade/clone/index.en.html
+.. _manual update steps: https://tails.net/upgrade/clone/index.en.html
 
 
 If you encounter issues
