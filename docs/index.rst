@@ -121,6 +121,7 @@ Get Started
    admin/deployment/onboarding_journalists
    admin/deployment/onboarding_admins
    admin/deployment/yubikey_setup
+   admin/deployment/tor_pow
    admin/deployment/https_source_interface
    admin/deployment/ssh_over_local_net
    admin/deployment/remote
