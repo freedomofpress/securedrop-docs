@@ -18,11 +18,16 @@ onion services running with this feature helps improve the resilience of the Tor
 network.
 
 
+.. _enable_tor_pow:
+
 Enabling the proof-of-work defense
 ----------------------------------
 
-Make sure you have :doc:`installed SecureDrop already
-<../installation/install>`.  Then, on the *Admin Workstation*:
+If you're :doc:`installing SecureDrop for the first time
+<../installation/install>`, the proof-of-work defense will be enabled by
+default, unless you :ref:`explicitly disable it <disable_tor_pow>`.
+
+To enable it on an existing SecureDrop instance, on the *Admin Workstation*:
 
 .. code:: sh
 
@@ -42,10 +47,12 @@ The Tor configuration will be updated to enable the proof-of-work defense.  When
 the script finishes, confirm that you can access the Source Interface.
 
 
+.. _disable_tor_pow:
+
 Disabling the proof-of-work-defense
 -----------------------------------
 
-Follow the instructions given above for enabling the proof-of-work defense, but
-answer ``no`` at the prompt::
+Follow the instructions above for :ref:`enabling the proof-of-work defense
+<enable_tor_pow>`, but answer ``no`` at the prompt::
 
     Enable Tor's proof-of-work defense against denial-of-service attacks for the Source Interface?: no
