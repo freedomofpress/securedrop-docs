@@ -1,16 +1,13 @@
-# sha256 as of 2023-10-16
-FROM python:3.9-slim-bullseye@sha256:b3415be51b8d2c8f35a6eb3db85e9ccdedf12beaa3b18ed4c2f769889717d02a AS sphinx
+FROM debian:bookworm AS sphinx
 
 ARG GIT_BRANCH=main
-RUN apt-get -q update && apt-get -qy upgrade && apt-get -qy install git make latexmk texlive-latex-extra
+RUN apt-get -q update && apt-get -qy upgrade && apt-get -qy install git make latexmk texlive-latex-extra python3-poetry
 COPY ./ .
-RUN pip install poetry==1.4.0
 RUN poetry install
-# TODO: Once the latest stable tag uses poetry, we can drop the `poetry run` prefix
-RUN poetry run deploy/build $GIT_BRANCH
+RUN deploy/build $GIT_BRANCH
 
-# sha256 as of 2023-10-16
-FROM nginx:mainline-alpine-slim@sha256:1b0cb433e90260a96528c987ee78b797e842d510473935304a0931536d10f50d
+# sha256 as of 2024-06-10
+FROM nginx:mainline-alpine-slim@sha256:244d37691a469d45349d9f29e8b7462d9f510b70c0c93acc5d23ee227070c962
 
 COPY deploy/nginx.conf /etc/nginx
 RUN mkdir -p /opt/nginx/run /opt/nginx/webroot/en/latest /opt/nginx/webroot/en/stable && chown -R nginx:nginx /opt/nginx
