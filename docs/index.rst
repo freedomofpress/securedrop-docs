@@ -157,7 +157,6 @@ Get Started
    upgrade/2.6.0_to_2.6.1.rst
    upgrade/2.5.2_to_2.6.0.rst
    upgrade/2.5.1_to_2.5.2.rst
-   upgrade/2.5.0_to_2.5.1.rst
 
 Get Involved
 ^^^^^^^^^^^^
