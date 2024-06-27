@@ -151,12 +151,12 @@ Get Started
    :maxdepth: 2
    :hidden:
 
+   upgrade/2.8.0_to_2.9.0.rst
    upgrade/2.7.0_to_2.8.0.rst
    upgrade/2.6.1_to_2.7.0.rst
    upgrade/2.6.0_to_2.6.1.rst
    upgrade/2.5.2_to_2.6.0.rst
    upgrade/2.5.1_to_2.5.2.rst
-   upgrade/2.5.0_to_2.5.1.rst
 
 Get Involved
 ^^^^^^^^^^^^

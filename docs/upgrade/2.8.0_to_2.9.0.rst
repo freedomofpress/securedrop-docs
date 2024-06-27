@@ -1,16 +1,29 @@
-Upgrade from 2.7.0 to 2.8.0
+.. _latest_upgrade_guide:
+
+Upgrade from 2.8.0 to 2.9.0
 ===========================
 
-Update Servers to SecureDrop 2.8.0
+.. note::
+    SecureDrop 2.9.0 provides the option to enable Tor Proof-of-Work
+    defenses for the *Source Interface* to protect against network attacks.
+    
+    This will be enabled automatically for new installations, but existing
+    installations will require this feature to be manually enabled.
+    
+    To enable Tor proof-of-work defenses, please refer to
+    :doc:`our guide here. <../admin/deployment/tor_pow>`
+
+Update Servers to SecureDrop 2.9.0
 ----------------------------------
 Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
 automatically within 24 hours of the release.
 
-Update Workstations to SecureDrop 2.8.0 and Tails 6
+Update Workstations to SecureDrop 2.9.0 and Tails 6
 ---------------------------------------------------
-SecureDrop 2.8.0 is the first release with support for the Tails 6 release
-series based on Debian Bookworm. The upgrade from Tails 5 must be performed
-manually.
+If you have not already upgraded to Tails 6 alogside the 2.8.0 release,
+you should do so as part of this upgrade. Please note that the upgrade
+from Tails 6 must be performed manually. If you have already upgraded
+to Tails 6, you only need to complete Step 1 below.
 
 .. important:: We always recommend backing up your workstations prior to
   an upgrade, but we *especially* recommend it before a major Tails version
@@ -25,7 +38,7 @@ to Tails 6 **must** be fully performed on an air-gapped machine.
 To upgrade your *Journalist Workstation* and *Admin Workstation* USB drives,
 complete the following steps for each USB drive:
 
-1. Update to SecureDrop 2.8.0 using the graphical updater
+1. Update to SecureDrop 2.9.0 using the graphical updater
 2. Perform a manual upgrade to Tails 6
 3. Apply SecureDrop-specific configuration
 4. Verify that the workstation works as expected.
@@ -33,7 +46,7 @@ complete the following steps for each USB drive:
 These steps are further explained below. If these steps fail unexpectedly, please get
 in touch.
 
-Step 1: Update to SecureDrop 2.8.0 using the graphical updater
+Step 1: Update to SecureDrop 2.9.0 using the graphical updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
@@ -41,7 +54,7 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.net/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 2.8.0 by clicking "Update Now":
+Perform the update to 2.9.0 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
@@ -61,7 +74,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
-  git tag -v 2.8.0
+  git tag -v 2.9.0
 
 The output should include the following two lines: ::
 
@@ -74,9 +87,9 @@ on the screen of your workstation. A warning that the key is not certified
 is normal and expected. If the output includes the lines above, you can check
 out the new release: ::
 
-    git checkout 2.8.0
+    git checkout 2.9.0
 
-.. important:: If you do see the warning "refname '2.8.0' is ambiguous" in the
+.. important:: If you do see the warning "refname '2.9.0' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
