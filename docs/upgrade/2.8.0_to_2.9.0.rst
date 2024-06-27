@@ -3,6 +3,16 @@
 Upgrade from 2.8.0 to 2.9.0
 ===========================
 
+.. note::
+    SecureDrop 2.9.0 provides the option to enable Tor Proof-of-Work
+    defenses for the *Source Interface* to protect against network attacks.
+    
+    This will be enabled automatically for new installations, but existing
+    installations will require this feature to be manually enabled.
+    
+    To enable Tor proof-of-work defenses, please refer to
+    :doc:`our guide here. <../admin/deployment/tor_pow>`
+
 Update Servers to SecureDrop 2.9.0
 ----------------------------------
 Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
