@@ -10,7 +10,7 @@ SecureDrop instance, there are several support options available to you.
 Freedom of the Press Foundation offers direct support via the official
 :ref:`Support Portal <using_redmine>`.
 
-Additionally, there are multiple platforms available for :ref:`Community Support <community_support>`.
+Additionally, there is also some level of :ref:`Community Support <community_support>`.
 
 .. note::
 
@@ -400,15 +400,11 @@ For more information on using Redmine, consult their `User Guide
 Community Based Support
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-The `SecureDrop forum <https://forum.securedrop.org/>`_ is a good place to
-discuss SecureDrop and to get help from the international community of
-SecureDrop users and developers.
-
-You can also connect directly with the SecureDrop development team and the larger
+You can connect directly with the SecureDrop development team and the larger
 SecureDrop community using the
 `SecureDrop Gitter channel <https://gitter.im/freedomofpress/securedrop>`_.
 
 .. warning::
 
-   Remember that both the SecureDrop forum and the Gitter channel are
-   public. **Do not post any sensitive information through public channels.**
+   Remember that the Gitter channel is public.
+   **Do not post any sensitive information through public channels.**
