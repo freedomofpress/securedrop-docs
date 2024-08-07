@@ -254,34 +254,32 @@ from someone in your organization, we may assign it back to you.
 
 Encrypted Email
 ---------------
-
-One of Redmine's strengths as a ticketing system is its powerful support
-for email-based workflow. You can use email to create new issues, reply
-to existing issues, and be notified of updates to issues that are
-relevant to you.
-
 While many people find email-based workflows convenient, email is
 unfortunately insecure by default. Freedom of the Press Foundation takes
 the security of every SecureDrop instance seriously; therefore, we
 require the use of encryption for support requests because they may
 contain sensitive information about your SecureDrop instance.
 
-The web interface workflow is automatically encrypted thanks to HTTPS.
-Supporting a secure email-based workflow is more difficult because email
-is unencrypted by default. Our solution is to combine Redmine's
-email-based workflow with OpenPGP encryption, which we already
-use to communicate with many SecureDrop administrators and journalists.
+After setting up your account, you will have the option of enabling
+encrypted email. If you aren't already familiar with PGP, or don't already
+have PGP set up in your email client, we don't recommend setting it up.
 
-What if I don't want to use encrypted email?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The primary benefit of enabling encrypted email is that you can receive
+the full contents of messages and notifications directly in your
+email without needing to login to the support website.
 
-That's fine! You can do everything through the web interface that you
-can do through email.
+However, we recognize that using encryption requires the use of email
+clients or plugins, and increases the time it takes to review emails.
+Depending on your workflow, it may be preferable to leave encrypted
+email disabled.
 
-If you don't do the setup process for receiving encrypted emails from
-our support server, you will still receive email alerts for changes to
-issues in your project, but the content of the email will not be
-included. This is called a "filtered" email.
+If you prefer not to enable encrypted email, you will still receive
+notifications for issues that are available to you. Rather than
+containing the sensitive contents from the message itself, the 
+(filtered) email notification will alert you to an update within the
+support system, and you can visit the web interface to view and interact
+with the issue. This is the same security pattern used by many bank websites,
+and the web interface workflow is automatically encrypted thanks to HTTPS.
 
 |FilteredEmail|
 
