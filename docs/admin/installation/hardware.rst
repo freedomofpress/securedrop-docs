@@ -426,21 +426,19 @@ Specific Hardware Recommendations
 
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We recommend using NUCs for the servers and routinely test new models for compatibility.
+NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet,
+and low-power devices, which makes them suitable for deployment in a wide range
+of environments. Originally produced by Intel, ASUS has taken over production
+beginning with the 13th generation.
 
-We currently recommend 10-, 11-, and 12-series ASUS (formerly Intel) NUCs for
-SecureDrop servers. 10-12th generation NUCs are produced by Intel, after which ASUS
-took over production beginning with the 13th generation.
+There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`__
+to choose from. We currently recommend the 11th through 13th generation NUC models listed below.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
     extraneous hardware as physically possible from your servers. This
     could include: speakers, cameras, microphones, fingerprint readers,
     wireless, and Bluetooth cards.
-
-
-The NUC (Next Unit of Computing) is an inexpensive, quiet, low-power
-device that can be used for the SecureDrop servers. There are a
-`variety of models <https://www.asus.com/us/content/nuc-overview/>`__
-to choose from.
 
 NUCs typically come as kits, and some assembly is required. You will need to
 purchase the RAM and hard drive separately for each NUC and insert both into the
@@ -452,8 +450,8 @@ NUC before it can be used. We recommend:
 
 .. _nuc13_recommendation:
 
-ASUS 13th-gen NUC
-~~~~~~~~~~~~~~~~~~
+13th-gen NUC
+~~~~~~~~~~~~
 We have tested and can recommend the `ASUS NUC13ANHi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-13-pro/>`__.
 It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
 22x42 port for a SATA drive. It also has a 2.5 inch drive bay for a SATA hard
@@ -501,9 +499,9 @@ Kernel" option in the boot menu for Ubuntu Server.
 
 .. _nuc11_recommendation:
 
-Intel 11th-gen NUC
-~~~~~~~~~~~~~~~~~~
-We have tested and can recommend the `Intel NUC11PAHi3 <https://ark.intel.com/content/www/us/en/ark/products/205033/intel-nuc-11-performance-kit-nuc11pahi3.html>`__.
+11th-gen NUC
+~~~~~~~~~~~~
+We have tested and can recommend the `Intel NUC11PAHi3 <https://www.asus.com/us/displays-desktops/nucs/nuc-kits/nuc-11-performance-kit/techspec/>`__.
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
 
@@ -532,13 +530,14 @@ startup and adjust the system configuration:
 .. |NUC11 leads| image:: ../../images/hardware/nuc11_leads.jpg
 
 .. _nuc10_recommendation:
-.. _intel-10th-gen-nuc:
 
 10th-gen NUC
 ~~~~~~~~~~~~
-We have tested and can recommend the `NUC10i5FNH <https://simplynuc.com/product/nuc10i5fnhn-full/>`__.
-It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
-option (SSD or HDD).
+We previously recommended the NUC10i5FNH, however it is now end-of-life so we
+recommend replacing it with a version that the manufacturer supports. While SecureDrop
+will most likely continue working in the short-term, we will no longer be testing on
+this hardware. The instructions below are included only for reference and will
+be removed in the near future.
 
 The NUC10's AX201 wireless hardware is not removable. Before installation of the
 RAM and storage, we recommend that you disconnect the wireless antennae leads
@@ -563,7 +562,6 @@ startup and adjust the system configuration:
 .. |NUC10 leads| image:: ../../images/hardware/nuc10_leads.jpg
 
 .. _nuc8_recommendation:
-.. _intel-8th-gen-nuc:
 
 8th-gen NUC
 ~~~~~~~~~~~~
@@ -573,7 +571,6 @@ will most likely continue working in the short-term, we will no longer be testin
 this hardware.
 
 .. _nuc7_recommendation:
-.. _intel-7th-gen-nuc:
 
 7th-gen NUC
 ~~~~~~~~~~~~
@@ -732,7 +729,7 @@ For the hardware we recommend, you can find a list of end-of-life dates below:
 ===================  ====================================================
 Hardware             End-of-Life (EOL)
 ===================  ====================================================
-Intel NUC13ANHi5     Not yet confirmed
+ASUS NUC13ANHi5      Not yet confirmed
 Intel NUC12WSKi5     Not yet confirmed
 Intel NUC11PAHi3     June 30, 2025                                       
 Intel NUC10i5FNH     June 25, 2024                                       
