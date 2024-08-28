@@ -426,20 +426,19 @@ Specific Hardware Recommendations
 
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We recommend using NUCs for the servers and routinely test new models for compatibility.
+NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet,
+and low-power devices, which makes them suitable for deployment in a wide range
+of environments. Originally produced by Intel, ASUS has taken over production
+beginning with the 13th generation.
 
-We currently recommend 10-, 11-, and 12-series ASUS (formerly Intel) NUCs for
-SecureDrop servers.
+There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`__
+to choose from. We currently recommend the 11th through 13th generation NUC models listed below.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
     extraneous hardware as physically possible from your servers. This
     could include: speakers, cameras, microphones, fingerprint readers,
     wireless, and Bluetooth cards.
-
-
-The NUC (Next Unit of Computing) is an inexpensive, quiet, low-power
-device that can be used for the SecureDrop servers. There are a
-`variety of models <https://www.asus.com/us/content/nuc-overview/>`__
-to choose from.
 
 NUCs typically come as kits, and some assembly is required. You will need to
 purchase the RAM and hard drive separately for each NUC and insert both into the
@@ -449,8 +448,33 @@ NUC before it can be used. We recommend:
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
 
-.. _nucc12_recommendation:
-.. _intel-12th-gen-nuc:
+.. _nuc13_recommendation:
+
+13th-gen NUC
+~~~~~~~~~~~~
+We have tested and can recommend the `ASUS NUC13ANHi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-13-pro/>`__.
+It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
+22x42 port for a SATA drive. It also has a 2.5 inch drive bay for a SATA hard
+drive or SSD (if using this slot, we recommend choosing an SSD).
+
+The NUC13's AX211 wireless hardware is removable. Doing so requires the use of
+a 5mm nut driver. Before installation of the RAM and storage, we recommend that
+you remove the wireless card and disconnect the wireless antennae leads
+from the AX211 component. Be sure to cover the free ends with electrical tape
+after disconnecting them.
+
+.. figure:: ../../images/hardware/nuc13_leads.jpg
+
+  The location of the wireless card within the NUC13
+  
+.. note:: The wireless card is located underneath the 22x80 NVMe port
+
+Because of the newer hardware and the drivers required, you will need to use a
+newer Linux kernel than the one that ships by default in the version of Ubuntu
+Server we recommend. To do so, select the "Boot and Install with the HWE
+Kernel" option in the boot menu for Ubuntu Server.
+
+.. _nuc12_recommendation:
 
 12th-gen NUC
 ~~~~~~~~~~~~
@@ -474,11 +498,10 @@ Server we recommend. To do so, select the "Boot and Install with the HWE
 Kernel" option in the boot menu for Ubuntu Server.
 
 .. _nuc11_recommendation:
-.. _intel-11th-gen-nuc:
 
 11th-gen NUC
 ~~~~~~~~~~~~
-We have tested and can recommend the `NUC11PAHi3 <https://www.asus.com/us/displays-desktops/nucs/nuc-kits/nuc-11-performance-kit/techspec/>`__.
+We have tested and can recommend the `Intel NUC11PAHi3 <https://www.asus.com/us/displays-desktops/nucs/nuc-kits/nuc-11-performance-kit/techspec/>`__.
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
 
@@ -507,13 +530,14 @@ startup and adjust the system configuration:
 .. |NUC11 leads| image:: ../../images/hardware/nuc11_leads.jpg
 
 .. _nuc10_recommendation:
-.. _intel-10th-gen-nuc:
 
 10th-gen NUC
 ~~~~~~~~~~~~
-We have tested and can recommend the `NUC10i5FNH <https://simplynuc.com/product/nuc10i5fnhn-full/>`__.
-It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
-option (SSD or HDD).
+We previously recommended the NUC10i5FNH, however it is now end-of-life so we
+recommend replacing it with a version that the manufacturer supports. While SecureDrop
+will most likely continue working in the short-term, we will no longer be testing on
+this hardware. The instructions below are included only for reference and will
+be removed in the near future.
 
 The NUC10's AX201 wireless hardware is not removable. Before installation of the
 RAM and storage, we recommend that you disconnect the wireless antennae leads
@@ -538,7 +562,6 @@ startup and adjust the system configuration:
 .. |NUC10 leads| image:: ../../images/hardware/nuc10_leads.jpg
 
 .. _nuc8_recommendation:
-.. _intel-8th-gen-nuc:
 
 8th-gen NUC
 ~~~~~~~~~~~~
@@ -548,7 +571,6 @@ will most likely continue working in the short-term, we will no longer be testin
 this hardware.
 
 .. _nuc7_recommendation:
-.. _intel-7th-gen-nuc:
 
 7th-gen NUC
 ~~~~~~~~~~~~
@@ -707,13 +729,14 @@ For the hardware we recommend, you can find a list of end-of-life dates below:
 ===================  ====================================================
 Hardware             End-of-Life (EOL)
 ===================  ====================================================
-NUC12WSKi5           Not yet confirmed
-NUC11PAHi3           June 30, 2025
-NUC10i5FNH           June 25, 2024
-NUC8i5BEK            March 26, 2024
-NUC7i5BNH            April 30, 2023 (already EOL)
-Thinkpad T420 (SVS)  Already EOL; use only for airgapped SVS
-Thinkpad T Series    EOL dates vary; consult with manufacturer
+ASUS NUC13ANHi5      Not yet confirmed
+Intel NUC12WSKi5     Not yet confirmed
+Intel NUC11PAHi3     June 30, 2025                                       
+Intel NUC10i5FNH     June 25, 2024                                       
+Intel NUC8i5BEK      March 26, 2024                                      
+Intel NUC7i5BNH      April 30, 2023                                      
+Thinkpad T420 (SVS)  Already EOL; use only for airgapped SVS                 
+Thinkpad T Series    EOL dates vary; consult with manufacturer           
 TekLager APU4D4      Not yet confirmed
 Netgate SG-4100      Not yet confirmed (will be 2 years after sales stop)
 Netgate SG-6100      Not yet confirmed (will be 2 years after sales stop)
