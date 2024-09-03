@@ -140,10 +140,11 @@ let us know and we can remove your instance from the directory.
 URL and Location
 ----------------
 
-Ideally you would not use a separate subdomain, but would use a path at
-your top-level domain, e.g. organization.com/securedrop. This is because
-TLS does not encrypt the hostname, so a SecureDrop user whose connection
-is being monitored would be trivially discovered.
+Your *Landing Page* must be a path at your top-level domain, e.g. 
+organization.com/securedrop, rather than a subdomain (e.g., 
+securedrop.organization.com). This is because TLS does not encrypt the hostname,
+so a SecureDrop user whose connection is being monitored would be trivially
+discovered if you were to use a subdomain.
 
 If the *Landing Page* is deployed on the same domain as another site, you
 might consider having some specific configuration (such as the security
