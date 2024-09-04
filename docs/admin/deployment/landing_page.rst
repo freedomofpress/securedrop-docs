@@ -142,7 +142,7 @@ URL and Location
 
 Your *Landing Page* must be a path at your top-level domain, e.g. 
 organization.com/securedrop, rather than a subdomain (e.g., 
-securedrop.organization.com). This is because TLS does not encrypt the hostname,
+securedrop.organization.com). This is because DNS and TLS do not always encrypt the hostname,
 so a SecureDrop user whose connection is being monitored would be trivially
 discovered if you were to use a subdomain.
 
