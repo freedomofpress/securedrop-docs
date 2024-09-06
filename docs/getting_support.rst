@@ -87,14 +87,11 @@ After your account is activated, you can login and continue to the next step.
 Enabling two-factor authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Two-factor authentication (2FA) protects your account in the event that your
-passphrase is compromised. Once enabled, you will be prompted to provide a
-one-time six digit code every time you log into the support portal, in addition
-to your passphrase.
+Two-factor authentication (2FA) adds an extra layer of security to your account by requiring a one-time
+six-digit code each time you log into the support portal, in addition to your passphrase.
 
-Two-factor authentication is required to use the support portal. After creating
-your account, or after logging into an existing account, you will be prompted
-to enable 2FA. To do so:
+2FA is required to use the support portal. After creating or logging into your account, you will be
+prompted to enable 2FA. To do so:
 
 1. Choose an application to generate two-factor codes. We recommend the
    `FreeOTP app <https://freeotp.github.io/>`__ for Android or iOS, but any
