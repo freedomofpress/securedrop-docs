@@ -84,13 +84,13 @@ SSH key, you should rotate the key in the following manner.
 
     .. code:: sh
 
-      scp /home/amnesia/.ssh/newkey.pub scp://app
+      scp -O /home/amnesia/.ssh/newkey.pub scp://app
 
     and
 
     .. code:: sh
 
-      scp /home/amnesia/.ssh/newkey.pub scp://mon
+      scp -O /home/amnesia/.ssh/newkey.pub scp://mon
 
 
 #.  Add this key to the list of authorized keys.
