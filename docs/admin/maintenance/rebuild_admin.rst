@@ -7,7 +7,7 @@ backup exists, it is possible to rebuild one. In order to do so, you'll need
  - physical access to the SecureDrop servers
  - 2 USB sticks:
 
-   - Tails Master USB
+   - Tails Template USB
    - 1 replacement *Admin Workstation* USB (USB3 and 16GB or better recommended)
 
 The process requires experience with the Linux command line and Tails, and

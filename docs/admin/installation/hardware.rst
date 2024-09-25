@@ -25,7 +25,7 @@ For an installation of SecureDrop, you must acquire:
   are using a desktop for the *Secure Viewing Station*).
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
-* Plenty of USB sticks: 1 drive for the master Tails stick, 1 drive for each
+* Plenty of USB sticks: 1 drive for the Template Tails stick, 1 drive for each
   Secure Viewing Station, 1 drive for each *Transfer Device*, 1 drive for each
   *Export Device*, and 1 drive for each admin and journalist.
 

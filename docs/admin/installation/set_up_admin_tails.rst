@@ -220,7 +220,7 @@ After configuring the password database, restart KeePassXC once to verify
 that you are able to access it as expected.
 
 .. warning:: You will not be able to access your passwords if you
-         forget the master password or the location of the key
+         forget the peristent storage password or the location of the key
          file used to protect the database.
 
 In case you wish to manually create a database, the suggested password fields in

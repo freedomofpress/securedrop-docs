@@ -69,7 +69,7 @@ SecureDrop instance.
    storage called the **LUKS header**) should be sufficient to make any existing
    data on those drives unrecoverable.
 
-   For example, you could use your *primary Tails USB* to launch Gnome Disks,
+   For example, you could use your *Template Tails USB* to launch Gnome Disks,
    insert and identify the USB drive you are trying to erase, and reformat this
    drive with a new, LUKS-encrypted partition, erasing the existing partition
    data.

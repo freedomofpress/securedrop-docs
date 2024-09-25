@@ -58,8 +58,8 @@ The journalist will be using the *Journalist Workstation* with Tails to
 connect to the *Journalist Interface*. The tasks performed by the journalist
 will require the following set of passphrases:
 
--  A master passphrase for the persistent volume on the Tails device.
--  A master passphrase for the KeePassXC password manager, which unlocks
+-  A passphrase for the persistent volume on the Tails device.
+-  A passphrase for the KeePassXC password manager, which unlocks
    the passphrase for logging into the *Journalist Interface*.
 
 The journalist will also need to have a two-factor authenticator, such
@@ -77,7 +77,7 @@ The journalist will be using the *Secure Viewing Station* with Tails to
 decrypt and view submitted documents. The tasks performed by the
 journalist will require the following passphrases:
 
--  A master passphrase for the persistent volume on the Tails device.
+-  A passphrase for the persistent volume on the Tails device.
 
 The backup that is created during the installation of SecureDrop is also
 encrypted with the application's GPG key. The backup is stored on the
