@@ -55,7 +55,7 @@ Handling File Formats
 ~~~~~~~~~~~~~~~~~~~~~
 
 SecureDrop accepts submissions of any file type. Tails comes with
-`pre-installed applications <https://tails.boum.org/doc/about/features/index.en.html>`__
+`pre-installed applications <https://tails.net/doc/about/features/index.en.html>`__
 for securely working with documents, including an office suite, graphics
 tools, desktop publishing tools, audio tools, and printing and scanning tools.
 
@@ -144,9 +144,8 @@ example, converting a ``.xls`` file to a ``.csv``) to ensure that metadata is
 not left behind in error.
 
 When you no longer need documents, right-click them in the Files application
-and choose **Wipe** to securely delete them.
-
-|Wiping documents|
+and choose **Move to Trash**, then navigate to **Trash** in the sidebar
+and select **Empty Trash**.
 
 .. _`guide to removing metadata`: https://freedom.press/training/everything-you-wanted-know-about-media-metadata-were-afraid-ask/
 
@@ -231,7 +230,7 @@ or via the `support portal <https://support.freedom.press/>`__. Please do **NOT*
 disclose details about the contents of any submission you have received.
 
 .. _`QR codes can contain malicious links`: https://securedrop.org/news/security-advisory-do-not-scan-qr-codes-submitted-through-securedrop-connected-devices
-.. _`working with sensitive documents`: https://tails.boum.org/doc/sensitive_documents/index.en.html
+.. _`working with sensitive documents`: https://tails.net/doc/sensitive_documents/index.en.html
 .. _`Metadata Anonymisation Toolkit 2`: https://mat.boum.org/
 
 Moving Documents to Your Everyday Workstation
@@ -263,28 +262,17 @@ To open the *Export Device* on the *Secure Viewing Station*, follow these steps:
 1. If your *Export Device* has a physical write protection switch, make sure
    it is in the *unlocked* position.
 2. Plug the *Export Device* into the *Secure Viewing Station*.
-3. Click **Applications ▶ Utilities ▶ Unlock VeraCrypt Volumes**
-4. Under "Partitions and Drives", select the *Export Device* and click
-   **Unlock**.
-5. Enter your passphrase, which we recommend keeping in your own personal
+3. Enter your passphrase, which we recommend keeping in your own personal
    password manager (e.g., on your smartphone), not on *KeePassXC*.
-6. Under "Partitions and Drives", open the encrypted drive by clicking
-   **Open**.
+   
+|Unlock VeraCrypt|
 
-Steps 3-6 are illustrated below:
+4. Click Unlock. 
 
-|Unlock VeraCrypt in Tails 1|
-
-|Unlock VeraCrypt in Tails 2|
-
-|Unlock VeraCrypt in Tails 3|
-
-|Unlock VeraCrypt in Tails 4|
 
 The *Export Device* should now open in the file manager. If there are still
 files on the *Export Device* from your last copy operation,
-`securely delete <https://tails.boum.org/doc/encryption_and_privacy/secure_deletion/index.en.html#index3h1>`__
-them now.
+delete them by moving them to the Trash, and then selecting **Empty Trash**.
 
 Copy the file or files you want to access on your everyday workstation to the
 *Export Device* using the file manager.
@@ -393,16 +381,9 @@ bottom of the page. You will be prompted for confirmation.
 .. |mat2 cli show| image:: ../images/manual/screenshots/mat2_cli_show.png
    :alt: Terminal application displaying the metadata of a file.
 
-.. |Wiping documents| image:: ../images/manual/viewing5.png
-   :alt: Files application displaying the menu that opens after a right-click on a file. The 'Wipe' entry is selected.
-.. |Unlock VeraCrypt in Tails 1| image:: ../images/manual/unlock_veracrypt_in_tails_1.png
-   :alt: The Applications menu on the Tails desktop. The 'Unlock VeraCrypt Volumes' entry is selected.
-.. |Unlock VeraCrypt in Tails 2| image:: ../images/manual/unlock_veracrypt_in_tails_2.png
-   :alt: Dialog box called 'Unlock VeraCrypt Volumes'. It displays an 'Unlock' button next to a drive name.
-.. |Unlock VeraCrypt in Tails 3| image:: ../images/manual/unlock_veracrypt_in_tails_3.png
-   :alt: Dialog box asking for a passphrase to unlock a VeraCrypt volume. The 'Unlock VeraCrypt Volumes' dialog box can be seen underneath.
-.. |Unlock VeraCrypt in Tails 4| image:: ../images/manual/unlock_veracrypt_in_tails_4.png
-   :alt: Dialog box called 'Unlock VeraCrypt Volumes'. It displays an 'Open' button next to a drive name.
+.. |Unlock VeraCrypt| image:: ../images/manual/unlock_veracrypt_in_tails6.png
+   :alt: The 'Authentication Required' menu that appears when you plug in a Veracrypt drive. The 'password' box is selected.
+   :width: 100%
 .. |br| raw:: html
 
     <br>

@@ -46,7 +46,7 @@ author = u"SecureDrop Team and Contributors"
 # built documents.
 #
 # The short X.Y version.
-version = "2.6.0"
+version = "2.10.0"
 # The full version, including alpha/beta/rc tags.
 # On the live site, this will be overridden to "stable" or "latest".
 release = os.environ.get("SECUREDROP_DOCS_RELEASE", version)
@@ -321,7 +321,6 @@ linkcheck_workers = 32
 linkcheck_ignore = [
     r"http://127\.0\.0\.1(:\d+)?/?",
     r"http://localhost(:\d+)?/?",
-    "https://forum.securedrop.org/admin/users/list/active",
     "https://weblate.securedrop.org/projects/securedrop/securedrop/#announcement",
     "https://weblate.securedrop.org/projects/securedrop/securedrop/#repository",
     "https://github.com/freedomofpress/securedrop-apt-prod",

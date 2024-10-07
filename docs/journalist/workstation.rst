@@ -17,7 +17,7 @@ and you are able to access the Tor network reliably, you can accept the defaults
 |Connect to Tor in Tails|
 
 For more information about alternative ways to connect to the Tor network, please
-see the section `"Connecting to the Tor network" <https://tails.boum.org/doc/anonymous_internet/tor/index.en.html>`__
+see the section `"Connecting to the Tor network" <https://tails.net/doc/anonymous_internet/tor/index.en.html>`__
 in the Tails documentation.
 
 .. note::
@@ -50,13 +50,13 @@ Updates" option from the *SecureDrop Menu*.
 .. include:: ../includes/update-gui.txt
 
 .. _`Tails
-   Upgrade Documentation`: https://tails.boum.org/doc/upgrade/index.en.html
+   Upgrade Documentation`: https://tails.net/doc/upgrade/index.en.html
 
 Connecting to the *Journalist Interface*
 ----------------------------------------
 Journalists viewing documents on SecureDrop must connect to the
 *Journalist Interface* using the `Tails operating system
-<https://tails.boum.org/>`__ on a USB drive. As part of your on-boarding, your
+<https://tails.net/>`__ on a USB drive. As part of your on-boarding, your
 admin should have provided you with a Tails drive configured for this purpose,
 known as the *Journalist Workstation* USB drive.
 
@@ -172,7 +172,7 @@ the *Submission Private Key*. To recall the conversation history between your
 organization and sources, you can also download replies and transfer them to
 the *Secure Viewing Station* for decryption.
 
-.. |Connect to Tor in Tails| image:: ../images/tails_5x/tails_5-tca_with_default_settings.png
+.. |Connect to Tor in Tails| image:: ../images/tails_6x/tails_6-tca_with_default_settings.png
    :alt: Tor Connection Assistant with default settings.
 .. |Journalist Interface Login| image:: ../images/manual/screenshots/journalist-index_with_text.png
    :alt: Login page to access the journalist interface. It requires a username, passphrase and two-factor authentication token.

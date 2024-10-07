@@ -7,27 +7,20 @@ Setting up OSSEC alerts
 -----------------------
 
 OSSEC is an open source host-based intrusion detection system (IDS) that
-we use to perform log analysis, file integrity checking, policy
-monitoring, rootkit detection and real-time alerting. It is installed on
+SecureDrop uses to perform log analysis, file integrity checking, policy
+monitoring, rootkit detection, and real-time alerting. It is installed on
 the *Monitor Server* and constitutes that machine's main function. OSSEC
-works in a server-agent scheme, that is, the OSSEC server extends its
-existing functions to the *Application Server* through an agent installed on that
-server, covering monitoring for both machines.
+works in a server-agent scheme; that is, the OSSEC server extends its
+existing functions to the *Application Server* through an agent installed
+on that server, covering monitoring for both machines.
 
 In order to receive email alerts from OSSEC, you need to supply several
 settings to Ansible in the playbook for your environment. If you don't
 already have a working mail server or don't know what to do, then see
 the section below about using Gmail as a fallback option. We assume that
 you're working out of the 'securedrop' directory you cloned the code
-into, and editing ``install_files/ansible-base/group_vars/all/site-specific``
-prior to installing SecureDrop.
-
-What you need:
-
--  The *OSSEC Alert Public Key*
--  The email address that will receive alerts from OSSEC
--  Information for your SMTP server or relay (hostname, port)
--  Credentials for the email address that OSSEC will send alerts from
+into, and that this configuration is happening prior to installing
+SecureDrop.
 
 Receiving email alerts from OSSEC requires that you have an SMTP relay
 to route the emails. You can use an SMTP relay hosted internally, if one
@@ -35,6 +28,17 @@ is available to you, or you can use a third-party SMTP relay such as
 Gmail. The SMTP relay does not have to be on the same domain as the
 destination email address, i.e. smtp.gmail.com can be the SMTP relay and
 the destination address can be securedrop@freedom.press.
+
+What you need:
+
+- The *OSSEC Alert Public Key* and its fingerprint
+- The email address that will receive alerts from OSSEC
+- The reachable hostname of your SMTP relay
+- The secure SMTP port of your SMTP relay
+  (typically 25, 587, or 465; must support TLS encryption)
+- An email username to authenticate to the SMTP relay
+- The domain name of the email used to send OSSEC alerts
+- The password of the email used to send OSSEC alerts
 
 While there are risks involved with receiving these alerts, such as
 information leakage through metadata, we feel the benefit of knowing how
@@ -49,36 +53,26 @@ The SMTP relay that you use should support SASL authentication and SMTP
 TLS protocols TLSv1.2, TLSv1.1, and TLSv1. Most enterprise email
 solutions should be able to meet those requirements.
 
-Below are the values you must specify to configure OSSEC correctly.
-For first-time installs, you can use the
-:ref:`configuration playbook<configure_securedrop>`, or edit
-``install_files/ansible-base/group_vars/all/site-specific`` manually.
-
-- *OSSEC Alert Public Key*:
-  ``ossec_alert_gpg_public_key``
-- Fingerprint of key used when encrypting OSSEC alerts:
-  ``ossec_gpg_fpr``
-- The email address that will receive alerts from OSSEC:
-  ``ossec_alert_email``
-- The reachable hostname of your SMTP relay: ``smtp_relay``
-- The secure SMTP port of your SMTP relay: ``smtp_relay_port``
-  (typically 25, 587, or 465. must support TLS encryption)
-- Email username to authenticate to the SMTP relay: ``sasl_username``
-- Domain name of the email used to send OSSEC alerts: ``sasl_domain``
-- Password of the email used to send OSSEC alerts: ``sasl_password``
+These values must be set in the 
+:ref:`configuration playbook<configure_securedrop>` by running the
+``./securedrop-admin sdconfig`` command, which will prompt for each of the
+items listed above. Please note, this command updates the configuration,
+but does not apply it to the servers. Any time you make changes to
+the configuration it is necessary to deploy them with the
+``./securedrop-admin install`` command.
 
 If you don't know what value to enter for one of these, please ask your
 organization's email admin for the full configuration before
 proceeding. It is better to get these right the first time rather than
 changing them after SecureDrop is installed. If you're not sure of the
-correct ``smtp_relay_port`` number, you can use a simple mail client
+correct SMTP relay port number, you can use a simple mail client
 such as Thunderbird to test different settings or a port scanning tool
 such as nmap to see what's open. You could also use telnet to make sure
 you can connect to an SMTP server, which will always transmit a reply
 code of 220 meaning "Service ready" upon a successful connection.
 
-The ``smtp_relay`` mail server hostname is often, but not always,
-different from the ``sasl_domain``, e.g. smtp.gmail.com and gmail.com.
+The SMTP relay mail server hostname is often, but not always,
+different from the SASL domain, e.g. smtp.gmail.com and gmail.com.
 
 In some cases, authentication or transport encryption mechanisms will
 vary and you may require later edits to the Postfix configuration
@@ -90,8 +84,7 @@ although we've described some common scenarios in the
 
 If you have your *OSSEC Alert Public Key* public key handy, copy it to
 ``install_files/ansible-base`` and then specify the filename, e.g.
-``ossec.pub``, in the ``ossec_alert_gpg_public_key`` line of
-``group_vars/all/site-specific``.
+``ossec.pub``, when prompted by ``./securedrop-admin sdconfig``.
 
 If you don't have your GPG key ready, you can run GnuPG on the command line in
 order to find, import, and export your public key. It's best to copy the key
@@ -133,24 +126,26 @@ installation: ::
 
 The fingerprint is a unique identifier for an encryption (public) key.  The
 short and long key ids correspond to the last 8 and 16 hexadecimal digits of the
-fingerprint, respectively, and are thus a subset of the fingerprint. The value
-for ``ossec_gpg_fpr`` must be the full 40 hexadecimal digit GPG fingerprint for
-this same key, with all capital letters and no spaces. The following command
-will retrieve and format the fingerprint per our requirements: ::
+fingerprint, respectively, and are thus a subset of the fingerprint. The full fingerprint
+must be the entire 40 hexadecimal digit GPG fingerprint for this same key, with all capital
+letters and no spaces. The following command will retrieve and format the fingerprint per our requirements: ::
 
     gpg --with-colons --fingerprint "<fingerprint>" | grep "^fpr" | cut -d: -f10
 
-Next you specify the e-mail that you'll be sending alerts to, as
-``ossec_alert_email``. This could be your work email, or an alias for a
-group of IT admins at your organization. It helps for your mail
-client to have the ability to filter the numerous messages from OSSEC
-into a separate folder.
+Next you must specify the e-mail that you'll be using to receive alerts.
+This could be your work email, or an alias for a group of IT admins
+at your organization. It helps for your mail client to have the ability
+to filter the numerous messages from OSSEC into a separate folder.
 
 Now you can move on to the SMTP and SASL settings, which are
 straightforward. These correspond to the outgoing e-mail address used to
 send the alerts instead of where you're receiving them. If that e-mail
-is ossec@news-org.com, the ``sasl_username`` would be OSSEC and
-``sasl_domain`` would be news-org.com.
+is ossec@news-org.com, the SASL Username would be OSSEC and
+the SASL Domain would be news-org.com.
+
+After setting those values, ``./securedrop-admin sdconfig`` will exit and
+return you to the command line. In most cases, you will then be ready to 
+:ref:`proceed with the installation <Install SecureDrop Servers>`.
 
 The Postfix configuration enforces certificate verification, and
 requires both a valid certificate and STARTTLS support on the SMTP
@@ -163,10 +158,10 @@ new variable to ``group_vars/all/site-specific``: ::
 
 where ``MyOrg.crt`` is the filename. The file will be copied to the
 server in ``/etc/ssl/certs_local`` and the system CAs will be ignored
-when validating the SMTP relay TLS certificate.
+when validating the SMTP relay TLS certificate. Be sure to save 
+``group_vars/all/site-specific`` when you are finished.
 
-Save ``group_vars/all/site-specific``, exit the editor and :ref:`proceed with
-the installation <Install SecureDrop Servers>` by running the playbooks.
+
 
 Using Gmail for OSSEC alerts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -202,13 +197,12 @@ for the SMTP settings to enable OSSEC alerts.
          not allow mail to be sent. In order to be able to create an app
          password, you must have 2-Step Verification enabled on the Gmail account.
 
-Once the account is created you can log out and provide the values for
-``sasl_username`` as your new Gmail username (without the domain),
-``sasl_domain``, which is typically gmail.com (or your custom Google
-Apps domain), and ``sasl_passwd``. Remember to use the app password
-generated from the 2-step config for ``sasl_passwd``, as the primary
-account password won't work. The ``smtp_relay`` is smtp.gmail.com and
-the ``smtp_relay_port`` is 587.
+Once the account is created you can log out and run ``./securedrop-admin sdconfig``,
+setting the SASL username as your new Gmail username (without the domain),
+the SASL domain to be either gmail.com or your custom Google
+Apps domain, and then finally your SASL password. Remember to use the app password
+generated from the 2-step config, as the primary account password won't work. The
+SMTP relay will be smtp.gmail.com and the SMTP relay port is 587.
 
 Configuring fingerprint verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -302,12 +296,9 @@ After making changes to the Postfix configuration, you should run
 OSSEC service.
 
 .. tip:: If you change the SMTP relay port after installation for any
-         reason, you must update the ``smtp_relay_port`` variable in the
-         ``group_vars/all/site-specific`` file, then rerun the Ansible playbook.
-         As a general best practice, we recommend modifying and
-         rerunning the Ansible playbook instead of manually editing
-         the files live on the servers, since values like ``smtp_relay_port``
-         are used in several locations throughout the config.
+         reason, you must update the SMTP relay port using
+         ``./securedrop-admin sdconfig`` and deploy using
+         ``./securedrop-admin install``.
 
 Useful log files for OSSEC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

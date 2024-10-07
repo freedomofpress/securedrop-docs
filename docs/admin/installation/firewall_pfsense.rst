@@ -100,11 +100,6 @@ Connect to the pfSense WebGUI
         the only option because Tails `intentionally disables LAN
         access`_ in the **Tor Browser**.
 
-#. A dialog will ask if you really want to "Launch the Unsafe
-   Browser?". Click **Launch**.
-
-   |You really want to launch the Unsafe Browser|
-
 #. You will see a pop-up notification that says "Starting the Unsafe
    Browser..."
 
@@ -528,7 +523,6 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Wired Connected| image:: ../../images/firewall/wired_connected.png
 .. |Your Connection is Insecure| image:: ../../images/firewall/your_connection_is_insecure.png
 .. |Launching the Unsafe Browser| image:: ../../images/firewall/launching_unsafe_browser.png
-.. |You really want to launch the Unsafe Browser| image:: ../../images/firewall/unsafe_browser_confirmation_dialog.png
 .. |Pop-up notification| image:: ../../images/firewall/starting_the_unsafe_browser.png
 .. |Unsafe Browser Homepage| image:: ../../images/firewall/unsafe_browser.png
 .. |Default pfSense| image:: ../../images/firewall/default_pfsense.png

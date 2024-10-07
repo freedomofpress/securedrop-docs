@@ -51,6 +51,7 @@ latest production release.
 
 .. code:: sh
 
+    $ sudo apt update
     $ cd ~/Persistent/securedrop
     $ ./securedrop-admin update
     $ ./securedrop-admin setup

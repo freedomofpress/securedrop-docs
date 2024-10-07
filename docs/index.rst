@@ -121,6 +121,7 @@ Get Started
    admin/deployment/onboarding_journalists
    admin/deployment/onboarding_admins
    admin/deployment/yubikey_setup
+   admin/deployment/tor_pow
    admin/deployment/https_source_interface
    admin/deployment/ssh_over_local_net
    admin/deployment/remote
@@ -137,6 +138,7 @@ Get Started
    admin/maintenance/ossec_alerts
    admin/maintenance/backup_and_restore
    admin/maintenance/backup_workstations
+   admin/maintenance/update_workstations
    admin/maintenance/update_tails_usbs
    admin/maintenance/kernel_troubleshooting
    admin/maintenance/rebuild_admin
@@ -149,12 +151,11 @@ Get Started
    :maxdepth: 2
    :hidden:
 
-   upgrade/2.5.2_to_2.6.0.rst
-   upgrade/2.5.1_to_2.5.2.rst
-   upgrade/2.5.0_to_2.5.1.rst
-   upgrade/2.4.2_to_2.5.0.rst
-   upgrade/2.4.1_to_2.4.2.rst
-   upgrade/2.4.0_to_2.4.1.rst
+   upgrade/2.9.0_to_2.10.0.rst
+   upgrade/2.8.0_to_2.9.0.rst
+   upgrade/2.7.0_to_2.8.0.rst
+   upgrade/2.6.1_to_2.7.0.rst
+   upgrade/2.6.0_to_2.6.1.rst
 
 Get Involved
 ^^^^^^^^^^^^

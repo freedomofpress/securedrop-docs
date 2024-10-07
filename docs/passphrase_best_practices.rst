@@ -52,7 +52,7 @@ menagerie of credentials.
 We have tried to minimize the number of credentials that Journalists and
 admins actually have to *remember* by automating the storage and entry
 of credentials on the Tails workstations wherever possible. For example,
-shortcut icons are created on the Desktop of each Tails workstation to make it
+a dedicated SecureDrop Menu is provided on each Tails workstation to make it
 easy to access the onion services without having to look up their
 ``.onion`` addresses every time.
 

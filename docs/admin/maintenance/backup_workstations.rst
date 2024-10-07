@@ -9,7 +9,7 @@ Backup the Workstations
 .. note::  This workflow will create a single USB drive with the data backed up
  from all Tails drives. If instead you'd like to create a single duplicate
  Tails drive, you should follow the official documentation
- `maintained by the Tails project <https://tails.boum.org/doc/persistent_storage/backup/index.en.html>`_.
+ `maintained by the Tails project <https://tails.net/doc/persistent_storage/backup/index.en.html>`_.
 
 Now that you have set up the *Secure Viewing Station*, the *Admin Workstation*,
 and your *Journalist Workstations*, it is important you make a backup. Your USB
@@ -211,7 +211,7 @@ You may now repeat the restore process for any other USBs that you wish to
 restore, or shut down the host Tails USB and test your new workstation USB by
 booting it with persistence unlocked and verifying its functionality.
 
-.. |Browse to Places Computer| image:: ../../images/tails_5x/browse_to_places_computer.png
+.. |Browse to Places Computer| image:: ../../images/tails_6x/browse_to_places_computer.png
 .. |Click Cogs| image:: ../../images/tails_4x/disks_format_partition.png
 .. |Fill in Passphrase| image:: ../../images/upgrade_to_tails_3x/fill_in_passphrase.png
 .. |Format Backup Drive| image:: ../../images/tails_4x/format_backup_drive.png

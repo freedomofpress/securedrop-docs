@@ -27,8 +27,8 @@ To onboard an additional administrator, you will need:
 
 To set up AW2, follow these steps:
 
-1. Boot AW1, `unlock its persistent volume <https://tails.boum.org/doc/persistent_storage/use/index.en.html>`__,
-   and `set an admin password on the welcome screen <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`__
+1. Boot AW1, `unlock its persistent volume <https://tails.net/doc/persistent_storage/use/index.en.html>`__,
+   and `set an admin password on the welcome screen <https://tails.net/doc/first_steps/welcome_screen/administration_password/>`__
 2. Ensure that Tails and the SecureDrop version on AW1 are up-to-date.
    If not, update now by following the :ref:`most recent upgrade guide <latest_upgrade_guide>`.
 3. Log into the *Journalist Interface* using your admin credentials, and create
@@ -52,10 +52,10 @@ To set up AW2, follow these steps:
     ``ssh-keygen -t rsa -b 4096``
 
     When prompted, store the keypair in the default location.
-12. Run the command ``./securedrop-admin tailsconfig`` in ``~/Persistent/securedrop``.
+13. Run the command ``./securedrop-admin tailsconfig`` in ``~/Persistent/securedrop``.
 
     This will set up desktop shortcuts and SSH access.
-13. In a terminal, type the following commands to authorize the newly created SSH keypair
+14. In a terminal, type the following commands to authorize the newly created SSH keypair
     on your servers:
 
     * ``ssh-add``
@@ -63,11 +63,23 @@ To set up AW2, follow these steps:
     * ``ssh-copy-id app``
     * ``ssh-copy-id mon``
     * ``ssh-add -D``
-14. Confirm that you are able to access ``mon`` and ``app`` via SSH (``ssh app`` and ``ssh mon``).
-15. Confirm that you are able to access the *Source Interface* and the *Journalist
-    Interface* using the desktop shortcuts.
-16. Shut down AW2.
-17. :doc:`Back up AW2 <../maintenance/backup_workstations>`.
+
+15. Confirm that you are able to access ``mon`` and ``app`` via SSH. The
+    following commands should produce the following output::
+
+        amnesia@amnesia:~$ ssh app hostname
+        app
+        amnesia@amnesia:~$ ssh mon hostname
+        mon
+        
+16. Confirm that you are able to access the *Source Interface* and the *Journalist
+    Interface* using the *SecureDrop Menu*.
+17. :ref:`Initialize a passphrase database <keepassxc_setup>` on AW2.
+    Store the admin account details using KeePassXC, and other account
+    information this admin will need in the course of administering this
+    system.
+18. Shut down AW2.
+19. :doc:`Back up AW2 <../maintenance/backup_workstations>`.
 
 You can now provide AW2 to the new administrator. Ensure that they store the
 disk encryption passphrase in a secure manner: in most configurations, it is the

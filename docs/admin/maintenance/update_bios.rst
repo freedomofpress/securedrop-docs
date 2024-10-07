@@ -46,7 +46,7 @@ Intel provides an SHA1 checksum on the download page. Once you have downloaded t
 
 Once you have verified the hash, copy the file to your USB device.
 
-.. _`provides a detailed explanation of this process`: https://tails.boum.org/doc/encryption_and_privacy/checksums/index.en.html
+.. _`provides a detailed explanation of this process`: https://tails.net/contribute/build/reproducible/#index3h1
 
 .. _`on the correct website`: https://downloadcenter.intel.com/
 

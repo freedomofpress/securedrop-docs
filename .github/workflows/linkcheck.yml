@@ -1,0 +1,23 @@
+---
+name: Link check
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_call:
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    # We use a standard Debian image to mirror a typical developer environment.
+    # This should be updated whenever a new Debian stable version is available.
+    container: debian:bookworm
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          apt-get update && apt-get install --yes --no-install-recommends make python3-poetry
+          poetry install --no-ansi
+      - name: Run lint
+        run: |
+          make docs-linkcheck

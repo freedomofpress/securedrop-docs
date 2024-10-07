@@ -1,4 +1,3 @@
-- Community support is available at https://forum.securedrop.org
 - If you are already a member of our support portal, please don't hesitate to
   open a ticket there. If you would like to request access, please contact us
   at securedrop@freedom.press

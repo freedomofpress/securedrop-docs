@@ -426,20 +426,19 @@ Specific Hardware Recommendations
 
 Application and Monitor Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We recommend using NUCs for the servers and routinely test new models for compatibility.
+NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet,
+and low-power devices, which makes them suitable for deployment in a wide range
+of environments. Originally produced by Intel, ASUS has taken over production
+beginning with the 13th generation.
 
-We currently recommend Intel 7-, 8-, 10-, 11-, and 12-series NUCs for SecureDrop
-servers.
+There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`__
+to choose from. We currently recommend the 11th through 13th generation NUC models listed below.
 
 .. note:: If using non-recommended hardware, ensure you remove as much
     extraneous hardware as physically possible from your servers. This
     could include: speakers, cameras, microphones, fingerprint readers,
     wireless, and Bluetooth cards.
-
-
-The Intel NUC (Next Unit of Computing) is an inexpensive, quiet, low-power
-device that can be used for the SecureDrop servers. There are a
-`variety of models <https://www.intel.com/content/www/us/en/products/boards-kits/nuc.html>`__
-to choose from.
 
 NUCs typically come as kits, and some assembly is required. You will need to
 purchase the RAM and hard drive separately for each NUC and insert both into the
@@ -449,11 +448,37 @@ NUC before it can be used. We recommend:
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
 
-.. _nucc12_recommendation:
+.. _nuc13_recommendation:
 
-Intel 12th-gen NUC
-~~~~~~~~~~~~~~~~~~
-We have tested and can recommend the `Intel NUC12WSKi5 <https://ark.intel.com/content/www/us/en/ark/products/121625/intel-nuc-12-pro-mini-pc-nuc12wski5.html>`__.
+13th-gen NUC
+~~~~~~~~~~~~
+We have tested and can recommend the `ASUS NUC13ANHi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-13-pro/>`__.
+It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
+22x42 port for a SATA drive. It also has a 2.5 inch drive bay for a SATA hard
+drive or SSD (if using this slot, we recommend choosing an SSD).
+
+The NUC13's AX211 wireless hardware is removable. Doing so requires the use of
+a 5mm nut driver. Before installation of the RAM and storage, we recommend that
+you remove the wireless card and disconnect the wireless antennae leads
+from the AX211 component. Be sure to cover the free ends with electrical tape
+after disconnecting them.
+
+.. figure:: ../../images/hardware/nuc13_leads.jpg
+
+  The location of the wireless card within the NUC13
+  
+.. note:: The wireless card is located underneath the 22x80 NVMe port
+
+Because of the newer hardware and the drivers required, you will need to use a
+newer Linux kernel than the one that ships by default in the version of Ubuntu
+Server we recommend. To do so, select the "Boot and Install with the HWE
+Kernel" option in the boot menu for Ubuntu Server.
+
+.. _nuc12_recommendation:
+
+12th-gen NUC
+~~~~~~~~~~~~
+We have tested and can recommend the `NUC12WSKi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/nuc-12-pro-mini-pc/techspec/>`__.
 It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
 22x42 port for a SATA drive.
 
@@ -467,16 +492,16 @@ after disconnecting them.
 
   The location of the wireless card within the NUC12
 
-.. _nuc11_recommendation:
-
 Because of the newer hardware and the drivers required, you will need to use a
 newer Linux kernel than the one that ships by default in the version of Ubuntu
 Server we recommend. To do so, select the "Boot and Install with the HWE
 Kernel" option in the boot menu for Ubuntu Server.
 
-Intel 11th-gen NUC
-~~~~~~~~~~~~~~~~~~
-We have tested and can recommend the `Intel NUC11PAHi3 <https://ark.intel.com/content/www/us/en/ark/products/205033/intel-nuc-11-performance-kit-nuc11pahi3.html>`__.
+.. _nuc11_recommendation:
+
+11th-gen NUC
+~~~~~~~~~~~~
+We have tested and can recommend the `Intel NUC11PAHi3 <https://www.asus.com/us/displays-desktops/nucs/nuc-kits/nuc-11-performance-kit/techspec/>`__.
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
 
@@ -506,11 +531,13 @@ startup and adjust the system configuration:
 
 .. _nuc10_recommendation:
 
-Intel 10th-gen NUC
-~~~~~~~~~~~~~~~~~~
-We have tested and can recommend the `Intel NUC10i5FNH <https://ark.intel.com/content/www/us/en/ark/products/189239/intel-nuc-10-performance-kit-nuc10i5fnh.html>`__.
-It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
-option (SSD or HDD).
+10th-gen NUC
+~~~~~~~~~~~~
+We previously recommended the NUC10i5FNH, however it is now end-of-life so we
+recommend replacing it with a version that the manufacturer supports. While SecureDrop
+will most likely continue working in the short-term, we will no longer be testing on
+this hardware. The instructions below are included only for reference and will
+be removed in the near future.
 
 The NUC10's AX201 wireless hardware is not removable. Before installation of the
 RAM and storage, we recommend that you disconnect the wireless antennae leads
@@ -536,60 +563,29 @@ startup and adjust the system configuration:
 
 .. _nuc8_recommendation:
 
-Intel 8th-gen NUC
-~~~~~~~~~~~~~~~~~
-
-We have tested and can recommend the `NUC8i5BEK <https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc8i5bek.html>`__.
-It provides a single storage option: an M.2 NVMe or SATA SSD.
-
-The NUC8i5BEK has soldered-on wireless components, which cannot easily be
-removed. Before installation of the RAM and storage, we recommend that you
-disconnect the wireless antennae leads:
-
-|NUC8 leads|
-
-Before the initial OS installation, boot into the BIOS by pressing **F2** at
-startup and adjust the system configuration:
-
-- Under **Advanced ▸ Devices ▸ Onboard Devices**, disable all onboard devices
-  other than LAN: audio, audio DSP, microphone, Thunderbolt, WLAN, Bluetooth,
-  and SD card.
-
-- Under **Advanced ▸ Security**, disable SGX support, which is not used by
-  SecureDrop and may be targeted by active CPU exploits.
-
-- Under **Advanced ▸ Boot ▸ Secure Boot**, uncheck the **Secure Boot** checkbox.
-
-.. |NUC8 leads| image:: ../../images/hardware/nuc8_leads.jpg
+8th-gen NUC
+~~~~~~~~~~~~
+We previously recommended the NUC8i5BEK, however it is now end-of-life so we
+recommend replacing it with a version that the manufacturer supports. While SecureDrop
+will most likely continue working in the short-term, we will no longer be testing on
+this hardware.
 
 .. _nuc7_recommendation:
 
-Intel 7th-gen NUC
-~~~~~~~~~~~~~~~~~
+7th-gen NUC
+~~~~~~~~~~~~
+We previously recommended the NUC7i5BNH, however it is now end-of-life so we
+recommend replacing it with a version that the manufacturer supports. While SecureDrop
+will most likely continue working in the short-term, we will no longer be testing on
+this hardware.
 
-We have tested and can recommend the `NUC7i5BNH <https://ark.intel.com/content/www/us/en/ark/products/95067/intel-nuc-kit-nuc7i5bnh.html>`__.
-
-The NUC7i5BNH has soldered-on wireless components, which cannot easily be
-removed. Before installation of the RAM and storage, we recommend that you
-disconnect the wireless antennae leads:
-
-|NUC7 leads|
-
-Before the initial OS installation, boot into the BIOS by pressing **F2** at
-startup and adjust the system configuration:
-
-- Under **Advanced ▸ Devices ▸ Onboard Devices**, disable all onboard devices
-  other than LAN: audio, audio DSP, microphone, Thunderbolt, WLAN, Bluetooth,
-  and SD card.
-
-.. |NUC7 leads| image:: ../../images/hardware/nuc7-leads.jpg
 
 Journalist Workstation and Admin Workstation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Both the *Journalist Workstation* and the *Admin Workstation* must be compatible
 with the Tails operating system. Compare any hardware you want to procure or
-allocate for this purpose against the `list of known issues <https://tails.boum.org/support/known_issues/index.en.html>`__
+allocate for this purpose against the `list of known issues <https://tails.net/support/known_issues/index.en.html>`__
 maintained by the Tails project, but please be advised that the list is far
 from exhaustive.
 
@@ -619,12 +615,12 @@ removed the wireless components with ease. It's possible to re-purpose old
 laptops from other manufacturers, as long as the wireless components are
 removable.
 
-Just as with the servers, you can also use an Intel NUC for the *SVS*. As noted
+Just as with the servers, you can also use a NUC for the *SVS*. As noted
 before, NUCs do not ship with a hard drive, and older models can be configured
 without any wireless components. However, NUCs *do* contain an IR receiver,
 which we recommend taping over with opaque masking tape.
 
-If you choose to use an Intel NUC, you must use an older model that offers wireless
+If you choose to use a NUC, you must use a model that offers wireless
 as an **option** (described as something like ``M.2 22×30 slot and wireless antenna
 pre-assembled (for wireless card support)``). If a model is advertised as having
 "integrated wireless" (most newer NUC models), this means the wireless
@@ -659,13 +655,13 @@ for additional background.
 Network Firewall
 ^^^^^^^^^^^^^^^^
 
-We currently recommend 3 network firewalls:
+We recommend a 4 NIC network firewall and currently provide setup instructions for pfSense and OPNSense. Suitable models include:
 
-* the `TekLager APU4D4 <https://teklager.se/en/products/routers/apu4d4-open-source-router>`__, running `OPNSense <https://opnsense.org/>`__. It has 4 NICs and ports.
+* the `Protectli Vault 4-Port <https://protectli.com/vault-4-port/>`__, running `OPNSense <https://opnsense.org/>`__ configured with `coreboot <https://www.coreboot.org/>`__.
 * the `Netgate SG-4100 <https://shop.netgate.com/products/4100-base-pfsense>`__
-  running `pfSense <https://www.pfsense.org/>`__. It has 4 discrete LAN ports and two dedicated WAN ports.
+  running `pfSense Plus <https://www.pfsense.org/>`__.
 * the `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__
-  running `pfSense <https://www.pfsense.org/>`__. It also has 4 discrete LAN ports with multiple WAN port options. It has more ports than are typically required for SecureDrop, but can be used if the other cheaper firewalls can't be procured.
+  running `pfSense Plus <https://www.pfsense.org/>`__. This device is overspecced for SecureDrop's purposes, but can be used if the other cheaper firewalls can't be procured.
 
 .. _printers_tested_by_fpf:
 
@@ -731,8 +727,9 @@ we recommend upgrading to newer, supported hardware.
 For the hardware we recommend, you can find a list of end-of-life dates below:
 
 ===================  ====================================================
-Hardware             End-of-Life (EOL)                                       
+Hardware             End-of-Life (EOL)
 ===================  ====================================================
+ASUS NUC13ANHi5      Not yet confirmed
 Intel NUC12WSKi5     Not yet confirmed
 Intel NUC11PAHi3     June 30, 2025                                       
 Intel NUC10i5FNH     June 25, 2024                                       

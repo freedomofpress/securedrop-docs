@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "securedrop-docs"
-version = "2.6.0"
+version = "2.7.0"
 description = "SecureDrop documentation for journalists, sources and administrators"
 authors = ["SecureDrop team <securedrop@freedom.press>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
-sphinx = "^6.2.1"
-sphinx-autobuild = "^2021.3.14"
-sphinx-rtd-theme = "^1.2.2"
+python = "^3.11"
+sphinx = "^7.4.7"
+sphinx-autobuild = "^2024.2.4"
+sphinx-rtd-theme = "^2.0.0"

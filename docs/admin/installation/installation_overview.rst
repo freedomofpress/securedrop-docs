@@ -114,7 +114,7 @@ you're ready to begin.
           other undocumented solutions.
 
 
-.. _`Tails operating system`: https://tails.boum.org
+.. _`Tails operating system`: https://tails.net
 
 
 .. |SecureDrop architecture overview diagram| image:: ../../diagrams/SecureDrop.png

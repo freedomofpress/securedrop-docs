@@ -104,23 +104,38 @@ Creating New SVS USB Drives
 
 To create the new SVS USB:
 
-1. Boot into the current SVS using the air-gapped workstation.
-   When you see the welcome dialog, unlock the persistent storage
-   volume.
-2. Insert the new (empty) SVS USB.
-3. Launch the Tails Cloner (**Applications ▸ Tails ▸ Tails Cloner**).
-   Select the option to **Clone the current Tails**. 
-   This will delete any data on the new SVS drive.
-4. Check the box marked **Clone the current Persistent Storage**.
-5. Click **Install**.
-6. Choose a strong new passphrase for the new Persistent Storage Volume
-   (a 6-word Diceware passphrase is recommended) and record it securely.
-7. After the process is complete, power off the SVS.
-8. Boot to the new SVS USB, unlock the Persistent Storage, and
-   enable all the options in the Persistent Storage settings.
-9. Verify that the *Submission Key* is present with the correct fingerprint on
-   the new SVS USB via Applications > Utilities > Passwords and Keys.
+1. Boot into Tails using the primary Tails USB on the air-gapped workstation.
+   When you see the welcome dialog, you can proceed without enabling persistence
+   or setting an admin password.
+2. Install Tails on the new SVS USB, following the instructions
+   `here. <https://tails.net/install/clone/pc/index.en.html>`_
+3. Boot into the new SVS USB and enable persistence with a strong passphrase
+   (a 6-word Diceware passphrase is recommended). In the Persistent volume
+   configuration wizard, be sure to enable persistence for “GnuPG - GnuPG
+   Keyrings and configuration”.
+4. Temporarily store the persistent volume passphrase in your password manager.
+   You should delete it once you have given the USB and passphrase to the
+   journalist who will be using them.
+5. Reboot the new SVS USB with persistence enabled and an administration
+   password set.
+6. Plug the current SVS USB into a free port on the workstation.
+7. Mount its persistent volume by browsing to Places > Computer, clicking
+   the USB disk in the left-hand column, and entering its persistent volume’s
+   passphrase.
+8. Open a terminal via Applications > Favorites > Terminal
+9. Copy the current SVS’s GPG keychain (which includes the *Submission Key*) to
+   the new SVS USB using the following command (without linebreaks):
 
+   .. code:: sh
+
+      sudo bash -c "rsync -a --no-specials --no-devices \
+      /media/amnesia/TailsData/gnupg/ \
+      /live/persistence/TailsData_unlocked/gnupg/"
+
+
+10. Eject and remove the current SVS USB.
+11. Verify that the *Submission Key* is present with the correct fingerprint on
+    the new SVS USB via Applications > Utilities > Passwords and Keys.
 
 The new SVS should now be ready for use. The journalist that will be checking
 submissions will need the new SVS USB, its Persistent Volume passphrase, and

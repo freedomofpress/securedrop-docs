@@ -1,0 +1,86 @@
+Upgrade from 2.6.0 to 2.6.1
+===========================
+
+Update Servers to SecureDrop 2.6.1
+----------------------------------
+This point release contains an update for Tails workstations only. 
+
+Server code is not be affected and will remain at version 2.6.0.
+
+Update Workstations to SecureDrop 2.6.1
+---------------------------------------
+
+Updating Tails and replacing short passphrases
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Before upgrading your Workstations to SecureDrop 2.6.1, we 
+strongly recommend that you first upgrade to Tails 5.16.1, which includes
+important security fixes related to the recent
+`Downfall <https://downfall.page/>`_ and
+`Inception <https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7005.html>`_
+vulnerabilities.
+
+Using the graphical updater
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+
+   If you encounter errors with the graphical updater, perform a
+   manual update. This will ensure that you have imported the new
+   `SecureDrop release signing key <https://media.securedrop.org/media/documents/signing-key-transition.txt>`_.
+
+On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
+the *SecureDrop Workstation Updater* will alert you to workstation updates. You
+must have `configured an administrator password <https://tails.net/doc/first_steps/welcome_screen/administration_password/>`_
+on the Tails welcome screen in order to use the graphical updater.
+
+Perform the update to 2.6.1 by clicking "Update Now":
+
+.. image:: ../images/securedrop-updater.png
+
+Performing a manual update
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+If the graphical updater fails and you want to perform a manual update instead,
+first delete the graphical updater's temporary flag file, if it exists (the
+``.`` before ``securedrop`` is not a typo): ::
+
+  rm ~/Persistent/.securedrop/securedrop_update.flag
+
+This will prevent the graphical updater from attempting to re-apply the failed
+update and has no bearing on future updates. You can now perform a manual
+update by running the following commands: ::
+
+  cd ~/Persistent/securedrop
+  git fetch --tags
+  gpg --keyserver hkps://keys.openpgp.org --recv-key \
+   "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
+  git tag -v 2.6.1
+
+The output should include the following two lines: ::
+
+    gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
+    gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
+
+
+Please verify that each character of the fingerprint above matches what is
+on the screen of your workstation. A warning that the key is not certified
+is normal and expected. If the output includes the lines above, you can check
+out the new release: ::
+
+    git checkout 2.6.1
+
+.. important:: If you do see the warning "refname '2.6.1' is ambiguous" in the
+  output, we recommend that you contact us immediately at securedrop@freedom.press
+  (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
+
+Finally, run the following commands: ::
+
+  ./securedrop-admin setup
+  ./securedrop-admin tailsconfig
+
+Getting Support
+---------------
+
+Should you require further support with your SecureDrop installation, we are
+happy to help!
+
+.. include:: ../includes/getting-support.txt

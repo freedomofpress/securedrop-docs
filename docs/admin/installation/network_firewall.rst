@@ -30,9 +30,12 @@ We currently recommend three firewalls in our :ref:`Hardware Guide <hardware_gui
 * The `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__,
   a pfSense-based firewall with 8 network interfaces: 4 WAN ports and 4 LAN ports.
 
-* The `TekLager APU4D4 <https://teklager.se/en/products/routers/apu4d4-open-source-router>`__,
-  an OPNSense-based open-source hardware firewall with 4 network interfaces: WAN,
-  LAN, OPT1, and OPT2.
+* The `Protectli Vault 4-Port <https://protectli.com/vault-4-port/>`__
+  (with `coreboot <https://www.coreboot.org/>`__),
+  an OPNSense-based open-source hardware firewall  with 4 configurable
+  network interfaces.
+  
+  
 
 Configuration: pfSense
 ----------------------

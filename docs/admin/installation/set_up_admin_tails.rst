@@ -89,7 +89,7 @@ If you are not copy-pasting this command, we recommend you double-check you have
 entered it correctly before pressing enter. GPG will implicitly verify that the
 fingerprint of the key received matches the argument passed.
 
-.. _Tails is connected to Tor: https://tails.boum.org/doc/anonymous_internet/tor/index.en.html#index5h1
+.. _Tails is connected to Tor: https://tails.net/doc/anonymous_internet/tor/index.en.html#index5h1
 
 If GPG warns you that the fingerprint of the key received does not
 match the one requested, do **not** proceed with the installation. If this
@@ -139,7 +139,7 @@ signed with the release signing key:
 
     cd ~/Persistent/securedrop/
     git fetch --tags
-    git tag -v 2.6.0
+    git tag -v 2.10.0
 
 The output should include the following two lines:
 
@@ -160,9 +160,9 @@ screen of your workstation. If it does, you can check out the new release:
 
 .. code:: sh
 
-    git checkout 2.6.0
+    git checkout 2.10.0
 
-.. important:: If you see the warning ``refname '2.6.0' is ambiguous`` in the
+.. important:: If you see the warning ``refname '2.10.0' is ambiguous`` in the
                output, we recommend that you contact us immediately at
                securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 

@@ -15,7 +15,7 @@ they release a new version ahead of the normal cycle in order to address a
 security issue. For regular Tails OS and security information, check out the
 Tails `Security page`_ and subscribe to the Tails RSS/Atom feed.
 
-.. _Security page: https://tails.boum.org/security/index.en.html
+.. _Security page: https://tails.net/security/index.en.html
 
 
 Update via Graphical Installer
@@ -43,11 +43,11 @@ The process for manually updating a Tails USB is:
 What you need
 ^^^^^^^^^^^^^
 
-  #. Your *Admin Workstation* computer
+  #. Your *Admin Workstation* computer to download the latest version of Tails
   #. A *primary Tails USB* stick (you may still have one; it was used to create the *Admin Workstation*, *Secure Viewing Station*, and *Journalist Workstation* Tails USBs during the initial SecureDrop install process)
   #. The Tails USB that you want to update
   #. A Backup USB to back up the data on your existing Tails USBs
-  #. An airgapped computer, such as the computer used for the *Secure Viewing Station*.
+  #. An airgapped computer, such as the computer used for the *Secure Viewing Station*, to perform the update
 
 .. _Step 1:
 
@@ -66,9 +66,10 @@ updating to supports automatic updates, boot into it on your *Admin Workstation*
 computer and follow the graphical updater prompts that guide you through the
 `update process`_.
 
-Alternatively, you can also download and :ref:`install the newest version of Tails from scratch <setup_install_tails>` (as you did when you first installed SecureDrop). This may be faster if your *primary Tails USB* has not been updated in a while.
+Alternatively, you can also download and :ref:`install the newest version of Tails from scratch <setup_install_tails>` (as you did when you first installed SecureDrop). This may be faster if your *primary Tails USB* has not been updated in a while,
+and is necessary for Tails releases that do not support automatic updates.
 
-.. _update process: https://tails.boum.org/doc/upgrade/index.en.html
+.. _update process: https://tails.net/doc/upgrade/index.en.html
 
 .. _Step 3:
 
@@ -86,9 +87,16 @@ In this step, use the up-to-date *primary Tails USB* to update your desired Tail
 
 Plug your *primary Tails USB* into the airgapped computer and boot into Tails.
 
-You can then perform the `manual update steps`_.
+You can then perform the `manual update steps`_. In the Tails Cloner, do **not** click the checkbox
+labeled "Clone the current persistent storage". This refers to the persistent storage of your
+*primary Tails USB*. If you leave the checkbox unchecked, the persistent storage of the USB
+drive you are updating will be preserved.
 
-.. _manual update steps: https://tails.boum.org/upgrade/clone/index.en.html
+While writing to the USB disk, Tails may appear to be frozen, or a dialog may appear warning
+that the application is unresponsive. In the latter case, click **Wait**
+(repatedly if needed) until the operation is complete.
+
+.. _manual update steps: https://tails.net/upgrade/clone/index.en.html
 
 
 If you encounter issues

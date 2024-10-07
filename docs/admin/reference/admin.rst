@@ -14,7 +14,7 @@ and Administrator. When possible, we advise having a dedicated
 staff member serving the role of SecureDrop Administrator.
 
 The admin uses a dedicated *Admin Workstation* running 
-`Tails <https://tails.boum.org>`__, connects to the *Application* and
+`Tails <https://tails.net>`__, connects to the *Application* and
 *Monitor Servers* over `authenticated onion services
 <https://tb-manual.torproject.org/onion-services/>`__, and manages them
 using `Ansible <https://www.ansible.com/>`__.

@@ -10,7 +10,7 @@ SecureDrop instance, there are several support options available to you.
 Freedom of the Press Foundation offers direct support via the official
 :ref:`Support Portal <using_redmine>`.
 
-Additionally, there are multiple platforms available for :ref:`Community Support <community_support>`.
+Additionally, there is also some level of :ref:`Community Support <community_support>`.
 
 .. note::
 
@@ -87,39 +87,34 @@ After your account is activated, you can login and continue to the next step.
 Enabling two-factor authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Two-factor authentication (2FA) protects your account in the event that your
-passphrase is compromised. Once enabled, you will be prompted to provide a
-one-time six digit code every time you log into the support portal, in addition
-to your passphrase.
+Two-factor authentication (2FA) adds an extra layer of security to your account by requiring a one-time
+six-digit code each time you log into the support portal, in addition to your passphrase.
 
-To enable 2FA:
+2FA is required to use the support portal. After creating or logging into your account, you will be
+prompted to enable 2FA. To do so:
 
 1. Choose an application to generate two-factor codes. We recommend the
    `FreeOTP app <https://freeotp.github.io/>`__ for Android or iOS, but any
    app that implements the Time-based One Time Password (TOTP) algorithm
    should work.
-2. If you are not already logged in, log into the support portal.
-3. Click **My account** in the top right corner to navigate to your
-   account settings. On the settings page, click **Enable authenticator app**.
 
-   |2FA setting|
-
-4. You will see a page that shows a QR code, similar to the one below.
+2. You will see a page that shows a QR code, similar to the one below.
    Use your 2FA app's QR code scanning function to scan the code on the page,
    or manually enter the 2FA secret (called a "plain text key" here) in the 
    app.
 
    |2FA example|
 
-5. Select the account you have just added to your 2FA app, and generate a new
+3. Select the account you have just added to your 2FA app, and generate a new
    one-time token using the app. Enter it on the webpage and click 
    **Activate**.
-6. You should see a success message like the one below. Follow the 
+4. You should see a success message like the one below. Follow the 
    recommendation and click **generate backup codes**.
 
    |2FA success|
 
-7. You will see a list of codes like the one below. Each code 
+5. You will be prompted to enter another two-factor code. Once you have
+   done so, you will see a list of codes like the one below. Each code 
    (e.g., ``ec96 a5d7 c678``) can be used once *instead of* a 2FA code
    during the login sequence. Store these codes securely and separately
    from your passphrase. The recommended method is to keep a printout of
@@ -127,7 +122,7 @@ To enable 2FA:
 
    |2FA backup codes|
 
-8. Log out of your account and attempt to log in again. After entering your
+6. Log out of your account and attempt to log in again. After entering your
    passphrase, you will additionally be prompted for a two-factor code, which
    you can generate using your 2FA app.
 
@@ -139,7 +134,6 @@ Please do not hesitate to open a ticket or email us at
 securedrop@freedom.press (`GPG-encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__)
 if you encounter difficulties using 2FA on the support portal.
 
-.. |2FA setting| image:: images/support/account_settings_with_2fa_highlighted.png
 .. |2FA example| image:: images/support/qr_code_example.png
 .. |2FA success| image:: images/support/2fa_success.png
 .. |2FA backup codes| image:: images/support/2fa_backup_codes.png
@@ -254,34 +248,32 @@ from someone in your organization, we may assign it back to you.
 
 Encrypted Email
 ---------------
-
-One of Redmine's strengths as a ticketing system is its powerful support
-for email-based workflow. You can use email to create new issues, reply
-to existing issues, and be notified of updates to issues that are
-relevant to you.
-
 While many people find email-based workflows convenient, email is
 unfortunately insecure by default. Freedom of the Press Foundation takes
 the security of every SecureDrop instance seriously; therefore, we
 require the use of encryption for support requests because they may
 contain sensitive information about your SecureDrop instance.
 
-The web interface workflow is automatically encrypted thanks to HTTPS.
-Supporting a secure email-based workflow is more difficult because email
-is unencrypted by default. Our solution is to combine Redmine's
-email-based workflow with OpenPGP encryption, which we already
-use to communicate with many SecureDrop administrators and journalists.
+After setting up your account, you will have the option of enabling
+encrypted email. If you aren't already familiar with PGP, or don't already
+have PGP set up in your email client, we don't recommend setting it up.
 
-What if I don't want to use encrypted email?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The primary benefit of enabling encrypted email is that you can receive
+the full contents of messages and notifications directly in your
+email without needing to login to the support website.
 
-That's fine! You can do everything through the web interface that you
-can do through email.
+However, we recognize that using encryption requires the use of email
+clients or plugins, and increases the time it takes to review emails.
+Depending on your workflow, it may be preferable to leave encrypted
+email disabled.
 
-If you don't do the setup process for receiving encrypted emails from
-our support server, you will still receive email alerts for changes to
-issues in your project, but the content of the email will not be
-included. This is called a "filtered" email.
+If you prefer not to enable encrypted email, you will still receive
+notifications for issues that are available to you. Rather than
+containing the sensitive contents from the message itself, the 
+(filtered) email notification will alert you to an update within the
+support system, and you can visit the web interface to view and interact
+with the issue. This is the same security pattern used by many bank websites,
+and the web interface workflow is automatically encrypted thanks to HTTPS.
 
 |FilteredEmail|
 
@@ -320,15 +312,15 @@ click on the "PGP" menu option in the upper right corner of the support window.
 
 |PGPMenu|
 
-In the PGP management window you will see two columns: one for your
-public key on the left, and one with the server's public key on the
-right.
+In the PGP management window you will see two sections: one for your
+public key on the top, and one with the server's public key on the
+bottom.
 
 |PGPUpload|
 
 To provide your public key, start by exporting an ASCII-armored copy of
 your public key. Paste your armored public key into the empty text box
-on the left and hit **Save**.
+at the top and hit **Save**.
 
 |PGPSave|
 
@@ -336,8 +328,8 @@ Importing the server's public key
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now, import the public key for our Redmine server into your local GPG
-keyring. It is available on the right hand side of the page in the
-column with the heading "Redmine Server (support@freedom.press)", in the
+keyring. It is available on the bottom of the page in the
+section with the heading "Redmine Server (support@freedom.press)", in the
 text box labeled "Public PGP key".
 
 Select the entire public key and copy it to your clipboard. Import the
@@ -400,15 +392,11 @@ For more information on using Redmine, consult their `User Guide
 Community Based Support
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-The `SecureDrop forum <https://forum.securedrop.org/>`_ is a good place to
-discuss SecureDrop and to get help from the international community of
-SecureDrop users and developers.
-
-You can also connect directly with the SecureDrop development team and the larger
+You can connect directly with the SecureDrop development team and the larger
 SecureDrop community using the
 `SecureDrop Gitter channel <https://gitter.im/freedomofpress/securedrop>`_.
 
 .. warning::
 
-   Remember that both the SecureDrop forum and the Gitter channel are
-   public. **Do not post any sensitive information through public channels.**
+   Remember that the Gitter channel is public.
+   **Do not post any sensitive information through public channels.**

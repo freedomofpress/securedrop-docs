@@ -11,6 +11,7 @@ command:
 
 .. code:: sh
 
+    sudo apt update
     ./securedrop-admin setup
 
 The package installation will take approximately 10 minutes or longer, depending
@@ -32,15 +33,13 @@ on network speed and computing power.
                **not** as root. Contact the SecureDrop team if the package
                installation encounters repeated errors.
 
-.. _configure_securedrop:
-
 Localization of the *Source Interface* and *Journalist Interface*
 -----------------------------------------------------------------
 
 The *Source Interface* and *Journalist Interface* are translated in the following
 languages:
 
-.. include:: ../../includes/l10n.txt
+https://github.com/freedomofpress/securedrop/blob/develop/securedrop/i18n.rst
 
 During the installation you will be given the opportunity to choose from a
 list of supported languages to display using the codes shown in
@@ -50,6 +49,8 @@ parentheses.
           submitting documents are likely to expect a journalist fluent in
           French to be available to read the documents and follow up in that
           language.
+
+.. _configure_securedrop:
 
 Configure the Installation
 --------------------------
@@ -103,7 +104,7 @@ is mounted. From the root of the SecureDrop repository, run: ::
 where ``/media/[USB folder]/`` corresponds to the *Transfer Device*. (You can
 also use the copy and paste capabilities of the file manager.)
 
-Repeat this step for the Admin GPG key.
+Next, copy the *OSSEC Alert Public Key* into ``install_files/ansible-base`` as well.
 
 .. _ansible-site-specific:
 

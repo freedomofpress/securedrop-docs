@@ -91,11 +91,6 @@ Connect to the OPNSense Web GUI
         the only option because Tails intentionally disables LAN
         access in the **Tor Browser**.
 
-#. A dialog will ask "Do you really want to launch the Unsafe
-   Browser?". Click **Launch**.
-
-   |You really want to launch the Unsafe Browser|
-
 #. You will see a pop-up notification that says "Starting the Unsafe
    Browser..."
 
@@ -800,7 +795,6 @@ to the `OPNSense Blog RSS feed <https://opnsense.org/blog/rss>`__.
 .. |OPNSense Firewall OPT1 Rules| image:: ../../images/opnsense/opnsense-firewall-opt1.png
 .. |OPNSense Firewall OPT2 Rules| image:: ../../images/opnsense/opnsense-firewall-opt2.png
 .. |Launching the Unsafe Browser| image:: ../../images/firewall/launching_unsafe_browser.png
-.. |You really want to launch the Unsafe Browser| image:: ../../images/firewall/unsafe_browser_confirmation_dialog.png
 .. |Pop-up notification| image:: ../../images/firewall/starting_the_unsafe_browser.png
 .. |Unsafe Browser Homepage| image:: ../../images/firewall/unsafe_browser.png
 .. |Wired Settings| image:: ../../images/firewall/wired_settings.png
