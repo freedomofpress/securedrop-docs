@@ -33,7 +33,7 @@ To set up AW2, follow these steps:
    If not, update now by following the :ref:`most recent upgrade guide <latest_upgrade_guide>`.
 3. Log into the *Journalist Interface* using your admin credentials, and create
     a new user account with admin rights. Record its passphrase securely;
-    you will add it to the password manager on AW2.
+    you will add it to the password manager on AW2 in step 11.
 
     (You will need to on-board the new admin's 2FA device to complete this step.
     If this is not possible yet, you can defer it until later.)
@@ -42,11 +42,14 @@ To set up AW2, follow these steps:
    Select the option to **Clone the current Tails.** This will delete all data on the AW2 USB drive.
 6. Check the box marked **Clone the current Persistent Storage.**
 7. Click **Install**.
-8. Choose a unique passphrase for AW2 and record it securely.
+8. Choose a unique passphrase for the new Persistent Storage Volume on AW2
+   (a 6-word Diceware passphrase is recommended) and record it securely.
 9. Shut down AW1.
 10. Boot AW2 and unlock the Persistent Storage.
-11. Open the KeePassXC database, remove any unneeded credentials from AW1, and store
-    the new account credentials you created in step 3.
+11. Open the KeePassXC database, delete unneeded credentials from AW1, 
+    right-click the **Recycle Bin** item under **Root** in the KeePassXC sidebar,
+    and select **Empty recycle bin**. Then, store the new account credentials you
+    created in step 3.
 12. Generate a new keypair on AW2 using the following command:
 
     ``ssh-keygen -t rsa -b 4096``
@@ -54,7 +57,7 @@ To set up AW2, follow these steps:
     When prompted, store the keypair in the default location.
 13. Run the command ``./securedrop-admin tailsconfig`` in ``~/Persistent/securedrop``.
 
-    This will set up desktop shortcuts and SSH access.
+    This will set up the *SecureDrop Menu* and SSH access.
 14. In a terminal, type the following commands to authorize the newly created SSH keypair
     on your servers:
 
