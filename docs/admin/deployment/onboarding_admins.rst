@@ -58,14 +58,20 @@ To set up AW2, follow these steps:
 13. Run the command ``./securedrop-admin tailsconfig`` in ``~/Persistent/securedrop``.
 
     This will set up the *SecureDrop Menu* and SSH access.
-14. In a terminal, type the following commands to authorize the newly created SSH keypair
-    on your servers:
+14. 
 
-    * ``ssh-add``
-    * ``ssh-add /media/amnesia/TailsData/openssh-client/id_rsa``
-    * ``ssh-copy-id app``
-    * ``ssh-copy-id mon``
-    * ``ssh-add -D``
+    a. Insert AW1. It should show up in the list of storage devices in the file manager under
+       a label like "7.0 GB Encrypted". Click the label and enter the drive
+       password when prompted to unlock it.
+    b. In a terminal, type the following commands to authorize the newly created SSH keypair
+       on your servers:
+
+       * ``ssh-add``
+       * ``ssh-add /media/amnesia/TailsData/openssh-client/id_rsa``
+       * ``ssh-copy-id app``
+       * ``ssh-copy-id mon``
+       * ``ssh-add -D``
+    c. From the file manager (**Applications ▸ Accessories ▸ Files**), eject AW1.
 
 15. Confirm that you are able to access ``mon`` and ``app`` via SSH. The
     following commands should produce the following output::
