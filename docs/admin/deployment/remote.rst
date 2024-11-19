@@ -96,9 +96,6 @@ In order to create a new SVS for remote use, you will need the following:
              and microphones. A computer used as an SVS should never be used
              for any other purpose.
 
-* An up-to-date Tails USB (the primary Tails USB). You do not need to set up
-  persistent storage on this device, as it will not be used during the SVS
-  setup process.
 * The current SVS USB, and its persistent volume’s passphrase
 * A USB key to act as the new SVS USB
 
