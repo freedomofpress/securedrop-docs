@@ -47,7 +47,7 @@ Get Started
    getting_support
    training_schedule
    passphrase_best_practices
-   
+
 .. toctree::
    :caption: Source Guide
    :name: sourceguidetoc
@@ -144,6 +144,7 @@ Get Started
    admin/maintenance/rebuild_admin
    admin/maintenance/update_bios
    admin/maintenance/decommission
+   admin/maintenance/noble_migration_prep
 
 .. toctree::
    :caption: Admin Guide: Upgrades
@@ -165,10 +166,10 @@ SecureDrop is an open source project. If you would like to contribute
 to SecureDrop, please see our
 `developer documentation <https://developers.securedrop.org/>`_.
 
-Two versions of this documentation are available, and can be selected in the 
+Two versions of this documentation are available, and can be selected in the
 lower left corner using the version dropdown menu:
 
-- ``latest`` - built from the ``develop`` branch of the SecureDrop 
+- ``latest`` - built from the ``develop`` branch of the SecureDrop
   repository, containing updates that have been tested but not yet released.
 - ``stable`` - built from the ``stable`` branch of the SecureDrop repository,
   and up to date with the most recent release, |version|.
