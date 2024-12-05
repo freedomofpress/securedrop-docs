@@ -5,7 +5,7 @@ on: [push, pull_request, workflow_call]
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # We use a standard Debian image to mirror a typical developer environment.
     # This should be updated whenever a new Debian stable version is available.
     container: debian:bookworm
@@ -19,7 +19,7 @@ jobs:
         run: |
           make docs-lint
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
