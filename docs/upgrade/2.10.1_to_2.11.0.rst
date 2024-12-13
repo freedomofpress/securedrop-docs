@@ -15,6 +15,17 @@ that you review our :doc:`Ubuntu 24.04 (Noble) migration guide <../admin/mainten
 and run the ``securedrop-noble-migration-check`` script prior to January 31st, 2025
 to ensure your server is ready for the migration.
 
+We will have more details on the migration itself early next year.
+
+.. note::
+    
+    Admins and Journalists may notice a new banner after logging into the
+    *Journalist Interface*, which indicates that there are currently issues
+    that would prevent an automatic migration to Ubuntu 24.04. If you see this
+    banner, refer to the
+    :doc:`Ubuntu 24.04 (Noble) migration guide <../admin/maintenance/noble_migration_prep>`.
+    
+
 
 Update Servers to SecureDrop 2.11.0
 ------------------------------------
