@@ -152,6 +152,7 @@ Get Started
    :maxdepth: 2
    :hidden:
 
+   upgrade/2.10.1_to_2.11.0.rst
    upgrade/2.10.0_to_2.10.1.rst
    upgrade/2.9.0_to_2.10.0.rst
    upgrade/2.8.0_to_2.9.0.rst
