@@ -10,23 +10,13 @@ The 2.11.0 release includes a number of features that will help ensure
 your SecureDrop server is prepared for the automated migration to Ubuntu 24.04
 (Noble) in early 2025.
 
-After updating to SecureDrop 2.11.0 using the steps below, it's important
-that you review our :doc:`Ubuntu 24.04 (Noble) migration guide <../admin/maintenance/noble_migration_prep>`,
-and run the ``securedrop-noble-migration-check`` script prior to January 31st, 2025
-to ensure your server is ready for the migration.
+SecureDrop 2.11.0 will automatically run checks to ensure all servers are ready for migration to Ubuntu 24.04 (Noble). If issues are found, a banner will be displayed in the Journalist Interface to both admins and journalists. Administrators are encouraged to review the
+:doc:`Ubuntu 24.04 (Noble) migration guide <../admin/maintenance/noble_migration_prep>`
+explaining how to resolve any errors and perform any necessary steps before
+Jan. 31st, 2025.
 
 We will have more details on the migration itself early next year.
-
-.. note::
     
-    Admins and Journalists may notice a new banner after logging into the
-    *Journalist Interface*, which indicates that there are currently issues
-    that would prevent an automatic migration to Ubuntu 24.04. If you see this
-    banner, refer to the
-    :doc:`Ubuntu 24.04 (Noble) migration guide <../admin/maintenance/noble_migration_prep>`.
-    
-
-
 Update Servers to SecureDrop 2.11.0
 ------------------------------------
 
@@ -36,10 +26,8 @@ automatically within 24 hours of the release.
 Update Workstations to SecureDrop 2.11.0
 ----------------------------------------
 
-.. important:: We always recommend backing up your workstations prior to
-  an upgrade, but we *especially* recommend it before a major Tails version
-  bump. This upgrade is an excellent occasion to make sure you have fresh
-  backups for each of your Tails drives. See our :ref:`backup instructions <backup_workstations>`
+.. important:: We recommend backing up your workstations prior to
+  any upgrades. See our :ref:`backup instructions <backup_workstations>`
   for more information.
 
 Update to SecureDrop 2.11.0 using the graphical updater
