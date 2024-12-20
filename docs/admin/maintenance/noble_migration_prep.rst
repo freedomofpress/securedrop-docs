@@ -81,6 +81,10 @@ To address it, you can run:
 
 If that emits an error, please send it to :ref:`Support <getting_support>`.
 
+.. note:: You may receive an OSSEC alert that the ``ufw`` package was installed
+   and then removed; it is a known bug and safe to ignore unless the check script
+   continues to alert you about ``ufw``.
+
 Free space
 ----------
 
