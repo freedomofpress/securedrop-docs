@@ -8,7 +8,7 @@ Tor network as a whole <https://blog.torproject.org/tor-network-ddos-attack/>`_
 as well as burden individual onion services, including SecureDrops.
 
 Tor now includes a `proof-of-work (PoW) defense
-<https://community.torproject.org/onion-services/ecosystem/technology/pow/>`_
+<https://onionservices.torproject.org/technology/pow/#general-questions>`_
 against denial-of-service attacks that can be turned on for individual onion
 services.  As of SecureDrop 2.9.0, new SecureDrops have this feature enabled by
 default, and we encourage all SecureDrop administrators to turn it on for their
