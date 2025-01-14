@@ -199,6 +199,15 @@ you need to install the VeraCrypt software. The `guide by Freedom of the Press
 Foundation <https://freedom.press/training/encryption-toolkit-media-makers-veracrypt-guide/>`__
 provides instructions for encrypting storage media using VeraCrypt.
 
+.. Remove the following warning once securedrop-docs#599 and
+   veracrypt/VeraCrypt#1422 are resolved.
+
+.. warning::
+
+   If you plan to use your *Export Device* with computers running macOS 15
+   ("Sequoia") or later, you must also perform the VeraCrypt setup on that
+   version of macOS.
+
 Keep in mind that each journalist using a Windows or Mac workstation will need
 to have the VeraCrypt software installed on their computer to access the encrypted
 *Export Device*.
