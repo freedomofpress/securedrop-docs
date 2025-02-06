@@ -1,0 +1,92 @@
+Ubuntu 24.04 (Noble) migration
+==============================
+
+SecureDrops need to be upgraded to the newer Ubuntu 24.04 (Noble)
+operating system. This process is far simpler than past upgrades
+as it has been fully automated.
+
+Administrators have two options, on the following timeline:
+
+* **semi-automated, through March 21, 2025:** Administrators can manually trigger the upgrade and observe the process.
+* **fully automated, after March 21, 2025:** The SecureDrop team will push an update in mid- to late-March that automatically
+  begins the upgrade process on all servers.
+
+The fully automated upgrade is the simplest option, as it requires no action on your part.
+
+We recommend the semi-automated upgrade for larger instances or if you have a non-standard setup as
+the upgrade will happen whenever you choose it, so you will already be available in case something goes
+wrong during the process.
+
+Preparation
+-----------
+
+Since the end of 2024, all SecureDrops have been checking for any potential issues that need to be resolved
+before the upgrade can happen.
+
+If you are receiving notifications about these issues, they must be resolved before the upgrade can take place.
+
+Please see our :doc:`preparation guide <noble_migration_prep>` for more details.
+
+
+What to know
+------------
+
+SecureDrops are currently running the Ubuntu 20.04 (Focal) operating system that
+will stop receiving security updates in April 2025. All SecureDrops must be upgraded
+by then to ensure you continue receiving security patches.
+
+In the past, Administrators needed to perform a full reinstall of SecureDrop to move over
+to the new version; this is no longer necessary. The SecureDrop team has implemented and tested
+a method that allows for in-place upgrades in an automated fashion. A backup is automatically taken
+before the upgrade begins.
+
+It is our goal that this process requires as little Administrator work as possible.
+
+The upgrade can take up to 30 minutes; your SecureDrop will be inaccessible for that duration. It will
+take place shortly after your selected automated restart time, which you can adjust if desired.
+
+If you have any questions, please reach out to Support.
+
+Semi-automated upgrade
+----------------------
+
+* Ensure your Admin Workstation has been upgraded to SecureDrop 2.12
+* Open a Terminal
+* Run ``cd Persistent/securedrop``
+* Run ``./securedrop-admin backup`` to :doc:`take a backup <backup_and_restore>`
+* Run ``./securedrop-admin noble_migration``
+* Wait. Every few minutes there may be progress updates, however some of the steps may take
+  10-15 minutes to complete
+
+The process will upgrade your application server first and then the monitor server.
+
+Once it finishes, you should verify you can submit tips via the Source Interface and can log into the
+Journalist Interface and download submissions.
+
+Fully automated upgrade
+-----------------------
+
+If you have not performed the semi-automated upgrade by March 21, 2025, the SecureDrop team
+will push an update that begins an automated upgrade. This is the same code as the semi-automated
+process, just initiated differently.
+
+Servers will be upgraded in batches at a pace set by the SecureDrop team.
+
+Because of some technical limitations, when the upgrade of the app server takes place, you will
+receive a significant amount of OSSEC email alerts because of the changes being made. These are okay
+to ignore (if you use the semi-automated upgrade, these alerts are suppressed).
+
+Technical details and debugging
+-------------------------------
+
+If something goes wrong, logs can be seen by logging into the servers and
+running ``sudo journalctl -u securedrop-noble-migration-upgrade``.
+
+When upgrading the app server, a backup is taken first and stored at ``/var/lib/securedrop-backup``.
+If necessary, this backup can be used to do a fresh install.
+
+.. warning:: The backup contains encrypted source communications and should only be stored
+   on the app server or an Admin Workstation. It should be deleted once no longer necessary.
+
+If you are further interested in technical details, we plan on publishing a blog post explaining
+how the upgrade process works.

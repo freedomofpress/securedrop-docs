@@ -145,6 +145,7 @@ Get Started
    admin/maintenance/update_bios
    admin/maintenance/decommission
    admin/maintenance/noble_migration_prep
+   admin/maintenance/noble_migration
 
 .. toctree::
    :caption: Admin Guide: Upgrades
