@@ -212,10 +212,15 @@ Create the Ubuntu Installation Media
 The `Ubuntu website <https://ubuntu.com/>`__ has detailed instructions on how to
 to create a bootable Ubuntu Server USB drive.
 
-Follow the instructions at the link below, then return to this page:
-    
--  `Create a bootable Ubuntu USB drive on Ubuntu, 
-   Windows, or Mac <https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview>`__
+Follow the instructions at the link below for your operating system, then return
+to this page:
+
+- `Create a bootable Ubuntu USB drive on Mac
+  <https://ubuntu.com/tutorials/create-a-usb-stick-on-macos#1-overview>`__
+- `Create a bootable Ubuntu USB drive on Windows
+  <https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview>`__
+- `Create a bootable Ubuntu USB drive on Linux
+  <https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview>`__
 
 .. |Persistent Storage App| image:: ../../images/tails_5x/persistent_storage_app.png
     :alt: The Persistent Storage app in Tails 5.8 and later, displaying settings for which persistent storage features should be enabled
