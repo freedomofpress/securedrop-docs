@@ -32,7 +32,7 @@ What to know
 ------------
 
 SecureDrops are currently running the Ubuntu 20.04 (Focal) operating system that
-will stop receiving security updates in April 2025. All SecureDrops must be upgraded
+will stop receiving security updates in May 2025. All SecureDrops must be upgraded
 by then to ensure you continue receiving security patches.
 
 In the past, Administrators needed to perform a full reinstall of SecureDrop to move over
