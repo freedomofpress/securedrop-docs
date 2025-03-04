@@ -61,11 +61,11 @@ display a message on boot that shows which key should be pressed to
 enter the boot menu. Once you've entered the boot menu, select the
 installation media (USB or CD) and press Enter to boot it.
 
-On newer hardware, such as the NUC12s, you may need to use a newer Linux
-kernel than the one that ships by default in **Ubuntu Server 20.04.6** in
-order to have more up-to-date hardware drivers. To use a newer Linux kernel,
-select **Boot and Install with the HWE Kernel** in the initial OS boot menu
-that appears prior to booting the Ubuntu image.
+On newer hardware, such as the NUC12s, you may need to use a newer Linux kernel
+than the one that ships by default in **Ubuntu Server 24.04.2** in order to have
+more up-to-date hardware drivers. To use a newer Linux kernel, select **Ubuntu
+Server with the HWE kernel** in the initial OS boot menu that appears prior to
+booting the Ubuntu image.
 
 After booting the Ubuntu image, select **Install Ubuntu Server**.
 
@@ -185,10 +185,11 @@ Select **Done** and press **Enter** to proceed.
              only be allowed to enter one password, so it must be identical on
              both servers.
 
-Ignore Enable Ubuntu Advantage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-On the **Enable Ubuntu Advantage** screen, choose **Done** to proceed without entering
-a token. The SecureDrop servers should not be registered with Ubuntu Advantage.
+Decline upgrade to Ubuntu Pro
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The SecureDrop servers should not be registered with Ubuntu Advantage.  On the
+**Upgrade to Ubuntu Pro** screen, make sure **Skip for now** is selected, then
+choose **Continue**.
 
 Set up SSH access
 ~~~~~~~~~~~~~~~~~

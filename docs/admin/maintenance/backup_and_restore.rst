@@ -147,12 +147,6 @@ This command attempts to restore submissions, source and journalist accounts,
 and configuration details for the onion services used by the web interfaces and
 SSH (if configured).
 
-.. note:: You cannot restore v2 onion service configurations to a v3-only server
-   (this includes any SecureDrop installation based on Ubuntu 20.04). If a
-   restore operation would leave you without a valid onion service configuration,
-   the restore script will fail with an error. In this case, you can still perform
-   a data-only restore. See :ref:`Data-only Restores <additional_restore_info>` for more information.
-
 .. _migrating:
 
 Migrating Using a Backup
@@ -164,25 +158,10 @@ Moving a SecureDrop instance to new hardware involves:
   - Installing SecureDrop on new hardware;
   - Restoring the backup to the new instance and repairing credentials.
 
-SecureDrop now supports only v3 onion services, so the final configuration will
-only include v3 onion services regardless of the backup state.
-
 .. note:: If you need to restore from a backup from an instance configured to
    use SSH-over-LAN onto an SSH-over-Tor instance, you must either first update
    the target instance to use SSH-over-LAN or perform a data-only backup.
    See :ref:`Data-only Restores <additional_restore_info>` for more information.
-
-
-The restore process differs based on the onion services that were configured on
-the old instance and preserved in the backup:
-
-  - :ref:`Migrating using a v2+v3 or v3-only backup <migrate_v3>`
-  - :ref:`Migrating using a v2-only backup <migrate_v2>`
-
-.. _migrate_v3:
-
-Migrating Using a V2+V3 or V3-Only Backup
-'''''''''''''''''''''''''''''''''''''''''
 
 .. note::  The instructions below assume that you are using the same *Admin Workstation*
    that was used to manage your old instance. If you are using a new *Admin
@@ -296,7 +275,7 @@ Migrating Using a V2+V3 or V3-Only Backup
    network firewall, and
    :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
 
-#. Install Ubuntu 20.04 on the *Application* and *Monitor Servers*, following
+#. Install Ubuntu 24.04 on the *Application* and *Monitor Servers*, following
    the :doc:`server setup instructions<../installation/servers>` to install
    with the correct settings, test connectivity, and set up SSH keys to allow
    for *Admin Workstation* access.
@@ -304,7 +283,7 @@ Migrating Using a V2+V3 or V3-Only Backup
    .. note::
 
       You may need to wait approximately 10-15 minutes after installing
-      Ubuntu 20.04 for the servers to become reachable via SSH.
+      Ubuntu 24.04 for the servers to become reachable via SSH.
 
 #. Reinstall SecureDrop on the servers, following the :doc:`installation
    instructions <../installation/install>`. During the configuration stage
@@ -346,7 +325,7 @@ Migrating Using a V2+V3 or V3-Only Backup
 .. _repair_admin_usbs:
 
 Repair Additional Admin Workstations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+''''''''''''''''''''''''''''''''''''
 
 If you have additional *Admin Workstation* USBs, they will no longer have
 valid SSH credentials and will need to be repaired. In these steps, the "primary
@@ -418,157 +397,6 @@ process.
 
 .. _contact Support: https://support-docs.securedrop.org/
 .. _an administration password: https://tails.net/doc/first_steps/welcome_screen/administration_password
-
-.. _migrate_v2:
-
-Migrating Using a V2-Only Backup
-''''''''''''''''''''''''''''''''
-
-V2 onion services are no longer supported by SecureDrop, so v2 *Source* and
-*Journalist Interface* addresses will be replaced by v3 addresses when you perform a
-migration using a v2-only backup. However, it is possible to migrate submissions,
-source accounts, and journalist accounts. To do so, follow the steps below:
-
-.. note:: The instructions below assume that you are using the same
-  *Admin Workstation*
-  that was used to manage your old instance. If you are using a new
-  *Admin Workstation* you will need to copy the directory
-  ``~amnesia/Persistent/securedrop``
-  from the old workstation to the new workstation (using a *Transfer Device*)
-  before proceeding.
-
-#. If you have not already done so,
-   :ref:`back up the existing installation <backing_up>`.
-   The instructions below assume that the backup has been created and
-   renamed ``sd-backup-old.tar.gz``.
-
-#. Move the existing *Admin Workstation* SecureDrop code out of the way, by
-   opening a Terminal via **Applications ▸ System Tools ▸ Terminal** and
-   running the command:
-
-   .. code:: sh
-
-      mv ~/Persistent/securedrop ~/Persistent/sd.bak
-
-#. Move the existing *Admin Workstation* SSH configuration out of the way via
-   the Terminal, using the commands:
-
-   .. code:: sh
-
-       ssh-add -D
-       find ~/.ssh/ -type f -exec mv {} {}.bak \;
-
-#. Reinstall SecureDrop on the *Admin Workstation* using the following Terminal
-   commands:
-
-   .. code:: sh
-
-      cd ~/Persistent
-      git clone https://github.com/freedomofpress/securedrop
-
-#. Verify that the current release tag was signed with the release signing key:
-
-   .. code:: sh
-
-      cd ~/Persistent/securedrop/
-      git fetch --tags
-      git tag -v 2.11.1
-
-   The output should include the following two lines:
-
-   .. code:: sh
-
-      gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
-      gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
-
-   .. important::
-       If you do not see the message above, signature verification has failed
-       and you should **not** proceed with the installation. If this happens,
-       please contact us at securedrop@freedom.press.
-
-   Verify that each character of the fingerprint matches what is on the
-   screen of your workstation. If it does, you can check out the new release:
-
-   .. code:: sh
-
-      git checkout 2.11.1
-
-
-   .. important::
-      If you see the warning ``refname '2.11.1' is ambiguous`` in the
-      output, we recommend that you contact us immediately at
-      securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
-
-#. Copy the old instance's configuration files and backup from ``~/Persistent/sd.bak`` into ``~/Persistent/securedrop`` using the following Terminal commands:
-
-   .. code:: sh
-
-      cd ~/Persistent/securedrop
-      export SD_OLD=~/Persistent/sd.bak/install_files/ansible-base
-      export SD_NEW=~/Persistent/securedrop/install_files/ansible-base
-      cp $SD_OLD/group_vars/all/site-specific $SD_NEW/group_vars/all/
-      cp $SD_OLD/sd-backup-old.tar.gz $SD_NEW/
-
-   You will also need to copy the old instance's *Submission Public Key*,
-   *OSSEC Alert Public Key*, and, if configured, the *Journalist Alert Public Key*.
-   Assuming that these are named ``SecureDrop.asc``, ``ossec.asc``, and
-   ``journalist.asc`` respectively, run the following commands:
-
-   .. code:: sh
-
-      cp $SD_OLD/SecureDrop.asc $SD_NEW/
-      cp $SD_OLD/ossec.asc $SD_NEW/
-
-#. Ensure your *Admin Workstation* is connected to a LAN port on your
-   network firewall, and
-   :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
-
-#. Install Ubuntu 20.04 on the *Application* and *Monitor Servers*, following
-   the :doc:`server setup instructions<../installation/servers>` to install with the correct
-   settings, test connectivity, and set up SSH keys to allow for
-   *Admin Workstation* access.
-
-   .. note::
-
-      You may need to wait approximately 10-15 minutes after installing
-      Ubuntu 20.04 for the servers to become reachable via SSH.
-
-#. Reinstall SecureDrop on the servers, following the :doc:`installation
-   instructions <../installation/install>`. During the configuration stage
-   (``./securedrop-admin sdconfig``), the values will be prepopulated based on
-   the old instance's configuration. Press **Enter** to accept each value.
-
-   .. note::
-
-      If your old instance served the *Source Interface* over HTTPS,
-      you will need to set up your new instance using HTTP instead, and update
-      it to use HTTPS after the initial migration. The web interface addresses
-      change as part of the process, and so your certificate is no longer valid.
-
-   Proceed through the installation by running
-   ``./securedrop-admin install`` then ``./securedrop-admin tailsconfig``.
-   If SSH-over-Tor is configured, run
-   ``ssh app uptime`` and ``ssh mon uptime``  in the Terminal to verify SSH
-   connectivity and add the new onion URLs to your ``known_hosts`` file.
-
-#. Restore from the old instance's backup (e.g. ``sd-backup-old.tar.gz``) using
-   the Terminal command:
-
-   .. code:: sh
-
-       ./securedrop-admin restore --preserve-tor-config sd-backup-old.tar.gz
-
-   The new instance's onion service addresses will be unchanged, but the
-   old instance's data and accounts will now be available.
-
-#. As part of this process, your .onion URLs have changed, and any old
-   *Journalist* and *Admin Workstations* will no longer work. To create
-   additional  *Journalist Workstations*, see our
-   :doc:`onboarding documentation <../deployment/onboarding_journalists>`.
-
-#. If you have migrated to new hardware, ensure your old servers have been
-   decommissioned and/or destroyed by following the relevant sections of
-   :doc:`our decommissioning documentation <decommission>`.
 
 .. _additional_restore_info:
 
