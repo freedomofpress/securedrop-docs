@@ -58,6 +58,9 @@ Semi-automated upgrade
 * Wait. Every few minutes there may be progress updates, however some of the steps may take
   10-15 minutes to complete
 
+  * You will likely see messages like ``fatal: [app] UNREACHABLE! ... Data could not be sent to remote host ...``
+    followed by the line: ``...ignoring``. These are expected as the servers will reboot multiple times during the upgrade.
+
 The process will upgrade your application server first and then the monitor server.
 
 Once it finishes, you should verify you can submit tips via the Source Interface and can log into the
