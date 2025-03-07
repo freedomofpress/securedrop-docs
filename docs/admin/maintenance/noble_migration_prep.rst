@@ -3,7 +3,7 @@ Preparing for the Ubuntu 24.04 (Noble) migration
 
 In 2025, SecureDrops will need to be upgraded to the newer Ubuntu 24.04 (Noble)
 operating system. This process will be more straightforward than in the past
-as there will be semi-automated and fully automated upgrade processes.
+as there will be semiautomated and fully automated upgrade processes.
 
 At this time, the current focus is on ensuring all SecureDrop servers are in a good state
 to be ready for the migration. SecureDrop will automatically check some conditions, and report

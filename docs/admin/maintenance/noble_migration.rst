@@ -7,13 +7,13 @@ as it has been fully automated.
 
 Administrators have two options, on the following timeline:
 
-* **semi-automated, through March 21, 2025:** Administrators can manually trigger the upgrade and observe the process.
+* **semiautomated, through March 21, 2025:** Administrators can manually trigger the upgrade and observe the process.
 * **fully automated, after March 21, 2025:** The SecureDrop team will push an update in mid- to late-March that automatically
   begins the upgrade process on all servers.
 
 The fully automated upgrade is the simplest option, as it requires no action on your part.
 
-We recommend the semi-automated upgrade for larger instances or if you have a non-standard setup as
+We recommend the semiautomated upgrade for larger instances or if you have a non-standard setup as
 the upgrade will happen whenever you choose it, so you will already be available in case something goes
 wrong during the process.
 
@@ -47,16 +47,19 @@ take place shortly after your selected automated restart time, which you can adj
 
 If you have any questions, please reach out to Support.
 
-Semi-automated upgrade
+Semiautomated upgrade
 ----------------------
 
-* Ensure your Admin Workstation has been upgraded to SecureDrop 2.12
-* Open a Terminal
-* Run ``cd Persistent/securedrop``
-* Run ``./securedrop-admin backup`` to :doc:`take a backup <backup_and_restore>`
-* Run ``./securedrop-admin noble_migration``
+We recommend setting aside at least an hour for this process.
+
+* Log into your *Admin Workstation* and open a terminal window.
+* Run ``cd Persistent/securedrop``.
+* Ensure your workstation is on the latest version by running ``./securedrop-admin check_for_updates``.
+  If it says "INFO: Update needed", run ``./securedrop-admin update``.
+* :doc:`Take a backup <backup_and_restore>` by running ``./securedrop-admin backup``.
+* Run ``./securedrop-admin noble_migration``.
 * Wait. Every few minutes there may be progress updates, however some of the steps may take
-  10-15 minutes to complete
+  10-15 minutes to complete.
 
   * You will likely see messages like ``fatal: [app] UNREACHABLE! ... Data could not be sent to remote host ...``
     followed by the line: ``...ignoring``. These are expected as the servers will reboot multiple times during the upgrade.
@@ -69,15 +72,15 @@ Journalist Interface and download submissions.
 Fully automated upgrade
 -----------------------
 
-If you have not performed the semi-automated upgrade by March 21, 2025, the SecureDrop team
-will push an update that begins an automated upgrade. This is the same code as the semi-automated
+If you have not performed the semiautomated upgrade by March 21, 2025, the SecureDrop team
+will push an update that begins an automated upgrade. This is the same code as the semiautomated
 process, just initiated differently.
 
 Servers will be upgraded in batches at a pace set by the SecureDrop team.
 
 Because of some technical limitations, when the upgrade of the app server takes place, you will
 receive a significant amount of OSSEC email alerts because of the changes being made. These are okay
-to ignore (if you use the semi-automated upgrade, these alerts are suppressed).
+to ignore (if you use the semiautomated upgrade, these alerts are suppressed).
 
 Technical details and debugging
 -------------------------------
