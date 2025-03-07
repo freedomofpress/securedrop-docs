@@ -50,13 +50,16 @@ If you have any questions, please reach out to Support.
 Semi-automated upgrade
 ----------------------
 
-* Ensure your Admin Workstation has been upgraded to SecureDrop 2.12
-* Open a Terminal
-* Run ``cd Persistent/securedrop``
-* Run ``./securedrop-admin backup`` to :doc:`take a backup <backup_and_restore>`
-* Run ``./securedrop-admin noble_migration``
+We recommend setting aside at least an hour for this process.
+
+* Log into your *Admin Workstation* and open a terminal window.
+* Run ``cd Persistent/securedrop``.
+* Ensure your workstation is on the latest version by running ``./securedrop-admin check_for_updates``.
+  If it says "INFO: Update needed", run ``./securedrop-admin update``.
+* :doc:`Take a backup <backup_and_restore>` by running ``./securedrop-admin backup``.
+* Run ``./securedrop-admin noble_migration``.
 * Wait. Every few minutes there may be progress updates, however some of the steps may take
-  10-15 minutes to complete
+  10-15 minutes to complete.
 
   * You will likely see messages like ``fatal: [app] UNREACHABLE! ... Data could not be sent to remote host ...``
     followed by the line: ``...ignoring``. These are expected as the servers will reboot multiple times during the upgrade.
