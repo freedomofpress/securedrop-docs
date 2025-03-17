@@ -19,7 +19,7 @@ Update Servers to SecureDrop 2.12.0
 ------------------------------------
 
 Servers will be updated to the latest version of SecureDrop
-automatically within 24 hours of the release. Please note, upgrading to SecureDrop 2.12.0 does not automatically upgrade your server OS to Ubuntu 24.04.
+automatically within 24 hours of the release. Please note, upgrading to SecureDrop 2.12.0 does not automatically upgrade your server to Ubuntu 24.04.
 
 Update Workstations to SecureDrop 2.12.0
 ----------------------------------------
