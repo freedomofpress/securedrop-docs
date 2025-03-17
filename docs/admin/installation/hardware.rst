@@ -439,6 +439,13 @@ to choose from. We currently recommend the 11th through 13th generation NUC mode
     extraneous hardware as physically possible from your servers. This
     could include: speakers, cameras, microphones, fingerprint readers,
     wireless, and Bluetooth cards.
+    
+.. note:: If using non-recommended hardware, you may require drivers that
+    are not available in the kernel that ships by default in the version 
+    of Ubuntu Server we recommend. In this event, you may need to select the
+    Hardware Enablement Kernel (HWE) during boot, which supports more recent
+    hardware. To do so, select the "Boot and Install with the HWE Kernel"
+    option in the boot menu for Ubuntu Server.
 
 NUCs typically come as kits, and some assembly is required. You will need to
 purchase the RAM and hard drive separately for each NUC and insert both into the
@@ -469,11 +476,6 @@ after disconnecting them.
   
 .. note:: The wireless card is located underneath the 22x80 NVMe port
 
-Because of the newer hardware and the drivers required, you will need to use a
-newer Linux kernel than the one that ships by default in the version of Ubuntu
-Server we recommend. To do so, select the "Boot and Install with the HWE
-Kernel" option in the boot menu for Ubuntu Server.
-
 .. _nuc12_recommendation:
 
 12th-gen NUC
@@ -491,12 +493,7 @@ after disconnecting them.
 .. figure:: ../../images/hardware/nuc12_leads.jpg
 
   The location of the wireless card within the NUC12
-
-Because of the newer hardware and the drivers required, you will need to use a
-newer Linux kernel than the one that ships by default in the version of Ubuntu
-Server we recommend. To do so, select the "Boot and Install with the HWE
-Kernel" option in the boot menu for Ubuntu Server.
-
+  
 .. _nuc11_recommendation:
 
 11th-gen NUC
