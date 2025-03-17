@@ -1,34 +1,34 @@
-Upgrade from 2.11.0 to 2.11.1
+.. _latest_upgrade_guide:
+
+Upgrade from 2.11.1 to 2.12.0
 =============================
 
-Preparing for the Ubuntu 24.04 (Noble) migration
-------------------------------------------------
+Migrating to Ubuntu 24.04 (Noble)
+---------------------------------
 
-The 2.11.1 release includes a number of features that will help ensure
-your SecureDrop server is prepared for the automated migration to Ubuntu 24.04
-(Noble) in early 2025.
+The SecureDrop 2.12.0 release provides the foundation necessary to safely upgrade your SecureDrop Servers to Ubuntu 24.04 (Noble), which is necessary due to the upcoming end-of-life for Ubuntu 20.04 (Focal).
 
-SecureDrop 2.11.1 will automatically run checks to ensure all servers are ready for migration to Ubuntu 24.04 (Noble). If issues are found, a banner will be displayed in the Journalist Interface to both admins and journalists. Administrators are encouraged to review the
-:doc:`Ubuntu 24.04 (Noble) migration guide <../admin/maintenance/noble_migration_prep>`
-explaining how to resolve any errors and perform any necessary steps before
-Jan. 31st, 2025.
+Administrators have two options, on the following timeline:
 
-We will have more details on the migration itself early next year.
+* **semiautomated, through April 15, 2025:** Administrators can manually trigger the upgrade and observe the process.
+* **fully automated, after April 15, 2025:** The SecureDrop team will push an update in mid- to late-April that automatically begins the upgrade process on all servers.
+
+To determine which option is best for you, and to learn more about how the upgrade works, please review the :doc:`Ubuntu 24.04 (Noble) migration guide <../admin/maintenance/noble_migration>` at your earliest convenience.
     
-Update Servers to SecureDrop 2.11.1
+Update Servers to SecureDrop 2.12.0
 ------------------------------------
 
-Servers running Ubuntu 20.04 will be updated to the latest version of SecureDrop
-automatically within 24 hours of the release.
+Servers will be updated to the latest version of SecureDrop
+automatically within 24 hours of the release. Please note, upgrading to SecureDrop 2.12.0 does not automatically upgrade your server to Ubuntu 24.04.
 
-Update Workstations to SecureDrop 2.11.1
+Update Workstations to SecureDrop 2.12.0
 ----------------------------------------
 
 .. important:: We recommend backing up your workstations prior to
   any upgrades. See our :ref:`backup instructions <backup_workstations>`
   for more information.
 
-Update to SecureDrop 2.11.1 using the graphical updater
+Update to SecureDrop 2.12.0 using the graphical updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
@@ -36,7 +36,7 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.net/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 2.11.1 by clicking "Update Now":
+Perform the update to 2.12.0 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
@@ -56,7 +56,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
-  git tag -v 2.11.1
+  git tag -v 2.12.0
 
 The output should include the following two lines: ::
 
@@ -69,9 +69,9 @@ on the screen of your workstation. A warning that the key is not certified
 is normal and expected. If the output includes the lines above, you can check
 out the new release: ::
 
-    git checkout 2.11.1
+    git checkout 2.12.0
 
-.. important:: If you do see the warning "refname '2.11.1' is ambiguous" in the
+.. important:: If you do see the warning "refname '2.12.0' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
