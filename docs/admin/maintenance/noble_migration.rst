@@ -8,8 +8,7 @@ as it has been fully automated.
 Administrators have two options, on the following timeline:
 
 * **semiautomated, through April 15, 2025:** Administrators can manually trigger the upgrade and observe the process.
-* **fully automated, after April 15, 2025:** The SecureDrop team will push an update in mid- to late-April that automatically
-  begins the upgrade process on all servers.
+* **fully automated, after April 15, 2025:** The SecureDrop team will push updates through mid- to late-April that automatically trigger the upgrade process, in phases, across all SecureDrop instances.
 
 The fully automated upgrade is the simplest option, as it requires no action on your part.
 
