@@ -94,5 +94,5 @@ If necessary, this backup can be used to do a fresh install.
 .. warning:: The backup contains encrypted source communications and should only be stored
    on the app server or an Admin Workstation. It should be deleted once no longer necessary.
 
-If you are further interested in technical details, we plan on publishing a blog post explaining
+If you are further interested in technical details, we `published a blog post <https://securedrop.org/news/technical-details-for-the-noble-migration/>`__ explaining
 how the upgrade process works.
