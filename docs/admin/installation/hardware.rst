@@ -460,8 +460,7 @@ NUC before it can be used. We recommend:
 14th-gen NUC
 ~~~~~~~~~~~~
 We have tested and can recommend the `ASUS NUC14RVH <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro/>`__.
-It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a
-22x42 port for another NVMe drive. It also has a 2.5 inch drive bay for a SATA hard
+It provides both 22x80 and 22x42 M.2 ports for NVMe SSD storage, as well as a 2.5 inch drive bay for a SATA hard
 drive or SSD (if using this slot, we recommend choosing an SSD).
 
 The NUC14's AX211 wireless hardware is not removable. Before installation of the
