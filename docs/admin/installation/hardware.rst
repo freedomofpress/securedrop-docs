@@ -455,6 +455,26 @@ NUC before it can be used. We recommend:
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
 
+.. _nuc14_recommendation:
+
+14th-gen NUC
+~~~~~~~~~~~~
+We have tested and can recommend the `ASUS NUC14RVH <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro/>`__.
+It provides both 22x80 and 22x42 M.2 ports for NVMe SSD storage, as well as a 2.5 inch drive bay for a SATA hard
+drive or SSD (if using this slot, we recommend choosing an SSD).
+
+The NUC14's AX211 wireless hardware is not removable. Before installation of the
+RAM and storage, we recommend that you disconnect the wireless antennae leads
+from the AX211 component. They're the wires highlighted in the red box in
+the picture. Cover the free ends with electrical tape after disconnecting them.
+
+.. figure:: ../../images/hardware/nuc14_leads.jpg
+
+  The location of the wireless card within the NUC14
+
+.. note:: The wireless card is located underneath the NVMe port
+
+
 .. _nuc13_recommendation:
 
 13th-gen NUC
@@ -726,6 +746,7 @@ For the hardware we recommend, you can find a list of end-of-life dates below:
 ===================  ====================================================
 Hardware             End-of-Life (EOL)
 ===================  ====================================================
+ASUS NUC14RVH        Not yet confirmed
 ASUS NUC13ANHi5      Not yet confirmed
 Intel NUC12WSKi5     Not yet confirmed
 Intel NUC11PAHi3     June 30, 2025                                       
