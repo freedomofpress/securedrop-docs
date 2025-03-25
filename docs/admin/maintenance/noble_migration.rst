@@ -68,6 +68,25 @@ The process will upgrade your application server first and then the monitor serv
 Once it finishes, you should verify you can submit tips via the Source Interface and can log into the
 Journalist Interface and download submissions.
 
+When running the migration script, ``./securedrop-admin noble_migration``, it's important to ensure that it completes successfully.
+The final line of the command output should read: ``INFO: Upgrade to Ubuntu Noble complete!``
+
+If it fails, it is safe to run multiple times. If it continues failing, see :ref:`the debugging advice below<debugging>`.
+
+Verifying success
+^^^^^^^^^^^^^^^^^
+
+You can verify that the upgrade completed successfully on the *Application Server* by running:
+
+``ssh app cat /etc/securedrop-noble-migration-state.json``
+
+If the output starts with ``{"finished":Done,``, then it was successful. Any value other than ``Done``
+means the upgrade hasn't finished or errored out.
+
+Repeat it for the *Monitor Server* too:
+
+``ssh mon cat /etc/securedrop-noble-migration-state.json``
+
 Fully automated upgrade
 -----------------------
 
@@ -77,15 +96,18 @@ process, just initiated differently.
 
 Servers will be upgraded in batches at a pace set by the SecureDrop team.
 
-Because of some technical limitations, when the upgrade of the app server takes place, you will
+Because of some technical limitations, when the upgrade of the *Application Server* takes place, you will
 receive a significant amount of OSSEC email alerts because of the changes being made. These are okay
 to ignore (if you use the semiautomated upgrade, these alerts are suppressed).
+
+.. _debugging:
 
 Technical details and debugging
 -------------------------------
 
 If something goes wrong, logs can be seen by logging into the servers and
-running ``sudo journalctl -u securedrop-noble-migration-upgrade``.
+running ``sudo journalctl -u securedrop-noble-migration-upgrade``. If the error isn't clear,
+:ref:`please contact us<Getting Support>`.
 
 When upgrading the app server, a backup is taken first and stored at ``/var/lib/securedrop-backup``.
 If necessary, this backup can be used to do a fresh install.
