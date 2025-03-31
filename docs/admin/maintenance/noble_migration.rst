@@ -106,8 +106,8 @@ Technical details and debugging
 -------------------------------
 
 If something goes wrong, logs can be seen by logging into the servers and
-running ``sudo journalctl -u securedrop-noble-migration-upgrade``. If the error isn't clear,
-:ref:`please contact us<Getting Support>`.
+running ``sudo journalctl -r -u securedrop-noble-migration-upgrade``. This will show the logs in reverse chronological order,
+so any relevant error messages should be near the top. If the error isn't clear, :ref:`please contact us<Getting Support>`.
 
 When upgrading the app server, a backup is taken first and stored at ``/var/lib/securedrop-backup``.
 If necessary, this backup can be used to do a fresh install.
