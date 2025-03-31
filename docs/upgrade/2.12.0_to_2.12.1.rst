@@ -1,10 +1,14 @@
-Upgrade from 2.11.1 to 2.12.0
+.. _latest_upgrade_guide:
+
+Upgrade from 2.12.0 to 2.12.1
 =============================
+
+SecureDrop 2.12.1 is an Admin Workstation-only release, which improves the reliability of the semiautomated Ubuntu Noble upgrade when using SSH-over-Tor. 
 
 Migrating to Ubuntu 24.04 (Noble)
 ---------------------------------
 
-The SecureDrop 2.12.0 release provides the foundation necessary to safely upgrade your SecureDrop Servers to Ubuntu 24.04 (Noble), which is necessary due to the upcoming end-of-life for Ubuntu 20.04 (Focal).
+As a reminder, it is necessary to upgrade your SecureDrop Servers to Ubuntu 24.04 (Noble) due to the upcoming end-of-life for Ubuntu 20.04 (Focal).
 
 Administrators have two options, on the following timeline:
 
@@ -13,20 +17,19 @@ Administrators have two options, on the following timeline:
 
 To determine which option is best for you, and to learn more about how the upgrade works, please review the :doc:`Ubuntu 24.04 (Noble) migration guide <../admin/maintenance/noble_migration>` at your earliest convenience.
     
-Update Servers to SecureDrop 2.12.0
-------------------------------------
+Servers to Remain on 2.12.0
+---------------------------
 
-Servers will be updated to the latest version of SecureDrop
-automatically within 24 hours of the release. Please note, upgrading to SecureDrop 2.12.0 does not automatically upgrade your server to Ubuntu 24.04.
+As this is an Admin Workstation-only release, servers will not receive an update and will remain on version 2.12.0. Please note, upgrading to SecureDrop 2.12.0 does not automatically upgrade your server to Ubuntu 24.04.
 
-Update Workstations to SecureDrop 2.12.0
+Update Workstations to SecureDrop 2.12.1
 ----------------------------------------
 
 .. important:: We recommend backing up your workstations prior to
   any upgrades. See our :ref:`backup instructions <backup_workstations>`
   for more information.
 
-Update to SecureDrop 2.12.0 using the graphical updater
+Update to SecureDrop 2.12.1 using the graphical updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
@@ -34,7 +37,7 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.net/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 2.12.0 by clicking "Update Now":
+Perform the update to 2.12.1 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
@@ -54,7 +57,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
-  git tag -v 2.12.0
+  git tag -v 2.12.1
 
 The output should include the following two lines: ::
 
@@ -67,9 +70,9 @@ on the screen of your workstation. A warning that the key is not certified
 is normal and expected. If the output includes the lines above, you can check
 out the new release: ::
 
-    git checkout 2.12.0
+    git checkout 2.12.1
 
-.. important:: If you do see the warning "refname '2.12.0' is ambiguous" in the
+.. important:: If you do see the warning "refname '2.12.1' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
