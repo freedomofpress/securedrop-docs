@@ -100,21 +100,21 @@ prompted to enable 2FA. To do so:
 
 2. You will see a page that shows a QR code, similar to the one below.
    Use your 2FA app's QR code scanning function to scan the code on the page,
-   or manually enter the 2FA secret (called a "plain text key" here) in the 
+   or manually enter the 2FA secret (called a "plain text key" here) in the
    app.
 
    |2FA example|
 
 3. Select the account you have just added to your 2FA app, and generate a new
-   one-time token using the app. Enter it on the webpage and click 
+   one-time token using the app. Enter it on the webpage and click
    **Activate**.
-4. You should see a success message like the one below. Follow the 
+4. You should see a success message like the one below. Follow the
    recommendation and click **generate backup codes**.
 
    |2FA success|
 
 5. You will be prompted to enter another two-factor code. Once you have
-   done so, you will see a list of codes like the one below. Each code 
+   done so, you will see a list of codes like the one below. Each code
    (e.g., ``ec96 a5d7 c678``) can be used once *instead of* a 2FA code
    during the login sequence. Store these codes securely and separately
    from your passphrase. The recommended method is to keep a printout of
@@ -126,7 +126,7 @@ prompted to enable 2FA. To do so:
    passphrase, you will additionally be prompted for a two-factor code, which
    you can generate using your 2FA app.
 
-If you have to reset your 2FA settings at any time, you can use a recovery 
+If you have to reset your 2FA settings at any time, you can use a recovery
 code. Once you are logged in, disable and then re-enable 2FA from your account
 settings.
 
@@ -248,38 +248,17 @@ from someone in your organization, we may assign it back to you.
 
 Encrypted Email
 ---------------
-While many people find email-based workflows convenient, email is
-unfortunately insecure by default. Freedom of the Press Foundation takes
-the security of every SecureDrop instance seriously; therefore, we
-require the use of encryption for support requests because they may
-contain sensitive information about your SecureDrop instance.
-
-After setting up your account, you will have the option of enabling
-encrypted email. If you aren't already familiar with PGP, or don't already
-have PGP set up in your email client, we don't recommend setting it up.
-
-The primary benefit of enabling encrypted email is that you can receive
-the full contents of messages and notifications directly in your
-email without needing to login to the support website.
-
-However, we recognize that using encryption requires the use of email
-clients or plugins, and increases the time it takes to review emails.
-Depending on your workflow, it may be preferable to leave encrypted
-email disabled.
-
-If you prefer not to enable encrypted email, you will still receive
-notifications for issues that are available to you. Rather than
-containing the sensitive contents from the message itself, the 
-(filtered) email notification will alert you to an update within the
-support system, and you can visit the web interface to view and interact
-with the issue. This is the same security pattern used by many bank websites,
-and the web interface workflow is automatically encrypted thanks to HTTPS.
+Email does not offer the same security guarantees as a website protected
+by TLS encryption. For this reason, by default, email notifications from
+our support portal only include a link to the support tickets they relate to.
+All other details are filtered out:
 
 |FilteredEmail|
 
-We encourage you to use these filtered emails as a reminder to login to
-your Redmine account and check the content of the corresponding updates
-to an issue through the web interface.
+If you want to create tickets by email, or receive the full content
+of replies, you must enable PGP-based encryption. PGP is complex to set
+up; if you are not already familiar with it, we recommend
+relying on the web interface to interact with tickets.
 
 .. note:: We welcome feedback on how we could make notifications for
           this Redmine system more convenient for you.
@@ -289,7 +268,7 @@ to an issue through the web interface.
 Setting up Encrypted Email
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order to use this encrypted email workflow, you need to:
+In order to use the encrypted email workflow, you need to:
 
 1. Provide **your public key** to the support server
 2. Import the **server's public key** into your local keyring.
@@ -335,7 +314,7 @@ text box labeled "Public PGP key".
 Select the entire public key and copy it to your clipboard. Import the
 copied public key into your local GPG keyring.
 
-You can `download the key <https://freedom.press/documents/37/redmine_public_key.asc>`_ 
+You can `download the key <https://freedom.press/documents/37/redmine_public_key.asc>`_
 or fetch it from a `keyserver <https://keys.openpgp.org/vks/v1/by-fingerprint/D0E0B2F2B71BA4E48278037D9EA33029E9FBBA2E>`_ (fingerprint:
 ``D0E0B2F2B71BA4E48278037D9EA33029E9FBBA2E``).
 
