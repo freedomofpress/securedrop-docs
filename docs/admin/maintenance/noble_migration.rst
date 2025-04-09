@@ -16,6 +16,8 @@ We recommend the semiautomated upgrade for larger instances or if you have a non
 the upgrade will happen whenever you choose it, so you will already be available in case something goes
 wrong during the process.
 
+.. warning:: If you are using not using `recommended hardware <../installation/hardware.html#specific-hardware-recommendations>`_ for your *Application* and *Monitor Servers*, we strongly recommend doing a semiautomated upgrade **before** April 15th, 2025. 
+
 Preparation
 -----------
 
