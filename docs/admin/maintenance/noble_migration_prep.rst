@@ -116,6 +116,27 @@ Please run:
 and send the output to :ref:`Support <getting_support>` immediately, so we can diagnose
 the severity.
 
+Ethernet
+--------
+
+If this fails, it means that you have an ethernet interface that is configured but not connected to a network.
+
+The error message should tell you the name of the problematic interface(s), for example: ``ethernet ERROR: interfaces are down: ["eno2"]``.
+
+Double-check that your ethernet cable is connected to the correct port on your server. If you are not using recommended hardware, you may have multiple ethernet interfaces configured. In that event, we recommend disabling all but the one you are using for SecureDrop.
+
+In Ubuntu Server, this can be done by removing the additional interfaces in the ``/etc/netplan/00-installer-config.yaml`` configuration file. For example, you can run:
+
+.. code:: sh
+   
+     ip -brief addr show
+     sudo nano /etc/netplan/00-installer-config.yaml
+     sudo netplan try
+     
+to get a list of interfaces, remove the extraneous interface, and then apply the configuration. You will need to confirm the changes within 120 seconds before netplan restores the previous configuration (this is done to prevent accidental server lockouts).
+
+If you are unsure or need help debugging, please :ref:`contact Support <getting_support>`.
+
 Failing systemd units
 ---------------------
 
