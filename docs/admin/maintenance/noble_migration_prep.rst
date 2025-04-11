@@ -43,6 +43,7 @@ For example:
     free space OK: enough free space
     apt OK: all sources are expected
     systemd OK: no failed units
+    ethernet OK: all interfaces are up
 
     Some errors were found that will block migration.
 
