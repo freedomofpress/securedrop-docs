@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "securedrop-docs"
-version = "2.7.0"
 description = "SecureDrop documentation for journalists, sources and administrators"
 authors = ["SecureDrop team <securedrop@freedom.press>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"

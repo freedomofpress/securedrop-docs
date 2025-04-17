@@ -1,4 +1,4 @@
-FROM debian:bookworm AS sphinx
+FROM debian:trixie AS sphinx
 
 ARG GIT_BRANCH=main
 RUN apt-get -q update && apt-get -qy upgrade && apt-get -qy install git make latexmk texlive-latex-extra python3-poetry
