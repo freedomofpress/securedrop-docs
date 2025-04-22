@@ -5,18 +5,14 @@ SecureDrops need to be upgraded to the newer Ubuntu 24.04 (Noble)
 operating system. This process is far simpler than past upgrades
 as it has been fully automated.
 
-Administrators have two options, on the following timeline:
+Current status
+--------------
 
-* **semiautomated, through April 15, 2025:** Administrators can manually trigger the upgrade and observe the process.
-* **fully automated, after April 15, 2025:** The SecureDrop team will push updates through mid- to late-April that automatically trigger the upgrade process, in phases, across all SecureDrop instances.
+As of April 22nd, 2025, 20% of all *Application Servers* are being automatically upgraded.
 
-The fully automated upgrade is the simplest option, as it requires no action on your part.
+You can still manually trigger a semiautomated upgrade to Noble. We still recommend the semiautomated upgrade for larger instances or if you have a non-standard setup, as the upgrade will happen whenever you choose so you will already be available in case something goes wrong during the process.
 
-We recommend the semiautomated upgrade for larger instances or if you have a non-standard setup as
-the upgrade will happen whenever you choose it, so you will already be available in case something goes
-wrong during the process.
-
-.. warning:: If you are using not using `recommended hardware <../installation/hardware.html#specific-hardware-recommendations>`_ for your *Application* and *Monitor Servers*, we strongly recommend doing a semiautomated upgrade **before** April 15th, 2025. 
+.. warning:: If you are using not using `recommended hardware <../installation/hardware.html#specific-hardware-recommendations>`_ for your *Application* and *Monitor Servers*, we strongly recommend doing a semiautomated upgrade.
 
 Preparation
 -----------
@@ -92,8 +88,7 @@ Repeat it for the *Monitor Server* too:
 Fully automated upgrade
 -----------------------
 
-If you have not performed the semiautomated upgrade by March 21, 2025, the SecureDrop team
-will push an update that begins an automated upgrade. This is the same code as the semiautomated
+We are currently in the automated upgrade phase. This is the same code as the semiautomated
 process, just initiated differently.
 
 Servers will be upgraded in batches at a pace set by the SecureDrop team.
