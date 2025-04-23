@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     # We use a standard Debian image to mirror a typical developer environment.
     # This should be updated whenever a new Debian stable version is available.
-    container: debian:bookworm
+    container: debian:trixie
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
