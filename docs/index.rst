@@ -140,6 +140,7 @@ Get Started
    admin/maintenance/backup_workstations
    admin/maintenance/update_workstations
    admin/maintenance/update_tails_usbs
+   admin/maintenance/updates_over_tor
    admin/maintenance/kernel_troubleshooting
    admin/maintenance/rebuild_admin
    admin/maintenance/update_bios
