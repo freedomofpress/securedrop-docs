@@ -8,7 +8,7 @@ as it has been fully automated.
 Current status
 --------------
 
-As of May 6th, 2025, 100% of *Application Servers* and approximately 20% of *Monitor Servers* are being automatically upgraded.
+As of May 7th, 2025, 100% of *Application Servers* and approximately 40% of *Monitor Servers* are being automatically upgraded.
 
 You can still manually trigger a semiautomated upgrade to Noble. We still recommend the semiautomated upgrade for larger instances or if you have a non-standard setup, as the upgrade will happen whenever you choose so you will already be available in case something goes wrong during the process.
 
