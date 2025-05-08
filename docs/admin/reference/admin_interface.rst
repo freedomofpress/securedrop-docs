@@ -85,6 +85,8 @@ If two-factor authentication was set up successfully, you will be redirected bac
 to the *Admin Interface* and will see a confirmation that the two-factor code was
 verified.
 
+.. include:: ../../includes/tor-security-setting.txt
+
 YubiKey
 ~~~~~~~
 
@@ -184,7 +186,7 @@ You should see a message appear indicating the change was a success.
 
 |Logo Update|
 
-It may be necessary to hold the Shift key while pressing the Reload button in 
+It may be necessary to hold the Shift key while pressing the Reload button in
 the browser, which will force it to purge the cached version of the logo
 in order to see the new one.
 

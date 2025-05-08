@@ -1,0 +1,6 @@
+.. note::
+
+   If the QR code for setting up two-factor authentication in your mobile authenticator app is not
+   displayed, it may be blocked by Tor Browser. You can set Tor Browser's security level to
+   **Standard** by clicking on the Shield icon. Alternatively, you can manually type in the
+   two-factor secret (in FreeOTP, use the **Add token** option from the menu).

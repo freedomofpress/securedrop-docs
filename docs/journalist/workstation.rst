@@ -96,6 +96,8 @@ admin for assistance.
 
 |Journalist account profile|
 
+.. include:: ../includes/tor-security-setting.txt
+
 .. _daily_journalist_alerts:
 
 
