@@ -23,7 +23,7 @@ hardware, including:
 
 In most cases, you should enable support for LAN and USB ports only.
 
-You should also check the servers' boot settings. Ubuntu 20.04 supports both
+You should also check the servers' boot settings. Ubuntu 24.04 supports both
 Legacy and UEFI boot modes, with UEFI preferred. You should also disable Secure
 Boot. SecureDrop uses a custom kernel with security patches, which is unsigned
 and will not boot if Secure Boot is enabled.
@@ -36,8 +36,7 @@ enumerate recommended BIOS settings for hardware that we have tested.
 Install Ubuntu
 ---------------
 
-The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu Server
-20.04.6 LTS (Focal Fossa)**. To install Ubuntu on the servers, you must first
+The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu 24.04.2 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first
 download and verify the Ubuntu installation media.
 
 You should have already performed this step while setting up the Tails USB
