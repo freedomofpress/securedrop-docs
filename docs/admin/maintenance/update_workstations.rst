@@ -24,7 +24,7 @@ update by running the following commands: ::
   git fetch --tags
   gpg --keyserver hkps://keys.openpgp.org --recv-key \
    "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
-  git tag -v 2.12.3
+  git tag -v 2.12.8
 
 The output should include the following two lines: ::
 
@@ -37,9 +37,9 @@ on the screen of your workstation. A warning that the key is not certified
 is normal and expected. If the output includes the lines above, you can check
 out the new release: ::
 
-    git checkout 2.12.3
+    git checkout 2.12.8
 
-.. important:: If you do see the warning "refname '2.12.3' is ambiguous" in the
+.. important:: If you do see the warning "refname '2.12.8' is ambiguous" in the
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
