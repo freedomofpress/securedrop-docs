@@ -490,10 +490,12 @@ your organization's *Landing Page* using Tor *before* you start advertising it.
 You can do so using Tor Browser:
 
 #. Download Tor Browser from the `Tor Project website`_.
-#. Visit your *Landing Page*.
 #. Ensure the `Tor Browser security level`_ is set to "Safest"
-   by clicking on the shield icon. Click on "Advanced Security Settings"
-   and select "Safest" if necessary.
+   by clicking on the shield icon. If not, click "Settings…", 
+   then "Change…", then select "Safest". Finally, click
+   "Save and restart" to re-launch the browser and apply
+   the new settings.
+#. Visit your *Landing Page*.
 #. Verify that everything works as expected.
 #. Reload the page `using a different Tor circuit`_ by clicking on
    "New Tor Circuit for this Site" in the site information menu (padlock icon in

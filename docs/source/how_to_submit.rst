@@ -41,8 +41,11 @@ will pop up explaining how to increase the security level to **Safest**.
 |Fix JavaScript warning|
 
 1. Click the shield icon in the toolbar
-2. Click **Change**
-3. Select **Safest**
+2. Click **Settings…**
+3. If the current level is not already set to **Safest**, click **Change…**
+4. Select **Safest**
+5. Select **Save and restart** for the changes to take effect
+6. Navigate back to the Source Interface for the SecureDrop for which you wish to submit
 
 |Security Slider|
 
@@ -55,7 +58,7 @@ will pop up explaining how to increase the security level to **Safest**.
    "Safest" during the entirety of the session in which you access an
    organization's SecureDrop instance.
 
-The SecureDrop page should now refresh automatically and stop displaying
+Once you return to the SecureDrop page, it should stop displaying
 the warning. If this is the first time you are using SecureDrop,
 click the **Get Started** button.
 
