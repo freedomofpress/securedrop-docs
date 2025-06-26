@@ -10,9 +10,6 @@ The 2.12.8 release of SecureDrop enabled upgrades for 100% of Application and Mo
 
 If you find yourself manually updating your workstations, it is perfectly safe to go directly from version 2.12.3 to version 2.12.8 using the instructions below.
 
-If you receive :doc:`pre-upgrade error notifications <../admin/maintenance/noble_migration_prep>` from OSSEC, please review our :doc:`Noble upgrade guide <../admin/maintenance/noble_migration>`.
-
-
 Update Workstations to SecureDrop 2.12.8
 ----------------------------------------
 

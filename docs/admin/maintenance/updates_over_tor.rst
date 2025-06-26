@@ -30,9 +30,6 @@ Notably, running ``./securedrop-admin install`` will overwrite these changes.
 
     deb [arch=amd64] tor+https://apt.freedom.press noble main
 
-The line will say ``focal`` instead of ``noble`` if your server has not been
-:doc:`migrated to Ubuntu 24.04 yet <noble_migration>`.
-
 6. Run ``sudo apt update`` and verify there are no error messages. This checks that
    fetching updates works
 

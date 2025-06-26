@@ -9,8 +9,7 @@ your SecureDrop server is prepared for the automated migration to Ubuntu 24.04
 (Noble) in early 2025.
 
 SecureDrop 2.11.1 will automatically run checks to ensure all servers are ready for migration to Ubuntu 24.04 (Noble). If issues are found, a banner will be displayed in the Journalist Interface to both admins and journalists. Administrators are encouraged to review the
-:doc:`Ubuntu 24.04 (Noble) migration guide <../admin/maintenance/noble_migration_prep>`
-explaining how to resolve any errors and perform any necessary steps before
+Ubuntu 24.04 (Noble) migration guide explaining how to resolve any errors and perform any necessary steps before
 Jan. 31st, 2025.
 
 We will have more details on the migration itself early next year.

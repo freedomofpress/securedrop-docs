@@ -6,8 +6,6 @@ Migrating to Ubuntu 24.04 (Noble)
 
 Following a successful period of semiautomated migrations to Ubuntu Noble, we are beginning the first phase of automated upgrades. Approximately 20% of *Application Servers* will be automatically upgraded.
 
-If you receive :doc:`pre-upgrade error notifications <../admin/maintenance/noble_migration_prep>` from OSSEC, please review our :doc:`Noble upgrade guide <../admin/maintenance/noble_migration>`.
-
 Update Workstations to SecureDrop 2.12.2
 ----------------------------------------
 
