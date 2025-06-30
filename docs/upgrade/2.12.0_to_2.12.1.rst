@@ -13,7 +13,7 @@ Administrators have two options, on the following timeline:
 * **semiautomated, through April 15, 2025:** Administrators can manually trigger the upgrade and observe the process.
 * **fully automated, after April 15, 2025:** The SecureDrop team will push an update in mid- to late-April that automatically begins the upgrade process on all servers.
 
-To determine which option is best for you, and to learn more about how the upgrade works, please review the :doc:`Ubuntu 24.04 (Noble) migration guide <../admin/maintenance/noble_migration>` at your earliest convenience.
+To determine which option is best for you, and to learn more about how the upgrade works, please review the Ubuntu 24.04 (Noble) migration guide at your earliest convenience.
     
 Servers to Remain on 2.12.0
 ---------------------------
