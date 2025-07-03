@@ -748,8 +748,8 @@ Hardware             End-of-Life (EOL)
 ===================  ====================================================
 ASUS NUC14RVH        Not yet confirmed
 ASUS NUC13ANHi5      Not yet confirmed
-Intel NUC12WSKi5     Not yet confirmed
-Intel NUC11PAHi3     June 30, 2025                                       
+Intel NUC12WSKi5     April 05, 2026
+Intel NUC11PAHi3     September 30, 2026                                       
 Intel NUC10i5FNH     June 25, 2024                                       
 Intel NUC8i5BEK      March 26, 2024                                      
 Intel NUC7i5BNH      April 30, 2023                                      
