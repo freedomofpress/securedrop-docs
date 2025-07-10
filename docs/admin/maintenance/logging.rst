@@ -50,7 +50,7 @@ sense to temporarily enable error logging. To do so:
    ErrorLog /var/log/apache2/source-error.log
    LogLevel debug
 
-5. Save the file and reload the configuration with ``sudo service apache2 reload``
+5. Save the file and reload the configuration with ``sudo systemctl reload apache2``
 6. Visit the Source Interface and reproduce the error
 7. Inspect the log file ``/var/log/apache2/source-error.log`` for any details
 8. Remember to set the configuration back to the default values once your
