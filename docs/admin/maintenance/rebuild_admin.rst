@@ -165,7 +165,7 @@ and deleting the line:
 
   PasswordAuthentication no
 
-Restart ``sshd`` using the command ``sudo service sshd restart``.
+Restart ``sshd`` using the command ``sudo systemctl restart ssh``.
 
 Then, use the command ``ip a`` to note the local IP address of the
 default Ethernet interface. You'll need it in the next step.
@@ -188,7 +188,7 @@ First, log on to the *Application Server* via the console and edit the file
 
   PasswordAuthentication no
 
-Restart ``sshd`` using the command ``sudo service sshd restart``.
+Restart ``sshd`` using the command ``sudo systemctl restart ssh``.
 
 Then, use the command ``ip a`` to note the local IP address for the
 default Ethernet interface. You'll need it in the next step.
