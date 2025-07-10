@@ -152,19 +152,13 @@ Get Started
    :maxdepth: 2
    :hidden:
 
+   upgrade/2.12.8_to_2.12.9.rst
    upgrade/2.12.3_to_2.12.8.rst
    upgrade/2.12.2_to_2.12.3.rst
    upgrade/2.12.1_to_2.12.2.rst
    upgrade/2.12.0_to_2.12.1.rst
    upgrade/2.11.1_to_2.12.0.rst
    upgrade/2.11.0_to_2.11.1.rst
-   upgrade/2.10.1_to_2.11.0.rst
-   upgrade/2.10.0_to_2.10.1.rst
-   upgrade/2.9.0_to_2.10.0.rst
-   upgrade/2.8.0_to_2.9.0.rst
-   upgrade/2.7.0_to_2.8.0.rst
-   upgrade/2.6.1_to_2.7.0.rst
-   upgrade/2.6.0_to_2.6.1.rst
 
 Get Involved
 ^^^^^^^^^^^^
