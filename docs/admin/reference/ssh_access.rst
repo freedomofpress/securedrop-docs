@@ -114,7 +114,7 @@ web server to apply the changes:
 
 .. code:: sh
 
-  sudo service apache2 restart
+  sudo systemctl restart apache2
 
 .. _submission-cleanup:
 

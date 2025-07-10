@@ -259,7 +259,7 @@ Some OSSEC alerts should begin to arrive as soon as the installation has
 finished.
 
 The easiest way to test that OSSEC is working is to SSH to the Monitor
-Server and run ``service ossec restart``. This will trigger an Alert
+Server and run ``systemctl restart ossec``. This will trigger an Alert
 level 3 saying: "Ossec server started."
 
 So you've finished installing SecureDrop, but you haven't received any
@@ -292,7 +292,7 @@ Authentication failure           | Edit ``/etc/postfix/sasl_passwd`` and make
 ================================ ===================================================
 
 After making changes to the Postfix configuration, you should run
-``service postfix reload`` and test the new settings by restarting the
+``systemctl reload postfix`` and test the new settings by restarting the
 OSSEC service.
 
 .. tip:: If you change the SMTP relay port after installation for any
