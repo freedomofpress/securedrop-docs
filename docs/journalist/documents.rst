@@ -114,38 +114,29 @@ documents, pdf, tar, tar.bz2, tar.gz, zip, mp3, mp2, mp1, mpa, ogg,
 and flac. We recommend using this and other tools to work with documents within
 Tails for as much of your workflow as possible.
 
-Tails 4 replaces MAT with MAT2, which is usable via the command line and via a
-context menu in the *Files* application (called ``nautilus`` on the command
-line).
+You can use MAT2 via the *Metadata Cleaner* application included with Tails which is found in the **Accessories** section of the **Apps** menu.
 
-You can use MAT2 via the *Files* application by browsing to **Places ▸
-(Your file's location)** and right-clicking on your file. In the context
-menu, select **Remove metadata**.
+|Metadata Cleaner menu|
 
-|mat2 context menu|
+Metadata Cleaner allows you to load individual files or folders view the metadata attached to each file. 
 
-Note that this does not alter the original file--it creates a clean copy.
+|Metadata Cleaner loaded|
 
-|mat2 cleaned|
+Once loaded, you can select Clean to remove the metadata from the files. Note that this process deletes the original files, leaving only the cleaned copies.
 
-To use MAT2 on the command line, type ``man mat2`` to see a list of available
-actions you can take with MAT2. For example, you can view the metadata of a
-file with ``mat2 myfile --show``.
+|Metadata Cleaner warning|
+
+To use MAT2 on the command line, type ``man mat2`` to see a list of available actions you can take with MAT2. For example, you can view the metadata of a file with ``mat2 filename --show``.
 
 |mat2 cli show|
 
-You can create a "clean" version of the document with ``mat2 myfile``, again
-noting that this does not erase the metadata on the original file. This is
-equivalent to the "Remove metadata" context menu option.
+You can create a "clean" version of the file with ``mat2 filename``, 
+noting that this does not erase the metadata on the original file but instead creates a new cleaned copy.
 
 Note that even after running MAT2, you should carefully inspect files to ensure
 that all metadata has been wiped, or convert them to a simpler file format (for
 example, converting a ``.xls`` file to a ``.csv``) to ensure that metadata is
 not left behind in error.
-
-When you no longer need documents, right-click them in the Files application
-and choose **Move to Trash**, then navigate to **Trash** in the sidebar
-and select **Empty Trash**.
 
 .. _`guide to removing metadata`: https://freedom.press/training/everything-you-wanted-know-about-media-metadata-were-afraid-ask/
 
@@ -374,10 +365,12 @@ bottom of the page. You will be prompted for confirmation.
 .. |Delete source account| image:: ../images/manual/screenshots/journalist-delete_source_account.png
    :alt: Example source page displaying a dialog box that asks for confirmation before deleting the source account.
 
-.. |mat2 context menu| image:: ../images/manual/screenshots/mat2_context_menu.png
-   :alt: Files application displaying the menu that opens after a right-click on a file. The 'Remove metadata' entry is selected.
-.. |mat2 cleaned| image:: ../images/manual/screenshots/mat2_cleaned.png
-   :alt: Files application displaying a cleaned image file next to its original version.
+.. |Metadata Cleaner menu| image:: ../images/manual/screenshots/mc_menu.png
+   :alt: Tails menu showing locaing of Metadata Cleaner application.
+.. |Metadata Cleaner loaded| image:: ../images/manual/screenshots/mc_loaded.png
+   :alt: Example of Metadata Cleaner with a file loaded.
+.. |Metadata Cleaner warning| image:: ../images/manual/screenshots/mc_warning.png
+   :alt: Metadata Cleaner warning when cleaning files: "Make sure you backed up your files! Once the files are cleaned, there's no going back."
 .. |mat2 cli show| image:: ../images/manual/screenshots/mat2_cli_show.png
    :alt: Terminal application displaying the metadata of a file.
 
