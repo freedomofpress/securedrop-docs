@@ -36,7 +36,7 @@ enumerate recommended BIOS settings for hardware that we have tested.
 Install Ubuntu
 ---------------
 
-The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu 24.04.2 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first
+The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu 24.04.3 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first
 download and verify the Ubuntu installation media.
 
 You should have already performed this step while setting up the Tails USB
@@ -61,7 +61,7 @@ enter the boot menu. Once you've entered the boot menu, select the
 installation media (USB or CD) and press Enter to boot it.
 
 On newer hardware, such as the NUC12s, you may need to use a newer Linux kernel
-than the one that ships by default in **Ubuntu Server 24.04.2** in order to have
+than the one that ships by default in **Ubuntu Server 24.04.3** in order to have
 more up-to-date hardware drivers. To use a newer Linux kernel, select **Ubuntu
 Server with the HWE kernel** in the initial OS boot menu that appears prior to
 booting the Ubuntu image.
