@@ -114,15 +114,15 @@ documents, pdf, tar, tar.bz2, tar.gz, zip, mp3, mp2, mp1, mpa, ogg,
 and flac. We recommend using this and other tools to work with documents within
 Tails for as much of your workflow as possible.
 
-You can use MAT2 via the *Metadata Cleaner* application included with Tails which is found in the **Accessories** section of the **Apps** menu.
+You can use MAT2 via the *Metadata Cleaner* application which is found in the **Accessories** section of the **Apps** menu.
 
 |Metadata Cleaner menu|
 
-Metadata Cleaner allows you to load individual files or folders view the metadata attached to each file. 
+You can load individual files or folders into Metadata Cleaner by clicking Add Files or Add Folders. Metadata Cleaner gives you a count of how many metadata parameters are associated with each file and lets you view the metadata.
 
 |Metadata Cleaner loaded|
 
-Once loaded, you can select Clean to remove the metadata from the files. Note that this process deletes the original files, leaving only the cleaned copies.
+You can select Clean to remove the metadata from the files. Note that this process deletes the original files, leaving only the cleaned versions.
 
 |Metadata Cleaner warning|
 
@@ -131,7 +131,7 @@ To use MAT2 on the command line, type ``man mat2`` to see a list of available ac
 |mat2 cli show|
 
 You can create a "clean" version of the file with ``mat2 filename``, 
-noting that this does not erase the metadata on the original file but instead creates a new cleaned copy.
+noting that this does not erase the metadata on the original file but instead creates a new cleaned copy. Use the ``--in-place`` flag if you wish to delete the original file and leave only a cleaned version.
 
 Note that even after running MAT2, you should carefully inspect files to ensure
 that all metadata has been wiped, or convert them to a simpler file format (for
