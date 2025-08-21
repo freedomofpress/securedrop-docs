@@ -122,7 +122,7 @@ You can load individual files or folders into *Metadata Cleaner* by clicking **A
 
 |Metadata Cleaner loaded|
 
-You can select Clean to remove the metadata from the files. Note that this process deletes the original files, leaving only the cleaned versions.
+You can select **Clean** to remove the metadata from the files. Note that this process deletes the original files, leaving only the cleaned versions.
 
 |Metadata Cleaner warning|
 
