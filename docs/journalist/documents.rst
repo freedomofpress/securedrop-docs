@@ -131,7 +131,7 @@ To use MAT2 on the command line, type ``man mat2`` to see a list of available ac
 |mat2 cli show|
 
 You can create a "clean" version of the file with ``mat2 filename``, 
-noting that this does not erase the metadata on the original file but instead creates a new cleaned copy. Use the ``--in-place`` flag if you wish to delete the original file and leave only a cleaned version.
+noting that this does not erase the metadata on the original file but instead creates a new cleaned copy. Use the ``--inplace`` flag if you wish to delete the original file and leave only a cleaned version.
 
 Note that even after running MAT2, you should carefully inspect files to ensure
 that all metadata has been wiped, or convert them to a simpler file format (for
