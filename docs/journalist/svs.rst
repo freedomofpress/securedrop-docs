@@ -104,7 +104,7 @@ To decrypt and view documents or messages, return to your **Persistent** folder.
 All key actions are initiated by double-clicking:
 
 - Double-clicking archives in ZIP or gzip format will invoke the **File Roller**
-  application to extract the contents tot the same location.
+  application to extract the contents to the same location.
 
 - On Tails 4, double-clicking files that end in ``.gpg`` will attempt to decrypt
   the contents to the same directory. If you have configured a passphrase for your
