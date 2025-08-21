@@ -118,7 +118,7 @@ You can use MAT2 via the *Metadata Cleaner* application which is found in the **
 
 |Metadata Cleaner menu|
 
-You can load individual files or folders into Metadata Cleaner by clicking Add Files or Add Folders. Metadata Cleaner gives you a count of how many metadata parameters are associated with each file and lets you view the metadata.
+You can load individual files or folders into *Metadata Cleaner* by clicking **Add Files** or **Add Folders**. *Metadata Cleaner* gives you a count of how many metadata parameters are associated with each file and lets you view the metadata.
 
 |Metadata Cleaner loaded|
 
