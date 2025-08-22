@@ -35,7 +35,7 @@ Additionally, you may want to consider the following purchases:
 
 * a printer without wireless network support, to use in combination with the
   *Secure Viewing Station*.
-* an external hard drive to expand the storage capacity of the
+* an external storage drive to expand the storage capacity of the
   *Secure Viewing Station*.
 * an external hard drive for server backups.
 * a USB drive to store :ref:`backups of your Tails workstation drives <backup_workstations>`.
@@ -76,6 +76,11 @@ and recycled ThinkPad laptops work well for the
 
 Please note that very old laptops or desktops may not work for the workstations.
 Since the release of Tails 3.0, 32-bit computers are no longer supported.
+
+Additionally, we recommend against re-purposing Apple Macintosh
+laptops and desktops. Recent Apple computers, which have M-series CPUs, are
+completely unsupported by Tails and will not work. Older computers with Intel
+CPUs may work, but are likely to experience compatibility issues.
 
 If you choose to use recycled hardware, you should of course
 consider whether or not it is trustworthy; making that
@@ -160,8 +165,11 @@ SecureDrop and to process submissions using the air-gapped workflow.
 1 physical computer used as an air-gap to decrypt and view submissions retrieved
 from the *Application Server*.
 
-The chosen hardware should be solely used for this purpose and should have any
-wireless networking hardware removed before use.
+The chosen hardware should be solely used for this purpose. This system must have
+a removable wireless card, which will need to be completely removed before use. It
+must also have a removable storage device, such as a solid state drive (SSD) or a
+hard disk drive (HDD), which likewise needs to be removed prior to using the system.
+You will only ever boot directly to the *Secure Viewing Station* USB drive.
 
 Admin/Journalist Workstation(s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -185,6 +193,9 @@ USB Drive(s)
 If only one person is maintaining the system, you may use the same Tails
 instance as both the *Admin Workstation* and the *Journalist Workstation*; otherwise, we
 recommend buying 1 drive for each admin and each journalist.
+
+You will also need 2 additional drives for use as a *Transfer Device* and
+*Export Device*.
 
 We also recommend buying an additional USB drive for making regular backups of
 your Tails workstations.
@@ -323,8 +334,9 @@ Offline Storage
 The *SVS* is booted from a Tails USB drive, which has an encrypted persistent
 volume but typically has a fairly limited storage capacity since it's just a USB
 drive. For installations that expect to receive a large volume of submissions,
-we recommend buying an external hard drive that can be used to store submissions
-that have been transferred from the *Application Server* to the *SVS*.
+we recommend buying an external hard drive or solid state drive that can be used
+to store submissions that have been transferred from the *Application Server* to
+the *SVS*.
 
 .. include:: ../../includes/encrypting-drives.txt
 
@@ -627,13 +639,24 @@ not need a hard drive or network device; in fact, we recommend removing
 these components if they are already present.
 
 As with the workstations, one good option is to buy a Linux-compatible laptop
-from the Lenovo ThinkPad T series. We have tested the T420 and successfully
-removed the wireless components with ease. It's possible to re-purpose old
+from the Lenovo ThinkPad series. It's possible to re-purpose old
 laptops from other manufacturers, as long as the wireless components are
 removable.
 
+If you are purchasing a new laptop for use as a *Secure Viewing Station*,
+you will want to ensure you are purchasing a model with a removable
+wireless card and removable storage. We have tested the following laptops
+with removable components, and can confirm compatibility within Tails:
+
+* Framework 13 laptop (Intel)
+* Lenovo Thinkpad T14 (2nd generation)
+
+For other models, we recommend that you check the service manual for the specific
+generation/model of laptop. For example, according to the service manual for the
+Thinkpad X1 Carbon, it uses a standard removable M.2-based wireless card.
+
 Just as with the servers, you can also use a NUC for the *SVS*. As noted
-before, NUCs do not ship with a hard drive, and older models can be configured
+before, NUCs do not ship with a storage drive, and older models can be configured
 without any wireless components. However, NUCs *do* contain an IR receiver,
 which we recommend taping over with opaque masking tape.
 
@@ -653,7 +676,7 @@ means a live operating system booting from one will be much faster and
 more responsive.
 
 You will need *at least* an 8GB drive to run Tails with an encrypted
-persistent partition. We recommend getting something in the 16-64GB
+persistent partition. We recommend getting something in the 32-128GB
 range so you can handle large amounts of submissions without hassle.
 Anything more than that is probably overkill.
 
