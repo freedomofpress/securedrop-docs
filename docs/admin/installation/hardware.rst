@@ -164,9 +164,7 @@ SecureDrop and to process submissions using the air-gapped workflow.
 from the *Application Server*.
 
 The chosen hardware should be solely used for this purpose. This system must have
-a removable wireless card, which will need to be completely removed before use. It
-must also have a removable storage device (solid state drive (SSD) or hard disk 
-drive (HDD)), which also needs to be removed prior to using the system. You will
+a removable wireless card, which will need to be completely removed before use. It must also have a removable storage device, such as a solid state drive (SSD) or a hard disk drive (HDD), which likewise needs to be removed prior to using the system. You will
 only ever boot directly to the *Secure Viewing Station* USB drive.
 
 Admin/Journalist Workstation(s)
