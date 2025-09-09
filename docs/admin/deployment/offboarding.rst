@@ -177,7 +177,7 @@ On the Secure Viewing Station
 
    |key details|
 
-#. Set the name field to "OLD SecureDrop Submission Key - Retired ", and add the date of retirement.
+#. Set the name field to "Old SecureDrop Submission Key - Retired ", and add the date of retirement.
    Click **OK** to add this information to the key.
 
    |edit key name|
