@@ -51,9 +51,9 @@ Preparing the Backup Device
 
 First you must boot the *primary Tails USB* drive. Ensure you set an
 administrator password set at the login screen. Then navigate to
-**Applications ▸ Utilities ▸ Disks**.
+**Apps ▸ Utilities ▸ Disks**.
 
-|Applications Utilities Disks|
+|Apps Utilities Disks|
 
 Insert the USB drive you wish to use as a backup drive.
 
@@ -89,14 +89,12 @@ Once completed, you will see two partitions appear:
 |Two Partitions Appear|
 
 Now that you made the backup device, plug in the device you want to backup.
-Then, browse to **Places ▸ Computer**:
-
-|Browse to Places Computer|
+Then, open the File Manager: **Apps ▸ Accessories ▸ Files**.
 
 Click on the disk on the left side column. Fill in the passphrase you set up
 when you :ref:`created your Tails devices <set_up_tails>`.
 
-|Fill in Passphrase|
+|Mount Tails Data|
 
 You should now have both the Backup and TailsData partition to be backed up
 mounted and ready to access.
@@ -107,7 +105,7 @@ Create the backup using Rsync
 |Backup and TailsData Mounted|
 
 Open a terminal by going to
-**Applications ▸ System Tools ▸ Terminal**.
+**Apps ▸ System Tools ▸ Console**.
 
 
 Next, create a directory on the Backup USB for the device to be backed up - the
@@ -189,8 +187,8 @@ name ``TailsData`` will appear in the lefthand column.
 Copy the Backup to the New Workstation USB's Persistent Volume
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Open a terminal by navigating to **Applications ▸ System Tools
-▸ Terminal** . Next, use the ``rsync`` command to copy the appropriate backup
+Open a terminal by navigating to **Apps ▸ System Tools
+▸ Console** . Next, use the ``rsync`` command to copy the appropriate backup
 folder to the new workstation USB's persistent volume. For example, if the
 backup folder to be copied is named ``admin-backup``, run the following command:
 
@@ -213,12 +211,12 @@ booting it with persistence unlocked and verifying its functionality.
 
 .. |Browse to Places Computer| image:: ../../images/tails_6x/browse_to_places_computer.png
 .. |Click Cogs| image:: ../../images/tails_4x/disks_format_partition.png
-.. |Fill in Passphrase| image:: ../../images/upgrade_to_tails_3x/fill_in_passphrase.png
+.. |Mount Tails Data| image:: ../../images/tails_7x/mount_tails_data.png
 .. |Format Backup Drive| image:: ../../images/tails_4x/format_backup_drive.png
 .. |Backup Drive Passphrase| image:: ../../images/tails_4x/backup_drive_passphrase.png
 .. |Start Nautilus| image:: ../../images/screenshots/root_terminal_nautilus_cli.png
 .. |Make Folders for All Drives| image:: ../../images/upgrade_to_tails_3x/make_folders_for_all_drives.png
-.. |Backup and TailsData Mounted| image:: ../../images/upgrade_to_tails_3x/backup_and_tailsdata_mounted.png
-.. |Applications Utilities Disks| image:: ../../images/tails_5x/disks_utility_applications_menu.png
+.. |Backup and TailsData Mounted| image:: ../../images/tails_7x/backup_and_tails_data_mounted.png
+.. |Apps Utilities Disks| image:: ../../images/tails_7x/disks_utility_apps_menu.png
 .. |Select the Disk| image:: ../../images/tails_4x/disks_select_drive.png
 .. |Two Partitions Appear| image:: ../../images/tails_4x/two_partitions_appear.png

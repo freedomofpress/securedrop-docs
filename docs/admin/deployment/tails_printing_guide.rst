@@ -48,7 +48,7 @@ Tails.
 Connect the printer to your Tails-booted computer via USB, then turn the printer
 on.
 
-Now, you'll want to single-click your way through **Applications ▸
+Now, you'll want to single-click your way through **Apps ▸
 System Tools ▸ Settings**, then select **Printers**. 
 
 If this is the first time you've tried to install a printer, the "Printers"

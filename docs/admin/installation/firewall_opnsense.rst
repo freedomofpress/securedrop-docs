@@ -81,7 +81,7 @@ Connect to the OPNSense Web GUI
       wireless network), you may encounter problems trying
       to connect the firewall's Web GUI.
 
-#. Launch the **Unsafe Browser** from the menu bar: **Applications ▸ Internet ▸
+#. Launch the **Unsafe Browser** from the menu bar: **Apps ▸ Internet ▸
    Unsafe Browser**.
 
    |Launching the Unsafe Browser|

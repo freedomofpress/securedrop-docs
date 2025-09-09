@@ -166,23 +166,18 @@ was in effect.
 On the Secure Viewing Station
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. From the *Secure Viewing Station* Applications Menu, choose **Accessories ▸
+#. From the *Secure Viewing Station* Apps Menu, choose **Accessories ▸
    Kleopatra**, and select the *Submission Key* from the list of available
    keys.
 
 
    |select securedrop key|
 
-#. From the details view that appears, click the **Add email address** button.
+#. From the details view that appears, click the **Add User ID** button.
 
    |key details|
 
-#. In the dialog window that appears, choose **Advanced**.
-
-   |add email|
-
-#. Set the name field to "OLD SecureDrop Submission Key - Do Not Delete",
-   and set the comment field to "Retired <Date of Retirement>".
+#. Set the name field to "OLD SecureDrop Submission Key - Retired ", and add the date of retirement.
    Click **OK** to add this information to the key.
 
    |edit key name|

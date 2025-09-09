@@ -38,7 +38,7 @@ To set up AW2, follow these steps:
     (You will need to on-board the new admin's 2FA device to complete this step.
     If this is not possible yet, you can defer it until later.)
 4. Insert the empty AW2 USB drive.
-5. Launch the Tails Cloner (**Applications ▸ Tails ▸ Tails Cloner**).
+5. Launch the Tails Cloner (**Apps ▸ Tails ▸ Tails Cloner**).
    Select the option to **Clone the current Tails.** This will delete all data on the AW2 USB drive.
 6. Check the box marked **Clone the current Persistent Storage.**
 7. Click **Install**.
@@ -71,7 +71,7 @@ To set up AW2, follow these steps:
        * ``ssh-copy-id app``
        * ``ssh-copy-id mon``
        * ``ssh-add -D``
-    c. From the file manager (**Applications ▸ Accessories ▸ Files**), eject AW1.
+    c. From the file manager (**Apps ▸ Accessories ▸ Files**), eject AW1.
 
 15. Confirm that you are able to access ``mon`` and ``app`` via SSH. The
     following commands should produce the following output::

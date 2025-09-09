@@ -122,7 +122,7 @@ To create the new SVS USB:
 7. Mount its persistent volume by browsing to Places > Computer, clicking
    the USB disk in the left-hand column, and entering its persistent volume’s
    passphrase.
-8. Open a terminal via Applications > Favorites > Terminal
+8. Open a terminal via Apps > Favorites > Console
 9. Copy the current SVS’s GPG keychain (which includes the *Submission Key*) to
    the new SVS USB using the following command (without linebreaks):
 
@@ -135,7 +135,7 @@ To create the new SVS USB:
 
 10. Eject and remove the current SVS USB.
 11. Verify that the *Submission Key* is present with the correct fingerprint on
-    the new SVS USB via Applications > Utilities > Passwords and Keys.
+    the new SVS USB via Apps > Utilities > Passwords and Keys.
 
 The new SVS should now be ready for use. The journalist that will be checking
 submissions will need the new SVS USB, its Persistent Volume passphrase, and

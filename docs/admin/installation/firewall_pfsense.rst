@@ -90,7 +90,7 @@ Connect to the pfSense WebGUI
       wireless network), you may encounter problems trying
       to connect the pfSense WebGUI.
 
-#. Launch the **Unsafe Browser** from the menu bar: **Applications ▸ Internet ▸
+#. Launch the **Unsafe Browser** from the menu bar: **Apps ▸ Internet ▸
    Unsafe Browser**.
 
    |Launching the Unsafe Browser|
