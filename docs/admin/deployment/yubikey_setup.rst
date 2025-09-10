@@ -34,7 +34,7 @@ Download and Launch the YubiKey Personalization Tool
    sudo apt-get install yubikey-personalization-gui
 
 #. Once you have downloaded and installed the personalization program,
-   open a **Root Terminal** by choosing **Apps ▸ System Tools
+   open a **Root Console** by choosing **Apps ▸ System Tools
    ▸ Root Console**.
 
 #. Open the YubiKey personalization tool by entering
