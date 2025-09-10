@@ -72,15 +72,11 @@ Connect to the pfSense WebGUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. If you have not already done so, boot the *Admin Workstation* into
-   Tails using its designated USB drive. Make sure to enable the unsafe browser
-   on the "Welcome to Tails" screen under "Additional settings" if you are
-   using a version of Tails prior to 5.8. Tails 5.8 and newer enables the
-   unsafe browser automatically.
+   Tails using its designated USB drive.
 
 #. Connect the *Admin Workstation* to the LAN[1] interface. You should see
    a popup notification in Tails that says "Connection Established". If you click
-   on the network icon in the upper right of the Tails Desktop, you should see
-   "Wired Connected":
+   on the network icon in the upper right of the Tails Desktop, you should see that the Wired Connection is active:
 
    |Wired Connected|
 
@@ -90,7 +86,7 @@ Connect to the pfSense WebGUI
       wireless network), you may encounter problems trying
       to connect the pfSense WebGUI.
 
-#. Launch the **Unsafe Browser** from the menu bar: **Applications ▸ Internet ▸
+#. Launch the **Unsafe Browser** from the menu bar: **Apps ▸ Internet ▸
    Unsafe Browser**.
 
    |Launching the Unsafe Browser|
@@ -142,7 +138,7 @@ Alternate Hostnames
 
 Before you can set up the hardware firewall, you will need to set the
 **Alternate Hostnames** setting after logging in. You will see the Setup
-Wizard but you should exit out of it by navigating to **System** -> **Advanced**.
+Wizard but you should exit out of it by navigating to **System ▸ Advanced**.
 In the **Alternate Hostnames** dialog box, add ``192.168.1.1`` as well as the
 IP address of the *Admin Gateway*. If you decide against using our recommended
 defaults for the *Admin Gateway*, you should include that value here. After

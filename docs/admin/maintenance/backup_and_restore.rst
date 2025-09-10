@@ -174,7 +174,7 @@ Moving a SecureDrop instance to new hardware involves:
    and renamed ``sd-backup-old.tar.gz``.
 
 #. Move the existing *Admin Workstation* SecureDrop code out of the way, by
-   opening a Terminal via **Applications ▸ System Tools ▸ Terminal** and
+   opening a Terminal via **Apps ▸ System Tools ▸ Console** and
    running the command:
 
    .. code:: sh

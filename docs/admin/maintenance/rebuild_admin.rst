@@ -46,7 +46,7 @@ the KeePassXC database <set_up_admin_tails>`.
 
 The *Admin Workstation* uses SSH with key authentication to connect to the servers,
 so you'll need to create a new SSH keypair for your SecureDrop instance. To do so,
-open a terminal by navigating to **Applications ▸ System Tools ▸ Terminal**,  and run
+open a terminal by navigating to **Apps ▸ System Tools ▸ Console**,  and run
 the following command:
 
 .. code:: sh

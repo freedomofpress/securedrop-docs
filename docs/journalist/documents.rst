@@ -374,9 +374,9 @@ bottom of the page. You will be prompted for confirmation.
 .. |mat2 cli show| image:: ../images/manual/screenshots/mat2_cli_show.png
    :alt: Terminal application displaying the metadata of a file.
 
-.. |Unlock VeraCrypt| image:: ../images/manual/unlock_veracrypt_in_tails6.png
+.. |Unlock VeraCrypt| image:: ../images/manual/unlock_veracrypt_in_tails7.png
    :alt: The 'Authentication Required' menu that appears when you plug in a Veracrypt drive. The 'password' box is selected.
-   :width: 100%
+   :width: 50%
 .. |br| raw:: html
 
     <br>

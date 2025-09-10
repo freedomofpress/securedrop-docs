@@ -21,7 +21,7 @@ stick, with persistence enabled.
 Create the Key
 --------------
 
-#. Navigate to **Applications ▸ System Tools ▸ Terminal** to open a terminal |Terminal|.
+#. Navigate to **Apps ▸ System Tools ▸ Console** to open a terminal |Terminal|.
 #. In the terminal, run ``gpg --full-generate-key``:
 
    |GPG generate key|
@@ -56,7 +56,7 @@ Create the Key
 Export the *Submission Public Key*
 ----------------------------------
 
-Navigate to **Applications ▸ Accessories ▸ Kleopatra** to open a
+Navigate to **Apps ▸ Accessories ▸ Kleopatra** to open a
 graphical interface to manage GPG keys. Once Kleopatra opens you will find
 a list of keys, including the SecureDrop Submission Key you just created.
 

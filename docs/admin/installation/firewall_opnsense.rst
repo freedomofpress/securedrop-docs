@@ -63,15 +63,11 @@ Connect to the OPNSense Web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. If you have not already done so, boot the *Admin Workstation* into
-   Tails using its designated USB drive. Make sure to enable the unsafe browser
-   on the "Welcome to Tails" screen under "Additional settings" if you are
-   using a version of Tails prior to 5.8. Tails 5.8 and newer enables the
-   unsafe browser automatically.
-
+   Tails using its designated USB drive. 
+   
 #. Connect the *Admin Workstation* to the LAN interface. You should see
    a popup notification in Tails that says "Connection Established". If you click
-   on the network icon in the upper right of the Tails Desktop, you should see
-   "Wired Connected":
+   on the network icon in the upper right of the Tails Desktop, you should see that the "Wired Connection" is active:
 
    |Wired Connected|
 
@@ -81,7 +77,7 @@ Connect to the OPNSense Web GUI
       wireless network), you may encounter problems trying
       to connect the firewall's Web GUI.
 
-#. Launch the **Unsafe Browser** from the menu bar: **Applications ▸ Internet ▸
+#. Launch the **Unsafe Browser** from the menu bar: **Apps ▸ Internet ▸
    Unsafe Browser**.
 
    |Launching the Unsafe Browser|
@@ -134,7 +130,7 @@ of the screen.
 Set a Strong Password
 ~~~~~~~~~~~~~~~~~~~~~
 
-Navigate to **System > Access > Users** and click the edit button for the ``root``
+Navigate to **System ▸ Access ▸ Users** and click the edit button for the ``root``
 user. On the subsequent page, set a strong admin password. We recommend generating
 a strong passphrase with KeePassXC and saving it in the Tails Persistent folder using
 the provided KeePassXC database template. Two-factor authentication will be enabled 
@@ -146,7 +142,7 @@ Set Alternate Hostnames
 Before you can set up the hardware firewall, you will need to set the
 **Alternate Hostnames** setting.
 
-First, navigate to **System > Settings > Administration**.  In the **Web GUI** section,
+First, navigate to **System ▸ Settings ▸ Administration**.  In the **Web GUI** section,
 update the **Alternate Hostnames** field with the values ``192.168.1.1`` and the
 IP address of the *Admin Gateway* (``10.20.1.1`` if you are using the recommended
 default values), separated by a space.
@@ -158,7 +154,7 @@ Finally, scroll to the bottom of the page and click **Save**.
 Configure Interfaces Via The Setup Wizard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To start the OPNSense Setup Wizard, navigate to **System > Wizard** and click
+To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click
 **Next**.
 
 
@@ -235,7 +231,7 @@ the Unsafe Browser and visit a host that you expect to be up (e.g. ``google.com`
 Update OPNSense to the latest version
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You should update OPNSense to the latest version available before proceeding
-with the rest of the configuration. Navigate to **Lobby > Dashboard** and click
+with the rest of the configuration. Navigate to **Lobby ▸ Dashboard** and click
 **Click to check for updates** to start the process, and follow any on-screen instructions
 to complete the update. Note that a reboot may be required, and you may also need
 to apply several updates in a row to get to the latest version.
@@ -249,7 +245,7 @@ OPNSense supports two-factor authentication (2FA) via mobile apps such as Google
 or FreeOTP. To set it up, first make sure you have a mobile device available with
 your choice of 2FA app.
 
-Next, in the OPNSense Web GUI, navigate to **System > Access > Servers** and
+Next, in the OPNSense Web GUI, navigate to **System ▸ Access ▸ Servers** and
 click **+** to add a new server.
 
 |OPNSense - auth server|
@@ -261,7 +257,7 @@ On the next page, enter ``TOTP Local`` in the **Descriptive name** field and cho
 ``Local + Timebased One Time Password`` from the **Type** dropdown. Leave the other
 fields at their default values and click **Save**
 
-Next, navigate to **System > Access > Users** and click the edit button for the ``root``
+Next, navigate to **System ▸ Access ▸ Users** and click the edit button for the ``root``
 user. Scroll down the page to the **OTP seed** section and check the 
 **Generate new secret (160bit)** checkbox. Finally, click **Save**.
 
@@ -280,8 +276,8 @@ on another mobile device if you need to in the future.
 Test your new login credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To verify that your new password and OTP secret are working, navigate to **System >
-Access > Tester**. Select ``TOTP Local`` from the **Authentication Server** dropdown,
+To verify that your new password and OTP secret are working, navigate to **System ▸
+Access ▸ Tester**. Select ``TOTP Local`` from the **Authentication Server** dropdown,
 enter the ``root`` username in the **Username** field, and enter your OTP token and 
 password concatenated like ``123456PASSWORD`` in the **Password** field.
 Then click **Test**.
@@ -298,7 +294,7 @@ edit the ``root`` user record as necessary.
   will be locked out of the firewall Web GUI and console if the account is not
   set up correctly!
 
-Finally,  navigate to **System > Settings > Administration** and scroll down to the
+Finally,  navigate to **System ▸ Settings ▸ Administration** and scroll down to the
 **Authentication** section at the bottom of the page. In the **Server** dropdown,
 select ``TOTP Local`` and deselect ``Local Database.``. Click **Save**.
 
@@ -319,7 +315,7 @@ Workstation instead.
 Disable DHCP Server on the LAN Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To disable DHCP, navigate to **Services > DHCPv4 > [LAN]** in the Web GUI.
+To disable DHCP, navigate to **Services ▸ DHCPv4 ▸ [LAN]** in the Web GUI.
 Uncheck the **Enable DHCP server on the LAN interface** checkbox, scroll down,
 and click **Save**.
 
@@ -417,7 +413,7 @@ The OPT1 and OPT2 interfaces will be used for the *Application Server* and *Moni
 Server* respectively. To enable them, first connect the *Application Server* to the
 physical OPT1 port and the *Monitor Server* to the OPT2 port.
 
-Next, navigate to **Interfaces > Assignments**. LAN and WAN will already be enabled.
+Next, navigate to **Interfaces ▸ Assignments**. LAN and WAN will already be enabled.
 Click the **+** button in the **New Interface** section to enable the OPT1 interface
 on the next available NIC (``igb2`` in the screenshot below). Once OPT1 has been
 added, click **+** again to add OPT2 (on ``igb3`` in the screenshot below)
@@ -434,7 +430,7 @@ and WAN interfaces, that is not covered by the Setup Wizard.
 
 Configure the WAN interface
 '''''''''''''''''''''''''''''
-First, navigate to **Interfaces > [WAN]**. In the **Basic configuration** section,
+First, navigate to **Interfaces ▸ [WAN]**. In the **Basic configuration** section,
 check the checkbox labeled **Prevent interface removal**.
 
 In the **Generic configuration**
@@ -445,7 +441,7 @@ Scroll down and click  **Save**, then click **Apply changes** when prompted.
 
 Configure the LAN interface
 '''''''''''''''''''''''''''''
-Next, navigate to **Interfaces > [LAN]**. In the **Basic configuration** section,
+Next, navigate to **Interfaces ▸ [LAN]**. In the **Basic configuration** section,
 check the checkbox labeled **Prevent interface removal**.
 
 In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4
@@ -456,7 +452,7 @@ Scroll down and click **Save**, then click **Apply changes** when prompted.
 
 Configure the OPT1 interface
 '''''''''''''''''''''''''''''
-Next, navigate to **Interfaces > [OPT1]**. In the **Basic configuration** section,
+Next, navigate to **Interfaces ▸ [OPT1]**. In the **Basic configuration** section,
 check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
 In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4
@@ -471,7 +467,7 @@ Click **Save**, then click **Apply changes** when prompted.
 
 Configure the OPT2 interface
 '''''''''''''''''''''''''''''
-Finally, navigate to **Interfaces > [OPT2]**. In the **Basic configuration** section,
+Finally, navigate to **Interfaces ▸ [OPT2]**. In the **Basic configuration** section,
 check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
 In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4
@@ -490,7 +486,7 @@ Configure Firewall Aliases
 In order to simplify firewall rule setup, the next step is to configure aliases
 for hosts and ports referred to in the rules.
 
-To start, first navigate to **Firewall > Aliases**. You should see some system-defined
+To start, first navigate to **Firewall ▸ Aliases**. You should see some system-defined
 aliases as shown below:
 
 |OPNSense - Alias Start|
@@ -551,7 +547,7 @@ Next, configure firewall rules for each interface.
 
 Configure Firewall Rules on LAN
 '''''''''''''''''''''''''''''''
-First, navigate to **Firewall > Rules > LAN**.  The LAN interface should have one
+First, navigate to **Firewall ▸ Rules ▸ LAN**.  The LAN interface should have one
 automatically-generated anti-lockout rule in place, in addition to two default-allow rules.
 The default-allow rules should be removed once the SecureDrop-specific rules below
 have been added. The anti-lockout feature should be disabled as a last step.
@@ -593,15 +589,15 @@ button to add a rule.
 
 Once the rules match, click **Apply Changes.**
 
-Finally, remove the default anti-lockout rule. First, navigate to **Firewall >
-Settings > Advanced**. Scroll down to the **Miscellaneous** section and check the
+Finally, remove the default anti-lockout rule. First, navigate to **Firewall ▸
+Settings ▸ Advanced**. Scroll down to the **Miscellaneous** section and check the
 **Disable anti-lockout** checkbox. Then, click **Save**.
 
 |OPNSense - Disable Antilockout|
 
 Configure Firewall Rules On OPT1
 ''''''''''''''''''''''''''''''''
-Next, navigate to **Firewall > Rules > OPT1**. There should be no rules defined
+Next, navigate to **Firewall ▸ Rules ▸ OPT1**. There should be no rules defined
 on this interface. Add the rules below:
 
 .. list-table:: Firewall Rules - OPT1
@@ -679,7 +675,7 @@ Once they match the screenshot below, click **Apply Changes**.
 
 Configure Firewall Rules On OPT2
 ''''''''''''''''''''''''''''''''
-Next, navigate to **Firewall > Rules > OPT2**. Similarly to OPT1, there should be no rules defined
+Next, navigate to **Firewall ▸ Rules ▸ OPT2**. Similarly to OPT1, there should be no rules defined
 on this interface. Add the rules below until the rules in the Web GUI match those
 in the screenshot:
 
@@ -757,7 +753,7 @@ Here are some general tips for setting up OPNSense firewall rules:
 #. Make sure you delete the default "allow all" rule on the LAN
    interface.
 #. If you are troubleshooting connectivity, the firewall logs can be
-   very helpful. You can find them in the Web GUI in **Firewall > Log Files**
+   very helpful. You can find them in the Web GUI in **Firewall ▸ Log Files**
 
 .. _Keeping OPNSense up to date:
 

@@ -63,7 +63,7 @@ Key*. This operation requires the Tails administration password to be set
 
 To set the system time:
 
-#. Click the upper right down arrow in the menu bar and select the wrench icon:
+#. Click the upper right down arrow in the menu bar and select the gear icon:
    |select settings|
 #. Select the **Details** section, then click **Date & Time**.
 #. Click **Unlock**. Type in the admin password you set when you
