@@ -72,7 +72,7 @@ Connect to the pfSense WebGUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. If you have not already done so, boot the *Admin Workstation* into
-   Tails using its designated USB drive. If you are using a version of Tails prior to 5.8, you will need to enable the unsafe browser on the "Welcome to Tails" screen under "Additional settings".
+   Tails using its designated USB drive.
 
 #. Connect the *Admin Workstation* to the LAN[1] interface. You should see
    a popup notification in Tails that says "Connection Established". If you click

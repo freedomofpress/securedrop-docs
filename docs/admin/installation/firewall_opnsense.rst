@@ -63,8 +63,8 @@ Connect to the OPNSense Web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. If you have not already done so, boot the *Admin Workstation* into
-   Tails using its designated USB drive. If you are using a version of Tails prior to 5.8, you will need to enable the unsafe browser on the "Welcome to Tails" screen under "Additional settings".
-
+   Tails using its designated USB drive. 
+   
 #. Connect the *Admin Workstation* to the LAN interface. You should see
    a popup notification in Tails that says "Connection Established". If you click
    on the network icon in the upper right of the Tails Desktop, you should see that the "Wired Connection" is active:
