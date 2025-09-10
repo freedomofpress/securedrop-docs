@@ -138,7 +138,7 @@ Alternate Hostnames
 
 Before you can set up the hardware firewall, you will need to set the
 **Alternate Hostnames** setting after logging in. You will see the Setup
-Wizard but you should exit out of it by navigating to **System** -> **Advanced**.
+Wizard but you should exit out of it by navigating to **System ▸ Advanced**.
 In the **Alternate Hostnames** dialog box, add ``192.168.1.1`` as well as the
 IP address of the *Admin Gateway*. If you decide against using our recommended
 defaults for the *Admin Gateway*, you should include that value here. After

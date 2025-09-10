@@ -19,7 +19,7 @@ to perform common server administration tasks, including:
 To use ``securedrop-admin``:
 
 #. Boot the *Admin Workstation* with persistence enabled and an admin password set
-#. Open a terminal via **Apps > System Tools > Console**
+#. Open a terminal via **Apps ▸ System Tools ▸ Console**
 #. Change directory to the SecureDrop installation directory: ``cd ~/Persistent/securedrop``
 
 You can list all available ``securedrop-admin`` actions using the command
