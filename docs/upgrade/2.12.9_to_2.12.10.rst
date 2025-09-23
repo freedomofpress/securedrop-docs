@@ -1,41 +1,56 @@
+.. _latest_upgrade_guide:
 
-Upgrade from 2.12.8 to 2.12.9
-=============================
+Upgrade from 2.12.9 to 2.12.10
+==============================
 
-Migrating to Ubuntu 24.04 (Noble)
----------------------------------
-
-Following an automatic upgrade period in which all known, actively
-maintained SecureDrops have been upgraded to Ubuntu Noble, SecureDrop
-2.12.9 disables automatic upgrades from Ubuntu Focal to Noble.
-If you are using SecureDrop and are still running Ubuntu Focal,
-you are no longer receiving important Ubuntu security updates.
-Please :ref:`contact support <get_support>`  for information
-about backing up and performing a reinstall using Ubuntu Noble.
-
-Update Workstations to SecureDrop 2.12.9
-----------------------------------------
+This version of SecureDrop coincides with the release of `Tails 7 <https://tails.net/news/version_7.0/>`_. SecureDrop 2.12.10 adds compatibility with Tails 7, but is not compatible with earlier versions of Tails. Consequently, your *Journalist* and *Admin Workstations* Tails USBs also require a manual upgrade to Tails 7. To complete the entire upgrade process successfully, you must follow the steps below in order. 
 
 .. important:: We recommend backing up your workstations prior to
   any upgrades. See our :ref:`backup instructions <backup_workstations>`
   for more information.
 
-Update to SecureDrop 2.12.9 using the graphical updater
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Begin upgrade to SecureDrop 2.12.10 using the graphical updater
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
 the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.net/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 2.12.9 by clicking "Update Now":
+.. important:: Only begin the upgrade using the graphical updater if you are prepared to subsequently upgrade the Tails USB to Tails 7.
+
+If you are ready, initiate the update to 2.12.10 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
-Fallback: Perform a manual update
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If the graphical updater fails and you want to perform a manual update instead,
-first delete the graphical updater's temporary flag file, if it exists (the
+The updater will fail with the following error: ::
+
+  This version of securedrop-admin requires Tails 7 or later
+
+This is expected and you should proceed to the next step.
+
+2. Perform manual upgrade to Tails 7
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Follow the `instructions to perform a manual Tails upgrade <../admin/maintenance/update_tails_usbs.html#update-manually>`_ to install Tails 7 on your *Journalist* and *Admin Workstations*. 
+
+3. Complete upgrade to SecureDrop 2.12.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Reboot each *Journalist* and *Admin Workstation* after successfully upgrading to Tails 7 and run the following commands: ::
+
+  cd ~/Persistent/securedrop
+  sudo apt update
+  ./securedrop-admin setup
+  ./securedrop-admin tailsconfig
+
+
+Rollback: Restore a broken upgrade
+==================================
+
+If you ran the SecureDrop graphical updater but are unable to upgrade the Tails USB to Tails 7, the affected SecureDrop *Journalist* or *Admin Workstation* will no longer work. You can fix this by rolling back an affected *Journalist* or *Admin Workstation* to SecureDrop version 2.12.9.
+
+First delete the graphical updater's temporary flag file, if it exists (the
 ``.`` before ``securedrop`` is not a typo): ::
 
   rm ~/Persistent/.securedrop/securedrop_update.flag
@@ -73,6 +88,8 @@ Finally, run the following commands: ::
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
 
+
+.. _get_support:
 
 Getting Support
 ---------------

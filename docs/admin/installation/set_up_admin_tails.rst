@@ -139,7 +139,7 @@ signed with the release signing key:
 
     cd ~/Persistent/securedrop/
     git fetch --tags
-    git tag -v 2.12.9
+    git tag -v 2.12.10
 
 The output should include the following two lines:
 
@@ -160,9 +160,9 @@ screen of your workstation. If it does, you can check out the new release:
 
 .. code:: sh
 
-    git checkout 2.12.9
+    git checkout 2.12.10
 
-.. important:: If you see the warning ``refname '2.12.9' is ambiguous`` in the
+.. important:: If you see the warning ``refname '2.12.10' is ambiguous`` in the
                output, we recommend that you contact us immediately at
                securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
