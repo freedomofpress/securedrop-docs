@@ -3,7 +3,7 @@
 Upgrade from 2.12.9 to 2.12.10
 ==============================
 
-This version of SecureDrop coincides with the release of `Tails 7 <https://tails.net/news/version_7.0/>`_. SecureDrop 2.12.10 adds compatibility with Tails 7, but is not compatible with earlier versions of Tails. Consequently, your *Journalist* and *Admin Workstations* Tails USBs also require a manual upgrade to Tails 7. To complete the entire upgrade process successfully, you must follow the steps below in order. 
+This version of SecureDrop coincides with the release of `Tails 7 <https://tails.net/news/version_7.0/>`_. SecureDrop 2.12.10 adds compatibility with Tails 7, but is not compatible with earlier versions of Tails. Consequently, your *Journalist* and *Admin Workstations* Tails USBs also require a manual upgrade to Tails 7. To complete the entire upgrade process successfully, you must follow the steps below in order:
 
 .. important:: We recommend backing up your workstations prior to
   any upgrades. See our :ref:`backup instructions <backup_workstations>`
