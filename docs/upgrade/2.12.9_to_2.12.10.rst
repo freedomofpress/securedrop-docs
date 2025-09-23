@@ -34,7 +34,7 @@ The updater will fail with the following error: ::
 
 To manually upgrade each Tails 6 USB to Tails 7, you can use a fresh Tails 7 USB and the Tails Cloner tool. This process will upgrade Tails and preserve your Persistent Storage, where SecureDrop lives. 
 
-Obtain a new USB drive and instal Tails 7 on it. The `Tails website <https://tails.net/>`__ has detailed and
+Obtain a new USB drive and install Tails 7 on it. The `Tails website <https://tails.net/>`__ has detailed and
 up-to-date instructions on how to download and verify Tails, and how to
 create a Tails USB drive. Follow the instructions at these links to create a fresh Tails 7 USB drive, and then return to this page:
 
@@ -48,11 +48,11 @@ create a Tails USB drive. Follow the instructions at these links to create a fre
 3. Upgrade Tails 6 USB drives manually using Tails Cloner
 ---------------------------------------------------------
 
-You now have a new Tails 7 USB and several *Tails 6 USBs* (all your *Admin* and *Journalist Workstations*). A Tails 6 USB can be upgraded using the Tails Cloner tool running on the Tails 7 USB as described in the following steps. You will need to repeat the process to upgrade each *Admin* and *Journalist Workstation* to Tails 7. 
+You now have a new Tails 7 USB and several Tails 6 USBs (all your *Admin* and *Journalist Workstations*). A Tails 6 USB can be upgraded using the Tails Cloner tool running on the Tails 7 USB as described in the following steps. You will need to repeat the process to upgrade each *Admin* and *Journalist Workstation* to Tails 7. 
 
 - **3.1.**  Plug your new Tails 7 USB into an airgapped computer, such as your *Secure Viewing Station* computer, and boot into Tails 7.
 
-- **3.2.** At the Tails welcome screen, select your language and keyboard layout, if needed, and then click "Start Tails".
+- **3.2.** At the Tails welcome screen, select your language and keyboard layout, if needed, and then click "Start Tails". Do not select "Create Persistent Storage".
 
 - **3.3.** Once Tails has started, attach the Tails 6 USB you wish to upgrade (either a *Admin* or *Journalist Workstation*) to the computer.
 
@@ -64,7 +64,7 @@ You now have a new Tails 7 USB and several *Tails 6 USBs* (all your *Admin* and 
 
 - **3.5.** Click "Upgrade" to begin this process.
 
-- **3.6.** Once the process is complete, you can close the Tails Cloner and remove the newly-upgraded-to-Tails-7 *Admin* or *Journalist Workstation* USB drive. Be careful not to accidentally remove the Tails 7 USB that was used to boot the computer. 
+- **3.6.** Once the process is complete, you can close the Tails Cloner and remove the newly-upgraded *Admin* or *Journalist Workstation* USB drive. Be careful not to accidentally remove the Tails 7 USB that was used to boot the computer. 
 
 You can repeat these steps on another Tails 6 USB without rebooting. Attach another Tails 6 USB and re-open the Tails Cloner, returning to step **3.3**.
 
@@ -108,7 +108,7 @@ The output should include the following two lines: ::
 Please verify that each character of the fingerprint above matches what is
 on the screen of your workstation. A warning that the key is not certified
 is normal and expected. If the output includes the lines above, you can check
-out the new release: ::
+out the most recent release compatible with Tails 6: ::
 
     git checkout 2.12.9
 
