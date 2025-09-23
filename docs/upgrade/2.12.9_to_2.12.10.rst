@@ -94,7 +94,6 @@ Finally, run the following commands: ::
 Getting Support
 ---------------
 
-Should you require further support with your SecureDrop installation, we are
-happy to help!
+Should you require further help with either the SecureDrop 2.12.10 or Tails 7 upgrades, please reach out to support:
 
 .. include:: ../includes/getting-support.txt
