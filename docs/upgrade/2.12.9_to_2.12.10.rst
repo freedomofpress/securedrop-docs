@@ -19,7 +19,7 @@ on the Tails welcome screen in order to use the graphical updater.
 
 .. important:: Only begin the upgrade using the graphical updater if you are prepared to subsequently upgrade the Tails USB to Tails 7.
 
-If you are ready, initiate the update to 2.12.10 by clicking "Update Now":
+If you are ready, select the "Detailed Update Progress" tab and initiate the update to 2.12.10 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
@@ -27,7 +27,7 @@ The updater will fail with the following error: ::
 
   This version of securedrop-admin requires Tails 7 or later
 
-This is expected and you should proceed to the next step.
+**This error is expected and you should proceed to the next step.**
 
 2. Perform manual upgrade to Tails 7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
