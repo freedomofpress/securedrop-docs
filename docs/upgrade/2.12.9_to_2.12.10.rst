@@ -10,7 +10,7 @@ This version of SecureDrop coincides with the release of `Tails 7 <https://tails
   for more information.
 
 1. Begin upgrade to SecureDrop 2.12.10 using the graphical updater
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------
 
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
 the *SecureDrop Workstation Updater* will alert you to workstation updates. You
@@ -30,12 +30,12 @@ The updater will fail with the following error: ::
 **This error is expected and you should proceed to the next step.**
 
 2. Perform manual upgrade to Tails 7
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 Follow the `instructions to perform a manual Tails upgrade <../admin/maintenance/update_tails_usbs.html#update-manually>`_ to install Tails 7 on your *Journalist* and *Admin Workstations*. 
 
 3. Complete upgrade to SecureDrop 2.12.10
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
 Reboot each *Journalist* and *Admin Workstation* after successfully upgrading to Tails 7 and run the following commands: ::
 
@@ -92,7 +92,7 @@ Finally, run the following commands: ::
 .. _get_support:
 
 Getting Support
----------------
+===============
 
 Should you require further help with either the SecureDrop 2.12.10 or Tails 7 upgrades, please reach out to support:
 
