@@ -78,7 +78,7 @@ Reboot each *Journalist* and *Admin Workstation* after successfully upgrading to
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
 
-The `sudo apt update` or `./securedrop-admin setup` commands may fail due to a background `apt-get` process running after Tails starts up. If you encounter an error related to `apt` package updates, try again. If you continue to encounter the same error, you can safely kill the interfering background `apt` process by running: ::
+The `sudo apt update` or `./securedrop-admin setup` commands may fail due to a background `apt-get` process running after Tails starts up. If you encounter an error related to `apt` package updates, wait a few minutes and try again. If you continue to encounter the same error, you can safely kill the interfering background `apt` process by running: ::
 
   sudo killall apt-get
   sudo dpkg --configure -a
