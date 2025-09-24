@@ -71,13 +71,19 @@ You can repeat these steps on another Tails 6 USB without rebooting. Attach anot
 4. Complete upgrade to SecureDrop 2.12.10
 -----------------------------------------
 
-Reboot each *Journalist* and *Admin Workstation* after successfully upgrading to Tails 7 and run the following commands: ::
+Reboot each *Journalist* and *Admin Workstation* after successfully upgrading to Tails 7 and run the following commands to complete the upgrade to SecureDrop 2.12.10: ::
 
   cd ~/Persistent/securedrop
   sudo apt update
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
 
+The `sudo apt update` or `./securedrop-admin setup` commands may fail due to a background `apt-get` process running after Tails starts up. If you encounter an error related to `apt` package updates, try again. If you continue to encounter the same error, you can safely kill the interfering background `apt` process by running: ::
+
+  sudo killall apt-get
+  sudo dpkg --configure -a
+
+Then try re-running the command that failed and continue.
 
 Rollback: Restore a broken upgrade
 ==================================
