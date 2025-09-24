@@ -151,7 +151,8 @@ Get Started
    :name: upgradetoc
    :maxdepth: 2
    :hidden:
-
+   
+   upgrade/2.12.9_to_2.12.10.rst
    upgrade/2.12.8_to_2.12.9.rst
    upgrade/2.12.3_to_2.12.8.rst
    upgrade/2.12.2_to_2.12.3.rst

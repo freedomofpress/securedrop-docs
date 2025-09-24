@@ -1,0 +1,139 @@
+.. _latest_upgrade_guide:
+
+Upgrade from 2.12.9 to 2.12.10
+==============================
+
+This version of SecureDrop coincides with the release of `Tails 7 <https://tails.net/news/version_7.0/>`_. SecureDrop 2.12.10 adds compatibility with Tails 7, but is not compatible with earlier versions of Tails. Consequently, your *Journalist* and *Admin Workstations* Tails USBs also require a manual upgrade to Tails 7. To complete the entire upgrade process successfully, you must follow the steps below in order:
+
+.. warning:: We **strongly** recommend backing up your workstations prior to
+  any upgrades. See our :ref:`backup instructions <backup_workstations>`
+  for more information.
+
+1. Begin upgrade to SecureDrop 2.12.10 using the graphical updater
+------------------------------------------------------------------
+
+On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
+the *SecureDrop Workstation Updater* will alert you to workstation updates. You
+must have `configured an administrator password <https://tails.net/doc/first_steps/welcome_screen/administration_password/>`_
+on the Tails welcome screen in order to use the graphical updater.
+
+.. important:: Only begin the upgrade using the graphical updater if you are prepared to subsequently upgrade the Tails USB to Tails 7.
+
+If you are ready, select the "Detailed Update Progress" tab and initiate the update to 2.12.10 by clicking "Update Now":
+
+.. image:: ../images/securedrop-updater.png
+
+The updater will fail with the following error: ::
+
+  This version of securedrop-admin requires Tails 7 or later.
+
+**This error is expected and you should proceed to the next step.**
+
+2. Create Tails 7 USB drive
+---------------------------
+
+To manually upgrade each Tails 6 USB to Tails 7, you can use a fresh Tails 7 USB and the Tails Cloner tool. This process will upgrade Tails and preserve your Persistent Storage, where SecureDrop lives. 
+
+Obtain a new USB drive and install Tails 7 on it. The `Tails website <https://tails.net/>`__ has detailed and
+up-to-date instructions on how to download and verify Tails, and how to
+create a Tails USB drive. Follow the instructions at these links to create a fresh Tails 7 USB drive, and then return to this page:
+
+-  `Download and verify the Tails image
+   file <https://tails.net/install/download/index.en.html>`__
+-  `Install onto a USB drive <https://tails.net/install/index.en.html>`__
+
+.. important:: Make sure you verify the Tails .img file using one of the methods
+   described on the Tails website.
+
+3. Upgrade Tails 6 USB drives manually using Tails Cloner
+---------------------------------------------------------
+
+You now have a new Tails 7 USB and several Tails 6 USBs (all your *Admin* and *Journalist Workstations*). A Tails 6 USB can be upgraded using the Tails Cloner tool running on the Tails 7 USB as described in the following steps. You will need to repeat the process to upgrade each *Admin* and *Journalist Workstation* to Tails 7. 
+
+- **3.1.**  Plug your new Tails 7 USB into an airgapped computer, such as your *Secure Viewing Station* computer, and boot into Tails 7.
+
+- **3.2.** At the Tails welcome screen, select your language and keyboard layout, if needed, and then click "Start Tails". Do not select "Create Persistent Storage".
+
+- **3.3.** Once Tails has started, attach the Tails 6 USB you wish to upgrade (either a *Admin* or *Journalist Workstation*) to the computer.
+
+- **3.4.** Open the Tails Cloner tool via **Apps ▸ Tails ▸ Tails Cloner**.
+
+  The Tails Cloner will detect your attached Tails 6 USB and designate it the "Target USB stick". The upgrade process will clone the Tails 7 system from the booted Tails 7 USB to the attached Tails 6 USB, leaving the Persistent Storage intact. 
+
+  .. image:: ../images/tails_cloner_upgrade.png
+
+- **3.5.** Click "Upgrade" to begin this process.
+
+- **3.6.** Once the process is complete, you can close the Tails Cloner and remove the newly-upgraded *Admin* or *Journalist Workstation* USB drive. Be careful not to accidentally remove the Tails 7 USB that was used to boot the computer. 
+
+You can repeat these steps on another Tails 6 USB without rebooting. Attach another Tails 6 USB and re-open the Tails Cloner, returning to step **3.3**.
+
+4. Complete upgrade to SecureDrop 2.12.10
+-----------------------------------------
+
+Reboot each *Journalist* and *Admin Workstation* after successfully upgrading to Tails 7 and run the following commands to complete the upgrade to SecureDrop 2.12.10: ::
+
+  cd ~/Persistent/securedrop
+  sudo apt update
+  ./securedrop-admin setup
+  ./securedrop-admin tailsconfig
+
+The `sudo apt update` or `./securedrop-admin setup` commands may fail due to a background `apt-get` process running after Tails starts up. If you encounter an error related to `apt` package updates, wait a few minutes and try again. If you continue to encounter the same error, you can safely kill the interfering background `apt` process by running: ::
+
+  sudo killall apt-get
+  sudo dpkg --configure -a
+
+Then try re-running the command that failed and continue.
+
+Rollback: Restore a broken upgrade
+==================================
+
+If you ran the SecureDrop graphical updater but are unable to upgrade the Tails USB to Tails 7, the affected SecureDrop *Journalist* or *Admin Workstation* will no longer work. You can fix this by rolling back an affected *Journalist* or *Admin Workstation* to SecureDrop version 2.12.9.
+
+First delete the graphical updater's temporary flag file, if it exists (the
+``.`` before ``securedrop`` is not a typo): ::
+
+  rm ~/Persistent/.securedrop/securedrop_update.flag
+
+This will prevent the graphical updater from attempting to re-apply the failed
+update and has no bearing on future updates. You can now perform a manual
+update by running the following commands: ::
+
+  cd ~/Persistent/securedrop
+  git fetch --tags
+  gpg --keyserver hkps://keys.openpgp.org --recv-key \
+   "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3"
+  git tag -v 2.12.9
+
+The output should include the following two lines: ::
+
+    gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
+    gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
+
+
+Please verify that each character of the fingerprint above matches what is
+on the screen of your workstation. A warning that the key is not certified
+is normal and expected. If the output includes the lines above, you can check
+out the most recent release compatible with Tails 6: ::
+
+    git checkout 2.12.9
+
+.. important:: If you do see the warning "refname '2.12.9' is ambiguous" in the
+  output, we recommend that you contact us immediately at securedrop@freedom.press
+  (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
+
+Finally, run the following commands: ::
+
+  sudo apt update
+  ./securedrop-admin setup
+  ./securedrop-admin tailsconfig
+
+
+.. _get_support:
+
+Getting Support
+===============
+
+Should you require further help with either the SecureDrop 2.12.10 or Tails 7 upgrades, please reach out to support:
+
+.. include:: ../includes/getting-support.txt
