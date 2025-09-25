@@ -3,14 +3,17 @@
 Upgrade from 2.12.9 to 2.12.10
 ==============================
 
-This version of SecureDrop coincides with the release of `Tails 7 <https://tails.net/news/version_7.0/>`_. SecureDrop 2.12.10 adds compatibility with Tails 7, but is not compatible with earlier versions of Tails. Consequently, your *Journalist* and *Admin Workstations* Tails USBs also require a manual upgrade to Tails 7. To complete the entire upgrade process successfully, you must follow the steps below in order:
+This version of SecureDrop coincides with the release of `Tails 7 <https://tails.net/news/version_7.0/>`_. SecureDrop 2.12.10 adds compatibility with Tails 7, but is not compatible with earlier versions of Tails. Consequently, your *Journalist* and *Admin Workstations* Tails USBs also require a manual upgrade to Tails 7. To complete the entire upgrade process successfully, you must follow the steps below in order.
+
+Update Workstations to Tails 7 and SecureDrop 2.12.10
+-----------------------------------------------------
 
 .. warning:: We **strongly** recommend backing up your workstations prior to
   any upgrades. See our :ref:`backup instructions <backup_workstations>`
   for more information.
 
 1. Begin upgrade to SecureDrop 2.12.10 using the graphical updater
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
 the *SecureDrop Workstation Updater* will alert you to workstation updates. You
@@ -30,7 +33,7 @@ The updater will fail with the following error: ::
 **This error is expected and you should proceed to the next step.**
 
 2. Create Tails 7 USB drive
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To manually upgrade each Tails 6 USB to Tails 7, you can use a fresh Tails 7 USB and the Tails Cloner tool. This process will upgrade Tails and preserve your Persistent Storage, where SecureDrop lives. 
 
@@ -46,7 +49,7 @@ create a Tails USB drive. Follow the instructions at these links to create a fre
    described on the Tails website.
 
 3. Upgrade Tails 6 USB drives manually using Tails Cloner
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You now have a new Tails 7 USB and several Tails 6 USBs (all your *Admin* and *Journalist Workstations*). A Tails 6 USB can be upgraded using the Tails Cloner tool running on the Tails 7 USB as described in the following steps. You will need to repeat the process to upgrade each *Admin* and *Journalist Workstation* to Tails 7. 
 
@@ -69,7 +72,7 @@ You now have a new Tails 7 USB and several Tails 6 USBs (all your *Admin* and *J
 You can repeat these steps on another Tails 6 USB without rebooting. Attach another Tails 6 USB and re-open the Tails Cloner, returning to step **3.3**.
 
 4. Complete upgrade to SecureDrop 2.12.10
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Reboot each *Journalist* and *Admin Workstation* after successfully upgrading to Tails 7 and run the following commands to complete the upgrade to SecureDrop 2.12.10: ::
 
@@ -86,7 +89,7 @@ The `sudo apt update` or `./securedrop-admin setup` commands may fail due to a b
 Then try re-running the command that failed and continue.
 
 Rollback: Restore a broken upgrade
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 If you ran the SecureDrop graphical updater but are unable to upgrade the Tails USB to Tails 7, the affected SecureDrop *Journalist* or *Admin Workstation* will no longer work. You can fix this by rolling back an affected *Journalist* or *Admin Workstation* to SecureDrop version 2.12.9.
 
@@ -132,7 +135,7 @@ Finally, run the following commands: ::
 .. _get_support:
 
 Getting Support
-^^^^^^^^^^^^^^^
+---------------
 
 Should you require further help with either the SecureDrop 2.12.10 or Tails 7 upgrades, please reach out to support:
 
