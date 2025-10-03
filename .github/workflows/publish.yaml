@@ -46,7 +46,7 @@ jobs:
       containerfile: deploy/Dockerfile
       tags: ${{ needs.prepare.outputs.tags }}
       build-args: |
-        GIT_BRANCH=${{ github.ref_name }}
+        GIT_BRANCH=${{ github.sha }}
       registry: ghcr.io/freedomofpress/securedrop-docs
     secrets:
       registry-password: ${{ secrets.GITHUB_TOKEN }}

@@ -36,4 +36,5 @@ jobs:
       context: "."
       containerfile: deploy/Dockerfile
       build-args: |
-        GIT_BRANCH=${{ github.ref_name }}
+        GIT_BRANCH=${{ github.sha }}
+      requires-deep-history: true
