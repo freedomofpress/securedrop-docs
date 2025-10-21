@@ -4,6 +4,7 @@ name: Publish
 on:
   push:
     branches: ["main"]
+    tags: ["**"]  # run for all tags
 
 env:
   DEFAULT_BRANCH: main
@@ -48,5 +49,6 @@ jobs:
       build-args: |
         GIT_BRANCH=${{ github.sha }}
       registry: ghcr.io/freedomofpress/securedrop-docs
+      requires-deep-history: true
     secrets:
       registry-password: ${{ secrets.GITHUB_TOKEN }}
