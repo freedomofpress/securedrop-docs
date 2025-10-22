@@ -1,7 +1,16 @@
 ---
 name: CI
 
-on: [push, pull_request, workflow_call]
+on:
+  merge_group:
+
+  push:
+    branches: ["main"]
+
+  pull_request:
+    types: ["opened", "synchronize"]
+
+  workflow_call:
 
 jobs:
   lint:
@@ -18,12 +27,16 @@ jobs:
       - name: Run lint
         run: |
           make docs-lint
+
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - name: Build production deployment
-        run: |
-          podman build --build-arg GIT_BRANCH=$(git rev-parse HEAD) --file ./deploy/Dockerfile .
+    name: Build
+    uses: freedomofpress/actionslib/.github/workflows/oci-build.yaml@main
+    permissions:
+      contents: read
+      actions: read
+    with:
+      context: "."
+      containerfile: deploy/Dockerfile
+      build-args: |
+        GIT_BRANCH=${{ github.sha }}
+      requires-deep-history: true
