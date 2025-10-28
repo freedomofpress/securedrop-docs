@@ -110,9 +110,11 @@ All key actions are initiated by double-clicking:
   the contents to the same directory. If you have configured a passphrase for your
   *Submission Key*, you will be prompted for it.
 
-  On Tails 5.1 or greater, double-clicking the ``.gpg`` file will launch
+- On Tails 5.1 or greater, double-clicking the ``.gpg`` file will launch
   an application called **Kleopatra**, from which you can decrypt the file and
   save the result to the same directory.
+
+.. note:: On Tails 7.0 or greater, you will need to *first* open **Kleopatra** (**Apps ▸ Accessories ▸ Kleopatra**) before attempting to double-click any ``.gpg`` files. 
 
 - Double-clicking decrypted messages or documents will attempt to open them in a
   default application suitable for the file type.
