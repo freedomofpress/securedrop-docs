@@ -7,7 +7,7 @@ Whether you are interested in learning more about SecureDrop, looking for
 help with an installation, or needing assistance with an existing
 SecureDrop instance, there are several support options available to you.
 
-Freedom of the Press Foundation offers direct support via :ref:`Signal <_support_via_signal>`. 
+Freedom of the Press Foundation offers direct support via :ref:`Signal <support_via_signal>`. 
 
 If you are unable to use Signal, you can always contact us by e-mail at securedrop@freedom.press (`PGP encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -19,8 +19,7 @@ Additionally, there is also some level of :ref:`Community Support <community_sup
    `submit your SecureDrop to the SecureDrop directory <https://securedrop.org/directory/submit/>`__.
    This also serves as a first introduction to the SecureDrop team.
 
-While we will provide technical assistance within reason and at our discretion, we encourage you to consider a paid support agreement to receive priority support,
-staff training, or installation help. Visit the `Priority Support <https://securedrop.org/priority-support/>`_ and `Training <https://securedrop.org/training/>`_ pages on the SecureDrop website for more information.
+While we will provide technical assistance within reason and at our discretion, we encourage you to consider a paid support agreement to receive priority support, staff training, or installation help. Visit the `Priority Support <https://securedrop.org/priority-support/>`_ and `Training <https://securedrop.org/training/>`_ pages on the SecureDrop website for more information.
 
 .. _support_via_signal:
 
@@ -29,8 +28,7 @@ Support via Signal
 
 Because of the sensitive nature of SecureDrop-related communications, we prefer providing support via the encrypted platform `Signal  <https://signal.org>`__.
 
-Once we have connected with you on Signal, you will receive notifications regarding
-SecureDrop releases and security advisories, and you will be able to contact us with detailed requests for technical support.
+Once we have connected with you on Signal, you will receive notifications regarding SecureDrop releases and security advisories, and you will be able to contact us with detailed requests for technical support.
 
 Initial onboarding
 ------------------
