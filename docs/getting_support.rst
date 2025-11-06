@@ -7,7 +7,7 @@ Whether you are interested in learning more about SecureDrop, looking for
 help with an installation, or needing assistance with an existing
 SecureDrop instance, there are several support options available to you.
 
-Freedom of the Press Foundation offers direct support via :ref:`Signal <support_via_signal>`. 
+Freedom of the Press Foundation offers direct :ref:`support via Signal <support_via_signal>`. 
 
 If you are unable to use Signal, you can always contact us by e-mail at securedrop@freedom.press (`PGP encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
