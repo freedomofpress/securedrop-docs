@@ -41,9 +41,9 @@ screen.
 .. |TorStatus| image:: ../../images/tor-status-indicator.png
 
 
-.. _Download the SecureDrop repository:
+.. _Download the SecureDrop Repository:
 
-Download the SecureDrop repository
+Download the SecureDrop Repository
 ----------------------------------
 
 The rest of the SecureDrop-specific configuration is assisted by files
@@ -166,6 +166,40 @@ screen of your workstation. If it does, you can check out the new release:
                output, we recommend that you contact us immediately at
                securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
+.. _Install SecureDrop Package and Dependencies:
+
+Install SecureDrop Package and Dependencies
+-------------------------------------------
+
+A SecureDrop *Admin Workstation* must have the ``securedrop-admin`` package and dependencies installed before installing the servers. To install these packages, from the base of
+the SecureDrop repository that you cloned previously (``~/securedrop/``), run the following
+command:
+
+.. code:: sh
+
+    sudo apt update
+    ./securedrop-admin tails-bootstrap
+
+The package installation will take approximately 10 minutes or longer, depending
+on network speed and computing power.
+
+.. note:: The apt persistence feature will prompt to install the package
+          automatically from persistent storage on each boot. Click
+          **Install Every Time**:
+
+          |Tails Apt Persistence|
+
+.. note:: Occasionally this command times out due to network latency issues. You
+          should be able to re-run the command and complete the setup. If you
+          run into a problem, try removing the
+          ``~/securedrop/admin/.venv3/`` directory and running the
+          command again.
+
+.. important:: The setup command should only be run as the ``amnesia`` user,
+               **not** as root. Contact the SecureDrop team if the package
+               installation encounters repeated errors.
+
+Once the installation is complete, you will be prompted to reboot the workstation. Please do so.
 
 .. _keepassxc_setup:
 
@@ -254,3 +288,4 @@ the template are:
 
 .. |Terminal| image:: ../../images/terminal.png
 .. |KeePassXC| image:: ../../images/keepassxc.png
+.. |Tails Apt Persistence| image:: ../../images/tails-install-once-or-every-time.png

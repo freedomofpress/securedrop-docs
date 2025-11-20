@@ -1,39 +1,6 @@
 Install SecureDrop
 ==================
 
-Install SecureDrop Package and Prerequisites
----------------------
-
-A SecureDrop *Admin Workstation* must have the ``securedrop-admin`` package and dependencies installed before installing the servers. To install these packages, from the base of
-the SecureDrop repository that you cloned previously (``~/securedrop/``), run the following
-command:
-
-.. code:: sh
-
-    sudo apt update
-    ./securedrop-admin tails-bootstrap
-
-The package installation will take approximately 10 minutes or longer, depending
-on network speed and computing power.
-
-.. note:: The apt persistence feature will prompt to install the package
-          automatically from persistent storage on each boot. Click
-          **Install Every Time**:
-
-          |Tails Apt Persistence|
-
-.. note:: Occasionally this command times out due to network latency issues. You
-          should be able to re-run the command and complete the setup. If you
-          run into a problem, try removing the
-          ``~/securedrop/admin/.venv3/`` directory and running the
-          command again.
-
-.. important:: The setup command should only be run as the ``amnesia`` user,
-               **not** as root. Contact the SecureDrop team if the package
-               installation encounters repeated errors.
-
-Once the installation is complete, you will be prompted to reboot the workstation. Please do so.
-
 Localization of the *Source Interface* and *Journalist Interface*
 -----------------------------------------------------------------
 
@@ -186,4 +153,3 @@ The dynamic inventory file will automatically read the ``onion`` addresses from
 the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to
 connect to the servers over SSH during subsequent playbook runs.
 
-.. |Tails Apt Persistence| image:: ../../images/tails-install-once-or-every-time.png
