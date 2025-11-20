@@ -56,7 +56,7 @@ Start by running the following commands to download the git repository.
 
 .. code:: sh
 
-    cd ~/Persistent
+    cd ~/
     git clone https://github.com/freedomofpress/securedrop.git
 
 .. note:: Since the repository is fairly large and Tor can be slow,
@@ -106,7 +106,7 @@ happens, please contact us at securedrop@freedom.press.
 
    .. code:: sh
 
-      cd ~/Persistent
+      cd ~/
       torify curl -LO https://securedrop.org/securedrop-release-key.asc
 
    Before importing it, inspect the key's fingerprint using the following
@@ -137,9 +137,9 @@ signed with the release signing key:
 
 .. code:: sh
 
-    cd ~/Persistent/securedrop/
+    cd ~/securedrop/
     git fetch --tags
-    git tag -v 2.12.10
+    git tag -v 2.13.0
 
 The output should include the following two lines:
 
@@ -160,9 +160,9 @@ screen of your workstation. If it does, you can check out the new release:
 
 .. code:: sh
 
-    git checkout 2.12.10
+    git checkout 2.13.0
 
-.. important:: If you see the warning ``refname '2.12.10' is ambiguous`` in the
+.. important:: If you see the warning ``refname '2.13.0' is ambiguous`` in the
                output, we recommend that you contact us immediately at
                securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
@@ -191,7 +191,7 @@ in the SecureDrop repository that you just cloned. To use the template:
 
    .. code:: sh
 
-     cp ~/Persistent/securedrop/tails_files/securedrop-keepassx.kdbx \
+     cp ~/securedrop/tails_files/securedrop-keepassx.kdbx \
         ~/Persistent/Passwords.kdbx
 
 -  Open the KeePassXC program |KeePassXC| which is already installed on

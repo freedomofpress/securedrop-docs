@@ -131,7 +131,7 @@ SSH key, you should rotate the key in the following manner.
 
     .. code:: sh
 
-      ~/Persistent/securedrop/securedrop-admin reset_admin_access
+      securedrop-admin reset_admin_access
 
    This removes all other SSH keys, except for the new key that you are
    currently using, from the list of authorized keys on the *Application* and
@@ -266,28 +266,28 @@ On the Admin Workstation
 #. Take the *Transfer Device* with the new *Submission Public Key* and
    fingerprint to your *Admin Workstation*. As you did during the initial
    install, copy the public key, ``SecureDrop.asc``, to the
-   ``install_files/ansible-base/`` directory, replacing the existing public
+   ``~/.config/securedrop-admin`` directory, replacing the existing public
    key file that is there.
 
 
-#. From the ``~/Persistent/securedrop`` directory, run
+#. From a Terminal, run:
 
     .. code:: sh
 
-      ./securedrop-admin sdconfig
+      securedrop-admin sdconfig
 
-   If the new public key that you placed in ``install_files/ansible-base``
+   If the new public key that you placed in ``~/.config/securedrop-admin``
    has the same name as the old public key, ``SecureDrop.asc``, the
    only part of the configuration you will change is the SecureDrop
    *Submission Key* fingerprint, which you will update with the fingerprint
    of your new key.
 
 
-#. Once you have completed the above, run
+#. Once you have completed the above, run:
 
     .. code:: sh
 
-     ./securedrop-admin install
+     securedrop-admin install
 
    to push the changes to the server.
 
@@ -307,16 +307,16 @@ Return to the Secure Viewing Station
    before you changed keys.
 
 #. If you have any other *Admin Workstations*, make sure that you have copied
-   the new *Submission Public Key* into the ``install_files/ansible-base``
+   the new *Submission Public Key* into the ``~/.config/securedrop-admin``
    directory, replacing the old public key file, and updated the *Submission
    Public Key* fingerprint by running
 
    .. code:: sh
 
-    ./securedrop-admin sdconfig
+    securedrop-admin sdconfig
 
    and updating the fingerprint when prompted. You do not have to run
-   ``./securedrop-admin install`` again, since you have already pushed the
+   ``securedrop-admin install`` again, since you have already pushed the
    changes to the server.
 
 .. _getting_support:

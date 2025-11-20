@@ -22,7 +22,7 @@ may be simpler. An outline of the steps involved in rebuilding an
  #. Set up SSH access for the new *Admin Workstation*.
  #. Retrieve SecureDrop configuration settings from the *Application* and *Monitor Server*.
  #. Back up and configure the SecureDrop application.
- #. Run ``./securedrop-admin install`` and ``./securedrop-admin tailsconfig``
+ #. Run ``securedrop-admin install`` and ``securedrop-admin localconfig``
     from the new *Admin Workstation*.
  #. Configure SSH-over-TOR.
  #. Complete post-rebuild tasks.
@@ -94,7 +94,7 @@ using the new password.
 
 Repeat the process for the *Application Server*. Use the same username and
 password as for the *Monitor Server* - this is required in order for the
-``./securedrop-admin install`` command to work correctly.
+``securedrop-admin install`` command to work correctly.
 
 Step 3: Set up *Admin Workstation* access
 =========================================
@@ -249,7 +249,7 @@ Copy the *Submission Public Key* with the following commands:
 .. code:: sh
 
  echo "$(ssh app sudo cat /var/lib/tor/services/sourcev3/hostname)" > /tmp/sourcev3
- cd ~/Persistent/securedrop/install_files/ansible-base
+ cd ~/.config/securedrop-admin
  curl http://$(cat /tmp/sourcev3)/public-key > SecureDrop.asc
  gpg --import SecureDrop.asc
 
@@ -328,15 +328,15 @@ To retrieve these files, use the commands:
 
 .. code:: sh
 
-   cd ~/Persistent/securedrop/install_files/ansible-base
+   cd ~/.config/securedrop-admin
    ssh app sudo tar -c -C /var/lib ssl/  | tar xvf -
 
 These commands will create a directory named
-``~/Persistent/securedrop/install_files/ansible-base/ssl``
+``~/.config/securedrop-admin/ssl``
 on the *Admin Workstation*, containing your instance's SSL certificate,
 certificate key, and chain file. When prompted for the names of these files
 during the next step, you should specify them relative to the
-``install_files/ansible-base`` directory, i.e. as ``ssl/mydomain.crt``.
+``~/.config/securedrop-admin/`` directory, i.e. as ``ssl/mydomain.crt``.
 
 Step 5: Configure and back up the Application Server
 ====================================================
@@ -348,11 +348,10 @@ previous steps. To do so, connect to the Tor network on the
 .. code:: sh
 
  sudo apt update
- cd ~/Persistent/securedrop
- ./securedrop-admin setup
- ./securedrop-admin sdconfig
+ securedrop-admin setup
+ securedrop-admin sdconfig
 
-.. note:: The ``./securedrop-admin setup`` command may take several minutes to complete, and may
+.. note:: The ``securedrop-admin setup`` command may take several minutes to complete, and may
  fail due to network issues. If it fails, it's safe to run again.
 
 The ``sdconfig`` command will prompt you to fill in configuration details
@@ -363,7 +362,7 @@ Next, back up the Application server by running the following command in the ter
 
 .. code:: sh
 
- ./securedrop-admin backup
+ securedrop-admin backup
 
 Ensure the backup command completes successfully.
 
@@ -374,13 +373,13 @@ Run:
 
 .. code:: sh
 
- ./securedrop-admin install
+ securedrop-admin install
 
 Once the command completes successfully, run
 
 .. code:: sh
 
- ./securedrop-admin tailsconfig
+ securedrop-admin localconfig
 
 Once this command is complete:
 
@@ -408,7 +407,7 @@ Rerun the command:
 
 .. code:: sh
 
- ./securedrop-admin sdconfig
+ securedrop-admin sdconfig
 
 Press "Enter" to use the pre-populated values, but when asked whether to
 configure SSH-over-Tor, type **yes** (recommended).
@@ -417,13 +416,13 @@ Then, re-run
 
 .. code:: sh
 
- ./securedrop-admin install
+ securedrop-admin install
 
 When the installation completes, run:
 
 .. code:: sh
 
- ./securedrop-admin tailsconfig
+ securedrop-admin localconfig
 
 Once this command completes:
 
@@ -462,8 +461,7 @@ We recommend completing the following tasks after the rebuild:
 
    .. code:: sh
 
-     cd ~/Persistent/securedrop
-     ./securedrop-admin reset_admin_access
+     securedrop-admin reset_admin_access
 
    You can also selectively remove invalid keys by logging on to the *Application*
    and *Monitor Servers* and editing the file ``~/.ssh/authorized_keys``, making
@@ -478,8 +476,8 @@ We recommend completing the following tasks after the rebuild:
 
    .. code:: sh
 
-    ~/Persistent/securedrop/install_files/ansible-base/app-journalist.auth_private
-    ~/Persistent/securedrop/install_files/ansible-base/tor-v3-keys.json # for Admin Workstations only
+    ~/.config/securedrop-admin/app-journalist.auth_private
+    ~/.config/securedrop-admin/tor-v3-keys.json # for Admin Workstations only
 
    You may copy these files using a *Transfer Device* (which must be wiped afterwards),
    or boot into each of your additional Tails workstations, plug in and unlock your

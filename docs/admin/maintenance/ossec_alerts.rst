@@ -55,11 +55,11 @@ solutions should be able to meet those requirements.
 
 These values must be set in the 
 :ref:`configuration playbook<configure_securedrop>` by running the
-``./securedrop-admin sdconfig`` command, which will prompt for each of the
+``securedrop-admin sdconfig`` command, which will prompt for each of the
 items listed above. Please note, this command updates the configuration,
 but does not apply it to the servers. Any time you make changes to
 the configuration it is necessary to deploy them with the
-``./securedrop-admin install`` command.
+``securedrop-admin install`` command.
 
 If you don't know what value to enter for one of these, please ask your
 organization's email admin for the full configuration before
@@ -83,8 +83,8 @@ although we've described some common scenarios in the
 :ref:`troubleshooting section <troubleshooting_ossec>`.
 
 If you have your *OSSEC Alert Public Key* public key handy, copy it to
-``install_files/ansible-base`` and then specify the filename, e.g.
-``ossec.pub``, when prompted by ``./securedrop-admin sdconfig``.
+``~/.config/securedrop-admin`` and then specify the filename, e.g.
+``ossec.pub``, when prompted by ``securedrop-admin sdconfig``.
 
 If you don't have your GPG key ready, you can run GnuPG on the command line in
 order to find, import, and export your public key. It's best to copy the key
@@ -122,7 +122,7 @@ Next we export the key to a local file. ::
 Copy the key to a directory where it's accessible by the SecureDrop
 installation: ::
 
-    cp ossec.pub install_files/ansible-base/
+    cp ossec.pub ~/.config/securedrop-admin/
 
 The fingerprint is a unique identifier for an encryption (public) key.  The
 short and long key ids correspond to the last 8 and 16 hexadecimal digits of the
@@ -143,7 +143,7 @@ send the alerts instead of where you're receiving them. If that e-mail
 is ossec@news-org.com, the SASL Username would be OSSEC and
 the SASL Domain would be news-org.com.
 
-After setting those values, ``./securedrop-admin sdconfig`` will exit and
+After setting those values, ``securedrop-admin sdconfig`` will exit and
 return you to the command line. In most cases, you will then be ready to 
 :ref:`proceed with the installation <Install SecureDrop Servers>`.
 
@@ -151,15 +151,15 @@ The Postfix configuration enforces certificate verification, and
 requires both a valid certificate and STARTTLS support on the SMTP
 relay. By default the system CAs will be used for validating the relay
 certificate. If you need to provide a custom CA to perform the
-validation, copy the cert file to ``install_files/ansible-base`` add a
-new variable to ``group_vars/all/site-specific``: ::
+validation, copy the cert file to ``~/.config/securedrop-admin`` add a
+new variable to ``~/.config/securedrop-admin/site-specific``: ::
 
     smtp_relay_cert_override_file: MyOrg.crt
 
 where ``MyOrg.crt`` is the filename. The file will be copied to the
 server in ``/etc/ssl/certs_local`` and the system CAs will be ignored
 when validating the SMTP relay TLS certificate. Be sure to save 
-``group_vars/all/site-specific`` when you are finished.
+``~/.config/securedrop-admin/site-specific`` when you are finished.
 
 
 
@@ -197,7 +197,7 @@ for the SMTP settings to enable OSSEC alerts.
          not allow mail to be sent. In order to be able to create an app
          password, you must have 2-Step Verification enabled on the Gmail account.
 
-Once the account is created you can log out and run ``./securedrop-admin sdconfig``,
+Once the account is created you can log out and run ``securedrop-admin sdconfig``,
 setting the SASL username as your new Gmail username (without the domain),
 the SASL domain to be either gmail.com or your custom Google
 Apps domain, and then finally your SASL password. Remember to use the app password
@@ -238,7 +238,7 @@ following:
 
     6D:87:EE:CB:D0:37:2F:88:B8:29:06:FB:35:F4:65:00:7F:FD:84:29
 
-Finally, add a new variable to ``group_vars/all/site-specific`` as
+Finally, add a new variable to ``~/.config/securedrop-admin/site-specific`` as
 ``smtp_relay_fingerprint``, like so: ::
 
     smtp_relay_fingerprint: "6D:87:EE:CB:D0:37:2F:88:B8:29:06:FB:35:F4:65:00:7F:FD:84:29"
@@ -246,7 +246,7 @@ Finally, add a new variable to ``group_vars/all/site-specific`` as
 Specifying the fingerprint will configure Postfix to use it for
 verification on the next playbook run. (To disable fingerprint
 verification, simply delete the variable line you added, and rerun the
-playbooks.) Save ``group_vars/all/site-specific``, exit the editor and
+playbooks.) Save ``~/.config/securedrop-admin/site-specific``, exit the editor and
 :ref:`proceed with the installation <Install SecureDrop Servers>` by running the
 playbooks.
 
@@ -297,8 +297,8 @@ OSSEC service.
 
 .. tip:: If you change the SMTP relay port after installation for any
          reason, you must update the SMTP relay port using
-         ``./securedrop-admin sdconfig`` and deploy using
-         ``./securedrop-admin install``.
+         ``securedrop-admin sdconfig`` and deploy using
+         ``securedrop-admin install``.
 
 Useful log files for OSSEC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -329,20 +329,20 @@ that authenticated to send mail. By default the *Monitor Server* will use
 ``ossec@ossec.server`` for the from line, but your mail provider may not support
 the mismatch between the domain of that value and your real mail host.
 If the Admin email address (configured as ``ossec_alert_email`` in
-``group_vars/all/site-specific``) does not start receiving OSSEC alerts updates shortly
+``~/.config/securedrop-admin/site-specific``) does not start receiving OSSEC alerts updates shortly
 after the first playbook run, try setting ``ossec_from_address`` in
-``group_vars/all/site-specific`` to the full email address used for sending the alerts,
+``~/.config/securedrop-admin/site-specific`` to the full email address used for sending the alerts,
 then run the playbook again.
 
 Message failed to encrypt
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 If OSSEC cannot encrypt the alert to the *OSSEC Alert Public Key* for the Admin
-email address (configured as ``ossec_alert_email`` in ``group_vars/all/site-specific``),
+email address (configured as ``ossec_alert_email`` in ``~/.config/securedrop-admin/site-specific``),
 the system will send a static message instead of the scheduled alert:
 
   Failed to encrypt OSSEC alert. Investigate the mailing configuration on the Monitor Server.
 
-Check the GPG configuration vars in ``group_vars/all/site-specific``. In particular,
+Check the GPG configuration vars in ``~/.config/securedrop-admin/site-specific``. In particular,
 make sure the GPG fingerprint matches that of the public key file you
 exported.
 

@@ -20,10 +20,9 @@ To use ``securedrop-admin``:
 
 #. Boot the *Admin Workstation* with persistence enabled and an admin password set
 #. Open a terminal via **Apps ▸ System Tools ▸ Console**
-#. Change directory to the SecureDrop installation directory: ``cd ~/Persistent/securedrop``
 
 You can list all available ``securedrop-admin`` actions using the command
-``./securedrop-admin --help``
+``securedrop-admin --help``
 
 .. note:: If your team has multiple admins, each with their own *Admin Workstation*, you
   must take steps to manually synchronize any configuration changes made via ``securedrop-admin``
@@ -45,22 +44,23 @@ There are two primary reasons why you may want to update the system configuratio
 In both cases, follow these steps:
 
 #. Boot the *Admin Workstation* and unlock its persistent volume.
-#. Open a terminal and type ``cd ~/Persistent/securedrop``.
-#. Run ``git status``. If the output includes ``HEAD detached at``
-   followed by the version number displayed in the footer of your *Source Interface*,
-   you are running the applicable version of the SecureDrop code on your
-   workstation, and can proceed to the next step.
-   If not, **it is not safe to proceed**. Follow the upgrade instructions
-   associated with the `release notes for the most recent release of
-   SecureDrop <https://securedrop.org/news/release-announcement/>`__. Apply all
-   available updates, including for the Tails operating system.
-#. Run ``./securedrop-admin sdconfig``. This will display the current
+#. Determine the current version of `securedrop-admin` you have installed on your *Admin Workstation* by running:
+
+  .. code:: sh
+
+    apt-cache policy securedrop-admin
+
+  If the version is the same as the version number displayed in the footer of your *Source Interface*, you are running the applicable version of the SecureDrop code on your workstation, and can proceed to the next step.
+
+  If the versions differ, **it is not safe to proceed**. Follow the upgrade instructions associated with the `release notes for the most recent release of SecureDrop <https://securedrop.org/news/release-announcement/>`__. Apply all available updates, including for the Tails operating system.
+
+#. Run ``securedrop-admin sdconfig``. This will display the current
    configuration, one line at a time, and allow you to change it. At this point,
    any changes you make are only saved on this *Admin Workstation*, to the
    following file:
 
-   ``~/Persistent/securedrop/install_files/ansible-base/group_vars/all/site-specific``
-#. Run ``./securedrop-admin install``. This will apply the configuration to your
+   ``~/.config/securedrop-admin/site-specific``
+#. Run ``securedrop-admin install``. This will apply the configuration to your
    *Application* and *Monitor Server*, and enforce the canonical state of the
    server configuration.
 
@@ -108,7 +108,7 @@ changes are stored only on their individual *Admin Workstation*.
 Configuration changes will be flagged by OSSEC and will generate alerts, but
 if other admins don't regularly review OSSEC alerts they may miss important
 changes, such as an update to the *Submission Public Key*. If they subsequently
-run ``./securedrop-admin install`` from their *Admin Workstation*, they will
+run ``securedrop-admin install`` from their *Admin Workstation*, they will
 revert the server configuration to an older version.
 
 The simplest approach to keeping workstations in sync is to inform other admins
@@ -116,23 +116,23 @@ of changes as you make them, for example via a secure Signal group chat. Any suc
 communications should happen over a platform that provides E2EE, as you may need to
 share sensitive information.
 
-Configuration information is stored in several files on the *Admin Workstation* under
-``~/Persistent/securedrop/``:
+Configuration information is stored on the *Admin Workstation* under
+``~/.config/securedrop-admin``:
 
-* ``install_files/ansible-base/group_vars/all/site-specific`` contains settings written by
-  ``./securedrop-admin sdconfig`` - if it is changed other admins should be notified.
+* ``~/.config/securedrop-admin/site-specific`` contains settings written by
+  ``securedrop-admin sdconfig`` - if it is changed other admins should be notified.
 * The *Submission Public Key* and *OSSEC Alert Public Key* should be present
-  under ``install_files/ansible-base``. If these keys are rotated, the public keys
+  under ``~/.config/securedrop-admin``. If these keys are rotated, the public keys
   should be updated on other *Admin Workstations*.
 * Onion service information is stored in several files:
 
     .. code-block:: none
 
-      install_files/ansible-base/app-ssh.auth_private
-      install_files/ansible-base/mon-ssh.auth_private
-      install_files/ansible-base/app-journalist.auth_private
-      install_files/ansible-base/app-sourcev3-ths
-      install_files/ansible-base/tor_v3_keys.json
+      ~/.config/securedrop-admin/app-ssh.auth_private
+      ~/.config/securedrop-admin/mon-ssh.auth_private
+      ~/.config/securedrop-admin/app-journalist.auth_private
+      ~/.config/securedrop-admin/app-sourcev3-ths
+      ~/.config/securedrop-admin/tor_v3_keys.json
 
   If onion service addresses are changed, the files listed above should be shared
   securely with other administrators - preferably in person using an encrypted transfer USB,

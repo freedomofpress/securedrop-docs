@@ -59,17 +59,10 @@ contact us through the `SecureDrop Support Portal`_.
 Backing Up
 ----------
 
-Open a **Terminal** on the *Admin Workstation* and ``cd`` to
-``~/Persistent/securedrop``.
-
-Run ``git describe --exact-match`` to verify that your workstation is running
-the latest version of  SecureDrop, |version|. If not, you should update it
-before proceeding.
-
 Check Connectivity
 ''''''''''''''''''
 
-Verify that your *Admin Workstation* is able to run Ansible and connect to
+Open a **Terminal** on your *Admin Workstation* and verify it is able to run Ansible and connect to
 the SecureDrop servers.
 
 .. code:: sh
@@ -86,14 +79,14 @@ When you are ready to begin the backup, run
 
 .. code:: sh
 
-   ./securedrop-admin backup
+   securedrop-admin backup
 
 The backup command will display updates on its progress as the backup is created.
 Run time will vary depending on connectivity and the number of submissions
 saved on the *Application Server*.
 
 When the backup action is complete, the backup will be stored as a compressed
-archive in ``~/Persistent/securedrop/install_files/ansible-base``. The filename
+archive in ``~/.config/securedrop-admin``. The filename
 will begin ``sd-backup``, followed by a timestamp of when the backup was
 initiated, and ending with ``.tar.gz``. You can find the full path to the backup
 archive in the output of the backup command.
@@ -112,7 +105,7 @@ Prerequisites
 
 To perform a restore, boot into the *Admin Workstation* and
 ensure that your ``.tar.gz`` backup archive has been copied to
-``~/Persistent/securedrop/install_files/ansible-base``.
+``~/.config/securedrop-admin``.
 (If you are using the same *Admin Workstation* as you did when you took the
 backup, the archive will already be in place).
 
@@ -138,7 +131,7 @@ To restore an existing instance to a previous state, run the command:
 
 .. code:: sh
 
-   ./securedrop-admin restore sd-backup-2020-07-22--01-06-25.tar.gz
+   securedrop-admin restore sd-backup-2020-07-22--01-06-25.tar.gz
 
 Make sure to replace ``sd-backup-2020-07-22--01-06-25.tar.gz`` with the filename
 for your backup archive.
@@ -165,24 +158,15 @@ Moving a SecureDrop instance to new hardware involves:
 
 .. note::  The instructions below assume that you are using the same *Admin Workstation*
    that was used to manage your old instance. If you are using a new *Admin
-   Workstation* you will need to copy the directory ``~amnesia/Persistent/securedrop``
-   from the old workstation to the new workstation (using a *Transfer Device*)
-   before proceeding.
+   Workstation* you will need to first install the 
+   :doc:`securedrop-admin package and prerequisites <../installation/install>` **without** configuring the installation. Instead, copy the config directory ``~/.config/securedrop-admin`` and backup archive from an old *Admin Workstation* to the new workstation (using an encrypted *Transfer Device*), and proceed with the instructions below.
 
 #. If you have not already done so, :ref:`back up the existing installation <backing_up>`.
    The instructions below assume that the backup has been created
    and renamed ``sd-backup-old.tar.gz``.
 
-#. Move the existing *Admin Workstation* SecureDrop code out of the way, by
-   opening a Terminal via **Apps ▸ System Tools ▸ Console** and
-   running the command:
-
-   .. code:: sh
-
-      mv ~/Persistent/securedrop ~/Persistent/sd.bak
-
 #. Move the existing *Admin Workstation* SSH configuration out of the way via
-   the Terminal, using the commands:
+   the Terminal via **Apps ▸ System Tools ▸ Console**, using the commands:
 
    .. code:: sh
 
@@ -194,86 +178,10 @@ Moving a SecureDrop instance to new hardware involves:
       other *Admin Workstation* USBs will have to be
       :ref:`provisioned with updated credentials <repair_admin_usbs>`.
 
-#. Re-clone the SecureDrop repository to the *Admin Workstation* using the following
-   Terminal commands:
-
-   .. code:: sh
-
-      cd ~/Persistent
-      git clone https://github.com/freedomofpress/securedrop
-
-#. Verify that the current release tag was signed with the release signing key:
-
-   .. code:: sh
-
-      cd ~/Persistent/securedrop/
-      git fetch --tags
-      git tag -v 2.12.10
-
-   The output should include the following two lines:
-
-   .. code:: sh
-
-      gpg:                using RSA key 2359E6538C0613E652955E6C188EDD3B7B22E6A3
-      gpg: Good signature from "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" [unknown]
-
-
-   .. important::
-      If you do not see the message above, signature verification has failed
-      and you should **not** proceed with the installation. If this happens,
-      please contact us at securedrop@freedom.press.
-
-
-   Verify that each character of the fingerprint matches what is on the
-   screen of your workstation. If it does, you can check out the new release:
-
-   .. code:: sh
-
-      git checkout 2.12.10
-
-   .. important::
-      If you see the warning ``refname '2.12.10' is ambiguous`` in the
-      output, we recommend that you contact us immediately at
-      securedrop@freedom.press
-      (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
-
-#. Copy the old instance's configuration files and backup from
-   ``~/Persistent/sd.bak`` into ``~/Persistent/securedrop`` using the following
-   Terminal commands:
-
-   .. code:: sh
-
-      cd ~/Persistent/securedrop
-      export SD_OLD=~/Persistent/sd.bak/install_files/ansible-base
-      export SD_NEW=~/Persistent/securedrop/install_files/ansible-base
-      cp $SD_OLD/group_vars/all/site-specific $SD_NEW/group_vars/all/
-      cp $SD_OLD/tor_v3_keys.json $SD_NEW/
-      cp $SD_OLD/sd-backup-old.tar.gz $SD_NEW/
-
-   You will also need to copy the old instance's *Submission Public Key*,
-   *OSSEC Alert Public Key*, and, if configured, the *Journalist Alert Public Key*.
-   Assuming that these are named ``SecureDrop.asc``, ``ossec.asc``, and
-   ``journalist.asc`` respectively, run the following commands:
-
-   .. code:: sh
-
-      cp $SD_OLD/SecureDrop.asc $SD_NEW/
-      cp $SD_OLD/ossec.asc $SD_NEW/
-      cp $SD_OLD/journalist.asc $SD_NEW/
-
-#. *(Optional):* If your old instance was configured to provide the *Source
-   Interface* via HTTPS, you should also copy across the certificate, certificate
-   key, and chain file. Assuming that these are named ``sd.crt``, ``sd.key``, and
-   ``ca.crt`` respectively, run the following commands:
-
-   .. code:: sh
-
-      cp $SD_OLD/sd.{crt,key} $SD_NEW/
-      cp $SD_OLD/ca.crt $SD_NEW/
-
 #. Ensure your *Admin Workstation* is connected to a LAN port on your
    network firewall, and
    :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
+
 
 #. Install Ubuntu 24.04 on the *Application* and *Monitor Servers*, following
    the :doc:`server setup instructions<../installation/servers>` to install
@@ -287,11 +195,11 @@ Moving a SecureDrop instance to new hardware involves:
 
 #. Reinstall SecureDrop on the servers, following the :doc:`installation
    instructions <../installation/install>`. During the configuration stage
-   (``./securedrop-admin sdconfig``), the values will be prepopulated based on
-   the old instance's configuration. Press **Enter** to accept each value.
+   (``securedrop-admin sdconfig``), the values will be prepopulated based on
+   the old instance's configuration, which is still stored in ``~/.config/securedrop-admin``. Press **Enter** to accept each value.
 
    Proceed through the installation by running
-   ``./securedrop-admin install`` then ``./securedrop-admin tailsconfig``.
+   ``securedrop-admin install`` then ``securedrop-admin localconfig``.
    If SSH-over-Tor is configured, run
    ``ssh app uptime`` and ``ssh mon uptime``  in the Terminal to verify SSH
    connectivity.
@@ -301,7 +209,7 @@ Moving a SecureDrop instance to new hardware involves:
 
    .. code:: sh
 
-       ./securedrop-admin restore sd-backup-old.tar.gz
+       securedrop-admin restore sd-backup-old.tar.gz
 
    The restore task will proceed for some time, removing v2 services if a v2+v3
    backup was used.
@@ -311,8 +219,8 @@ Moving a SecureDrop instance to new hardware involves:
 
    .. code:: sh
 
-      ./securedrop-admin install
-      ./securedrop-admin tailsconfig
+      securedrop-admin install
+      securedrop-admin localconfig
 
 #. :doc:`Test the new instance <../installation/test_the_installation>` to
    verify that the web interfaces are available and the servers can be
@@ -340,8 +248,8 @@ process.
 #. Copy the following files from your primary *Admin Workstation* onto the
    LUKS-encrypted USB:
 
-   - ``~/Persistent/securedrop/install_files/ansible-base/tor_v3_keys.json``
-   - ``~/Persistent/securedrop/install_files/ansible-base/mon-ssh.auth_private``
+   - ``~/.config/securedrop-admin/tor_v3_keys.json``
+   - ``~/.config/securedrop-admin/mon-ssh.auth_private``
    - ``~/.ssh/id_rsa.pub``
    - ``~/.ssh/id_rsa`` |br| |br|
 
@@ -378,14 +286,13 @@ process.
 
 #. From the LUKS-encrypted USB, copy ``tor_v3_keys.json`` and
    ``mon-ssh.auth_private`` to the
-   ``~/Persistent/securedrop/install_files/ansible-base`` directory.
+   ``~/.config/securedrop-admin`` directory.
 
 #. In the Terminal, type the following commands:
 
    .. code:: sh
 
-      cd ~/Persistent/securedrop
-      ./securedrop-admin tailsconfig
+      securedrop-admin localconfig
 
 #. Test connectivity to each server by running ``ssh app uptime``
    and ``ssh mon uptime``.
@@ -417,7 +324,7 @@ the following command:
 
 .. code:: sh
 
-   ./securedrop-admin restore --preserve-tor-config sd-backup-2020-07-22--01-06-25.tar.gz
+   securedrop-admin restore --preserve-tor-config sd-backup-2020-07-22--01-06-25.tar.gz
 
 This is a suitable option if you have a backup archive taken from an instance
 with v2 onion services, and wish to restore it to an instance that is now using

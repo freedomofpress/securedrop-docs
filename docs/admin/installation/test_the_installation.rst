@@ -16,14 +16,14 @@ On the *Admin Workstation*, you should be able to SSH to the *Application Server
    ssh mon
 
 The SSH aliases should have been configured automatically by running
-the ``./securedrop-admin tailsconfig`` tool. If you're unable to connect via aliases,
+the ``securedrop-admin localconfig`` command. If you're unable to connect via aliases,
 try using the verbose command format to troubleshoot: ::
 
    ssh <username>@<app .onion>
    ssh <username>@<mon .onion>
 
 .. tip:: Check the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files
-         in the ``install_files/ansible-base`` directory to find the ssh onion
+         in the ``~/.config/securedrop-admin`` directory to find the ssh onion
          service addresses. The files contain one line with 4 colon-delimited
          fields. The address is the first 56-character field, just add a
          ``.onion`` at the end.

@@ -55,7 +55,7 @@ To set up AW2, follow these steps:
     ``ssh-keygen -t rsa -b 4096``
 
     When prompted, store the keypair in the default location.
-13. Run the command ``./securedrop-admin tailsconfig`` in ``~/Persistent/securedrop``.
+13. Run the command ``securedrop-admin localconfig``.
 
     This will set up the *SecureDrop Menu* and SSH access.
 14. 
@@ -98,6 +98,6 @@ access to the USB drive.
 The SSH keypair on AW2 is unique to that workstation. When offboarding the
 administrator, you can manually remove the SSH public key from your admin user's
 ``~/.ssh/authorized_keys`` on ``app`` and ``mon``. Alternatively, if only a single
-*Admin Workstation* is in active use, you can use the ``./securedrop-admin reset_admin_access``
-command in ``~/Persistent/securedrop`` to revoke access to all other SSH keys.
+*Admin Workstation* is in active use, you can use the ``securedrop-admin reset_admin_access``
+command to revoke access to all other SSH keys.
 See our :doc:`offboarding guide <offboarding>` for more information.

@@ -85,7 +85,7 @@ an email with a nonce. Use that value to generate the second CSR:
 .. code:: sh
 
     # On the Admin Workstation, generate the second CSR
-    $ source ~/Persistent/securedrop/admin/.venv3/bin/activate
+    $ source /usr/share/securedrop-admin/venv/bin/activate
     $ torify pip install onionmaker
     # Copy the Onion service key material to the Admin Workstation:
     $ mkdir hsdir
@@ -142,18 +142,12 @@ Activating HTTPS in SecureDrop
 
 Make sure you have :doc:`installed SecureDrop already <../installation/install>`.
 
-First, on the *Admin Workstation*:
+Make note of the Source Interface Onion URL. Now from a Terminal
+on your *Admin Workstation*:
 
 .. code:: sh
 
-  cd ~/Persistent/securedrop
-
-Make note of the Source Interface Onion URL. Now from ``~/Persistent/securedrop``
-on your admin workstation:
-
-.. code:: sh
-
-  ./securedrop-admin sdconfig
+  securedrop-admin sdconfig
 
 This command will prompt you for the following information::
 
@@ -163,10 +157,10 @@ This command will prompt you for the following information::
   Local filepath to HTTPS certificate chain file (optional, only if using HTTPS on source interface): ca.crt
 
 The filenames should match the names of the files provided to you by DigiCert,
-and should be saved inside the ``install_files/ansible-base/`` directory. You'll
+and should be saved inside the ``~/.config/securedrop-admin`` directory. You'll
 rerun the configuration scripts: ::
 
-    ./securedrop-admin install
+    securedrop-admin install
 
 The webserver configuration will be updated to apply the HTTPS settings.
 Confirm that you can access the Source Interface at

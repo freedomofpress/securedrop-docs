@@ -27,20 +27,19 @@ secret. SecureDrop includes a set of scripts to configure Tails access to the
 authenticated onion services. In order to persist these changes across reboots,
 persistence must be enabled in Tails.
 
-To install the auto-connect configuration, start by navigating to the directory
-with these scripts (``~/Persistent/securedrop/``), and run the install script:
+To install the auto-connect configuration, run:
 
 .. code:: sh
 
-    ./securedrop-admin tailsconfig
+    securedrop-admin localconfig
 
 Type the Administration Password that you selected when starting Tails and hit
 **Enter**. This script installs a persistent script that runs every time you
 connect to a network in Tails, and automatically configures access to
 the *Journalist Interface* and to the servers via SSH. The HidServAuth info is
 collected from files in
-``~/Persistent/securedrop/install_files/ansible-base`` and stored in
-``~/Persistent/.securedrop/torrc_additions`` thereafter.
+``~/usr/share/securedrop-admin/ansible-base`` and stored in
+``~/.config/securedrop-admin/torrc_additions`` thereafter.
 
 In addition, the script creates the *SecureDrop Menu*, directs Tails to
 install Ansible at the beginning of every session, and sets up SSH host

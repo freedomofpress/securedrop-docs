@@ -4,8 +4,7 @@
 
     .. code:: sh
 
-      cd ~/Persistent/securedrop
-      ./securedrop-admin logs
+      securedrop-admin logs
 
   This command will produce encrypted tarballs containing logs from each server.
   See the command output for more information.
