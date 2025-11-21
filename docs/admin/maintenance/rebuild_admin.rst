@@ -37,7 +37,7 @@ may be simpler. An outline of the steps involved in rebuilding an
 Step 1: Prepare the USB sticks
 ==============================
 
-First, :ref:`create a new Admin Workstation USB <setup_install_tails>`
+First, create a new Tails :ref:`create a new Admin Workstation USB <set_up_admin_tails>`
 and set up a persistent volume with a strong passphrase.
 
 Once persistence has been set up, start up the *Admin Workstation* with
@@ -341,18 +341,13 @@ during the next step, you should specify them relative to the
 Step 5: Configure and back up the Application Server
 ====================================================
 
-Next, configure the application using the files and info retrieved in the
+Next, configure the SecureDrop application using the files and info retrieved in the
 previous steps. To do so, connect to the Tor network on the
 *Admin Workstation*, open a Terminal and run the following commands:
 
 .. code:: sh
 
- sudo apt update
- securedrop-admin setup
  securedrop-admin sdconfig
-
-.. note:: The ``securedrop-admin setup`` command may take several minutes to complete, and may
- fail due to network issues. If it fails, it's safe to run again.
 
 The ``sdconfig`` command will prompt you to fill in configuration details
 about your instance. Use the information retrieved in the previous steps.

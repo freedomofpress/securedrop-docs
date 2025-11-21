@@ -1,6 +1,15 @@
 
 Upgrade from 2.12.10 to 2.13.0
-=============================
+==============================
+
+Changes in SecureDrop 2.13.0
+----------------------------
+
+SecureDrop 2.13.10 marks a major change from previous versions as the ``securedrop-admin`` tool is now provided as a Debian package installed on Tails using ``apt`` and available system-wide, rather than as a tool that must be run directly from a local cloned version of the SecureDrop repository. 
+
+After you have successfully performed this upgrade on an *Admin Workstation*, the ``~/Persistent/securedrop`` directory is no longer used. Configuration files for your SecureDrop are moved to ``~/.config/securedrop-admin`` and stored there going forward. Running ``securedrop-admin`` commands is different two important  ways: you no longer need to run them from the ``~/Persistent/securedrop`` directory and you should not include a leading ``./``. 
+
+For more details, see the `announcement for this release <https://securedrop.org/news/securedrop-2_13_0-released/>`_. 
 
 Update Workstations to SecureDrop 2.13.0
 ----------------------------------------

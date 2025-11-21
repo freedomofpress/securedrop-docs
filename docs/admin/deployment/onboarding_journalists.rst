@@ -99,7 +99,6 @@ to access the servers over SSH.
   .. code:: sh
     
     sudo apt update
-    securedrop-admin setup
     securedrop-admin localconfig
 
   .. note:: The ``setup`` command may take several minutes, and may fail partway
