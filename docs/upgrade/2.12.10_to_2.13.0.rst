@@ -19,7 +19,7 @@ Update Workstations to SecureDrop 2.13.0
   for more information.
 
 Update to SecureDrop 2.13.10 using the graphical updater
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
 the *SecureDrop Workstation Updater* will alert you to workstation updates. You
