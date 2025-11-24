@@ -7,6 +7,7 @@ set -e
 
 
 stable_tag=$(git tag --sort=version:refname | tail -1)
+two_twelve_tag=$(git tag --sort=version:refname | grep "2.12" | tail -1)
 
 do_build() {
     git checkout "$1"
@@ -21,4 +22,5 @@ do_build() {
 }
 
 do_build "$stable_tag" stable
+do_build "$two_twelve_tag" 2.12
 do_build "$1" latest
