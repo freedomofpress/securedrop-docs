@@ -25,7 +25,7 @@ doing backups.
          about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
          restore accordingly.
 
-On the *Application Server*, open a Terminal on the Admin Workstation and run
+On the *Application Server*, open a Terminal via **Apps ▸ System Tools ▸ Console** on the Admin Workstation and run
 
 .. code:: sh
 
@@ -62,7 +62,7 @@ Backing Up
 Check Connectivity
 ''''''''''''''''''
 
-Open a **Terminal** on your *Admin Workstation* and verify it is able to run Ansible and connect to
+Open a Terminal via **Apps ▸ System Tools ▸ Console** on your *Admin Workstation* and verify it is able to run Ansible and connect to
 the SecureDrop servers.
 
 .. code:: sh
