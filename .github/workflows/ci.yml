@@ -19,7 +19,7 @@ jobs:
     # This should be updated whenever a new Debian stable version is available.
     container: debian:trixie
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Install dependencies
         run: |
           apt-get update && apt-get install --yes --no-install-recommends make python3-poetry
