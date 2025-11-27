@@ -191,10 +191,7 @@ on network speed and computing power. Once the installation is complete, you wil
           |Tails Apt Persistence|
 
 .. note:: Occasionally this command times out due to network latency issues. You
-          should be able to re-run the command and complete the setup. If you
-          run into a problem, try removing the
-          ``~/securedrop/admin/.venv3/`` directory and running the
-          command again.
+          should be able to re-run the command and complete the setup.
 
 .. important:: The setup command should only be run as the ``amnesia`` user,
                **not** as root. Contact the SecureDrop team if the package
