@@ -101,9 +101,6 @@ to access the servers over SSH.
     sudo apt update
     securedrop-admin localconfig
 
-  .. note:: The ``setup`` command may take several minutes, and may fail partway
-            due to network issues. If so, run it again before proceeding.
-
 - Once the ``localconfig`` command is complete, verify that the *Source* and
   *Journalist Interfaces* are accessible at their v3 addresses via the
   SecureDrop Menu.

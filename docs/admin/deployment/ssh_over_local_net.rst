@@ -52,7 +52,7 @@ latest production release.
 .. code:: sh
 
     sudo apt update
-    securedrop-admin update
+    securedrop-admin check_for_update
 
 The setting that controls SSH over LAN access is set during the ``sdconfig`` step
 of the install. Below is an example of what the prompt will look like. You can
