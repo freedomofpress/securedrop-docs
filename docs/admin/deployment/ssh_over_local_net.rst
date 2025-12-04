@@ -51,10 +51,8 @@ latest production release.
 
 .. code:: sh
 
-    $ sudo apt update
-    $ cd ~/Persistent/securedrop
-    $ ./securedrop-admin update
-    $ ./securedrop-admin setup
+    sudo apt update
+    securedrop-admin check_for_update
 
 The setting that controls SSH over LAN access is set during the ``sdconfig`` step
 of the install. Below is an example of what the prompt will look like. You can
@@ -62,7 +60,7 @@ answer either 'no' or 'false' when you are prompted for ``Enable SSH over Tor``:
 
 .. code:: sh
 
-    $ ./securedrop-admin sdconfig
+    securedrop-admin sdconfig
 
     Username for SSH access to the servers: vagrant
     Local IPv4 address for the Application Server: 10.0.1.4
@@ -76,7 +74,7 @@ Then you'll have to run the installation script:
 
 .. code:: sh
 
-    $ ./securedrop-admin install
+    securedrop-admin install
 
 .. note:: If you are migrating from a production install previously configured
           with SSH over Tor, you will be prompted to re-run the ``install`` portion
@@ -87,11 +85,11 @@ Finally, re-configure your *Admin Workstation* as follows:
 
 .. code:: sh
 
-    $ ./securedrop-admin tailsconfig
+    securedrop-admin localconfig
 
 Assuming everything is working you should be able to gain SSH access as follows:
 
 .. code:: sh
 
-    $ ssh app
-    $ ssh mon
+    ssh app
+    ssh mon

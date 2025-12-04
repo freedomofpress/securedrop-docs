@@ -31,8 +31,7 @@ To enable it on an existing SecureDrop instance, on the *Admin Workstation*:
 
 .. code:: sh
 
-  cd ~/Persistent/securedrop
-  ./securedrop-admin sdconfig
+  securedrop-admin sdconfig
 
 The prompts will include::
 
@@ -41,7 +40,7 @@ The prompts will include::
 Type <Enter> to accept the new default ``yes`` value.  When you finish the
 prompts, rerun the installation script::
 
-    ./securedrop-admin install
+    securedrop-admin install
 
 The Tor configuration will be updated to enable the proof-of-work defense.  When
 the script finishes, confirm that you can access the Source Interface.

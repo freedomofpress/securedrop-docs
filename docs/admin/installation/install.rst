@@ -1,38 +1,6 @@
 Install SecureDrop
 ==================
 
-Install Prerequisites
----------------------
-
-SecureDrop has dependencies that need to be loaded onto the *Admin Workstation*
-before installing the servers. To install these dependencies, from the base of
-the SecureDrop repository (``~/Persistent/securedrop/``) run the following
-command:
-
-.. code:: sh
-
-    sudo apt update
-    ./securedrop-admin setup
-
-The package installation will take approximately 10 minutes or longer, depending
-on network speed and computing power.
-
-.. note:: The apt persistence feature will prompt to install the package
-          automatically from persistent storage on each boot. Click
-          **Install Every Time**:
-
-          |Tails Apt Persistence|
-
-.. note:: Occasionally this command times out due to network latency issues. You
-          should be able to re-run the command and complete the setup. If you
-          run into a problem, try removing the
-          ``~/Persistent/securedrop/admin/.venv3/`` directory and running the
-          command again.
-
-.. important:: The setup command should only be run as the ``amnesia`` user,
-               **not** as root. Contact the SecureDrop team if the package
-               installation encounters repeated errors.
-
 Localization of the *Source Interface* and *Journalist Interface*
 -----------------------------------------------------------------
 
@@ -90,7 +58,7 @@ will need:
           of the *Application Server*.
 
 Before proceeding, you will need to copy the following files to
-``install_files/ansible-base``:
+``~/.config/securedrop-admin``:
 
 -  the *Submission Public Key* file
 -  the *OSSEC Alert Public Key*
@@ -99,23 +67,23 @@ The *Submission Public Key* should be located on your *Transfer
 Device* from earlier. Its exact path will depend on the location where the USB stick
 is mounted. From the root of the SecureDrop repository, run: ::
 
-    cp /media/[USB folder]/SecureDrop.asc install_files/ansible-base
+    cp /media/[USB folder]/SecureDrop.asc ~/.config/securedrop-admin/
 
 where ``/media/[USB folder]/`` corresponds to the *Transfer Device*. (You can
 also use the copy and paste capabilities of the file manager.)
 
-Next, copy the *OSSEC Alert Public Key* into ``install_files/ansible-base`` as well.
+Next, copy the *OSSEC Alert Public Key* into ``~/.config/securedrop-admin`` as well.
 
 .. _ansible-site-specific:
 
 Next, run the configuration playbook and answer the prompts with values that
 match your environment: ::
 
-    ./securedrop-admin sdconfig
+    securedrop-admin sdconfig
 
 The script will automatically validate the answers you provided and display
 error messages if any problems are detected. The answers will be
-written to the file ``install_files/ansible-base/group_vars/all/site-specific``.
+written to the file ``~/.config/securedrop-admin/site-specific``.
 
 When you're done, save the file and quit the editor.
 
@@ -128,7 +96,7 @@ Now you are ready to install! This process will configure
 the servers and install SecureDrop and all of its dependencies on
 the remote servers. ::
 
-    ./securedrop-admin install
+    securedrop-admin install
 
 You will be prompted to enter the sudo passphrase for the *Application Server* and
 *Monitor Server* (which should be the same).
@@ -143,7 +111,7 @@ troubleshooting.
 .. include:: ../../includes/rerun-install-is-safe.txt
 
 If needed, make edits to the file located at
-``install_files/ansible-base/group_vars/all/site-specific`` as
+``~/.config/securedrop-admin/site-specific`` as
 described :ref:`above<ansible-site-specific>`. If you continue to have
 issues, please submit a detailed issue notice on `GitHub
 <https://github.com/freedomofpress/securedrop/issues/new>`__ or send
@@ -158,7 +126,7 @@ an email to securedrop@freedom.press.
 
 Once the installation is complete, addresses and credentials for each
 onion service will be available in the following files under
-``install_files/ansible-base``:
+``~/.config/securedrop-admin``:
 
 
 V3 onion services
@@ -174,7 +142,7 @@ V3 onion services
   providing SSH access to the *Monitor Server*.
 - ``tor_v3_keys.json`` contains the keypairs required for access to the
   *Journalist Interface* and SSH access to the servers - it is required for
-  future runs of ``./securedrop-admin install``.
+  future runs of ``securedrop-admin install``.
 
 .. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file
              contain secret keys that should not be shared with third parties,
@@ -185,4 +153,3 @@ The dynamic inventory file will automatically read the ``onion`` addresses from
 the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to
 connect to the servers over SSH during subsequent playbook runs.
 
-.. |Tails Apt Persistence| image:: ../../images/tails-install-once-or-every-time.png

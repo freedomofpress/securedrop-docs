@@ -96,6 +96,7 @@ Get Started
    admin/installation/set_up_svs
    admin/installation/set_up_transfer_and_export_device
    admin/installation/generate_submission_key
+   admin/installation/set_up_keepassxc
    admin/installation/set_up_admin_tails
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
@@ -138,7 +139,6 @@ Get Started
    admin/maintenance/ossec_alerts
    admin/maintenance/backup_and_restore
    admin/maintenance/backup_workstations
-   admin/maintenance/update_workstations
    admin/maintenance/update_tails_usbs
    admin/maintenance/updates_over_tor
    admin/maintenance/kernel_troubleshooting
@@ -151,7 +151,8 @@ Get Started
    :name: upgradetoc
    :maxdepth: 2
    :hidden:
-   
+
+   upgrade/2.12.10_to_2.13.0.rst
    upgrade/2.12.9_to_2.12.10.rst
    upgrade/2.12.8_to_2.12.9.rst
    upgrade/2.12.3_to_2.12.8.rst

@@ -174,10 +174,9 @@ Run the following commands via SSH from the *Admin Workstation*:
 
 .. code:: sh
 
-  cd ~/Persistent/securedrop/
-  source admin/.venv3/bin/activate
-  cd install_files/ansible-base
-  ansible all -b -m setup > server-facts.log
+  source /usr/share/securedrop-admin/venv/bin/activate
+  cd /usr/share/securedrop-admin/ansible-base
+  ansible all -b -m setup > ~/server-facts.log
 
 Please also send us a copy of ``/var/log/syslog`` and ``/var/log/dmesg`` for
 analysis.

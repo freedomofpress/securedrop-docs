@@ -78,8 +78,8 @@ to access the servers over SSH.
 
   .. code-block:: none
 
-    ~/Persistent/securedrop/install_files/ansible-base/app-sourcev3-ths
-    ~/Persistent/securedrop/install_files/ansible-base/app-journalist.auth_private
+    ~/.config/securedrop-admin/app-sourcev3-ths
+    ~/.config/securedrop-admin/app-journalist.auth_private
 
   Then, boot into the new *Journalist Workstation* USB.
 
@@ -90,25 +90,18 @@ to access the servers over SSH.
              Only the *Admin Workstation* should have shell access to the
              servers.
 
-- Install the SecureDrop application code on the workstation's persistent volume,
-  following the documentation for :ref:`cloning the SecureDrop
-  repository <Download the SecureDrop repository>`.
+- Install the SecureDrop package on the *Journalist Workstation*'s persistent volume, following the documentation to :ref:`Download the SecureDrop Repository <Download the SecureDrop Repository>` and :ref:`Install the SecureDrop Package and Dependencies <Install SecureDrop Package and Dependencies>`.
 
-- Copy the files from the *Transfer Device* to ``~/Persistent/securedrop/install_files/ansible-base``
+- Copy the files from the *Transfer Device* to ``~/.config/securedrop-admin``
 
 - Open a terminal and run the following commands:
 
   .. code:: sh
     
     sudo apt update
-    cd ~/Persistent/securedrop
-    ./securedrop-admin setup
-    ./securedrop-admin tailsconfig
+    securedrop-admin localconfig
 
-  .. note:: The ``setup`` command may take several minutes, and may fail partway
-            due to network issues. If so, run it again before proceeding.
-
-- Once the ``tailsconfig`` command is complete, verify that the *Source* and
+- Once the ``localconfig`` command is complete, verify that the *Source* and
   *Journalist Interfaces* are accessible at their v3 addresses via the
   SecureDrop Menu.
 

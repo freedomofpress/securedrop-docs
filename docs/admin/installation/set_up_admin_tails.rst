@@ -41,9 +41,9 @@ screen.
 .. |TorStatus| image:: ../../images/tor-status-indicator.png
 
 
-.. _Download the SecureDrop repository:
+.. _Download the SecureDrop Repository:
 
-Download the SecureDrop repository
+Download the SecureDrop Repository
 ----------------------------------
 
 The rest of the SecureDrop-specific configuration is assisted by files
@@ -56,7 +56,7 @@ Start by running the following commands to download the git repository.
 
 .. code:: sh
 
-    cd ~/Persistent
+    cd ~/
     git clone https://github.com/freedomofpress/securedrop.git
 
 .. note:: Since the repository is fairly large and Tor can be slow,
@@ -106,7 +106,7 @@ happens, please contact us at securedrop@freedom.press.
 
    .. code:: sh
 
-      cd ~/Persistent
+      cd ~/
       torify curl -LO https://securedrop.org/securedrop-release-key.asc
 
    Before importing it, inspect the key's fingerprint using the following
@@ -137,9 +137,9 @@ signed with the release signing key:
 
 .. code:: sh
 
-    cd ~/Persistent/securedrop/
+    cd ~/securedrop/
     git fetch --tags
-    git tag -v 2.12.10
+    git tag -v 2.13.0
 
 The output should include the following two lines:
 
@@ -160,97 +160,42 @@ screen of your workstation. If it does, you can check out the new release:
 
 .. code:: sh
 
-    git checkout 2.12.10
+    git checkout 2.13.0
 
-.. important:: If you see the warning ``refname '2.12.10' is ambiguous`` in the
+.. important:: If you see the warning ``refname '2.13.0' is ambiguous`` in the
                output, we recommend that you contact us immediately at
                securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
+.. _Install SecureDrop Package and Dependencies:
 
-.. _keepassxc_setup:
+Install SecureDrop Package and Dependencies
+-------------------------------------------
 
-Create the Admin Passphrase Database
-------------------------------------
+A SecureDrop *Admin Workstation* must have the ``securedrop-admin`` package and dependencies installed before installing the servers. To install these packages, from the base of
+the SecureDrop repository that you cloned previously (``~/securedrop/``), run the following
+command:
 
-We provide a KeePassXC password database template to make it easier for
-admins and journalists to generate strong, unique passphrases and
-store them securely. Once you have set up Tails with persistence and
-have cloned the repo, you can set up your personal password database
-using this template.
+.. code:: sh
 
-.. note::
+    sudo apt update
+    ./securedrop-admin tails-bootstrap
 
-   Earlier versions of Tails used KeePassX instead of KeePassXC.
-   The provided template is compatible with both.
+The package installation will take approximately 10 minutes or longer, depending
+on network speed and computing power. Once the installation is complete, you will be prompted to reboot the workstation. Please do so.
 
-You can find the template in ``tails_files/securedrop-keepassx.kdbx``
-in the SecureDrop repository that you just cloned. To use the template:
 
--  Copy the template to the Persistent folder - from a terminal, run the
-   command:
+.. note:: The apt persistence feature will prompt to install the package
+          automatically from persistent storage on each boot. Click
+          **Install Every Time**:
 
-   .. code:: sh
+          |Tails Apt Persistence|
 
-     cp ~/Persistent/securedrop/tails_files/securedrop-keepassx.kdbx \
-        ~/Persistent/Passwords.kdbx
+.. note:: Occasionally this command times out due to network latency issues. You
+          should be able to re-run the command and complete the setup.
 
--  Open the KeePassXC program |KeePassXC| which is already installed on
-   Tails
--  Select **Database ▸ Open database**, and navigate to the location of
-   **~/Persistent/Passwords.kdbx**, select it, and click **Open**
--  Leave the password blank and click **OK**. If you receive an "Unlock failed"
-   prompt, click **Retry with empty password**.
--  Edit entries as required.
--  Select **Database ▸ Save Database** to save your changes.
-
-The next time you use KeepassXC, the database at ``~/Persistent/Passwords.kdbx``
-will be selected by default.
-
-KeePassXC will show a warning every time you attempt to open a database without
-entering a password. Because your persistent volume is encrypted, setting up this
-additional password is not strictly required. It provides some additional
-protection, e.g., if a computer is left running, at the cost of convenience.
-
-For passwordless access without warnings, you can protect the database using a
-key file, via **Database ▸ Database settings ▸ Security ▸ Add additional protection
-▸ Add Key File ▸ Generate**. This key file has to be stored in your Persistent
-folder and it must be selected when you open the database.
-
-After configuring the password database, restart KeePassXC once to verify
-that you are able to access it as expected.
-
-.. warning:: You will not be able to access your passwords if you
-         forget the peristent storage password or the location of the key
-         file used to protect the database.
-
-In case you wish to manually create a database, the suggested password fields in
-the template are:
-
-**Admin**:
-
-- Admin account username
-- App Server SSH Onion URL
-- Email account for sending OSSEC alerts
-- Monitor Server SSH Onion URL
-- Network Firewall Admin Credentials
-- *OSSEC Alert Public Key*
-- SecureDrop Login Credentials
-
-**Journalist**:
-
-- Auth Value: Journalist Interface
-- Onion URL: Journalist Interface
-- Personal GPG Key
-- SecureDrop Login Credentials
-
-**Secure Viewing Station**:
-
-- SecureDrop GPG Key
-
-**Backup**:
-
-- This section contains clones of the above entries in case a user
-  accidentally overwrites an entry.
+.. important:: The setup command should only be run as the ``amnesia`` user,
+               **not** as root. Contact the SecureDrop team if the package
+               installation encounters repeated errors.
 
 .. |Terminal| image:: ../../images/terminal.png
-.. |KeePassXC| image:: ../../images/keepassxc.png
+.. |Tails Apt Persistence| image:: ../../images/tails-install-once-or-every-time.png

@@ -30,7 +30,7 @@ into your Admin Workstation, you should first perform the following troubleshoot
 #. **Ensure that SSH aliases and onion service authentication are configured:**
 
    - First, ensure that the correct configuration files are present in
-     ``~/Persistent/securedrop/install_files/ansible-base``:
+     ``~/.config/securedrop-admin``:
 
      - ``app-ssh.auth_private``
      - ``mon-ssh.auth_private``
@@ -38,7 +38,7 @@ into your Admin Workstation, you should first perform the following troubleshoot
      - ``app-sourcev3-ths``
      - ``tor_v3_keys.json``
 
-   - Then, from ``~/Persistent/securedrop``, run  ``./securedrop-admin tailsconfig``.
+   - Then, run  ``securedrop-admin localconfig``.
      This will ensure your local Tails environment is configured properly.
 
 #. **Confirm that your SSH key is available**: During the install, you
@@ -48,12 +48,12 @@ into your Admin Workstation, you should first perform the following troubleshoot
    prior to SSHing into the servers.
 
 
-I got a unusual error when running ``./securedrop-admin install``. What do I do?
+I got a unusual error when running ``securedrop-admin install``. What do I do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the error message is not informative, try running it again. The Tor
 connection can be flaky and can cause apparent errors, but there is no negative
-impact of re-rerunning ``./securedrop-admin install`` more than once. The
+impact of re-rerunning ``securedrop-admin install`` more than once. The
 command will simply check which tasks have been completed, and pick up where it
 left off. However, if the same issue persists, you will need to investigate
 further.
