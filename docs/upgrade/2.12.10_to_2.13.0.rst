@@ -70,11 +70,19 @@ out the new release: ::
   output, we recommend that you contact us immediately at securedrop@freedom.press
   (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
-Finally, run the following commands: ::
+Next, run the following commands: ::
 
   sudo apt update
   ./securedrop-admin setup
 
+
+.. note:: The apt persistence feature will prompt to install the package
+          automatically from persistent storage on each boot. Click
+          **Install Every Time**:
+
+          |Tails Apt Persistence|
+
+When the `./securedrop-admin setup` command has completed, reboot the the workstation to complete the upgrade. 
 
 Getting Support
 ---------------
@@ -83,3 +91,5 @@ Should you require further support with your SecureDrop installation, we are
 happy to help!
 
 .. include:: ../includes/getting-support.txt
+
+.. |Tails Apt Persistence| image:: ../images/tails-install-once-or-every-time.png
