@@ -10,34 +10,9 @@ env:
   DEFAULT_BRANCH: main
 
 jobs:
-  prepare:
-    name: Prepare
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      actions: read
-    steps:
-    - name: Determine tags
-      id: tags
-      env:
-        BRANCH: ${{ github.ref_name }}
-        SHA: ${{ github.sha }}
-      run: |
-        export TAGS="$BRANCH;$BRANCH-${SHA:0:7}"
-
-        if [ "$BRANCH" = "$DEFAULT_BRANCH" ]; then
-            export TAGS="$TAGS;latest"
-        fi
-
-        echo "tags=$TAGS" >>$GITHUB_OUTPUT
-    outputs:
-        tags: ${{ steps.tags.outputs.tags }}
-
   build:
     name: Build
     uses: freedomofpress/actionslib/.github/workflows/oci-build.yaml@main
-    needs:
-    - prepare
     permissions:
       contents: read
       actions: read
@@ -45,10 +20,10 @@ jobs:
     with:
       context: "."
       containerfile: deploy/Dockerfile
-      tags: ${{ needs.prepare.outputs.tags }}
       build-args: |
         GIT_BRANCH=${{ github.sha }}
       registry: ghcr.io/freedomofpress/securedrop-docs
       requires-deep-history: true
+      add-branch-tags: true
     secrets:
       registry-password: ${{ secrets.GITHUB_TOKEN }}
