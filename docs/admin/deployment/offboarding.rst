@@ -21,8 +21,7 @@ important to off-board them from SecureDrop.
 Off-boarding checklist
 ----------------------
 
-- :ref:`Inform the SecureDrop Support <getting_support>` team that the user's
-  support portal account should be deactivated, and indicate if any new staff
+- :ref:`Inform the SecureDrop Support <getting_support>` team that the user should be removed from any support Signal groups, and indicate if any new staff
   members should be added.
 - Delete the user's account on the *Journalist Interface*.
 - Retrieve *Admin Workstation* or *Journalist Workstation* USB drive(s),
