@@ -5,7 +5,7 @@ Upgrade from 2.12.10 to 2.13.0
 Changes in SecureDrop 2.13.0
 ----------------------------
 
-SecureDrop 2.13.10 marks a major change from previous versions: the ``securedrop-admin`` tool is now provided as a Debian package installed on Tails using ``apt`` and available system-wide, instead of being run directly from a cloned version of the SecureDrop Git repository. 
+SecureDrop 2.13.0 marks a major change from previous versions: the ``securedrop-admin`` tool is now provided as a Debian package installed on Tails using ``apt`` and available system-wide, instead of being run directly from a cloned version of the SecureDrop Git repository. 
 
 Some key changes you should be aware of:
 
@@ -23,7 +23,7 @@ Update Workstations to SecureDrop 2.13.0
   any upgrades. See our :ref:`backup instructions <backup_workstations>`
   for more information.
 
-Update to SecureDrop 2.13.10 using the graphical updater
+Update to SecureDrop 2.13.0 using the graphical updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
@@ -31,7 +31,7 @@ the *SecureDrop Workstation Updater* will alert you to workstation updates. You
 must have `configured an administrator password <https://tails.net/doc/first_steps/welcome_screen/administration_password/>`_
 on the Tails welcome screen in order to use the graphical updater.
 
-Perform the update to 2.13.10 by clicking "Update Now":
+Perform the update to 2.13.0 by clicking "Update Now":
 
 .. image:: ../images/securedrop-updater.png
 
