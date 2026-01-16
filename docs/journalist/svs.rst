@@ -105,19 +105,28 @@ All key actions are initiated by double-clicking:
 
 - Double-clicking archives in ZIP or gzip format will invoke the **File Roller**
   application to extract the contents to the same location.
+  
+- Double-clicking decrypted messages or documents will attempt to open them in a
+  default application suitable for the file type.
 
 - On Tails 4, double-clicking files that end in ``.gpg`` will attempt to decrypt
   the contents to the same directory. If you have configured a passphrase for your
   *Submission Key*, you will be prompted for it.
 
-- On Tails 5.1 or greater, double-clicking the ``.gpg`` file will launch
+- On Tails 5, double-clicking the ``.gpg`` file will launch
   an application called **Kleopatra**, from which you can decrypt the file and
   save the result to the same directory.
+  
+- On Tails 7.0, 7.1, 7.2, or 7.3, you will need to *first* open **Kleopatra** (**Apps ▸ Accessories ▸ Kleopatra**) before attempting to double-click any ``.gpg`` files.
 
-.. note:: On Tails 7.0 or greater, you will need to *first* open **Kleopatra** (**Apps ▸ Accessories ▸ Kleopatra**) before attempting to double-click any ``.gpg`` files. 
+.. note:: If you are using any of these versions, please contact your *Administrator* about upgrading to Tails 7.4 or later.
 
-- Double-clicking decrypted messages or documents will attempt to open them in a
-  default application suitable for the file type.
+- On all other versions of Tails, double-clicking the ``.gpg`` file will decrypt the
+  file and attempt to open them in a default application suitable for the file type.
+
+
+
+
 
 If the default application does not work, you can right-click on the
 document and choose **Open with Other Application...** to try opening
