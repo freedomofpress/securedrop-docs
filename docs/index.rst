@@ -96,8 +96,8 @@ Get Started
    admin/installation/set_up_svs
    admin/installation/set_up_transfer_and_export_device
    admin/installation/generate_submission_key
-   admin/installation/set_up_keepassxc
    admin/installation/set_up_admin_tails
+   admin/installation/set_up_keepassxc
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
    admin/installation/firewall_opnsense

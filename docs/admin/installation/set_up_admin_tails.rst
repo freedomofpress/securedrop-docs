@@ -1,7 +1,7 @@
+.. _set_up_admin_tails:
+
 Set Up the *Admin Workstation*
 ==============================
-
-.. _set_up_admin_tails:
 
 Earlier, you should have created the *Admin Workstation* Tails USB along with a
 persistent volume for it. Now, we are going to add a couple more features to
@@ -26,7 +26,7 @@ specific Tails session, and click **Add**.
 
 During the installation, you will need the unsafe browser to access the firewall
 configuration. If you are using Tails 5.8 or newer, the unsafe browser is
-enabled automatically. If you are using an eariler version, you can enable it
+enabled automatically. If you are using an earlier version, you can enable it
 by clicking "Unsafe Browser" and then clicking **Add**:
 
 |UnsafeBrowser|
@@ -166,6 +166,20 @@ screen of your workstation. If it does, you can check out the new release:
                output, we recommend that you contact us immediately at
                securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
+
+.. _Copy the Admin Passphrase Database Template:
+
+Copy the Admin Password Database Template
+-----------------------------------------
+
+We provide a KeePassXC password database template you can later use to :ref:`store credentials related to your SecureDrop  <keepassxc_setup>`. For now, copy the template to the Persistent folder using ths following command:
+
+.. code:: sh
+
+   cp ~/securedrop/tails_files/securedrop-keepassx.kdbx \
+      ~/Persistent/Passwords.kdbx
+
+
 .. _Install SecureDrop Package and Dependencies:
 
 Install SecureDrop Package and Dependencies
@@ -193,7 +207,7 @@ on network speed and computing power. Once the installation is complete, you wil
 .. note:: Occasionally this command times out due to network latency issues. You
           should be able to re-run the command and complete the setup.
 
-.. important:: The setup command should only be run as the ``amnesia`` user,
+.. important:: The tails-bootstrap command should only be run as the ``amnesia`` user,
                **not** as root. Contact the SecureDrop team if the package
                installation encounters repeated errors.
 
