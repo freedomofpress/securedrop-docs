@@ -70,7 +70,7 @@ Create a Journalist Tails USB
 Each journalist will need a Journalist Tails USB and a *Journalist
 Workstation*, which is the computer they use to boot their Tails USB.
 
-To create a *Journalist Interface* Tails USB, just follow the same procedure you
+To create a Journalist Tails USB, just follow the same procedure you
 used to create a Tails USB with persistence for the *Admin Workstation*,
 as documented in the :ref:`Tails Setup Guide <set_up_tails>`.
 
@@ -82,7 +82,7 @@ passphrase before continuing with the next section.
 
 .. note::
 
-   As with your *Admin Workstation*, you can use a fresh copy of the blank
+   As with your *Admin Workstation*, you can use a :ref:`fresh copy <Copy the Admin Passphrase Database Template>` of the blank
    KeePassXC template in the repository to initialize the password database
    on the *Journalist Workstation*. You can safely edit this copy to remove
    sections or fields that are not relevant for the journalist you are
