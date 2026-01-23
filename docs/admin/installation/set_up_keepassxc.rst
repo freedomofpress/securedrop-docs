@@ -7,7 +7,7 @@ While setting up the *Admin Workstation* in the previous step, you copied a KeeP
 
 Using a KeePassXC database makes it easier for
 admins and journalists to generate strong, unique passphrases and
-store them securely. You are encourage to set up your personal password database
+store them securely. You are encouraged to set up your personal password database
 using this template.
 
 .. note::
