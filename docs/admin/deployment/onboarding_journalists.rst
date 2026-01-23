@@ -41,47 +41,21 @@ you have a lot of journalists who wish to access SecureDrop
 concurrently, you will need to provision multiple *Secure Viewing
 Stations*.
 
-Create a Journalist Tails USB
------------------------------
-
-Each journalist will need a Journalist Tails USB and a *Journalist
-Workstation*, which is the computer they use to boot their Tails USB.
-
-To create a *Journalist Interface* Tails USB, just follow the same procedure you
-used to create a Tails USB with persistence for the *Admin Workstation*,
-as documented in the :ref:`Tails Setup Guide <set_up_tails>`.
-
-.. note::
-
-   As with your *Admin Workstation*, you can use a fresh copy of the blank
-   KeePassXC template in the repository to initialize the password database
-   on the *Journalist Workstation*. You can safely edit this copy to remove
-   sections or fields that are not relevant for the journalist you are
-   onboarding. For example, the admin section of the password database should
-   never be filled in on a *Journalist Workstation*.
-
-Once you're done, boot into the new Journalist Tails USB on the
-*Journalist Workstation*. Enable persistence and set an admin
-passphrase before continuing with the next section.
-
-
-Set Up Automatic Access to the *Journalist Interface*
------------------------------------------------------
+Gather Files Needed from the *Admin Workstation*
+---------------------------------------------------------------------
 
 Since the *Journalist Interface* is an authenticated onion service, you must
 set up the *Journalist Workstation* to auto-configure Tor, similarly to
-the *Admin Workstation*. The procedure is essentially identical, except the
-SSH configuration will be skipped, since only admins need
-to access the servers over SSH.
+the *Admin Workstation*. To do this, you will require copies of the v3 service files from the *Admin Workstation*.
 
-- First, boot into the *Admin Workstation* and copy the following v3 service files to a *Transfer Device*:
+- Boot into the *Admin Workstation* and copy the following v3 service files to a *Transfer Device*:
 
   .. code-block:: none
 
     ~/.config/securedrop-admin/app-sourcev3-ths
     ~/.config/securedrop-admin/app-journalist.auth_private
 
-  Then, boot into the new *Journalist Workstation* USB.
+In the steps below you will copy these files from the *Transfer Device* to the new *Journalist Workstation*.
 
 .. warning:: Do **not** copy the ``app-ssh.auth_private``,
              ``mon-ssh.auth_private``, or ``tor_v3_keys.json`` files
@@ -90,9 +64,32 @@ to access the servers over SSH.
              Only the *Admin Workstation* should have shell access to the
              servers.
 
-- Install the SecureDrop package on the *Journalist Workstation*'s persistent volume, following the documentation to :ref:`Download the SecureDrop Repository <Download the SecureDrop Repository>` and :ref:`Install the SecureDrop Package and Dependencies <Install SecureDrop Package and Dependencies>`.
+Create a Journalist Tails USB
+-----------------------------
 
-- Copy the files from the *Transfer Device* to ``~/.config/securedrop-admin``
+Each journalist will need a Journalist Tails USB and a *Journalist
+Workstation*, which is the computer they use to boot their Tails USB.
+
+To create a Journalist Tails USB, just follow the same procedure you
+used to create a Tails USB with persistence for the *Admin Workstation*,
+as documented in the :ref:`Tails Setup Guide <set_up_tails>`.
+
+Once you're done, boot into the new Journalist Tails USB on the
+*Journalist Workstation*. Enable persistence and set an admin
+passphrase before continuing with the next section.
+
+- Install the SecureDrop package on the *Journalist Workstation*'s persistent volume, following the same steps you used to :ref:`Set Up the Admin Workstation <set_up_admin_tails>`.
+
+.. note::
+
+   As with your *Admin Workstation*, you can use a :ref:`fresh copy <Copy the Admin Passphrase Database Template>` of the blank
+   KeePassXC template in the repository to initialize the password database
+   on the *Journalist Workstation*. You can safely edit this copy to remove
+   sections or fields that are not relevant for the journalist you are
+   onboarding. For example, the admin section of the password database should
+   never be filled in on a *Journalist Workstation*.
+
+- Copy the *Admin Workstation* v3 service files from the *Transfer Device* to ``~/.config/securedrop-admin``
 
 - Open a terminal and run the following commands:
 
