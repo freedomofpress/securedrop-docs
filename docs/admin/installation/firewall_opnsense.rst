@@ -334,14 +334,9 @@ Settings**.
 
 From here you can click on the cog beside the wired network connection:
 
-|Tails Network Settings|
-
 This will take you to the network settings. Change to the **IPv4** tab. Ensure
 that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
 **DNS** is in the "off" position, as highlighted in the screenshot below:
-
-|Tails Manual Network Settings|
-
 
 .. note:: The Unsafe Browser will not launch when using a manual
 	  network configuration if it does not have DNS servers
@@ -794,6 +789,4 @@ to the `OPNSense Blog RSS feed <https://opnsense.org/blog/rss>`__.
 .. |Pop-up notification| image:: ../../images/firewall/starting_the_unsafe_browser.png
 .. |Unsafe Browser Homepage| image:: ../../images/firewall/unsafe_browser.png
 .. |Wired Settings| image:: ../../images/firewall/wired_settings.png
-.. |Tails Network Settings| image:: ../../images/firewall/tails_network_settings.png
-.. |Tails Manual Network Settings| image:: ../../images/firewall/tails-manual-network-with-highlights.png
 .. |4 NIC Admin Workstation Static IP Configuration| image:: ../../images/firewall/four_nic_admin_workstation_static_ip_configuration.png

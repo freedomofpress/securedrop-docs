@@ -39,6 +39,9 @@ Get Started
    :hidden:
 
    what_is_securedrop
+   introduction
+   workstation_architecture
+   supported_filetypes
    what_makes_securedrop_unique
    glossary
    threat_model/threat_model.rst
@@ -47,6 +50,7 @@ Get Started
    getting_support
    training_schedule
    passphrase_best_practices
+   known_issues
 
 .. toctree::
    :caption: Source Guide
@@ -66,22 +70,34 @@ Get Started
    :hidden:
 
    journalist/journalist
-   journalist/workstation
-   journalist/svs
+   journalist/starting_qubes
+   journalist/starting_client
+   journalist/sources
+   journalist/submissions
+   journalist/ending_session
+   journalist/faq
    journalist/documents
+   
 .. toctree::
    :caption: Admin Guide: Reference
    :name: adminguidetoc
    :maxdepth: 2
    :hidden:
 
+   
    admin/reference/admin
    admin/reference/responsibilities
+   admin/workstation_reference/hardware
    admin/reference/admin_interface
    admin/reference/ssh_access
    admin/reference/securedrop_admin
+   admin/workstation_reference/securing_workstation
+   admin/workstation_reference/troubleshooting_connection
+   admin/workstation_reference/troubleshooting_updates
    admin/reference/faq
+   admin/workstation_reference/managing_clipboard
 
+   
 .. toctree::
    :caption: Admin Guide: Installation
    :name: installtoc
@@ -89,23 +105,24 @@ Get Started
    :hidden:
 
    admin/installation/installation_overview
+   admin/installation/overview
+   admin/installation/prepare
    admin/installation/passphrases
    admin/installation/hardware
    admin/installation/minimum_security_requirements
    admin/installation/create_usb_boot_drives
-   admin/installation/set_up_svs
    admin/installation/set_up_transfer_and_export_device
    admin/installation/generate_submission_key
-   admin/installation/set_up_admin_tails
    admin/installation/set_up_keepassxc
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
    admin/installation/firewall_opnsense
    admin/installation/servers
    admin/installation/install
-   admin/installation/configure_admin_workstation_post_install
    admin/installation/create_admin_account
    admin/installation/test_the_installation
+   admin/installation/install_sdw
+   admin/installation/troubleshoot
 
 .. toctree::
    :caption: Admin Guide: Deployment
@@ -119,14 +136,10 @@ Get Started
    admin/deployment/whole_site_changes.rst
    admin/deployment/sample_privacy_policy.rst
    admin/deployment/getting_the_most_out_of_securedrop
-   admin/deployment/onboarding_journalists
-   admin/deployment/onboarding_admins
    admin/deployment/yubikey_setup
    admin/deployment/tor_pow
    admin/deployment/https_source_interface
    admin/deployment/ssh_over_local_net
-   admin/deployment/remote
-   admin/deployment/tails_printing_guide
    admin/deployment/offboarding
 
 .. toctree::
@@ -135,32 +148,19 @@ Get Started
    :maxdepth: 2
    :hidden:
 
+   admin/maintenance/upgrade_guide
    admin/maintenance/logging
    admin/maintenance/ossec_alerts
    admin/maintenance/backup_and_restore
-   admin/maintenance/backup_workstations
-   admin/maintenance/update_tails_usbs
    admin/maintenance/updates_over_tor
    admin/maintenance/kernel_troubleshooting
-   admin/maintenance/rebuild_admin
    admin/maintenance/update_bios
    admin/maintenance/decommission
-
-.. toctree::
-   :caption: Admin Guide: Upgrades
-   :name: upgradetoc
-   :maxdepth: 2
-   :hidden:
-
-   upgrade/2.12.10_to_2.13.0.rst
-   upgrade/2.12.9_to_2.12.10.rst
-   upgrade/2.12.8_to_2.12.9.rst
-   upgrade/2.12.3_to_2.12.8.rst
-   upgrade/2.12.2_to_2.12.3.rst
-   upgrade/2.12.1_to_2.12.2.rst
-   upgrade/2.12.0_to_2.12.1.rst
-   upgrade/2.11.1_to_2.12.0.rst
-   upgrade/2.11.0_to_2.11.1.rst
+   admin/workstation_reference/backup
+   admin/workstation_reference/bios_update
+   admin/workstation_reference/provisioning_usb
+   admin/workstation_reference/removing_gpg_passphrase
+   admin/workstation_reference/reviewing_logs
 
 Get Involved
 ^^^^^^^^^^^^

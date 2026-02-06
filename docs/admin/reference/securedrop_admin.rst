@@ -7,24 +7,18 @@ The ``securedrop-admin`` Utility
 
 Using ``securedrop-admin``
 --------------------------
-The ``securedrop-admin`` command-line utility is used from the *Admin Workstation*
+The ``securedrop-admin`` command-line utility is used
 to perform common server administration tasks, including:
 
 * configuring and installing SecureDrop
 * backing up and restoring the servers (see :doc:`../maintenance/backup_and_restore`)
 * retrieving server logs for troubleshooting (see :doc:`../maintenance/logging`)
-* updating the SecureDrop code and Tails configuration on the *Admin Workstation*
 * updating your SecureDrop servers' configuration post-install.
-
-To use ``securedrop-admin``:
-
-#. Boot the *Admin Workstation* with persistence enabled and an admin password set
-#. Open a terminal via **Apps ▸ System Tools ▸ Console**
 
 You can list all available ``securedrop-admin`` actions using the command
 ``securedrop-admin --help``
 
-.. note:: If your team has multiple admins, each with their own *Admin Workstation*, you
+.. note:: If your team has multiple admins, each with their own *SecureDrop Workstation*, you
   must take steps to manually synchronize any configuration changes made via ``securedrop-admin``
   with each other. See `Managing Configuration Updates with Multiple Admins`_
 
@@ -43,8 +37,7 @@ There are two primary reasons why you may want to update the system configuratio
 
 In both cases, follow these steps:
 
-#. Boot the *Admin Workstation* and unlock its persistent volume.
-#. Determine the current version of `securedrop-admin` you have installed on your *Admin Workstation* by running:
+#. Determine the current version of `securedrop-admin` you have installed on your *SecureDrop Workstation* by running:
 
   .. code:: sh
 
@@ -56,7 +49,7 @@ In both cases, follow these steps:
 
 #. Run ``securedrop-admin sdconfig``. This will display the current
    configuration, one line at a time, and allow you to change it. At this point,
-   any changes you make are only saved on this *Admin Workstation*, to the
+   any changes you make are only saved on this *SecureDrop Workstation*, to the
    following file:
 
    ``~/.config/securedrop-admin/site-specific``
@@ -103,12 +96,12 @@ Managing Configuration Updates with Multiple Admins
 
 Organizations with multiple admins should set up a way to synchronize
 any changes one admin makes to the server configuration, as by default those
-changes are stored only on their individual *Admin Workstation*.
+changes are stored only on their individual *SecureDrop Workstation*.
 
 Configuration changes will be flagged by OSSEC and will generate alerts, but
 if other admins don't regularly review OSSEC alerts they may miss important
 changes, such as an update to the *Submission Public Key*. If they subsequently
-run ``securedrop-admin install`` from their *Admin Workstation*, they will
+run ``securedrop-admin install`` from their *SecureDrop Workstation*, they will
 revert the server configuration to an older version.
 
 The simplest approach to keeping workstations in sync is to inform other admins
@@ -116,14 +109,14 @@ of changes as you make them, for example via a secure Signal group chat. Any suc
 communications should happen over a platform that provides E2EE, as you may need to
 share sensitive information.
 
-Configuration information is stored on the *Admin Workstation* under
+Configuration information is stored on the *SecureDrop Workstation* under
 ``~/.config/securedrop-admin``:
 
 * ``~/.config/securedrop-admin/site-specific`` contains settings written by
   ``securedrop-admin sdconfig`` - if it is changed other admins should be notified.
 * The *Submission Public Key* and *OSSEC Alert Public Key* should be present
   under ``~/.config/securedrop-admin``. If these keys are rotated, the public keys
-  should be updated on other *Admin Workstations*.
+  should be updated on other *SecureDrop Workstations*.
 * Onion service information is stored in several files:
 
     .. code-block:: none

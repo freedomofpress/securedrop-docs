@@ -4,13 +4,6 @@ Off-board Administrators and Journalists
 When journalists and SecureDrop administrators leave your organization, it is
 important to off-board them from SecureDrop.
 
-**What you need:**
-
-- An *Admin Workstation*. :ref:`Contact SecureDrop Support <getting_support>` or
-  follow our :doc:`guide to rebuilding an Admin Workstation <../maintenance/rebuild_admin>`
-  if you do not have one.
-- An admin account on the Journalist Interface
-
 .. important:: Additional measures may need to be taken if the
    user's departure is on unfriendly terms. These measures will vary
    depending on the circumstances and your own internal incident response
@@ -24,13 +17,12 @@ Off-boarding checklist
 - :ref:`Inform the SecureDrop Support <getting_support>` team that the user should be removed from any support Signal groups, and indicate if any new staff
   members should be added.
 - Delete the user's account on the *Journalist Interface*.
-- Retrieve *Admin Workstation* or *Journalist Workstation* USB drive(s),
-  *Transfer*, *Export*, and *Backup* drive(s), and any other SecureDrop
-  hardware or materials.
+- Retrieve *SecureDrop Workstation* laptops, *Backup* drive(s), 
+  and any other SecureDrop hardware or materials.
 - If the user receives email alerts (OSSEC alerts or daily submission
   notifications), either directly or as a member of an email alias, remove them
   from those alerts and :ref:`set up someone new <ossec_guide>` to
-  :ref:`receive those alerts <daily_journalist_alerts>`.
+  receive those alerts.
 - (Circumstance-dependent) If you have specific concerns that the *Submission
   Key* has been compromised, you should consider a full reinstall of
   SecureDrop. At minimum, you should :ref:`rotate the Submission Key
@@ -49,7 +41,7 @@ Additional steps for off-boarding administrators
   firewall. However, if your SecureDrop firewall can be accessed remotely, even
   if only from within your organization's network, you may want to rotate its
   login credentials.
-- Back up and :ref:`rotate the Admin Workstation SSH key <rotate_ssh_key>` to
+- Back up and :ref:`rotate the SSH key <rotate_ssh_key>` to
   prevent unauthorized SSH access to the *Application* and *Monitor Servers* in
   the event that this user has retained their Admin SSH credentials.
 
@@ -59,13 +51,12 @@ Additional steps for off-boarding administrators
 Rotate SSH keys on the SecureDrop Servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are concerned that the user may have a copy of the *Admin
-Workstation* USB or that they may have kept a copy of the *Admin Workstation*
-SSH key, you should rotate the key in the following manner.
+If you are concerned that the user may have a copy of
+the SSH key, you should rotate the key in the following manner.
 
 
 #.  Create a new SSH keypair.
-    From an *Admin Workstation*, run
+    From an *Admin* VM, run
 
     .. code:: sh
 
@@ -104,7 +95,7 @@ SSH key, you should rotate the key in the following manner.
 
 
 #.  Rename SSH keys.
-    Exit all SSH sessions and, on your *Admin Workstation*, rename ``id_rsa`` and ``id_rsa.pub`` (the old SSH keys) to something else. For example,
+    Exit all SSH sessions and rename ``id_rsa`` and ``id_rsa.pub`` (the old SSH keys) to something else. For example,
 
     .. code:: sh
 
@@ -126,7 +117,7 @@ SSH key, you should rotate the key in the following manner.
          access. Their public keys will have to be re-appended to the
          ``authorized_keys`` file on each server, as in step 3.
 
-   From an *Admin Workstation*, run
+   From an *Admin VM*, run
 
     .. code:: sh
 
@@ -158,8 +149,6 @@ was in effect.
 
 **You will need:**
 
-- The *Admin Workstation*
-- The *Secure Viewing Station*
 - A *Transfer Device* (LUKS-encrypted USB drive)
 
 On the Secure Viewing Station
@@ -254,69 +243,6 @@ On the Secure Viewing Station
 .. |edit key name| image:: ../../images/offboard/change_name.png
 .. |new list| image:: ../../images/offboard/new_list.png
 .. |revoked| image:: ../../images/offboard/revoked.png
-
-On the Admin Workstation
-~~~~~~~~~~~~~~~~~~~~~~~~
-
- .. important:: Ensure that your *Admin Workstation* is
-    :doc:`up-to-date <../maintenance/update_tails_usbs>` before performing
-    these steps.
-
-#. Take the *Transfer Device* with the new *Submission Public Key* and
-   fingerprint to your *Admin Workstation*. As you did during the initial
-   install, copy the public key, ``SecureDrop.asc``, to the
-   ``~/.config/securedrop-admin`` directory, replacing the existing public
-   key file that is there.
-
-
-#. From a Terminal, run:
-
-    .. code:: sh
-
-      securedrop-admin sdconfig
-
-   If the new public key that you placed in ``~/.config/securedrop-admin``
-   has the same name as the old public key, ``SecureDrop.asc``, the
-   only part of the configuration you will change is the SecureDrop
-   *Submission Key* fingerprint, which you will update with the fingerprint
-   of your new key.
-
-
-#. Once you have completed the above, run:
-
-    .. code:: sh
-
-     securedrop-admin install
-
-   to push the changes to the server.
-
-   You may want to immediately create a test submission, then use a
-   Journalist account to log into the *Journalist Interface*, download
-   your submission, and take it to the *Secure Viewing Station*.
-
-Return to the Secure Viewing Station
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. On the *Secure Viewing Station,* decrypt the test submission you made to
-   ensure that your new key is working properly.
-
-
-#. **Do not delete your old submission key!** You'll want to maintain it on
-   the *SVS* so that you can still decrypt old submissions that were made
-   before you changed keys.
-
-#. If you have any other *Admin Workstations*, make sure that you have copied
-   the new *Submission Public Key* into the ``~/.config/securedrop-admin``
-   directory, replacing the old public key file, and updated the *Submission
-   Public Key* fingerprint by running
-
-   .. code:: sh
-
-    securedrop-admin sdconfig
-
-   and updating the fingerprint when prompted. You do not have to run
-   ``securedrop-admin install`` again, since you have already pushed the
-   changes to the server.
 
 .. _getting_support:
 

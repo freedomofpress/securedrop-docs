@@ -38,7 +38,7 @@ Additionally, you may want to consider the following purchases:
 * an external storage drive to expand the storage capacity of the
   *Secure Viewing Station*.
 * an external hard drive for server backups.
-* a USB drive to store :ref:`backups of your Tails workstation drives <backup_workstations>`.
+* a USB drive to store backups of your Tails workstation drives
 * a security key for HOTP authentication, such as a YubiKey, if you want to
   use hardware-based two-factor authentication instead of a mobile app.
 * a USB drive with a physical write protection switch, or a USB write blocker,
@@ -56,7 +56,7 @@ items.
 
     While a printer is not required, we highly recommend it. Printing documents
     is generally far safer than copying them in digital form. See our
-    :ref:`guide to working with documents <working_with_documents>` for more information.
+    guide to working with documents for more information.
 
 Advice for users on a tight budget
 ----------------------------------
@@ -609,77 +609,6 @@ will most likely continue working in the short-term, we will no longer be testin
 this hardware.
 
 
-Journalist Workstation and Admin Workstation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Both the *Journalist Workstation* and the *Admin Workstation* must be compatible
-with the Tails operating system. Compare any hardware you want to procure or
-allocate for this purpose against the `list of known issues <https://tails.net/support/known_issues/index.en.html>`__
-maintained by the Tails project, but please be advised that the list is far
-from exhaustive.
-
-We advise against using Macs, as there are many Tails compatibility issues both
-with older and with newer models. Instead, we recommend the
-`ThinkPad T series <https://www.lenovo.com/us/en/c/laptops/thinkpad/thinkpadt>`__.
-The `ThinkWiki <https://www.thinkwiki.org/wiki/ThinkWiki>`__ is an excellent,
-independently maintained resource for verifying general Linux compatibility of
-almost any ThinkPad model.
-
-For any Tails workstation, we recommend at least 8GB of RAM.
-
-Secure Viewing Station (SVS)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The *Secure Viewing Station* is a machine that is kept offline and only
-ever used together with the Tails operating system. This machine will be
-used to generate the GPG keys used by SecureDrop to encrypt submissions,
-as well as decrypt and view submissions. Since this machine will never
-touch the Internet or run an operating system other than Tails, it does
-not need a hard drive or network device; in fact, we recommend removing
-these components if they are already present.
-
-As with the workstations, one good option is to buy a Linux-compatible laptop
-from the Lenovo ThinkPad series. It's possible to re-purpose old
-laptops from other manufacturers, as long as the wireless components are
-removable.
-
-If you are purchasing a new laptop for use as a *Secure Viewing Station*,
-you will want to ensure you are purchasing a model with a removable
-wireless card and removable storage. We have tested the following laptops
-with removable components, and can confirm compatibility within Tails:
-
-* Framework 13 laptop (Intel)
-* Lenovo Thinkpad T14 (2nd generation)
-
-For other models, we recommend that you check the service manual for the specific
-generation/model of laptop. For example, according to the service manual for the
-Thinkpad X1 Carbon, it uses a standard removable M.2-based wireless card.
-
-Just as with the servers, you can also use a NUC for the *SVS*. As noted
-before, NUCs do not ship with a storage drive, and older models can be configured
-without any wireless components. However, NUCs *do* contain an IR receiver,
-which we recommend taping over with opaque masking tape.
-
-If you choose to use a NUC, you must use a model that offers wireless
-as an **option** (described as something like ``M.2 22×30 slot and wireless antenna
-pre-assembled (for wireless card support)``). If a model is advertised as having
-"integrated wireless" (most newer NUC models), this means the wireless
-components are not physically removable, and these machines are not a suitable
-choice for the *SVS*.
-
-Tails USBs
-^^^^^^^^^^
-
-We *strongly recommend* getting USB 3.0-compatible drives to run Tails
-from. The transfer speeds are significantly faster than USB 2.0, which
-means a live operating system booting from one will be much faster and
-more responsive.
-
-You will need *at least* an 8GB drive to run Tails with an encrypted
-persistent partition. We recommend getting something in the 32-128GB
-range so you can handle large amounts of submissions without hassle.
-Anything more than that is probably overkill.
-
 Transfer Device(s) and Export Device(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 For USB drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__
@@ -702,57 +631,6 @@ We recommend a 4 NIC network firewall and currently provide setup instructions f
   running `pfSense Plus <https://www.pfsense.org/>`__.
 * the `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__
   running `pfSense Plus <https://www.pfsense.org/>`__. This device is overspecced for SecureDrop's purposes, but can be used if the other cheaper firewalls can't be procured.
-
-.. _printers_tested_by_fpf:
-
-Printers
-^^^^^^^^
-
-Careful consideration should be given to the printer used with the *SVS*.
-Most printers today have wireless functionality (WiFi or Bluetooth
-connectivity) which should be **avoided** because it could be used to
-compromise the air-gap.
-
-Unfortunately, it is difficult to find printers that work with Tails,
-and it is increasingly difficult to find non-wireless printers at all.
-To assist you, we have compiled the following partial list of
-air-gap-safe printers that have been tested and are known to work with
-Tails:
-
-+-------------------------+--------------+----------------+--------------------+
-| Printer Model           | Testing Date | Tails Versions | Printer Type       |
-+=========================+==============+================+====================+
-| HP DeskJet F4200        | 06/2017      | 3.0            | Color Inkjet       |
-+-------------------------+--------------+----------------+--------------------+
-| HP DeskJet 1112         | 06/2017      | 3.0            | Color Inkjet       |
-+-------------------------+--------------+----------------+--------------------+
-| HP DeskJet 1110         | 08/2017      | 3.1            | Color Inkjet       |
-+-------------------------+--------------+----------------+--------------------+
-| HP LaserJet 400 M401n   | 06/2015      | 1.4            | Monochrome Laser   |
-+-------------------------+--------------+----------------+--------------------+
-| HP DeskJet 6940         | 04/2015      | 1.3.2          | Monochrome Inkjet  |
-+-------------------------+--------------+----------------+--------------------+
-
-.. note:: We've documented both the HP DeskJet F4200 and HP LaserJet 400 M401n
-          with screenshots of the installation process, in our section on
-          :ref:`printer_setup_in_tails`. While the F4200 installed
-          automatically, the 400 M401n required that we set "Make and model" to
-          "HP LaserJet 400 CUPS+Gutenprint v5.2.9" when manually configuring the
-          drivers.
-
-If you know of another model of printer that fits our requirements and
-works with Tails, please submit a pull request to add it to this list.
-
-Monitor, Keyboard, Mouse
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-We don't have anything specific to recommend when it comes to displays.
-You should make sure you know what monitor cable you need for the
-servers, since you will need to connect them to a monitor to do the
-initial Ubuntu installation.
-
-You should use a wired (USB) keyboard and mouse, not wireless.
-
 
 Hardware End-of-Life
 ^^^^^^^^^^^^^^^^^^^^

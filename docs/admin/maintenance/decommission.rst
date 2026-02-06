@@ -8,11 +8,8 @@ SecureDrop instance.
    instance will soon be retired.**
    You may want to direct them to other secure methods of contacting you.
 #. **Locate and create an inventory of all your hardware.**
-     - *Journalist Workstation* USBs
-     - *Admin Workstation* USBs
-     - *Secure Viewing Station* USB
-     - *Secure Viewing Station* computer
-     - *Transfer* and *Export Devices* (USBs, optical drives, or external drives)
+     - *SecureDrop Workstation* laptops
+     - *Export Devices* (USBs, optical drives, or external drives)
      - Backup USBs/other storage media
      - Servers
      - Firewall
@@ -20,26 +17,18 @@ SecureDrop instance.
    You may also want to inventory credentials, such as the email address or
    alias and PGP key used for receiving OSSEC alerts, in order to retire them.
 
-   .. note:: The recommended SecureDrop setup includes only one *Secure Viewing
-      Station* USB. However, if you have been working remotely or
-      have a non-standard setup, you may have more than one *SVS USB*. It is
-      important that you locate all of these USBs, since they hold the most
-      sensitive data.
-
 #. **Optional: Save a backup.**
    If you want to save a backup of the *Application Server* (for example, to reinstall SecureDrop in the future using the same `.onion` address), follow
    our :doc:`backup guidelines <backup_and_restore>`. Once the backup has been
-   created, you can move it off of the *Admin Workstation* USB and onto an
-   encrypted device, such as a LUKS-encrypted drive. You will also require a
-   backup of the *Submission Key* found on the *SVS*.
+   created, you can move it onto an encrypted device, such as a LUKS-encrypted 
+   drive. You will also require a backup of the *Submission Key* found on the
+   *SecureDrop Workstation*.
 
    If you do not require a server backup, you may choose to download specific
    submissions, and store them in a secure manner (such as on an encrypted
-   drive). If you export and store these submissions without first decrypting
-   them on the *SVS*, be sure you maintain access to the *Submission Private
-   Key* found on the *SVS* so that you can decrypt them at a later time.
+   drive). 
 #. **Optional: Delete submissions on the server.**
-   Log into the *Journalist Interface* and delete all sources to take advantage
+   Log into the *SecureDrop Workstation* and delete all sources to take advantage
    of SecureDrop's secure deletion properties. Note that depending on the
    number of sources on your server, it may take anywhere from several minutes
    to an hour or more for the submissions to be completely deleted from the
@@ -109,7 +98,7 @@ SecureDrop instance.
    LVM*. You will need to reclaim the space that was taken up by your previous
    installation, so whenever prompted to unmount and reclaim unused partitions,
    select "yes."
-#. **Destroy other Transfer or Export media, if applicable.**
+#. **Destroy Export media, if applicable.**
 #. **Optional: Factory-reset the firewall.**
 #. **Update your Landing Page (tips page) to reflect the fact that your organization no longer has SecureDrop.**
 #. **Notify the SecureDrop Support team that your instance is no longer active.**

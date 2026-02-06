@@ -1,6 +1,31 @@
 Logging in via SSH
 ==================
 
+SSH Over Tor
+------------
+By default, SSH access to SecureDrop servers is routed through the Tor
+network, allowing you to access the servers
+from anywhere in the world where you have a stable internet connection and
+are able to access the Tor network.
+
+To do so, simply open a Terminal and run either the ``ssh app`` or
+``ssh mon`` command, depending on which server you are intending
+to access.
+
+This is useful for routine maintenance and log investigation tasks, although
+direct physical access will still be necessary for network-related issues, in
+situations where SSH access is not available.
+
+For more details about the types of tasks that can be completed via SSH, you
+can :ref:`review the SSH portion of our Admin Guide <server SSH access>`.
+
+If you'd like to make adjustments to the SSH configuration, or disable SSH
+access over Tor, you can do so by following the steps here.
+
+In addition to remote SSH access, the web-based *Admin Interface* is also
+from any location with a network connection and access
+to the Tor network.
+
 .. _server SSH access:
 
 Server SSH Access
@@ -12,11 +37,7 @@ you may need to SSH in order to troubleshoot and fix a problem that cannot be
 resolved via these tools.
 
 You can access your *Application Server* and *Monitor Server* via SSH by
-using either the ``ssh app`` or ``ssh mon`` commands (respectively) from an
-*Admin Workstation*.
-
-For quick access, use the "SSH into the App Server" and "SSH into the Monitor
-Server" options in the *SecureDrop Menu*.
+using either the ``ssh app`` or ``ssh mon`` commands (respectively).
 
 In this section we cover basic commands you may find useful when you SSH into
 the *Application Server* and *Monitor Server*.
@@ -131,8 +152,7 @@ file present without a database record.
 As of SecureDrop 1.0.0, automated checks send OSSEC alerts when this
 situation is detected, recommending you run ``manage.py
 list-disconnected-fs-submissions`` to see the files affected. As with
-any ``manage.py`` usage, you would run the following on the admin
-workstation:
+any ``manage.py`` usage, you would run the following:
 
 .. code:: sh
 

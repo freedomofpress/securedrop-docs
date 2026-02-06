@@ -5,23 +5,16 @@ Some initial troubleshooting steps for common scenarios follow.
 If you continue to have trouble after following these steps, you can contact the
 SecureDrop team for further assistance.
 
-Generic Troubleshooting Tips
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When troubleshooting, ensure you are on the latest version of SecureDrop
-in your *Admin Workstation*. This is done by accepting the update
-when prompted at boot in the GUI that appears.
 
 .. _troubleshooting_admin_connectivity:
 
-I can't SSH into my servers over Tor from my Admin Workstation. What do I do?
+I can't SSH into my servers over Tor. What do I do?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 At any point after the successful installation of SecureDrop, if you cannot SSH
-into your Admin Workstation, you should first perform the following troubleshooting steps:
+into your servers, you should first perform the following troubleshooting steps:
 
-#. **Ensure that you are connected to Tor.** You can do this by browsing to any site
-   in Tor Browser in your *Admin Workstation*.
+#. **Ensure that you are connected to Tor.** 
 
 #. **Ensure your servers are online.** Visit the *Admin Interface* to check
    your *Application Server* is online, and you can trigger a 

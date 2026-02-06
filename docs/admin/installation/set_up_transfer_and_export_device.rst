@@ -113,8 +113,8 @@ Create USB *Transfer Device*
 ----------------------------
 
 The easiest and recommended option for a *Transfer Device* is a USB
-drive. If you have a large team of journalists you may want to :doc:`create
-several <../deployment/onboarding_journalists>` of these. Here we'll just walk
+drive. If you have a large team of journalists you may want to create several
+of these. Here we'll just walk
 through making one *Transfer Device* [#]_.
 
 .. note:: This process will destroy all data currently on the drive.
@@ -124,9 +124,6 @@ First, label your USB drive “SecureDrop Transfer Device”.
 On the *Secure Viewing Station*, open the
 **Apps** menu in the top left corner and select
 **Utilities** then |Disk Utility icon| **Disks**:
-
-|screenshot of the Applications menu in Tails, highlighting Disk
-Utility|
 
 Connect your *Transfer Device* then pick your device in the menu on
 the left. Since we're going to destroy all the data on this drive, it's
@@ -168,7 +165,6 @@ your new *Transfer Device* should be ready for use. If you haven't already, make
 sure to label it.
 
 .. |Disk Utility icon| image:: ../../images/icons/disk-utility.png
-.. |screenshot of the Applications menu in Tails, highlighting Disk Utility| image:: ../../images/tails_7x/disks_utility_apps_menu.png
 .. |screenshot of Disk Utility application| image:: ../../images/screenshots/disk-utility.png
 .. |screenshot of the menu to create a new partition in the Disk Utility application| image:: ../../images/screenshots/create-partition.png
 .. |screenshot of partition format options| image:: ../../images/screenshots/disks_format_partition.png
@@ -258,5 +254,5 @@ sophisticated malware.
    strategy for the *Transfer Device* (enabling write protection before
    attaching the *Transfer Device* to the *Secure Viewing Station*).
 
-Please see our :ref:`guide to working with documents <working_with_documents>`
+Please see our guide to working with documents| 
 for additional recommendations regarding malware mitigation.

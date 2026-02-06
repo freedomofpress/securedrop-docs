@@ -93,8 +93,7 @@ archive in the output of the backup command.
 
 .. warning:: The backup file contains sensitive information! It should only
              be stored on the *Admin Workstation*, or on a
-             :doc:`dedicated encrypted backup USB <backup_workstations>`.
-
+             dedicated encrypted backup USB.
 .. include:: ../../includes/backup-warning.txt
 
 Restoring from a Backup
@@ -159,7 +158,7 @@ Moving a SecureDrop instance to new hardware involves:
 .. note::  The instructions below assume that you are using the same *Admin Workstation*
    that was used to manage your old instance. If you are using a new *Admin
    Workstation* you will need to first install the 
-   :doc:`securedrop-admin package and prerequisites <../installation/set_up_admin_tails>` on it. Then you may copy the config directory ``~/.config/securedrop-admin`` and backup archive from the old *Admin Workstation* to the new workstation (using an encrypted *Transfer Device*), and proceed with the instructions below.
+   securedrop-admin package and prerequisites on it. Then you may copy the config directory ``~/.config/securedrop-admin`` and backup archive from the old *Admin Workstation* to the new workstation (using an encrypted *Transfer Device*), and proceed with the instructions below.
 
 #. If you have not already done so, :ref:`back up the existing installation <backing_up>`.
    The instructions below assume that the backup has been created

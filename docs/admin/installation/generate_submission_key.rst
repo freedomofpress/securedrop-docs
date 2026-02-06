@@ -11,9 +11,7 @@ We will now generate the *Submission Key*. If you aren't still logged into your
 *Secure Viewing Station* from the previous step, boot it using its Tails USB
 stick, with persistence enabled.
 
-.. important:: Do not follow these steps before you have fully configured the
-  *Secure Viewing Station* according to the :doc:`instructions <set_up_svs>`.
-  The private key you will generate in the following steps is one of the most
+.. important:: The private key you will generate in the following steps is one of the most
   important secrets associated with your SecureDrop installation. This procedure
   is intended to ensure that the private key is protected by the air-gap
   throughout its lifetime.
