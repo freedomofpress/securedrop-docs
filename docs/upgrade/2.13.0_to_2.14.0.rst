@@ -5,16 +5,9 @@ Upgrade from 2.13.10 to 2.14.0
 Changes in SecureDrop 2.14.0
 ----------------------------
 
-SecureDrop 2.14.0 marks a major change from previous versions: the ``securedrop-admin`` tool is now provided as a Debian package installed on Tails using ``apt`` and available system-wide, instead of being run directly from a cloned version of the SecureDrop Git repository. 
+SecureDrop version 2.14.0 equips SecureDrop to communicate with our new App on the SecureDrop Workstation. This change will `simplify SecureDrop for jounalists while safeguarding whistleblowers' anonymity against evolving threats <https://securedrop.org/news/looking-back-at-2025/>` _.
 
-Some key changes you should be aware of:
-
-- The ``~/Persistent/securedrop`` directory is no longer used. 
-- The ``securedrop-admin`` utility is installed in the default path and can be run as ``securedrop-admin <command>`` in a terminal window.
-- Configuration and backup files will now be stored in ``~/.config/securedrop-admin``.
-- The GUI updater is no longer required.
-
-For more details, see the `announcement for this release <https://securedrop.org/news/securedrop-2_13_0-released/>`_. 
+For more details, see the `announcement for this release <https://securedrop.org/news/securedrop-2_14_0-released/>`_.
 
 Update Workstations to SecureDrop 2.14.0
 ----------------------------------------
