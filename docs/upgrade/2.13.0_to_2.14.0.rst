@@ -5,7 +5,7 @@ Upgrade from 2.13.10 to 2.14.0
 Changes in SecureDrop 2.14.0
 ----------------------------
 
-SecureDrop version 2.14.0 equips SecureDrop to communicate with our new App on the SecureDrop Workstation. This change will `simplify SecureDrop for jounalists while safeguarding whistleblowers' anonymity against evolving threats <https://securedrop.org/news/looking-back-at-2025/>` _.
+SecureDrop version 2.14.0 equips SecureDrop to communicate with our new App on the SecureDrop Workstation. This change will `simplify SecureDrop for jounalists while safeguarding whistleblowers' anonymity against evolving threats <https://securedrop.org/news/looking-back-at-2025/>`_.
 
 For more details, see the `announcement for this release <https://securedrop.org/news/securedrop-2_14_0-released/>`_.
 
