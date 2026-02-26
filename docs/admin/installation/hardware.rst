@@ -18,33 +18,27 @@ For an installation of SecureDrop, you must acquire:
 * 2 computers with memory and hard drives to use as the SecureDrop servers.
 * Mouse, keyboard, monitor (and necessary dongle or adapter) for
   installing the servers.
-* At least 2 dedicated physical computers that can boot to Tails: one
-  computer for the *Secure Viewing Station*, and one or more computers for the
-  *Admin Workstation(s)/Journalist Workstation(s)*.
-* Dedicated airgapped hardware for the mouse, keyboard, and monitor (only if you
-  are using a desktop for the *Secure Viewing Station*).
+* At least 1 dedicated physical laptop for the *SecureDrop Workstation*
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
-* Plenty of USB sticks: 1 drive for the Template Tails stick, 1 drive for each
-  Secure Viewing Station, 1 drive for each *Transfer Device*, 1 drive for each
-  *Export Device*, and 1 drive for each admin and journalist.
+* Plenty of USB sticks: one drive for the Ubuntu Server installation media,
+  one for the Qubes OS installation media, and at least one if needed as an
+  *Export Device*.
 
 .. _Optional Hardware:
 
 Additionally, you may want to consider the following purchases:
 
 * a printer without wireless network support, to use in combination with the
-  *Secure Viewing Station*.
-* an external storage drive to expand the storage capacity of the
-  *Secure Viewing Station*.
+  *SecureDrop Workstation*.
 * an external hard drive for server backups.
-* a USB drive to store backups of your SecureDrop workstation drives
+* a USB drive to store backups of your *SecureDrop Workstation*
 * a security key for HOTP authentication, such as a YubiKey, if you want to
   use hardware-based two-factor authentication instead of a mobile app.
 * a USB drive with a physical write protection switch, or a USB write blocker,
   if you want to mitigate the risk of introducing malware from your network to
-  your *Secure Viewing Station* during repeated use of an *Export Device*.
-* CD-R/DVD-R writers, if you want to use CD-Rs/DVD-Rs as transfer or export
+  your *SecureDrop Workstation* during repeated use of an *Export Device*.
+* CD-R/DVD-R writers, if you want to use CD-Rs/DVD-Rs as export
   media, and a CD shredder that can destroy media consistent with your threat
   model.
 
@@ -69,17 +63,11 @@ way to set up a SecureDrop instance for cheap.
 Since SecureDrop's throughput is significantly limited by
 the use of Tor for all connections, there is no need to use
 top of the line hardware for any of the servers or the
-firewall. In our experience, relatively recent recycled Dell
-desktops or servers are adequate for the SecureDrop servers,
-and recycled ThinkPad laptops work well for the
-*Admin Workstation*/*Journalist Workstation*.
-
-Please note that very old laptops or desktops may not work for the workstations.
-Since the release of Tails 3.0, 32-bit computers are no longer supported.
+firewall.
 
 Additionally, we recommend against re-purposing Apple Macintosh
 laptops and desktops. Recent Apple computers, which have M-series CPUs, are
-completely unsupported by Tails and will not work. Older computers with Intel
+completely unsupported by Qubes OS and will not work. Older computers with Intel
 CPUs may work, but are likely to experience compatibility issues.
 
 If you choose to use recycled hardware, you should of course
@@ -159,43 +147,12 @@ Workstations
 These components are necessary to do the initial installation of
 SecureDrop and to process submissions using the air-gapped workflow.
 
-*Secure Viewing Station* (SVS)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1 physical computer used as an air-gap to decrypt and view submissions retrieved
-from the *Application Server*.
-
-The chosen hardware should be solely used for this purpose. This system must have
-a removable wireless card, which will need to be completely removed before use. It
-must also have a removable storage device, such as a solid state drive (SSD) or a
-hard disk drive (HDD), which likewise needs to be removed prior to using the system.
-You will only ever boot directly to the *Secure Viewing Station* USB drive.
-
-Admin/Journalist Workstation(s)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-*At least 1* physical computer that is used as a workstation for SecureDrop
-admins and/or journalists.
-
-Each Admin and Journalist will have their own bootable Tails USB with an
-encrypted persistent partition that they will use to access SecureDrop. You will
-need at least one *workstation* to boot the Tails USBs, and may need more
-depending on: the number of admins/journalists you wish to grant access to
-SecureDrop, whether they can share the same workstation due to availability
-requirements, geographic distribution, etc.
 
 USB Drive(s)
 ^^^^^^^^^^^^
 
-*At least 2* USB drives to use as a bootable Tails USB for the *SVS* and the
-*Admin Workstation*/*Journalist Workstation*.
-
-If only one person is maintaining the system, you may use the same Tails
-instance as both the *Admin Workstation* and the *Journalist Workstation*; otherwise, we
-recommend buying 1 drive for each admin and each journalist.
-
-You will also need 2 additional drives for use as a *Transfer Device* and
-*Export Device*.
+You will also need additional drives for use as
+*Export Devices*.
 
 We also recommend buying an additional USB drive for making regular backups of
 your Tails workstations.
@@ -219,19 +176,16 @@ device. We currently support two options for two-factor authentication:
 
 .. include:: ../../includes/otp-app.txt
 
-Transfer Device(s) and Export Device(s)
+Export Device(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Journalists need physical media (known as the *Transfer Device*) to transfer
-encrypted submissions from the *Journalist Workstation* to the
-*Secure Viewing Station*, to decrypt and view them there. If they deem a
-submission to be newsworthy, they may need physical media (known as the
-*Export Device*) to copy it to their everyday workstation.
+Journalists need physical media (known as the
+*Export Device*) to copy submissions to their everyday workstation.
 
 Our standard recommendation is to use USB drives, in combination with
 volume-level encryption and careful data hygiene. Our documentation, including
 the :doc:`journalist guide <../../journalist/journalist>`, is based on this approach. 
 We also urge the use of a secure printer or similar analog conversions to 
-export documents from the *Secure Viewing Station*, whenever possible.
+export documents from the *SecureDrop Workstation*, whenever possible.
 
 You may want to consider enforcing write protection on USB drives when only read
 access is needed, or you may want to implement a workflow based on CD-Rs or
@@ -244,30 +198,25 @@ for additional background.
 
 USB drives
 ~~~~~~~~~~
-We recommend using one or multiple designated USB drives as the *Transfer
-Device(s)*, and one or multiple designated USB drives as the *Export
+We recommend using one or multiple designated USB drives as the *Export
 Device(s)*. Whether one or multiple drives are appropriate depends on the number
 of journalists accessing the system, and on whether the team is distributed
 or not.
 
-Our documentation explains how the *Transfer Device* can be encrypted using
-LUKS, and how the *Export Device* can be encrypted using VeraCrypt (which works
+Our documentation explains how the *Export Device* can be encrypted using VeraCrypt (which works
 across platforms). We have not evaluated hardware-based encryption options; if
-you do select a hardware solution, make sure that both devices work in Tails,
-and that the *Export Device* also works on the operating system(s) used by
-journalists accessing the *Secure Viewing Station*.
+you do select a hardware solution, make sure that the *Export Device* also works
+on the operating system(s) used by journalists.
 
 USB drives with write protection (optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When it is consistently applied and correctly implemented in hardware, write
 protection can prevent the spread of malware from the computers used to read
-files stored on a *Transfer Device* or an *Export Device*.
+files stored on an *Export Device*.
 
 It is especially advisable to enable write protection before attaching an
 *Export Device* to an everyday workstation that lacks the security protections
-of the Tails operating system. For defense in depth, you may also want to
-enable write protection before attaching a *Transfer Device* to the
-*Secure Viewing Station*.
+of the Tails operating system.
 
 The two main options to achieve write protection of USB drives are:
 
@@ -276,10 +225,9 @@ The two main options to achieve write protection of USB drives are:
 
 DVD-Rs or CD-Rs
 ~~~~~~~~~~~~~~~
-Single-use, write-once media can be used to realize a transfer and export
-workflow that is always one-directional: files are transferred to the *Secure
-Viewing Station* and the media used to do so are destroyed; files are exported
-from the *Secure Viewing Station* and the media used to do so are destroyed.
+Single-use, write-once media can be used to realize an export
+workflow that is always one-directional: files are exported
+from the *SecureDrop Workstation* and the media used to do so are destroyed.
 
 If you want to realize such a workflow, we recommend purchasing separate drives
 for each computer that will write to or read from the media, to minimize the
@@ -328,26 +276,11 @@ included in a scanned document; other visually encoded information. See the
 :ref:`malware_risks` section in the Journalist Guide for further guidance on
 this subject.
 
-Offline Storage
-^^^^^^^^^^^^^^^
-
-The *SVS* is booted from a Tails USB drive, which has an encrypted persistent
-volume but typically has a fairly limited storage capacity since it's just a USB
-drive. For installations that expect to receive a large volume of submissions,
-we recommend buying an external hard drive or solid state drive that can be used
-to store submissions that have been transferred from the *Application Server* to
-the *SVS*.
-
-.. include:: ../../includes/encrypting-drives.txt
-
 Backup Storage
 ^^^^^^^^^^^^^^
 
 It's useful to run periodic backups of the servers in case of failure. We
 recommend buying an external hard drive to store server backups.
-
-Because this drive will be connected to the *Admin Workstation* to perform
-backups, it should *not* be the same drive used for *Offline Storage*.
 
 .. include:: ../../includes/encrypting-drives.txt
 
@@ -355,11 +288,7 @@ Labeling Equipment
 ^^^^^^^^^^^^^^^^^^
 
 As you have probably noticed by now, a SecureDrop installation has a plethora of
-components. Some of these components can be hard to tell apart; for example, if
-you buy 3 of the same brand of USB sticks to use for the Admin Workstation,
-Journalist Workstation, and Secure Viewing Station, they will be
-indistinguishable from each other unless you label them. We recommend buying
-some labeling equipment up front so you can label each component as you
+components. We recommend buying some labeling equipment up front so you can label each component as you
 provision it during the installation process.
 
 There is a multitude of options for labeling equipment. We've had good results
@@ -408,8 +337,7 @@ differ for each make and model.
 SecureBoot for Workstations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The **Secure Viewing Station**, **Admin Workstation**, and
-**Journalist Workstation** should all have SecureBoot enabled.
+The **SecureDrop Workstation** should have SecureBoot enabled.
 
 Some systems, including recent ThinkPads, require you to specifically enable
 the Third-Party UEFI Certificate Authority within the SecureBoot settings to
@@ -609,7 +537,7 @@ will most likely continue working in the short-term, we will no longer be testin
 this hardware.
 
 
-Transfer Device(s) and Export Device(s)
+Export Device(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 For USB drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__
 on Tails, and it works well with and without encryption.
