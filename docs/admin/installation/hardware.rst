@@ -38,7 +38,7 @@ Additionally, you may want to consider the following purchases:
 * an external storage drive to expand the storage capacity of the
   *Secure Viewing Station*.
 * an external hard drive for server backups.
-* a USB drive to store backups of your Tails workstation drives
+* a USB drive to store backups of your SecureDrop workstation drives
 * a security key for HOTP authentication, such as a YubiKey, if you want to
   use hardware-based two-factor authentication instead of a mobile app.
 * a USB drive with a physical write protection switch, or a USB write blocker,
