@@ -152,6 +152,7 @@ Get Started
    admin/maintenance/logging
    admin/maintenance/ossec_alerts
    admin/maintenance/backup_and_restore
+   admin/maintenance/rebuild_admin
    admin/maintenance/updates_over_tor
    admin/maintenance/kernel_troubleshooting
    admin/maintenance/update_bios

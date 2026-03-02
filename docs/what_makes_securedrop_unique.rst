@@ -65,8 +65,8 @@ be easily intercepted and read while they are traversing the Internet and are al
 encrypted on the server so if any attacker manages to break into the server, they
 would not be able to read past messages.
 
-In addition, the decryption key for SecureDrop submissions sits in an air-gapped
-virual machine inside a hardened operating system that opens submissions in a
+In addition, the decryption key for SecureDrop submissions sits in an isolated
+virtual machine inside a hardened operating system that opens submissions in a
 temporary, non-networked environment.
 
 Protects Against Hackers

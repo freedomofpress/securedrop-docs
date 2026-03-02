@@ -162,3 +162,29 @@ because of the number of VMs involved.
 
 These updates are essential to keep SecureDrop Workstation secure. Their speed
 is expected to be improved in subsequent releases of SecureDrop Workstation.
+
+Is there a way to be notified every day about new submissions?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When a SecureDrop has little activity and receives only a few
+submissions every other week, checking the *SecureDrop Workstation*
+daily only to find there is nothing is a burden. It is more convenient
+for journalists to be notified daily via encrypted email about whether
+or not there has been submission activity in the past 24 hours.
+
+If the email shows submissions were received, the journalist can
+connect to the *Journalist Interface* to get them.
+
+.. note::
+
+   For security reasons, the email will be sent every 24 hours, regardless
+   of whether there are new submissions or not. The subject of the email will
+   always be "Submissions in the past 24h". To find out whether there were
+   submissions or not, you must decrypt the contents of the email.
+
+This is an optional feature that must be activated :doc:`by the
+administrator <../admin/reference/admin>`. In the simplest case a journalist
+provides their email and GPG public key to the admin. If a team of journalist
+wants to receive these daily alerts, they should share a GPG key and
+ask the admin to setup a mail alias (SecureDrop does not provide that
+service) so they all receive the alerts and are able to decrypt them.
