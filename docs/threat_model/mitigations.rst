@@ -127,7 +127,7 @@ Countermeasures Unique to *Monitor Server*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  OSSEC is used for intrusion detection/file integrity monitoring, and are sent to Admins via end-to-end encrypted email
 
-SecureDrop Dependencies — Python, Tor, Linux Kernel, apt, Tails, Ubuntu, or Hardware Firewall Vulnerabilities
+SecureDrop Dependencies — Python, Tor, Linux Kernel, apt, Qubes, Ubuntu, or Hardware Firewall Vulnerabilities
 -------------------------------------------------------------------------------------------------------------
 
 Attacks on SecureDrop Dependencies
@@ -138,7 +138,7 @@ Attacks on SecureDrop Dependencies
 -  Known weakness in Onion Service cryptography
 -  GitHub is compromised
 -  Firewall is not up-to-date
--  Tails ISO malicious
+-  Qubes ISO malicious
 -  Ubuntu ISO malicious
 -  Tor apt repo compromised
 -  Ubuntu apt repo compromised
@@ -161,7 +161,7 @@ Countermeasures Against Malicious apt Installs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  apt does GPG signature verification of all packages as long as it's not explicitly disabled
 
-Countermeasures Against Malicious Tails or Ubuntu ISOs
+Countermeasures Against Malicious Qubes or Ubuntu ISOs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -   SecureDrop `Admin Guide <https://docs.securedrop.org/en/stable/admin.html>`__ instructs Users/Admins to validate checksum/signatures of downloaded images
 
@@ -218,7 +218,6 @@ Attacks on User Behavior or Hardware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Journalist corporate workstation seized/tampered/compromised
 -  Transfer device seized/stolen/lost
--  Admin workstation backup stick is compromised
 -  Admin two-factor authentication device is lost or compromised
 -  Admin SSH Key is compromised
 -  SecureDrop installer misconfigures server/firewall hardware
@@ -235,4 +234,3 @@ Countermeasures in User Behavior Recommendations
 -  `Admin Guide <https://docs.securedrop.org/en/stable/admin.html>`__ gives instructions for long-term maintenance of the technical properties of the SecureDrop system, as well as operations to support Journalists
 -  All Admin tasks are completed over Tor/Tor authenticated onion services after installation
 -  Any Journalist/Admin password/2FA credentials resets can only be done by an Admin with password-protected SSH capability or authenticated Onion Service credentials.
--  Persistent storage on the Admin Workstation is protected with LUKS/dm-crypt encryption

@@ -66,7 +66,7 @@ Initial Configuration
 Unpack the firewall, connect the power, and power on the device.
 
 We will use the pfSense WebGUI to do the initial configuration of the
-network firewall. [#]_
+network firewall.
 
 Connect to the pfSense WebGUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -266,13 +266,9 @@ Settings**.
 
 From here you can click on the cog beside the wired network connection:
 
-|Tails Network Settings|
-
 This will take you to the network settings. Change to the **IPv4** tab. Ensure
 that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
 **DNS** is in the "off" position, as highlighted in the screenshot below:
-
-|Tails Manual Network Settings|
 
 
 .. note:: The Unsafe Browser will not launch when using a manual
@@ -535,8 +531,6 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Disable Anti-Lockout Rule| image:: ../../images/firewall/disable_anti_lockout.png
 .. |Update available| image:: ../../images/firewall/pfsense_update_available.png
 .. |Wired Settings| image:: ../../images/firewall/wired_settings.png
-.. |Tails Network Settings| image:: ../../images/firewall/tails_network_settings.png
-.. |Tails Manual Network Settings| image:: ../../images/firewall/tails-manual-network-with-highlights.png
 .. |Disable DHCP| image:: ../../images/firewall/disable_DHCP.png
 .. |LAN2| image:: ../../images/firewall/lan2.png
 .. |LAN3| image:: ../../images/firewall/lan3.png
@@ -548,8 +542,4 @@ to the next step: :doc:`setting up the servers. <servers>`
 .. |Firewall Update Confirmation| image:: ../../images/firewall/system_update.png
 .. |Firewall Update Progress| image:: ../../images/firewall/system_is_updating.png
 .. |Firewall Update Complete| image:: ../../images/firewall/system_update_complete.png
-
-.. [#] Tails screenshots are current as of Tails 5.0. Please make an issue on
-       GitHub if you are using the most recent version of Tails and the
-       interface is different from what you see here.
 

@@ -1,6 +1,6 @@
 .. note:: You can use the ``securedrop-admin`` tool to extract logs to
   send to Freedom of the Press Foundation for analysis. Run the following
-  command on your *Admin Workstation*:
+  command:
 
     .. code:: sh
 

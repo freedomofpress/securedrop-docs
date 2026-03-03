@@ -56,18 +56,10 @@ a dedicated SecureDrop Menu is provided on each Tails workstation to make it
 easy to access the onion services without having to look up their
 ``.onion`` addresses every time.
 
-Ideally, each admin would only have to:
+Ideally, each admin and journalist would only have to:
 
-#. Keep track of their Admin Workstation Tails USB.
-#. Remember the passphrase to unlock the persistent storage on that Tails USB.
-
-And each Journalist would only have to:
-
-#. Keep track of their Journalist Workstation Tails USB.
-#. Keep track of their Secure Viewing Station Tails USB (and the associated
-   Secure Viewing Station computer).
-#. Remember the passphrases to unlock the persistent storage on both of these
-   Tails USBs.
+#. Remember the passphrases to unlock the encrypted storage on their
+   *SecureDrop Workstation* laptops.
 
 Memorizing further passphrases beyond the ones listed above is counterproductive:
 an attacker with access to any of those environments would be able to pivot to
@@ -83,8 +75,8 @@ manager included in Tails to store your credentials and minimize the passphrases
 that you need to memorize to just the passphrases for the persistent storage on
 your Tails USBs.
 
-For the *Transfer Device* and the *Export Device*, which are used to copy
-files to and from the air-gapped *Secure Viewing Station*, we recommend using
+For the *Export Device*, which is used to copy decrypted submissions from a
+Workstation to an external computer, we recommend using
 encrypted USB drives with passphrases stored in the journalist's own password
 manager (preferably one which is accessible on their smartphone). This ensures
 that the journalist will have quick access to these passphrases when they need

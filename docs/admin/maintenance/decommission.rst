@@ -1,6 +1,57 @@
 Decommission SecureDrop
 =======================
 
+Protecting, Moving, or Taking Down Your SecureDrop Instance
+-----------------------------------------------------------
+
+If the location hosting your SecureDrop servers is going to be empty for
+extended periods of time, you should take steps to ensure the security of your
+servers and associated hardware:
+
+1. Ensure that the room where the servers are installed is locked by default,
+   and that only authorized personnel have access. If possible, have access
+   logged.
+2. If the server room is covered by CCTV, verify that the footage will be
+   monitored or reviewed periodically.
+3. Ask to have adjacent corridors included in any regular security patrols.
+4. Ask journalists to purge old submissions, to reduce the impact if the 
+   servers are compromised (this is good general practice in any case).
+5. If your SecureDrop instance is set up to allow SSH-over-LAN admin access,
+   consider switching it to SSH-over-Tor access instead. To do so, you will
+   need to update the server configuration using the Admin VM.
+
+In some cases, if you are not able to ensure the security of your instance
+during periods of prolonged absence, it may be better to relocate it, or in
+extreme circumstances, temporarily take it down. If you decide to take down
+your SecureDrop instance, we recommend the following steps:
+
+1. Consult with journalists using the system, to ensure that any active
+   sources are aware of the situation, and that source conversations can
+   either be paused or continued via other means.
+2. Update your SecureDrop landing page (typically a “send us tips” page,
+   or a page linked from there) to let prospective sources know that the
+   outage is coming, and optionally to redirect them to other contact
+   methods, such as a shared Signal tipline.
+3. :doc:`Back up your servers <../maintenance/backup_and_restore>`.
+4. Power down the servers, and remove them and the network firewall from the
+   server room. Store the equipment securely offsite.
+
+.. warning:: By default the SecureDrop servers are not set up with full disk
+             encryption enabled, to allow for hands-off reboots. This means
+             that it is crucial that they be kept secure. If the servers are
+             lost or stolen, an adversary would gain access to all encrypted
+             submissions and messages. While they would not be able to decrypt
+             them, this would still provide valuable metadata about source
+             conversations.
+
+In most cases, restoring the instance, whether in their original hosting
+location or elsewhere, is a matter of reconnecting the servers to the
+firewall, attaching a WAN connection that allows unfiltered access to Tor to
+the firewall WAN port, and powering everything on.
+
+Permanently Decommissioning SecureDrop
+--------------------------------------
+
 The following steps will guide you through the decommissioning of your
 SecureDrop instance.
 
@@ -8,11 +59,8 @@ SecureDrop instance.
    instance will soon be retired.**
    You may want to direct them to other secure methods of contacting you.
 #. **Locate and create an inventory of all your hardware.**
-     - *Journalist Workstation* USBs
-     - *Admin Workstation* USBs
-     - *Secure Viewing Station* USB
-     - *Secure Viewing Station* computer
-     - *Transfer* and *Export Devices* (USBs, optical drives, or external drives)
+     - *SecureDrop Workstation* laptops
+     - *Export Devices* (USBs, optical drives, or external drives)
      - Backup USBs/other storage media
      - Servers
      - Firewall
@@ -20,26 +68,18 @@ SecureDrop instance.
    You may also want to inventory credentials, such as the email address or
    alias and PGP key used for receiving OSSEC alerts, in order to retire them.
 
-   .. note:: The recommended SecureDrop setup includes only one *Secure Viewing
-      Station* USB. However, if you have been working remotely or
-      have a non-standard setup, you may have more than one *SVS USB*. It is
-      important that you locate all of these USBs, since they hold the most
-      sensitive data.
-
 #. **Optional: Save a backup.**
    If you want to save a backup of the *Application Server* (for example, to reinstall SecureDrop in the future using the same `.onion` address), follow
    our :doc:`backup guidelines <backup_and_restore>`. Once the backup has been
-   created, you can move it off of the *Admin Workstation* USB and onto an
-   encrypted device, such as a LUKS-encrypted drive. You will also require a
-   backup of the *Submission Key* found on the *SVS*.
+   created, you can move it onto an encrypted device, such as a LUKS-encrypted 
+   drive. You will also require a backup of the *Submission Key* found on the
+   *SecureDrop Workstation*.
 
    If you do not require a server backup, you may choose to download specific
    submissions, and store them in a secure manner (such as on an encrypted
-   drive). If you export and store these submissions without first decrypting
-   them on the *SVS*, be sure you maintain access to the *Submission Private
-   Key* found on the *SVS* so that you can decrypt them at a later time.
+   drive). 
 #. **Optional: Delete submissions on the server.**
-   Log into the *Journalist Interface* and delete all sources to take advantage
+   Log into the *SecureDrop Workstation* and delete all sources to take advantage
    of SecureDrop's secure deletion properties. Note that depending on the
    number of sources on your server, it may take anywhere from several minutes
    to an hour or more for the submissions to be completely deleted from the
@@ -109,7 +149,7 @@ SecureDrop instance.
    LVM*. You will need to reclaim the space that was taken up by your previous
    installation, so whenever prompted to unmount and reclaim unused partitions,
    select "yes."
-#. **Destroy other Transfer or Export media, if applicable.**
+#. **Destroy Export media, if applicable.**
 #. **Optional: Factory-reset the firewall.**
 #. **Update your Landing Page (tips page) to reflect the fact that your organization no longer has SecureDrop.**
 #. **Notify the SecureDrop Support team that your instance is no longer active.**
@@ -118,3 +158,5 @@ SecureDrop instance.
    securedrop@freedom.press
    (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__)
    or via the `support portal <https://support.freedom.press/>`__.
+   
+

@@ -36,12 +36,8 @@ received and reviewed:
 1. A source (bottom left in the diagram) uploads a submission to the news
    organization using `Tor Browser <https://www.torproject.org/>`__.
 
-2. A journalist connects to SecureDrop using their *Journalist
-   Workstation* (booted from a USB drive) and physically transfers files to
-   the air-gapped Secure Viewing Station, a machine that is never connected
-   on the Internet.
-
-3. On the *Secure Viewing Station*, the journalist can view the document,
+2. A journalist connects to SecureDrop using their *SecureDrop
+   Workstation*, where journalists can view the document,
    process it (e.g., to remove metadata or potential malware), print it, or
    export it to a dedicated device.
 
@@ -64,16 +60,11 @@ in place on the *Application Server* as they are uploaded.
 :doc:`Journalists <journalist/journalist>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Journalists working in the newsroom use two machines to interact with
-SecureDrop. First, they use a *Journalist Workstation* running Tails to connect
-to the *Journalist Interface*, an authenticated onion service. Journalists
-download `GPG <https://www.gnupg.org/>`__-encrypted submissions and copy them
-to a *Transfer Device* (a thumb drive or DVD). Those submissions are then
-connected to the airgapped *Secure Viewing Station* (*SVS*) which holds the key
-to decrypt them. Journalists can then use the *SVS* to read, print, and
-otherwise prepare documents for publication. Apart from those deliberately
-published, decrypted documents are never accessed on an Internet-connected
-computer.
+Journalists working in the newsroom use a *SecureDrop Workstation* to connect
+to their SecureDrop to communicate with Sources. Journalists
+download `GPG <https://www.gnupg.org/>`__-encrypted submissions.
+Apart from those deliberately published, decrypted documents are never
+accessed in an Internet-connected environment.
 
 .. note:: The terms in italics are terms of art specific to SecureDrop. The
 	  :doc:`Glossary <glossary>` provides more-precise
@@ -87,7 +78,6 @@ computer.
 
 The SecureDrop servers are managed by a systems admin; for larger
 newsrooms, there may be a team of systems admins. The admin
-uses a dedicated *Admin Workstation* running `Tails <https://tails.net>`__,
 connects to the *Application* and *Monitor Servers* over  `authenticated onion services
 <https://tb-manual.torproject.org/onion-services/>`__, and manages them
 using `Ansible <https://www.ansible.com/>`__.
@@ -126,7 +116,6 @@ Among the tools used in and around the SecureDrop application are:
 `OSSEC <https://ossec.github.io/>`_,
 `grsecurity <https://grsecurity.net/>`_,
 `Ubuntu Server <https://www.ubuntu.com/server>`_,
-`the Tails operating system <https://tails.net/>`_,
 and an air-gap to minimize exfiltration risks.
 
 Privacy
@@ -242,36 +231,12 @@ The servers connect to the network via a dedicated hardware firewall.
 Application Environment
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The SecureDrop application environment consists of at least two computers,
+The SecureDrop application environment consists of at least one computer,
 in addition to the servers described above:
 
-- *Secure Viewing Station*:
-   A physically-secured and air-gapped laptop running
-   the `Tails operating system`_ from a USB stick, that journalists use to
-   decrypt and view submitted documents.
-
-In addition to the *Secure Viewing Station* computers, each journalist will
-also need a computer to connect to SecureDrop:
-
-- *Journalist Workstation:*
-   The computer used by the journalist to connect to
-   the *Journalist Interface* to download encrypted documents that they will
-   transfer to the *Secure Viewing Station*. The *Journalist Workstation*
-   is also used to respond to sources via the *Journalist Interface*.
-
-Depending on your organization's threat model, the *Journalist Workstation*
-can either be the journalist's every-day laptop or a dedicated computer. In
-either case, it is recommended that journalists always use the
-`Tails operating system`_ on their *Journalist Workstation* when connecting
-to the *Journalist Interface*.
-
-SecureDrop administrators will also require a computer to connect to SecureDrop
-and perform administrative tasks. This computer is referred to as the
-*Admin Workstation*, and must be capable of running the
-`Tails operating system`_. The *Admin Workstation* may also be used
-as a *Journalist Workstation* if necessary.
-
-.. _`Tails operating system`: https://tails.net
+- *SecureDrop Workstation:*
+   The computer used by the journalist to download encrypted documents
+   and respond to sources.
 
 Operation
 ---------
@@ -345,12 +310,6 @@ interface, all accounts will access the same inbox. To avoid confusion, we
 recommend news organizations assign 1-3 journalists to regularly check
 SecureDrop and make sure that they all are in contact as to who is responsible
 for responding to each source. 
-
-We are considering alternative workflows for future SecureDrop releases; 
-please visit our 
-`development roadmap <https://github.com/freedomofpress/securedrop/wiki/Development-Roadmap>`_ 
-for up-to-date information.
-
 
 With Other Organizations
 ~~~~~~~~~~~~~~~~~~~~~~~~

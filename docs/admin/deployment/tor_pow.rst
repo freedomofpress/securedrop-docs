@@ -27,7 +27,7 @@ If you're :doc:`installing SecureDrop for the first time
 <../installation/install>`, the proof-of-work defense will be enabled by
 default, unless you :ref:`explicitly disable it <disable_tor_pow>`.
 
-To enable it on an existing SecureDrop instance, on the *Admin Workstation*:
+To enable it on an existing SecureDrop instance, on the *Admin VM*:
 
 .. code:: sh
 

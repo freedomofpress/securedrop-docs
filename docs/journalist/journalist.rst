@@ -8,15 +8,10 @@ journalist. It covers the core functions necessary to start working
 with the platform: logging in securely, viewing documents, editing
 documents, and interacting with sources.
 
-Journalists will use at least two separate computers to interact with
-SecureDrop. The first is a *Journalist Workstation*, which connects to
-the *Journalist Interface*. Journalists download encrypted submissions and
-copy them to a *Transfer Device* (a thumb drive or DVD). Those submissions
-are then connected to the airgapped *Secure Viewing Station* (*SVS*) which
-holds the key to decrypt them. The *SVS* is used to read, print, and
+Journalists will use the *SecureDrop Workstation* laptop to read, print, and
 otherwise prepare documents for publication. Apart from those deliberately
-published, decrypted documents are never accessed on an Internet-connected
-computer.
+published, decrypted documents are never opened in an environment with
+direct access to the Internet
 
 SecureDrop provides a number of benefits intended to protect journalists.
 Communications through SecureDrop are encrypted in transit, so messages
@@ -24,8 +19,8 @@ cannot be easily intercepted and read while they are moving across the
 Internet, and are also encrypted on the server so if any attacker manages
 to break into the server, they would not be able to read past messages.
 
-In addition, the decryption key for submissions resides on an air-gapped
-computer (not connected to the Internet), which makes it harder for an 
+In addition, the decryption key for submissions resides in an air-gapped
+environment (not connected to the Internet), which makes it harder for an 
 attacker to access.
 
 It also helps in the event of a subpoena or court order. All servers are

@@ -37,12 +37,12 @@ may be simpler. An outline of the steps involved in rebuilding an
 Step 1: Prepare the USB sticks
 ==============================
 
-First, create a new Tails :ref:`create a new Admin Workstation USB <set_up_admin_tails>`
+First, create a new Tails
 and set up a persistent volume with a strong passphrase.
 
 Once persistence has been set up, start up the *Admin Workstation* with
-persistence enabled, :ref:`install the SecureDrop application code, and set up
-the KeePassXC database <set_up_admin_tails>`.
+persistence enabled, install the SecureDrop application code, and set up
+the KeePassXC database.
 
 The *Admin Workstation* uses SSH with key authentication to connect to the servers,
 so you'll need to create a new SSH keypair for your SecureDrop instance. To do so,
@@ -445,8 +445,7 @@ We recommend completing the following tasks after the rebuild:
    :doc:`these instructions <../installation/create_admin_account>`
  - Verify that submissions can be decrypted, by going through the decryption
    workflow with a new submission.
- - Back up your *Admin Workstation* using the process
-   :ref:`documented here <backup_workstations>`.
+ - Back up your *Admin Workstation*.
  - Delete invalid admin accounts in the *Journalist Interface*.
  - Restrict SSH access to the *Application* and *Monitor Servers* to valid
    *Admin Workstations*. If your new *Admin Workstation* USB stick

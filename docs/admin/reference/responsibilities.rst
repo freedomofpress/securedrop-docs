@@ -93,7 +93,7 @@ are available to support this:
   web interface features such as organizations logos and submission preferences
 * :ref:`Server SSH access<server SSH access>` is also available, to allow administrators to
   troubleshoot server issues and perform manual updates.
-* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the *Admin Workstation*
+* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the *Admin VM*
   to configure and install SecureDrop, to perform operations including server backups and restores,
   and to update the server configuration after installation.
 
@@ -153,24 +153,7 @@ informed of potential updates to your network firewall.
 Updates: Workstations
 ^^^^^^^^^^^^^^^^^^^^^
 
-The admin should keep all SecureDrop workstations updated with:
-
-* **Tails updates** for each *Admin Workstation*, *Journalist Workstation*, and
-  *Secure Viewing Station*; and
-* **SecureDrop workstation updates** for each *Admin Workstation* and
-  *Journalist Workstation*.
-
-You should apply Tails updates to your Tails drives as they are released, as
-they often contain critical security fixes. Subscribe to the `Tails RSS Feed`_
-to be alerted of new releases. The online Tails drives, once booted and
-connected to Tor, will alert you if upgrades are available. Follow the `Tails
-Upgrade Documentation`_ on how to upgrade the drives.
-
-.. include:: ../../includes/update-gui.txt
-
-.. _`Tails RSS Feed`: https://tails.net/news/index.en.rss
-.. _`Tails
-   Upgrade Documentation`: https://tails.net/doc/upgrade/index.en.html
+The admin should keep all SecureDrop workstations updated.
 
 .. _monitoring_ossec:
 

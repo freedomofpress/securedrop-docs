@@ -65,10 +65,9 @@ be easily intercepted and read while they are traversing the Internet and are al
 encrypted on the server so if any attacker manages to break into the server, they
 would not be able to read past messages.
 
-In addition, the decryption key for SecureDrop submissions sits on an air-gapped
-computer (not connected to the Internet). This air-gapped computer is the only
-place SecureDrop submissions are decrypted and read so that they are much harder
-for an attacker to access.
+In addition, the decryption key for SecureDrop submissions sits in an isolated
+virtual machine inside a hardened operating system that opens submissions in a
+temporary, non-networked environment.
 
 Protects Against Hackers
 ------------------------
@@ -79,12 +78,7 @@ by state sponsored hackers.
 
 Because of this threat, SecureDrop completely segments its traffic from a news
 organization’s normal network. Submissions are accessed and downloaded using the
-Tails operating system, which boots off of a USB, does not touch your computer’s
-hard drive, and routes all its Internet traffic through Tor.
-
-Submissions are decrypted on an air-gapped computer also using Tails. This
-mitigates against the risk that an attacker could send malware through SecureDrop
-in an attempt to infect the news organization’s normal network as well.
+Qubes operating system, with all SecureDrop-related traffic routed through Tor.
 
 The SecureDrop servers also undergo significant system hardening in order to make
 it as difficult as possible for hackers to break in. By doing so, SecureDrop
