@@ -20,8 +20,8 @@ parentheses.
 
 .. _configure_securedrop:
 
-Configure the Installation
---------------------------
+Prepare Configuration Files
+---------------------------
 
 Make sure you have the following information and files ready before
 continuing:
@@ -39,11 +39,33 @@ continuing:
    can add more later)
 -  the username of the system admin
 
-Optionally, you can configure 
-:doc:`daily email notifications <../../journalist/journalist>` of
-submission activity for journalists. These help journalists avoid spending time
-checking the *Journalist Interface* when there are no submissions. For this you
-will need:
+Optional: Enable Journalist Daily Alerts
+-------------------------------------------
+
+When a SecureDrop has little activity and receives only a few
+submissions every other week, checking daily only to find there 
+is nothing is a burden. It is more convenient for journalists to 
+be notified daily via encrypted email about whether
+or not there has been submission activity in the past 24 hours.
+
+If the email shows submissions were received, the journalist can
+connect to the *Journalist Interface* to get them.
+
+.. note::
+
+   For security reasons, the email will be sent every 24 hours, regardless
+   of whether there are new submissions or not. The notification is sent after
+   the daily reboot of the *Application Server*. The subject of the email will
+   always be "Submissions in the past 24h". To find out whether there were
+   submissions or not, a journalist must decrypt the contents of the email.
+
+In the simplest case a journalist will provides their email and GPG public key to
+you, the admin. If a team of journalist wants to receive these daily alerts, they 
+should share a GPG key and ask the admin to setup a mail alias
+(SecureDrop does not provide that service) so they all receive the alerts and
+are able to decrypt them.
+
+If you wish to enable this, you will need:
 
 -  the *Journalist Alert Public Key*
 -  the *Journalist Alert Public Key*  fingerprint
@@ -53,9 +75,9 @@ will need:
           notifications. If there are multiple intended recipients, use an alias
           or mailing list. However, all subscribers must share the GPG private
           key, as it is not possible to specify multiple keys.
-
-.. note:: The journalist notification is sent after the daily reboot
-          of the *Application Server*.
+          
+Configuring the Servers
+-----------------------
 
 Before proceeding, you will need to copy the following files to
 ``~/.config/securedrop-admin``:
