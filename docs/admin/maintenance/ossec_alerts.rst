@@ -78,7 +78,7 @@ In some cases, authentication or transport encryption mechanisms will
 vary and you may require later edits to the Postfix configuration
 (mainly /etc/postfix/main.cf) on the *Monitor Server* in order to get
 alerts to work. You can consult `Postfix's official
-documentation <http://www.postfix.org/documentation.html>`__ for help,
+documentation <https://www.postfix.org/documentation.html>`__ for help,
 although we've described some common scenarios in the
 :ref:`troubleshooting section <troubleshooting_ossec>`.
 

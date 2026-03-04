@@ -164,8 +164,8 @@ rerun the configuration scripts: ::
 
 The webserver configuration will be updated to apply the HTTPS settings.
 Confirm that you can access the Source Interface at
-``https://<onion_url>``, and also that the HTTP URL
-``http://<onion_url>`` redirects automatically to HTTPS.
+``https://<onion_address>.onion``, and also that the HTTP URL
+``http://<onion_address>.onion`` redirects automatically to HTTPS.
 
 .. note:: By default, Tor Browser will send an OCSP request to a Certificate
     Authority (CA) to check if the Source Interface certificate has been revoked.
