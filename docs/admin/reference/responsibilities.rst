@@ -60,7 +60,7 @@ portal.
 In rare circumstances when a technical fix is extremely time sensitive, we may
 provide signed patches to impacted SecureDrop instances. Even in these cases, we
 ask that you never install code provided to you that is not signed using the
-current `SecureDrop release key <http://securedrop.org/securedrop-release-key.asc>`__.
+current `SecureDrop release key <https://securedrop.org/securedrop-release-key.asc>`__.
 
 When in doubt how to resolve an issue, please avoid following technical
 instructions that have not been vetted by the SecureDrop team. If you encounter
