@@ -34,7 +34,7 @@ the *Application Server* and *Monitor Server*.
   `this resource`_ to cover the fundamentals.
 
 .. _`this resource`:
-  http://linuxcommand.org/lc3_learning_the_shell.php
+  https://linuxcommand.org/lc3_learning_the_shell.php
 
 Shutting Down the Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^
