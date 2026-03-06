@@ -21,7 +21,7 @@ If you would like to contribute to SecureDrop, please see our
 Get Started
 ^^^^^^^^^^^
 
-:doc:`I want to learn more about how SecureDrop works. <what_is_securedrop>`
+:doc:`I want to learn more about how SecureDrop works. <introduction/what_is_securedrop>`
 
 :doc:`I have information I want to share, and would like to learn how to do so safely. <source/source>`
 
@@ -33,24 +33,18 @@ Get Started
 
 
 .. toctree::
-   :caption: Overview
-   :name: overviewtoc
+   :caption: Introduction
+   :name: introtoc
    :maxdepth: 2
    :hidden:
 
-   what_is_securedrop
-   introduction
-   workstation_architecture
+   introduction/what_is_securedrop
+   introduction/workstation_architecture
    supported_filetypes
-   what_makes_securedrop_unique
-   glossary
-   threat_model/threat_model.rst
-   threat_model/dataflow.rst
-   threat_model/mitigations.rst
-   getting_support
-   training_schedule
+   introduction/what_makes_securedrop_unique
+   introduction/getting_support
    passphrase_best_practices
-   known_issues
+
 
 .. toctree::
    :caption: Source Guide
@@ -161,7 +155,18 @@ Get Started
    admin/workstation_reference/provisioning_usb
    admin/workstation_reference/removing_gpg_passphrase
    admin/workstation_reference/reviewing_logs
+   
+.. toctree::
+   :caption: Appendices
+   :name: appendicestoc
+   :maxdepth: 2
+   :hidden:
 
+   appendices/glossary
+   appendices/threat_model/threat_model.rst
+   appendices/threat_model/dataflow.rst
+   appendices/threat_model/mitigations.rst
+   appendices/training_schedule
 
 Get Involved
 ^^^^^^^^^^^^

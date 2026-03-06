@@ -42,7 +42,7 @@ received and reviewed:
    export it to a dedicated device.
 
 .. seealso:: Check out
-          :doc:`What makes SecureDrop Unique <what_makes_securedrop_unique>`
+          :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>`
           to read more about SecureDrop's approach to keeping sources safe.
 
 User Roles
@@ -50,15 +50,15 @@ User Roles
 
 There are three main user roles that interact with a SecureDrop instance:
 
-:doc:`Sources <source/source>`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:doc:`Sources </source/source>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A source submits documents and messages by using Tor Browser (or Tails) to access
 the *Source Interface*: a public onion service. Submissions are encrypted
 in place on the *Application Server* as they are uploaded.
 
-:doc:`Journalists <journalist/journalist>`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:doc:`Journalists </journalist/journalist>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Journalists working in the newsroom use a *SecureDrop Workstation* to connect
 to their SecureDrop to communicate with Sources. Journalists
@@ -67,14 +67,14 @@ Apart from those deliberately published, decrypted documents are never
 accessed in an Internet-connected environment.
 
 .. note:: The terms in italics are terms of art specific to SecureDrop. The
-	  :doc:`Glossary <glossary>` provides more-precise
+	  :doc:`Glossary </appendices/glossary>` provides more-precise
           definitions of these and other terms. SecureDrop is designed against
-          a comprehensive :doc:`threat_model/threat_model`, and has a specific
-          notion of the :doc:`roles <glossary>` that are involved in its
+          a comprehensive :doc:`/appendices/threat_model/threat_model`, and has a specific
+          notion of the :doc:`roles </appendices/glossary>` that are involved in its
           operation.
 
-:doc:`Admins <admin/reference/admin>`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:doc:`Admins </admin/reference/admin>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The SecureDrop servers are managed by a systems admin; for larger
 newsrooms, there may be a team of systems admins. The admin
@@ -184,7 +184,7 @@ However, the application does require hardware that news organizations must
 purchase, including two servers, several USB sticks, an air-gapped computer,
 and a firewall.
 
-We have created a :doc:`recommended hardware guide; <admin/installation/hardware>`
+We have created a :doc:`recommended hardware guide; </admin/installation/hardware>`
 following these recommendations wherever possible will minimize incompatibility
 risks. We are aiming to offer a set of recommendations that work for
 organizations at different scales.
@@ -247,7 +247,7 @@ Planning & Preparation
 Setting up SecureDrop is a multi-step process. Before getting started, you
 should make sure that you're prepared to operate and maintain it. You'll need
 a systems admin who's familiar with Linux, the GNU utilities, and the
-Bash shell. You'll need the :doc:`hardware <admin/installation/hardware>` 
+Bash shell. You'll need the :doc:`hardware </admin/installation/hardware>` 
 on which SecureDrop runs — this will normally cost $2000-$3000. The journalists
 in your organization will need to be trained in the operation of SecureDrop,
 and you'll need to publish and promote your new SecureDrop instance afterwards —
@@ -262,7 +262,7 @@ Technical Setup
 ~~~~~~~~~~~~~~~
 
 Once you are familiar with the architecture and have all the hardware,
-:doc:`setting up SecureDrop <admin/installation/install>` will take at
+:doc:`setting up SecureDrop </admin/installation/install>` will take at
 least a day's work for your admin. We recommend that you set aside at least
 a week to :ref:`complete and test <Deployment>` your setup.
 
@@ -271,7 +271,7 @@ Provisioning & Training
 
 Once SecureDrop is installed, journalists will need to be provided with
 accounts, two-factor credentials, workstations, and so on — and then
-:doc:`trained <training_schedule>` to use these tools safely and reliably. You
+:doc:`trained </appendices/training_schedule>` to use these tools safely and reliably. You
 will probably also need to train additional backup admins so that you
 can be sure that your SecureDrop setup keeps running even when your main
 admin is on holiday.
@@ -294,9 +294,9 @@ Foundation <https://securedrop.org/help>`__ are happy to help you check that
 your SecureDrop setup is up-to-code and properly grounded. After that you'll want
 to check out the :ref:`best practices <Landing Page>` for your
 SecureDrop *Landing Page* and our guide to
-:doc:`promoting your SecureDrop instance <admin/deployment/getting_the_most_out_of_securedrop>`.
+:doc:`promoting your SecureDrop instance </admin/deployment/getting_the_most_out_of_securedrop>`.
 
-.. |SecureDrop architecture highlevel overview diagram| image:: ./diagrams/securedrop_overview_highlevel.png
+.. |SecureDrop architecture highlevel overview diagram| image:: /diagrams/securedrop_overview_highlevel.png
   :width: 100%
 
 
