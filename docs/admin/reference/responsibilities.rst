@@ -11,7 +11,7 @@ Responsibilities of SecureDrop administrators
 ---------------------------------------------
 As a SecureDrop administrator, it is your responsibility to:
 
-* :doc:`install SecureDrop <../installation/install>`
+* :doc:`install SecureDrop </admin/installation/install>`
 * :ref:`manage users <manage_users>`
 * :ref:`manage the system configuration <manage_config>`
 * :ref:`ensure that servers, firewall and workstations are kept up-to-date <manage_updates>`
@@ -27,7 +27,7 @@ As a SecureDrop administrator, it is your responsibility to:
   SecureDrop, communicating with sources, and reviewing documents
 * verify the integrity of SecureDrop code
 * avoid the installation of unsupported code or patches
-* :doc:`decommission SecureDrop after it is no longer in use <../maintenance/decommission>`
+* :doc:`decommission SecureDrop after it is no longer in use </admin//maintenance/decommission>`
 
 Responsibilities of the SecureDrop team
 ---------------------------------------
@@ -35,7 +35,7 @@ The SecureDrop team employed by Freedom of the Press Foundation (FPF) and the
 SecureDrop community maintain and develop the SecureDrop software, which
 is offered as open source software, free of charge, and at your own risk.
 
-FPF offers :doc:`paid priority support services <../../getting_support>`. We are
+FPF offers :doc:`paid priority support services </introduction/getting_support>`. We are
 happy to provide assistance with installing the system, with training of
 administrators and journalists, and with investigation of technical issues
 and incidents.
@@ -49,7 +49,7 @@ and incidents.
 When the SecureDrop team becomes aware of a security vulnerability in SecureDrop
 or its software dependencies, we assess the impact of the vulnerability in the
 context of existing security mitigations and 
-:doc:`our threat model <../../threat_model/threat_model>`.
+:doc:`our threat model </appendices/threat_model/threat_model>`.
 Based on this assessment, we prioritize technical work and external communications.
 
 For high severity issues that require technical changes to SecureDrop, we will
@@ -74,7 +74,7 @@ Managing Users
 --------------
 
 Admins are responsible for managing user credentials and encouraging best practices. (See
-:doc:`../installation/passphrases` and :doc:`../../passphrase_best_practices`.)
+:doc:`../installation/passphrases` and :doc:`/admin/installation/passphrase_best_practices`.)
 The admin will also have access to the *Journalist Interface*, via her own username, passphrase,
 and two-factor authentication method (using a smartphone application or YubiKey).
 
@@ -163,7 +163,7 @@ Monitoring OSSEC Alerts
 SecureDrop uses OSSEC to monitor the servers for unusual activity caused by
 system configuration issues or security breaches. The admin should decrypt and
 read all OSSEC alerts. Report any suspicious events to FPF through the `SecureDrop Support Portal`_.
-See the :doc:`OSSEC Guide <../maintenance/ossec_alerts>` for more information on common OSSEC alerts.
+See the :doc:`OSSEC Guide </admin/maintenance/ossec_alerts>` for more information on common OSSEC alerts.
 
 .. warning:: Do not post logs or alerts to public forums without first carefully
          examining and redacting any sensitive information.
@@ -183,7 +183,7 @@ an `RSS feed <https://securedrop.org/news/feed/>`__. You can also follow us on
 our social media accounts (`Twitter <https://twitter.com/securedrop>`__ and
 `Mastodon <https://securedrop.org/news/feed/>`__).
 
-We strongly recommend :doc:`joining the SecureDrop support portal <../../getting_support>`.
+We strongly recommend :doc:`joining the SecureDrop support portal </introduction/getting_support>`.
 As a member of the support portal, you will receive email notifications related
 to all major announcements, and you can open tickets in case of technical issues.
 Membership is free of charge.

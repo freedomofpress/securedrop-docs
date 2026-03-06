@@ -178,7 +178,7 @@ However, the application does require hardware that news organizations must
 purchase, including two servers, several USB sticks, an air-gapped computer,
 and a firewall.
 
-We have created a :doc:`recommended hardware guide; </admin/installation/hardware>`following these recommendations wherever possible will minimize incompatibility risks. We are aiming to offer a set of recommendations that work for organizations at different scales.
+We have created a :doc:`recommended hardware guide; </admin/installation/hardware>` following these recommendations wherever possible will minimize incompatibility risks. We are aiming to offer a set of recommendations that work for organizations at different scales.
 
 **It is critical that the hardware is owned by the media organization and stored
 on its premises in a secure space.**

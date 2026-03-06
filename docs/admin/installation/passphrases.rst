@@ -15,7 +15,7 @@ each role in a SecureDrop installation.
           information, see the :ref:`KeePassXC setup instructions <keepassxc_setup>`.
 
 .. tip:: For best practices on managing passphrases, see
-   :doc:`../../passphrase_best_practices`.
+   :doc:`/admin/installation/passphrase_best_practices`.
 
 Admin
 -----

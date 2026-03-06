@@ -154,7 +154,10 @@ audio, and begin publishing important, high-impact work!
 
 
 Safely Working With Submissions Outside the SecureDrop Workstation
------------------------------------------------------------
+------------------------------------------------------------------
+
+.. _malware_risks:
+
 
 Risks From Malware
 ~~~~~~~~~~~~~~~~~~
@@ -171,7 +174,6 @@ are important steps you can take to protect yourself:
    printing a document may still preserve watermarks, printer codes,
    steganographically encoded data, or other information not visible to the
    naked eye.
-   |br| |br|
 
 3. **Consult with your administrator or your digital security staff before
    copying files digitally.**
@@ -189,7 +191,7 @@ are important steps you can take to protect yourself:
 4. **Never scan QR codes embedded in documents using a network-connected
    device.**
 
-   `QR codes can contain malicious links`_ that your device will automatically
+   QR codes can contain malicious links that your device will automatically
    visit. This can alert third-parties to your actions, reveal the identities
    of your sources, and breach the air gap that is in place with the
    *Secure Viewing Station*. 
@@ -198,7 +200,6 @@ are important steps you can take to protect yourself:
    submission. If you are unsure if a link is safe to click, you should
    consult internally, or contact Freedom of the Press Foundation for
    assistance.
-   |br| |br|
 
 5. **Don't photograph submissions using your smartphone, and be careful with all
    digital photography**.

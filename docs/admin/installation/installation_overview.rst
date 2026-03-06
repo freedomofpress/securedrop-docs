@@ -95,7 +95,7 @@ running the `Tails operating system`_. The *Admin Workstation* may also be used
 as a *Journalist Workstation* if necessary.
 
 Before you begin the installation, you will want to be sure to familiarize
-yourself with the :doc:`glossary <../../glossary>` and the 
+yourself with the :doc:`glossary </appendices/glossary>` and the 
 :doc:`passphrases <passphrases>` involved in SecureDrop's operations.
 You may wish to leave these documents open in other tabs for reference as you
 work.

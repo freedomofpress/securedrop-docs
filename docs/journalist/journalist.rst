@@ -31,4 +31,4 @@ a journalist was speaking with a source, or details that might give
 the source away.
 
 For full details about what makes SecureDrop a unique and useful tool for
-Journalists, :doc:`see here. <../what_makes_securedrop_unique>`
+Journalists, :doc:`see here. </introduction/what_makes_securedrop_unique>`
