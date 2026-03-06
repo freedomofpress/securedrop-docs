@@ -34,14 +34,6 @@ General Best Practices
    reusing passphrases in general, but it is especially important to avoid doing
    so in the context of SecureDrop.
 
-For Sources
------------
-
-Your passphrase is associated with your pseudonymous account and all of your
-activity on the SecureDrop server. In order to preserve your anonymity, you
-should avoid creating physical or digital associations between yourself and your
-passphrase as much as possible.
-
 For Journalists/Admins
 ----------------------
 

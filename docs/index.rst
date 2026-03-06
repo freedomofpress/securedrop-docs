@@ -31,6 +31,10 @@ Get Started
 
 :doc:`I am a journalist and would like information about how to best use this system. <journalist/journalist>`
 
+.. note:: The terms in italics are terms of art specific to SecureDrop. The
+	  :doc:`Glossary </appendices/glossary>` provides more-precise
+          definitions of these and other terms. SecureDrop is designed against
+          a comprehensive :doc:`/appendices/threat_model/threat_model`, and has a specific notion of the :doc:`roles </appendices/glossary>` that are involved in its operation.
 
 .. toctree::
    :caption: Introduction
@@ -39,11 +43,9 @@ Get Started
    :hidden:
 
    introduction/what_is_securedrop
-   introduction/workstation_architecture
    introduction/what_makes_securedrop_unique
+   introduction/securedrop_workstation
    introduction/getting_support
-   passphrase_best_practices
-
 
 .. toctree::
    :caption: Source Guide
@@ -68,14 +70,12 @@ Get Started
    journalist/sources
    journalist/submissions
    journalist/ending_session
-   journalist/faq
    
 .. toctree::
    :caption: Admin Guide: Reference
    :name: adminguidetoc
    :maxdepth: 2
    :hidden:
-
    
    admin/reference/admin
    admin/reference/responsibilities
@@ -96,6 +96,7 @@ Get Started
    :hidden:
 
    admin/installation/installation_overview
+   admin/installation/passphrase_best_practices
    admin/installation/overview
    admin/installation/prepare
    admin/installation/passphrases

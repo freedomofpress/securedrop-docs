@@ -77,8 +77,10 @@ it right away, we recommend writing it down and keeping it in a safe place at
 first, and gradually working to memorize it over time. Once you have memorized
 it, you should destroy the written copy.
 
-.. tip:: For detailed recommendations on best practices for managing your
-   passphrase, check out :doc:`../passphrase_best_practices`.
+Your codename is associated with your pseudonymous account and all of your
+activity on the SecureDrop server. In order to preserve your anonymity, you
+should avoid creating physical or digital associations between yourself and your
+codename as much as possible.
 
 Once you have generated a codename and put it somewhere safe, click
 **Submit Documents**.
