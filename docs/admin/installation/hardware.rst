@@ -7,7 +7,7 @@ Hardware
 This document outlines the required hardware components necessary to
 successfully install and operate a SecureDrop instance, and recommends
 some specific components that we have found to work well. If you have
-any questions, please email securedrop@freedom.press.
+any questions, please :ref:`contact the SecureDrop Support team <getting_support>`.
 
 Hardware Overview
 -----------------
@@ -16,15 +16,14 @@ Hardware Overview
 
 For an installation of SecureDrop, you must acquire:
 
-* 2 computers with memory and hard drives to use as the SecureDrop servers.
-* Mouse, keyboard, monitor (and necessary dongle or adapter) for
+* 2 computers (with storage drives) to use as the SecureDrop servers.
+* A mouse, keyboard, and monitor (along with any necessary dongles or adapters) for
   installing the servers.
-* At least 1 dedicated physical laptop for the *SecureDrop Workstation*
+* At least 1 dedicated physical laptop for the *SecureDrop Workstation*.
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
-* Plenty of USB sticks: one drive for the Ubuntu Server installation media,
-  one for the Qubes OS installation media, and at least one if needed as an
-  *Export Device*.
+* At least 1 USB drive one for the Ubuntu Server and Qubes OS installation media,
+  and at least 1 more USB drive if needed as an *Export Device*.
 
 .. _Optional Hardware:
 
@@ -42,10 +41,6 @@ Additionally, you may want to consider the following purchases:
 * CD-R/DVD-R writers, if you want to use CD-Rs/DVD-Rs as export
   media, and a CD shredder that can destroy media consistent with your threat
   model.
-
-
-In the sections that follow, we provide additional details on most of these
-items.
 
 .. tip::
 
@@ -67,9 +62,7 @@ top of the line hardware for any of the servers or the
 firewall.
 
 Additionally, we recommend against re-purposing Apple Macintosh
-laptops and desktops. Recent Apple computers, which have M-series CPUs, are
-completely unsupported by Qubes OS and will not work. Older computers with Intel
-CPUs may work, but are likely to experience compatibility issues.
+laptops and desktops, due to incompatibility with Qubes OS.
 
 If you choose to use recycled hardware, you should of course
 consider whether or not it is trustworthy; making that
@@ -145,36 +138,13 @@ our support or consent.
 Workstations
 ^^^^^^^^^^^^
 
-In order to install and use SecureDrop Workstation, you will need a Qubes-Compatible computer with the following specifications:
+In order to install and use *SecureDrop Workstation*, you will need a Qubes-compatible computer with the following specifications:
 
 - 64-bit Intel processor with virtualization support
 - a minimum of 32GB RAM
 - sufficient disk space for the Qubes OS base install and SecureDrop Workstation VMs (a 128GB or greater SSD is recommended)
 
 More information on hardware compatibility can be found on the `Qubes OS System Requirements <https://www.qubes-os.org/doc/system-requirements/>`_ page.
-
-
-Printers
-^^^^^^^^
-
-There are several requirements for a printer to be compatible with SecureDrop Workstation. Your printer should:
-
-1. Support **driverless printing** standards
-2. Have a **USB port**
-3. Be offline, or at least have **no WiFi**
-
-These requirements are expanded below.
-
-Driverless
-~~~~~~~~~~
-
-SecureDrop Workstation implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
-
-.. figure:: ../workstation_reference/images/airprint.jpg
-
-.. figure:: ../workstation_reference/images/moipra.jpg
-
-You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
 
 USB
 ~~~
@@ -192,20 +162,6 @@ To maintain the isolation of SecureDrop Workstation, it is essential that your p
 * Select a compatible printer with **no WiFi**. A printer that connects with USB only is best if you can find one, but compatible USB printers lacking *both* Ethernet and WiFi are rare. 
 * In the case of a printer with Ethernet and/or WiFi, **keep the printer offline** and **disabling WiFi** (if present).
 * Use this printer exclusively with SecureDrop Workstation and do not connect it directly to other computers.
-
-
-USB Drive(s)
-^^^^^^^^^^^^
-
-You will also need additional drives for use as *Export Devices*.
-
-We also recommend buying an additional USB drive for making regular backups of
-your *SecureDrop Workstations*.
-
-One thing to consider is that you are going to have *a lot* of USB drives to
-keep track of, so you should consider how you will label or identify them and
-buy drives accordingly. Drives that are physically larger are often easier to
-label (e.g. with tape, printed sticker or a label from a labelmaker).
 
 Two-factor Device
 ^^^^^^^^^^^^^^^^^
@@ -254,6 +210,14 @@ across platforms). We have not evaluated hardware-based encryption options; if
 you do select a hardware solution, make sure that the *Export Device* also works
 on the operating system(s) used by journalists.
 
+We also recommend buying an additional USB drive for making regular backups of
+your *SecureDrop Workstations*.
+
+One thing to consider is that you are going to have *a lot* of USB drives to
+keep track of, so you should consider how you will label or identify them and
+buy drives accordingly. Drives that are physically larger are often easier to
+label (e.g. with tape, printed sticker or a label from a labelmaker).
+
 USB drives with write protection (optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When it is consistently applied and correctly implemented in hardware, write
@@ -290,8 +254,6 @@ Monitor, Keyboard, Mouse
 You will need these to do the initial installation of Ubuntu on the
 *Application* and *Monitor Servers*.
 
-Depending on your setup, you may also need these to work on the *SVS*.
-
 
 Optional Hardware
 -----------------
@@ -299,29 +261,27 @@ Optional Hardware
 This hardware is not *required* to run a SecureDrop instance, but most
 of it is still recommended.
 
-Offline Printer
-^^^^^^^^^^^^^^^
+Printers
+^^^^^^^^
 
-We highly recommend purchasing a printer for your *Secure Viewing Station* and
-using it as the preferred method to make copies of documents received via
-SecureDrop.
+There are several requirements for a printer to be compatible with SecureDrop Workstation. Your printer should:
 
-By printing a submission, even a non-technical user can effectively mitigate
-many of the complex risks associated with malware or hidden metadata embedded in
-files received via SecureDrop. Your organization may also already have robust
-procedures in place for destroying sensitive printed documents.
+1. Support **driverless printing** standards
+2. Have a **USB port**
+3. Be offline, or at least have **no WiFi**
 
-.. important:: To maintain the integrity of the air-gap, this printer should be
-               dedicated to use with the *Secure Viewing Station*, connected via
-               a wired connection, and should not have any wireless communication
-               capabilities.
+These requirements are expanded below.
 
-While printing is notable for what it strips away, it is also important to
-remember what it preserves: QR codes or links that journalists may scan or type
-in; `printer tracking information <https://www.eff.org/issues/printers>`__
-included in a scanned document; other visually encoded information. See the
-:ref:`malware_risks` section in the Journalist Guide for further guidance on
-this subject.
+Driverless
+~~~~~~~~~~
+
+*SecureDrop Workstation* implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
+
+.. figure:: ../workstation_reference/images/airprint.jpg
+
+.. figure:: ../workstation_reference/images/moipra.jpg
+
+You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
 
 Backup Storage
 ^^^^^^^^^^^^^^
@@ -330,37 +290,6 @@ It's useful to run periodic backups of the servers in case of failure. We
 recommend buying an external hard drive to store server backups.
 
 .. include:: ../../includes/encrypting-drives.txt
-
-Labeling Equipment
-^^^^^^^^^^^^^^^^^^
-
-As you have probably noticed by now, a SecureDrop installation has a plethora of
-components. We recommend buying some labeling equipment up front so you can label each component as you
-provision it during the installation process.
-
-There is a multitude of options for labeling equipment. We've had good results
-with small portable labelmakers, such as the `Brother P-Touch PT-210`_ or the
-`Epson LabelWorks LW-300`_. We like them because they produce crisp,
-easy-to-read labels, and it's easy to customize the size of the label's text,
-which is great for clearly labeling both large components (like computers) and
-small components (like USB sticks).
-
-.. _`Brother P-Touch PT-210`: https://www.amazon.com/Brother-PTD210-with-TZe2312PK-Tape/dp/B01BTMEKRQ
-.. _`Epson LabelWorks LW-300`: https://www.amazon.com/Epson-LabelWorks-LW-300-Label-C51CB69010/dp/B005J7Y6HW
-
-If you do not have a label maker available but have an inkjet printer available to you, it may
-also be possible to print and cut out labels using adhesive-backed paper and some scissors. These are some labels designed by our team which may be used for labeling:
-
--  :download:`Admin Workstation Label <./../../images/labels/admin_workstation.png>`
--  :download:`Journalist Workstation Label <../../images/labels/journalist_workstation.png>`
--  :download:`Secure Viewing Station Label <../../images/labels/secure_viewing_station_offline_warning.png>`
--  :download:`Firewall Label <../../images/labels/firewall.png>`
--  :download:`Application Server Label <../../images/labels/app_server.png>`
--  :download:`Monitor Server Label <../../images/labels/mon_server.png>`
--  :download:`Admin TAILS USB Drive Label <../../images/labels/usb_admin.png>`
--  :download:`Journalist TAILS USB Drive Label <../../images/labels/usb_journalist.png>`
--  :download:`Secure Viewing Station TAILS USB Drive Label <../../images/labels/usb_svs.png>`
--  :download:`File Transfer USB Drive Label <../../images/labels/usb_file_transfer.png>`
 
 .. _SecureBoot:
 
@@ -374,7 +303,7 @@ you can be sure that the OS itself has not been corrupted or tampered with,
 at least at the boot level.
 
 While preparing your hardware for a SecureDrop installation, you will want to
-make sure SecureBoot is enabled for the Workstations, and disabled for
+make sure SecureBoot is disabled for *SecureDrop Workstations* as well as
 the Servers.
 
 For instructions on how to enable or disable the SecureBoot feature for your
@@ -384,17 +313,8 @@ differ for each make and model.
 SecureBoot for Workstations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The **SecureDrop Workstation** should have SecureBoot enabled.
-
-Some systems, including recent ThinkPads, require you to specifically enable
-the Third-Party UEFI Certificate Authority within the SecureBoot settings to
-boot to Tails. If your system has SecureBoot enabled but is not booting to the
-device you select in the boot menu, go to the BIOS settings and look for the
-Third-Party CA Option.
-
-On ThinkPads, this can be found within the BIOS by going to
-**Security ▸ SecureBoot ▸ Allow Microsoft 3rd Party UEFI CA**, and setting
-the switch to the on position.
+SecureBoot is not fully supported by Qubes OS, and should therefore be
+disabled prior to installation.
 
 
 SecureBoot for Servers
@@ -628,32 +548,7 @@ startup and adjust the system configuration:
 We previously recommended the NUC10i5FNH, however it is now end-of-life so we
 recommend replacing it with a version that the manufacturer supports. While SecureDrop
 will most likely continue working in the short-term, we will no longer be testing on
-this hardware. The instructions below are included only for reference and will
-be removed in the near future.
-
-The NUC10's AX201 wireless hardware is not removable. Before installation of the
-RAM and storage, we recommend that you disconnect the wireless antennae leads
-from the AX201 component. They're the black and gray wires highlighted in
-the red box in the picture. Cover the free ends with electrical tape
-after disconnecting them.
-
-|NUC10 leads|
-
-Before the initial OS installation, boot into the BIOS by pressing **F2** at
-startup and adjust the system configuration:
-
-- Under **Advanced ▸ Onboard Devices**, disable all onboard devices
-  other than LAN: HD audio, microphone, Thunderbolt, WLAN, Bluetooth,
-  SD card controller, and enhanced consumer infrared.
-
-- Under **Security ▸ Security Features**, disable SGX support, which is not used
-  by SecureDrop and may be targeted by active CPU exploits.
-
-- Under **Boot ▸ Secure Boot**, uncheck the **Secure Boot** checkbox.
-
-.. |NUC10 leads| image:: ../../images/hardware/nuc10_leads.jpg
-
-.. _nuc8_recommendation:
+this hardware.
 
 8th-gen NUC
 ~~~~~~~~~~~~
@@ -713,11 +608,7 @@ Hardware             End-of-Life (EOL)
 ASUS NUC14RVH        Not yet confirmed
 ASUS NUC13ANHi5      Not yet confirmed
 Intel NUC12WSKi5     April 05, 2026
-Intel NUC11PAHi3     September 30, 2026                                       
-Intel NUC10i5FNH     June 25, 2024                                       
-Intel NUC8i5BEK      March 26, 2024                                      
-Intel NUC7i5BNH      April 30, 2023                                      
-Thinkpad T420 (SVS)  Already EOL; use only for airgapped SVS                 
+Intel NUC11PAHi3     September 30, 2026                                                                                      
 Thinkpad T Series    EOL dates vary; consult with manufacturer           
 TekLager APU4D4      Not yet confirmed
 Netgate SG-4100      Not yet confirmed (will be 2 years after sales stop)
