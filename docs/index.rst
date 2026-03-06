@@ -40,7 +40,6 @@ Get Started
 
    introduction/what_is_securedrop
    introduction/workstation_architecture
-   supported_filetypes
    introduction/what_makes_securedrop_unique
    introduction/getting_support
    passphrase_best_practices
@@ -70,7 +69,6 @@ Get Started
    journalist/submissions
    journalist/ending_session
    journalist/faq
-   journalist/documents
    
 .. toctree::
    :caption: Admin Guide: Reference
@@ -155,7 +153,7 @@ Get Started
    admin/workstation_reference/provisioning_usb
    admin/workstation_reference/removing_gpg_passphrase
    admin/workstation_reference/reviewing_logs
-   
+
 .. toctree::
    :caption: Appendices
    :name: appendicestoc
