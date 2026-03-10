@@ -1,3 +1,6 @@
+Troublshooting Qubes issues during installation
+===============================================
+
 "Unable to reset PCI device"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
