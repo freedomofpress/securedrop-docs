@@ -54,7 +54,7 @@ To revoke this configuration change later or correct a typo, you can use the ``d
    qvm-tags vault del sd-send-app-clipboard
    
 Troubleshooting ``sdw-admin``
-=============================
+-----------------------------
 
 "Failed to return clean data"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -74,7 +74,7 @@ Minimum security requirements for the SecureDrop environment
 -  Journalists should ensure that while using the *SecureDrop Workstation* they are in an area without video cameras.
 -  An established monitoring plan and incident response plan. Who will receive the OSSEC alerts and what will their response plan be? These should cover technical outages and a compromised environment plan.
 
-Passphrases and best practices
+Passphrases Overview
 ------------------------------
 
 Each individual with a role (admin or journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation. 

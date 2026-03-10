@@ -82,12 +82,7 @@ Get Started
    admin/reference/admin_interface
    admin/reference/ssh_access
    admin/workstation_reference/securing_workstation
-   admin/workstation_reference/troubleshooting_connection
-   admin/workstation_reference/troubleshooting_updates
-   admin/reference/faq
-   admin/workstation_reference/managing_clipboard
 
-   
 .. toctree::
    :caption: Admin Guide: Installation
    :name: installtoc
@@ -143,6 +138,9 @@ Get Started
    admin/deployment/ssh_over_local_net
    admin/deployment/offboarding
    admin/deployment/ossec_alerts
+   admin/workstation_reference/troubleshooting_connection
+   admin/workstation_reference/troubleshooting_updates
+   admin/workstation_reference/managing_clipboard
 
 .. toctree::
    :caption: Admin Guide: Maintenance

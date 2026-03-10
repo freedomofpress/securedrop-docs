@@ -1,9 +1,7 @@
-Install SecureDrop
-==================
+Install SecureDrop on the servers
+=================================
 
 Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` VM on the Primary SecureDrop Workstation you prepared earlier. 
-
-For this step, the Primary SecureDrop Workstation must have a network connection to the servers as configured 
 
 .. _test_connectivity:
 

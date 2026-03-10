@@ -10,7 +10,7 @@ SSH to Both Servers Over Tor
 Assuming you haven't disabled SSH over Tor, SSH access will be
 restricted to the Tor network.
 
-On the *Admin Workstation*, you should be able to SSH to the *Application Server* and the *Monitor Server*. ::
+On the Primary SecureDrop Workstation, you should be able to SSH to the *Application Server* and the *Monitor Server* from the ``sd_admin`` VM ::
 
    ssh app
    ssh mon
@@ -23,7 +23,7 @@ try using the verbose command format to troubleshoot: ::
    ssh <username>@<mon .onion>
 
 .. tip:: Check the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files
-         in the ``~/.config/securedrop-admin`` directory to find the ssh onion
+         in the ``~/.config/securedrop-admin`` directory in the ``sd_admin`` VM to find the ssh onion
          service addresses. The files contain one line with 4 colon-delimited
          fields. The address is the first 56-character field, just add a
          ``.onion`` at the end.
@@ -32,7 +32,7 @@ Log in to Both Servers via TTY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All access to the SecureDrop servers should be performed over SSH from the
-*Admin Workstation*. To aid in troubleshooting, login via a physical keyboard
+Primacy SecureDrop Workstation. To aid in troubleshooting, login via a physical keyboard
 attached to the server is also supported.
 
 Sanity-Check the Installation
