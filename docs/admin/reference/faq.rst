@@ -40,17 +40,6 @@ into your servers, you should first perform the following troubleshooting steps:
    "This agent has no identities." then you need to add the key via ``ssh-add``
    prior to SSHing into the servers.
 
-
-I got a unusual error when running ``securedrop-admin install``. What do I do?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If the error message is not informative, try running it again. The Tor
-connection can be flaky and can cause apparent errors, but there is no negative
-impact of re-rerunning ``securedrop-admin install`` more than once. The
-command will simply check which tasks have been completed, and pick up where it
-left off. However, if the same issue persists, you will need to investigate
-further.
-
 .. |Reset Passphrase| image:: ../../images/manual/screenshots/journalist-edit_account_user.png
    :alt: The account editing form allows admins to change name, reset passphrase, and reset two-factor authentication.
 .. |Test Alert| image:: ../../images/manual/screenshots/journalist-admin_ossec_alert_button.png

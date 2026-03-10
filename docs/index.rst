@@ -81,7 +81,6 @@ Get Started
    admin/reference/responsibilities
    admin/reference/admin_interface
    admin/reference/ssh_access
-   admin/reference/securedrop_admin
    admin/workstation_reference/securing_workstation
    admin/workstation_reference/troubleshooting_connection
    admin/workstation_reference/troubleshooting_updates
@@ -95,26 +94,36 @@ Get Started
    :maxdepth: 2
    :hidden:
 
+   admin/installation/intro_for_admins
    admin/installation/installation_overview
-   admin/installation/passphrase_best_practices
-   admin/installation/overview
-   admin/installation/prepare
-   admin/installation/passphrases
    admin/installation/hardware
-   admin/installation/minimum_security_requirements
-   admin/installation/create_usb_boot_drives
-   admin/installation/set_up_transfer_and_export_device
-   admin/installation/generate_submission_key
+   admin/workstation_reference/hardware
+   admin/installation/email_alerts
+   admin/installation/prepare_sdw
    admin/installation/set_up_keepassxc
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
    admin/installation/firewall_opnsense
-   admin/installation/servers
+   admin/installation/prepare_servers
    admin/installation/install
+   admin/installation/apply_sdw
    admin/installation/create_admin_account
    admin/installation/test_the_installation
-   admin/installation/install_sdw
-   admin/installation/troubleshoot
+   admin/workstation_reference/provisioning_usb
+   admin/installation/set_up_transfer_and_export_device
+   admin/installation/troubleshoot_qubes
+   admin/installation/troubleshoot_ossec
+
+.. toctree::
+   :caption: Admin Guide: Migration
+   :name: migrationguide
+   :maxdepth: 2
+   :hidden:
+
+   admin/migration/migration_overview
+   admin/migration/admin_migration
+   admin/migration/journalist_migration
+   admin/migration/removing_gpg_passphrase
 
 .. toctree::
    :caption: Admin Guide: Deployment
@@ -133,6 +142,7 @@ Get Started
    admin/deployment/https_source_interface
    admin/deployment/ssh_over_local_net
    admin/deployment/offboarding
+   admin/deployment/ossec_alerts
 
 .. toctree::
    :caption: Admin Guide: Maintenance
@@ -142,7 +152,6 @@ Get Started
 
    admin/maintenance/upgrade_guide
    admin/maintenance/logging
-   admin/maintenance/ossec_alerts
    admin/maintenance/backup_and_restore
    admin/maintenance/rebuild_admin
    admin/maintenance/updates_over_tor
@@ -152,7 +161,6 @@ Get Started
    admin/workstation_reference/backup
    admin/workstation_reference/bios_update
    admin/workstation_reference/provisioning_usb
-   admin/workstation_reference/removing_gpg_passphrase
    admin/workstation_reference/reviewing_logs
 
 .. toctree::

@@ -6,7 +6,7 @@
 
           If you see the error message "timeout (62s) waiting for privilege
           escalation prompt", try deleting the Ansible control path directory on
-          your *Admin Workstation* (``rm -rf ~/.ansible/cp``) to reset the
+          your Primary SecureDrop Workstation (``rm -rf ~/.ansible/cp``) to reset the
           connection to the servers, then re-run the
           ``securedrop-admin install``.
 

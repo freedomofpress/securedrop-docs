@@ -139,4 +139,4 @@ authentication codes. We recommend using one of:
 -  FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ or `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__ installed
 -  A `YubiKey <https://www.yubico.com/products/>`__
 
-.. include:: includes/otp-app.txt
+.. include:: /includes/otp-app.txt

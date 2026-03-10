@@ -1,5 +1,32 @@
+Prepare Primary SecureDrop Workstation
+======================================
+
+Overview
+--------
+
+TODO explanation of Primary SecureDrop Workstation
+
+SecureDrop Workstation must be installed on a system running Qubes OS. The installation and configuration process should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
+
+Prerequisites
+-------------
+In order to install SecureDrop Workstation and configure it to use an existing SecureDrop instance, you will need the following:
+
+- A Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations. 
+- Qubes installation medium - this guide assumes the use of a USB 3.0 stick. Qubes may also be installed via optical media, which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_.
+
+  .. note:: A USB stick with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings detailed below are applied.
+
+- A working computer (Linux is recommended and assumed in this guide) to use for verification and creation of the Qubes installation medium.
+
+  .. note:: A Tails USB can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB stick to transfer it to Tails for verification and creation of the installation medium.
+
+- A password manager or other system to generate and store strong passphrases for Qubes full disk encryption (FDE) and user accounts.
+
+A basic knowledge of the Qubes OS is helpful.
+
 Pre-install Tasks
-=================
+-----------------
 
 Apply BIOS updates and check settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -195,3 +222,35 @@ After logging in again, confirm that the network manager successfully connects y
   :alt: Qubes Application menu
 .. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
   :alt: System Tools 
+
+Installing SecureDrop Workstation
+---------------------------------
+
+.. _download_rpm:
+
+Download SecureDrop Workstation Packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, you must configure the Qubes-Contrib repo, then download the SecureDrop Workstation packages.
+
+- Make sure that network connection is enabled using the network manager widget in the upper right panel.
+
+- Next, in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**):
+
+  .. code-block:: sh
+
+    sudo qubes-dom0-update -y qubes-repo-contrib
+    sudo qubes-dom0-update --clean -y securedrop-workstation-keyring
+
+- The SecureDrop Relase keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then:
+
+  .. code-block:: sh
+
+    sudo qubes-dom0-update --clean -y securedrop-workstation-dom0-config
+    sudo dnf -y remove qubes-repo-contrib
+
+Install `securedrop-admin` Tooling
+----------------------------------
+
+Generate Submission Private Key
+-------------------------------

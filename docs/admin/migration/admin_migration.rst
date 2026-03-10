@@ -1,34 +1,43 @@
-Installing SecureDrop Workstation
-=================================
+Migrating from a Tails-Based SecureDrop
+=======================================
 
-.. _download_rpm:
+Pre-install tasks:
+~~~~~~~~~~~~~~~~~~
 
-Download SecureDrop Workstation Packages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. Apply BIOS updates and check settings
+#. Download and verify Qubes OS
+#. Install Qubes OS
+#. (Hardware-dependent) Apply USB fixes
+#. Apply updates to system templates
 
-First, you must configure the Qubes-Contrib repo, then download the SecureDrop Workstation packages.
+Install tasks:
+~~~~~~~~~~~~~~
 
-- Make sure that network connection is enabled using the network manager widget in the upper right panel.
+#. Copy the submission key
+#. Copy *Journalist Interface* details
+#. Copy SecureDrop login credentials
+#. Download and install SecureDrop Workstation
+#. Configure SecureDrop Workstation
+#. Test the Workstation
 
-- Next, in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**):
+.. include:: /admin/installation/prepare_sdw.rst
 
-  .. code-block:: sh
+Import KeePassXC database
+=========================
 
-    sudo qubes-dom0-update -y qubes-repo-contrib
-    sudo qubes-dom0-update --clean -y securedrop-workstation-keyring
+If you have a KeePassXC database on your Tails-based *Admin Workstation*, you should copy it to the ``vault`` VM on the Primary SecureDrop Workstation.
 
-- The SecureDrop Relase keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then:
+TODO: step by step KeePass transfer via Encypted USB drive?
 
-  .. code-block:: sh
+Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` VM.  
 
-    sudo qubes-dom0-update --clean -y securedrop-workstation-dom0-config
-    sudo dnf -y remove qubes-repo-contrib
+.. include:: /includes/keepassxc.txt
 
 
 Configure SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now you can proceed with configuring the SecureDrop Workstation with the correct *Journalist Interface* details and submission private key.
+Now that your Primary SecureDrop Workstation is prepared, you can proceed with importing the correct *Journalist Interface* details and submission private key from your Tails-based *Secure Viewing Station* and *Journalist Workstation* USB drives.
 
 Import Submission Private Key
 -----------------------------
@@ -68,7 +77,7 @@ To protect this key and preserve the air gap, you will need to connect the SVS U
 
 - Once the submission key import is complete, in the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the SVS USB.
 
-- If you were prompted for a passphrase during import, you will now need to remove the passphrase on ``sd-journalist.sec``. See :doc:`/admin/workstation_reference/removing_gpg_passphrase`.
+- If you were prompted for a passphrase during import, you will now need to remove the passphrase on ``sd-journalist.sec``. See :doc:`/admin/migration/removing_gpg_passphrase`.
 
 .. _copy_journalist:
 
@@ -154,62 +163,6 @@ The preflight updater will start automatically after logging into the system. Pl
 
 Once the update check is complete, the SecureDrop Client will launch. Log in using an existing journalist account and verify that sources are listed and submissions can be downloaded, decrypted, and viewed.
 
-(Optional) Enable the SecureDrop App
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-By default, you will receive the SecureDrop Client, our original tool for journalists to access the sources,
-messages, and attachments within SecureDrop. Our newest tool, `the SecureDrop App  <https://github.com/freedomofpress/securedrop-client/tree/main/app#readme>`_, can be enabled manually during the initial roll-out period. After this period is complete, the SecureDrop App will become the new default.
-
-If you would like to switch to the SecureDrop App immediately, you can follow these steps:
-
-1. Ensure your system is completely up-to-date using the preflight updater.
-
-2. In a ``dom0`` terminal, edit the ``config.json`` file by running:
-
-  .. code-block:: sh
-
-    nano /usr/share/securedrop-workstation-dom0-config/config.json
-    
-  You will need to add a line that reads ``"app": true,``. Your final config 
-  should look similar to the example below:
-    
-  .. code-block:: sh
-  
-    {
-      "app": true,
-      "submission_key_fpr": "65A1B5FF195B56353CC63DFFCC40EF1228271441",
-      "hidserv": {
-        "hostname": "sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion",
-        "key": "5U4JPYSZ34N2ZDSOUAL2YLEX2NPI5BLL2Y66QJW24KLSH7R3FEPQ"
-      },
-      "environment": "prod",
-      "vmsizes": {
-        "sd_app": 10,
-        "sd_log": 5
-      }
-    }
-    
-  .. hint::
-
-    Be sure to include the ``,`` at the end of the line containing ``"app": true,``
-
-3. Apply the changes by running:
-
-  .. code-block:: sh
-
-    sdw-admin --apply
-    
-4. When prompted, reboot your SecureDrop Workstation.
-
-After logging in again, you should now be able to click the SecureDrop icon on the Desktop to launch the
-SecureDrop App.
-
-If you encounter an issue or would like to use the original SecureDrop Client,
-you can access it for a limited time via |qubes_menu| **▸** |qubes_menu_gear| 
-**▸ Other ▸ SecureDrop Client (legacy)**.
-
-.. _Password Management Section:
-
 Enable password copy and paste
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you use KeePassXC in the ``vault`` VM to manage login credentials, you can enable the user to copy passwords to the SecureDrop App using inter-VM copy and paste. While this is relatively safe, we recommend reviewing the section :doc:`Managing Clipboard Access <../workstation_reference/managing_clipboard>` of this guide, which goes into further detail on the security considerations for inter-VM copy and paste.
@@ -232,11 +185,122 @@ To revoke this configuration change later or correct a typo, you can use the ``d
 
    qvm-tags vault del sd-send-app-clipboard
    
-.. |Attach TailsData| image:: images/attach_usb.png
+.. |Attach TailsData| image:: /admin/installation/images/attach_usb.png
   :width: 100%
-.. |Unlock Tailsdata| image:: images/unlock_tails_usb.png
+.. |Unlock Tailsdata| image:: /admin/installation/images/unlock_tails_usb.png
   :width: 100%
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 
+
+
+Error configuring SecureDrop Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Failed to import Submission Private Key
+---------------------------------------
+
+If importing the submission key  using ``sdw-admin --configure`` fails, you can also copy the submission key manually.
+
+- Open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**. Once the terminal window opens, run the following command to list the SVS submission key details, including its fingerprint:
+
+  .. code-block:: sh
+
+    qvm-run --pass-io vault \
+      "gpg --homedir /run/media/user/TailsData/gnupg -K --fingerprint"
+
+- Next, run the comand:
+
+  .. code-block:: sh
+
+    qvm-run --pass-io vault \
+      "gpg --homedir /run/media/user/TailsData/gnupg --export-secret-keys --armor <SVSFingerprint>" \
+      > /tmp/sd-journalist.sec
+
+  where ``<SVSFingerprint>`` is the submission key fingerprint, typed as a single unit without whitespace. This will copy the submission key in ASCII format to a temporary file in dom0, ``/tmp/sd-journalist.sec``.
+
+- Verify the that the file starts with ``-----BEGIN PGP PRIVATE KEY BLOCK-----`` using the command:
+
+  .. code-block:: sh
+
+    head -n 1 /tmp/sd-journalist.sec
+
+- Unmount the SVS USB 
+
+- Run the following command in the ``dom0`` terminal:
+
+  .. code-block:: sh
+
+    sudo cp /tmp/sd-journalist.sec /usr/share/securedrop-workstation-dom0-config/
+
+- You can run ``sdw-admin --configure`` to now import the *Journalist Interface* details and complete configuration. 
+
+  Alternatively, follow the steps below to do so manually. Once both Submission Key and *Journalist Interface* details are imported, proceed with :ref:`configuring the workstation<manual_configure>`.
+
+.. _manual_copy_journalist: 
+
+Failed to import *Journalist Interface* details
+-----------------------------------------------
+
+If importing the *Journalist Interface* details using ``sdw-admin --configure`` fails, you can copy the configuration file to ``dom0`` manually.
+
+- If your *Journalist Interface* is based on SecureDrop 2.13.0 or later, use the following command:
+
+  .. code-block:: sh
+
+    qvm-run --pass-io vault \
+      "cat /run/media/user/TailsData/securedrop-admin/app-journalist.auth_private" \
+      > /tmp/journalist.txt
+
+- If your *Journalist Interface* is based on SecureDrop 2.12.10 or earlier, use the following command:
+
+  .. code-block:: sh
+
+    qvm-run --pass-io vault \
+            "cat /run/media/user/TailsData/Persistent/securedrop/install_files/ansible-base/app-journalist.auth_private" \
+      > /tmp/journalist.txt
+
+- Verify that the ``/tmp/journalist.txt`` file on ``dom0`` contains valid configuration information using the command ``cat /tmp/journalist.txt`` in the ``dom0`` terminal.
+
+- Proceed with :ref:`configuring the workstation<manual_configure>`
+
+
+If you encounter a validation error due to a password-protected GPG key, see :doc:`/admin/migration/removing_gpg_passphrase`.
+
+.. _manual_configure:
+
+Once the *Journalist Interface* details and submission key have been copied to ``dom0``, you can create the configuration for the SecureDrop Workstation.
+
+- Your submission key has a unique fingerprint required for the configuration. Obtain the fingerprint by using this command:
+
+  .. code-block:: sh
+
+    gpg --with-colons --import-options import-show --dry-run --import /tmp/sd-journalist.sec
+
+  The fingerprint will be on a line that starts with ``fpr``. For example, if the output included the line ``fpr:::::::::65A1B5FF195B56353CC63DFFCC40EF1228271441:``, the fingerprint would be the character sequence ``65A1B5FF195B56353CC63DFFCC40EF1228271441``.
+
+- Next, create the SecureDrop Workstation configuration file:
+
+  .. code-block:: sh
+
+    cd /usr/share/securedrop-workstation-dom0-config
+    sudo cp config.json.example config.json
+
+- The ``config.json`` file must be updated with the correct values for your instance. Open it with root privileges in a text editor such as ``vi`` or ``nano`` and update the following fields' values:
+
+  - **submission_key_fpr**: use the value of the submission key fingerprint as displayed above
+  - **hidserv.hostname**: use the hostname of the *Journalist Interface*, including the ``.onion`` TLD
+  - **hidserv.key**: use the private v3 onion service authorization key value
+  - **environment**: use the value ``prod``
+
+.. note::
+
+   You can find the values for the **hidserv.*** fields in the ``/tmp/journalist.txt`` file that you created in ``dom0`` earlier.
+   The file will be formatted as follows:
+
+   .. code-block:: none
+
+     ONIONADDRESS:descriptor:x25519:AUTHTOKEN
+
+- Verify that the configuration is valid using the command below in the ``dom0`` terminal:
+
+  .. code-block:: sh
+
+    sdw-admin --validate
