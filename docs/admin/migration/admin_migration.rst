@@ -26,11 +26,18 @@ Install tasks:
 
 .. include:: /admin/installation/prepare_sdw.rst
   :start-after: .. _securedrop_workstation_preinstall_tasks:
-  :end-before: .. _securedrop_workstation_install:
+  :end-before: .. _apply_dom0_updates:
 
+.. include:: /admin/installation/prepare_sdw.rst
+  :start-after: .. _apply_dom0_updates:
+  :end-before: .. _securedrop_workstation_install:
 
 .. include:: /admin/installation/prepare_sdw.rst
   :start-after: .. _securedrop_workstation_install:
+  :end-before: .. _download_rpm:
+
+.. include:: /admin/installation/prepare_sdw.rst
+  :start-after: .. _download_rpm:
   :end-before: .. _securedrop_workstation_install_securedrop-admin:
 
 Import KeePassXC database

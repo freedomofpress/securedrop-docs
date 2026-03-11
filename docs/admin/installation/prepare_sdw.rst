@@ -198,6 +198,8 @@ Now, insert a safe USB device you intend to use with the SecureDrop Workstation.
 
 While we recommend against the use of a USB keyboard for security reasons, this error can also occur in combination with other USB devices on some hardware.
 
+.. _apply_dom0_updates:
+
 Apply ``dom0`` updates (estimated wait time: 15-30 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -230,6 +232,8 @@ After logging in again, confirm that the network manager successfully connects y
 
 Installing SecureDrop Workstation
 ---------------------------------
+
+.. _download_rpm:
 
 Download SecureDrop Workstation Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

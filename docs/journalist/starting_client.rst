@@ -46,7 +46,7 @@ Troubleshooting tips
 ~~~~~~~~~~~~~~~~~~~~
 If you have trouble running the updater or logging in, please contact your
 administrator. Our :doc:`network troubleshooting guide 
-<../admin/workstation_reference/troubleshooting_connection>`
+<../admin/maintenance/troubleshooting_connection>`
 for administrators gives detailed steps for investigating connectivity issues.
 
 Seen and unseen submissions

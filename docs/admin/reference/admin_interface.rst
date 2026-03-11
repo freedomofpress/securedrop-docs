@@ -214,7 +214,7 @@ OSSEC alert by clicking **Send Test OSSEC Alert**.
 
 You should receive an OSSEC alert email at the address specified during the
 installation of SecureDrop. The email may take several minutes to arrive. If
-you don't receive it, refer to the :doc:`OSSEC Guide</admin/installation/troubleshooting_ossec>`
+you don't receive it, refer to the :doc:`OSSEC Guide</admin/installation/troubleshoot_ossec>`
 for information on troubleshooting steps.
 
 
