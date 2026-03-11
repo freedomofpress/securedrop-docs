@@ -38,5 +38,3 @@ the template are:
   accidentally overwrites an entry.
 
 As you proceed with the installation, enter the credentials you create in this database as you go.
-
-.. |KeePassXC| image:: ../../images/keepassxc.png

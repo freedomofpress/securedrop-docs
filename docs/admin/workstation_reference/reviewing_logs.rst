@@ -11,7 +11,7 @@ Please note that while the logs do not include original filenames or message con
 
 For this reason, the ``sd-log`` VM is networkless, and you cannot copy files from ``sd-log`` to other VMs by default.
 
-If you want to selectively enable copying logs to a single VM, you can use tags, similar to the method used for :doc:`managing clipboard access <managing_clipboard>`. You can add and remove the permission just before each copying operation; the change will take effect immediately.
+If you want to selectively enable copying logs to a single VM, you can use tags, similar to the method used for :doc:`managing clipboard access </admin/workstation_reference/managing_clipboard>`. You can add and remove the permission just before each copying operation; the change will take effect immediately.
 
 .. important::
 

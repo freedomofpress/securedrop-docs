@@ -47,7 +47,7 @@ On each server:
    should output *approximately* 50 lines.
 #. You should have received an email alert from OSSEC when it first
    started. If not, review our :doc:`OSSEC Alerts
-   Guide <../maintenance/ossec_alerts>`.
+   Guide </admin/reference/ossec_alerts>`.
 
 On the *Application Server*:
 

@@ -1,8 +1,10 @@
-Troublshooting Qubes issues during installation
+Troubleshooting Qubes issues during installation
 ===============================================
 
+.. _reset_pci:
+
 "Unable to reset PCI device"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 On some hardware, network devices (Ethernet and Wi-Fi) will not immediately work out of the box and require a one-time manual configuration on install. After Qubes starts for the first time, ``sys-net`` will fail to start:
 
@@ -40,7 +42,7 @@ For both device IDs (e.g. ``dom0:00_1f.6`` and ``dom0:00_14.3``), you will need 
 .. |screenshot_sys_net_pci_reset| image:: ../../images/screenshot_sys_net_pci_reset.png
 
 Full system freezes
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 A `known issue <https://github.com/QubesOS/qubes-issues/issues/8825>`_ with some hardware results in Qubes fully freezing.
 If you encounter this issue, you will need to forcibly restart your computer, usually by holding down the power button.

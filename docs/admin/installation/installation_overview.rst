@@ -57,6 +57,7 @@ A summary of the major steps is as follow:
 #. Prepare the (*Application* and *Monitor*) servers.
 #. Install SecureDrop on the servers from the primary *SecureDrop Workstation*.
 #. Complete local configuration of the primary *SecureDrop Workstation*.
+#. Create the first Admin user.
 #. Test the installation.
 
 Optionally:

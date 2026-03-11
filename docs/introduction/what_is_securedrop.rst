@@ -64,8 +64,8 @@ download `GPG <https://www.gnupg.org/>`__-encrypted submissions.
 Apart from those deliberately published, decrypted documents are never
 accessed in an Internet-connected environment.
 
-:doc:`Admins </admin/reference/admin>`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:doc:`Admins </admin/installation/intro_for_admins>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The SecureDrop servers are managed by a systems admin; for larger
 newsrooms, there may be a team of systems admins. The admin

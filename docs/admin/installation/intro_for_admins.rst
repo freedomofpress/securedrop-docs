@@ -92,7 +92,7 @@ Managing Users
 --------------
 
 Admins are responsible for managing user credentials and encouraging best practices. (See
-:doc:`../installation/passphrases` and :doc:`/admin/installation/passphrase_best_practices`.)
+:ref:`Passphrase Best Practices<passphrase_best_practices>`.)
 The admin will also have access to the *Journalist Interface*, via her own username, passphrase,
 and two-factor authentication method (using a smartphone application or YubiKey).
 
@@ -160,7 +160,7 @@ The admin should keep all SecureDrop Workstations updated.
 Monitoring OSSEC Alerts
 -----------------------
 
-SecureDrop uses OSSEC to monitor the servers for unusual activity caused by system configuration issues or security breaches. The admin should decrypt and read all OSSEC alerts. Report any suspicious events to FPF through the `SecureDrop Support Portal`_. See the :doc:`OSSEC Guide </admin/maintenance/ossec_alerts>` for more information on common OSSEC alerts.
+SecureDrop uses OSSEC to monitor the servers for unusual activity caused by system configuration issues or security breaches. The admin should decrypt and read all OSSEC alerts. Report any suspicious events to FPF through the `SecureDrop Support Portal`_. See the :doc:`OSSEC Guide </admin/reference/ossec_alerts>` for more information on common OSSEC alerts.
 
 .. warning:: Do not post logs or alerts to public forums without first carefully
          examining and redacting any sensitive information.

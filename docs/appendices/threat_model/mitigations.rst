@@ -163,11 +163,11 @@ Countermeasures Against Malicious apt Installs
 
 Countermeasures Against Malicious Qubes or Ubuntu ISOs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--   SecureDrop :doc:`Admin Guide </admin/reference/admin>` instructs Users/Admins to validate checksum/signatures of downloaded images
+-   SecureDrop :doc:`Admin Guide </admin/installation/intro_for_admins>` instructs Users/Admins to validate checksum/signatures of downloaded images
 
 Countermeasures Against Vulnerabilities in the Hardware Firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  SecureDrop :doc:`Admin Guide </admin/reference/admin>` informs administrators to update the hardware firewall and provides a very restrictive policy for accessing the administrative interface (blocked on app and mon ports of the firewall).
+-  SecureDrop :doc:`Admin Guide </admin/installation/intro_for_admins>` informs administrators to update the hardware firewall and provides a very restrictive policy for accessing the administrative interface (blocked on app and mon ports of the firewall).
 -  Alert emails are sent out to admins when there are critical pfSense vulnerabilities.
 -  *Application* and *Monitor Servers* use IPTables as host-based firewall for defense-in-depth
 -  All application traffic is over Tor onion services (end-to-end encrypted) and all software packages are signed. Only DNS and NTP are transmitted over HTTP (unauthenticated and in cleartext)
@@ -231,6 +231,6 @@ Countermeasures in User Behavior Recommendations
 -  Source interface banner suggests that user disables JS (high security settings in Tor Browser)
 -  :doc:`Journalist Guide </journalist/journalist>` informs users of malware risks, the importance of strict compartmentalization of SecureDrop-related activities
 -  :doc:`SecureDrop Deployment Guide </admin/deployment/deployment_practices>` gives best practices for proper administration of the SecureDrop system, and its public-facing properties like the Landing Page
--  :doc:`Admin Guide </admin/reference/admin>` gives instructions for long-term maintenance of the technical properties of the SecureDrop system, as well as operations to support Journalists
+-  :doc:`Admin Guide </admin/installation/intro_for_admins>` gives instructions for long-term maintenance of the technical properties of the SecureDrop system, as well as operations to support Journalists
 -  All Admin tasks are completed over Tor/Tor authenticated onion services after installation
 -  Any Journalist/Admin password/2FA credentials resets can only be done by an Admin with password-protected SSH capability or authenticated Onion Service credentials.

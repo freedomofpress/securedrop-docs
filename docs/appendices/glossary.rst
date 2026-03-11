@@ -87,8 +87,7 @@ OSSEC Alert Public Key
 ----------------------
 The *OSSEC Alert Public Key* is the GPG key that OSSEC will encrypt alerts to.
 The associated private key is used by the admin to access encrypted OSSEC alerts
-from the *Monitor Server*. Instructions for setting up OSSEC alerts can be found
-in the :doc:`OSSEC Guide </admin/maintenance/ossec_alerts>`.
+from the *Monitor Server*.
 
 Source
 ------

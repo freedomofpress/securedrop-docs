@@ -70,18 +70,6 @@ Get Started
    journalist/sources
    journalist/submissions
    journalist/ending_session
-   
-.. toctree::
-   :caption: Admin Guide: Reference
-   :name: adminguidetoc
-   :maxdepth: 2
-   :hidden:
-   
-   admin/reference/admin
-   admin/reference/responsibilities
-   admin/reference/admin_interface
-   admin/reference/ssh_access
-   admin/workstation_reference/securing_workstation
 
 .. toctree::
    :caption: Admin Guide: Installation
@@ -104,7 +92,7 @@ Get Started
    admin/installation/apply_sdw
    admin/installation/create_admin_account
    admin/installation/test_the_installation
-   admin/workstation_reference/provisioning_usb
+   admin/installation/provisioning_usb
    admin/installation/set_up_transfer_and_export_device
    admin/installation/troubleshoot_qubes
    admin/installation/troubleshoot_ossec
@@ -126,6 +114,7 @@ Get Started
    :maxdepth: 2
    :hidden:
 
+   admin/deployment/onboard_journalists
    admin/deployment/deployment_practices
    admin/deployment/landing_page.rst
    admin/deployment/onion_name.rst
@@ -136,11 +125,18 @@ Get Started
    admin/deployment/tor_pow
    admin/deployment/https_source_interface
    admin/deployment/ssh_over_local_net
-   admin/deployment/offboarding
-   admin/deployment/ossec_alerts
-   admin/workstation_reference/troubleshooting_connection
-   admin/workstation_reference/troubleshooting_updates
-   admin/workstation_reference/managing_clipboard
+
+.. toctree::
+   :caption: Admin Guide: Reference
+   :name: adminguidetoc
+   :maxdepth: 2
+   :hidden:
+   
+   admin/reference/admin_interface
+   admin/reference/ossec_alerts
+   admin/reference/ssh_access
+   admin/reference/offboarding
+   admin/reference/securedrop_admin
 
 .. toctree::
    :caption: Admin Guide: Maintenance
@@ -158,8 +154,10 @@ Get Started
    admin/maintenance/decommission
    admin/workstation_reference/backup
    admin/workstation_reference/bios_update
-   admin/workstation_reference/provisioning_usb
    admin/workstation_reference/reviewing_logs
+   admin/workstation_reference/troubleshooting_connection
+   admin/workstation_reference/troubleshooting_updates
+   admin/workstation_reference/managing_clipboard
 
 .. toctree::
    :caption: Appendices

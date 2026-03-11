@@ -1,6 +1,8 @@
 Troubleshooting OSSEC
 ---------------------
 
+.. _troubleshooting_ossec:
+
 Some OSSEC alerts should begin to arrive as soon as the installation has
 finished.
 

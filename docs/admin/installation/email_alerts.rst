@@ -1,5 +1,5 @@
-Emails for alerts
-=================
+Prepare email accounts
+======================
 
 Optional: Daily Journalist Alerts
 -------------------------------------------

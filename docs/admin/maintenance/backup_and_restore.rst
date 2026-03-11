@@ -183,7 +183,7 @@ Moving a SecureDrop instance to new hardware involves:
 
 
 #. Install Ubuntu 24.04 on the *Application* and *Monitor Servers*, following
-   the :doc:`server setup instructions<../installation/servers>` to install
+   the :doc:`server setup instructions</admin/installation/prepare_servers>` to install
    with the correct settings, test connectivity, and set up SSH keys to allow
    for *Admin Workstation* access.
 

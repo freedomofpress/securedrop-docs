@@ -70,7 +70,7 @@ Admin Training
 -  Distribute important info:
 
    -  https://docs.securedrop.org
-   -  :doc:`Admin Best Practice Guide </admin/reference/admin>`
+   -  :doc:`Admin Best Practice Guide </admin/installation/intro_for_admins>`
    -  :doc:`Hardware for SecureDrop </admin/installation/hardware>`
    -  :ref:`Deployment` guidelines
 

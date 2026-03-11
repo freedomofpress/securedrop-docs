@@ -150,7 +150,7 @@ To reset two-factor authentication:
 Off-boarding Users
 ------------------
 
-See :doc:`our guide to off-boarding users from SecureDrop <../deployment/offboarding>`.
+See :doc:`our guide to off-boarding users from SecureDrop </admin/reference/offboarding>`.
 
 Instance Configuration
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -202,7 +202,7 @@ OSSEC alert by clicking **Send Test OSSEC Alert**.
 
 You should receive an OSSEC alert email at the address specified during the
 installation of SecureDrop. The email may take several minutes to arrive. If
-you don't receive it, refer to the :doc:`OSSEC Guide<../maintenance/ossec_alerts>`
+you don't receive it, refer to the :doc:`OSSEC Guide</admin/reference/ossec_alerts>`
 for information on troubleshooting steps.
 
 

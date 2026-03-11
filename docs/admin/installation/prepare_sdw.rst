@@ -10,6 +10,7 @@ SecureDrop Workstation must be installed on a system running Qubes OS. The insta
 
 Prerequisites
 -------------
+
 In order to install SecureDrop Workstation and configure it to use an existing SecureDrop instance, you will need the following:
 
 - A Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations. 
@@ -30,6 +31,7 @@ Pre-install Tasks
 
 Apply BIOS updates and check settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Before beginning the Qubes installation, make sure that your Qubes-compatible computer's BIOS is updated to the latest available version. For more details about this process, see the section on :ref:`general_BIOS_update`.
 
 Once the BIOS is up-to-date, boot into the BIOS setup utility and update its settings. Note that not all BIOS versions will support the items listed, but if available following changes are recommended:
@@ -77,6 +79,7 @@ differ for each make and model.
 
 Download and verify Qubes OS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 On the working computer, download the Qubes OS ISO and cryptographic hash values for version ``4.2.4`` from `https://www.qubes-os.org/downloads/ <https://www.qubes-os.org/downloads/#qubes-os-4-2-4>`_. The ISO is 6.8 GB approximately, and may take some time to download based on the speed of your Internet connection.
 
 Follow the linked instructions to `verify the ISO <https://www.qubes-os.org/security/verifying-signatures/#how-to-verify-detached-pgp-signatures-on-qubes-isos>`_. Ensure that the ISO and hash values are in the same directory, then run:
@@ -194,6 +197,7 @@ While we recommend against the use of a USB keyboard for security reasons, this 
 
 Apply ``dom0`` updates (estimated wait time: 15-30 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ``dom0`` is the most trusted domain on Qubes OS, and has privileged access to all other VMs. As such, it is important to ensure that all available security updates have been applied to ``dom0`` as the first step after the installation.
 
 After logging in, use the network manager widget in the upper-right panel to configure your network connection.
@@ -210,6 +214,7 @@ After updating ``dom0``, reboot the workstation to ensure that all updates have 
 
 Apply updates to system templates (estimated wait time: 45-60 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 After logging in again, confirm that the network manager successfully connects you to the configured network. If necessary, verify the network settings using the network manager widget.
 
 - Next, configure Tor via |qubes_menu| **▸ Service ▸ sys-whonix ▸ Anon Connection Wizard**. In most cases, choosing the default **Connect** option is best. Click **Next**, then **Next** again. Then, if Tor connects successfully, click **Finish**. If Tor fails to connect, make sure your network conection is up and does not filter Tor connections, then try again.
