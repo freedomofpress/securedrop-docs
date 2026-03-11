@@ -95,7 +95,7 @@ continuing:
 -  the GPG public key and fingerprint for the email address that will
    receive the alerts
 -  connection information for the SMTP relay that handles OSSEC alerts
-   (see the :doc:`OSSEC Alerts Guide </admin/reference/ossec_alerts>`)
+   (see the :doc:`OSSEC Alerts Guide </admin/installation/email_alerts>`)
 -  the username of a journalist who will be using SecureDrop (you
    can add more later)
 -  the username of the system admin

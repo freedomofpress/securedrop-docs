@@ -31,7 +31,7 @@ skilled Linux admin is required to responsibly run the system.
 
 As a SecureDrop administrator, it is your responsibility to:
 
-* :doc:`install SecureDrop </admin/installation/install>`
+* :doc:`install SecureDrop </admin/installation/installation_overview>`
 * :ref:`manage users <manage_users>`
 * :ref:`manage the system configuration <manage_config>`
 * :ref:`ensure that servers, firewall and workstations are kept up-to-date <manage_updates>`
@@ -40,7 +40,7 @@ As a SecureDrop administrator, it is your responsibility to:
   communications <monitoring_comms>`
 * apply available firmware updates to all SecureDrop hardware
 * ensure that the SecureDrop environment is physically secure and monitored
-* ensure that SecureDrop Workstations are kept up to date, and that users are aware of the importance of running pre-fight updates
+* ensure that SecureDrop Workstations are kept up to date
 * investigate and respond to security incidents
 * schedule and perform required maintenance tasks, such as operating system upgrades
 * ensure that SecureDrop users adhere to the documented processes for checking SecureDrop, communicating with sources, and reviewing documents
@@ -154,7 +154,7 @@ No matter which vendor you go with, you should make it a priority to stay inform
 Updates: Workstations
 ^^^^^^^^^^^^^^^^^^^^^
 
-The admin should keep all SecureDrop Workstations updated.
+SecureDrop Workstation includes an updater application that runs automatically on startup, checks for Qubes and SecureDrop updates, and prompts the user to apply them if found. Given the sensitive nature of the system, it is critical that updates are applied when available. Administrators should ensure that users are aware of this requirement, and should periodically check to ensure that the system is up to date.
 
 .. _monitoring_ossec:
 

@@ -3,7 +3,7 @@
 Using the KeePassXC Password Manager
 ====================================
 
-Qubes OS comes with the KeePassXC password manager preinstalled and SecureDrop Workstation. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including administrators, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
+Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including administrators, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
 
 Template password database
 ------------------------------------
