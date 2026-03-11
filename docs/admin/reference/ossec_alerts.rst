@@ -75,10 +75,7 @@ for Tor connections to timeout or become overloaded. ::
     could also mean an attack against you or potentially the guard itself.
 
 This alert is common but if you see them for sustained periods of time (several
-times a day), please contact us at the `SecureDrop Support Portal`_ or at
-securedrop@freedom.press for help.
-
-.. _SecureDrop Support Portal: https://support-docs.securedrop.org/
+times a day), please :doc:`contact us</introduction/getting_support>` for help.
 
 Daily reports
 ^^^^^^^^^^^^^
@@ -140,5 +137,5 @@ OSSEC will send an alert when the `securedrop-admin` tool is used to backup, res
 **Action**: You should ensure that this action was performed by you or a fellow administrator.
 
 If you believe that the system is behaving abnormally, you should
-contact us at the `SecureDrop Support Portal`_ or securedrop@freedom.press for
+:doc:`contact us</introduction/getting_support>` for
 help.
