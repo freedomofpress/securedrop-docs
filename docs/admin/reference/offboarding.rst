@@ -9,12 +9,12 @@ important to off-board them from SecureDrop.
    depending on the circumstances and your own internal incident response
    procedures, and may include doing a full reinstall of SecureDrop.
    If you are in such a situation, feel free to
-   :ref:`contact us <getting_support>` for further assistance.
+   :doc:`contact us </introduction/getting_support>` for further assistance.
 
 Off-boarding checklist
 ----------------------
 
-- :ref:`Inform the SecureDrop Support <getting_support>` team that the user should be removed from any support Signal groups, and indicate if any new staff
+- :doc:`Inform the SecureDrop Support </introduction/getting_support>` team that the user should be removed from any support Signal groups, and indicate if any new staff
   members should be added.
 - Delete the user's account on the *Journalist Interface*.
 - Retrieve *SecureDrop Workstation* laptops, *Backup* drive(s), 
@@ -36,7 +36,7 @@ Additional steps for off-boarding administrators
   administrator will be able to provide as much training as possible on the use
   and maintenance of the system, as well as on your organizational policies
   (such as backup strategies, and so on) before they leave; if this is not the
-  case, :ref:`contact the SecureDrop Support team <getting_support>`.
+  case, :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
 - We do not recommend enabling remote management for SecureDrop's network
   firewall. However, if your SecureDrop firewall can be accessed remotely, even
   if only from within your organization's network, you may want to rotate its
@@ -244,11 +244,3 @@ On the Secure Viewing Station
 .. |new list| image:: ../../images/offboard/new_list.png
 .. |revoked| image:: ../../images/offboard/revoked.png
 
-.. _getting_support:
-
-Getting Support
----------------
-
-If you have any questions about the steps in this guide, we're here to help:
-
-.. include:: ../../includes/getting-support.txt

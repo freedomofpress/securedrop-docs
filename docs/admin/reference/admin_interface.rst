@@ -27,7 +27,6 @@ the :doc:`journalist guide <../../journalist/journalist>`.
   valid, you can create another account with admin privileges via the command line
   on the *Application Server*. See :ref:`here <Create Admin CLI>` for more information.
 
-
 .. _User Management:
 
 User Management
@@ -116,7 +115,7 @@ can keep their two-factor authentication device secure.
    :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
 .. |Verify YubiKey| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
    :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
-   
+
 .. _Passphrases_and_two-factor_resets:
 
 Passphrases and Two-Factor Resets
@@ -215,7 +214,7 @@ OSSEC alert by clicking **Send Test OSSEC Alert**.
 
 You should receive an OSSEC alert email at the address specified during the
 installation of SecureDrop. The email may take several minutes to arrive. If
-you don't receive it, refer to the :doc:`OSSEC Guide</admin/reference/ossec_alerts>`
+you don't receive it, refer to the :doc:`OSSEC Guide</admin/installation/troubleshooting_ossec>`
 for information on troubleshooting steps.
 
 
