@@ -145,6 +145,7 @@ Get Started
 
    admin/maintenance/upgrade_guide
    admin/maintenance/logging
+   admin/maintenance/troubleshooting_connection
    admin/maintenance/backup_and_restore
    admin/maintenance/rebuild_admin
    admin/maintenance/updates_over_tor
@@ -154,7 +155,6 @@ Get Started
    admin/workstation_reference/backup
    admin/workstation_reference/bios_workstation
    admin/workstation_reference/reviewing_logs
-   admin/workstation_reference/troubleshooting_connection
    admin/workstation_reference/troubleshooting_updates
    admin/workstation_reference/managing_clipboard
 
