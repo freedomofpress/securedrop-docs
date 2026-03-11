@@ -79,7 +79,7 @@ Exporting Submissions from the SecureDrop Workstation
    the risk of spreading malware to that computer. Make sure you understand the
    risks, and consider other methods to export the document (e.g., print).
 
-If you must copy a file from your *SecureDrop Workstation* to another computer or device in digital form, our :doc:`recommendation </admin/installation/set_up_transfer_and_export_device>` is that journalists are provided with an d *Encrypted USB Drive*, drive which is encrypted using `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
+If you must copy a file from your *SecureDrop Workstation* to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that journalists are provided with an d *Encrypted USB Drive*, drive which is encrypted using `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
 These instructions assume that you are following the recommended workflow.
 If you are unsure, ask your administrator.
 
@@ -157,7 +157,6 @@ Safely Working With Submissions Outside the SecureDrop Workstation
 ------------------------------------------------------------------
 
 .. _malware_risks:
-
 
 Risks From Malware
 ~~~~~~~~~~~~~~~~~~
