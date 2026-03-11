@@ -115,7 +115,8 @@ can keep their two-factor authentication device secure.
 .. |Enable YubiKey| image:: ../../images/manual/screenshots/journalist-admin_add_user_hotp.png
    :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
 .. |Verify YubiKey| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
-
+   :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
+   
 .. _Passphrases_and_two-factor_resets:
 
 Passphrases and Two-Factor Resets
@@ -279,6 +280,5 @@ checkbox and click **Update Submission Preferences**.
    :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
 .. |SecureDrop main page| image:: ../../images/manual/screenshots/journalist-admin_index_no_documents.png
    :alt: The top navigation of the Journalist Interface says 'Logged on as Journalist' and displays an 'Admin' link.
-   :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
 .. |Logo Update| image:: ../../images/manual/screenshots/journalist-admin_changes_logo_image.png
    :alt: The Instance Configuration form displays 'Image updated' after the logo was updated successfully.

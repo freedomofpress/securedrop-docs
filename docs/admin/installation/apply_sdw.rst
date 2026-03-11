@@ -1,10 +1,12 @@
 Apply Configuration to Primary SecureDrop Workstation
 =====================================================
 
+With the servers installed and configured, the final step is to install the SecureDrop Workstation App on the primary SecureDrop Workstation and fully configure the machine.
+
+.. _install_configure_securedrop_app:
+
 Install and Configure the SecureDrop App
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-With the servers installed and configured, the final step is to install the SecureDrop Workstation App on the primary SecureDrop Workstation and fully configure the machine.
 
 - These steps should be performed from a ``dom0`` terminal. **Start a dom0 terminal** via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
 
@@ -16,7 +18,7 @@ With the servers installed and configured, the final step is to install the Secu
 
     sdw-admin --apply
 
-This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple VMs and installs supporting packages. When the command finishes, reboot the machine to complete the installation. Your SecureDrop Workstation is finally ready to use!
+This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple VMs and installs supporting packages. When the command finishes, reboot the machine to complete the installation. This SecureDrop Workstation is finally ready to use!
 
 Test the Workstation
 ~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +54,7 @@ To revoke this configuration change later or correct a typo, you can use the ``d
 .. code-block:: sh
 
    qvm-tags vault del sd-send-app-clipboard
-   
+
 Troubleshooting ``sdw-admin``
 -----------------------------
 

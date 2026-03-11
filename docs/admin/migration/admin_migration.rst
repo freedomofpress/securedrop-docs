@@ -21,6 +21,18 @@ Install tasks:
 #. Test the Workstation
 
 .. include:: /admin/installation/prepare_sdw.rst
+  :start-after: .. _securedrop_workstation_prerequisites:
+  :end-before: .. _securedrop_workstation_preinstall_tasks:
+
+.. include:: /admin/installation/prepare_sdw.rst
+  :start-after: .. _securedrop_workstation_preinstall_tasks:
+  :end-before: .. _securedrop_workstation_install:
+
+
+.. include:: /admin/installation/prepare_sdw.rst
+  :start-after: .. _securedrop_workstation_install:
+  :end-before:  .. _securedrop_workstation_install_securedrop-admin:
+
 
 Import KeePassXC database
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -32,8 +44,8 @@ TODO: step by step KeePass transfer via Encypted USB drive?
 Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` VM.  
 
 .. include:: /admin/installation/set_up_keepassxc.rst
-  .. start-after:: .. _keepasscx_template_database:
-  .. end-before:: .. _keepassxc_manual_create_database:
+  :start-after: .. _keepasscx_template_database:
+  :end-before: .. _securedrop_workstation_install_securedrop-admin:
 
 
 Configure SecureDrop Workstation
@@ -80,6 +92,11 @@ To protect this key and preserve the air gap, you will need to connect the SVS U
 - Once the submission key import is complete, in the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the SVS USB.
 
 - If you were prompted for a passphrase during import, you will now need to remove the passphrase on ``sd-journalist.sec``. See :doc:`/admin/migration/removing_gpg_passphrase`.
+
+.. |Attach TailsData| image:: /admin/migration/images/attach_usb.png
+  :width: 100%
+.. |Unlock Tailsdata| image:: /admin/migration/images/unlock_tails_usb.png
+  :width: 100%
 
 .. _copy_journalist:
 
@@ -141,63 +158,11 @@ In order to copy a journalist's login credentials:
 
 - Close the application window and shut down the ``vault`` VM (using the Qube widget in the upper right panel). At this time, you can also re-enable the network connection using the network manager widget.
 
-Install SecureDrop Workstation (estimated wait time: 60-90 minutes)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Manually Importing from Tails USB Drives
+------------------------------------------------------
 
-- Configure infinite scrollback for your terminal via **Edit ▸ Preferences ▸ General ▸ Unlimited scrollback**. This helps to ensure that you will be able to review any error output printed to the terminal during the installation.
-
-- Finally, in the ``dom0`` terminal, run the command:
-
-  .. code-block:: sh
-
-    sdw-admin --apply
-
-This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple VMs and installs supporting packages. When the command finishes, reboot the machine to complete the installation. Your SecureDrop Workstation is finally ready to use!
-
-Test the Workstation
-~~~~~~~~~~~~~~~~~~~~
-
-The preflight updater will start automatically after logging into the system. Please follow the preflight updater's instructions. 
-
-  .. note::
-
-    If you close the SecureDrop Client during your session, you can launch it again using the SecureDrop icon on the desktop. 
-
-Once the update check is complete, the SecureDrop Client will launch. Log in using an existing journalist account and verify that sources are listed and submissions can be downloaded, decrypted, and viewed.
-
-Enable password copy and paste
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you use KeePassXC in the ``vault`` VM to manage login credentials, you can enable the user to copy passwords to the SecureDrop App using inter-VM copy and paste. While this is relatively safe, we recommend reviewing the section :doc:`Managing Clipboard Access </admin/workstation_reference/managing_clipboard>` of this guide, which goes into further detail on the security considerations for inter-VM copy and paste.
-
-The password manager runs in the networkless ``vault`` VM, and the SecureDrop App runs in the ``sd-app`` VM. To permit this one-directional clipboard use, issue the following command in ``dom0``:
-
-.. code-block:: sh
-
-   qvm-tags vault add sd-send-app-clipboard
-
-Confirm that the tag was correctly applied using the ``ls`` subcommand:
-
-.. code-block:: sh
-
-   qvm-tags vault ls
-
-To revoke this configuration change later or correct a typo, you can use the ``del`` subcommand, e.g.:
-
-.. code-block:: sh
-
-   qvm-tags vault del sd-send-app-clipboard
-   
-.. |Attach TailsData| image:: /admin/migration/images/attach_usb.png
-  :width: 100%
-.. |Unlock Tailsdata| image:: /admin/migration/images/unlock_tails_usb.png
-  :width: 100%
-
-
-Error configuring SecureDrop Workstation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Failed to import Submission Private Key
----------------------------------------
+Manually import Submission Private Key
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If importing the submission key  using ``sdw-admin --configure`` fails, you can also copy the submission key manually.
 
@@ -238,8 +203,8 @@ If importing the submission key  using ``sdw-admin --configure`` fails, you can 
 
 .. _manual_copy_journalist: 
 
-Failed to import *Journalist Interface* details
------------------------------------------------
+Manually import *Journalist Interface* details
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If importing the *Journalist Interface* details using ``sdw-admin --configure`` fails, you can copy the configuration file to ``dom0`` manually.
 
@@ -306,3 +271,6 @@ Once the *Journalist Interface* details and submission key have been copied to `
   .. code-block:: sh
 
     sdw-admin --validate
+
+.. include:: /admin/installation/apply_sdw.rst
+  :start-after: .. _install_configure_securedrop_app:

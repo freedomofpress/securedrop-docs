@@ -1,12 +1,16 @@
 Prepare Primary SecureDrop Workstation
 ======================================
 
+.. _prepare_primary_securedrop_workstation:
+
 Overview
 --------
 
 TODO explanation of Primary SecureDrop Workstation
 
 SecureDrop Workstation must be installed on a system running Qubes OS. The installation and configuration process should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
+
+.. _securedrop_workstation_prerequisites:
 
 Prerequisites
 -------------
@@ -25,6 +29,8 @@ In order to install SecureDrop Workstation and configure it to use an existing S
 - A password manager or other system to generate and store strong passphrases for Qubes full disk encryption (FDE) and user accounts.
 
 A basic knowledge of the Qubes OS is helpful.
+
+.. _securedrop_workstation_preinstall_tasks:
 
 Pre-install Tasks
 -----------------
@@ -125,7 +131,6 @@ where ``if`` is set to the path to your downloaded ISO file and ``of`` is set to
 the block device corresponding to your USB stick. Note that any data on the USB stick will be overwritten.
 
 .. caution:: Make sure to verify that you have the correct device name using, for example, the ``lsblk`` command. You should write to the full device (eg. ``/dev/sdc``) rather than to a partition (eg. ``/dev/sdc1``).
-
 
 Install Qubes OS (estimated wait time: 30-45 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -228,10 +233,10 @@ After logging in again, confirm that the network manager successfully connects y
 .. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
   :alt: System Tools 
 
+.. _securedrop_workstation_install:
+
 Installing SecureDrop Workstation
 ---------------------------------
-
-.. _download_rpm:
 
 Download SecureDrop Workstation Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -254,8 +259,12 @@ First, you must configure the Qubes-Contrib repo, then download the SecureDrop W
     sudo qubes-dom0-update --clean -y securedrop-workstation-dom0-config
     sudo dnf -y remove qubes-repo-contrib
 
+.. _securedrop_workstation_install_securedrop-admin:
+
 Install `securedrop-admin` Tooling
 ----------------------------------
+
+.. _securedrop_workstation_generate_private_key:
 
 Generate Submission Private Key
 -------------------------------
