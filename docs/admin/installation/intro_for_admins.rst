@@ -40,6 +40,7 @@ As a SecureDrop administrator, it is your responsibility to:
   communications <monitoring_comms>`
 * apply available firmware updates to all SecureDrop hardware
 * ensure that the SecureDrop environment is physically secure and monitored
+* ensure that SecureDrop Workstations are kept up to date, and that users are aware of the importance of running pre-fight updates
 * investigate and respond to security incidents
 * schedule and perform required maintenance tasks, such as operating system upgrades
 * ensure that SecureDrop users adhere to the documented processes for checking SecureDrop, communicating with sources, and reviewing documents

@@ -64,7 +64,25 @@ Optionally:
 #. Prepare additional *SecureDrop Workstations* for use by journalists.
 #. Prepare encrypted USB *Export Drives*.
 
-Minimum security requirements for the SecureDrop environment
+Minimum security requirements for the SecureDrop Workstation
+------------------------------------------------------------
+
+The *SecureDrop Workstation* contains both a copy of the *Submission Private Key*, and encrypted and 
+decrypted messages and submissions. It's critical to ensure that appropriate security practices are applied to the *SecureDrop Workstation*.
+
+- *SecureDrop Workstations* should be stored in a secure and locked room, with access restricted to
+  users and administrators. The room may be monitored externally, but there should be no internal
+  monitoring.
+- A wired Internet connection that does not restrict Tor must be available for
+  the *SecureDrop Workstation*. This connection should either be dedicated to *SecureDrop
+  Workstation*, or should be on a fully segregated subnet from the rest of the
+  corporate network.
+- Users should not bring other electronic devices into the room, with the
+  exception of smartphones used for 2FA token generation. While in the room,
+  smartphones should be set to airplane mode, and should not be used for any
+  purpose other than 2FA.
+
+Minimum security requirements for the SecureDrop servers
 ------------------------------------------------------------
 
 -  The *Application* and *Monitor Servers* should be dedicated physical machines, not virtual machines.
@@ -72,7 +90,6 @@ Minimum security requirements for the SecureDrop environment
 -  The SecureDrop servers should be on a separate internet connection or completely segmented from the corporate network, such as a dedicated subnet with DENY rules for all traffic to and from the corporate LAN.
 -  All traffic from the corporate network should be blocked at the SecureDrop's point of demarcation.
 -  Video monitoring should be recorded of the server area and the organizations safe.
--  Journalists should ensure that while using the *SecureDrop Workstation* they are in an area without video cameras.
 -  An established monitoring plan and incident response plan. Who will receive the OSSEC alerts and what will their response plan be? These should cover technical outages and a compromised environment plan.
 
 Passphrases Overview
@@ -87,7 +104,8 @@ Admin
 
 The admin will be using a *SecureDrop Workstation* configured to connect to the *Application Server* and the *Monitor Server* using Tor and SSH. The tasks performed by the admin will require the following set of credentials and passphrases:
 
--  A passphrase for the full disk encryption of the *SecureDrop Workstation* they use.
+-  The Qubes full disk encryption (FDE) password of the Primary SecureDrop Workstation, required to unlock system storage on boot.
+- The Qubes system user password for the Primary SecureDrop Workstation, required to log in.
 -  Additional credentials, which we recommend adding to Tails' KeePassXC password
    manager during the installation:
 
@@ -101,7 +119,6 @@ The admin will be using a *SecureDrop Workstation* configured to connect to the 
    -  The account details for the destination email address for OSSEC alerts.
    -  The onion services values required to connect to the *Application* and
       *Monitor Servers*.
-
 
 The admin will also need to have a way to generate two-factor authentication codes.
 
@@ -117,9 +134,8 @@ Journalist
 
 The journalist will be using a *SecureDrop Workstation* to view submissions with the SecureDrop App. The tasks performed by the journalist will require the following set of passphrases:
 
--  A passphrase for the full disk encryption of the *SecureDrop Workstation* they use.
--  A passphrase for the KeePassXC password manager, which unlocks the passphrase for logging into the SecureDrop App.
-
+-  The Qubes full disk encryption (FDE) password of the SecureDrop Workstation they use, required to unlock system storage on boot.
+-  The Qubes system user password for the SecureDrop Workstation they use, required to log in.
 The journalist will also need to have a two-factor authenticator, such as an Android or iOS device with FreeOTP installed, or a YubiKey. This means the journalist will also have the following credential:
 
 -  The secret code for the Journalist's two-factor authentication.
