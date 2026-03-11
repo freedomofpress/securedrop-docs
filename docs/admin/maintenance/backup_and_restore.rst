@@ -240,7 +240,7 @@ valid SSH credentials and will need to be repaired. In these steps, the "primary
 process.
 
 #. Prepare a fresh
-   :doc:`LUKS-encrypted USB <../installation/set_up_transfer_and_export_device>`.
+   :doc:`LUKS-encrypted USB </admin/installation/provisioning_usb>`.
    You may record the passphrase in your primary *Admin Workstation*
    KeePassXC password manager.
 
