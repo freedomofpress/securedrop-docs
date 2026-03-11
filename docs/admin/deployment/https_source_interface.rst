@@ -140,7 +140,7 @@ the Admin Workstation:
 Activating HTTPS in SecureDrop
 ------------------------------
 
-Make sure you have :doc:`installed SecureDrop already <../installation/install>`.
+Make sure you have :doc:`installed SecureDrop already </admin/installation/installation_overview>`.
 
 Make note of the Source Interface Onion URL. Now from a Terminal
 on your *Admin Workstation*:
