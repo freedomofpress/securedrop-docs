@@ -69,6 +69,10 @@ account setup.
    The username **deleted** is reserved, as it is used to mark accounts which
    have been deleted from the system.
 
+.. |SecureDrop admin home| image:: ../../images/manual/screenshots/journalist-admin_interface_index.png
+   :alt: The Admin Interface displays an 'Add User' button.
+.. |Add a new user| image:: ../../images/manual/screenshots/journalist-admin_add_user_totp.png
+   :alt: The form used to create new users displays a pre-generated Diceware passphrase.
 
 FreeOTP
 ~~~~~~~
@@ -86,6 +90,9 @@ to the *Admin Interface* and will see a confirmation that the two-factor code wa
 verified.
 
 .. include:: ../../includes/tor-security-setting.txt
+
+.. |Enable FreeOTP| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
+   :alt: The form used to enable FreeOTP displays a barcode and a two-factor secret.
 
 YubiKey
 ~~~~~~~
@@ -105,6 +112,11 @@ method whenever they check SecureDrop. Make sure that they have memorised their
 username and passphrase, or stored them in their password manager, and that they
 can keep their two-factor authentication device secure.
 
+.. |Enable YubiKey| image:: ../../images/manual/screenshots/journalist-admin_add_user_hotp.png
+   :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
+.. |Verify YubiKey| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
+
+.. _Passphrases_and_two-factor_resets:
 
 Passphrases and Two-Factor Resets
 ---------------------------------
@@ -267,15 +279,6 @@ checkbox and click **Update Submission Preferences**.
    :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
 .. |SecureDrop main page| image:: ../../images/manual/screenshots/journalist-admin_index_no_documents.png
    :alt: The top navigation of the Journalist Interface says 'Logged on as Journalist' and displays an 'Admin' link.
-.. |SecureDrop admin home| image:: ../../images/manual/screenshots/journalist-admin_interface_index.png
-   :alt: The Admin Interface displays an 'Add User' button.
-.. |Add a new user| image:: ../../images/manual/screenshots/journalist-admin_add_user_totp.png
-   :alt: The form used to create new users displays a pre-generated Diceware passphrase.
-.. |Enable FreeOTP| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
-   :alt: The form used to enable FreeOTP displays a barcode and a two-factor secret.
-.. |Enable YubiKey| image:: ../../images/manual/screenshots/journalist-admin_add_user_hotp.png
-   :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
-.. |Verify YubiKey| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
    :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
 .. |Logo Update| image:: ../../images/manual/screenshots/journalist-admin_changes_logo_image.png
    :alt: The Instance Configuration form displays 'Image updated' after the logo was updated successfully.

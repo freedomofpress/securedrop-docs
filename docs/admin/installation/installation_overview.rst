@@ -136,6 +136,7 @@ The journalist will be using a *SecureDrop Workstation* to view submissions with
 
 -  The Qubes full disk encryption (FDE) password of the SecureDrop Workstation they use, required to unlock system storage on boot.
 -  The Qubes system user password for the SecureDrop Workstation they use, required to log in.
+
 The journalist will also need to have a two-factor authenticator, such as an Android or iOS device with FreeOTP installed, or a YubiKey. This means the journalist will also have the following credential:
 
 -  The secret code for the Journalist's two-factor authentication.

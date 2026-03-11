@@ -1,5 +1,5 @@
 Troubleshooting Qubes issues during installation
-===============================================
+================================================
 
 .. _reset_pci:
 

@@ -31,7 +31,9 @@ TODO: step by step KeePass transfer via Encypted USB drive?
 
 Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` VM.  
 
-.. include:: /includes/keepassxc.txt
+.. include:: /admin/installation/set_up_keepassxc.rst
+  .. start-after:: .. _keepasscx_template_database:
+  .. end-before:: .. _keepassxc_manual_create_database:
 
 
 Configure SecureDrop Workstation
