@@ -9,7 +9,7 @@ Upgrade the Server BIOS
 Before beginning the installation process, you should upgrade your servers' BIOS
 to the most recent stable version available. This process will differ for each
 server make/model - if you are using one of the recommended NUC models, you can
-find instructions in :doc:`../maintenance/update_bios`.
+find instructions in :doc:`../maintenance/bios_server`.
 
 Update BIOS Settings
 ~~~~~~~~~~~~~~~~~~~~

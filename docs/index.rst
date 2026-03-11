@@ -149,10 +149,10 @@ Get Started
    admin/maintenance/rebuild_admin
    admin/maintenance/updates_over_tor
    admin/maintenance/kernel_troubleshooting
-   admin/maintenance/update_bios
+   admin/maintenance/bios_server
    admin/maintenance/decommission
    admin/workstation_reference/backup
-   admin/workstation_reference/bios_update
+   admin/workstation_reference/bios_workstation
    admin/workstation_reference/reviewing_logs
    admin/workstation_reference/troubleshooting_connection
    admin/workstation_reference/troubleshooting_updates
