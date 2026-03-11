@@ -93,7 +93,6 @@ Get Started
    admin/installation/create_admin_account
    admin/installation/test_the_installation
    admin/installation/provisioning_usb
-   admin/installation/set_up_transfer_and_export_device
    admin/installation/troubleshoot_qubes
    admin/installation/troubleshoot_ossec
 

@@ -31,8 +31,7 @@ Install tasks:
 
 .. include:: /admin/installation/prepare_sdw.rst
   :start-after: .. _securedrop_workstation_install:
-  :end-before:  .. _securedrop_workstation_install_securedrop-admin:
-
+  :end-before: .. _securedrop_workstation_install_securedrop-admin:
 
 Import KeePassXC database
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +44,7 @@ Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault``
 
 .. include:: /admin/installation/set_up_keepassxc.rst
   :start-after: .. _keepasscx_template_database:
-  :end-before: .. _securedrop_workstation_install_securedrop-admin:
+  :end-before: .. _keepassxc_manual_create_database:
 
 
 Configure SecureDrop Workstation
