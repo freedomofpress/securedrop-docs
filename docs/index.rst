@@ -81,8 +81,10 @@ Get Started
    admin/installation/installation_overview
    admin/installation/hardware
    admin/workstation_reference/hardware
+   admin/installation/passphrases.rst
    admin/installation/email_alerts
    admin/installation/prepare_sdw
+   admin/installation/generate_submission_key
    admin/installation/set_up_keepassxc
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
@@ -124,6 +126,7 @@ Get Started
    admin/deployment/tor_pow
    admin/deployment/https_source_interface
    admin/deployment/ssh_over_local_net
+   admin/deployment/configuring_ossec_fingerprint
 
 .. toctree::
    :caption: Admin Guide: Reference

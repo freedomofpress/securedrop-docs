@@ -45,8 +45,6 @@ Import KeePassXC database
 
 If you have a KeePassXC database on your Tails-based *Admin Workstation*, you should copy it to the ``vault`` VM on the Primary SecureDrop Workstation.
 
-TODO: step by step KeePass transfer via Encypted USB drive?
-
 Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` VM.  
 
 .. include:: /admin/installation/set_up_keepassxc.rst
@@ -280,3 +278,7 @@ Once the *Journalist Interface* details and submission key have been copied to `
 
 .. include:: /admin/installation/apply_sdw.rst
   :start-after: .. _install_configure_securedrop_app:
+  :end-before: .. _Password Management Section:
+
+.. include:: /admin/installation/apply_sdw.rst
+  :start-after: .. _Password Management Section:

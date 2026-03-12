@@ -6,8 +6,6 @@ Prepare Primary SecureDrop Workstation
 Overview
 --------
 
-TODO explanation of Primary SecureDrop Workstation
-
 SecureDrop Workstation must be installed on a system running Qubes OS. The installation and configuration process should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
 
 .. _securedrop_workstation_prerequisites:
