@@ -38,10 +38,7 @@ Additionally, you may want to consider the following purchases:
 * a USB drive with a physical write protection switch, or a USB write blocker,
   if you want to mitigate the risk of introducing malware from your network to
   your *SecureDrop Workstation* during repeated use of an *Export Device*.
-* CD-R/DVD-R writers, if you want to use CD-Rs/DVD-Rs as export
-  media, and a CD shredder that can destroy media consistent with your threat
-  model.
-
+  
 .. tip::
 
     While a printer is not required, we highly recommend it. Printing documents
@@ -189,8 +186,7 @@ We also urge the use of a secure printer or similar analog conversions to
 export documents from the *SecureDrop Workstation*, whenever possible.
 
 You may want to consider enforcing write protection on USB drives when only read
-access is needed, or you may want to implement a workflow based on CD-Rs or
-DVD-Rs instead. We encourage you to evaluate these options in the context of
+access is needed. We encourage you to evaluate these options in the context of
 your own threat model.
 
 Please find some notes regarding each of these methods below, and see our
@@ -232,22 +228,6 @@ The two main options to achieve write protection of USB drives are:
 
 - drives with a built-in physical write protection switch
 - a separate USB write blocker device as used in forensic applications.
-
-DVD-Rs or CD-Rs
-~~~~~~~~~~~~~~~
-Single-use, write-once media can be used to realize an export
-workflow that is always one-directional: files are exported
-from the *SecureDrop Workstation* and the media used to do so are destroyed.
-
-If you want to realize such a workflow, we recommend purchasing separate drives
-for each computer that will write to or read from the media, to minimize the
-risks from malware compromising any one drive's firmware.
-
-You will also need a stack of blank DVD/CD-Rs, which you can buy anywhere, and a
-method to securely destroy media after use. Depending on your threat model, this
-can be very expensive; a cheap shredder can be purchased for less than $50,
-while shredders designed for use in Sensitive Compartmented Information
-Facilities (SCIFs) sell for as much as $3,000.
 
 Monitor, Keyboard, Mouse
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -571,10 +551,6 @@ Export Device(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 For USB drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__,
 and it works well with and without encryption.
-
-If you want to use a setup based on CD-Rs or DVD-Rs, we've found the CDR/DVD
-writers from Samsung and LG to work reasonably well; you can find some examples
-`here <https://www.newegg.com/External-CD-DVD-Blu-Ray-Drives/SubCategory/ID-420>`__.
 
 Please see our recommendations in the :doc:`setup guide <set_up_transfer_and_export_device>`
 for additional background.
