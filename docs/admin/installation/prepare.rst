@@ -23,6 +23,30 @@ Once the BIOS is up-to-date, boot into the BIOS setup utility and update its set
 
 If the Qubes hardware compatibility list entry for your computer recommends the use of Legacy Mode for boot, change that setting in the BIOS as well.
 
+.. _SecureBoot:
+
+Disable SecureBoot
+~~~~~~~~~~~~~~~~~~
+
+SecureBoot is a feature available on most systems that, when enabled,
+does not allow any operating system to boot that has not been signed by a
+trusted key. By only booting to operating systems that are properly signed,
+you can be sure that the OS itself has not been corrupted or tampered with,
+at least at the boot level.
+
+**SecureBoot must be disabled on the server and Workstation hardware.** SecureDrop
+installs a hardened, security-focused version of the Linux kernel 
+(grsec) that does not support SecureBoot. If SecureBoot is enabled on either of
+the servers during the install, you will receive a pre-install error reminding
+you that it must be turned off before the installation can proceed.
+
+Likewise, SecureBoot is not fully supported by QubesOS, and cannot be used with
+*SecureDrop Workstations*.
+
+For instructions on how to enable or disable the SecureBoot feature for your
+device, please consult the manufacturer's manual for BIOS settings, as they
+differ for each make and model.
+
 Download and verify Qubes OS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 On the working computer, download the Qubes OS ISO and cryptographic hash values for version ``4.2.4`` from `https://www.qubes-os.org/downloads/ <https://www.qubes-os.org/downloads/#qubes-os-4-2-4>`_. The ISO is 6.8 GB approximately, and may take some time to download based on the speed of your Internet connection.

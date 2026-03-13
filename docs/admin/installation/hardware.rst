@@ -143,14 +143,6 @@ In order to install and use *SecureDrop Workstation*, you will need a Qubes-comp
 
 More information on hardware compatibility can be found on the `Qubes OS System Requirements <https://www.qubes-os.org/doc/system-requirements/>`_ page.
 
-USB
-~~~
-
-SecureDrop Workstation only supports printing over USB, so ensure the printer you select has a **USB port**.
-
-.. note::
-  In rare cases, an AirPrint or Moipra-compatible printer with a USB port may not actually support IPP-over-USB, which is required for SecureDrop to use the printer. Check with the manufacturer if in doubt. 
-
 Offline
 ~~~~~~~
 
@@ -262,6 +254,14 @@ Driverless
 .. figure:: ../workstation_reference/images/moipra.jpg
 
 You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
+
+USB Ports
+~~~~~~~~~
+
+SecureDrop Workstation only supports printing over USB, so ensure the printer you select has a **USB port**.
+
+.. note::
+  In rare cases, an AirPrint or Moipra-compatible printer with a USB port may not actually support IPP-over-USB, which is required for SecureDrop to use the printer. Check with the manufacturer if in doubt. 
 
 Backup Storage
 ^^^^^^^^^^^^^^
