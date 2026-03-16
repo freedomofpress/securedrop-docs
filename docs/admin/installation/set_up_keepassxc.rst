@@ -10,6 +10,8 @@ Template password database
 
 To facilitate using KeePassXC to organize all the credentials needed for using and administering the system, SecureDrop comes with a template database with organized entries ready to be filled in.
 
+.. TODO fix path/to references below
+
 .. _keepasscx_template_database:
 
 -  Open the KeePassXC program |KeePassXC| in the `vault` VM

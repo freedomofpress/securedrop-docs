@@ -4,6 +4,8 @@ Test the Installation
 Test Connectivity
 -----------------
 
+.. TODO add testing Qubes, testing launching the SecureDrop application, logging in, syncing, test submission, etc.
+
 SSH to Both Servers Over Tor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -6,6 +6,8 @@ Prepare Primary SecureDrop Workstation
 Overview
 --------
 
+.. TODO add explanation of the different Workstations/Laptops to be configured. Admin vs Journalist
+
 SecureDrop Workstation must be installed on a system running Qubes OS. The installation and configuration process should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
 
 .. _securedrop_workstation_prerequisites:
@@ -259,10 +261,14 @@ First, you must configure the Qubes-Contrib repo, then download the SecureDrop W
 Install `securedrop-admin` Tooling
 ----------------------------------
 
+.. TODO
+
 .. _securedrop_workstation_generate_private_key:
 
 Generate Submission Private Key
 -------------------------------
+
+.. TODO
 
 .. |qubes_menu| image:: ../../images/qubes_menu.png
   :alt: Qubes Application menu

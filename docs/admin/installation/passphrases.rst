@@ -10,7 +10,7 @@ Admin
 
 The admin will be using a *SecureDrop Workstation* configured to connect to the *Application Server* and the *Monitor Server* using Tor and SSH. The tasks performed by the admin will require the following set of credentials and passphrases:
 
--  The Qubes full disk encryption (FDE) password of the Primary SecureDrop Workstation, required to unlock system storage on boot.
+- The Qubes full disk encryption (FDE) password of the Primary SecureDrop Workstation, required to unlock system storage on boot.
 - The Qubes system user password for the Primary SecureDrop Workstation, required to log in.
 -  Additional credentials, which we recommend adding to Tails' KeePassXC password
    manager during the installation:

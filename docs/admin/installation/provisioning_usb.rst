@@ -43,7 +43,7 @@ of its airgap:
 Creating a VeraCrypt-encrypted drive
 ------------------------------------
 
-.. Remove the following warning once securedrop-docs#599 and
+.. TODO Remove the following warning once securedrop-docs#599 and
    veracrypt/VeraCrypt#1422 are resolved.
 
 .. warning::
