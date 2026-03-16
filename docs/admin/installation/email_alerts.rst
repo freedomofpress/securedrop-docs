@@ -10,7 +10,7 @@ Optional: Daily Journalist alerts
 
 When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for journalists to be notified daily via encrypted email about whether or not there has been submission activity in the past 24 hours.
 
-If the email shows submissions were received, the journalist can check their *SecureDrop Workstation*.
+If the email shows submissions were received, the journalist can check their *Journalist Workstation*.
 
 .. note::
 

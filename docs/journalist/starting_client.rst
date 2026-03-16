@@ -1,7 +1,7 @@
 Starting the SecureDrop App
 ==============================
 
-After you log into Qubes, the SecureDrop App will start automatically. If
+After you log into Qubes, the SecureDrop Application will start automatically. If
 you have previously exited the application, you can double-click on the
 **SecureDrop** desktop shortcut to launch it.
 
@@ -10,12 +10,12 @@ you have previously exited the application, you can double-click on the
 Performing updates
 ------------------
 
-Unless the system has just been updated, SecureDrop Workstation will now prompt
+Unless the system has just been updated, you will now be prompted
 you to automatically download and apply any available security updates:
 
 |screenshot_update_prompt|
 
-For security reasons, you will not be able to launch the SecureDrop App until
+For security reasons, you will not be able to launch the SecureDrop Application until
 updates have been applied. This typically takes between 10 and 30 minutes.
 
 Click "Start updates" if you are ready to start the process. (If you prefer to
@@ -27,9 +27,9 @@ You will see a progress indicator until updates are completed:
 .. important:: Allow the update process to complete fully, without closing or
    interrupting it, or you risk breaking important system components.
 
-At the end of this process, SecureDrop Workstation may prompt you to reboot
+At the end of this process, you may be prompted you to reboot
 if core system components were updated. Once all steps in the update process have
-been completed, the SecureDrop App will launch automatically.
+been completed, the SecureDrop Application will launch automatically.
 
 Signing in
 ----------
@@ -69,14 +69,14 @@ state of submissions.
 
 |screenshot_use_offline|
 
-Because SecureDrop Workstation allows you to download and decrypt submissions
+Because SecureDrop allows you to download and decrypt submissions
 on one machine, submissions that you have downloaded are still available in
 offline mode and can be accessed even when you are not logged in.
 
 |screenshot_offline_mode|
 
 .. important:: Protecting downloaded submissions is another reason why
-   SecureDrop Workstation needs to be powered off completely when it is not in
+   The *Journalist Workstation* needs to be powered off completely when it is not in
    use.
 
 .. |screenshot_desktop-shortcut| image:: ../images/screenshot_desktop-shortcut.png

@@ -43,7 +43,7 @@ Install tasks:
 Import KeePassXC database
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have a KeePassXC database on your Tails-based *Admin Workstation*, you should copy it to the ``vault`` VM on the Primary SecureDrop Workstation.
+If you have a KeePassXC database on your Tails-based *Admin Workstation*, you should copy it to the ``vault`` VM on the new Qubes-based *Admin-Workstation*.
 
 Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` VM.  
 
@@ -55,7 +55,7 @@ Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault``
 Configure SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that your Primary SecureDrop Workstation is prepared, you can proceed with importing the correct *Journalist Interface* details and submission private key from your Tails-based *Secure Viewing Station* and *Journalist Workstation* USB drives.
+Now that your new Qubes-based *Admin-Workstation* is prepared, you can proceed with importing the correct *Journalist Interface* details and submission private key from your Tails-based *Secure Viewing Station* and *Journalist Workstation* USB drives.
 
 Import Submission Private Key
 -----------------------------
@@ -109,7 +109,7 @@ Import *Journalist Interface* details
 
 SecureDrop Workstation connects to your SecureDrop instance's API via the *Journalist Interface*. In order to do so, it will need the *Journalist Interface* address and authentication info. As the clipboard from another VM cannot be copied into ``dom0`` directly, follow these steps to copy the file into place:
 
-- Locate an *Admin Workstation* or *Journalist Workstation* USB drive. Both hold the address and authentication info for the *Journalist Interface*; if you also want to copy the journalist user's password database, use the *Journalist Workstation* USB drive.
+- Locate a Tails-based *Admin Workstation* or *Journalist Workstation* USB drive. Both hold the address and authentication info for the *Journalist Interface*; if you also want to copy the journalist user's password database, use the *Journalist Workstation* USB drive.
 
 - Connect the USB drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` VM. There will be 3 listings for the USB in the widget: one for the base USB, one for the Tails partition on the USB, labeled ``Tails``, and a 3rd unlabeled listing, for the persistent volume. Choose the third listing.
 
@@ -123,12 +123,12 @@ SecureDrop Workstation connects to your SecureDrop instance's API via the *Journ
 
   The command will print out the imported *Journalist Interface* details to confirm before proceeding.
 
-- If you used an *Admin Workstation* USB drive, or you don't intend to copy a password database to this workstation, safely disconnect the USB drive now. In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the USB drive.
+- If you used a Tails-based *Admin Workstation* USB drive, or you don't intend to copy a password database to this workstation, safely disconnect the USB drive now. In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the USB drive.
 
 Copy SecureDrop login credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Users of SecureDrop Workstation must enter their username, passphrase and two-factor code to connect with the SecureDrop server. You can manage these passphrases using the KeePassXC password manager in the ``vault`` VM. If this laptop will be used by more than one journalist, we recommend that you shut down the ``vault`` VM now (using the Qube widget in the upper right panel), skip this section, and use a smartphone password manager instead.
+When launching the SecureDrop Application must enter their username, passphrase and two-factor code to connect with the SecureDrop server. You can manage these passphrases using the KeePassXC password manager in the ``vault`` VM. If this laptop will be used by more than one journalist, we recommend that you shut down the ``vault`` VM now (using the Qube widget in the upper right panel), skip this section, and use a smartphone password manager instead.
 
 In order to set up KeePassXC for easy use:
 
@@ -140,11 +140,11 @@ In order to set up KeePassXC for easy use:
 
 .. important::
 
-   The *Admin Workstation* password database contains sensitive credentials not required by journalist users. Make sure to copy the credentials from the *Journalist Workstation* USB.
+   The password database from the Tails-based *Admin Workstation* contains sensitive credentials not required by journalist users. Make sure to copy the credentials from the Tails-based *Journalist Workstation* USB.
 
 In order to copy a journalist's login credentials:
 
-- If a *Journalist Workstation* USB is not currently attached, connect it, attach it to the ``vault`` VM, open it in the file manager, and enter its encryption passphrase.
+- If a Tails-based *Journalist Workstation* USB is not currently attached, connect it, attach it to the ``vault`` VM, open it in the file manager, and enter its encryption passphrase.
 
 - Locate the password database. It should be in the ``Persistent`` directory, and will typically be named ``keepassx.kdbx`` or similar.
 

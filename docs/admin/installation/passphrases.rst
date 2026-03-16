@@ -3,15 +3,15 @@ Passphrases Overview
 
 Each individual with a role (admin or journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation. 
 
-Ideally, each admin and journalist would only have to remember the passphrases to unlock the encrypted storage on their *SecureDrop Workstation* laptop.
+Ideally, each admin and journalist would only have to remember the passphrases to unlock the encrypted storage on their *Journalist Workstation* laptop.
 
 Admin
 -----
 
-The admin will be using a *SecureDrop Workstation* configured to connect to the *Application Server* and the *Monitor Server* using Tor and SSH. The tasks performed by the admin will require the following set of credentials and passphrases:
+The admin will be using an *Admin Workstation* configured to connect to the *Application Server* and the *Monitor Server* using Tor and SSH. The tasks performed by the admin will require the following set of credentials and passphrases:
 
-- The Qubes full disk encryption (FDE) password of the Primary SecureDrop Workstation, required to unlock system storage on boot.
-- The Qubes system user password for the Primary SecureDrop Workstation, required to log in.
+- The Qubes full disk encryption (FDE) password of the *Admin Workstation*, required to unlock system storage on boot.
+- The Qubes system user password for the *Admin Workstation*, required to log in.
 -  Additional credentials, which we recommend adding to Tails' KeePassXC password
    manager during the installation:
 
@@ -38,10 +38,10 @@ And the admin will also have the following two credentials:
 Journalist
 ----------
 
-The journalist will be using a *SecureDrop Workstation* to view submissions with the SecureDrop App. The tasks performed by the journalist will require the following set of passphrases:
+The journalist will be using a *Journalist Workstation* to view submissions with the SecureDrop Application. The tasks performed by the journalist will require the following set of passphrases:
 
--  The Qubes full disk encryption (FDE) password of the SecureDrop Workstation they use, required to unlock system storage on boot.
--  The Qubes system user password for the SecureDrop Workstation they use, required to log in.
+-  The Qubes full disk encryption (FDE) password of the Journalist Workstation they use, required to unlock system storage on boot.
+-  The Qubes system user password for the Journalist Workstation they use, required to log in.
 
 The journalist will also need to have a two-factor authenticator, such as an Android or iOS device with FreeOTP installed, or a YubiKey. This means the journalist will also have the following credential:
 
@@ -50,7 +50,7 @@ The journalist will also need to have a two-factor authenticator, such as an And
 *Export USB*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We recommend using encrypted USB drives for transferring files off of the *SecureDrop Workstation*.
+We recommend using encrypted USB drives for transferring files off of the *Journalist Workstation*.
 
 For every export operation, the user will need to enter the USB drive's encryption passphrase at least twice (on the computer they're copying from, and on the computer they're copying to). To make it easy for them to find the passphrase, we recommend storing it in the journalist's own existing password manager, which should be accessible using their smartphone.
 
@@ -93,7 +93,7 @@ All SecureDrop users---Sources, Journalists, and Admins---are required to memori
 How to Generate a Strong, Unique Passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We recommend using a unique, 7-word passphrase for each case described above. We encourage each end user to use KeePassXC, an easy-to-use password manager included in QubesOS, to generate and retain strong and unique passphrases. The SecureDrop installation includes a template that you can use to initialize this database, which will be explained when you set up your first :ref:`*SecureDrop Workstation* <keepassxc_setup>`.
+We recommend using a unique, 7-word passphrase for each case described above. We encourage each end user to use KeePassXC, an easy-to-use password manager included in QubesOS, to generate and retain strong and unique passphrases. The SecureDrop installation includes a template that you can use to initialize this database, which will be explained when you set up your first :ref:`*Admin Workstation* <keepassxc_setup>`.
 
 *Using KeePassXC to Generate a Passphrase*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

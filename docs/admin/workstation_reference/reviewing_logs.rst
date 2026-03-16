@@ -1,6 +1,6 @@
 Reviewing and exporting logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SecureDrop Workstation aggregates system logs from all its VMs in the ``sd-log`` VM, in the folder ``~/QubesIncomingLogs``, with one subfolder for each VM. You can inspect these logs directly in the ``sd-log`` VM, or you can copy them to another VM, e.g., for purposes of sharing logs with the SecureDrop development team.
+The *Journalist Workstation* aggregates system logs from all its VMs in the ``sd-log`` VM, in the folder ``~/QubesIncomingLogs``, with one subfolder for each VM. You can inspect these logs directly in the ``sd-log`` VM, or you can copy them to another VM, e.g., for purposes of sharing logs with the SecureDrop development team.
 
 Please note that while the logs do not include original filenames or message contents, they do contain sensitive information, e.g.:
 

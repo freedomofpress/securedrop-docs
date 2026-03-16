@@ -12,7 +12,7 @@ SSH to Both Servers Over Tor
 Assuming you haven't disabled SSH over Tor, SSH access will be
 restricted to the Tor network.
 
-On the Primary SecureDrop Workstation, you should be able to SSH to the *Application Server* and the *Monitor Server* from the ``sd_admin`` VM ::
+On the *Admin Workstation*, you should be able to SSH to the *Application Server* and the *Monitor Server* from the ``sd_admin`` VM ::
 
    ssh app
    ssh mon
@@ -34,7 +34,7 @@ Log in to Both Servers via TTY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All access to the SecureDrop servers should be performed over SSH from the
-Primary SecureDrop Workstation. To aid in troubleshooting, login via a physical keyboard
+*Admin Workstation*. To aid in troubleshooting, login via a physical keyboard
 attached to the server is also supported.
 
 Sanity-Check the Installation

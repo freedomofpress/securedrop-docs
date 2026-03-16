@@ -5,8 +5,10 @@ At this point, the only person who has access to the system is the
 admin. In order to grant access to journalists, you will need
 to do some additional setup for each individual journalist.
 
-Provision additional SecureDrop Workstation
+Provision *Journalist Workstation*
 -------------------------------------------
+
+.. TODO
 
 Add an account on the *Journalist Interface*
 --------------------------------------------

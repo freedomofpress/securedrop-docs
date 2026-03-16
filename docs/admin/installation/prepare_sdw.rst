@@ -1,4 +1,4 @@
-Prepare Primary SecureDrop Workstation
+Prepare a SecureDrop Workstation
 ======================================
 
 .. _prepare_primary_securedrop_workstation:

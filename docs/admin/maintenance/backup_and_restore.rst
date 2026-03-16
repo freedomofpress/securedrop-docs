@@ -25,7 +25,7 @@ doing backups.
          about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
          restore accordingly.
 
-On the *Application Server*, open a Terminal via **Apps ▸ System Tools ▸ Console** on the Admin Workstation and run
+On the *Application Server*, open a Terminal via **Apps ▸ System Tools ▸ Console** on the *Admin Workstation* and run
 
 .. code:: sh
 

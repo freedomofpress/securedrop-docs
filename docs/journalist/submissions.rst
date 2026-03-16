@@ -25,7 +25,7 @@ decompresses the downloaded file.
 
 |screenshot_file_download_successful|
 
-Viewing Submissions on the SecureDrop Workstation
+Viewing Submissions on the *Journalist Workstation*
 -------------------------------------------------
 
 To view a downloaded submission, click its filename. This will open
@@ -35,12 +35,12 @@ window title prefixed with "disp" (meaning disposable).
 
 |screenshot_dispvm|
 
-This disposable VM is a special isolated environment; it does not have internet access, and isolates the files that you are viewing from other sensitive files and applications on the SecureDrop Workstation.
+This disposable VM is a special isolated environment; it does not have internet access, and isolates the files that you are viewing from other sensitive files and applications on the *Journalist Workstation*.
 
 Supported Filetypes
 ~~~~~~~~~~~~~~~~~~~
 
-The following filetypes are currently supported for viewing on the SecureDrop Workstation:
+The following filetypes are currently supported for viewing on the *Journalist Workstation*:
 
 * .txt, .csv, .pdf
 * Microsoft Office files (.doc, .docx, .xls, .xlsx, .ppt, .pptx)
@@ -59,7 +59,7 @@ A full list of supported filetypes can be found `here <https://github.com/freedo
 
 .. _`the Qubes OS documentation`: https://www.qubes-os.org
 
-Printing Submissions from the SecureDrop Workstation
+Printing Submissions from the *Journalist Workstation*
 ----------------------------------------------------
 
 To print a document, a :doc:`compatible printer <../admin/installation/hardware>`  must be plugged into the computer's USB port.
@@ -68,7 +68,7 @@ To print a document, a :doc:`compatible printer <../admin/installation/hardware>
 2. You will prompted to attach your printer.
 3. A Print Document dialog will appear, from which you can configure different print options before printing the document.
 
-Exporting Submissions from the SecureDrop Workstation
+Exporting Submissions from the *Journalist Workstation*
 -----------------------------------------------------
 
 .. important::
@@ -79,7 +79,7 @@ Exporting Submissions from the SecureDrop Workstation
    the risk of spreading malware to that computer. Make sure you understand the
    risks, and consider other methods to export the document (e.g., print).
 
-If you must copy a file from your *SecureDrop Workstation* to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that journalists are provided with an d *Encrypted USB Drive*, drive which is encrypted using `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
+If you must copy a file from your **Journalist Workstation** to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that journalists are provided with an d *Encrypted USB Drive*, drive which is encrypted using `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
 These instructions assume that you are following the recommended workflow.
 If you are unsure, ask your administrator.
 
@@ -153,7 +153,7 @@ audio, and begin publishing important, high-impact work!
          about encouraging sources to use SecureDrop.
 
 
-Safely Working With Submissions Outside the SecureDrop Workstation
+Safely Working With Submissions Outside the *Journalist Workstation*
 ------------------------------------------------------------------
 
 .. _malware_risks:
@@ -163,9 +163,9 @@ Risks From Malware
 SecureDrop does not scan for or remove malware in submissions you receive. There
 are important steps you can take to protect yourself:
 
-1. **Keep your SecureDrop Workstation up-to-date.**
+1. **Keep your *Journalist Workstation* up-to-date.**
 
-2. **Print documents from the SecureDrop Workstation instead of exporting them
+2. **Print documents from the *Journalist Workstation* instead of exporting them
    digitally, whenever possible.**
 
    Printing documents prevents the proliferation of malware to your everyday

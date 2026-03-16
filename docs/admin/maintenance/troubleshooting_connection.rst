@@ -151,7 +151,7 @@ Step 5: Restart ``sd-proxy``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Restart ``sd-proxy`` to attempt to restore connectivity:
 
-1. Exit the SecureDrop app if it is running.
+1. Exit the SecureDrop Application if it is running.
 2. Click the Qubes Application menu |qubes_menu| icon in the system tray (top left).
 3. Click **Run Qube Manager**
 4. Right-click ``sd-proxy`` in the list of VMs. Click **Shutdown qube**.

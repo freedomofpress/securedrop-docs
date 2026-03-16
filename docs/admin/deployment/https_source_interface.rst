@@ -1,6 +1,8 @@
 HTTPS on the *Source Interface*
 ===============================
 
+.. TODO update this page for Qubes
+
 The SecureDrop *Source Interface* is served as an onion service with an ``.onion``
 URL, requiring Tor Browser to access it. While onion services provide
 end-to-end encryption by default, as well as strong anonymity, there are

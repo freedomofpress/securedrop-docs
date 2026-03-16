@@ -1,19 +1,19 @@
 Install SecureDrop on the servers
 =================================
 
-Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` VM on the Primary SecureDrop Workstation you prepared earlier. 
+Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` VM on the *Admin Workstation* you prepared earlier. 
 
 .. _test_connectivity:
 
 Test Connectivity to Servers
 ----------------------------
 
-Having set up the firewall, you can plug the *Application Server* and the *Monitor Server* into the firewall. Your Primary SecureDrop Workstation should also be connected to the firewall.
+Having set up the firewall, you can plug the *Application Server* and the *Monitor Server* into the firewall. Your *Admin Workstation* should also be connected to the firewall.
 
 If you are using a setup where there is a switch on the LAN port, plug the *Application Server*
 into the switch and plug the *Monitor Server* into the OPT1 port.
 
-You should make sure you can connect from the Admin Workstation to both of the servers before continuing with the
+You should make sure you can connect from the *Admin Workstation* to both of the servers before continuing with the
 installation.
 
 Open a terminal in ``sd-admin`` and verify that you can SSH into both servers, authenticating with your server administrator username (e.g. ``sdadmin``) and password:

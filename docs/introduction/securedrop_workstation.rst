@@ -42,10 +42,10 @@ SecureDrop Workstation tightly controls access to the network, in order to
 prevent the exfiltration of messages, replies, documents, or encryption keys by
 adversaries. Specifically, the following VMs have no network access:
 
-- ``sd-app``, which runs the SecureDrop App, and holds decrypted messages,
+- ``sd-app``, which runs the SecureDrop Application, and holds decrypted messages,
   replies, and documents.
 - ``sd-viewer``, which is the template for disposable VMs used for opening
-  documents from the SecureDrop App.
+  documents from the SecureDrop Application.
 - ``sd-gpg``, which holds the *Submission Private Key* required to decrypt
   messages, replies, and documents.
 - ``sd-devices``, which passes exported documents through to USB devices like
@@ -59,7 +59,7 @@ access.
    If you attempt to directly access the network in any of these VMs, it will
    not work. That is the expected behavior.
 
-Because the SecureDrop App must connect to the SecureDrop
+Because the SecureDrop Application must connect to the SecureDrop
 *Application Server* in order to send or retrieve messages, documents, and
 replies, it can communicate through Qubes-internal Remote Procedure Calls (RPCs)
 with another VM, ``sd-proxy``, which can only access the open Internet through
@@ -67,7 +67,7 @@ the Tor network.
 
 Like all networked VMs, ``sd-proxy`` uses the ``sys-firewall`` service to
 connect to the network, which is provided via ``sys-net``. All three VMs must be
-running for the SecureDrop App to successfully connect to the server.
+running for the SecureDrop Application to successfully connect to the server.
 
 .. important::
 
@@ -106,7 +106,7 @@ You cannot print from the viewer application, because it does not have access
 to peripherals. This prevents malware from exfiltrating data (e.g., via attached
 USB devices), and from targeting hardware-level security vulnerabilities.
 
-You *can* print files directly from the SecureDrop App by clicking "Print"
+You *can* print files directly from the SecureDrop Application by clicking "Print"
 for a downloaded file, which will pass the file through to your USB printer
 without opening it in an interactive viewer application.
 
@@ -181,7 +181,7 @@ in a timely manner, which can significantly worsen its security posture.
 In SecureDrop Workstation, any document received via SecureDrop is opened in a
 disposable VM that has no Internet access and no access to other files submitted
 via SecureDrop. The encryption keys are stored in a separate, networkless VM
-from the SecureDrop App app.
+from the SecureDrop Application.
 
 Because SecureDrop Workstation has Internet access, updates can be applied
 automatically as soon as they are available. SecureDrop Workstation enforces this

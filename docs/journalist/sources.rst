@@ -1,7 +1,7 @@
 Communicating with sources
 ==========================
 
-SecureDrop Workstation lets journalists check SecureDrop, decrypt and securely
+The *Journalist Workstation* lets journalists check SecureDrop, decrypt and securely
 view submissions, and reply to sources, all on the same computer.
 
 Once logged in, you will see a chat-like user interface:
@@ -58,7 +58,7 @@ different conversation.
 
 .. note:: If a reply fails to be sent successfully, it will still be visible in
   subsequent sessions, including to any other users logging into the same
-  physical SecureDrop Workstation.
+  physical *Journalist Workstation*.
 
 Deleting conversations and source accounts
 ------------------------------------------
