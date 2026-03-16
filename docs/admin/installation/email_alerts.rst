@@ -111,7 +111,7 @@ although we've described some common scenarios in the
 Using Gmail for OSSEC alerts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It's easy to get SecureDrop to use Google's servers to deliver the
+It's possible SecureDrop to use Google's servers to deliver the
 alerts, but it's not ideal from a security perspective. This option
 should be regarded as a backup plan. Keep in mind that you're leaking
 metadata about the timing of alerts to a third party — the alerts are
