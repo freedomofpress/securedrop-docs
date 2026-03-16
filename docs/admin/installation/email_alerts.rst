@@ -1,7 +1,11 @@
 Prepare email accounts
 ======================
 
-Optional: Daily Journalist Alerts
+SecureDrop is configured to send different alerts by PGP-encrypted email. Before installing SecureDrop, you must select or prepare the e-mail accounts where you would like these alerts to be sent. In the case of OSSEC alerts (which you must set up), configured an SMTP relay is also required. 
+
+.. _daily_journalist_alerts:
+
+Optional: Daily Journalist alerts
 -------------------------------------------
 
 When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for journalists to be notified daily via encrypted email about whether or not there has been submission activity in the past 24 hours.
