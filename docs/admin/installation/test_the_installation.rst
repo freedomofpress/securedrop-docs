@@ -32,7 +32,7 @@ Log in to Both Servers via TTY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All access to the SecureDrop servers should be performed over SSH from the
-Primacy SecureDrop Workstation. To aid in troubleshooting, login via a physical keyboard
+Primary SecureDrop Workstation. To aid in troubleshooting, login via a physical keyboard
 attached to the server is also supported.
 
 Sanity-Check the Installation
