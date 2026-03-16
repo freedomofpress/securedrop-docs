@@ -26,7 +26,7 @@ decompresses the downloaded file.
 |screenshot_file_download_successful|
 
 Viewing Submissions on the *Journalist Workstation*
--------------------------------------------------
+---------------------------------------------------
 
 To view a downloaded submission, click its filename. This will open
 the file in a temporary environment, called a "disposable VM." The file you
@@ -60,7 +60,7 @@ A full list of supported filetypes can be found `here <https://github.com/freedo
 .. _`the Qubes OS documentation`: https://www.qubes-os.org
 
 Printing Submissions from the *Journalist Workstation*
-----------------------------------------------------
+------------------------------------------------------
 
 To print a document, a :doc:`compatible printer <../admin/installation/hardware>`  must be plugged into the computer's USB port.
 
@@ -69,7 +69,7 @@ To print a document, a :doc:`compatible printer <../admin/installation/hardware>
 3. A Print Document dialog will appear, from which you can configure different print options before printing the document.
 
 Exporting Submissions from the *Journalist Workstation*
------------------------------------------------------
+-------------------------------------------------------
 
 .. important::
 
@@ -154,7 +154,7 @@ audio, and begin publishing important, high-impact work!
 
 
 Safely Working With Submissions Outside the *Journalist Workstation*
-------------------------------------------------------------------
+--------------------------------------------------------------------
 
 .. _malware_risks:
 
