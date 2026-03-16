@@ -18,7 +18,7 @@ attributes that will be important to have:
 
 We consider the first two requirements and the last three preferred attributes.
 
-This Admin Guide will walk you through the entire experience, from planning to installation, to deployment, to ongoing maintenance.
+This Admin Guide covers planning, installation, deployment, and ongoing maintenance of a SecureDrop installation.
 
 .. _Responsibilities:
 
