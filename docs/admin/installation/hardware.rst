@@ -247,32 +247,6 @@ startup and adjust the system configuration:
 
 .. |NUC11 leads| image:: ../../images/hardware/nuc11_leads.jpg
 
-.. _nuc10_recommendation:
-
-10th-gen NUC
-~~~~~~~~~~~~
-We previously recommended the NUC10i5FNH, however it is now end-of-life so we
-recommend replacing it with a version that the manufacturer supports. While SecureDrop
-will most likely continue working in the short-term, we will no longer be testing on
-this hardware.
-
-8th-gen NUC
-~~~~~~~~~~~~
-We previously recommended the NUC8i5BEK, however it is now end-of-life so we
-recommend replacing it with a version that the manufacturer supports. While SecureDrop
-will most likely continue working in the short-term, we will no longer be testing on
-this hardware.
-
-.. _nuc7_recommendation:
-
-7th-gen NUC
-~~~~~~~~~~~~
-We previously recommended the NUC7i5BNH, however it is now end-of-life so we
-recommend replacing it with a version that the manufacturer supports. While SecureDrop
-will most likely continue working in the short-term, we will no longer be testing on
-this hardware.
-
-
 Workstations
 ^^^^^^^^^^^^
 
@@ -507,6 +481,10 @@ requirements for a SecureDrop instance, any hardware that is no longer
 receiving security updates from the manufacturer will become more and more
 vulnerable over time. Once your hardware has reached its end-of-life (EOL),
 we recommend upgrading to newer, supported hardware.
+
+We previously recommended the NUC10i5FNH, NUC8i5BEK, and NUC7i5BNH. If
+you are still using one of these models, we recommend replacing them with 
+one of the models listed above.
 
 For the hardware we recommend, you can find a list of end-of-life dates below:
 
