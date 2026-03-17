@@ -1,7 +1,7 @@
 Prepare email accounts
 ======================
 
-SecureDrop is configured to send different alerts by PGP-encrypted email. Before installing SecureDrop, you must select or prepare the e-mail accounts where you would like these alerts to be sent. In the case of OSSEC alerts (which you must set up), configured an SMTP relay is also required. 
+SecureDrop sends different alerts by PGP-encrypted email. Before installing SecureDrop, you must select or prepare the e-mail accounts where you would like these alerts to be sent. In the case of OSSEC alerts (which you must set up), configuring an SMTP relay is also required. 
 
 .. _daily_journalist_alerts:
 
