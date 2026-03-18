@@ -87,7 +87,6 @@ Get Started
    
    admin/reference/admin
    admin/reference/responsibilities
-   admin/workstation_reference/hardware
    admin/reference/admin_interface
    admin/reference/ssh_access
    admin/reference/securedrop_admin
