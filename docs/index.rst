@@ -80,7 +80,6 @@ Get Started
    admin/installation/intro_for_admins
    admin/installation/installation_overview
    admin/installation/hardware
-   admin/workstation_reference/hardware
    admin/installation/passphrases.rst
    admin/installation/email_alerts
    admin/installation/prepare_sdw

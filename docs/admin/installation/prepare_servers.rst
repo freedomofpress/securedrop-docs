@@ -19,9 +19,9 @@ hardware, including:
 * wireless LAN and Bluetooth
 * Thunderbolt support
 * audio support (output, speakers, microphones)
-* other features supported by the hardware but not used by SecureDrop.
+* other features supported by the hardware but not used by SecureDrop, such as Thunderbolt, SD card controller, or enhanced consumer infrared
 
-In most cases, you should enable support for LAN and USB ports only.
+In most cases, you should enable support for LAN and USB ports only. On NUC models, you can find this under **Advanced ▸ Onboard Devices**
 
 You should also check the servers' boot settings. Ubuntu 24.04 supports both
 Legacy and UEFI boot modes, with UEFI preferred. You should also disable Secure

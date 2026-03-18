@@ -26,6 +26,10 @@ Install tasks:
 
 .. include:: /admin/installation/prepare_sdw.rst
   :start-after: .. _securedrop_workstation_preinstall_tasks:
+  :end-before: .. _SecureBoot:
+
+.. include:: /admin/installation/prepare_sdw.rst
+  :start-after: .. _SecureBoot:
   :end-before: .. _apply_dom0_updates:
 
 .. include:: /admin/installation/prepare_sdw.rst

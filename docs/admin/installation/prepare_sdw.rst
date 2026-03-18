@@ -49,8 +49,7 @@ Once the BIOS is up-to-date, boot into the BIOS setup utility and update its set
 - Enable virtualization support (required for Qubes OS).
   - for Intel-based devices, **Intel VT-d** and **Intel VT-x** should be enabled
   - for AMD-based devices, **AMD-VI** and **AMD-V** should be enabled
-- Disable all onboard devices other than LAN: these may include HD audio, microphone, Thunderbolt, WLAN, Bluetooth, SD card controller, and enhanced consumer infrared.
-  - On NUC models, you can find this under **Advanced ▸ Onboard Devices**
+- Disable unnecessary I/O options such as Wireless WAN and  Bluetooth.
 - Disable unnecessary network options such as Wake-on-LAN and UEFI network stacks.
 - Disable Thunderbolt ports, or any other ports that allow Direct Memory Access (DMA).
 - Enable any physical tamper detection options.
