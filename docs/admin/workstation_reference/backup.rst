@@ -1,6 +1,8 @@
 Backup and Restore
 ==================
 
+.. TODO possibly need distinct backup and restore instructions for Qubes-based Admin and Journalist Workstations? Possibly not?
+
 Qubes OS has a `backup utility <https://www.qubes-os.org/doc/backup-restore/>`_
 that allows for backup and restoration of user-specified VMs and templates.
 
@@ -113,7 +115,7 @@ Reinstall Qubes OS
 ~~~~~~~~~~~~~~~~~~
 
 To restore SecureDrop Workstation, follow our
-:doc:`pre-install tasks <../installation/prepare>` to provision a Qubes OS system complete with
+:doc:`pre-install tasks </admin/installation/prepare_sdw>` to provision a Qubes OS system complete with
 updated base templates.
 
 Rename or delete redundant AppVMs

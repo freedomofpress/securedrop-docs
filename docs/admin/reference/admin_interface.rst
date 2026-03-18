@@ -27,7 +27,6 @@ the :doc:`journalist guide <../../journalist/journalist>`.
   valid, you can create another account with admin privileges via the command line
   on the *Application Server*. See :ref:`here <Create Admin CLI>` for more information.
 
-
 .. _User Management:
 
 User Management
@@ -69,6 +68,10 @@ account setup.
    The username **deleted** is reserved, as it is used to mark accounts which
    have been deleted from the system.
 
+.. |SecureDrop admin home| image:: ../../images/manual/screenshots/journalist-admin_interface_index.png
+   :alt: The Admin Interface displays an 'Add User' button.
+.. |Add a new user| image:: ../../images/manual/screenshots/journalist-admin_add_user_totp.png
+   :alt: The form used to create new users displays a pre-generated Diceware passphrase.
 
 FreeOTP
 ~~~~~~~
@@ -86,6 +89,9 @@ to the *Admin Interface* and will see a confirmation that the two-factor code wa
 verified.
 
 .. include:: ../../includes/tor-security-setting.txt
+
+.. |Enable FreeOTP| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
+   :alt: The form used to enable FreeOTP displays a barcode and a two-factor secret.
 
 YubiKey
 ~~~~~~~
@@ -105,6 +111,12 @@ method whenever they check SecureDrop. Make sure that they have memorised their
 username and passphrase, or stored them in their password manager, and that they
 can keep their two-factor authentication device secure.
 
+.. |Enable YubiKey| image:: ../../images/manual/screenshots/journalist-admin_add_user_hotp.png
+   :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
+.. |Verify YubiKey| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
+   :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
+
+.. _Passphrases_and_two-factor_resets:
 
 Passphrases and Two-Factor Resets
 ---------------------------------
@@ -150,7 +162,7 @@ To reset two-factor authentication:
 Off-boarding Users
 ------------------
 
-See :doc:`our guide to off-boarding users from SecureDrop <../deployment/offboarding>`.
+See :doc:`our guide to off-boarding users from SecureDrop </admin/reference/offboarding>`.
 
 Instance Configuration
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -202,7 +214,7 @@ OSSEC alert by clicking **Send Test OSSEC Alert**.
 
 You should receive an OSSEC alert email at the address specified during the
 installation of SecureDrop. The email may take several minutes to arrive. If
-you don't receive it, refer to the :doc:`OSSEC Guide<../maintenance/ossec_alerts>`
+you don't receive it, refer to the :doc:`OSSEC Guide</admin/installation/troubleshoot_ossec>`
 for information on troubleshooting steps.
 
 
@@ -267,15 +279,5 @@ checkbox and click **Update Submission Preferences**.
    :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
 .. |SecureDrop main page| image:: ../../images/manual/screenshots/journalist-admin_index_no_documents.png
    :alt: The top navigation of the Journalist Interface says 'Logged on as Journalist' and displays an 'Admin' link.
-.. |SecureDrop admin home| image:: ../../images/manual/screenshots/journalist-admin_interface_index.png
-   :alt: The Admin Interface displays an 'Add User' button.
-.. |Add a new user| image:: ../../images/manual/screenshots/journalist-admin_add_user_totp.png
-   :alt: The form used to create new users displays a pre-generated Diceware passphrase.
-.. |Enable FreeOTP| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
-   :alt: The form used to enable FreeOTP displays a barcode and a two-factor secret.
-.. |Enable YubiKey| image:: ../../images/manual/screenshots/journalist-admin_add_user_hotp.png
-   :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
-.. |Verify YubiKey| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
-   :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
 .. |Logo Update| image:: ../../images/manual/screenshots/journalist-admin_changes_logo_image.png
    :alt: The Instance Configuration form displays 'Image updated' after the logo was updated successfully.

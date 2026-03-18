@@ -60,7 +60,7 @@ can log in to the *Journalist Interface* with the admin account you just
 created.
 
 For adding more user accounts, please refer now to our :doc:`Admin
-Interface Guide <../reference/admin>`.
+Interface Guide </admin/reference/admin_interface>`.
 
 .. note:: You can now set a custom logo image on your web interfaces by
            following the :ref:`Updating Logo Image` documentation.

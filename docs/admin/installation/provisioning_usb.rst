@@ -1,7 +1,7 @@
 Provisioning Export USB devices
 ===============================
 
-SecureDrop Workstation supports the export of submissions from the SecureDrop App
+The *Journalist Workstation* supports the export of submissions from the SecureDrop App
 to a LUKS- or VeraCrypt-encrypted USB *Export Device*.
 
 Creating a LUKS-encrypted drive
@@ -10,7 +10,7 @@ Creating a LUKS-encrypted drive
 .. note:: LUKS-encrypted devices can only be used with Linux-based
   systems such as Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
 
-In order to provision a LUKS-encrypted *Export Device* for use with SecureDrop Workstation,
+In order to provision a LUKS-encrypted *Export Device* for use a *Journalist Workstation*,
 you will need a fresh USB stick and a Linux-based system. Tails is recommended -
 if available, the *Secure Viewing Station* can be used, adding the extra benefit
 of its airgap:
@@ -36,14 +36,14 @@ of its airgap:
 - Once the password is set, click **Format**, then when prompted, click **Format**
   again. The formatting process should take only a few seconds.
 - Once formatting is complete, you will need to provide the *Export Device* and
-  its decryption password to the SecureDrop Workstation users. Make sure that
+  its decryption password to the *Journalist Workstation* users. Make sure that
   they store it and its password securely, as it will contain decrypted
   submissions.
 
 Creating a VeraCrypt-encrypted drive
 ------------------------------------
 
-.. Remove the following warning once securedrop-docs#599 and
+.. TODO Remove the following warning once securedrop-docs#599 and
    veracrypt/VeraCrypt#1422 are resolved.
 
 .. warning::
@@ -86,6 +86,6 @@ Creating a VeraCrypt-encrypted drive
   this pops up, it may look like the program is frozen, but it's running in the background.
 - Click **OK** and then **Exit** to finish formatting process.
 - Once formatting is complete, you will need to provide the *Export Device* and
-  its decryption password to the SecureDrop Workstation users. Make sure that
+  its decryption password to the *Journalist Workstation* users. Make sure that
   they store it and its password securely, as it will contain decrypted
   submissions.

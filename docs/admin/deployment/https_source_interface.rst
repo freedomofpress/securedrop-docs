@@ -1,6 +1,8 @@
 HTTPS on the *Source Interface*
 ===============================
 
+.. TODO update this page for Qubes
+
 The SecureDrop *Source Interface* is served as an onion service with an ``.onion``
 URL, requiring Tor Browser to access it. While onion services provide
 end-to-end encryption by default, as well as strong anonymity, there are
@@ -140,7 +142,7 @@ the Admin Workstation:
 Activating HTTPS in SecureDrop
 ------------------------------
 
-Make sure you have :doc:`installed SecureDrop already <../installation/install>`.
+Make sure you have :doc:`installed SecureDrop already </admin/installation/installation_overview>`.
 
 Make note of the Source Interface Onion URL. Now from a Terminal
 on your *Admin Workstation*:

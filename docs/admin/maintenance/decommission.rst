@@ -79,7 +79,7 @@ SecureDrop instance.
    submissions, and store them in a secure manner (such as on an encrypted
    drive). 
 #. **Optional: Delete submissions on the server.**
-   Log into the *SecureDrop Workstation* and delete all sources to take advantage
+   Log into the *Journalist Workstation* and delete all sources to take advantage
    of SecureDrop's secure deletion properties. Note that depending on the
    number of sources on your server, it may take anywhere from several minutes
    to an hour or more for the submissions to be completely deleted from the

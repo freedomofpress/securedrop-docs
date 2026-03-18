@@ -151,7 +151,7 @@ Step 5: Restart ``sd-proxy``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Restart ``sd-proxy`` to attempt to restore connectivity:
 
-1. Exit the SecureDrop app if it is running.
+1. Exit the SecureDrop Application if it is running.
 2. Click the Qubes Application menu |qubes_menu| icon in the system tray (top left).
 3. Click **Run Qube Manager**
 4. Right-click ``sd-proxy`` in the list of VMs. Click **Shutdown qube**.
@@ -187,6 +187,40 @@ VM. They can be found in the default user's ``~/QubesIncomingLogs`` directory.
 
 In addition, you may want to examine ``/var/log/syslog`` in ``sys-net`` and
 ``sys-firewall``.
+
+.. _troubleshooting_admin_connectivity:
+
+I can't SSH into my servers over Tor. What do I do?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+At any point after the successful installation of SecureDrop, if you cannot SSH
+into your servers, you should first perform the following troubleshooting steps:
+
+#. **Ensure that you are connected to Tor.** 
+
+#. **Ensure your servers are online.** Visit the *Admin Interface* to check
+   your *Application Server* is online, and you can trigger a 
+   :ref:`test OSSEC alert <test-OSSEC-alert>` to verify your *Monitor Server* is online.
+
+#. **Ensure that SSH aliases and onion service authentication are configured:**
+
+   - First, ensure that the correct configuration files are present in
+     ``~/.config/securedrop-admin``:
+
+     - ``app-ssh.auth_private``
+     - ``mon-ssh.auth_private``
+     - ``app-journalist.auth_private``
+     - ``app-sourcev3-ths``
+     - ``tor_v3_keys.json``
+
+   - Then, run  ``securedrop-admin localconfig``.
+     This will ensure your local Tails environment is configured properly.
+
+#. **Confirm that your SSH key is available**: During the install, you
+   configured SSH public key authentication using ``ssh-copy-id``.
+   Ensure this key is available using ``ssh-add -L``. If you see the output
+   "This agent has no identities." then you need to add the key via ``ssh-add``
+   prior to SSHing into the servers.
 
 
 .. |screenshot_network_manager_wired_icon| image:: ../../images/screenshot_network_manager_wired_icon.png

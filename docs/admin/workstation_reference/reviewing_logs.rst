@@ -1,6 +1,6 @@
 Reviewing and exporting logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SecureDrop Workstation aggregates system logs from all its VMs in the ``sd-log`` VM, in the folder ``~/QubesIncomingLogs``, with one subfolder for each VM. You can inspect these logs directly in the ``sd-log`` VM, or you can copy them to another VM, e.g., for purposes of sharing logs with the SecureDrop development team.
+The *Journalist Workstation* aggregates system logs from all its VMs in the ``sd-log`` VM, in the folder ``~/QubesIncomingLogs``, with one subfolder for each VM. You can inspect these logs directly in the ``sd-log`` VM, or you can copy them to another VM, e.g., for purposes of sharing logs with the SecureDrop development team.
 
 Please note that while the logs do not include original filenames or message contents, they do contain sensitive information, e.g.:
 
@@ -11,7 +11,7 @@ Please note that while the logs do not include original filenames or message con
 
 For this reason, the ``sd-log`` VM is networkless, and you cannot copy files from ``sd-log`` to other VMs by default.
 
-If you want to selectively enable copying logs to a single VM, you can use tags, similar to the method used for :doc:`managing clipboard access <managing_clipboard>`. You can add and remove the permission just before each copying operation; the change will take effect immediately.
+If you want to selectively enable copying logs to a single VM, you can use tags, similar to the method used for :doc:`managing clipboard access </admin/workstation_reference/managing_clipboard>`. You can add and remove the permission just before each copying operation; the change will take effect immediately.
 
 .. important::
 

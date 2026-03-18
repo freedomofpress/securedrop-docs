@@ -1,12 +1,11 @@
 Troubleshooting system updates
 ==============================
 
-After you log into Qubes, the SecureDrop Workstation
-preflight updater will prompt you to check for available
+After you log into Qubes, the preflight updater will prompt you to check for available
 system updates at least once per day.
 
 If updates fail for any reason, the preflight updater will
-not launch the SecureDrop App until the
+not launch the SecureDrop Application until the
 underlying issue has been resolved. This is to ensure
 that the system is in a secure state before you
 interact with SecureDrop.
@@ -16,7 +15,7 @@ interact with SecureDrop.
          displaying a failed update error message. The
          title reads "Security updates failed", and the
          message instructs the user to contact the administrator
-         to correct the error. The SecureDrop App cannot
+         to correct the error. The SecureDrop Application cannot
          be started until the error is corrected.
 
    The error displayed when the preflight updater

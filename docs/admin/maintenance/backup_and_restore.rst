@@ -25,7 +25,7 @@ doing backups.
          about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
          restore accordingly.
 
-On the *Application Server*, open a Terminal via **Apps ▸ System Tools ▸ Console** on the Admin Workstation and run
+On the *Application Server*, open a Terminal via **Apps ▸ System Tools ▸ Console** on the *Admin Workstation* and run
 
 .. code:: sh
 
@@ -183,7 +183,7 @@ Moving a SecureDrop instance to new hardware involves:
 
 
 #. Install Ubuntu 24.04 on the *Application* and *Monitor Servers*, following
-   the :doc:`server setup instructions<../installation/servers>` to install
+   the :doc:`server setup instructions</admin/installation/prepare_servers>` to install
    with the correct settings, test connectivity, and set up SSH keys to allow
    for *Admin Workstation* access.
 
@@ -240,7 +240,7 @@ valid SSH credentials and will need to be repaired. In these steps, the "primary
 process.
 
 #. Prepare a fresh
-   :doc:`LUKS-encrypted USB <../installation/set_up_transfer_and_export_device>`.
+   :doc:`LUKS-encrypted USB </admin/installation/provisioning_usb>`.
    You may record the passphrase in your primary *Admin Workstation*
    KeePassXC password manager.
 

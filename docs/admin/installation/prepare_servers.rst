@@ -1,5 +1,5 @@
-Set Up the Servers
-==================
+Prepare the Servers
+===================
 
 Pre-Install Steps
 -----------------
@@ -9,7 +9,7 @@ Upgrade the Server BIOS
 Before beginning the installation process, you should upgrade your servers' BIOS
 to the most recent stable version available. This process will differ for each
 server make/model - if you are using one of the recommended NUC models, you can
-find instructions in :doc:`../maintenance/update_bios`.
+find instructions in :doc:`../maintenance/bios_server`.
 
 Update BIOS Settings
 ~~~~~~~~~~~~~~~~~~~~
@@ -19,9 +19,9 @@ hardware, including:
 * wireless LAN and Bluetooth
 * Thunderbolt support
 * audio support (output, speakers, microphones)
-* other features supported by the hardware but not used by SecureDrop.
+* other features supported by the hardware but not used by SecureDrop, such as Thunderbolt, SD card controller, or enhanced consumer infrared
 
-In most cases, you should enable support for LAN and USB ports only.
+In most cases, you should enable support for LAN and USB ports only. On NUC models, you can find this under **Advanced ▸ Onboard Devices**
 
 You should also check the servers' boot settings. Ubuntu 24.04 supports both
 Legacy and UEFI boot modes, with UEFI preferred. You should also disable Secure
@@ -36,12 +36,112 @@ enumerate recommended BIOS settings for hardware that we have tested.
 Install Ubuntu
 ---------------
 
-The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu 24.04.3 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first
+The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu 24.04.3 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first download and verify the Ubuntu installation media.
+
+Ubuntu Introduction
+~~~~~~~~~~~~~~~~~~~
+
+.. note:: Installing Ubuntu is simple and may even be something you are very familiar
+  with, but it is **strongly** encouraged that you read and follow this documentation
+  exactly as there are some "gotchas" that may cause your SecureDrop setup to break.
+
+The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu Server
+24.04.3 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first
 download and verify the Ubuntu installation media.
 
-You should have already performed this step while setting up the Tails USB
-Disks, but if not, or if you would like a refresher, please review the
-:doc:`Create USB Boot Disk documentation. <create_usb_boot_drives>`
+.. _download_ubuntu:
+
+Download the Ubuntu Installation Media
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The installation media and the files required to verify it are available on the
+`Ubuntu Releases page`_. You will need to download the following files:
+
+* `ubuntu-24.04.3-live-server-amd64.iso`_
+* `SHA256SUMS`_
+* `SHA256SUMS.gpg`_
+
+Alternatively, you can use the command line:
+
+.. code:: sh
+
+   cd ~/Downloads
+   curl -OOO https://releases.ubuntu.com/24.04.3/{ubuntu-24.04.3-live-server-amd64.iso,SHA256SUMS{,.gpg}}
+
+.. _Ubuntu Releases page: https://releases.ubuntu.com/
+.. _ubuntu-24.04.3-live-server-amd64.iso: https://releases.ubuntu.com/24.04/ubuntu-24.04.3-live-server-amd64.iso
+.. _SHA256SUMS: https://releases.ubuntu.com/24.04/SHA256SUMS
+.. _SHA256SUMS.gpg: https://releases.ubuntu.com/24.04/SHA256SUMS.gpg
+
+Verify the Ubuntu Installation Media
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You should verify the Ubuntu image you downloaded hasn't been modified by
+a malicious attacker or otherwise corrupted. To do so, check its integrity with
+cryptographic signatures and hashes.
+
+First, download both *Ubuntu Image Signing Keys* and verify their
+fingerprints. ::
+
+    gpg --recv-key --keyserver hkps://keyserver.ubuntu.com \
+    "C598 6B4F 1257 FFA8 6632 CBA7 4618 1433 FBB7 5451" \
+    "8439 38DF 228D 22F7 B374 2BC0 D94A A3F0 EFE2 1092"
+
+.. note:: It is important you type this out correctly. If you are not
+          copy-pasting this command, double-check you have
+          entered it correctly before pressing enter.
+
+Again, when passing the full public key fingerprint to the ``--recv-key`` command, GPG
+will implicitly verify that the fingerprint of the key received matches the
+argument passed.
+
+.. caution:: If GPG warns you that the fingerprint of the key received
+             does not match the one requested **do not** proceed with
+             the installation. If this happens, please email us at
+             securedrop@freedom.press.
+
+Next, verify the ``SHA256SUMS`` file. ::
+
+    gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
+
+Move on to the next step if you see "Good Signature" in the output, as
+below. Note that any other message (such as "Can't check signature: no public
+key") means that you are not ready to proceed. ::
+
+    gpg: Signature made Thu 11 Feb 2021 02:07:58 PM EST
+    gpg:                using RSA key 843938DF228D22F7B3742BC0D94AA3F0EFE21092
+    gpg: Good signature from "Ubuntu CD Image Automatic Signing Key (2012) <cdimage@ubuntu.com>" [unknown]
+    gpg: WARNING: This key is not certified with a trusted signature!
+    gpg:          There is no indication that the signature belongs to the owner.
+    Primary key fingerprint: 8439 38DF 228D 22F7 B374  2BC0 D94A A3F0 EFE2 1092
+
+The next and final step is to verify the Ubuntu image. ::
+
+    sha256sum -c <(grep ubuntu-24.04.3-live-server-amd64.iso SHA256SUMS)
+
+If the final verification step is successful, you should see the
+following output in your terminal. ::
+
+    ubuntu-24.04.3-live-server-amd64.iso: OK
+
+.. caution:: If you do not see the line above it is not safe to proceed with the
+             installation. If this happens, please contact us at
+             securedrop@freedom.press.
+
+Create the Ubuntu Installation Media
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The `Ubuntu website <https://ubuntu.com/>`__ has detailed instructions on how to
+to create a bootable Ubuntu Server USB drive.
+
+Follow the instructions at the link below for your operating system, then return
+to this page:
+
+- `Create a bootable Ubuntu USB drive on Mac
+  <https://ubuntu.com/tutorials/create-a-usb-stick-on-macos#1-overview>`__
+- `Create a bootable Ubuntu USB drive on Windows
+  <https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview>`__
+- `Create a bootable Ubuntu USB drive on Linux
+  <https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview>`__
 
 With the Ubuntu Server install USB ready, you may now proceed to the installation.
 
@@ -179,8 +279,8 @@ servers:
 Select **Done** and press **Enter** to proceed.
 
 .. warning:: The username and password you choose must be the same on both the
-             *Application Server* and the *Monitor Server*. When you deploy
-             SecureDrop from your *Admin Workstation* in a later step, you will
+             *Application Server* and the *Monitor Server*. When you install
+             SecureDrop on the servers from your *Admin Workstation* in a later step, you will
              only be allowed to enter one password, so it must be identical on
              both servers.
 
@@ -218,81 +318,4 @@ When you are done, make sure you save the following information:
 -  The IP address of the *Monitor Server*
 -  The non-root user's name and passphrase for the servers.
 
-.. _test_connectivity:
 
-Test Connectivity
------------------
-
-
-Now that the firewall is set up, you can plug the *Application Server*
-and the *Monitor Server* into the firewall. If you are using a setup
-where there is a switch on the LAN port, plug the *Application Server*
-into the switch and plug the *Monitor Server* into the OPT1 port.
-
-You should make sure you can connect from the Admin
-Workstation to both of the servers before continuing with the
-installation.
-
-In a terminal, verify that you can SSH into both servers,
-authenticating with your passphrase:
-
-.. code:: sh
-
-    $ ssh <username>@<App IP address> hostname
-    app
-    $ ssh <username>@<Monitor IP address> hostname
-    mon
-
-.. tip:: If you cannot connect, check the network firewall logs for
-         clues.
-
-Set Up SSH Keys
----------------
-
-Ubuntu's default SSH configuration authenticates users with their
-passphrases; however, public key authentication is more secure, and once
-it's set up it is also easier to use. In this section, you will create
-a new SSH key for authenticating to both servers. Since the *Admin
-Workstation* was set up with `SSH Client Persistence`_, this key will be saved
-on the *Admin Workstation* and can be used in the future to authenticate to
-the servers in order to perform administrative tasks.
-
-.. _SSH Client Persistence: https://tails.net/doc/persistent_storage/configure/index.en.html#index11h2
-
-First, generate the new SSH keypair:
-
-::
-
-    ssh-keygen -t rsa -b 4096
-
-You'll be asked to "Enter file in which to save the key" Type
-**Enter** to use the default location.
-
-Given that this key is on the encrypted persistence of a Tails USB,
-you do not need to add an additional passphrase to protect the key.
-If you do elect to use a passphrase, note that you will need to manually
-type it (Tails' pinentry will not allow you to copy and paste a passphrase).
-
-Once the key has finished generating, you need to copy the public key
-to both servers. Use ``ssh-copy-id`` to copy the public key to each
-server, authenticating with your passphrase:
-
-.. code:: sh
-
-    ssh-copy-id <username>@<App IP address>
-    ssh-copy-id <username>@<Mon IP address>
-
-Verify that you are able to authenticate to both servers by running
-the below commands. You should not be prompted for a passphrase
-(unless you chose to passphrase-protect the key you just created).
-
-.. code:: sh
-
-    $ ssh <username>@<App IP address> hostname
-    app
-    $ ssh <username>@<Monitor IP address> hostname
-    mon
-
-If you have successfully connected to the server via SSH, the terminal
-output will be name of the server to which you have connected ('app'
-or 'mon') as shown above.

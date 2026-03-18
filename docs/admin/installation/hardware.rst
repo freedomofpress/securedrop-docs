@@ -7,7 +7,7 @@ Hardware
 This document outlines the required hardware components necessary to
 successfully install and operate a SecureDrop instance, and recommends
 some specific components that we have found to work well. If you have
-any questions, please :ref:`contact the SecureDrop Support team <getting_support>`.
+any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
 
 Hardware Overview
 -----------------
@@ -381,7 +381,7 @@ It is especially advisable to enable write protection before attaching an
 *Export Device* to an everyday workstation that lacks the security protections
 of the Tails operating system.
 
-Please review our :doc:`setup guide <set_up_transfer_and_export_device>`
+Please review our :doc:`setup guide <provisioning_usb>`
 for additional background on setting up *Export Devices*.
 
 We also recommend buying an additional USB drive for making regular backups of

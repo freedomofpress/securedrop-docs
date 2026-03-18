@@ -1,30 +1,28 @@
 .. _keepassxc_setup:
 
-Using the Admin Password Database
+Using the KeePassXC Password Manager
+====================================
+
+Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including administrators, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
+
+Template password database
 ------------------------------------
 
-While setting up the *Admin Workstation* in the previous step, you copied a KeePassXC password database template from the cloned SecureDrop Repository to the Tails Persistent storage
+To facilitate using KeePassXC to organize all the credentials needed for using and administering the system, SecureDrop comes with a template database with organized entries ready to be filled in.
 
-Using a KeePassXC database makes it easier for
-admins and journalists to generate strong, unique passphrases and
-store them securely. You are encouraged to set up your personal password database
-using this template.
+.. TODO fix path/to references below
 
-.. note::
+.. _keepasscx_template_database:
 
-   Earlier versions of Tails used KeePassX instead of KeePassXC.
-   The provided template is compatible with both.
-
--  Open the KeePassXC program |KeePassXC| which is already installed on
-   Tails
+-  Open the KeePassXC program |KeePassXC| in the `vault` VM
 -  Select **Database ▸ Open database**, and navigate to the location of
-   **~/Persistent/Passwords.kdbx**, select it, and click **Open**
+   **/path/to/Passwords.kdbx**, select it, and click **Open**
 -  Leave the password blank and click **OK**. If you receive an "Unlock failed"
    prompt, click **Retry with empty password**.
 -  Edit entries as required.
 -  Select **Database ▸ Save Database** to save your changes.
 
-The next time you use KeepassXC, the database at ``~/Persistent/Passwords.kdbx``
+The next time you use KeepassXC in `vault`, the database at ``/path/to/Passwords.kdbx``
 will be selected by default.
 
 KeePassXC will show a warning every time you attempt to open a database without
@@ -41,8 +39,12 @@ After configuring the password database, restart KeePassXC once to verify
 that you are able to access it as expected.
 
 .. warning:: You will not be able to access your passwords if you
-         forget the persistent storage password or the location of the key
+         forget the full disk encryption or the location of the key
          file used to protect the database.
+
+.. |KeePassXC| image:: ../../images/keepassxc.png
+
+.. _keepassxc_manual_create_database:
 
 In case you wish to manually create a database, the suggested password fields in
 the template are:
@@ -64,13 +66,9 @@ the template are:
 - Personal GPG Key
 - SecureDrop Login Credentials
 
-**Secure Viewing Station**:
-
-- SecureDrop GPG Key
-
 **Backup**:
 
 - This section contains clones of the above entries in case a user
   accidentally overwrites an entry.
 
-.. |KeePassXC| image:: ../../images/keepassxc.png
+As you proceed with the installation, enter the credentials you create in this database as you go.

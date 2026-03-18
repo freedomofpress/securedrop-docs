@@ -1,8 +1,43 @@
+Prepare a SecureDrop Workstation
+======================================
+
+.. _prepare_primary_securedrop_workstation:
+
+Overview
+--------
+
+.. TODO add explanation of the different Workstations/Laptops to be configured. Admin vs Journalist
+
+SecureDrop Workstation must be installed on a system running Qubes OS. The installation and configuration process should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
+
+.. _securedrop_workstation_prerequisites:
+
+Prerequisites
+-------------
+
+In order to install SecureDrop Workstation and configure it to use an existing SecureDrop instance, you will need the following:
+
+- A Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations. 
+- Qubes installation medium - this guide assumes the use of a USB 3.0 stick. Qubes may also be installed via optical media, which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_.
+
+  .. note:: A USB stick with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings detailed below are applied.
+
+- A working computer (Linux is recommended and assumed in this guide) to use for verification and creation of the Qubes installation medium.
+
+  .. note:: A Tails USB can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB stick to transfer it to Tails for verification and creation of the installation medium.
+
+- A password manager or other system to generate and store strong passphrases for Qubes full disk encryption (FDE) and user accounts.
+
+A basic knowledge of the Qubes OS is helpful.
+
+.. _securedrop_workstation_preinstall_tasks:
+
 Pre-install Tasks
-=================
+-----------------
 
 Apply BIOS updates and check settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Before beginning the Qubes installation, make sure that your Qubes-compatible computer's BIOS is updated to the latest available version. For more details about this process, see the section on :ref:`general_BIOS_update`.
 
 Once the BIOS is up-to-date, boot into the BIOS setup utility and update its settings. Note that not all BIOS versions will support the items listed, but if available following changes are recommended:
@@ -14,8 +49,7 @@ Once the BIOS is up-to-date, boot into the BIOS setup utility and update its set
 - Enable virtualization support (required for Qubes OS).
   - for Intel-based devices, **Intel VT-d** and **Intel VT-x** should be enabled
   - for AMD-based devices, **AMD-VI** and **AMD-V** should be enabled
-- Disable all onboard devices other than LAN: these may include HD audio, microphone, Thunderbolt, WLAN, Bluetooth, SD card controller, and enhanced consumer infrared.
-  - On NUC models, you can find this under **Advanced ▸ Onboard Devices**
+- Disable unnecessary I/O options such as Wireless WAN and  Bluetooth.
 - Disable unnecessary network options such as Wake-on-LAN and UEFI network stacks.
 - Disable Thunderbolt ports, or any other ports that allow Direct Memory Access (DMA).
 - Enable any physical tamper detection options.
@@ -50,6 +84,7 @@ differ for each make and model.
 
 Download and verify Qubes OS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 On the working computer, download the Qubes OS ISO and cryptographic hash values for version ``4.2.4`` from `https://www.qubes-os.org/downloads/ <https://www.qubes-os.org/downloads/#qubes-os-4-2-4>`_. The ISO is 6.8 GB approximately, and may take some time to download based on the speed of your Internet connection.
 
 Follow the linked instructions to `verify the ISO <https://www.qubes-os.org/security/verifying-signatures/#how-to-verify-detached-pgp-signatures-on-qubes-isos>`_. Ensure that the ISO and hash values are in the same directory, then run:
@@ -95,7 +130,6 @@ where ``if`` is set to the path to your downloaded ISO file and ``of`` is set to
 the block device corresponding to your USB stick. Note that any data on the USB stick will be overwritten.
 
 .. caution:: Make sure to verify that you have the correct device name using, for example, the ``lsblk`` command. You should write to the full device (eg. ``/dev/sdc``) rather than to a partition (eg. ``/dev/sdc1``).
-
 
 Install Qubes OS (estimated wait time: 30-45 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -167,6 +201,7 @@ While we recommend against the use of a USB keyboard for security reasons, this 
 
 Apply ``dom0`` updates (estimated wait time: 15-30 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ``dom0`` is the most trusted domain on Qubes OS, and has privileged access to all other VMs. As such, it is important to ensure that all available security updates have been applied to ``dom0`` as the first step after the installation.
 
 After logging in, use the network manager widget in the upper-right panel to configure your network connection.
@@ -183,6 +218,7 @@ After updating ``dom0``, reboot the workstation to ensure that all updates have 
 
 Apply updates to system templates (estimated wait time: 45-60 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 After logging in again, confirm that the network manager successfully connects you to the configured network. If necessary, verify the network settings using the network manager widget.
 
 - Next, configure Tor via |qubes_menu| **▸ Service ▸ sys-whonix ▸ Anon Connection Wizard**. In most cases, choosing the default **Connect** option is best. Click **Next**, then **Next** again. Then, if Tor connects successfully, click **Finish**. If Tor fails to connect, make sure your network conection is up and does not filter Tor connections, then try again.
@@ -190,6 +226,48 @@ After logging in again, confirm that the network manager successfully connects y
   .. note:: If Tor connections are blocked on your network, you may need to configure Tor to use bridges in order to get a connection. For more information, see the `Anon Connection Wizard <https://www.whonix.org/wiki/Anon_Connection_Wizard>`_ documentation.
 
 - Once Tor has connected, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system VMs. in the ``[Dom0] Qubes Update`` window, check all entries in the list above except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system's VMs will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
+
+.. _securedrop_workstation_install:
+
+Installing SecureDrop Workstation
+---------------------------------
+
+.. _download_rpm:
+
+Download SecureDrop Workstation Packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, you must configure the Qubes-Contrib repo, then download the SecureDrop Workstation packages.
+
+- Make sure that network connection is enabled using the network manager widget in the upper right panel.
+
+- Next, in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**):
+
+  .. code-block:: sh
+
+    sudo qubes-dom0-update -y qubes-repo-contrib
+    sudo qubes-dom0-update --clean -y securedrop-workstation-keyring
+
+- The SecureDrop Relase keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then:
+
+  .. code-block:: sh
+
+    sudo qubes-dom0-update --clean -y securedrop-workstation-dom0-config
+    sudo dnf -y remove qubes-repo-contrib
+
+.. _securedrop_workstation_install_securedrop-admin:
+
+Install `securedrop-admin` Tooling
+----------------------------------
+
+.. TODO
+
+.. _securedrop_workstation_generate_private_key:
+
+Generate Submission Private Key
+-------------------------------
+
+.. TODO
 
 .. |qubes_menu| image:: ../../images/qubes_menu.png
   :alt: Qubes Application menu

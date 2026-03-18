@@ -21,7 +21,7 @@ If you would like to contribute to SecureDrop, please see our
 Get Started
 ^^^^^^^^^^^
 
-:doc:`I want to learn more about how SecureDrop works. <what_is_securedrop>`
+:doc:`I want to learn more about how SecureDrop works. <introduction/what_is_securedrop>`
 
 :doc:`I have information I want to share, and would like to learn how to do so safely. <source/source>`
 
@@ -31,26 +31,21 @@ Get Started
 
 :doc:`I am a journalist and would like information about how to best use this system. <journalist/journalist>`
 
+.. note:: The terms in italics are terms of art specific to SecureDrop. The
+	  :doc:`Glossary </appendices/glossary>` provides more-precise
+          definitions of these and other terms. SecureDrop is designed against
+          a comprehensive :doc:`/appendices/threat_model/threat_model`, and has a specific notion of the :doc:`roles </appendices/glossary>` that are involved in its operation.
 
 .. toctree::
-   :caption: Overview
-   :name: overviewtoc
+   :caption: Introduction
+   :name: introtoc
    :maxdepth: 2
    :hidden:
 
-   what_is_securedrop
-   introduction
-   workstation_architecture
-   supported_filetypes
-   what_makes_securedrop_unique
-   glossary
-   threat_model/threat_model.rst
-   threat_model/dataflow.rst
-   threat_model/mitigations.rst
-   getting_support
-   training_schedule
-   passphrase_best_practices
-   known_issues
+   introduction/what_is_securedrop
+   introduction/what_makes_securedrop_unique
+   introduction/securedrop_workstation
+   introduction/getting_support
 
 .. toctree::
    :caption: Source Guide
@@ -75,53 +70,43 @@ Get Started
    journalist/sources
    journalist/submissions
    journalist/ending_session
-   journalist/faq
-   journalist/documents
-   
-.. toctree::
-   :caption: Admin Guide: Reference
-   :name: adminguidetoc
-   :maxdepth: 2
-   :hidden:
 
-   
-   admin/reference/admin
-   admin/reference/responsibilities
-   admin/reference/admin_interface
-   admin/reference/ssh_access
-   admin/reference/securedrop_admin
-   admin/workstation_reference/securing_workstation
-   admin/workstation_reference/troubleshooting_connection
-   admin/workstation_reference/troubleshooting_updates
-   admin/reference/faq
-   admin/workstation_reference/managing_clipboard
-
-   
 .. toctree::
    :caption: Admin Guide: Installation
    :name: installtoc
    :maxdepth: 2
    :hidden:
 
+   admin/installation/intro_for_admins
    admin/installation/installation_overview
-   admin/installation/overview
-   admin/installation/prepare
-   admin/installation/passphrases
    admin/installation/hardware
-   admin/installation/minimum_security_requirements
-   admin/installation/create_usb_boot_drives
-   admin/installation/set_up_transfer_and_export_device
+   admin/installation/passphrases.rst
+   admin/installation/email_alerts
+   admin/installation/prepare_sdw
    admin/installation/generate_submission_key
    admin/installation/set_up_keepassxc
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
    admin/installation/firewall_opnsense
-   admin/installation/servers
+   admin/installation/prepare_servers
    admin/installation/install
+   admin/installation/apply_sdw
    admin/installation/create_admin_account
    admin/installation/test_the_installation
-   admin/installation/install_sdw
-   admin/installation/troubleshoot
+   admin/installation/provisioning_usb
+   admin/installation/troubleshoot_qubes
+   admin/installation/troubleshoot_ossec
+
+.. toctree::
+   :caption: Admin Guide: Migration
+   :name: migrationguide
+   :maxdepth: 2
+   :hidden:
+
+   admin/migration/migration_overview
+   admin/migration/admin_migration
+   admin/migration/journalist_migration
+   admin/migration/removing_gpg_passphrase
 
 .. toctree::
    :caption: Admin Guide: Deployment
@@ -129,6 +114,7 @@ Get Started
    :maxdepth: 2
    :hidden:
 
+   admin/deployment/onboard_journalists
    admin/deployment/deployment_practices
    admin/deployment/landing_page.rst
    admin/deployment/onion_name.rst
@@ -139,7 +125,19 @@ Get Started
    admin/deployment/tor_pow
    admin/deployment/https_source_interface
    admin/deployment/ssh_over_local_net
-   admin/deployment/offboarding
+   admin/deployment/configuring_ossec_fingerprint
+
+.. toctree::
+   :caption: Admin Guide: Reference
+   :name: adminguidetoc
+   :maxdepth: 2
+   :hidden:
+   
+   admin/reference/admin_interface
+   admin/reference/ossec_alerts
+   admin/reference/ssh_access
+   admin/reference/offboarding
+   admin/reference/securedrop_admin
 
 .. toctree::
    :caption: Admin Guide: Maintenance
@@ -149,19 +147,30 @@ Get Started
 
    admin/maintenance/upgrade_guide
    admin/maintenance/logging
-   admin/maintenance/ossec_alerts
+   admin/maintenance/troubleshooting_connection
    admin/maintenance/backup_and_restore
    admin/maintenance/rebuild_admin
    admin/maintenance/updates_over_tor
    admin/maintenance/kernel_troubleshooting
-   admin/maintenance/update_bios
+   admin/maintenance/bios_server
    admin/maintenance/decommission
    admin/workstation_reference/backup
-   admin/workstation_reference/bios_update
-   admin/workstation_reference/provisioning_usb
-   admin/workstation_reference/removing_gpg_passphrase
+   admin/workstation_reference/bios_workstation
    admin/workstation_reference/reviewing_logs
+   admin/workstation_reference/troubleshooting_updates
+   admin/workstation_reference/managing_clipboard
 
+.. toctree::
+   :caption: Appendices
+   :name: appendicestoc
+   :maxdepth: 2
+   :hidden:
+
+   appendices/glossary
+   appendices/threat_model/threat_model.rst
+   appendices/threat_model/dataflow.rst
+   appendices/threat_model/mitigations.rst
+   appendices/training_schedule
 
 Get Involved
 ^^^^^^^^^^^^

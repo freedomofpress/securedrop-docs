@@ -35,7 +35,7 @@ Installation may be started by admins ahead of schedule to save on-site time.
 
 **Format**: For assisted installs, in-person or hybrid-remote (FPF remote, admins in-person)
 
--  Follow :doc:`Installing SecureDrop <admin/installation/install>`
+-  Follow :doc:`Installing SecureDrop </admin/installation/install>`
 
 Day 2: Admin and Digital Security Training
 ------------------------------------------
@@ -70,8 +70,8 @@ Admin Training
 -  Distribute important info:
 
    -  https://docs.securedrop.org
-   -  :doc:`Admin Best Practice Guide <admin/reference/admin>`
-   -  :doc:`Hardware for SecureDrop <admin/installation/hardware>`
+   -  :doc:`Admin Best Practice Guide </admin/installation/intro_for_admins>`
+   -  :doc:`Hardware for SecureDrop </admin/installation/hardware>`
    -  :ref:`Deployment` guidelines
 
 
@@ -124,14 +124,14 @@ recipients and anyone else interested
    -  What to do for unsupported formats
 -  Options for distributing with other news organizations
 -  Show example of an OSSEC alert, briefly cover what it does
--  Overview of :doc:`onion names <admin/deployment/onion_name>`
+-  Overview of :doc:`onion names </admin/deployment/onion_name>`
 -  Physical security of servers and *Secure Viewing Station*
 -  How to securely publicize the organization's *Source Interface* Tor URL
 -  Distribute important info:
 
    -  https://securedrop.org
-   -  :doc:`Source Best Practice Guide <source/source>`
-   -  :doc:`Journalist Best Practice Guide <journalist/journalist>`
+   -  :doc:`Source Best Practice Guide </source/source>`
+   -  :doc:`Journalist Best Practice Guide </journalist/journalist>`
 
 -  Link to security audits
 - Q & A

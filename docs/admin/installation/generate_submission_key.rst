@@ -1,6 +1,8 @@
 Generate the *Submission Key*
 =============================
 
+.. These instructions will be replaced with whatever mechanism the all-on-Qubes SecureDrop Workstation uses to generate the submission key.
+
 When a document or message is submitted to SecureDrop by a source, it is
 automatically encrypted with the *Submission Key*. The private part
 of this key is only stored on the *Secure Viewing Station* which is never

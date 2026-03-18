@@ -26,7 +26,7 @@ they can be prepared for publication on the *SecureDrop Workstation* before
 being transferred to an Internet-connected computer.
 
 Instructions for using SecureDrop as a *Journalist* are available in our
-:doc:`Journalist Guide <journalist/journalist>`.
+:doc:`Journalist Guide </journalist/journalist>`.
 
 
 Journalist Alert Public Key
@@ -87,8 +87,7 @@ OSSEC Alert Public Key
 ----------------------
 The *OSSEC Alert Public Key* is the GPG key that OSSEC will encrypt alerts to.
 The associated private key is used by the admin to access encrypted OSSEC alerts
-from the *Monitor Server*. Instructions for setting up OSSEC alerts can be found
-in the :doc:`OSSEC Guide <admin/maintenance/ossec_alerts>`.
+from the *Monitor Server*.
 
 Source
 ------
@@ -97,7 +96,7 @@ SecureDrop to communicate with a *Journalist*. A *Source* will always
 access SecureDrop through the *Source Interface* and must do so using Tor.
 
 Instructions for using SecureDrop as a *Source* are available in our
-:doc:`Source Guide <source/source>`.
+:doc:`Source Guide </source/source>`.
 
 .. _glossary_source_interface:
 
@@ -108,7 +107,7 @@ submit documents and communicate with journalists. This site is
 hosted on the *Application Server* and can only be accessed through Tor.
 
 Instructions for using the *Source Interface* are available in our :doc:`Source Guide
-<source/source>`.
+</source/source>`.
 
 
 .. _submission-key:
@@ -139,4 +138,4 @@ authentication codes. We recommend using one of:
 -  FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ or `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__ installed
 -  A `YubiKey <https://www.yubico.com/products/>`__
 
-.. include:: includes/otp-app.txt
+.. include:: /includes/otp-app.txt

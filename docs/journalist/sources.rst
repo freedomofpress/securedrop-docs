@@ -1,7 +1,7 @@
 Communicating with sources
 ==========================
 
-SecureDrop Workstation lets journalists check SecureDrop, decrypt and securely
+The *Journalist Workstation* lets journalists check SecureDrop, decrypt and securely
 view submissions, and reply to sources, all on the same computer.
 
 Once logged in, you will see a chat-like user interface:
@@ -58,10 +58,28 @@ different conversation.
 
 .. note:: If a reply fails to be sent successfully, it will still be visible in
   subsequent sessions, including to any other users logging into the same
-  physical SecureDrop Workstation.
+  physical *Journalist Workstation*.
 
-Deleting conversations
-----------------------
+Deleting conversations and source accounts
+------------------------------------------
+
+As part of routine SecureDrop usage, we recommend that you establish data retention practices consistent with your organization's threat model, data lifecycle and data retention policies. Regularly deleting conversations and source accounts can mitigate risks in the event that your SecureDrop servers or a source's account details are compromised.
+
+If you delete messages and files for a source, the source will continue to appear
+in the list of sources in the *SecureDrop App*, and they will still be able
+to log into the *Source Interface* using their codename. Consider using this
+option as part of regular deletion of reviewed submissions, especially if you
+are not sure that all communication with the source has concluded.
+
+.. note::
+
+   If you delete all messages and files, that includes all replies you have sent
+   to the source, even if the source has not seen them yet. You will still be
+   able to send new replies.
+
+If you delete the entire source account, the source will not be able to log
+in again using their codename, and all information about them will be destroyed. Consider using this option if it is clear that all communication with the source has concluded, or if the source has requested that all information about them and their submissions should be removed.
+
 
 Deleting conversations
 ''''''''''''''''''''''''''''''

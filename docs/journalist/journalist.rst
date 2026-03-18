@@ -8,7 +8,7 @@ journalist. It covers the core functions necessary to start working
 with the platform: logging in securely, viewing documents, editing
 documents, and interacting with sources.
 
-Journalists will use the *SecureDrop Workstation* laptop to read, print, and
+Journalists will use the *Journalist Workstation* to read, print, and
 otherwise prepare documents for publication. Apart from those deliberately
 published, decrypted documents are never opened in an environment with
 direct access to the Internet
@@ -31,4 +31,4 @@ a journalist was speaking with a source, or details that might give
 the source away.
 
 For full details about what makes SecureDrop a unique and useful tool for
-Journalists, :doc:`see here. <../what_makes_securedrop_unique>`
+Journalists, :doc:`see here. </introduction/what_makes_securedrop_unique>`

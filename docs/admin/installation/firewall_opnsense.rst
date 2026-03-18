@@ -731,7 +731,7 @@ in the screenshot:
 Finally, click **Apply Changes**.
 
 The *Network Firewall* configuration is now complete, allowing you to move
-to the next step: :doc:`setting up the servers. <servers>`
+to the next step: :doc:`setting up the servers. <prepare_servers>`
 
 Troubleshooting Tips
 --------------------
