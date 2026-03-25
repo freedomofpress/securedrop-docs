@@ -133,7 +133,7 @@ recipients and anyone else interested
    -  :doc:`Source Best Practice Guide </source/source>`
    -  :doc:`Journalist Best Practice Guide </journalist/journalist>`
 
--  Link to security audits
+-  Link to `security audits <https://securedrop.org/research/#audits>`__
 - Q & A
 
 Journalist Training, Part 2

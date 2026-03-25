@@ -144,30 +144,11 @@ goal of SecureDrop is to create a significantly more secure environment for sour
 Audits
 ------
 
-Before major code changes are shipped, our policy is to have SecureDrop 
-audited by a professional, third-party security firm. 
-Five audits of SecureDrop have been completed so far:
+Before major code changes are shipped, our policy is to have SecureDrop
+audited by a professional, third-party security firm. You can find a
+`list of all audits <https://securedrop.org/research/#audits>`__ completed so far.
 
-1. The first audit of SecureDrop, conducted in the Spring of 2013, was
-   conducted by a group of University of Washington researchers and 
-   Bruce Schneier, and can be found 
-   `here <https://securedrop.org/documents/2/UW-CSE-13-08-02.PDF>`__.
-2. After significant changes to the system, the second audit of SecureDrop was
-   conducted by Cure53 at the end of 2013 and can be read 
-   `here <https://securedrop.org/documents/3/pentest-report_securedrop.pdf>`__.
-3. In the summer of 2014 iSEC Partners completed the third audit of SecureDrop.
-   Their report can be read 
-   `here <https://securedrop.org/documents/4/iSEC_OTF_FPF_SecureDrop_Deliverable_v1.1.pdf>`__
-   and you can also read about 
-   `how we resolved the issues they found <https://securedrop.org/news/announcing-new-version-securedrop-results-our-third-security-audit/>`__.
-4. The fourth audit was conducted in summer 2015, also by iSEC Partners, and
-   can be found in full 
-   `here <https://securedrop.org/documents/5/iSEC_OTF_FPF_SecureDrop_Deliverable_v1.2.pdf>`__.
-5. The most recent audit was independently undertaken by Leviathan Security
-   on behalf of Sofwerx in late 2018, and can be found in full 
-   `here <https://securedrop.org/documents/14/Sofwerx_SecureDrop_Security_Review_-_Public_Distribution_.pdf>`__.
-
-In addition to these audits, we also have a 
+In addition to these audits, we also have a
 `bug bounty program <https://bugcrowd.com/freedomofpress>`__ hosted by Bugcrowd.
 
 Cost
