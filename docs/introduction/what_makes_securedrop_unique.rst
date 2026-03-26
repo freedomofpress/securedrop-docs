@@ -93,7 +93,8 @@ Free and Open Source Software
 can install SecureDrop themselves, but the code is available online for security
 experts to test for vulnerabilities.
 
-SecureDrop has gone through four audits by third-party penetration testing firms
+SecureDrop has gone through `multiple audits <https://securedrop.org/research/#audits>`__
+by third-party penetration testing firms
 and will continue to go through audits when major changes are made to the code
 base in the future. We always publish these audits publicly so everyone can be
 assured that SecureDrop is as safe to use as possible.
