@@ -6,7 +6,7 @@ Upgrade from 2.14.10 to 2.15.0
 Changes in SecureDrop 2.15.0
 ----------------------------
 
-SecureDrop version 2.15.0 enables the V2 API to support the `upcoming SecureDrop Inbox <https://securedrop.org/news/securedrop-inbox-is-coming/>`_.
+SecureDrop version 2.15.0 enables the v2 Journalist API to support the `upcoming SecureDrop Inbox <https://securedrop.org/news/securedrop-inbox-is-coming/>`_.
 
 For more details, see the `announcement for this release <https://securedrop.org/news/securedrop-2_15_0-released/>`_.
 
