@@ -1,12 +1,21 @@
-Upgrade from 2.13.10 to 2.14.0
+.. _latest_upgrade_guide:
+
+Upgrade from 2.14.10 to 2.15.0
 ==============================
 
-Changes in SecureDrop 2.14.0
+Changes in SecureDrop 2.15.0
 ----------------------------
 
-SecureDrop version 2.14.0 ensures KeePassXC remains installed on Tails. It also lays groundwork for the `upcoming SecureDrop App <https://securedrop.org/news/looking-back-at-2025/>`_.
+SecureDrop version 2.15.0 enables the v2 Journalist API to support the `upcoming SecureDrop Inbox <https://securedrop.org/news/securedrop-inbox-is-coming/>`_.
 
-For more details, see the `announcement for this release <https://securedrop.org/news/securedrop-2_14_0-released/>`_.
+For more details, see the `announcement for this release <https://securedrop.org/news/securedrop-2_15_0-released/>`_.
+
+Update Workstations to SecureDrop 2.15.0
+----------------------------------------
+
+.. important:: We recommend backing up your workstations prior to
+  any upgrades. See our :ref:`backup instructions <backup_workstations>`
+  for more information.
 
 Update Automatically
 ~~~~~~~~~~~~~~~~~~~~
@@ -31,7 +40,7 @@ You can verify the installed version number by running: ::
 
     sudo apt policy securedrop-admin
 
-and confirming that you see version '2.14.0' is installed.
+and confirming that you see version '2.15.0' is installed.
 
 Getting Support
 ---------------
