@@ -12,7 +12,7 @@ Update Automatically
 ~~~~~~~~~~~~~~~~~~~~
 
 On the next boot of your SecureDrop *Journalist* and *Admin Workstations*,
-the ``securedrop-admin`` apt package will be automatically updated once
+``securedrop-admin`` will be automatically updated once
 your Persistent Storage volume is unlocked and a Tor connection is
 established.
 
