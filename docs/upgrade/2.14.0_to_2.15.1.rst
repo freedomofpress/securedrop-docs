@@ -1,16 +1,21 @@
 .. _latest_upgrade_guide:
 
-Upgrade from 2.14.10 to 2.15.0
+Upgrade from 2.14.10 to 2.15.1
 ==============================
 
-Changes in SecureDrop 2.15.0
+Changes in SecureDrop 2.15.1
 ----------------------------
 
 SecureDrop version 2.15.0 enables the v2 Journalist API to support the `upcoming SecureDrop Inbox <https://securedrop.org/news/securedrop-inbox-is-coming/>`_.
 
-For more details, see the `announcement for this release <https://securedrop.org/news/securedrop-2_15_0-released/>`_.
+SecureDrop 2.15.1 was released a few days later to improve the memory management used by the SecureDrop application
+when responding to v2 Journalist API requests, and fix an issue where restoring
+backups without transferring over the network would previously fail.
 
-Update Workstations to SecureDrop 2.15.0
+For more details, see the `announcement for the 2.15.0 release <https://securedrop.org/news/securedrop-2_15_0-released/>`_,
+as well as the `announcement for 2.15.1 <https://securedrop.org/news/securedrop-2_15_1-released/>`_.
+
+Update Workstations to SecureDrop 2.15.1
 ----------------------------------------
 
 .. important:: We recommend backing up your workstations prior to
@@ -40,7 +45,7 @@ You can verify the installed version number by running: ::
 
     sudo apt policy securedrop-admin
 
-and confirming that you see version '2.15.0' is installed.
+and confirming that you see version '2.15.1' is installed.
 
 Getting Support
 ---------------
