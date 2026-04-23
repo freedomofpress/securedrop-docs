@@ -152,7 +152,7 @@ Get Started
    :maxdepth: 2
    :hidden:
 
-   upgrade/2.14.0_to_2.15.0.rst
+   upgrade/2.14.0_to_2.15.1.rst
    upgrade/2.13.0_to_2.14.0.rst
    upgrade/2.12.10_to_2.13.0.rst
    upgrade/2.12.9_to_2.12.10.rst
