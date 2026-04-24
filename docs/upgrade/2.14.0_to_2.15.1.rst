@@ -1,7 +1,7 @@
 .. _latest_upgrade_guide:
 
-Upgrade from 2.14.10 to 2.15.1
-==============================
+Upgrade from 2.14.0 to 2.15.1
+=============================
 
 Changes in SecureDrop 2.15.1
 ----------------------------
