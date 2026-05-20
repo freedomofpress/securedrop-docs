@@ -3,6 +3,7 @@
 # SecureDrop documentation build configuration file.
 
 import os
+from datetime import date
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -38,7 +39,7 @@ master_doc = "index"
 
 # General information about the project.
 project = u"SecureDrop"
-copyright = u"2015-2022, Freedom of the Press Foundation"
+copyright = u"2015-%s, Freedom of the Press Foundation"%(date.today().year)
 author = u"SecureDrop Team and Contributors"
 
 # The version info for the project you're documenting, acts as replacement for
