@@ -176,7 +176,7 @@ We provide a KeePassXC password database template you can later use to :ref:`sto
 
 .. code:: sh
 
-   cp ~/securedrop/tails_files/securedrop-keepassx.kdbx \
+   cp ~/securedrop/keepassxc/securedrop-keepassx.kdbx \
       ~/Persistent/Passwords.kdbx
 
 
