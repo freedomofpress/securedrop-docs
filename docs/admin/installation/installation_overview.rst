@@ -50,7 +50,7 @@ During this process, you'll set up at least four devices:
 A summary of the major steps is as follow:
 
 #. Acquire compatible hardware.
-#. Prepare email accounts and GPG keys for alert e-mails.
+#. Prepare email accounts and GPG keys for alert emails.
 #. Prepare an *Admin Workstation* laptop.
 #. Set up the KeePassXC password manager on the *Admin Workstation*.
 #. Install and configure the dedicated network firewall from the *Admin Workstation*. 

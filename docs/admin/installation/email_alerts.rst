@@ -1,7 +1,7 @@
 Prepare email accounts
 ======================
 
-SecureDrop sends different alerts by PGP-encrypted email. Before installing SecureDrop, you must select or prepare the e-mail accounts where you would like these alerts to be sent. In the case of OSSEC alerts (which you must set up), configuring an SMTP relay is also required. 
+SecureDrop sends different alerts by PGP-encrypted email. Before installing SecureDrop, you must select or prepare the email accounts where you would like these alerts to be sent. In the case of OSSEC alerts (which you must set up), configuring an SMTP relay is also required. 
 
 .. _daily_journalist_alerts:
 
@@ -90,8 +90,8 @@ solutions should be able to meet those requirements.
 The SMTP relay mail server hostname is often, but not always,
 different from the SASL domain, e.g. smtp.gmail.com and gmail.com.
 
-The SMTP and SASL settings correspond to the *outgoing* e-mail address used to
-send the alerts instead of where you're receiving them. If that e-mail
+The SMTP and SASL settings correspond to the *outgoing* email address used to
+send the alerts instead of where you're receiving them. If that email
 is ossec@news-org.com, the SASL Username would be ``ossec`` and
 the SASL Domain would be ``news-org.com``.
 
