@@ -5,7 +5,7 @@ After you log into Qubes, the preflight updater will prompt you to check for ava
 system updates at least once per day.
 
 If updates fail for any reason, the preflight updater will
-not launch the SecureDrop Application until the
+not launch SecureDrop Inbox until the
 underlying issue has been resolved. This is to ensure
 that the system is in a secure state before you
 interact with SecureDrop.
@@ -15,7 +15,7 @@ interact with SecureDrop.
          displaying a failed update error message. The
          title reads "Security updates failed", and the
          message instructs the user to contact the administrator
-         to correct the error. The SecureDrop Application cannot
+         to correct the error. SecureDrop Inbox cannot
          be started until the error is corrected.
 
    The error displayed when the preflight updater
@@ -324,7 +324,7 @@ If this does not resolve the issue:
 
 Step 4: Restart the updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click the SecureDrop desktop icon to restart the updater.
+Click the SecureDrop Inbox desktop icon to restart the updater.
 If all issues have been resolved, the updater should run to
 completion and display a success message. If the issue
 persists, please contact us for assistance.

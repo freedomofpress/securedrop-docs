@@ -1,7 +1,7 @@
 Provisioning export USB devices
 ===============================
 
-The *Journalist Workstation* supports the export of submissions from the SecureDrop App
+The *Journalist Workstation* supports the export of submissions from the SecureDrop Inbox
 to a LUKS- or VeraCrypt-encrypted USB *Export Device*.
 
 Creating a LUKS-encrypted drive

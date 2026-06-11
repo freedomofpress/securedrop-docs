@@ -181,7 +181,7 @@ in a timely manner, which can significantly worsen its security posture.
 In SecureDrop Workstation, any document received via SecureDrop is opened in a
 disposable VM that has no Internet access and no access to other files submitted
 via SecureDrop. The encryption keys are stored in a separate, networkless VM
-from the SecureDrop Application.
+from the SecureDrop Inbox application.
 
 Because SecureDrop Workstation has Internet access, updates can be applied
 automatically as soon as they are available. SecureDrop Workstation enforces this

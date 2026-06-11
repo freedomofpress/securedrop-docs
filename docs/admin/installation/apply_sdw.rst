@@ -1,12 +1,12 @@
 Apply configuration to *Admin Workstation*
 =====================================================
 
-With the servers installed and configured, the final step is to install the SecureDrop Application on the *Admin Workstation* and fully configure the machine.
+With the servers installed and configured, the final step is to install the SecureDrop Inbox on the *Admin Workstation* and fully configure the machine.
 
 .. _install_configure_securedrop_app:
 
-Install and configure the SecureDrop app
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Install and configure SecureDrop Inbox
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - These steps should be performed from a ``dom0`` terminal. **Start a dom0 terminal** via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
 
@@ -27,7 +27,7 @@ The preflight updater will start automatically after logging into the system. Pl
 
   .. note::
 
-    If you close the SecureDrop Client during your session, you can launch it again using the SecureDrop icon on the desktop. 
+    If you close SecureDrop Inbox during your session, you can launch it again using the SecureDrop icon on the desktop. 
 
 Once the update check is complete, the SecureDrop Client will launch. Log in using an existing journalist account and verify that sources are listed and submissions can be downloaded, decrypted, and viewed.
 
@@ -35,9 +35,9 @@ Once the update check is complete, the SecureDrop Client will launch. Log in usi
 
 Enable password copy and paste
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you use KeePassXC in the ``vault`` VM to manage login credentials, you can enable the user to copy passwords to the SecureDrop Application using inter-VM copy and paste. While this is relatively safe, we recommend reviewing the section :doc:`Managing Clipboard Access </admin/workstation_reference/managing_clipboard>` of this guide, which goes into further detail on the security considerations for inter-VM copy and paste.
+If you use KeePassXC in the ``vault`` VM to manage login credentials, you can enable the user to copy passwords to SecureDrop Inbox using inter-VM copy and paste. While this is relatively safe, we recommend reviewing the section :doc:`Managing Clipboard Access </admin/workstation_reference/managing_clipboard>` of this guide, which goes into further detail on the security considerations for inter-VM copy and paste.
 
-The password manager runs in the networkless ``vault`` VM, and the SecureDrop Application runs in the ``sd-app`` VM. To permit this one-directional clipboard use, issue the following command in ``dom0``:
+The password manager runs in the networkless ``vault`` VM, and the SecureDrop Inbox application runs in the ``sd-app`` VM. To permit this one-directional clipboard use, issue the following command in ``dom0``:
 
 .. code-block:: sh
 

@@ -206,7 +206,7 @@ Countermeasures in FPF infrastructure
 Countermeasures in news organization corporate network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  SecureDrop environment should be strictly segregated from corporate environment
--  Most SecureDrop application traffic goes over Tor and as such is encrypted end-to-end
+-  Most SecureDrop traffic goes over Tor and as such is encrypted end-to-end
 -  Alert emails to Journalists and Admins are GPG-encrypted (but not signed) to provide confidentiality
 -  OSSEC alerts are scrubbed for sensitive contents (application data, server IPs)
 -  Documented deployment best practices provide instructions to strengthen Landing Page security and privacy

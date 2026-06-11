@@ -10,7 +10,7 @@ The list below attempts to enumerate and define these terms.
 
 Application Server
 ------------------
-The *Application Server* runs the SecureDrop application. This server hosts both
+The *Application Server* runs the SecureDrop server application. This server hosts both
 the website that sources access (the *Source Interface*) and the website that
 journalists access (the *Journalist Interface*). Both are published
 through an *onion service* because sources, journalists, and admins

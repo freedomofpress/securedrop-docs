@@ -21,7 +21,7 @@ may be simpler. An outline of the steps involved in rebuilding an
     the shell admin account password.
  #. Set up SSH access for the new *Admin Workstation*.
  #. Retrieve SecureDrop configuration settings from the *Application* and *Monitor Server*.
- #. Back up and configure the SecureDrop application.
+ #. Back up and configure the *Application Server*.
  #. Run ``securedrop-admin install`` and ``securedrop-admin localconfig``
     from the new *Admin Workstation*.
  #. Configure SSH-over-TOR.

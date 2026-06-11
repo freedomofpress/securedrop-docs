@@ -38,7 +38,7 @@ And the admin will also have the following two credentials:
 Journalist
 ----------
 
-The journalist will be using a *Journalist Workstation* to view submissions with the SecureDrop Application. The tasks performed by the journalist will require the following set of passphrases:
+The journalist will be using a *Journalist Workstation* to view submissions with SecureDrop Inbox. The tasks performed by the journalist will require the following set of passphrases:
 
 -  The Qubes full disk encryption (FDE) password of the Journalist Workstation they use, required to unlock system storage on boot.
 -  The Qubes system user password for the Journalist Workstation they use, required to log in.
