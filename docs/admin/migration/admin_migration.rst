@@ -62,7 +62,7 @@ Configure SecureDrop Workstation
 Now that your new Qubes-based *Admin-Workstation* is prepared, you can proceed with importing the correct *Journalist Interface* details and submission private key from your Tails-based *Secure Viewing Station* and *Journalist Workstation* USB drives.
 
 Import *Submission Private Key*
------------------------------
+-------------------------------
 
 In order to decrypt submissions, you will need a copy of the
 `Submission Private Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_
@@ -170,7 +170,7 @@ Manually importing from Tails USB drives
 ------------------------------------------------------
 
 Manually import *Submission Private Key*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If importing the submission key  using ``sdw-admin --configure`` fails, you can also copy the submission key manually.
 

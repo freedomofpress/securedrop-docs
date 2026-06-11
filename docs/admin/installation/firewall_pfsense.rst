@@ -69,7 +69,7 @@ We will use the pfSense WebGUI to do the initial configuration of the
 network firewall.
 
 Connect to the pfSense web GUI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. If you have not already done so, boot the *Admin Workstation* into
    Tails using its designated USB drive.
