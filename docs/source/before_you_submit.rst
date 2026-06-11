@@ -34,7 +34,7 @@ in your ISP's logs, or on cloud services.
 Choose the right location
 -------------------------
 
-Find a busy cafe you don’t regularly go to and sit at a place with your back
+Find a busy cafe you don't regularly go to and sit at a place with your back
 to a wall to avoid cameras capturing information on your screen or keystrokes.
 Be sure to also make any purchases while there (WiFi, tea, snacks) or
 on your way to the cafe (bus, train, gas) with cash.
@@ -89,7 +89,7 @@ https://check.torproject.org.
 
 All organizations operating SecureDrop have a *landing page* that provides their
 own organization-specific recommendations for using SecureDrop. We encourage
-you to consider an organization’s *landing page* before submitting to them.
+you to consider an organization's *landing page* before submitting to them.
 
 .. note::
 

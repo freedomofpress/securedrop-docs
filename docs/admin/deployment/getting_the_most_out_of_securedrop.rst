@@ -1,9 +1,9 @@
 Promoting your SecureDrop instance
 ==================================
 
-At Freedom of the Press Foundation, we’ve found news organizations that get the
+At Freedom of the Press Foundation, we've found news organizations that get the
 most out of SecureDrop are those who promote it regularly and effectively.
-SecureDrop will only be used by sources if they know it exists, so it’s best
+SecureDrop will only be used by sources if they know it exists, so it's best
 to promote its use in a variety of ways so that a wide swath of people will see
 it.
 
@@ -13,13 +13,13 @@ success with SecureDrop.
 Make a high profile announcement
 --------------------------------
 
-Anytime you launch a SecureDrop, you’ll want to write an accompanying news story
+Anytime you launch a SecureDrop, you'll want to write an accompanying news story
 along with it to alert your readers and potential sources where to submit
 information. Almost every news organization already does this, but some good recent
 examples come from `USA Today`_, `The Guardian`_, and `Wired`_. You can also write a
 companion Q & A like the `Washington Post`_ did.
 
-However, a launch announcement is really just a small piece of the puzzle. It’s
+However, a launch announcement is really just a small piece of the puzzle. It's
 important to regularly remind readers and potential sources that your SecureDrop
 exists, because only a tiny fraction will likely see the launch announcement and
 it will quickly be buried in other news after a couple of days.
@@ -45,7 +45,7 @@ The Washington Post has a link on their front page for “how to share a tip sec
 
 |How to Share a Tip Securely|
 
-Other news organizations put a little link in their footer, however, we’ve found
+Other news organizations put a little link in their footer, however, we've found
 that this is not as effective as putting it in a more prominent on your front page.
 
 Provide links at the bottom of your articles
@@ -72,9 +72,9 @@ Regularly share your SecureDrop *Landing Page* on social media
 --------------------------------------------------------------
 
 The majority of adults in the United States now get their news from Facebook or
-other social media sites like Twitter, so it’s important to regularly remind
+other social media sites like Twitter, so it's important to regularly remind
 people via social media posts that SecureDrop is the safest way they can contact
-your journalists if they have a sensitive tip to share. If there’s specific
+your journalists if they have a sensitive tip to share. If there's specific
 stories you are looking for tips on that may already be in the news, this is a
 great way of getting added attention to your SecureDrop.
 

@@ -15,7 +15,7 @@ type of information SecureDrop does and does not collect, and why.
 Collection of information from sources
 --------------------------------------
 
-* We don’t ask or require you to provide any personally identifying information
+* We don't ask or require you to provide any personally identifying information
   when you submit materials through SecureDrop.
 
 * The system does not record your IP address, information about your browser,
@@ -31,7 +31,7 @@ Collection of information from sources
 
 * Please keep in mind that the actual messages you send and receive through
   SecureDrop may include personally identifying information. For this reason,
-  once you read a journalist’s message, we recommend you delete it.
+  once you read a journalist's message, we recommend you delete it.
 
 Also please note that when you submit certain types of files through SecureDrop,
 you may be sending us metadata associated with that file.
@@ -40,17 +40,17 @@ For example, if you submit a photo through SecureDrop in JPEG format, the
 file may include information about the date, time, and the GPS location of where
 it was taken, and the type of device used to take the photo. Similarly, if you
 submit a Word file (.doc or .docx) through SecureDrop, it may include the
-identity of the document’s author, the author’s operating system, GPS data about
-the author’s location, and the date and time when the document was created.
+identity of the document's author, the author's operating system, GPS data about
+the author's location, and the date and time when the document was created.
 
 Our policy is to scrub metadata from the files we receive through SecureDrop
-before publication. If you don’t want to send us metadata, please use the
+before publication. If you don't want to send us metadata, please use the
 Metadata Anonymization Toolkit to scrub the file before you submit it.
 
-Collection of information about journalists’ use of SecureDrop
+Collection of information about journalists' use of SecureDrop
 --------------------------------------------------------------
 
-**[MEDIA ORG]** collects information about journalists’ use of SecureDrop for
+**[MEDIA ORG]** collects information about journalists' use of SecureDrop for
 security monitoring and to make sure the system works properly.
 
 This information we collect about journalists includes details about the device,
@@ -75,7 +75,7 @@ service at your own risk.
 Children under 13
 -----------------
 
-The Children’s Online Privacy Protection Act restricts our ability to collect
+The Children's Online Privacy Protection Act restricts our ability to collect
 personal information from children under 13. This site is not directed to
 children 12 or younger.
 

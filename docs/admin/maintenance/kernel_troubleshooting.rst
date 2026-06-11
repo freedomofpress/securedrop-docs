@@ -53,7 +53,7 @@ boot completely; if so, the log information will help us to understand
 what is happening.
 
 Provided that you can log in, check if you have network access. Try a
-command such as ``sudo host freedom.press``. If you don’t have network
+command such as ``sudo host freedom.press``. If you don't have network
 access, it is most likely due to the upgraded kernel missing a network
 driver for your hardware.
 

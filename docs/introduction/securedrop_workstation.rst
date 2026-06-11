@@ -92,7 +92,7 @@ to discuss with us, please contact us via Signal, or send us a
 
 .. _`PGP-encrypted email`: https://securedrop.org/sites/default/files/fpf-email.asc
 
-Why can’t I save or print from the Viewer VM apps?
+Why can't I save or print from the Viewer VM apps?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When you view a file on SecureDrop Workstation, it is opened in a disposable
 VM that cannot access the network or any peripherals. The VM and all its data

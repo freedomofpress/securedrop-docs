@@ -15,13 +15,13 @@ when reporters regularly refused to testify and threatened to go to jail rather
 than betray a source.
 
 More recently, there have been a record number of leak prosecutions largely because
-the government has learned they don’t need reporters to testify against their
+the government has learned they don't need reporters to testify against their
 sources anymore. Instead, they can just secretly subpoena third-party services
 like Google or AT&T or Verizon or Facebook and get a treasure trove of digital
-information on reporters and sources’ communications. For example, the Associated
+information on reporters and sources' communications. For example, the Associated
 Press had twenty of their phone lines subpoenaed without their knowledge in order
 to identify a source. The government also got a warrant for Fox News reporter James
-Rosen’s Gmail account without him knowing. In both cases, their alleged sources
+Rosen's Gmail account without him knowing. In both cases, their alleged sources
 were prosecuted, even though journalists never directly divulged their sources.
 
 SecureDrop completely eliminates third parties from the equation and puts the
@@ -34,8 +34,8 @@ has the power to contest the order or refuse to comply if they so wish.
 Limits the metadata trail as much as possible
 ---------------------------------------------
 
-In many leak cases, the metadata of a journalist's communications—where you’re
-located, who you’re talking to, when you’re talking to them, and how often—can
+In many leak cases, the metadata of a journalist's communications—where you're
+located, who you're talking to, when you're talking to them, and how often—can
 lead to trouble just as much as the actual content of your conversations.
 
 Even if a government serves a court order directly to a news organization to
@@ -43,14 +43,14 @@ compel the disclosure of information, SecureDrop logs much less information than
 email providers or phone companies do.
 
 The source can only log into SecureDrop through Tor Browser, which masks the
-source’s IP address to begin with, so there is no indication who the source is
+source's IP address to begin with, so there is no indication who the source is
 (unless they disclose it) and where they are sending information from. The Tor IP
 address, the computer, and the browser type that the source is using is not logged
 either.
 
 For each source, only the time and date of each submission is logged on the
 server. When a source sends a new message, the time and date of the last message
-is overwritten. This means that there won’t be a trail of metadata showing
+is overwritten. This means that there won't be a trail of metadata showing
 exactly when the source and journalist were talking.
 
 In addition, sources cannot create a custom username that could reveal information
@@ -77,19 +77,19 @@ another, `been targeted <https://www.reuters.com/article/us-media-cybercrime/jou
 by state sponsored hackers.
 
 Because of this threat, SecureDrop completely segments its traffic from a news
-organization’s normal network. Submissions are accessed and downloaded using the
+organization's normal network. Submissions are accessed and downloaded using the
 Qubes operating system, with all SecureDrop-related traffic routed through Tor.
 
 The SecureDrop servers also undergo significant system hardening in order to make
 it as difficult as possible for hackers to break in. By doing so, SecureDrop
 protects sources against networks that are already compromised, as well as a news
-organization’s normal network from attacks that could potentially come through
+organization's normal network from attacks that could potentially come through
 SecureDrop.
 
 Free and open source software
 -----------------------------
 
-100% of SecureDrop’s code is free and open source. Not only does this mean anyone
+100% of SecureDrop's code is free and open source. Not only does this mean anyone
 can install SecureDrop themselves, but the code is available online for security
 experts to test for vulnerabilities.
 

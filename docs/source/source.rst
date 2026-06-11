@@ -23,7 +23,7 @@ What is SecureDrop?
 SecureDrop is a tool that news organizations and NGOs use that enables secure
 and anonymous communication between whistleblowers and journalists.
 No personal information is collected; information submitted to SecureDrop is
-encrypted, and SecureDrop is not a “cloud” service. If you don’t have sensitive
+encrypted, and SecureDrop is not a “cloud” service. If you don't have sensitive
 information to send to a news organization, it may be okay to use a traditional
 methods such as phone or email when reaching out.
 

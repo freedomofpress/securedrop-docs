@@ -60,7 +60,7 @@ account setup.
    |Add a new user|
 
 #. Hand the keyboard over to the journalist so they can create their own username.
-#. Once they’re done entering a username for themselves, have them save their pre-generated Diceware passphrase to their password manager.
+#. Once they're done entering a username for themselves, have them save their pre-generated Diceware passphrase to their password manager.
 #. If the new account should also have admin privileges, allowing them to add or delete other journalist accounts, select **Is Admin**.
 #. Finally, set up two-factor authentication for the account, following one of the two procedures below for your chosen method.
 
