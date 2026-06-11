@@ -1,4 +1,4 @@
-Provisioning Export USB devices
+Provisioning export USB devices
 ===============================
 
 The *Journalist Workstation* supports the export of submissions from the SecureDrop App

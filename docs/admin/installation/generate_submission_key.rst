@@ -18,7 +18,7 @@ stick, with persistence enabled.
   is intended to ensure that the private key is protected by the air-gap
   throughout its lifetime.
 
-Create the Key
+Create the key
 --------------
 
 #. Navigate to **Apps ▸ System Tools ▸ Console** to open a terminal |Terminal|.

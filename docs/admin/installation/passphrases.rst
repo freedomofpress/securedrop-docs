@@ -1,4 +1,4 @@
-Passphrases Overview
+Passphrases overview
 ====================
 
 Each individual with a role (admin or journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation. 
@@ -60,7 +60,7 @@ to choosing one.
 
 .. _passphrase_best_practices:
 
-Passphrase Best Practices
+Passphrase best practices
 -------------------------
 
 All SecureDrop users---Sources, Journalists, and Admins---are required to memorize at least one passphrase. This section describes best practices for passphrase management in the context of SecureDrop.
@@ -90,13 +90,13 @@ All SecureDrop users---Sources, Journalists, and Admins---are required to memori
    so in the context of SecureDrop.
 
 
-How to Generate a Strong, Unique Passphrase
+How to generate a strong, unique passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We recommend using a unique, 7-word passphrase for each case described above. We encourage each end user to use KeePassXC, an easy-to-use password manager included in QubesOS, to generate and retain strong and unique passphrases. The SecureDrop installation includes a template that you can use to initialize this database, which will be explained when you set up your first :ref:`*Admin Workstation* <keepassxc_setup>`.
 
-*Using KeePassXC to Generate a Passphrase*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using KeePassXC to generate a passphrase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To create a random passphrase using KeePassXC, launch the application,
 then click the **dice icon**. Then click the **Passphrase** tab and set the

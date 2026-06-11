@@ -5,7 +5,7 @@ SecureDrop sends different alerts by PGP-encrypted email. Before installing Secu
 
 .. _daily_journalist_alerts:
 
-Optional: Daily Journalist alerts
+Optional: daily journalist alerts
 -------------------------------------------
 
 When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for journalists to be notified daily via encrypted email about whether or not there has been submission activity in the past 24 hours.
@@ -68,7 +68,7 @@ You must specify the email and GPG public key that you'll be using to receive al
 
 This could be your work email, or an alias for a group of IT admins at your organization. It helps for your mail client to have the ability to filter the numerous messages from OSSEC into a separate folder.
 
-SMTP Relay
+SMTP relay
 ~~~~~~~~~~
 
 Receiving email alerts from OSSEC requires that you have an SMTP relay to route the emails. You can use an SMTP relay hosted internally, if one is available to you, or you can use a :ref:`third-party SMTP relay such as

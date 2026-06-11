@@ -1,4 +1,4 @@
-Tor Proof-of-Work Defense on the *Source Interface*
+Tor proof-of-work defense on the *Source Interface*
 ===================================================
 
 The SecureDrop *Source Interface* is served as an onion service with an

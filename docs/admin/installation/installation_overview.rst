@@ -1,12 +1,12 @@
-Installation Overview
+Installation overview
 =====================
 
-Migrating from a Tails-Based SecureDrop
+Migrating from a Tails-based SecureDrop
 ---------------------------------------
 
 If you are migrating from an older Tails-based SecureDrop, using the separate *Secure Viewing Station*, *Journalist Workstation* and *Admin Workstation* USB drives, then skip to the :ref:`Migration Overview<migration_overview>`.
 
-Setting Expectations
+Setting expectations
 --------------------
 
 SecureDrop is a technical tool. It is designed to protect journalists and sources, but no tool can guarantee safety. This guide will instruct you in installing and configuring SecureDrop, but it does not explain how to use it safely and effectively. Put another way: at the end of this guide, you will have built a car; you will not know how to drive. The :ref:`Deployment Guide <deployment>` contains best practices for working with SecureDrop. Make sure to read it after completing the installation.
@@ -30,7 +30,7 @@ It is **critical** that you destroy this worksheet when your installation is com
 .. _`SecureDrop Installation Worksheet`: https://docs.google.com/a/freedom.press/document/d/18RMAzhx1XCgpmw366I8tItBXQTzkFy_i_D0c605DTS8/edit?usp=sharing
 
 
-Technical Summary
+Technical summary
 -----------------
 
 This installation guide will walk you through the process of setting up
@@ -64,7 +64,7 @@ Optionally:
 #. Prepare additional *Journalist Workstations* for use by journalists.
 #. Prepare encrypted USB *Export Drives*.
 
-Minimum security requirements for a SecureDrop Workstation
+Minimum security requirements for a *SecureDrop Workstation*
 ------------------------------------------------------------
 
 .. TODO Clarify differences between Journalist and Admin Workstations

@@ -1,4 +1,4 @@
-Working with Submissions
+Working with submissions
 ========================
 
 When a source submits files, you will see a Download button in the conversation
@@ -25,7 +25,7 @@ decompresses the downloaded file.
 
 |screenshot_file_download_successful|
 
-Viewing Submissions on the *Journalist Workstation*
+Viewing submissions on the *Journalist Workstation*
 ---------------------------------------------------
 
 To view a downloaded submission, click its filename. This will open
@@ -37,7 +37,7 @@ window title prefixed with "disp" (meaning disposable).
 
 This disposable VM is a special isolated environment; it does not have internet access, and isolates the files that you are viewing from other sensitive files and applications on the *Journalist Workstation*.
 
-Supported Filetypes
+Supported filetypes
 ~~~~~~~~~~~~~~~~~~~
 
 The following filetypes are currently supported for viewing on the *Journalist Workstation*:
@@ -59,7 +59,7 @@ A full list of supported filetypes can be found `here <https://github.com/freedo
 
 .. _`the Qubes OS documentation`: https://www.qubes-os.org
 
-Printing Submissions from the *Journalist Workstation*
+Printing submissions from the *Journalist Workstation*
 ------------------------------------------------------
 
 To print a document, a :doc:`compatible printer <../admin/installation/hardware>`  must be plugged into the computer's USB port.
@@ -68,7 +68,7 @@ To print a document, a :doc:`compatible printer <../admin/installation/hardware>
 2. You will prompted to attach your printer.
 3. A Print Document dialog will appear, from which you can configure different print options before printing the document.
 
-Exporting Submissions from the *Journalist Workstation*
+Exporting submissions from the *Journalist Workstation*
 -------------------------------------------------------
 
 .. important::
@@ -83,7 +83,7 @@ If you must copy a file from your **Journalist Workstation** to another computer
 These instructions assume that you are following the recommended workflow.
 If you are unsure, ask your administrator.
 
-Exporting to an Export USB
+Exporting to an export USB
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Currently, a LUKS- or VeraCrypt-encrypted USB drive is required for exporting submissions.
@@ -116,7 +116,7 @@ Currently, a LUKS- or VeraCrypt-encrypted USB drive is required for exporting su
    you can safely unplug the USB drive. Alternatively, you can leave the drive
    plugged in and export additional files.
 
-Decrypting and Preparing to Publish
+Decrypting and preparing to publish
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
@@ -153,12 +153,12 @@ audio, and begin publishing important, high-impact work!
          about encouraging sources to use SecureDrop.
 
 
-Safely Working With Submissions Outside the *Journalist Workstation*
+Safely working with submissions outside the *Journalist Workstation*
 --------------------------------------------------------------------
 
 .. _malware_risks:
 
-Risks From Malware
+Risks from malware
 ~~~~~~~~~~~~~~~~~~
 SecureDrop does not scan for or remove malware in submissions you receive. There
 are important steps you can take to protect yourself:

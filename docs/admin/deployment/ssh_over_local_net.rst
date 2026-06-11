@@ -1,4 +1,4 @@
-SSH Over Local Network
+SSH over local network
 ======================
 
 Under a production installation post-install, the default way to gain SSH
@@ -27,7 +27,7 @@ network instead please continue to read.
 
 .. _ssh_over_local:
 
-Configuring SSH for Local Access
+Configuring SSH for local access
 --------------------------------
 
 .. warning:: It is important that your firewall is configured adequately if you

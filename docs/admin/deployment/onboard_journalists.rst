@@ -1,4 +1,4 @@
-Onboard Journalists
+Onboard journalists
 ===================
 
 At this point, the only person who has access to the system is the
@@ -20,6 +20,7 @@ can log in and access submissions.
     :start-after: .. _Adding Users:
     :end-before: .. _Passphrases_and_two-factor_resets:
 
-Verify Journalist Setup
+Verify journalist setup
 -----------------------
 
+.. TODO

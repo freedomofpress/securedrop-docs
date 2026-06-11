@@ -1,7 +1,7 @@
 Logging in via SSH
 ==================
 
-SSH Over Tor
+SSH over tor
 ------------
 By default, SSH access to SecureDrop servers is routed through the Tor
 network, allowing you to access the servers
@@ -28,7 +28,7 @@ to the Tor network.
 
 .. _server SSH access:
 
-Server SSH Access
+Server SSH access
 ------------------
 
 Generally, you should avoid directly SSHing into the servers in favor of using
@@ -64,7 +64,7 @@ Shutting Down the Servers
 
   sudo shutdown now -h
 
-Rebooting the Servers
+Rebooting the servers
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: sh
@@ -73,7 +73,7 @@ Rebooting the Servers
 
 .. _investigating_logs:
 
-Investigating Logs
+Investigating logs
 ------------------
 
 Consult our :doc:`Investigating Logs <../maintenance/logging>` topic guide for locations of the
@@ -84,7 +84,7 @@ for how to enable error logging for the *Source Interface*.
 
 .. _immediate_update:
 
-Immediately Apply a SecureDrop Update
+Immediately apply a SecureDrop update
 -------------------------------------
 
 SecureDrop will update and reboot once per day. However, once a SecureDrop
@@ -113,10 +113,10 @@ into each server (via ``ssh app`` and ``ssh mon``) and run the following command
 .. _`is announced`:
   https://securedrop.org/news
 
-Application Server
-------------------
+*Application Server*
+--------------------
 
-Adding Users (CLI)
+Adding users (CLI)
 ^^^^^^^^^^^^^^^^^^
 
 After the provisioning of the first admin account, we recommend
@@ -127,7 +127,7 @@ However, you can also add users via ``./manage.py`` in ``/var/www/securedrop/``
 as described :doc:`during first install <../installation/create_admin_account>`. 
 You can use this command line method if the web application is unavailable.
 
-Restart the Web Server
+Restart the web server
 ^^^^^^^^^^^^^^^^^^^^^^
 
 If you make changes to your Apache configuration, you may want to restart the
@@ -195,8 +195,8 @@ server, their encrypted files may still exist in backups. We recommend
 that you delete old backup files with ``shred``, which is available on
 Tails.
 
-Monitor Server
---------------
+*Monitor Server*
+----------------
 
 Restart OSSEC
 ^^^^^^^^^^^^^

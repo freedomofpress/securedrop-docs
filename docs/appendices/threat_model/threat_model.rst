@@ -1,4 +1,4 @@
-Threat Model
+Threat model
 ============
 
 This document outlines the threat model for SecureDrop 0.3 and is
@@ -113,7 +113,7 @@ Assumptions
 
 The following assumptions are accepted in the threat model of every SecureDrop project:
 
-Assumptions About the Source
+Assumptions about the source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The source acts reasonably and in good faith, e.g. if the source were to give their credentials or private key material to the attacker that would be unreasonable.
@@ -124,7 +124,7 @@ Assumptions About the Source
    for using SecureDrop.
 -  The source is accessing an authentic SecureDrop site.
 
-Assumptions About the Admin and the Journalist
+Assumptions about the admin and the journalist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The admin and the journalist act reasonably and in good faith, e.g.
@@ -135,7 +135,7 @@ Assumptions About the Admin and the Journalist
    :doc:`guidelines </journalist/journalist>` for using SecureDrop
    and working with submitted documents.
 
-Assumptions About the Person Installing SecureDrop
+Assumptions about the person installing SecureDrop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  This person (usually the admin) acts reasonably and in good faith, e.g. if they were
@@ -147,13 +147,13 @@ Assumptions About the Person Installing SecureDrop
    up the :ref:`landing page <Landing Page>` for the
    organization, and for :doc:`installing SecureDrop </admin/installation/install>`.
 
-Assumptions About the Source's Computer
+Assumptions about the source's computer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The computer correctly executes Tails or Tor Browser.
 -  The computer is not compromised by malware.
 
-Assumptions About the *Admin Workstation* and the *Journalist Workstation*
+Assumptions about the *Admin Workstation* and the *Journalist Workstation*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The computer correctly executes Tails.
@@ -161,14 +161,14 @@ Assumptions About the *Admin Workstation* and the *Journalist Workstation*
 -  The two-factor authentication device used with the workstation are
    not compromised by malware.
 
-Assumptions About the *Secure Viewing Station*
+Assumptions about the *Secure Viewing Station*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The computer is airgapped.
 -  The computer correctly executes Tails.
 -  The computer and the Tails device are not compromised by malware.
 
-Assumptions About the SecureDrop Hardware
+Assumptions about the SecureDrop hardware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The servers correctly execute Ubuntu, SecureDrop and its
@@ -176,7 +176,7 @@ Assumptions About the SecureDrop Hardware
 -  The servers, network firewall, and physical media are not compromised
    by malware.
 
-Assumptions About the Organization Hosting SecureDrop
+Assumptions about the organization hosting SecureDrop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The organization wants to preserve the anonymity of its sources.
@@ -190,7 +190,7 @@ Assumptions About the Organization Hosting SecureDrop
    requests to deanonymize sources, block document submissions, or hand
    over encrypted or decrypted submissions.
 
-Assumptions About the World
+Assumptions about the world
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The security assumptions of RSA (4096-bit GPG and SSH keys) are
@@ -204,7 +204,7 @@ Assumptions About the World
    Ubuntu, the Linux kernel, application packages, application dependencies
    are valid.
 
-Other Assumptions or Factors
+Other assumptions or factors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The level of press freedom may vary in both geography and time.
@@ -232,10 +232,10 @@ Assets
 | system           |                                                            |
 +------------------+----------+-------------------------------------------------+
 
-Implications of SecureDrop Area Compromise
+Implications of SecureDrop area compromise
 ------------------------------------------
 
-What a Compromise of the *Application Server* Can Surrender
+What a compromise of the *Application Server* can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The server sees the plaintext codename, used as the login identifier,
@@ -269,7 +269,7 @@ What a Compromise of the *Application Server* Can Surrender
 -  The server can connect to the *Monitor Server* using an SSH key and a
    passphrase.
 
-What a Compromise of the *Monitor Server* Can Surrender
+What a compromise of the *Monitor Server* can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The server stores the plaintext alerts on disk, data may also reside
@@ -288,7 +288,7 @@ What a Compromise of the *Monitor Server* Can Surrender
 -  The server can connect to the *Application Server* using an SSH key and
    a passphrase.
 
-What a Compromise of the Workstations Can Surrender
+What a compromise of the workstations can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The *Admin Workstation* requires Tails with a persistent volume,
@@ -306,7 +306,7 @@ What a Compromise of the Workstations Can Surrender
    GPG key, as well as a :doc:`database with the
    passphrase </admin/installation/passphrases>` for that key.
 
-What a Compromise of the Source's Property Can Surrender
+What a compromise of the source's property can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use of `Tor Browser will leave
@@ -339,7 +339,7 @@ What a Compromise of the Source's Property Can Surrender
    -  See any replies from journalists that the source has not yet
       deleted.
 
-What a Physical Seizure of the Source's Property Can Surrender
+What a physical seizure of the source's property can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Document use of Tor or Tails, but not necessarily research into
@@ -366,7 +366,7 @@ What a Physical Seizure of the Source's Property Can Surrender
    volume, password database, and two-factor authentication device will
    allow the attacker to access both servers and the *Journalist Interface*.
 
-What Compromise of the Admin's Property Can Surrender
+What compromise of the admin's property can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  To access the *Journalist Interface*, the *Application Server*, or the
@@ -440,7 +440,7 @@ What Compromise of the Admin's Property Can Surrender
       which, assuming the attacker is able to escalate privileges, may
       affect the *Application Server*.
 
-What a Physical Seizure of the Admin's Property Can Achieve
+What a physical seizure of the admin's property can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Tamper with the hardware.
@@ -453,7 +453,7 @@ What a Physical Seizure of the Admin's Property Can Achieve
    volume, password database, and two-factor authentication device will
    allow the attacker to access both servers and the *Journalist Interface*.
 
-What a Compromise of the Journalist's Property Can Achieve
+What a compromise of the journalist's property can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  To access the *Journalist Interface*, the attacker needs to obtain the
@@ -487,7 +487,7 @@ What a Compromise of the Journalist's Property Can Achieve
    -  If the journalist has admin privileges on SecureDrop, they can create new
       journalist accounts.
 
-What a Physical Seizure of the Journalist's Property Can Achieve
+What a physical seizure of the journalist's property can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Tamper with the hardware.
@@ -501,7 +501,7 @@ What a Physical Seizure of the Journalist's Property Can Achieve
    persistent volume, password database, and two-factor authentication
    device will allow the attacker to access the *Journalist Interface*.
 
-What a Compromise of the *Application Server* Can Achieve
+What a compromise of the *Application Server* can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  If the *Application Server* is compromised, the system user the
@@ -545,7 +545,7 @@ What a Compromise of the *Application Server* Can Achieve
       not able to decrypt submissions or communications, unless the
       attacker has access to the encryption key required to do so.
 
-What a Physical Seizure of the *Application Server* Can Achieve
+What a physical seizure of the *Application Server* can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  If the *Application Server* is seized, the attacker will be able to
@@ -556,7 +556,7 @@ What a Physical Seizure of the *Application Server* Can Achieve
    information that resides in RAM. The attacker can also tamper with
    the hardware.
 
-What a Compromise of the *Monitor Server* Can Achieve
+What a compromise of the *Monitor Server* can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  If the *Monitor Server* is compromised, the system user the attacker
@@ -585,7 +585,7 @@ What a Compromise of the *Monitor Server* Can Achieve
       to decrypt encrypted email alerts, unless the attacker has access
       to the encryption key required to do so.
 
-What a Physical Seizure of the *Monitor Server* Can Achieve
+What a physical seizure of the *Monitor Server* can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  If the *Monitor Server* is seized, the attacker will be able to view
@@ -597,7 +597,7 @@ What a Physical Seizure of the *Monitor Server* Can Achieve
    have an effect on the quantity and accuracy of notifications sent to
    admins or journalists.
 
-What a Compromise of the *Secure Viewing Station* Can Achieve
+What a compromise of the *Secure Viewing Station* can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The *Secure Viewing Station* is only useful to an attacker while
@@ -621,7 +621,7 @@ What a Compromise of the *Secure Viewing Station* Can Achieve
    -  Export the *Submission Private Key* key (unless there is a passphrase
       set).
 
-What a Physical Seizure of the *Secure Viewing Station* Can Achieve
+What a physical seizure of the *Secure Viewing Station* can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The *Secure Viewing Station* is only useful to an attacker while
@@ -642,8 +642,8 @@ What a Physical Seizure of the *Secure Viewing Station* Can Achieve
       decrypted form on the *Secure Viewing Station*, or if the *Export Device*
       is in use.
 
-What a Local Network Attacker Can Achieve Against the Source, Admin, or Journalist:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What a local network attacker can achieve against the source, admin, or journalist
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  A local network can observe when they are using Tor.
 -  A local network can block Tor and prevent them from accessing
@@ -653,8 +653,8 @@ What a Local Network Attacker Can Achieve Against the Source, Admin, or Journali
    `research suggests this is very
    difficult <https://blog.torproject.org/critique-website-traffic-fingerprinting-attacks>`__.
 
-What a Global Adversary Can Achieve Against the Source, Admin, or Journalist:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What a global adversary can achieve against the source, admin, or journalist
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  A global adversary capable of observing all Internet traffic may have
    more luck than the local network attacker in deducing use of
@@ -671,7 +671,7 @@ What a Global Adversary Can Achieve Against the Source, Admin, or Journalist:
    to spoof an organization's HTTPS *Landing Page*, thereby tricking the
    source into visiting a fake SecureDrop site.
 
-What a Random Person on the Internet Can Achieve
+What a random person on the internet can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  A random person can attempt to DoS the SecureDrop server and

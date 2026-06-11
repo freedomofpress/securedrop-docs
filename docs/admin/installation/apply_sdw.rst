@@ -1,11 +1,11 @@
-Apply Configuration to *Admin Workstation*
+Apply configuration to *Admin Workstation*
 =====================================================
 
 With the servers installed and configured, the final step is to install the SecureDrop Application on the *Admin Workstation* and fully configure the machine.
 
 .. _install_configure_securedrop_app:
 
-Install and Configure the SecureDrop App
+Install and configure the SecureDrop app
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - These steps should be performed from a ``dom0`` terminal. **Start a dom0 terminal** via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
@@ -20,8 +20,8 @@ Install and Configure the SecureDrop App
 
 This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple VMs and installs supporting packages. When the command finishes, reboot the machine to complete the installation. This SecureDrop Workstation is finally ready to use!
 
-Test the Workstation
-~~~~~~~~~~~~~~~~~~~~
+Test the *Admin Workstation*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The preflight updater will start automatically after logging into the system. Please follow the preflight updater's instructions. 
 

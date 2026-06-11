@@ -1,4 +1,4 @@
-Migrating from a Tails-Based SecureDrop
+Migrating from a Tails-based SecureDrop
 =======================================
 
 Pre-install tasks:
@@ -61,7 +61,7 @@ Configure SecureDrop Workstation
 
 Now that your new Qubes-based *Admin-Workstation* is prepared, you can proceed with importing the correct *Journalist Interface* details and submission private key from your Tails-based *Secure Viewing Station* and *Journalist Workstation* USB drives.
 
-Import Submission Private Key
+Import *Submission Private Key*
 -----------------------------
 
 In order to decrypt submissions, you will need a copy of the
@@ -166,10 +166,10 @@ In order to copy a journalist's login credentials:
 
 - Close the application window and shut down the ``vault`` VM (using the Qube widget in the upper right panel). At this time, you can also re-enable the network connection using the network manager widget.
 
-Manually Importing from Tails USB Drives
+Manually importing from Tails USB drives
 ------------------------------------------------------
 
-Manually import Submission Private Key
+Manually import *Submission Private Key*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If importing the submission key  using ``sdw-admin --configure`` fails, you can also copy the submission key manually.

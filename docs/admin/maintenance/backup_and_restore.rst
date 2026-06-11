@@ -1,4 +1,4 @@
-Backing Up and Restoring Servers
+Backing up and restoring servers
 ================================
 
 Maintaining regular backups helps guard against data
@@ -11,7 +11,7 @@ or losing previous submissions from sources.
           Interface* URLs. The *Monitor Server* needs to be configured from
           scratch in the event of a hardware migration.
 
-Minimizing Disk Use
+Minimizing disk use
 -------------------
 
 Since the backup and restore operations both involve transferring *all* of
@@ -56,10 +56,10 @@ contact us through the `SecureDrop Support Portal`_.
 
 .. _backing_up:
 
-Backing Up
+Backing up
 ----------
 
-Check Connectivity
+Check connectivity
 ''''''''''''''''''
 
 Open a Terminal via **Apps ▸ System Tools ▸ Console** on your *Admin Workstation* and verify it is able to run Ansible and connect to
@@ -72,7 +72,7 @@ the SecureDrop servers.
 If this command fails, see
 :ref:`Troubleshooting <troubleshooting_admin_connectivity>`.
 
-Create the Backup
+Create the backup
 '''''''''''''''''
 
 When you are ready to begin the backup, run
@@ -96,7 +96,7 @@ archive in the output of the backup command.
              dedicated encrypted backup USB.
 .. include:: ../../includes/backup-warning.txt
 
-Restoring from a Backup
+Restoring from a backup
 -----------------------
 
 Prerequisites
@@ -123,7 +123,7 @@ For other data recovery scenarios, see
 
 .. _restore_data:
 
-Restoring a Backup on an Existing Instance
+Restoring a backup on an existing instance
 ''''''''''''''''''''''''''''''''''''''''''
 
 To restore an existing instance to a previous state, run the command:
@@ -141,7 +141,7 @@ SSH (if configured).
 
 .. _migrating:
 
-Migrating Using a Backup
+Migrating using a backup
 -------------------------
 
 Moving a SecureDrop instance to new hardware involves:
@@ -231,8 +231,8 @@ Moving a SecureDrop instance to new hardware involves:
 
 .. _repair_admin_usbs:
 
-Repair Additional Admin Workstations
-''''''''''''''''''''''''''''''''''''
+Repair additional *Admin Workstations*
+''''''''''''''''''''''''''''''''''''''
 
 If you have additional *Admin Workstation* USBs, they will no longer have
 valid SSH credentials and will need to be repaired. In these steps, the "primary
@@ -306,12 +306,12 @@ process.
 
 .. _additional_restore_info:
 
-Additional Information
+Additional information
 ----------------------
 
 .. _restore_preserve_tor_config:
 
-Data-Only Restores
+Data-only restores
 ''''''''''''''''''
 
 The ``restore`` command normally restores both the data and the Tor

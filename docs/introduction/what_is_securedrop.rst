@@ -23,7 +23,7 @@ news networks, which may be compromised.
 Another key feature of SecureDrop is that journalists can receive submissions from unknown sources without risking the security of their own machines and
 networks.
 
-How It Works
+How it works
 ------------
 
 Sources and journalists connect to SecureDrop using the Tor network. The SecureDrop software is running on premises on dedicated infrastructure (two physical servers and a firewall).
@@ -43,7 +43,7 @@ received and reviewed:
           :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>`
           to read more about SecureDrop's approach to keeping sources safe.
 
-User Roles
+User roles
 --------------
 
 There are three main user roles that interact with a SecureDrop instance:
@@ -72,7 +72,7 @@ newsrooms, there may be a team of systems admins. The admin
 connects to the *Application* and *Monitor Servers* over  `authenticated onion services <https://tb-manual.torproject.org/onion-services/>`__, and manages them
 using `Ansible <https://www.ansible.com/>`__.
 
-Project History
+Project history
 ---------------
 
 The web application, which was originally called DeadDrop, was developed by
@@ -92,7 +92,7 @@ project's early years at FPF, development was driven by James Dolan and
 Today, SecureDrop is maintained by a small full-time development team at
 FPF and a growing volunteer community.
 
-Technology and Contributions
+Technology and contributions
 ----------------------------
 
 SecureDrop and SecureDrop Workstation are open source projects of
@@ -173,10 +173,10 @@ organizations, Freedom of the Press Foundation will visit your offices, help
 set up SecureDrop and train journalists to use it. (For pro-bono support, we
 request that our travel costs are covered.)
 
-Environment Overview
+Environment overview
 --------------------
 
-Server Infrastructure
+Server infrastructure
 ~~~~~~~~~~~~~~~~~~~~~
 
 At SecureDrop's heart is a pair of servers: the *Application (“App”) Server*,
@@ -200,7 +200,7 @@ and must be physically located on-site within your organization's premises.
 
 The servers connect to the network via a dedicated hardware firewall.
 
-Application Environment
+Application environment
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The SecureDrop application environment consists of at least one laptop,
@@ -213,7 +213,7 @@ in addition to the servers described above:
 Operation
 ---------
 
-Planning & Preparation
+Planning & preparation
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Setting up SecureDrop is a multi-step process. Before getting started, you
@@ -230,7 +230,7 @@ If you need help, contact the `Freedom of the Press Foundation
 <https://securedrop.org/help>`__ who will be glad to help walk you through
 the process and make sure that you're ready to proceed.
 
-Technical Setup
+Technical setup
 ~~~~~~~~~~~~~~~
 
 Once you are familiar with the architecture and have all the hardware,
@@ -238,7 +238,7 @@ Once you are familiar with the architecture and have all the hardware,
 least a day's work for your admin. We recommend that you set aside at least
 a week to :ref:`complete and test <Deployment>` your setup.
 
-Provisioning & Training
+Provisioning & training
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Once SecureDrop is installed, journalists will need to be provided with
@@ -254,7 +254,7 @@ multiple offices, training will need to happen at each location. Again, the
 `Freedom of the Press Foundation <https://securedrop.org/help>`__ are happy to
 help you plan and train your team.
 
-Going Public
+Going public
 ~~~~~~~~~~~~
 
 Once you have a SecureDrop instance and your team knows how to use it, you
@@ -268,10 +268,10 @@ SecureDrop *Landing Page* and our guide to
 .. |SecureDrop architecture highlevel overview diagram| image:: /diagrams/securedrop_overview_highlevel.png
   :width: 100%
 
-Sharing Access
+Sharing access
 --------------
 
-With Other Journalists In Your Organization
+With other journalists in your organization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 While SecureDrop supports having multiple journalist accounts for the document
 interface, all accounts will access the same inbox. To avoid confusion, we
@@ -279,7 +279,7 @@ recommend news organizations assign 1-3 journalists to regularly check
 SecureDrop and make sure that they all are in contact as to who is responsible
 for responding to each source. 
 
-With Other Organizations
+With other organizations
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Currently you cannot use SecureDrop with multiple organizations for security

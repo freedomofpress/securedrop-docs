@@ -99,7 +99,7 @@ Note that ``dom0`` and ``apply_dom0`` are separate steps.
    security-sensitive, and may require a reboot to take
    effect.
 
-Expired SecureDrop Signing Key
+Expired SecureDrop signing key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the update fails after running ``sudo qubes-dom0-update`` as described

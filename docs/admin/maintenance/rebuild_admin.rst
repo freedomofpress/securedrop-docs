@@ -241,7 +241,7 @@ so far, you'll need to retrieve the following files and info:
  - OSSEC alert configuration details
  - (Optional) HTTPS configuration details
 
-Retrieve GPG Public Keys
+Retrieve GPG public keys
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Copy the *Submission Public Key* with the following commands:
@@ -338,8 +338,8 @@ certificate key, and chain file. When prompted for the names of these files
 during the next step, you should specify them relative to the
 ``~/.config/securedrop-admin/`` directory, i.e. as ``ssl/mydomain.crt``.
 
-Step 5: Configure and back up the Application Server
-====================================================
+Step 5: Configure and back up the *Application Server*
+======================================================
 
 Next, configure the SecureDrop application using the files and info retrieved in the
 previous steps. To do so, connect to the Tor network on the

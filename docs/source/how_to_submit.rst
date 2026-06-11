@@ -1,4 +1,4 @@
-How To Submit
+How to submit
 =============
 
 .. note::
@@ -17,7 +17,7 @@ How To Submit
    anonymity, you should not discuss your own use of it with others via unsafe
    methods, including email to Freedom of the Press Foundation.
 
-Making Your First Submission
+Making your first submission
 ----------------------------
 
 Open Tor Browser and navigate to the .onion address for the SecureDrop you wish

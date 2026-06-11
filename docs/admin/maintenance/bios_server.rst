@@ -1,4 +1,4 @@
-BIOS Updates on the Servers
+BIOS updates on the servers
 ===========================
 
 Below are the steps for updating the BIOS on the *Application* and *Monitor
@@ -10,25 +10,25 @@ instructions will vary depending on the manufacturer and model of your device.
 What you need
 ~~~~~~~~~~~~~
 
-  #. A clean USB device to download the BIOS file
+  #. A clean USB drive to download the BIOS file
   #. An Internet-connected workstation, such as the *Admin Workstation*
   #. A UPS (uninterrupted power supply), such as a surge-protecting power supply with a backup battery (This is not required, but strongly recommended)
   #. A keyboard and monitor
 
-Perform Backups
+Perform backups
 ~~~~~~~~~~~~~~~
 
 If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the Application Server <backup_and_restore>` before proceeding.
 
-Prepare the USB Stick
+Prepare the USB drive
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the Disks application, delete existing partitions on the USB device, if applicable, and reformat the entire device with one FAT32 partition. Note that you will lose access to all existing data on this USB stick.
+Using the Disks application, delete existing partitions on the USB drive, if applicable, and reformat the entire device with one FAT32 partition. Note that you will lose access to all existing data on this USB drive.
 
-Download and Verify Appropriate BIOS Files
+Download and verify appropriate BIOS files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For Intel and ASUS NUC Devices
+For Intel and ASUS NUC devices
 ``````````````````````````````
 Check the make and model of your servers, and follow the F7 BIOS update method in the documentation. The exact instructions vary by model:
 

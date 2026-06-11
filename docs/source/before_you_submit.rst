@@ -1,14 +1,14 @@
-Before You Submit
+Before you submit
 =================
 
-What NOT to Do
+What NOT to do
 --------------
 
 * DO NOT access SecureDrop on your employer's network.
 * DO NOT access SecureDrop using your employer's hardware.
 * DO NOT access SecureDrop on your home internet network.
 
-Suggested Devices for Using SecureDrop
+Suggested devices for using SecureDrop
 --------------------------------------
 
 When sensitive disclosures such as government improprieties are involved,
@@ -31,7 +31,7 @@ to avoid leaving traces of your activity on the computer's hard disk,
 in your ISP's logs, or on cloud services.
 
 
-Choose the Right Location
+Choose the right location
 -------------------------
 
 Find a busy cafe you don’t regularly go to and sit at a place with your back
@@ -81,7 +81,7 @@ making these decisions.
 .. _`Tails operating system`: https://tails.net/
 .. _`@GetTor_bot on Telegram`: https://t.me/gettor_bot
 
-Choose Who to Submit To
+Choose who to submit to
 -----------------------
 We recommend conducting all research related to your submission in Tor Browser.
 If you are unsure whether you are using Tor, you can visit the address

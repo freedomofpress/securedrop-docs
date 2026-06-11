@@ -1,7 +1,7 @@
 Decommission SecureDrop
 =======================
 
-Protecting, Moving, or Taking Down Your SecureDrop Instance
+Protecting, moving, or taking down your SecureDrop instance
 -----------------------------------------------------------
 
 If the location hosting your SecureDrop servers is going to be empty for
@@ -49,7 +49,7 @@ location or elsewhere, is a matter of reconnecting the servers to the
 firewall, attaching a WAN connection that allows unfiltered access to Tor to
 the firewall WAN port, and powering everything on.
 
-Permanently Decommissioning SecureDrop
+Permanently decommissioning SecureDrop
 --------------------------------------
 
 The following steps will guide you through the decommissioning of your

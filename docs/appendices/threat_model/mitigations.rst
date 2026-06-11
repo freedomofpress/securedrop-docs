@@ -1,4 +1,4 @@
-Attacks and Countermeasures on the SecureDrop Environment
+Attacks and countermeasures on the SecureDrop environment
 =========================================================
 
 SecureDrop is a complex ecosystem comprised of various pieces of hardware, a
@@ -15,26 +15,26 @@ around press freedoms. While these attack vectors are out of the scope of this
 document, they should be factored in to any organization’s threat model with
 regional and political specificity.
 
-Application Code — SecureDrop Repository/Release
+Application code — SecureDrop repository/release
 ------------------------------------------------
 
-Attacks to the Application Code — SecureDrop Repository/Release
+Attacks to the application code — SecureDrop repository/release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Malicious code introduced in SecureDrop repository
 -  Malicious code introduced in SecureDrop release
 -  Failure to encrypt submissions as they are written to disk
 
-Countermeasures on the Application Code — SecureDrop Repository/Release
+Countermeasures on the application code — SecureDrop repository/release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Code (git tags) and releases (packages uploaded to apt) are signed with the airgapped signing key
 -  Protection is placed on `main` and `develop` branch on GitHub
 -  For SecureDrop Developers, two-factor authentication is mandated on GitHub
 -  Community trust is built through 3 trusted code owners and code reviews
 
-Application Code — *Source Interface* and *Journalist Interface*
+Application code — *Source Interface* and *Journalist Interface*
 ----------------------------------------------------------------
 
-Attacks to the Application Code — *Source Interface* and *Journalist Interface*
+Attacks to the application code — *Source Interface* and *Journalist Interface*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Configuration vulnerability in *Source* or *Journalist Interface*
 -  Lack of segmentation between *Source* and *Journalist Interface*
@@ -109,7 +109,7 @@ Attacks on the *Application Server* and *Monitor Server*
 -  Attacker exploits postfix
 -  Known vulnerabilities in the Linux kernel or packages used by app/mon servers
 
-Countermeasures on Both *Application* and *Monitor Servers*
+Countermeasures on both *Application* and *Monitor Servers*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Grsecurity/PaX linux patches prevent the exploitation of certain memory-corruption attacks
 -  AppArmor profiles further reduce process capabilities through Mandatory Access Control
@@ -118,19 +118,19 @@ Countermeasures on Both *Application* and *Monitor Servers*
 -  *Journalist Interface* uses ATHS cookie
 -  *Monitor Server* should only expose SSH via Tor Onion Service. All other traffic should be blocked by firewall
 
-Countermeasures Unique to *Application Server*
+Countermeasures unique to *Application Server*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  SecureDrop *Source* and *Journalist Interfaces* uses X-Frame-Options: DENY header
 -  Browser Same Origin Policy should prevent the SecureDrop page from trivial modifications, but more complex attacks are mitigated via the X-Frame-Options: DENY HTTP header
 
-Countermeasures Unique to *Monitor Server*
+Countermeasures unique to *Monitor Server*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  OSSEC is used for intrusion detection/file integrity monitoring, and are sent to Admins via end-to-end encrypted email
 
-SecureDrop Dependencies — Python, Tor, Linux Kernel, apt, Qubes, Ubuntu, or Hardware Firewall Vulnerabilities
+SecureDrop dependencies — Python, Tor, Linux Kernel, apt, Qubes, Ubuntu, or hardware firewall vulnerabilities
 -------------------------------------------------------------------------------------------------------------
 
-Attacks on SecureDrop Dependencies
+Attacks on SecureDrop dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Known vulnerabilities in Python or libraries used by SecureDrop
 -  Known vulnerabilities in Tor (incl. Onion Service cryptography, authentication)
@@ -145,27 +145,27 @@ Attacks on SecureDrop Dependencies
 -  Tor Browser exploit
 -  Vulnerabilities/Compromise of Hardware Firewall
 
-Countermeasures Against Vulnerabilities in Python or Libraries
+Countermeasures against vulnerabilities in Python or libraries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  FPF performs vulnerability management for all Python packages used by SecureDrop
 -  CI will run safety check to ensure dependencies do not have a CVE associated with the `version <https://github.com/freedomofpress/securedrop/commit/e9c13ff3d09dfc446bc28da4347f627b5533b150>`__
 
-Countermeasures Against Vulnerabilities in Tor
+Countermeasures against vulnerabilities in Tor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  A cron job ensures that automatic nightly security updates are applied for OS packages, including Tor
 -  Grsecurity/PaX linux patches prevent the exploitation of certain memory-corruption attacks
 -  AppArmor profiles further reduce process capabilities through Mandatory Access Control
 -  Onion service authentication is used as a complementary authentication and only used for defense-in-depth/attack surface reduction
 
-Countermeasures Against Malicious apt Installs
+Countermeasures against malicious apt installs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  apt does GPG signature verification of all packages as long as it's not explicitly disabled
 
-Countermeasures Against Malicious Qubes or Ubuntu ISOs
+Countermeasures against malicious Qubes or Ubuntu ISOs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -   SecureDrop :doc:`Admin Guide </admin/installation/intro_for_admins>` instructs Users/Admins to validate checksum/signatures of downloaded images
 
-Countermeasures Against Vulnerabilities in the Hardware Firewall
+Countermeasures against vulnerabilities in the hardware firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  SecureDrop :doc:`Admin Guide </admin/installation/intro_for_admins>` informs administrators to update the hardware firewall and provides a very restrictive policy for accessing the administrative interface (blocked on app and mon ports of the firewall).
 -  Alert emails are sent out to admins when there are critical pfSense vulnerabilities.
@@ -175,7 +175,7 @@ Countermeasures Against Vulnerabilities in the Hardware Firewall
 Network Infrastructure — FPF Infrastructure or Organization Corporate Network
 -----------------------------------------------------------------------------
 
-Attacks on Network Infrastructure
+Attacks on network infrastructure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Landing Page source control is compromised
 -  Landing Page host is compromised
@@ -195,7 +195,7 @@ Attacks on Network Infrastructure
 -  SMTP relay compromised
 -  Admin's network is monitored
 
-Countermeasures in FPF Infrastructure
+Countermeasures in FPF infrastructure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Builds are independently validated by multiple developers
 -  Release files containing hashes (MD5, SHA1, SHA256, SHA512) of package file and package hashes are signed with an airgapped GPG key
@@ -203,7 +203,7 @@ Countermeasures in FPF Infrastructure
 -  SecureDrop updates are packaged in a .deb file and served through FPF's apt repo
 -  Source code is validated/verified before packaging and signing the .deb
 
-Countermeasures in News Organization Corporate Network
+Countermeasures in news organization corporate network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  SecureDrop environment should be strictly segregated from corporate environment
 -  Most SecureDrop application traffic goes over Tor and as such is encrypted end-to-end
@@ -214,7 +214,7 @@ Countermeasures in News Organization Corporate Network
 User Behavior and Hardware — SecureDrop Hardware Tampering or Failure in Operational Security
 ---------------------------------------------------------------------------------------------
 
-Attacks on User Behavior or Hardware
+Attacks on user behavior or hardware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Journalist corporate workstation seized/tampered/compromised
 -  Transfer device seized/stolen/lost
@@ -225,7 +225,7 @@ Attacks on User Behavior or Hardware
 -  Source shares that they are using SecureDrop/leaking documents
 -  Journalist/Admin gets phished from a submission or otherwise breaks the SVS airgap with malware
 
-Countermeasures in User Behavior Recommendations
+Countermeasures in user behavior recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  :doc:`Source Guide </source/source>` gives instructions on best practices for the entire submission workflow
 -  Source interface banner suggests that user disables JS (high security settings in Tor Browser)

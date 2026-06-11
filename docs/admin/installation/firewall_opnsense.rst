@@ -1,9 +1,9 @@
 .. _firewall_opnsense:
 
-Setting Up An OPNSense Network Firewall
+Setting up an OPNSense network firewall
 =======================================
 
-Before You Begin
+Before you begin
 ----------------
 First, consider how the firewall will be connected to the Internet. You
 will need to provision several unique subnets, which should not conflict
@@ -51,7 +51,7 @@ values before continuing.
 -  Monitor Gateway: ``10.20.3.1``
 -  Monitor Server (OPT2) : ``10.20.3.2``
 
-Initial Configuration
+Initial configuration
 ---------------------
 
 Unpack the firewall, connect the power, and power on the device.
@@ -59,7 +59,7 @@ Unpack the firewall, connect the power, and power on the device.
 We will use the OPNSense Web GUI to do the initial configuration of the
 network firewall.
 
-Connect to the OPNSense Web GUI
+Connect to the OPNSense web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. If you have not already done so, boot the *Admin Workstation* into
@@ -127,7 +127,7 @@ displayed. You should not step through it at this point, however, as there are
 other tasks to complete. To exit, click the OPNSense logo in the top left corner
 of the screen.
 
-Set a Strong Password
+Set a strong password
 ~~~~~~~~~~~~~~~~~~~~~
 
 Navigate to **System ▸ Access ▸ Users** and click the edit button for the ``root``
@@ -136,7 +136,7 @@ a strong passphrase with KeePassXC and saving it in the Tails Persistent folder 
 the provided KeePassXC database template. Two-factor authentication will be enabled 
 in a later step.
 
-Set Alternate Hostnames
+Set alternate hostnames
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Before you can set up the hardware firewall, you will need to set the
@@ -151,7 +151,7 @@ default values), separated by a space.
 
 Finally, scroll to the bottom of the page and click **Save**.
 
-Configure Interfaces Via The Setup Wizard
+Configure interfaces via the Setup Wizard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click
@@ -213,7 +213,7 @@ account using an OTP token and the passphrase you just set.
 Once you've logged in to the Web GUI, you are ready to continue configuring
 the firewall.
 
-Connect Interfaces and Test
+Connect interfaces and test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now that the initial configuration is completed, you can connect the WAN
@@ -238,7 +238,7 @@ to apply several updates in a row to get to the latest version.
 
 |OPNSense - no updates|
 
-Enable Two-Factor Authentication
+Enable two-factor authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 OPNSense supports two-factor authentication (2FA) via mobile apps such as Google Authenticator
@@ -301,7 +301,7 @@ select ``TOTP Local`` and deselect ``Local Database.``. Click **Save**.
    |OPNSense - totp server|
 
 
-Disable DHCP on the Firewall
+Disable DHCP on the firewall
 ----------------------------
 
 OPNSense runs a DHCP server on the LAN interface by default. At this
@@ -312,7 +312,7 @@ In order to tighten the firewall rules as much as possible, we recommend
 disabling the DHCP server and assigning a static IP address to the Admin
 Workstation instead.
 
-Disable DHCP Server on the LAN Interface
+Disable DHCP server on the LAN interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To disable DHCP, navigate to **Services ▸ DHCPv4 ▸ [LAN]** in the Web GUI.
@@ -321,7 +321,7 @@ and click **Save**.
 
 |OPNSense - Disable DHCP|
 
-Assign a Static IP Address to the *Admin Workstation*
+Assign a static IP address to the *Admin Workstation*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now you will need to assign a static IP to the *Admin Workstation*.
@@ -366,7 +366,7 @@ change. You will need you have succeeded in connecting with your new
 static IP when you are able to connect using the Tor Connection assistant,
 and you see the message "Connected to Tor successfully".
 
-Troubleshooting: DNS Servers and the Unsafe Browser
+Troubleshooting: DNS servers and the Unsafe Browser
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
 After saving the new network configuration, you may still encounter the
@@ -386,7 +386,7 @@ to Tor successfully".
 For the next step, SecureDrop Configuration, you will manually configure the
 firewall for SecureDrop, using screenshots as a reference.
 
-SecureDrop Configuration
+SecureDrop configuration
 ------------------------
 
 SecureDrop uses the firewall to achieve two primary goals:
@@ -401,7 +401,7 @@ In order to use the firewall to isolate the *Application Server* and the *Monito
 Server* from each other, we need to connect them to separate interfaces, and then set
 up firewall rules that allow them to communicate.
 
-Enable The OPT1 And OPT2 Interfaces
+Enable the OPT1 and OPT2 interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The OPT1 and OPT2 interfaces will be used for the *Application Server* and *Monitor
@@ -475,7 +475,7 @@ the recommended values).
 
 Click **Save**, then click **Apply changes** when prompted.
 
-Configure Firewall Aliases
+Configure firewall aliases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to simplify firewall rule setup, the next step is to configure aliases
@@ -534,13 +534,13 @@ When complete, the **Aliases** page should look like this:
 
 Scroll down and click **Apply** to save and apply your new aliases.
 
-Configure Firewall Rules
+Configure firewall rules
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Next, configure firewall rules for each interface.
 
 
-Configure Firewall Rules on LAN
+Configure firewall rules on LAN
 '''''''''''''''''''''''''''''''
 First, navigate to **Firewall ▸ Rules ▸ LAN**.  The LAN interface should have one
 automatically-generated anti-lockout rule in place, in addition to two default-allow rules.
@@ -590,7 +590,7 @@ Settings ▸ Advanced**. Scroll down to the **Miscellaneous** section and check 
 
 |OPNSense - Disable Antilockout|
 
-Configure Firewall Rules On OPT1
+Configure firewall rules on OPT1
 ''''''''''''''''''''''''''''''''
 Next, navigate to **Firewall ▸ Rules ▸ OPT1**. There should be no rules defined
 on this interface. Add the rules below:
@@ -668,7 +668,7 @@ Once they match the screenshot below, click **Apply Changes**.
 
 |OPNSense Firewall OPT1 Rules|
 
-Configure Firewall Rules On OPT2
+Configure firewall rules on OPT2
 ''''''''''''''''''''''''''''''''
 Next, navigate to **Firewall ▸ Rules ▸ OPT2**. Similarly to OPT1, there should be no rules defined
 on this interface. Add the rules below until the rules in the Web GUI match those
@@ -733,7 +733,7 @@ Finally, click **Apply Changes**.
 The *Network Firewall* configuration is now complete, allowing you to move
 to the next step: :doc:`setting up the servers. <prepare_servers>`
 
-Troubleshooting Tips
+Troubleshooting tips
 --------------------
 
 Here are some general tips for setting up OPNSense firewall rules:
@@ -752,7 +752,7 @@ Here are some general tips for setting up OPNSense firewall rules:
 
 .. _Keeping OPNSense up to date:
 
-Keeping OPNSense up to Date
+Keeping OPNSense up to date
 ---------------------------
 
 Periodically, the OPNSense project maintainers release an update to the

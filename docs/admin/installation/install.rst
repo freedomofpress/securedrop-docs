@@ -5,7 +5,7 @@ Now that the servers are prepared, you are ready to install and configure the Se
 
 .. _test_connectivity:
 
-Test Connectivity to Servers
+Test connectivity to servers
 ----------------------------
 
 Having set up the firewall, you can plug the *Application Server* and the *Monitor Server* into the firewall. Your *Admin Workstation* should also be connected to the firewall.
@@ -28,7 +28,7 @@ Open a terminal in ``sd-admin`` and verify that you can SSH into both servers, a
 .. tip:: If you cannot connect, check the network firewall logs for
          clues.
 
-Set Up SSH Keys
+Set up SSH keys
 ---------------
 
 Ubuntu's default SSH configuration authenticates users with their
@@ -81,7 +81,7 @@ or 'mon') as shown above.
 
 .. _configure_securedrop:
 
-Prepare Configuration Files
+Prepare configuration files
 ---------------------------
 
 Make sure you have the following information and files ready before
@@ -122,7 +122,7 @@ parentheses.
           French to be available to read the documents and follow up in that
           language.
 
-OSSEC Alerts Public Key
+OSSEC alerts public key
 -----------------------
 
 Before proceeding, you will need to copy the *OSSEC Alert Public Key* public key to
@@ -204,7 +204,7 @@ The script will automatically validate the answers you provided and display
 error messages if any problems are detected. The answers will be
 written to the file ``~/.config/securedrop-admin/site-specific``.
 
-Optional: Configuring fingerprint verification
+Optional: configuring fingerprint verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you run your own mail server, you may wish to increase the security
@@ -250,7 +250,7 @@ playbooks.) Save ``~/.config/securedrop-admin/site-specific`` and exit the edito
 
 .. _Install SecureDrop Servers:
 
-Install SecureDrop Servers
+Install SecureDrop servers
 --------------------------
 
 Now you are ready to install! This process will configure

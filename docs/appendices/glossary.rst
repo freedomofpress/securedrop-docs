@@ -1,6 +1,8 @@
 Glossary
 ========
 
+.. TODO add Admin Workstation and Journalist Workstation?
+
 A number of terms used in this guide, and in the `SecureDrop workflow
 diagram <what_is_securedrop>`, are specific to SecureDrop. 
 The list below attempts to enumerate and define these terms.

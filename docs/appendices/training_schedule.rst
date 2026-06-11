@@ -1,7 +1,7 @@
 SecureDrop On-Site Training Schedule
 ====================================
 
-Who is This For?
+Who is this for?
 ----------------
 
 While SecureDrop is open source and available for anyone to install and set up,
@@ -37,10 +37,10 @@ Installation may be started by admins ahead of schedule to save on-site time.
 
 -  Follow :doc:`Installing SecureDrop </admin/installation/install>`
 
-Day 2: Admin and Digital Security Training
+Day 2: Admin and digital security training
 ------------------------------------------
 
-Admin Training
+Admin training
 ~~~~~~~~~~~~~~
 
 **Time**: 4+ hours
@@ -75,7 +75,7 @@ Admin Training
    -  :ref:`Deployment` guidelines
 
 
-Digital Security 101
+Digital security 101
 ~~~~~~~~~~~~~~~~~~~~
 
 **Time**: 2 hours
@@ -96,10 +96,10 @@ recipients and anyone else interested
 - Secure communication tools for colleagues and sources
 - Q & A
 
-Day 3: Journalist Training and Onboarding
+Day 3: Journalist training and onboarding
 -----------------------------------------
 
-Journalist Training, Part 1
+Journalist training, part 1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Time**: 2.5 hours
@@ -136,7 +136,7 @@ recipients and anyone else interested
 -  Link to `security audits <https://securedrop.org/research/#audits>`__
 - Q & A
 
-Journalist Training, Part 2
+Journalist training, part 2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Time**: 1+ hours, depending on the number of journalists being onboarded

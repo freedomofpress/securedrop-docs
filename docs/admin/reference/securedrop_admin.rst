@@ -22,7 +22,7 @@ You can list all available ``securedrop-admin`` actions using the command
   must take steps to manually synchronize any configuration changes made via ``securedrop-admin``
   with each other. See `Managing Configuration Updates with Multiple Admins`_
 
-Updating the Server Configuration
+Updating the server configuration
 ---------------------------------
 
 .. _update-system-configuration:
@@ -60,7 +60,7 @@ In both cases, follow these steps:
 .. include:: ../../includes/rerun-install-is-safe.txt
 
 
-Updating Localization for the *Source Interface* and the *Journalist Interface*
+Updating localization for the *Source Interface* and the *Journalist Interface*
 -------------------------------------------------------------------------------
 
 The *Source Interface* and *Journalist Interface* are translated in the following
@@ -91,7 +91,7 @@ languages as needed. Locale changes will be applied after the next reboot.
 
 .. _multiple_admins:
 
-Managing Configuration Updates with Multiple Admins
+Managing configuration updates with multiple admins
 ---------------------------------------------------
 
 Organizations with multiple admins should set up a way to synchronize

@@ -1,6 +1,6 @@
 .. _Sample Privacy Policy:
 
-Sample SecureDrop Privacy Policy
+Sample SecureDrop privacy policy
 ================================
 
 **[DATE]**
@@ -12,7 +12,7 @@ help of Freedom of the Press Foundation.
 Please read this privacy policy carefully. It explains what information what
 type of information SecureDrop does and does not collect, and why.
 
-Collection of Information From Sources
+Collection of information from sources
 --------------------------------------
 
 * We don’t ask or require you to provide any personally identifying information
@@ -47,7 +47,7 @@ Our policy is to scrub metadata from the files we receive through SecureDrop
 before publication. If you don’t want to send us metadata, please use the
 Metadata Anonymization Toolkit to scrub the file before you submit it.
 
-Collection of Information About Journalists’ Use of SecureDrop
+Collection of information about journalists’ use of SecureDrop
 --------------------------------------------------------------
 
 **[MEDIA ORG]** collects information about journalists’ use of SecureDrop for
@@ -59,7 +59,7 @@ date and time of each session.
 
 We retain these access logs for **[___]** days, and then delete them.
 
-Data Security
+Data security
 -------------
 
 **[MEDIA ORG]** works diligently to protect the identities of our sources and
@@ -72,14 +72,14 @@ However, no one can truly guarantee 100% security of any system. Like all
 software, SecureDrop may contain bugs. Ultimately, you use the SecureDrop
 service at your own risk.
 
-Children Under 13
+Children under 13
 -----------------
 
 The Children’s Online Privacy Protection Act restricts our ability to collect
 personal information from children under 13. This site is not directed to
 children 12 or younger.
 
-Changes to This Policy
+Changes to this policy
 ----------------------
 
 We may revise this Privacy Policy from time to time. The most current version

@@ -1,4 +1,4 @@
-SecureDrop for Sources
+SecureDrop for sources
 ======================
 
 .. note::

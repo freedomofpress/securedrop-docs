@@ -1,4 +1,4 @@
-Whole Site Changes
+Whole site changes
 ==================
 
 Ideally, some or all of the following changes are made to improve the

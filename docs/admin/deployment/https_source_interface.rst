@@ -24,7 +24,7 @@ encryption and authentication via HTTPS:
 
 .. _`SecureDrop Directory`: https://securedrop.org/directory/
 
-Obtaining an HTTPS certificate for Onion URLs
+Obtaining an HTTPS certificate for onion URLs
 ---------------------------------------------
 
 Digicert

@@ -1,4 +1,4 @@
-Promoting Your SecureDrop Instance
+Promoting your SecureDrop instance
 ==================================
 
 At Freedom of the Press Foundation, we’ve found news organizations that get the
@@ -10,7 +10,7 @@ it.
 So here are a few tips used by some of the news outlets that have seen the most
 success with SecureDrop.
 
-Make a High Profile Announcement
+Make a high profile announcement
 --------------------------------
 
 Anytime you launch a SecureDrop, you’ll want to write an accompanying news story
@@ -29,7 +29,7 @@ it will quickly be buried in other news after a couple of days.
 .. _`Wired`: https://www.wired.com/2017/04/new-way-securely-send-information-wired/
 .. _`Washington Post`: https://www.washingtonpost.com/pr/wp/2017/01/31/qa-about-sharing-confidential-tips-with-the-washington-post/
 
-Provide a Clear Link on Your Homepage
+Provide a clear link on your homepage
 -------------------------------------
 
 Making your SecureDrop or secure tips page easy to find is one of the most important
@@ -48,7 +48,7 @@ The Washington Post has a link on their front page for “how to share a tip sec
 Other news organizations put a little link in their footer, however, we’ve found
 that this is not as effective as putting it in a more prominent on your front page.
 
-Provide Links at the Bottom of Your Articles
+Provide links at the bottom of your articles
 --------------------------------------------
 
 Another great way to remind potential sources know that they can use SecureDrop is
@@ -57,7 +57,7 @@ uses a message like this:
 
 |Gizmodo Article Footer|
 
-Create an Instructional Video on How to Access and Use Your SecureDrop
+Create an instructional video on how to access and use your SecureDrop
 ----------------------------------------------------------------------
 
 To better help potential sources visualize how SecureDrop works, several
@@ -68,7 +68,7 @@ Some good examples include the `Toronto Globe and Mail`_, The Intercept, and
 .. _`Toronto Globe and Mail`: https://www.youtube.com/watch?v=oSW2wMWtAMM
 .. _`Lucy Parsons Labs`: https://www.youtube.com/watch?v=LkgN244ggzs
 
-Regularly Share Your SecureDrop *Landing Page* on Social Media
+Regularly share your SecureDrop *Landing Page* on social media
 --------------------------------------------------------------
 
 The majority of adults in the United States now get their news from Facebook or
@@ -80,7 +80,7 @@ great way of getting added attention to your SecureDrop.
 
 |New Yorker Tweet|
 
-Target Potential Whistleblowers with Advertising
+Target potential whistleblowers with advertising
 ------------------------------------------------
 
 Facebook and Twitter also allow for targeted advertising to users in specific
@@ -94,7 +94,7 @@ how it can be done. You can read about `how you can do the same thing here`_.
 .. _`tell on trump`: https://web.archive.org/web/20200926063152/https://specialprojectsdesk.com/tell-on-trump-1792401813
 .. _`how you can do the same thing here`: https://freedom.press/news/we-targeted-securedrop-ad-potential-whistleblowers-trump-administration-you-can-too/
 
-Put an Advertisement in Your Physical Paper
+Put an advertisement in your physical paper
 -------------------------------------------
 
 Obviously this tip only applies to news outlets that also print a physical

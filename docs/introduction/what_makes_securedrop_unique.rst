@@ -1,11 +1,11 @@
-What Makes SecureDrop Unique?
+What makes SecureDrop unique?
 =============================
 
 SecureDrop attempts to solve or mitigate several problems journalists and sources
 have faced in recent legal investigations, attacks from state actors, and other
 threats to the confidentiality of communications.
 
-No Third Parties that Can Secretly be Subpoenaed
+No third parties that can secretly be subpoenaed
 ------------------------------------------------
 
 For decades, there were very few leak prosecutions in the United States in large
@@ -31,7 +31,7 @@ and sits on their property, so any legal order for information must go directly
 to the news organization rather than Google or AT&T. The news organization again
 has the power to contest the order or refuse to comply if they so wish.
 
-Limits the Metadata Trail as Much as Possible
+Limits the metadata trail as much as possible
 ---------------------------------------------
 
 In many leak cases, the metadata of a journalist's communications—where you’re
@@ -57,7 +57,7 @@ In addition, sources cannot create a custom username that could reveal informati
 about them. Instead, SecureDrop automatically generates two random codenames, one
 to show to the source and another to the journalists using the system.
 
-Encrypted and Air-Gapped
+Encrypted and air-gapped
 ------------------------
 
 Communications through SecureDrop are both encrypted in transit, so messages cannot
@@ -69,7 +69,7 @@ In addition, the decryption key for SecureDrop submissions sits in an isolated
 virtual machine inside a hardened operating system that opens submissions in a
 temporary, non-networked environment.
 
-Protects Against Hackers
+Protects against hackers
 ------------------------
 
 A 2014 study showed that 21 of the top 25 news organization had, at one time or
@@ -86,7 +86,7 @@ protects sources against networks that are already compromised, as well as a new
 organization’s normal network from attacks that could potentially come through
 SecureDrop.
 
-Free and Open Source Software
+Free and open source software
 -----------------------------
 
 100% of SecureDrop’s code is free and open source. Not only does this mean anyone

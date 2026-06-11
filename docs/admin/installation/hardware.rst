@@ -9,7 +9,7 @@ successfully install and operate a SecureDrop instance, and recommends
 some specific components that we have found to work well. If you have
 any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
 
-Hardware Overview
+Hardware overview
 -----------------
 
 .. _Required Hardware:
@@ -47,6 +47,7 @@ Additionally, you may want to consider the following purchases:
 
 Advice for users on a tight budget
 ----------------------------------
+
 If you cannot afford to purchase new hardware for your
 SecureDrop instance, we encourage you to consider
 re-purposing existing hardware to use with SecureDrop. If
@@ -67,7 +68,7 @@ determination is outside the scope of this document.
 
 .. _Hardware Recommendations:
 
-Required Hardware
+Required hardware
 -----------------
 
 Servers
@@ -324,7 +325,7 @@ laptop that we have directly tested (in that order); however, if none of those
 suit your needs, or if you want to see if your existing hardware might be
 Qubes compatible, the HCL is a good choice.
 
-Network Firewall
+Network firewall
 ^^^^^^^^^^^^^^^^
 
 You will need one physical computer that is used as a dedicated firewall
@@ -341,7 +342,7 @@ We recommend a 4 NIC network firewall and currently provide setup instructions f
 An acceptable alternative that requires more technical expertise is
 to :doc:`configure an existing hardware firewall <network_firewall>`.
 
-Two-factor Device
+Two-factor device
 ^^^^^^^^^^^^^^^^^
 Two-factor authentication is used when connecting to different parts of the
 SecureDrop system. Each admin and each journalist needs a two-factor
@@ -355,7 +356,7 @@ device. We currently support two options for two-factor authentication:
 
 .. include:: ../../includes/otp-app.txt
 
-USB Drives
+USB drives
 ^^^^^^^^^^
 Journalists need physical media (known as the
 *Export Device*) to copy submissions to their everyday workstation.
@@ -393,13 +394,13 @@ buy drives accordingly. Drives that are physically larger are often easier to
 label (e.g. with tape, printed sticker or a label from a labelmaker).
 
 
-Monitor, Keyboard, Mouse
+Monitor, keyboard, mouse
 ^^^^^^^^^^^^^^^^^^^^^^^^
 You will need these to do the initial installation of Ubuntu on the
 *Application* and *Monitor Servers*.
 
 
-Optional Hardware
+Optional hardware
 -----------------
 
 This hardware is not *required* to run a SecureDrop instance, but most
@@ -427,7 +428,7 @@ Driverless
 
 You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
 
-USB Ports
+USB ports
 ~~~~~~~~~
 
 SecureDrop Workstation only supports printing over USB, so ensure the printer you select has a **USB port**.
@@ -445,7 +446,7 @@ To maintain the isolation of SecureDrop Workstation, it is essential that your p
 * Use this printer exclusively with SecureDrop Workstation and do not connect it directly to other computers.
 
 
-Backup Storage
+Backup storage
 ^^^^^^^^^^^^^^
 
 It's useful to run periodic backups of the servers in case of failure. We
@@ -453,7 +454,7 @@ recommend buying an external hard drive to store server backups.
 
 .. include:: ../../includes/encrypting-drives.txt
 
-Hardware End-of-Life
+Hardware end-of-life
 --------------------
 
 No matter what hardware you decide to use, it's important to be mindful of

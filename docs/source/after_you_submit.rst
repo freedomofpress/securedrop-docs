@@ -1,7 +1,7 @@
-After You Submit
+After you submit
 ================
 
-Continuing the Conversation
+Continuing the conversation
 ---------------------------
 
 If you have already submitted a document and would like to check for

@@ -18,7 +18,7 @@ If you would like to contribute to SecureDrop, please see our
           http://dftlffjdogaragaxkc6jqxpo77s7rrngimyoq7uuq3clowhmttblcoyd.onion/en/stable/.
 
 
-Get Started
+Get started
 ^^^^^^^^^^^
 
 :doc:`I want to learn more about how SecureDrop works. <introduction/what_is_securedrop>`
@@ -172,7 +172,7 @@ Get Started
    appendices/threat_model/mitigations.rst
    appendices/training_schedule
 
-Get Involved
+Get involved
 ^^^^^^^^^^^^
 
 SecureDrop is an open source project. If you would like to contribute

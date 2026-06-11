@@ -1,4 +1,4 @@
-The Admin Interface
+The admin interface
 ===================
 
 The *Admin Interface* is an extended version of the *Journalist Interface*, that
@@ -29,7 +29,7 @@ the :doc:`journalist guide <../../journalist/journalist>`.
 
 .. _User Management:
 
-User Management
+User management
 ^^^^^^^^^^^^^^^
 
 You can use the *Admin Interface* to add and remove users, and to reset their
@@ -38,7 +38,7 @@ upper right corner of the *Journalist Interface*.
 
 .. _Adding Users:
 
-Adding Users
+Adding users
 ------------
 
 After logging in, you can add new user accounts for the journalists at your organization
@@ -118,7 +118,7 @@ can keep their two-factor authentication device secure.
 
 .. _Passphrases_and_two-factor_resets:
 
-Passphrases and Two-Factor Resets
+Passphrases and two-factor resets
 ---------------------------------
 
 .. warning:: Both of these operations will lock a user out of their
@@ -159,12 +159,12 @@ To reset two-factor authentication:
   #. Follow the on-screen instructions to complete the process and verify their new two-factor authentication credentials.
 
 
-Off-boarding Users
+Off-boarding users
 ------------------
 
 See :doc:`our guide to off-boarding users from SecureDrop </admin/reference/offboarding>`.
 
-Instance Configuration
+Instance configuration
 ^^^^^^^^^^^^^^^^^^^^^^
 
 The Instance Configuration section of the *Admin Interface* allows you to:
@@ -173,7 +173,7 @@ The Instance Configuration section of the *Admin Interface* allows you to:
 * set submission preferences for the *Source Interface*
 * send test OSSEC alerts.
 
-Updating the Organization Name
+Updating the organization name
 ------------------------------
 
 Your organization name is used in page titles and logo ALT text on the
@@ -183,7 +183,7 @@ To change it, enter your desired name in the Organization Name field and click
 
 .. _Updating Logo Image:
 
-Updating the Logo Image
+Updating the logo image
 -----------------------
 
 You can update the system logo shown on the web interfaces of your SecureDrop
@@ -204,7 +204,7 @@ in order to see the new one.
 
 .. _test-OSSEC-alert:
 
-Testing OSSEC Alerts
+Testing OSSEC alerts
 --------------------
 
 To verify that the OSSEC monitoring system's functionality, you can send a test
@@ -220,13 +220,13 @@ for information on troubleshooting steps.
 
 .. _submission prefs:
 
-Submission Preferences
+Submission preferences
 ----------------------
 
 The Submission Preferences subsection allows you to restrict the types of submissions
 accepted by your instance.
 
-Disabling Document Uploads
+Disabling document uploads
 --------------------------
 
 By default, SecureDrop supports both text submissions and document uploads. If you
@@ -238,7 +238,7 @@ only want to receive text messages, you can disable uploads as follows:
 This change will be applied immediately on the *Source Interface*. Documents that
 were previously uploaded will still be available via the *Journalist Interface*.
 
-Preventing Short Initial Messages
+Preventing short initial messages
 ---------------------------------
 
 By default, SecureDrop does not apply a minimum length requirement to messages. If
@@ -258,7 +258,7 @@ or to subsequent messages in the conversation.
 
 To remove the requirement, uncheck the checkbox and click **Update Submission Preferences**.
 
-Preventing Initial Messages Containing the Source's Codename
+Preventing initial messages containing the source's codename
 ------------------------------------------------------------
 
 Sources should never need to share their seven-word codename with journalists. If

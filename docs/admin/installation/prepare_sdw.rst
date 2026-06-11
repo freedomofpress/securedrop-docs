@@ -32,7 +32,7 @@ A basic knowledge of the Qubes OS is helpful.
 
 .. _securedrop_workstation_preinstall_tasks:
 
-Pre-install Tasks
+Pre-install tasks
 -----------------
 
 Apply BIOS updates and check settings
@@ -234,7 +234,7 @@ Installing SecureDrop Workstation
 
 .. _download_rpm:
 
-Download SecureDrop Workstation Packages
+Download SecureDrop Workstation packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First, you must configure the Qubes-Contrib repo, then download the SecureDrop Workstation packages.
@@ -257,14 +257,14 @@ First, you must configure the Qubes-Contrib repo, then download the SecureDrop W
 
 .. _securedrop_workstation_install_securedrop-admin:
 
-Install `securedrop-admin` Tooling
+Install `securedrop-admin` tooling
 ----------------------------------
 
 .. TODO
 
 .. _securedrop_workstation_generate_private_key:
 
-Generate Submission Private Key
+Generate submission private key
 -------------------------------
 
 .. TODO

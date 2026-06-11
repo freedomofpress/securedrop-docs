@@ -1,6 +1,6 @@
 .. _Getting Support:
 
-Getting Support
+Getting support
 ===============
 
 Whether you are interested in learning more about SecureDrop, looking for
@@ -54,7 +54,7 @@ Freedom of the Press Foundation has several guides to using Signal:
 
 .. _community_support:
 
-Community Based Support
+Community based support
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 You can connect directly with the SecureDrop development team and the larger

@@ -1,4 +1,4 @@
-Test the Installation
+Test the installation
 =====================
 
 Test Connectivity
@@ -6,7 +6,7 @@ Test Connectivity
 
 .. TODO add testing Qubes, testing launching the SecureDrop application, logging in, syncing, test submission, etc.
 
-SSH to Both Servers Over Tor
+SSH to both servers over Tor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Assuming you haven't disabled SSH over Tor, SSH access will be
@@ -30,14 +30,14 @@ try using the verbose command format to troubleshoot: ::
          fields. The address is the first 56-character field, just add a
          ``.onion`` at the end.
 
-Log in to Both Servers via TTY
+Log in to both servers via TTY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All access to the SecureDrop servers should be performed over SSH from the
 *Admin Workstation*. To aid in troubleshooting, login via a physical keyboard
 attached to the server is also supported.
 
-Sanity-Check the Installation
+Sanity-check the installation
 -----------------------------
 
 On each server:
@@ -56,7 +56,7 @@ On the *Application Server*:
 #. Check the AppArmor status with ``sudo aa-status``. On a production
    instance all profiles should be in ``enforce`` mode.
 
-Test the Web Interfaces
+Test the web interfaces
 -----------------------
 
 #. Make sure the *Source Interface* is available, and that you can make a

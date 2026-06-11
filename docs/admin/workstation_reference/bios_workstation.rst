@@ -1,10 +1,10 @@
-BIOS Update Instructions
+BIOS update instructions
 ====================================
 
 .. _general_BIOS_update:
 
 
-Automatic BIOS Updates
+Automatic BIOS updates
 ----------------------
 
 These instructions should work for many recent laptops, including the two ThinkPad models specifically included in our :doc:`../installation/hardware`.
@@ -28,7 +28,7 @@ Once ``fwupd`` is installed, you can install available updates by running:
     fwupdmgr refresh
     fwupdmgr update
 
-Manual BIOS Updates
+Manual BIOS updates
 -------------------
 
 If your laptop is not supported by ``fwupd``, you will need to consult the manual for your specific make and model to determine how to manually apply a BIOS update. The process will likely include downloading an update file, verifying its integrity, copying it to a USB drive, and then accessing an update menu within the BIOS settings. If you have a Thinkpad, refer to the instructions for :ref:`thinkpad_bios`.

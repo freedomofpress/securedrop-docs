@@ -1,7 +1,7 @@
-Getting An Onion Name for Your SecureDrop
+Getting an onion name for your SecureDrop
 -----------------------------------------
 
-What Are Onion Names?
+What are onion names?
 ^^^^^^^^^^^^^^^^^^^^^
 
 Onion names are short, memorable addresses that visitors can use to access an 
@@ -20,7 +20,7 @@ The general format for a SecureDrop onion name is:
 
 ``<organization>.securedrop.tor.onion``
 
-How They Work
+How they work
 ^^^^^^^^^^^^^
 
 Onion names are supported in the desktop version of Tor Browser (introduced 
@@ -39,7 +39,7 @@ in some form. The underlying implementation and the address format may change
 in future iterations of this feature. To the extent that any changes are 
 required, we will reach out to coordinate them with you.
 
-Getting An Onion Name
+Getting An onion name
 ^^^^^^^^^^^^^^^^^^^^^
 
 Freedom of the Press Foundation maintains onion names for SecureDrop instances
@@ -62,7 +62,7 @@ in our documentation.
 If you are already part of the SecureDrop directory and would like an
 Onion Name, :ref:`please contact us.<Getting Support>`
 
-Does This Replace the Original Address?
+Does This Replace the original address?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 No, the onion name is only a human-friendly name for the full-length address.
@@ -77,7 +77,7 @@ the onion name fail to load for any reason.
 Please note that the desktop version of Tor Browser is needed to access onion
 names, which is also generally our security recommendation.
 
-Updating an Onion Name
+Updating an onion name
 ^^^^^^^^^^^^^^^^^^^^^^
 
 If you wish to change or retire your Onion Name, please reach out to the
@@ -88,7 +88,7 @@ possible, so we can schedule the Onion Name update on the same day.
 In any event, we will attempt to respond to any update request within 2
 business days.
 
-Revoking Onion Names
+Revoking onion names
 ^^^^^^^^^^^^^^^^^^^^
 
 Onion names are tied to inclusion in the SecureDrop Directory. We may

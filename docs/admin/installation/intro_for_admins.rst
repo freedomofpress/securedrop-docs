@@ -1,4 +1,4 @@
-Introduction for SecureDrop Administrators
+Introduction for SecureDrop administrators
 ==========================================
 
 SecureDrop servers are managed by a systems administrator.
@@ -89,7 +89,7 @@ or via our `contact form <https://securedrop.org/help/>`__.
 
 .. _manage_users:
 
-Managing Users
+Managing users
 --------------
 
 Admins are responsible for managing user credentials and encouraging best practices. (See
@@ -102,7 +102,7 @@ users.
 
 .. _manage_config:
 
-Managing the System Configuration
+Managing the system configuration
 ---------------------------------
 
 Admins are responsible for configuring and maintaining the system. Several tools
@@ -118,13 +118,13 @@ are available to support this:
 
 .. _manage_updates:
 
-Keeping the System Updated
+Keeping the system updated
 --------------------------
 
 The admin is responsible for ensuring that updates are applied to SecureDrop. Where possible, updates are applied automatically, but some update operations require manual intervention.
 
 
-Updates: Servers
+Updates: servers
 ^^^^^^^^^^^^^^^^
 
 The admin should be aware of all SecureDrop updates and take any required manual action if requested in the `SecureDrop Release Blog`_ (`RSS feed`_). We also recommend registering with the `SecureDrop Support Portal`_ to stay apprised of upcoming releases.
@@ -134,7 +134,7 @@ Most often, the SecureDrop servers will automatically update via ``apt``. Howeve
 .. _`SecureDrop Release Blog`: https://securedrop.org/news
 .. _`RSS Feed`: https://securedrop.org/news/feed
 
-Updates: Network Firewall
+Updates: network firewall
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Given all traffic first hits the network firewall as it faces the non-Tor public network, the admin should ensure that critical security patches are applied to the firewall.
@@ -151,14 +151,14 @@ No matter which vendor you go with, you should make it a priority to stay inform
 .. _`Netgate blog`: https://www.netgate.com/blog/
 .. _`pfSense Upgrade Docs`: https://docs.netgate.com/pfsense/en/latest/install/upgrade-guide.html
 
-Updates: Workstations
+Updates: workstations
 ^^^^^^^^^^^^^^^^^^^^^
 
 SecureDrop Workstation includes an updater application that runs automatically on startup, checks for Qubes and SecureDrop updates, and prompts the user to apply them if found. Given the sensitive nature of the system, it is critical that updates are applied when available. Administrators should ensure that users are aware of this requirement, and should periodically check to ensure that the system is up to date.
 
 .. _monitoring_ossec:
 
-Monitoring OSSEC Alerts
+Monitoring OSSEC alerts
 -----------------------
 
 SecureDrop uses OSSEC to monitor the servers for unusual activity caused by system configuration issues or security breaches. The admin should decrypt and read all OSSEC alerts. Report any suspicious events to FPF through the `SecureDrop Support Portal`_. See the :doc:`OSSEC Guide </admin/reference/ossec_alerts>` for more information on common OSSEC alerts.
@@ -179,7 +179,7 @@ Release announcements and security advisories are posted to the `SecureDrop blog
 
 We strongly recommend :doc:`joining the SecureDrop support portal </introduction/getting_support>`. As a member of the support portal, you will receive email notifications related to all major announcements, and you can open tickets in case of technical issues. Membership is free of charge.
 
-Installation Support
+Installation support
 --------------------
 
 Any organization can install SecureDrop for free and also make modifications because the project is open source.

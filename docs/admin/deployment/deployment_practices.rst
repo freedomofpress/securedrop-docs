@@ -1,6 +1,6 @@
 .. _Deployment:
 
-Deployment Overview
+Deployment overview
 ===================
 
 Once SecureDrop is installed on a news organization's servers, it's important
@@ -21,7 +21,7 @@ The deployment tasks generally only need to be performed once. For tasks
 related to the upkeep and troubleshooting of your SecureDrop instance, we
 recommend reviewing :doc:`the maintenance documentation. <../maintenance/logging>`
 
-Protecting the Security of the System
+Protecting the security of the system
 =====================================
 
 SecureDrop is only as secure as the environment that surrounds it. To keep

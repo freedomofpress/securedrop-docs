@@ -1,4 +1,4 @@
-Troubleshooting Kernel Updates
+Troubleshooting kernel updates
 ==============================
 Kernel updates address known bugs and security vulnerabilities in the Linux
 kernel. They may be installed automatically on your *Application* and *Monitor
@@ -19,7 +19,7 @@ for keyboard logins in SecureDrop 0.8.0. You may have saved the password in the
 KeePassXC database on your *Admin Workstation*. If you do not have the password,
 you can boot into single user mode instead.
 
-Boot into Single User Mode
+Boot into single user mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. |GRUB in default state| image:: ../../images/0.5.x_to_0.6/grub-in-default-state.png
@@ -45,7 +45,7 @@ similar to the screenshot below.
 
 Press the "F10" key to boot.
 
-Test the New Kernel
+Test the new kernel
 ~~~~~~~~~~~~~~~~~~~
 
 Observe the boot process. It is possible that the system will fail to
@@ -66,7 +66,7 @@ If you are experiencing network issues or other kernel problems, we
 recommend that you roll back to an older kernel, and that you report the
 issue to us immediately. 
 
-Compare the Behavior of the Old Kernel
+Compare the behavior of the old kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. |GRUB with advanced options selected| image:: ../../images/0.5.x_to_0.6/grub-with-advanced-options-selected.png
@@ -96,7 +96,7 @@ Once you are logged in, check to see if you have network access. If you do, then
 your instance is having an issue with the newer kernel. In that case, we need to 
 temporarily set an older kernel as the default.
 
-Roll Back to the Old Kernel
+Roll back to the old kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. important:: It is of critical importance for the security of your instance
@@ -162,7 +162,7 @@ Please notify us of the compatibility issue so we can help you resolve it ASAP.
 
 .. _Report Compatibility Issues:
 
-Report Compatibility Issues
+Report compatibility issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have encountered issues with a kernel update, it is important
@@ -194,7 +194,7 @@ resolve compatibility issues.
 
 .. _Test and Enable an Updated Kernel:
 
-Test and Enable an Updated Kernel
+Test and enable an updated kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you have changed your default kernel, we urge you to test an updated kernel
 as soon as it becomes available in a future SecureDrop release. Note that an

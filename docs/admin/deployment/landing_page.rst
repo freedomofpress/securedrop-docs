@@ -19,7 +19,7 @@ your organization.
           implement minimum security requirements is sure to be noticed, and
           could undermine trust, discouraging possible sources.
 
-*Landing Page* Content Suggestions
+*Landing Page* content suggestions
 ----------------------------------
 
 The content below presents sample text for the SecureDrop component of a news
@@ -100,7 +100,7 @@ Do not discuss leaking or whistleblowing, even with trusted contacts.
 
 .. _The SecureDrop Directory:
 
-The SecureDrop Directory
+The SecureDrop directory
 ----------------------------------
 
 SecureDrop `maintains a directory of instances that meet our strict guidelines.
@@ -137,7 +137,7 @@ If you notice an increase in spam after being included in the directory, please
 let us know and we can remove your instance from the directory.
 
 
-URL and Location
+URL and location
 ----------------
 
 Your *Landing Page* must be a path at your top-level domain, e.g. 
@@ -158,7 +158,7 @@ directive.
 .. warning:: Except for rare extenuating circumstances, this is a requirement
              for inclusion in the SecureDrop Directory
 
-HTTPS Only (No Mixed Content)
+HTTPS only (no mixed content)
 -----------------------------
 
 HTTPS encryption is the number-one security requirement for your site's
@@ -188,17 +188,17 @@ ever to be reached over HTTPS.
 .. warning:: This is a strict requirement for inclusion in
              the SecureDrop Directory
 
-Perfect Forward Secrecy
+Perfect forward secrecy
 -----------------------
 
-Perfect Forward Secrecy (PFS) is a property of encryption protocols that
+Perfect forward secrecy (PFS) is a property of encryption protocols that
 ensures each SSL session has a unique key, meaning that if the key is
 compromised in the future it can't be used to decrypt previously
 recorded SSL sessions. You may need to talk to your CA (certificate
 authority) and CDN (content delivery network) for this, although our
 recommended configuration below provides forward secrecy.
 
-SSL Certificate Recommendations
+SSL certificate recommendations
 -------------------------------
 
 Regardless of where you choose to purchase your SSL cert and which CA
@@ -225,7 +225,7 @@ This will potentially leak information about sources to third parties,
 which can more easily be accessed by law enforcement agencies. Simply
 copy them to your server and serve them yourself to avoid this problem.
 
-Do Not Use Third-Party Analytics, Tracking, or Advertising
+Do not use third-party analytics, tracking, or advertising
 ----------------------------------------------------------
 
 Most news websites, even those that are non-profits, use third-party analytics
@@ -251,7 +251,7 @@ services intercept requests between a potential source and the SecureDrop
 .. _`track`: https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 
 
-Do Not Hyperlink .onion Addresses
+Do not hyperlink .onion addresses
 ---------------------------------
 Because a visitor to your *Landing Page* may not be using Tor Browser yet,
 clicking a link to your SecureDrop instance or to any other .onion address may
@@ -275,7 +275,7 @@ text below to provide maximum clarity: ::
 .. warning:: This is a strict requirement for inclusion in
              the SecureDrop Directory
 
-Avoid Direct Links to SecureDrop.org
+Avoid direct links to securedrop.org
 ------------------------------------
 
 We appreciate that you may want to link to `the SecureDrop website <https://securedrop.org/>`__
@@ -292,7 +292,7 @@ plain text, without a hyperlink (as per the preceding section):
 .. warning:: This is a strict requirement for inclusion in
              the SecureDrop Directory
 
-Apply Security Headers
+Apply security headers
 ----------------------
 
 Security headers give instructions to the web browser on how to handle
@@ -339,7 +339,7 @@ If you intend to run nginx as your webserver instead, this will work:
     add_header Permissions-Policy "camera 'none'; display-capture 'none'; geolocation 'none'; microphone 'none'; payment 'none'; usb 'none';";
 
 
-Additional Apache Configuration
+Additional apache configuration
 -------------------------------
 
 To enforce HTTPS/SSL always, you need to set up redirection within the
@@ -439,7 +439,7 @@ In nginx, logging can be disabled by adding the following directives within the
     error_log /dev/null;
 
 
-Further Security Considerations
+Further security considerations
 -------------------------------
 
 To guard your *Landing Page* against being modified by an attacker and

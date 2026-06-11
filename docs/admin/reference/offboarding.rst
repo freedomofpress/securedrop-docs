@@ -1,4 +1,4 @@
-Off-board Administrators and Journalists
+Off-board administrators and journalists
 ========================================
 
 When journalists and SecureDrop administrators leave your organization, it is
@@ -48,7 +48,7 @@ Additional steps for off-boarding administrators
 
 .. _rotate_ssh_key:
 
-Rotate SSH keys on the SecureDrop Servers
+Rotate SSH keys on the SecureDrop servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are concerned that the user may have a copy of
@@ -151,8 +151,10 @@ was in effect.
 
 - A *Transfer Device* (LUKS-encrypted USB drive)
 
-On the Secure Viewing Station
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+On the *Secure Viewing Station*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. TODO remove this section, replace with instructions for key rotation on the SDW laptops
 
 #. From the *Secure Viewing Station* Apps Menu, choose **Accessories ▸
    Kleopatra**, and select the *Submission Key* from the list of available

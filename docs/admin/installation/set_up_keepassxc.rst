@@ -1,6 +1,6 @@
 .. _keepassxc_setup:
 
-Using the KeePassXC Password Manager
+Using the KeePassXC password manager
 ====================================
 
 Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including administrators, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
