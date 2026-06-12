@@ -8,44 +8,127 @@ Welcome to SecureDrop's documentation!
 
 SecureDrop is an open-source whistleblower submission system that media
 organizations can use to securely accept documents from and communicate with
-anonymous sources.
-
-This documentation is intended for sources, journalists, and administrators.
-If you would like to contribute to SecureDrop, please see our
-`developer documentation <https://developers.securedrop.org/>`_.
+anonymous sources. It is a free and open source source project of the
+`Freedom of the Press Foundation (FPF) <https://freedom.press/>`_, a US-based
+nonprofit organization.
 
 .. note:: This documentation is also available as a Tor Onion Service at
           http://dftlffjdogaragaxkc6jqxpo77s7rrngimyoq7uuq3clowhmttblcoyd.onion/en/stable/.
 
 
-Get Started
-^^^^^^^^^^^
+How it works
+------------
 
-:doc:`I want to learn more about how SecureDrop works. <introduction/what_is_securedrop>`
+Sources and journalists connect to SecureDrop using the Tor network. A source
+uploads a submission via `Tor Browser <https://www.torproject.org/>`__ to the
+*Source Interface*, a public onion service. A journalist then connects using
+their *SecureDrop Workstation* to view, process, and respond to submissions.
+Submissions are encrypted in place on the *Application Server* as they are
+uploaded, and decrypted documents are never accessed in an Internet-connected
+environment.
 
-:doc:`I have information I want to share, and would like to learn how to do so safely. <source/source>`
+SecureDrop connects journalists and their sources directly, without third parties, and substantially limits recorded metadata. It puts news organizations in control to challenge any legal orders seeking data.
 
-:doc:`I am looking to set up a SecureDrop installation. <admin/installation/installation_overview>`
+.. seealso:: :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>`
 
-:doc:`I have a SecureDrop installation and am interested in next steps. <admin/deployment/getting_the_most_out_of_securedrop>`
 
-:doc:`I am a journalist and would like information about how to best use this system. <journalist/journalist>`
+User roles
+----------
+
+There are three main user roles that interact with a SecureDrop instance:
+
+:doc:`Sources </source/source>`
+   Submit documents and messages using Tor Browser (or Tails) to access the
+   *Source Interface*. Submissions are encrypted on the *Application Server*
+   as they are uploaded.
+
+:doc:`Journalists </journalist/journalist>`
+   Use a *SecureDrop Workstation* to connect to SecureDrop and communicate
+   with sources. Journalists download encrypted submissions and process
+   them in an air-gapped environment.
+
+:doc:`Admins </admin/installation/intro_for_admins>`
+   Manage the *Application* and *Monitor Servers* over authenticated onion
+   services.
 
 .. note:: The terms in italics are terms of art specific to SecureDrop. The
 	  :doc:`Glossary </appendices/glossary>` provides more-precise
           definitions of these and other terms. SecureDrop is designed against
-          a comprehensive :doc:`/appendices/threat_model/threat_model`, and has a specific notion of the :doc:`roles </appendices/glossary>` that are involved in its operation.
+          a comprehensive :doc:`/appendices/threat_model/threat_model`, and
+          has a specific notion of the :doc:`roles </appendices/glossary>`
+          that are involved in its operation.
+
+
+Infrastructure overview
+-----------------------
+
+SecureDrop runs on two dedicated servers, one of which is the *Application 
+Server* that hosts the *Source* and *Journalist Interfaces*, and the other
+which is a *Monitor Server* that runs an intrusion detection service and sends 
+email alerts.
+  
+The servers operate on a segmented network connected directly to a dedicated
+hardware firewall.
+
+A specially configured laptop, called a *SecureDrop Workstation*, 
+is then used by journalists to download encrypted submissions and by admins
+to perform server maintenance.
+
+SecureDrop is free to install, but requires hardware costing roughly
+$2,200–$2,400. See the :doc:`hardware guide </admin/installation/hardware>`
+for supported and recommended equipment.
+
+In addition to the hardware, you should make sure that you have the expertise
+necessary to operate and maintain SecureDrop. You'll need
+a systems administrator or IT professional familiar with using a command-line
+interface within Linux.
+
+The journalists in your organization will need to be trained in the operation of
+SecureDrop, and you'll need to publish and promote your new SecureDrop instance 
+afterwards using your existing websites, mailing lists, and social media.
+
+It is recommended that you have all of this planned out before you get started.
+If you need help, contact the `Freedom of the Press Foundation
+<https://securedrop.org/help>`__ who will be glad to help walk you through
+the process and make sure that you're ready to proceed.
+
+Privacy and security
+--------------------
+
+While no system can guarantee 100% security, SecureDrop provides a number of
+:ref:`safeguards and countermeasures <mitigations>` 
+to create a significantly safer environment for
+sources than standard channels.
+
+Major architectural releases undergo third-party security audits; a full
+`list of audits <https://securedrop.org/research/#audits>`__ is available,
+along with a `bug bounty program <https://bugcrowd.com/freedomofpress>`__
+hosted by Bugcrowd.
+
+SecureDrop routes all traffic to and from the server via the encrypted Tor
+network. Each SecureDrop server is completely owned by, and sits inside of, the
+news organization that operates it. SecureDrop minimizes metadata by not 
+recording IP addresses, browser details, or computer information. It forces
+security best pactices for journalists and can be used in high-risk environments.
+
+
+Get involved
+------------
+
+SecureDrop is an open source project. You can support the work by
+`contributing to SecureDrop <https://developers.securedrop.org/en/latest/contributing.html>`_
+or making `a donation <https://freedom.press/donate>`_.
 
 .. toctree::
    :caption: Introduction
    :name: introtoc
-   :maxdepth: 2
+   :maxdepth: 1
    :hidden:
 
-   introduction/what_is_securedrop
    introduction/what_makes_securedrop_unique
    introduction/securedrop_workstation
    introduction/getting_support
+   introduction/history
 
 .. toctree::
    :caption: Source Guide
@@ -171,18 +254,3 @@ Get Started
    appendices/threat_model/dataflow.rst
    appendices/threat_model/mitigations.rst
    appendices/training_schedule
-
-Get Involved
-^^^^^^^^^^^^
-
-SecureDrop is an open source project. If you would like to contribute
-to SecureDrop, please see our
-`developer documentation <https://developers.securedrop.org/>`_.
-
-Two versions of this documentation are available, and can be selected in the
-lower left corner using the version dropdown menu:
-
-- ``latest`` - built from the ``develop`` branch of the SecureDrop
-  repository, containing updates that have been tested but not yet released.
-- ``stable`` - built from the ``stable`` branch of the SecureDrop repository,
-  and up to date with the most recent release, |version|.
