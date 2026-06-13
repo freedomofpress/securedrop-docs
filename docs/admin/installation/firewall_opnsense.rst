@@ -133,7 +133,7 @@ Set a strong password
 Navigate to **System ▸ Access ▸ Users** and click the edit button for the ``root``
 user. On the subsequent page, set a strong admin password. We recommend generating
 a strong passphrase with KeePassXC and saving it in the Tails Persistent folder using
-the provided KeePassXC database template. Two-factor authentication will be enabled 
+the provided KeePassXC database template. *Two-Factor Authentication* will be enabled 
 in a later step.
 
 Set alternate hostnames
@@ -238,10 +238,10 @@ to apply several updates in a row to get to the latest version.
 
 |OPNSense - no updates|
 
-Enable two-factor authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enable *Two-Factor Authentication*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-OPNSense supports two-factor authentication (2FA) via mobile apps such as Google Authenticator
+OPNSense supports *Two-Factor Authentication* (2FA) via mobile apps such as Google Authenticator
 or FreeOTP. To set it up, first make sure you have a mobile device available with
 your choice of 2FA app.
 

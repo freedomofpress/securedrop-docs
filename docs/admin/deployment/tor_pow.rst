@@ -1,20 +1,20 @@
 Tor proof-of-work defense on the *Source Interface*
 ===================================================
 
-The SecureDrop *Source Interface* is served as an onion service with an
+The SecureDrop *Source Interface* is served as an *Onion Service* with an
 ``.onion`` URL, requiring Tor Browser to access it over the Tor network.  Tor is
 sometimes targeted for denial-of-service (DoS) attacks that can `slow down the
 Tor network as a whole <https://blog.torproject.org/tor-network-ddos-attack/>`_
-as well as burden individual onion services, including SecureDrops.
+as well as burden individual *Onion Services*, including SecureDrops.
 
 Tor now includes a `proof-of-work (PoW) defense
 <https://onionservices.torproject.org/technology/pow/#general-questions>`_
-against denial-of-service attacks that can be turned on for individual onion
-services.  As of SecureDrop 2.9.0, new SecureDrops have this feature enabled by
+against denial-of-service attacks that can be turned on for individual *Onion
+Services*.  As of SecureDrop 2.9.0, new SecureDrops have this feature enabled by
 default, and we encourage all SecureDrop administrators to turn it on for their
 instances.  While this measure can't speed up the Tor network as a whole if it's
 slow, it can protect your SecureDrop from being attacked specifically; and more
-onion services running with this feature helps improve the resilience of the Tor
+*Onion Services* running with this feature helps improve the resilience of the Tor
 network.
 
 
@@ -43,7 +43,7 @@ prompts, rerun the installation script::
     securedrop-admin install
 
 The Tor configuration will be updated to enable the proof-of-work defense.  When
-the script finishes, confirm that you can access the Source Interface.
+the script finishes, confirm that you can access the *Source Interface*.
 
 
 .. _disable_tor_pow:

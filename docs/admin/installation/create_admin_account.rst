@@ -1,7 +1,7 @@
 Create an admin account on the *Journalist Interface*
 =====================================================
 
-In order for any user (admin or journalist) to access the
+In order for any user (admin or *Journalist*) to access the
 *Journalist Interface*, they need:
 
 1. The ``auth-cookie`` for the *Journalist Interface*'s ATHS
@@ -10,14 +10,14 @@ In order for any user (admin or journalist) to access the
 
    * Username
    * Passphrase
-   * Two-factor authentication code
+   * *Two-Factor Authentication* code
 
 You should create a separate account on the *Journalist Interface* for
 each user who needs access. This makes it easy to enable or disable
 access to the *Journalist Interface* on an individual basis, so you can
 grant access to new users or revoke access for users who have left the
-organization or should no longer be allowed to access the Journalist
-Interface.
+organization or should no longer be allowed to access the *Journalist
+Interface*.
 
 There are two types of accounts on the *Journalist Interface*: admin
 accounts and normal accounts. Admins accounts are like normal
@@ -25,9 +25,7 @@ accounts, but they are additionally allowed to manage (add, change,
 delete) other user accounts through the web interface.
 
 You must create the first admin account on the *Journalist Interface* by
-running a command on the *Application Server*. After that, the Journalist
-Interface admin can create additional accounts through the web
-interface.
+running a command on the *Application Server*. After that, the admin can create additional accounts through the web-based *Journalist Interface*.
 
 .. _Create Admin CLI:
 

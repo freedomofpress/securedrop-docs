@@ -133,7 +133,7 @@ message is automatically deleted.
 Journalists are also encouraged to regularly delete all information from the
 SecureDrop server and store anything they would like saved in offline storage
 to minimize risk. More detailed information can be found in our
-:ref:`sample privacy policy <Sample Privacy Policy>`, which we encourage news organizations using SecureDrop to adopt from when creating their own. Make sure to also follow our :ref:`best practices for creating the SecureDrop landing page <Landing Page>` so that it logs as little information as possible as well.
+:ref:`sample privacy policy <Sample Privacy Policy>`, which we encourage news organizations using SecureDrop to adopt from when creating their own. Make sure to also follow our :ref:`best practices for creating the SecureDrop *Landing Page* <Landing Page>` so that it logs as little information as possible as well.
 
 Security
 --------
@@ -189,9 +189,9 @@ and must be physically located on-site within your organization's premises.
 - *Application Server*:
    An Ubuntu server running two segmented Tor hidden
    services. The source connects to the *Source Interface*, a public-facing Tor
-   Onion Service, to send messages and documents to the journalist. The
+   *Onion Service*, to send messages and documents to the journalist. The
    journalist connects to the *Journalist Interface*, an `authenticated Tor
-   Onion Service
+   *Onion Service*
    <https://community.torproject.org/onion-services/advanced/client-auth/>`__, to
    download encrypted documents and respond to sources.
 - *Monitor Server*:

@@ -264,8 +264,8 @@ Install `securedrop-admin` tooling
 
 .. _securedrop_workstation_generate_private_key:
 
-Generate submission private key
--------------------------------
+Generate *Submission Private Key*
+---------------------------------
 
 .. TODO
 

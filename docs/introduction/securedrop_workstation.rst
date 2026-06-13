@@ -4,11 +4,11 @@ SecureDrop Workstation and Qubes OS
 What is SecureDrop Workstation?
 -------------------------------
 
-A SecureDrop Workstation is a laptop used by a journalist to connect to a SecureDrop instance and securely view submissions and reply to messages from sources. The SecureDrop Workstation is based on Qubes OS and it consists of several different carefully-configured virtual machines (VMs), so that everything a journalist needs to use SecureDrop resides on one computer.
+A SecureDrop Workstation is a laptop used by a *Journalist* to connect to a SecureDrop instance and securely view submissions and reply to messages from *Sources*. The SecureDrop Workstation is based on Qubes OS and it consists of several different carefully-configured virtual machines (VMs), so that everything a *Journalist* needs to use SecureDrop resides on one computer.
 
-Encryption and decryption happen with one click using a network-isolated VM that holds the SecureDrop Submission Key. Submissions can be viewed securely on the same machine thanks to a `feature of Qubes`_ that creates temporary VMs in which to view untrusted content without exposing the rest of the system to that content. Journalists use the SecureDrop Workstation to decrypt, view, reply to, and export submissions.
+Encryption and decryption happen with one click using a network-isolated VM that holds the SecureDrop *Submission Private Key*. Submissions can be viewed securely on the same machine thanks to a `feature of Qubes`_ that creates temporary VMs in which to view untrusted content without exposing the rest of the system to that content. *Journalists* use the SecureDrop Workstation to decrypt, view, reply to, and export submissions.
 
-A key feature of SecureDrop is that journalists can receive submissions from unknown sources without risking the security of their own machines and networks. Previously, SecureDrop accomplished this by using a physical airgap (the *Secure Viewing Station*), meaning that to view submissions, journalists would have to download them, transfer them to an encrypted USB drive, and physically take that drive to a separate, non-networked computer for decryption and viewing. SecureDrop Workstation combines all of those steps into one workflow on one machine: a Qubes computer that combines the *Journalist Workstation* and the *Secure Viewing Station*.
+A key feature of SecureDrop is that *journalists* can receive submissions from unknown *Sources* without risking the security of their own machines and networks. Previously, SecureDrop accomplished this by using a physical airgap (the Secure Viewing Station), meaning that to view submissions, *Journalists* would have to download them, transfer them to an encrypted USB drive, and physically take that drive to a separate, non-networked computer for decryption and viewing. SecureDrop Workstation combines all of those steps into one workflow on one machine: a Qubes computer that combines the *Journalist Workstation* and the Secure Viewing Station.
 
 .. | securedrop_workstation_workflow |
 
@@ -78,8 +78,8 @@ running for SecureDrop Inbox to successfully connect to the server.
 Installing additional software on the SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Right now, the project is designed to make the journalist experience
-easier by combining the functionality of the Journalist Workstation and Secure
+Right now, the project is designed to make the *Journalist* experience
+easier by combining the functionality of the *Journalist Workstation* and Secure
 Viewing Station. The main focus is making sure that checking SecureDrop is
 easier and faster.
 
@@ -164,13 +164,13 @@ important protections that SecureDrop Workstation provides. On the other hand, v
 in Qubes OS or Xen Hypervisor may have a greater security impact than vulnerabilities
 in Tails, the operating system used on a Secure Viewing Station.
 
-A typical SVS USB drive may contain documents from multiple sources and always
+A typical SVS USB drive may contain documents from multiple *Sources* and always
 contains the highly sensitive private key needed to decrypt them. An adversary who does
 manage to achieve a security compromise (e.g., through a vulnerability in a file viewer
 application) can access these other files, and may be able to exfiltrate them.
 
 In spite of the air-gap, this may be possible through physical channels used to transfer files
-off the SVS (e.g., USB drives), or by motivating the journalist user to perform an
+off the SVS (e.g., USB drives), or by motivating the *Journalist* to perform an
 unsafe action (e.g., `scanning a QR code <https://securedrop.org/news/security-advisory-do-not-scan-qr-codes-submitted-through-securedrop-connected-devices/>`__).
 
 Because the air-gapped SVS has no Internet access, updates can only be performed using

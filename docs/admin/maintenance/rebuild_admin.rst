@@ -268,7 +268,7 @@ using the command:
  curl http://$(cat /tmp/sourcev3)/metadata
 
 Next, note the OSSEC Alerts email address (``OSSEC_EMAIL``) and, if applicable,
-the Journalist Alerts email address (``JOURNALIST_EMAIL``):
+the journalist alerts email address (``JOURNALIST_EMAIL``):
 
 .. code:: sh
 
@@ -283,7 +283,7 @@ appropriate email address for ``alerts@example.com``):
  ssh mon sudo gpg --homedir=/var/ossec/.gnupg --export --armor alerts@example.com > ossec.pub
  gpg --import ossec.pub
 
-If a Journalist Alerts address has been configured, repeat this step for the
+If a journalist alerts address has been configured, repeat this step for the
 *Journalist Alert Public Key*, naming it ``journalist.pub`` or similar.
 
 You will require the fingerprints for these keys during the next step, which you

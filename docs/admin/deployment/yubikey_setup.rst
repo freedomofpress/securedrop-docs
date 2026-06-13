@@ -3,7 +3,7 @@ Using a YubiKey with the *Journalist Interface*
 
 This guide describes in detail how to set up a YubiKey for two-factor
 authentication on the *Journalist Interface*. This setup is performed
-once per journalist to create a secure log-in method. The process
+once per *Journalist* to create a secure log-in method. The process
 requires some configuration steps using a separate software tool.
 
 .. note:: You will do all of these steps from within the Tails
@@ -12,7 +12,7 @@ requires some configuration steps using a separate software tool.
 What is a YubiKey?
 ------------------
 
-A YubiKey is a physical token used for two-factor authentication. They
+A YubiKey is a physical token used for *Two-Factor Authentication*. They
 are made by a company called Yubico and are `commercially available`_. Note
 that not all physical tokens are compatible with the YubiKey Personalization
 Tool; for this, you require `a key that can support OATH-HOTP`_.

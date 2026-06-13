@@ -36,9 +36,9 @@ Signing in
 
 To sign in, enter the username and passphrase provided to you by your
 SecureDrop administrator, as well as the two-factor code using the method you
-have set up. If you have used SecureDrop before, these
-are the same credentials that you would use to log in to the Journalist
-Interface.
+have set up. If you have used SecureDrop Workstation before, these
+are the same credentials that you would use to log in to the *Journalist
+Interface*.
 
 |screenshot_sd-app_login|
 
@@ -53,9 +53,9 @@ Seen and unseen submissions
 ---------------------------
 
 Sources with submissions (messages or files) that have not been seen by
-any journalist user will be displayed in bold text in the source list.
+any *Journalist* will be displayed in bold text in the source list.
 
-As soon as any journalist user clicks on a source with unseen submissions, it
+As soon as any *Journalist* clicks on a source with unseen submissions, it
 will be marked as seen (no longer displayed in bold text) for all users.
 
 Working offline

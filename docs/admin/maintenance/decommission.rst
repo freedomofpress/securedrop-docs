@@ -14,7 +14,7 @@ servers and associated hardware:
 2. If the server room is covered by CCTV, verify that the footage will be
    monitored or reviewed periodically.
 3. Ask to have adjacent corridors included in any regular security patrols.
-4. Ask journalists to purge old submissions, to reduce the impact if the 
+4. Ask *Journalists* to purge old submissions, to reduce the impact if the 
    servers are compromised (this is good general practice in any case).
 5. If your SecureDrop instance is set up to allow SSH-over-LAN admin access,
    consider switching it to SSH-over-Tor access instead. To do so, you will
@@ -25,10 +25,10 @@ during periods of prolonged absence, it may be better to relocate it, or in
 extreme circumstances, temporarily take it down. If you decide to take down
 your SecureDrop instance, we recommend the following steps:
 
-1. Consult with journalists using the system, to ensure that any active
+1. Consult with *Journalists* using the system, to ensure that any active
    sources are aware of the situation, and that source conversations can
    either be paused or continued via other means.
-2. Update your SecureDrop landing page (typically a “send us tips” page,
+2. Update your SecureDrop *Landing Page* (typically a “send us tips” page,
    or a page linked from there) to let prospective sources know that the
    outage is coming, and optionally to redirect them to other contact
    methods, such as a shared Signal tipline.
@@ -55,7 +55,7 @@ Permanently decommissioning SecureDrop
 The following steps will guide you through the decommissioning of your
 SecureDrop instance.
 
-#. **Put a notice in advance on your landing page to inform sources that your
+#. **Put a notice in advance on your *Landing Page* to inform sources that your
    instance will soon be retired.**
    You may want to direct them to other secure methods of contacting you.
 #. **Locate and create an inventory of all your hardware.**
@@ -72,7 +72,7 @@ SecureDrop instance.
    If you want to save a backup of the *Application Server* (for example, to reinstall SecureDrop in the future using the same `.onion` address), follow
    our :doc:`backup guidelines <backup_and_restore>`. Once the backup has been
    created, you can move it onto an encrypted device, such as a LUKS-encrypted 
-   drive. You will also require a backup of the *Submission Key* found on the
+   drive. You will also require a backup of the *Submission Private Key* found on the
    *SecureDrop Workstation*.
 
    If you do not require a server backup, you may choose to download specific
@@ -151,7 +151,7 @@ SecureDrop instance.
    select "yes."
 #. **Destroy Export media, if applicable.**
 #. **Optional: Factory-reset the firewall.**
-#. **Update your Landing Page (tips page) to reflect the fact that your organization no longer has SecureDrop.**
+#. **Update your *Landing Page* (tips page) to reflect the fact that your organization no longer has SecureDrop.**
 #. **Notify the SecureDrop Support team that your instance is no longer active.**
    If you have any questions about the decommissioning process, or about other
    secure communications options, please feel free to contact us at

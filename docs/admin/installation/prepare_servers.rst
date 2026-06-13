@@ -236,7 +236,7 @@ devices that are powered down, SecureDrop's servers are designed to be always-on
 with the exception of a nightly reboot after automatic upgrades are applied.
 Given this update schedule, with FDE enabled, the servers would become unreachable
 once every 24 hours until an administrator entered the full-disk encryption
-passphrase via the console, and during that time, sources and journalists would
+passphrase via the console, and during that time, *Sources* and *Journalists* would
 be unable to access your instance.
 
 The increased responsibility for administrators, as well as the daily downtime

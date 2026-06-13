@@ -63,7 +63,7 @@ Surprising changes to configuration files, or new or changed files unrelated to
 the daily updates, may warrant further investigation.
 
 Occasionally your SecureDrop Servers will send an alert for failing to connect
-to Tor relays. Since SecureDrop runs as a Tor Onion Service, it is possible
+to Tor relays. Since SecureDrop runs as a Tor *Onion Service*, it is possible
 for Tor connections to timeout or become overloaded. ::
 
     Received From: (app)

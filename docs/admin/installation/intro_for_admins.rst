@@ -3,9 +3,9 @@ Introduction for SecureDrop administrators
 
 SecureDrop servers are managed by a systems administrator.
 
-For larger newsrooms, there may be a team of systems admins, but at least one person within the organization will need to serve as the administrator. In some situations, such as smaller news organizations where a journalist has the technical capacity to administer systems, one person can serve as both Journalist and Administrator. When possible, we advise having a dedicated staff member serving the role of SecureDrop Administrator.
+For larger newsrooms, there may be a team of systems admins, but at least one person within the organization will need to serve as the administrator. In some situations, such as smaller news organizations where a *Journalist* has the technical capacity to administer systems, one person can serve as both *Journalist* and administrator. When possible, we advise having a dedicated staff member serving the role of SecureDrop administrator.
 
-The admin connects to the *Application* and *Monitor Servers* over `authenticated onion services <https://tb-manual.torproject.org/onion-services/>`__, and manages them using `Ansible <https://www.ansible.com/>`__.
+The admin connects to the *Application* and *Monitor Servers* over `authenticated *Onion Services* <https://tb-manual.torproject.org/onion-services/>`__, and manages them using `Ansible <https://www.ansible.com/>`__.
 
 If you are considering becoming a SecureDrop administrator, below are some
 attributes that will be important to have:
@@ -43,7 +43,7 @@ As a SecureDrop administrator, it is your responsibility to:
 * ensure that SecureDrop Workstations are kept up to date
 * investigate and respond to security incidents
 * schedule and perform required maintenance tasks, such as operating system upgrades
-* ensure that SecureDrop users adhere to the documented processes for checking SecureDrop, communicating with sources, and reviewing documents
+* ensure that *Journalists* adhere to the documented processes for checking SecureDrop, communicating with *Sources*, and reviewing documents
 * verify the integrity of SecureDrop code
 * avoid the installation of unsupported code or patches
 * :doc:`decommission SecureDrop after it is no longer in use </admin//maintenance/decommission>`
@@ -56,7 +56,7 @@ is offered as open source software, free of charge, and at your own risk.
 
 FPF offers :doc:`paid priority support services </introduction/getting_support>`. We are
 happy to provide assistance with installing the system, with training of
-administrators and journalists, and with investigation of technical issues
+administrators and *Journalists*, and with investigation of technical issues
 and incidents.
 
 .. note::
@@ -95,7 +95,7 @@ Managing users
 Admins are responsible for managing user credentials and encouraging best practices. (See
 :ref:`Passphrase Best Practices<passphrase_best_practices>`.)
 The admin will also have access to the *Journalist Interface*, via her own username, passphrase,
-and two-factor authentication method (using a smartphone application or YubiKey).
+and *Two-Factor Authentication* method (using a smartphone application or YubiKey).
 
 See :ref:`User Management<User Management>` for more information on adding and managing
 users.
@@ -184,11 +184,11 @@ Installation support
 
 Any organization can install SecureDrop for free and also make modifications because the project is open source.
 
-Because the installation and operation are complex, and because SecureDrop can only be as secure as the  operational security practices followed by its users, Freedom of the Press Foundation will also help  organizations install SecureDrop and train journalists and administrators.
+Because the installation and operation are complex, and because SecureDrop can only be as secure as the  operational security practices followed by its users, Freedom of the Press Foundation will also help  organizations install SecureDrop and train *Journalists* and administrators.
 
 If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us. We do ask news organizations that can afford to pay for installation support, training and maintenance to do so.
 
-As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train journalists to use it. (For  pro-bono support, we request that our travel costs
+As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train *Journalists* to use it. (For  pro-bono support, we request that our travel costs
 are covered.) 
 
 .. include:: ../../includes/provide-feedback.txt

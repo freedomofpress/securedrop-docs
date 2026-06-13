@@ -1,7 +1,7 @@
-Off-board administrators and journalists
-========================================
+Off-board administrators and *Journalists*
+==========================================
 
-When journalists and SecureDrop administrators leave your organization, it is
+When *Journalists* and SecureDrop administrators leave your organization, it is
 important to off-board them from SecureDrop.
 
 .. important:: Additional measures may need to be taken if the
@@ -23,9 +23,8 @@ Off-boarding checklist
   notifications), either directly or as a member of an email alias, remove them
   from those alerts and :ref:`set up someone new <ossec_guide>` to
   receive those alerts.
-- (Circumstance-dependent) If you have specific concerns that the *Submission
-  Key* has been compromised, you should consider a full reinstall of
-  SecureDrop. At minimum, you should :ref:`rotate the Submission Key
+- (Circumstance-dependent) If you have specific concerns that the *Submission Private Key* has been compromised, you should consider a full reinstall of
+  SecureDrop. At minimum, you should :ref:`rotate the *Submission Key*
   <rotate_submission_key>`.
 
 Additional steps for off-boarding administrators
@@ -181,14 +180,14 @@ On the *Secure Viewing Station*
 
       gpg --list-keys
 
-   In the output, locate the Retired SecureDrop Submission Key. It should
+   In the output, locate the "Old SecureDrop Submission Key". It should
    look similar to this:
 
    .. code:: text
 
       pub   rsa4096/0x1CB396626CA370AB 2022-08-16 [SC]
             Key fingerprint = 6A7F 116B 3C22 4F36 7275 236A 1CB3 9662 6CA3 70AB
-      uid         [ultimate] OLD SecureDrop Submission Key (Retired 2022-08-16)
+      uid         [ultimate] Old SecureDrop Submission Key (Retired 2022-08-16)
       uid         [ultimate] SecureDrop (SecureDrop Submission Key)
       sub   rsa4096/0x228C92459E3D16DE 2022-08-16 [E]
 
@@ -235,8 +234,7 @@ On the *Secure Viewing Station*
    |revoked|
 
 #. Now :doc:`follow the instructions <../installation/generate_submission_key>`
-   to create a PGP key on the *Secure Viewing Station*. This will be your new
-   *Submission Key.* Copy the fingerprint and new *Submission Public Key* to
+   to create a new *Submission Key.* Copy the fingerprint and new *Submission Public Key* to
    your *Transfer Device*.
 
 .. |select securedrop key| image:: ../../images/offboard/key_list.png

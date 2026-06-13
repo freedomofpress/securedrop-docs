@@ -1,7 +1,7 @@
 Communicating with sources
 ==========================
 
-The *Journalist Workstation* lets journalists check SecureDrop, decrypt and securely
+The *Journalist Workstation* lets *Journalists* check SecureDrop, decrypt and securely
 view submissions, and reply to sources, all on the same computer.
 
 Once logged in, you will see a chat-like user interface:
@@ -30,7 +30,7 @@ source list.
 
 |screenshot_sdapp_main_view|
 
-Journalists sending replies are assigned different colors and identified with
+*Journalists* sending replies are assigned different colors and identified with
 their initials. Move your mouse pointer over the initials to reveal the full
 name.
 

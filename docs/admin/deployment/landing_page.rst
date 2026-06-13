@@ -3,11 +3,11 @@
 *Landing Page*
 ==============
 
-SecureDrop itself runs as a Tor Onion Service. Organizations also need to
+SecureDrop itself runs as a Tor *Onion Service*. Organizations also need to
 create a SecureDrop *Landing Page* that will:
 
 * explain how SecureDrop works
-* give sources instructions on how to access the Tor Onion Service
+* give *Sources* instructions on how to access the Tor *Onion Service*
 * disclose the risks of accessing the SecureDrop instance or submitting documents
 
 We also recommend including a privacy policy (see our :ref:`Sample
@@ -17,7 +17,7 @@ your organization.
 .. note:: SecureDrop will bring more attention to your organization from
           security researchers and others. A *Landing Page* that fails to
           implement minimum security requirements is sure to be noticed, and
-          could undermine trust, discouraging possible sources.
+          could undermine trust, discouraging possible Sources.
 
 *Landing Page* content suggestions
 ----------------------------------
@@ -111,7 +111,7 @@ requirements below, then `send us a request using this form.
 <https://securedrop.org/directory/submit/>`__
 
 There are several benefits to being included in the SecureDrop directory. The
-most significant benefit is that it will be easier for potential sources to
+most significant benefit is that it will be easier for potential *Sources* to
 find your SecureDrop instance. Additionally, being included in the directory
 makes you eligible for :doc:`an onion name. <onion_name>`
 This improves the experience by turning a lengthy, non-descriptive address
@@ -162,7 +162,7 @@ HTTPS only (no mixed content)
 -----------------------------
 
 HTTPS encryption is the number-one security requirement for your site's
-SecureDrop *Landing Page*. Without HTTPS, a source can easily be exposed as a
+SecureDrop *Landing Page*. Without HTTPS, a *Source* can easily be exposed as a
 visitor to your site.
 
 This may be difficult if your website serves advertisements or utilizes
@@ -221,7 +221,7 @@ signature:
 **Don't load any resources (scripts, web fonts, etc.) from third parties
 (e.g. Google Web Fonts)**
 
-This will potentially leak information about sources to third parties,
+This will potentially leak information about *Sources* to third parties,
 which can more easily be accessed by law enforcement agencies. Simply
 copy them to your server and serve them yourself to avoid this problem.
 
@@ -235,15 +235,15 @@ for the SecureDrop *Landing Page*.
 In the past, some news organizations were heavily criticized when launching
 their SecureDrop instances because their *Landing Page* contained
 trackers. They claimed they were going to great lengths to protect
-sources' anonymity, but by having trackers on their *Landing Page*, this also
+*Sources*' anonymity, but by having trackers on their *Landing Page*, this also
 opened up multiple avenues for third parties to collect information on
-those sources. This information can potentially be accessed by law
-enforcement or intelligence agencies and could unduly expose a source.
+those *Sources*. This information can potentially be accessed by law
+enforcement or intelligence agencies and could unduly expose a *Source*.
 
 Similarly, consider avoiding Cloudflare (and other CDNs like Akamai, StackPath,
 Incapsula, Amazon CloudFront, etc.) for the SecureDrop *Landing Page*. These
-services intercept requests between a potential source and the SecureDrop
-*Landing Page* and can be used to `track`_ or collect information on sources.
+services intercept requests between a potential *Source* and the SecureDrop
+*Landing Page* and can be used to `track`_ or collect information on *Sources*.
 
 .. warning:: This is a strict requirement for inclusion in
              the SecureDrop Directory
@@ -284,7 +284,7 @@ if a visitor visits these links without using Tor Browser, this generates
 traffic that an adversary may be able to use to identify SecureDrop-related
 behavior, regardless of the use of HTTPS.
 
-We suggest offering a reference to the SecureDrop Onion Service in
+We suggest offering a reference to the SecureDrop *Onion Service* in
 plain text, without a hyperlink (as per the preceding section):
 
 **sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion**
@@ -443,7 +443,7 @@ Further security considerations
 -------------------------------
 
 To guard your *Landing Page* against being modified by an attacker and
-directing sources to a rogue SecureDrop instance, you will need good
+directing *Sources* to a rogue SecureDrop instance, you will need good
 security practices applying to the machine where it is hosted. Whether
 it's a VPS in the cloud or dedicated server in your office, you should
 consider the following:
@@ -457,7 +457,7 @@ consider the following:
 -  Intrusion and/or integrity monitoring (see Logwatch, OSSEC, Snort,
    rkhunter, chkrootkit)
 -  Downtime alerts (Nagios or Pingdom)
--  Two-factor authentication (see libpam-google-authenticator,
+-  *Two-Factor Authentication* (see libpam-google-authenticator,
    libpam-yubico)
 
 It's preferable for the *Landing Page* to have its own segmented
@@ -483,7 +483,7 @@ or may be unable to load the page altogether because of
 Tor-specific DDoS protections.
 
 The effect of such measures cannot be tested without using Tor, and it is
-a very bad experience for a *source* if visiting a *Landing Page* doesn't work
+a very bad experience for a *Source* if visiting a *Landing Page* doesn't work
 as expected. Because of that, we **recommended strongly** that you test
 your organization's *Landing Page* using Tor *before* you start advertising it.
 

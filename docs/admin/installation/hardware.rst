@@ -34,7 +34,7 @@ Additionally, you may want to consider the following purchases:
 * an external hard drive for server backups.
 * a USB drive to store backups of your *SecureDrop Workstation*.
 * a security key for HOTP authentication, such as a YubiKey, if you want to
-  use hardware-based two-factor authentication instead of a mobile app.
+  use hardware-based *Two-Factor Authentication* instead of a mobile app.
 * a USB drive with a physical write protection switch, or a USB write blocker,
   if you want to mitigate the risk of introducing malware from your network to
   your *SecureDrop Workstation* during repeated use of an *Export Device*.
@@ -126,7 +126,7 @@ organization for both technical and legal reasons:
   the context of SecureDrop, this means that the provider could
   access extremely sensitive information, such as the plaintext of
   submissions or the encryption keys used to identify and access
-  the onion services.
+  the *Onion Services*.
 
 * In addition, attackers with legal authority such as law
   enforcement agencies may (depending on the jurisdiction) be able
@@ -344,9 +344,9 @@ to :doc:`configure an existing hardware firewall <network_firewall>`.
 
 Two-factor device
 ^^^^^^^^^^^^^^^^^
-Two-factor authentication is used when connecting to different parts of the
-SecureDrop system. Each admin and each journalist needs a two-factor
-device. We currently support two options for two-factor authentication:
+*Two-Factor Authentication* is used when connecting to different parts of the
+SecureDrop system. Each admin and each *Journalist* needs a two-factor
+device. We currently support two options for *Two-Factor Authentication*:
 
 * Your existing smartphone with an app that computes TOTP codes
   (e.g. FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ and `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__).
@@ -358,7 +358,7 @@ device. We currently support two options for two-factor authentication:
 
 USB drives
 ^^^^^^^^^^
-Journalists need physical media (known as the
+*Journalists* need physical media (known as the
 *Export Device*) to copy submissions to their everyday workstation.
 
 Our standard recommendation is to use USB drives, in combination with

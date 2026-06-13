@@ -3,7 +3,7 @@ Generate the *Submission Key*
 
 .. These instructions will be replaced with whatever mechanism the all-on-Qubes SecureDrop Workstation uses to generate the submission key.
 
-When a document or message is submitted to SecureDrop by a source, it is
+When a document or message is submitted to SecureDrop by a *Source*, it is
 automatically encrypted with the *Submission Key*. The private part
 of this key is only stored on the *Secure Viewing Station* which is never
 connected to the Internet. SecureDrop submissions can only be decrypted and
@@ -58,7 +58,7 @@ Export the *Submission Public Key*
 
 Navigate to **Apps ▸ Accessories ▸ Kleopatra** to open a
 graphical interface to manage GPG keys. Once Kleopatra opens you will find
-a list of keys, including the SecureDrop Submission Key you just created.
+a list of keys, including the SecureDrop *Submission Key* you just created.
 
 Click to select the key, then click the "Export…" button in the toolbar
 above.

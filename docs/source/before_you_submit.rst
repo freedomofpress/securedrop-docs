@@ -44,7 +44,7 @@ Use Tor Browser
 ---------------
 
 Each SecureDrop may **only** be reached through the Tor Browser.
-SecureDrop pages are only available as onion services—encrypted web pages
+SecureDrop pages are only available as *Onion Services*—encrypted web pages
 that end in ".onion," and only the Tor browser is able to open these pages.
 
 Tor is an anonymizing network that makes it difficult for anybody observing the
@@ -87,14 +87,14 @@ We recommend conducting all research related to your submission in Tor Browser.
 If you are unsure whether you are using Tor, you can visit the address
 https://check.torproject.org.
 
-All organizations operating SecureDrop have a *landing page* that provides their
+All organizations operating SecureDrop have a *Landing Page* that provides their
 own organization-specific recommendations for using SecureDrop. We encourage
-you to consider an organization's *landing page* before submitting to them.
+you to consider an organization's *Landing Page* before submitting to them.
 
 .. note::
 
    Each SecureDrop instance is operated and administered independently by
-   the organization you are submitting to. Only the journalists associated
+   the organization you are submitting to. Only the *Journalists* associated
    with that organization can see your submissions.
 
 Most organizations make their SecureDrop prominently accessible from their
@@ -110,12 +110,12 @@ the organization that you wish to submit to.
 
    If the organization does have an entry in the SecureDrop Directory, we
    recommend comparing the address of the entry with the one on the
-   organization's own SecureDrop landing page.
+   organization's own SecureDrop *Landing Page*.
 
    If the two addresses don't match, please do not submit to this organization
    yet. Instead, please `contact us <https://securedrop.org/report-an-error>`__
    through the SecureDrop website, using Tor Browser. For additional
-   security, you can use our .onion service address in Tor:
+   security, you can use our .onion address in Tor:
 
    ``sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion/report-an-error``
 

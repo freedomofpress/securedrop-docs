@@ -14,7 +14,7 @@ First, you need to physically access each server. Power down the server
 and power the server back up.
 
 If you have access to the password for your admin user, you can use it to log into
-each server without the use of two-factor authentication, which was disabled
+each server without the use of *Two-Factor Authentication*, which was disabled
 for keyboard logins in SecureDrop 0.8.0. You may have saved the password in the
 KeePassXC database on your *Admin Workstation*. If you do not have the password,
 you can boot into single user mode instead.

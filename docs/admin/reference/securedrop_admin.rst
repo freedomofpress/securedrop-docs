@@ -71,8 +71,8 @@ https://github.com/freedomofpress/securedrop/blob/develop/securedrop/i18n.rst
 At any time during and after initial setup, you can choose from a list of
 supported languages to display using the codes shown in parentheses.
 
-.. note:: With a *Source Interface* displayed in French (for example), sources
-          submitting documents are likely to expect a journalist fluent in
+.. note:: With a *Source Interface* displayed in French (for example), *Sources*
+          submitting documents are likely to expect a Journalist fluent in
           French to be available to read the documents and follow up in that
           language.
 
@@ -117,7 +117,7 @@ Configuration information is stored on the *Admin Workstation* under
 * The *Submission Public Key* and *OSSEC Alert Public Key* should be present
   under ``~/.config/securedrop-admin``. If these keys are rotated, the public keys
   should be updated on other *Admin Workstations*.
-* Onion service information is stored in several files:
+* *Onion Service* information is stored in several files:
 
     .. code-block:: none
 
@@ -127,6 +127,6 @@ Configuration information is stored on the *Admin Workstation* under
       ~/.config/securedrop-admin/app-sourcev3-ths
       ~/.config/securedrop-admin/tor_v3_keys.json
 
-  If onion service addresses are changed, the files listed above should be shared
+  If *Onion Service* addresses are changed, the files listed above should be shared
   securely with other administrators - preferably in person using an encrypted transfer USB,
   as they can be used to access the servers directly via SSH over Tor.

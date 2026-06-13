@@ -3,7 +3,7 @@ Promoting your SecureDrop instance
 
 At Freedom of the Press Foundation, we've found news organizations that get the
 most out of SecureDrop are those who promote it regularly and effectively.
-SecureDrop will only be used by sources if they know it exists, so it's best
+SecureDrop will only be used by *Sources* if they know it exists, so it's best
 to promote its use in a variety of ways so that a wide swath of people will see
 it.
 
@@ -14,13 +14,13 @@ Make a high profile announcement
 --------------------------------
 
 Anytime you launch a SecureDrop, you'll want to write an accompanying news story
-along with it to alert your readers and potential sources where to submit
+along with it to alert your readers and potential *Sources* where to submit
 information. Almost every news organization already does this, but some good recent
 examples come from `USA Today`_, `The Guardian`_, and `Wired`_. You can also write a
 companion Q & A like the `Washington Post`_ did.
 
 However, a launch announcement is really just a small piece of the puzzle. It's
-important to regularly remind readers and potential sources that your SecureDrop
+important to regularly remind readers and potential *Sources* that your SecureDrop
 exists, because only a tiny fraction will likely see the launch announcement and
 it will quickly be buried in other news after a couple of days.
 
@@ -33,7 +33,7 @@ Provide a clear link on your homepage
 -------------------------------------
 
 Making your SecureDrop or secure tips page easy to find is one of the most important
-things you can do to ensure that potential sources use it. The best way you can do
+things you can do to ensure that potential *Sources* use it. The best way you can do
 this is providing a clear link on your home page, so that every time a user goes
 to your website, they can quickly see where they need to go.
 
@@ -51,7 +51,7 @@ that this is not as effective as putting it in a more prominent on your front pa
 Provide links at the bottom of your articles
 --------------------------------------------
 
-Another great way to remind potential sources know that they can use SecureDrop is
+Another great way to remind potential *Sources* know that they can use SecureDrop is
 to put a link at the bottom of each article. For example, Gizmodo Media Group,
 uses a message like this:
 
@@ -60,7 +60,7 @@ uses a message like this:
 Create an instructional video on how to access and use your SecureDrop
 ----------------------------------------------------------------------
 
-To better help potential sources visualize how SecureDrop works, several
+To better help potential *Sources* visualize how SecureDrop works, several
 organizations have made short instructional videos walking through all the steps.
 Some good examples include the `Toronto Globe and Mail`_, The Intercept, and
 `Lucy Parsons Labs`_.
@@ -74,7 +74,7 @@ Regularly share your SecureDrop *Landing Page* on social media
 The majority of adults in the United States now get their news from Facebook or
 other social media sites like Twitter, so it's important to regularly remind
 people via social media posts that SecureDrop is the safest way they can contact
-your journalists if they have a sensitive tip to share. If there's specific
+your *Journalists* if they have a sensitive tip to share. If there's specific
 stories you are looking for tips on that may already be in the news, this is a
 great way of getting added attention to your SecureDrop.
 
@@ -107,7 +107,7 @@ launched SecureDrop and other secure communications tools for their tips line:
 |New York Times Tweet|
 
 And the Toronto Globe and Mail regularly puts a note in their physical paper
-reminding potential sources where they can go:
+reminding potential *Sources* where they can go:
 
 |Globe and Mail Tweet|
 

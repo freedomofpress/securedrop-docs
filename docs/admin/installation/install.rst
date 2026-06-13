@@ -117,7 +117,7 @@ During the installation you will be given the opportunity to choose from a
 list of supported languages to display using the codes shown in
 parentheses.
 
-.. note:: With a *Source Interface* displayed in French (for example), sources
+.. note:: With a *Source Interface* displayed in French (for example), *Sources*
           submitting documents are likely to expect a journalist fluent in
           French to be available to read the documents and follow up in that
           language.
@@ -286,12 +286,12 @@ an email to securedrop@freedom.press.
 .. _`Source Offer`: https://github.com/freedomofpress/securedrop/blob/develop/SOURCE_OFFER
 
 Once the installation is complete, addresses and credentials for each
-onion service will be available in the following files under
+*Onion Service* will be available in the following files under
 ``~/.config/securedrop-admin``:
 
 
-V3 onion services
------------------
+V3 *Onion Services*
+-------------------
 
 - ``app-sourcev3-ths`` contains the v3 ``.onion`` address of the *Source
   Interface*.

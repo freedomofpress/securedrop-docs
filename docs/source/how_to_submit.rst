@@ -3,10 +3,10 @@ How to submit
 
 .. note::
 
-   This guide provides an introduction to using SecureDrop as a source.
+   This guide provides an introduction to using SecureDrop as a *Source*.
    It is not exhaustive, it does not address ethical or legal dimensions of
    whistleblowing, and it does not speak to other methods for confidentially
-   communicating with journalists. Please proceed at your own risk. For additional
+   communicating with *Journalists*. Please proceed at your own risk. For additional
    background, also see the Freedom of the Press Foundation guide, `How to Share Sensitive
    Leaks With the Press <https://freedom.press/news/sharing-sensitive-leaks-press/>`__.
 
@@ -45,7 +45,7 @@ will pop up explaining how to increase the security level to **Safest**.
 3. If the current level is not already set to **Safest**, click **Change…**
 4. Select **Safest**
 5. Select **Save and restart** for the changes to take effect
-6. Navigate back to the Source Interface for the SecureDrop for which you wish to submit
+6. Navigate back to the *Source Interface* for the SecureDrop for which you wish to submit
 
 |Security Slider|
 
@@ -86,11 +86,11 @@ Once you have generated a codename and put it somewhere safe, click
 **Submit Documents**.
 
 You will next be brought to the submission page, where you may
-upload a document, enter a message to send to journalists, or both. You
+upload a document, enter a message to send to *Journalists*, or both. You
 can only submit one document at a time, so you may want to combine
 several files into a ZIP archive if necessary. The maximum submission
 size is currently 500MB. If the files you wish to upload are over that
-limit, we recommend that you send a message to the journalist explaining
+limit, we recommend that you send a message to the *Journalist* explaining
 this, so that they can set up another method for transferring the
 documents.
 

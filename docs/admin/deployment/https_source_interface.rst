@@ -3,8 +3,8 @@ HTTPS on the *Source Interface*
 
 .. TODO update this page for Qubes
 
-The SecureDrop *Source Interface* is served as an onion service with an ``.onion``
-URL, requiring Tor Browser to access it. While onion services provide
+The SecureDrop *Source Interface* is served as an *Onion Service* with an ``.onion``
+URL, requiring Tor Browser to access it. While *Onion Services* provide
 end-to-end encryption by default, as well as strong anonymity, there are
 several reasons why you might want to consider deploying an additional layer of
 encryption and authentication via HTTPS:
@@ -13,13 +13,13 @@ encryption and authentication via HTTPS:
   certificates that may be issued for ``*.onion`` addresses, are intended to
   attest to the identity of the organization running a service. This provides
   an additional measure of authenticity (in addition to the organization's
-  *Landing Page* and the `SecureDrop Directory`_) to help assure sources that
+  *Landing Page* and the `SecureDrop Directory`_) to help assure *Sources* that
   they are communicating with the intended organization when they access a
-  given Source Interface.
+  given *Source Interface*.
 
-* SecureDrop supports v3 onion services, which use updated cryptographic
+* SecureDrop supports v3 *Onion Services*, which use updated cryptographic
   primitives that provide better transport-layer encryption than those used
-  by v2 onion services. Using HTTPS on the source interface will provide
+  by v2 *Onion Services*. Using HTTPS on the *Source Interface* will provide
   an extra layer of encryption for data in transit.
 
 .. _`SecureDrop Directory`: https://securedrop.org/directory/
@@ -42,18 +42,18 @@ certificate icon beside the URL bar:
 |HTTPS Onion cert|
 
 Additional information about the organization, such as name and geographic
-location, are checked by the CA during the EV process. A Source can use this
+location, are checked by the CA during the EV process. A *Source* can use this
 information to confirm the authenticity of a SecureDrop instance, beyond the
 verification already available in the `SecureDrop Directory`_.
 
 In order to obtain an HTTPS certificate for your SecureDrop instance,
 `contact DigiCert directly`_. As part of the Extended Validation,
 you will be required both to confirm your affiliation with the organization,
-and to demonstrate control over the Onion URL for your Source Interface.
+and to demonstrate control over the Onion URL for your *Source* Interface.
 
-In order for you to demonstrate control over the Onion URL for your Source
+In order for you to demonstrate control over the Onion URL for your *Source*
 Interface, you will need to perform a signing operation leveraging the
-private key of the Onion service used on the Source Interface.
+private key of the *Onion Service* used on the *Source* Interface.
 DigiCert will provide you with some text and request that you use that text
 in a signing operation. At a high level, obtaining a certificate from DigiCert
 involves:
@@ -61,7 +61,7 @@ involves:
 1. Generating an HTTPS keypair and CSR via ``openssl``.
 2. Submitting the CSR to DigiCert. (This CSR demonstrates control over the private key used for HTTPS.)
 3. Scheduling a phone call and verifying your relationship to the organization.
-4. Generating another CSR, using a custom tool, leveraging the Onion service private key.
+4. Generating another CSR, using a custom tool, leveraging the *Onion Service* private key.
 5. Submitting the second CSR to DigiCert. (This CSR demonstrates control over the private key for the onion service.)
 6. Downloading the certificate from the DigiCert panel.
 7. Installing the cert on the SecureDrop *Application Server*, via ``securedrop-admin``.
@@ -89,7 +89,7 @@ an email with a nonce. Use that value to generate the second CSR:
     # On the Admin Workstation, generate the second CSR
     $ source /usr/share/securedrop-admin/venv/bin/activate
     $ torify pip install onionmaker
-    # Copy the Onion service key material to the Admin Workstation:
+    # Copy the *Onion Service* key material to the Admin Workstation:
     $ mkdir hsdir
     $ ssh app sudo cat /var/lib/tor/services/sourcev3/hostname > hsdir/hostname
     $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_public_key > hsdir/hs_ed25519_public_key
@@ -105,7 +105,7 @@ Harica
 ~~~~~~
 The Greek CA `Harica`_ is now providing Domain Validation (DV) certificates for
 ``.onion`` addresses. DV certificates are less useful for authentication purposes,
-but may still be used to provide another layer of encryption for source traffic.
+but may still be used to provide another layer of encryption for *Source* traffic.
 The commands provide detail on how to obtain a DV certificate from Harica on
 the Admin Workstation:
 
@@ -144,7 +144,7 @@ Activating HTTPS in SecureDrop
 
 Make sure you have :doc:`installed SecureDrop already </admin/installation/installation_overview>`.
 
-Make note of the Source Interface Onion URL. Now from a Terminal
+Make note of the *Source Interface* Onion URL. Now from a Terminal
 on your *Admin Workstation*:
 
 .. code:: sh
@@ -153,10 +153,10 @@ on your *Admin Workstation*:
 
 This command will prompt you for the following information::
 
-  Whether HTTPS should be enabled on Source Interface (requires EV cert): yes
-  Local filepath to HTTPS certificate (optional, only if using HTTPS on source interface): sd.crt
-  Local filepath to HTTPS certificate key (optional, only if using HTTPS on source interface): sd.key
-  Local filepath to HTTPS certificate chain file (optional, only if using HTTPS on source interface): ca.crt
+  Whether HTTPS should be enabled on *Source Interface* (requires EV cert): yes
+  Local filepath to HTTPS certificate (optional, only if using HTTPS on *Source Interface*): sd.crt
+  Local filepath to HTTPS certificate key (optional, only if using HTTPS on *Source Interface*): sd.key
+  Local filepath to HTTPS certificate chain file (optional, only if using HTTPS on *Source Interface*): ca.crt
 
 The filenames should match the names of the files provided to you by DigiCert,
 and should be saved inside the ``~/.config/securedrop-admin`` directory. You'll
@@ -165,15 +165,15 @@ rerun the configuration scripts: ::
     securedrop-admin install
 
 The webserver configuration will be updated to apply the HTTPS settings.
-Confirm that you can access the Source Interface at
+Confirm that you can access the *Source Interface* at
 ``https://<onion_address>.onion``, and also that the HTTP URL
 ``http://<onion_address>.onion`` redirects automatically to HTTPS.
 
 .. note:: By default, Tor Browser will send an OCSP request to a Certificate
-    Authority (CA) to check if the Source Interface certificate has been revoked.
+    Authority (CA) to check if the *Source Interface* certificate has been revoked.
     Fortunately, this occurs through Tor. However, this means that a CA or anyone
     along the path can learn the time that a Tor user visited the SecureDrop
-    Source Interface. Future versions of SecureDrop will add OCSP stapling support
+    *Source Interface*. Future versions of SecureDrop will add OCSP stapling support
     to remove this request. See `OCSP discussion`_ for the full discussion.
 
 .. _`OCSP discussion`: https://github.com/freedomofpress/securedrop/issues/1941

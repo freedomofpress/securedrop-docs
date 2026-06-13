@@ -4,7 +4,7 @@ Backing up and restoring servers
 Maintaining regular backups helps guard against data
 loss and hardware failure. Having a recent backup will allow you to redeploy
 SecureDrop without changing onion URLs, recreating journalist accounts,
-or losing previous submissions from sources.
+or losing previous submissions from *Sources*.
 
 .. note:: Only the *Application Server* is backed up and restored, including
           historical submissions and both *Source Interface* and *Journalist
@@ -17,11 +17,11 @@ Minimizing disk use
 Since the backup and restore operations both involve transferring *all* of
 your SecureDrop's stored submissions over Tor, the process can take a long time.
 
-Encouraging journalists to regularly delete older, unneeded submissions from
+Encouraging *Journalists* to regularly delete older, unneeded submissions from
 the *Journalist Interface* will save time and improve reliability when
 doing backups.
 
-.. tip:: Although it varies, the average throughput of an onion service is
+.. tip:: Although it varies, the average throughput of an *Onion Service* is
          about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
          restore accordingly.
 
@@ -136,7 +136,7 @@ Make sure to replace ``sd-backup-2020-07-22--01-06-25.tar.gz`` with the filename
 for your backup archive.
 
 This command attempts to restore submissions, source and journalist accounts,
-and configuration details for the onion services used by the web interfaces and
+and configuration details for the *Onion Services* used by the web interfaces and
 SSH (if configured).
 
 .. _migrating:
@@ -326,8 +326,8 @@ the following command:
    securedrop-admin restore --preserve-tor-config sd-backup-2020-07-22--01-06-25.tar.gz
 
 This is a suitable option if you have a backup archive taken from an instance
-with v2 onion services, and wish to restore it to an instance that is now using
-v3 onion services.
+with v2 *Onion Services*, and wish to restore it to an instance that is now using
+v3 *Onion Services*.
 
 If you require any assistance with migration or data recovery, please
 `contact Support`_.
