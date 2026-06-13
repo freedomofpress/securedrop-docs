@@ -132,7 +132,7 @@ SecureDrop Workstation connects to your SecureDrop instance's API via the *Journ
 Copy SecureDrop login credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When launching the SecureDrop Application must enter their username, passphrase and two-factor code to connect with the SecureDrop server. You can manage these passphrases using the KeePassXC password manager in the ``vault`` VM. If this laptop will be used by more than one journalist, we recommend that you shut down the ``vault`` VM now (using the Qube widget in the upper right panel), skip this section, and use a smartphone password manager instead.
+When launching SecureDrop Inbox must enter their username, passphrase and two-factor code to connect with the SecureDrop server. You can manage these passphrases using the KeePassXC password manager in the ``vault`` VM. If this laptop will be used by more than one journalist, we recommend that you shut down the ``vault`` VM now (using the Qube widget in the upper right panel), skip this section, and use a smartphone password manager instead.
 
 In order to set up KeePassXC for easy use:
 

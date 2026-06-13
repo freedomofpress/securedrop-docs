@@ -123,7 +123,7 @@ Finally, SecureDrop Workstation relies on many other open source projects such a
 Privacy
 -------
 
-The SecureDrop application does not record your IP address, information about
+The SecureDrop web interface does not record your IP address, information about
 your browser, computer, or operating system. Furthermore, the SecureDrop pages
 do not embed third-party content or deliver persistent cookies to your browser.
 The server will only store the date and time of the newest message sent from
@@ -200,10 +200,10 @@ and must be physically located on-site within your organization's premises.
 
 The servers connect to the network via a dedicated hardware firewall.
 
-Application environment
+SecureDrop Workstations
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The SecureDrop application environment consists of at least one laptop,
+The SecureDrop environment consists of at least one laptop,
 in addition to the servers described above:
 
 - *SecureDrop Workstation:*

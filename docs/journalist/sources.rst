@@ -34,11 +34,6 @@ Journalists sending replies are assigned different colors and identified with
 their initials. Move your mouse pointer over the initials to reveal the full
 name.
 
-.. note:: When you are prompted by a dialog that says “Do you allow VM
-   'sd-app' to access your GPG keys (now and for the following 28800
-   seconds)?”, click **Yes**. This allows the SecureDrop Application VM access
-   to the secure VM that holds your SecureDrop Submission Key.
-
 Highlighting conversations
 --------------------------
 
@@ -66,7 +61,7 @@ Deleting conversations and source accounts
 As part of routine SecureDrop usage, we recommend that you establish data retention practices consistent with your organization's threat model, data lifecycle and data retention policies. Regularly deleting conversations and source accounts can mitigate risks in the event that your SecureDrop servers or a source's account details are compromised.
 
 If you delete messages and files for a source, the source will continue to appear
-in the list of sources in the *SecureDrop App*, and they will still be able
+in the list of sources in SecureDrop Inbox, and they will still be able
 to log into the *Source Interface* using their codename. Consider using this
 option as part of regular deletion of reviewed submissions, especially if you
 are not sure that all communication with the source has concluded.

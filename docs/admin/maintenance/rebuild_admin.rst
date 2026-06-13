@@ -41,7 +41,7 @@ First, create a new Tails
 and set up a persistent volume with a strong passphrase.
 
 Once persistence has been set up, start up the *Admin Workstation* with
-persistence enabled, install the SecureDrop application code, and set up
+persistence enabled, install the SecureDrop Inbox code, and set up
 the KeePassXC database.
 
 The *Admin Workstation* uses SSH with key authentication to connect to the servers,
@@ -341,7 +341,7 @@ during the next step, you should specify them relative to the
 Step 5: Configure and back up the *Application Server*
 ======================================================
 
-Next, configure the SecureDrop application using the files and info retrieved in the
+Next, configure the SecureDrop *Application Server* using the files and info retrieved in the
 previous steps. To do so, connect to the Tor network on the
 *Admin Workstation*, open a Terminal and run the following commands:
 
