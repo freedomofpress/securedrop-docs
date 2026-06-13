@@ -86,7 +86,7 @@ SecureDrop instance.
    server.
 
    You can either leave the server ample time to complete this operation, or
-   monitor the progress by SSHing to the Application server and running
+   monitor the progress by SSHing to the *Application Server* and running
 
    .. code:: sh
 

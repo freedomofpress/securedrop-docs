@@ -106,7 +106,7 @@ the SSH key, you should rotate the key in the following manner.
 
 
 #.  Test SSH connection.
-    Test that you can still ssh into the *Application and Monitor Servers* (you
+    Test that you can still ssh into the *Application* and *Monitor Servers* (you
     can test with ``ssh app host`` and ``ssh mon host``).
 
 

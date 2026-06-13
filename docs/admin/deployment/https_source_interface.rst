@@ -64,7 +64,7 @@ involves:
 4. Generating another CSR, using a custom tool, leveraging the Onion service private key.
 5. Submitting the second CSR to DigiCert. (This CSR demonstrates control over the private key for the onion service.)
 6. Downloading the certificate from the DigiCert panel.
-7. Installing the cert on the SecureDrop Application Server, via ``securedrop-admin``.
+7. Installing the cert on the SecureDrop *Application Server*, via ``securedrop-admin``.
 
 For SecureDrop, you should perform these steps on the Admin Workstation.
 Below are detailed steps for use on Tails:
@@ -77,7 +77,7 @@ Below are detailed steps for use on Tails:
     $ openssl req -new -newkey rsa:4096 -nodes -keyout sd.key -out sd.csr
 
 That command will generate two files: ``sd.key``, the private key
-that will be used by the SecureDrop Application Server; and ``sd.csr``,
+that will be used by the SecureDrop *Application Server*; and ``sd.csr``,
 the certificate signing request (CSR), that will be sent to certificate authority
 in order to receive a certificate.
 Upload that CSR to the DigiCert website, to begin the request.
@@ -99,7 +99,7 @@ an email with a nonce. Use that value to generate the second CSR:
 
 The CSR will be printed to stdout, starting with ``BEGIN CERTIFICATE REQUEST``. Save
 that CSR, and send it via email reply to DigiCert. After you receive your final certificate,
-see instructions below for installing the certificate on the SecureDrop Application Server.
+see instructions below for installing the certificate on the SecureDrop *Application Server*.
 
 Harica
 ~~~~~~

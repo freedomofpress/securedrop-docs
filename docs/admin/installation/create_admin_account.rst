@@ -32,7 +32,7 @@ interface.
 .. _Create Admin CLI:
 
 To create an admin account via the command line,
-:doc:`SSH to the Application Server <../installation/test_the_installation>`,
+:doc:`SSH to the*Application Server* <../installation/test_the_installation>`,
 then:
 
 .. code:: sh

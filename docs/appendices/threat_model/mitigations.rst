@@ -107,7 +107,7 @@ Attacks on the *Application Server* and *Monitor Server*
 -  *Source* or *Journalist Interface* is framed
 -  *Application* or *Monitor Server* is compromised
 -  Attacker exploits postfix
--  Known vulnerabilities in the Linux kernel or packages used by app/mon servers
+-  Known vulnerabilities in the Linux kernel or packages used by the *Application* and *Monitor Servers*
 
 Countermeasures on both *Application* and *Monitor Servers*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

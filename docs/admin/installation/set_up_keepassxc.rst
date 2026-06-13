@@ -52,9 +52,9 @@ the template are:
 **Admin**:
 
 - Admin account username
-- App Server SSH Onion URL
+- *Application Server* SSH Onion URL
 - Email account for sending OSSEC alerts
-- Monitor Server SSH Onion URL
+- *Monitor Server* SSH Onion URL
 - Network Firewall Admin Credentials
 - *OSSEC Alert Public Key*
 - SecureDrop Login Credentials
