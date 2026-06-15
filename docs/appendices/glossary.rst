@@ -7,6 +7,10 @@ A number of terms used in this guide, and in the `SecureDrop workflow
 diagram <what_is_securedrop>`, are specific to SecureDrop. 
 The list below attempts to enumerate and define these terms.
 
+Admin Workstation
+-----------------
+
+.. TODO add SDW-specific Admin Workstation Description
 
 Application Server
 ------------------
@@ -39,6 +43,11 @@ submission activity in the past 24 hours. The *Journalist* uses an associated
 private key to decrypt the alerts.
 
 .. _glossary_landing_page:
+
+Journalist Workstation
+----------------------
+
+.. TODO add SDW description of Journalist Workstation
 
 Landing Page
 ------------

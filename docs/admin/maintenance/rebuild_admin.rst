@@ -201,7 +201,7 @@ local IP address as well.
 Enabling access from the new *Admin Workstation*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From the *Admin Workstation*, open a terminal and copy the *Admin Workstation's*
+From the *Admin Workstation*, open a terminal and copy the *Admin Workstation*'s
 SSH public key to the servers, substituting the values for the server administration
 username and server IP addresses in the commands below and entering the admin account's
 password when prompted:
@@ -476,5 +476,5 @@ We recommend completing the following tasks after the rebuild:
    You may copy these files using a *Transfer Device* (which must be wiped afterwards),
    or boot into each of your additional Tails workstations, plug in and unlock your
    *Admin Workstation*'s encrypted partition via the **Places** app, and manually copy
-   the file(s) from the Admin Workstation to the same directory on the target Tails
+   the file(s) from the *Admin Workstation* to the same directory on the target Tails
    workstation.

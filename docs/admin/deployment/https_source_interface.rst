@@ -66,7 +66,7 @@ involves:
 6. Downloading the certificate from the DigiCert panel.
 7. Installing the cert on the SecureDrop *Application Server*, via ``securedrop-admin``.
 
-For SecureDrop, you should perform these steps on the Admin Workstation.
+For SecureDrop, you should perform these steps on the *Admin Workstation*.
 Below are detailed steps for use on Tails:
 
 .. code:: sh
@@ -107,7 +107,7 @@ The Greek CA `Harica`_ is now providing Domain Validation (DV) certificates for
 ``.onion`` addresses. DV certificates are less useful for authentication purposes,
 but may still be used to provide another layer of encryption for *Source* traffic.
 The commands provide detail on how to obtain a DV certificate from Harica on
-the Admin Workstation:
+the *Admin Workstation*:
 
 .. code:: sh
 

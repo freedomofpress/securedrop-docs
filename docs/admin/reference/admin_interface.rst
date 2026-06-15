@@ -189,7 +189,7 @@ You can update the system logo shown on the web interfaces of your SecureDrop
 instance via the *Admin Interface*. We recommend a size of ``500px x 450px``. Only
 PNG-format images are supported. To update the logo image:
 
-#. Copy the logo image to your admin workstation
+#. Copy the logo image to your *Admin Workstation*
 #. Click **Browse** and select the image from your workstation's filesystem
 #. Click **Update Logo** to upload and set the new logo
 
