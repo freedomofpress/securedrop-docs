@@ -123,7 +123,7 @@ chosen, you can check as follows:
     and password.
  #. Check to see if an SSH hidden proxy service exists, using the command
     ``sudo cat /var/lib/tor/services/sshv3/hostname``. If this file exists and
-    includes an Onion URL, your instance is set up
+    includes an onion address, your instance is set up
     to use SSH over Tor and you should configure temporary SSH access
     using :ref:`these instructions <rebuild_ssh_over_tor>`.
     If not, your instance is set up to use SSH over LAN, and you should follow
@@ -422,7 +422,7 @@ When the installation completes, run:
 Once this command completes:
 
  - verify that the Hostname references in ``~/.ssh/config`` have been updated
-   to refer to Onion URLs instead of direct IP addresses
+   to refer to onion addresses instead of direct IP addresses
  - verify that you can connect to
    the servers using ``ssh app`` and ``ssh mon``
  - verify that the *SecureDrop Menu* for the *Source* and *Journalist Interfaces*

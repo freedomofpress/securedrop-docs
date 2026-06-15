@@ -2,7 +2,7 @@ Tor proof-of-work defense on the *Source Interface*
 ===================================================
 
 The SecureDrop *Source Interface* is served as an *Onion Service* with an
-``.onion`` URL, requiring Tor Browser to access it over the Tor network.  Tor is
+onion address, requiring Tor Browser to access it over the Tor network.  Tor is
 sometimes targeted for denial-of-service (DoS) attacks that can `slow down the
 Tor network as a whole <https://blog.torproject.org/tor-network-ddos-attack/>`_
 as well as burden individual *Onion Services*, including SecureDrops.

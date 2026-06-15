@@ -53,7 +53,7 @@ Passphrases include the spaces between the words, but not leading or trailing
 whitespace. Be sure to save this passphrase in the appropriate KeePassXC database.
 
 Once that's done, you should open Tor Browser |TorBrowser| and
-navigate to the *Journalist Interface*'s .onion address. Verify that you
+navigate to the *Journalist Interface*'s onion address. Verify that you
 can log in to the *Journalist Interface* with the admin account you just
 created.
 

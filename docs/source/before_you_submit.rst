@@ -115,13 +115,13 @@ the organization that you wish to submit to.
    If the two addresses don't match, please do not submit to this organization
    yet. Instead, please `contact us <https://securedrop.org/report-an-error>`__
    through the SecureDrop website, using Tor Browser. For additional
-   security, you can use our .onion address in Tor:
+   security, you can use our onion address in Tor:
 
    ``sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion/report-an-error``
 
    We will update the directory entry if the information in it is incorrect.
 
-Once you have located the ".onion" address, copy it into the address bar in Tor
+Once you have located the onion address, copy it into the address bar in Tor
 Browser to visit the organization's SecureDrop.
 
 .. _`SecureDrop Directory`: https://securedrop.org/directory

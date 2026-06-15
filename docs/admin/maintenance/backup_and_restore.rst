@@ -3,7 +3,7 @@ Backing up and restoring servers
 
 Maintaining regular backups helps guard against data
 loss and hardware failure. Having a recent backup will allow you to redeploy
-SecureDrop without changing onion URLs, recreating journalist accounts,
+SecureDrop without changing onion addresses, recreating journalist accounts,
 or losing previous submissions from *Sources*.
 
 .. note:: Only the *Application Server* is backed up and restored, including
@@ -315,7 +315,7 @@ Data-only restores
 ''''''''''''''''''
 
 The ``restore`` command normally restores both the data and the Tor
-configuration of an instance, including the .onion URLs for your instance.
+configuration of an instance, including the onion addresses for your instance.
 
 You may, however, restore data, such as submissions and journalist
 and source accounts, without altering an instance's Tor configuration, with

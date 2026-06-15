@@ -30,7 +30,7 @@ SecureDrop hardware must employ a set of basic security best practices or risk
 losing any source protection provided by SecureDrop.
 
 Freedom of the Press Foundation eventually plans to `list all of those
-SecureDrop onion URLs <https://securedrop.org/directory>`__ that meet the
+SecureDrop onion addresses <https://securedrop.org/directory>`__ that meet the
 minimum requirements for deployment best practices as "verified" on its
 website. If your organization cannot follow the minimum guidelines, we cannot
 recommend your SecureDrop instance as safe to use.

@@ -115,7 +115,7 @@ most significant benefit is that it will be easier for potential *Sources* to
 find your SecureDrop instance. Additionally, being included in the directory
 makes you eligible for :doc:`an onion name. <onion_name>`
 This improves the experience by turning a lengthy, non-descriptive address
-into one that is short and memorable. For example, a long .onion address 
+into one that is short and memorable. For example, a long onion address 
 might look like: ::
 
     sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion
@@ -251,15 +251,15 @@ services intercept requests between a potential *Source* and the SecureDrop
 .. _`track`: https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 
 
-Do not hyperlink .onion addresses
+Do not hyperlink onion addresses
 ---------------------------------
 Because a visitor to your *Landing Page* may not be using Tor Browser yet,
-clicking a link to your SecureDrop instance or to any other .onion address may
+clicking a link to your SecureDrop instance or to any other onion address may
 result in an error message. Worse, depending on the browser and network
 configuration, it may cause lookups that an adversary can use to identify
 SecureDrop-related behavior.
 
-Instead, we recommend including .onion addresses in plain text, without a
+Instead, we recommend including onion addresses in plain text, without a
 hyperlink.
 
 If you have been provided a short onion name for your instance, this address

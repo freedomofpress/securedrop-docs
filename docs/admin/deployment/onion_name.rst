@@ -8,7 +8,7 @@ Onion names are short, memorable addresses that visitors can use to access an
 *Onion Service* (e.g., a news organization's SecureDrop) using Tor Browser. 
 
 Imagine a SecureDrop instance for a new organization called
-*The New York World* with a .onion address like this:
+*The New York World* with an onion address like this:
 
 `sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion`
 
@@ -24,7 +24,7 @@ How they work
 ^^^^^^^^^^^^^
 
 Onion names are supported in the desktop version of Tor Browser (introduced 
-in version 9.5). The mapping between onion names and the full-length .onion 
+in version 9.5). The mapping between onion names and the full-length onion 
 addresses is done using a custom, signed ruleset for SecureDrop instances
 maintained by Freedom of the Press Foundation. The ruleset is updated
 automatically by Tor Browser, and no information is sent to third party servers
@@ -39,7 +39,7 @@ in some form. The underlying implementation and the address format may change
 in future iterations of this feature. To the extent that any changes are 
 required, we will reach out to coordinate them with you.
 
-Getting An onion name
+Getting an onion name
 ^^^^^^^^^^^^^^^^^^^^^
 
 Freedom of the Press Foundation maintains onion names for SecureDrop instances
@@ -59,8 +59,8 @@ eligible for inclusion, your SecureDrop and its associated clearnet
 *Landing Page* must be set up consistent with the best practices recommended
 in our documentation.
 
-If you are already part of the SecureDrop directory and would like an
-Onion Name, :ref:`please contact us.<Getting Support>`
+If you are already part of the SecureDrop directory and would like a short
+onion name, :ref:`please contact us.<Getting Support>`
 
 Does This Replace the original address?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -104,4 +104,4 @@ reasons including but not limited to:
 
 Unless the removal is an emergency, we will attempt to offer a substantial
 grace period prior to the revocation of an onion name, to ensure you can inform
-your *Sources* about the change to your .onion address.
+your *Sources* about the change to your onion address.

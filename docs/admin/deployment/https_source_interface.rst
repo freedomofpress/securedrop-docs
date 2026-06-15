@@ -4,13 +4,13 @@ HTTPS on the *Source Interface*
 .. TODO update this page for Qubes
 
 The SecureDrop *Source Interface* is served as an *Onion Service* with an ``.onion``
-URL, requiring Tor Browser to access it. While *Onion Services* provide
+address, requiring Tor Browser to access it. While *Onion Services* provide
 end-to-end encryption by default, as well as strong anonymity, there are
 several reasons why you might want to consider deploying an additional layer of
 encryption and authentication via HTTPS:
 
 * Extended Validation (EV) certificates, which are currently the only type of
-  certificates that may be issued for ``*.onion`` addresses, are intended to
+  certificates that may be issued for onion addresses, are intended to
   attest to the identity of the organization running a service. This provides
   an additional measure of authenticity (in addition to the organization's
   *Landing Page* and the `SecureDrop Directory`_) to help assure *Sources* that
@@ -24,18 +24,17 @@ encryption and authentication via HTTPS:
 
 .. _`SecureDrop Directory`: https://securedrop.org/directory/
 
-Obtaining an HTTPS certificate for onion URLs
----------------------------------------------
+Obtaining an HTTPS certificate for onion addresses
+--------------------------------------------------
 
 Digicert
 ~~~~~~~~
 
 DigiCert is one of only two Certificate Authorities (CA) that issue HTTPS
-certificates for ``.onion`` sites. DigiCert requires organizations to follow
+certificates for onion addresses. DigiCert requires organizations to follow
 the Extended Validation (EV) process in order to obtain a certificate for an
 Onion URL, so you should start by reviewing `DigiCert's documentation`_ for
-obtaining a ``.onion`` certificate.
-
+obtaining an HTTPS certificate for an onion address.
 The EV certificates display information about an organization under the
 certificate icon beside the URL bar:
 
@@ -49,9 +48,9 @@ verification already available in the `SecureDrop Directory`_.
 In order to obtain an HTTPS certificate for your SecureDrop instance,
 `contact DigiCert directly`_. As part of the Extended Validation,
 you will be required both to confirm your affiliation with the organization,
-and to demonstrate control over the Onion URL for your *Source* Interface.
+and to demonstrate control over the onion address for your *Source* Interface.
 
-In order for you to demonstrate control over the Onion URL for your *Source*
+In order for you to demonstrate control over the onion address for your *Source*
 Interface, you will need to perform a signing operation leveraging the
 private key of the *Onion Service* used on the *Source* Interface.
 DigiCert will provide you with some text and request that you use that text
@@ -104,7 +103,7 @@ see instructions below for installing the certificate on the SecureDrop *Applica
 Harica
 ~~~~~~
 The Greek CA `Harica`_ is now providing Domain Validation (DV) certificates for
-``.onion`` addresses. DV certificates are less useful for authentication purposes,
+onion addresses. DV certificates are less useful for authentication purposes,
 but may still be used to provide another layer of encryption for *Source* traffic.
 The commands provide detail on how to obtain a DV certificate from Harica on
 the *Admin Workstation*:
@@ -144,7 +143,7 @@ Activating HTTPS in SecureDrop
 
 Make sure you have :doc:`installed SecureDrop already </admin/installation/installation_overview>`.
 
-Make note of the *Source Interface* Onion URL. Now from a Terminal
+Make note of the *Source Interface* onion address. Now from a Terminal
 on your *Admin Workstation*:
 
 .. code:: sh

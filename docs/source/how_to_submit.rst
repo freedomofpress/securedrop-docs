@@ -20,7 +20,7 @@ How to submit
 Making your first submission
 ----------------------------
 
-Open Tor Browser and navigate to the .onion address for the SecureDrop you wish
+Open Tor Browser and navigate to the onion address for the SecureDrop you wish
 to make a submission to. The page will invite you to get started with your
 first submission or to log in. It should have a logo specific to the organization
 you are submitting to.

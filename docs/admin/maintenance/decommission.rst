@@ -69,7 +69,7 @@ SecureDrop instance.
    alias and PGP key used for receiving OSSEC alerts, in order to retire them.
 
 #. **Optional: Save a backup.**
-   If you want to save a backup of the *Application Server* (for example, to reinstall SecureDrop in the future using the same `.onion` address), follow
+   If you want to save a backup of the *Application Server* (for example, to reinstall SecureDrop in the future using the same onion address), follow
    our :doc:`backup guidelines <backup_and_restore>`. Once the backup has been
    created, you can move it onto an encrypted device, such as a LUKS-encrypted 
    drive. You will also require a backup of the *Submission Private Key* found on the

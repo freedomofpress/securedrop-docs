@@ -293,13 +293,13 @@ Once the installation is complete, addresses and credentials for each
 V3 *Onion Services*
 -------------------
 
-- ``app-sourcev3-ths`` contains the v3 ``.onion`` address of the *Source
+- ``app-sourcev3-ths`` contains the v3 onion address of the *Source
   Interface*.
-- ``app-journalist.auth_private`` contains the ``onion`` address and private key
+- ``app-journalist.auth_private`` contains the onion address and private key
   providing access to the *Journalist Interface*.
-- ``app-ssh.auth_private`` contains the ``onion`` address and private key
+- ``app-ssh.auth_private`` contains the onion address and private key
   providing SSH access to the *Application Server*.
-- ``mon-ssh.auth_private`` contains the ``onion`` address and private key
+- ``mon-ssh.auth_private`` contains the onion address and private key
   providing SSH access to the *Monitor Server*.
 - ``tor_v3_keys.json`` contains the keypairs required for access to the
   *Journalist Interface* and SSH access to the servers - it is required for
@@ -310,7 +310,7 @@ V3 *Onion Services*
              or copied from the *Admin Workstation* for any purpose other than
              tasks such as performing backups or onboarding new users.
 
-The dynamic inventory file will automatically read the ``onion`` addresses from
+The dynamic inventory file will automatically read the onion addresses from
 the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to
 connect to the servers over SSH during subsequent playbook runs.
 
