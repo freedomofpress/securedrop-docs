@@ -1,4 +1,4 @@
-Back Up the Tails workstations
+Back up the tails workstations
 -------------------------------
 USB flash drives degrade over time and vary in quality. To ensure continued
 access to SecureDrop by administrators and *Journalists*, we recommend backing up
