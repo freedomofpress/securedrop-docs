@@ -71,9 +71,9 @@ Below are detailed steps for use on Tails:
 .. code:: sh
 
     # On the Admin Workstation, generate the first CSR
-    $ mkdir ~/Persistent/sd-https-key-generation
-    $ cd ~/Persistent/sd-https-key-generation
-    $ openssl req -new -newkey rsa:4096 -nodes -keyout sd.key -out sd.csr
+    mkdir ~/Persistent/sd-https-key-generation
+    cd ~/Persistent/sd-https-key-generation
+    openssl req -new -newkey rsa:4096 -nodes -keyout sd.key -out sd.csr
 
 That command will generate two files: ``sd.key``, the private key
 that will be used by the SecureDrop *Application Server*; and ``sd.csr``,
@@ -86,15 +86,15 @@ an email with a nonce. Use that value to generate the second CSR:
 .. code:: sh
 
     # On the Admin Workstation, generate the second CSR
-    $ source /usr/share/securedrop-admin/venv/bin/activate
-    $ torify pip install onionmaker
+    source /usr/share/securedrop-admin/venv/bin/activate
+    torify pip install onionmaker
     # Copy the *Onion Service* key material to the Admin Workstation:
-    $ mkdir hsdir
-    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hostname > hsdir/hostname
-    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_public_key > hsdir/hs_ed25519_public_key
-    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_secret_key > hsdir/hs_ed25519_secret_key
+    mkdir hsdir
+    ssh app sudo cat /var/lib/tor/services/sourcev3/hostname > hsdir/hostname
+    ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_public_key > hsdir/hs_ed25519_public_key
+    ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_secret_key > hsdir/hs_ed25519_secret_key
     # Generate (second) CSR
-    $ onionmaker <nonce> hsdir
+    onionmaker <nonce> hsdir
 
 The CSR will be printed to stdout, starting with ``BEGIN CERTIFICATE REQUEST``. Save
 that CSR, and send it via email reply to DigiCert. After you receive your final certificate,
@@ -111,24 +111,24 @@ the *Admin Workstation*:
 .. code:: sh
 
     # On the Admin Workstation
-    $ cd ~/
-    $ git clone --recurse-submodules https://github.com/HARICA-official/onion-csr.git
-    $ cd onion-csr
-    $ sudo apt-get update && sudo apt-get install -y ruby-dev rubygems build-essential
+    cd ~/
+    git clone --recurse-submodules https://github.com/HARICA-official/onion-csr.git
+    cd onion-csr
+    sudo apt-get update && sudo apt-get install -y ruby-dev rubygems build-essential
     # If prompted, choose to install the packages "Only once"
-    $ torify gem install --user-install ffi
-    $ gcc -shared -o libed25519.so -fPIC ed25519/src/*.c
+    torify gem install --user-install ffi
+    gcc -shared -o libed25519.so -fPIC ed25519/src/*.c
     # Confirm the binary works by checking that "help" info is displayed:
-    $ ./onion-csr.rb -h
+    ./onion-csr.rb -h
 
     # Copy the Onion service key material to the Admin Workstation:
-    $ mkdir hsdir
-    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hostname > hsdir/hostname
-    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_public_key > hsdir/hs_ed25519_public_key
-    $ ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_secret_key > hsdir/hs_ed25519_secret_key
+    mkdir hsdir
+    ssh app sudo cat /var/lib/tor/services/sourcev3/hostname > hsdir/hostname
+    ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_public_key > hsdir/hs_ed25519_public_key
+    ssh app sudo cat /var/lib/tor/services/sourcev3/hs_ed25519_secret_key > hsdir/hs_ed25519_secret_key
 
     # Generate CSR
-    $ ./onion-csr.rb -n <nonce> -d ./hsdir
+    ./onion-csr.rb -n <nonce> -d ./hsdir
 
 .. _`specific URL`: https://docs.digicert.com/manage-certificates/organization-domain-management/managing-domains-cc-guide/add-authorize-domain-http-dcv/
 .. _`DigiCert's documentation`: https://www.digicert.com/blog/ordering-a-onion-certificate-from-digicert
