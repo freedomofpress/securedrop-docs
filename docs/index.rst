@@ -34,7 +34,7 @@ Get started
 .. note:: The terms in italics are terms of art specific to SecureDrop. The
 	  :doc:`Glossary </appendices/glossary>` provides more-precise
           definitions of these and other terms. SecureDrop is designed against
-          a comprehensive :doc:`/appendices/threat_model/threat_model`, and has a specific notion of the :doc:`roles </appendices/glossary>` that are involved in its operation.
+          a comprehensive :doc:`threat model </appendices/threat_model/threat_model>`, and has a specific notion of the :doc:`roles </appendices/glossary>` that are involved in its operation.
 
 .. toctree::
    :caption: Introduction

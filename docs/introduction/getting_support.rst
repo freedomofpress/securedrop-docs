@@ -54,8 +54,8 @@ Freedom of the Press Foundation has several guides to using Signal:
 
 .. _community_support:
 
-Community based support
-^^^^^^^^^^^^^^^^^^^^^^^
+Community support
+^^^^^^^^^^^^^^^^^
 
 You can connect directly with the SecureDrop development team and the larger
 SecureDrop community using the

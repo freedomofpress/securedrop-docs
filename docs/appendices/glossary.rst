@@ -40,7 +40,6 @@ being transferred to an Internet-connected computer.
 Instructions for using SecureDrop as a *Journalist* are available in our
 :doc:`Journalist Guide </journalist/journalist>`.
 
-
 Journalist Alert Public Key
 ---------------------------
 The *Journalist Alert Public Key* is used for encrypting the daily alert
@@ -48,12 +47,12 @@ that notifies *Journalists* via encrypted email about whether or not there has b
 submission activity in the past 24 hours. The *Journalist* uses an associated
 private key to decrypt the alerts.
 
-.. _glossary_landing_page:
-
 Journalist Workstation
 ----------------------
 
 .. TODO add SDW description of Journalist Workstation
+
+.. _glossary_landing_page:
 
 Landing Page
 ------------
@@ -61,7 +60,6 @@ The *Landing Page* is the public-facing webpage for a SecureDrop instance. This
 page is hosted as a standard (i.e. non-Tor) webpage on the news organization's
 site. It provides first instructions for potential *Sources* and includes
 the instance's :ref:`Source Interface <glossary_source_interface>` address.
-
 
 Monitor Server
 --------------
@@ -125,7 +123,6 @@ hosted on the *Application Server* and can only be accessed through Tor.
 
 Instructions for using the *Source Interface* are available in our :doc:`Source Guide
 </source/source>`.
-
 
 .. _submission-key:
 

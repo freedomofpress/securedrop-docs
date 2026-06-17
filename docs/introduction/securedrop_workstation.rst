@@ -8,7 +8,7 @@ A SecureDrop Workstation is a laptop used by a *Journalist* to connect to a Secu
 
 Encryption and decryption happen with one click using a network-isolated VM that holds the SecureDrop *Submission Private Key*. Submissions can be viewed securely on the same machine thanks to a `feature of Qubes`_ that creates temporary VMs in which to view untrusted content without exposing the rest of the system to that content. *Journalists* use the SecureDrop Workstation to decrypt, view, reply to, and export submissions.
 
-A key feature of SecureDrop is that *journalists* can receive submissions from unknown *Sources* without risking the security of their own machines and networks. Previously, SecureDrop accomplished this by using a physical airgap (the Secure Viewing Station), meaning that to view submissions, *Journalists* would have to download them, transfer them to an encrypted USB drive, and physically take that drive to a separate, non-networked computer for decryption and viewing. SecureDrop Workstation combines all of those steps into one workflow on one machine: a Qubes computer that combines the *Journalist Workstation* and the Secure Viewing Station.
+A key feature of SecureDrop is that *Journalists* can receive submissions from unknown *Sources* without risking the security of their own machines and networks. Previously, SecureDrop accomplished this by using a physical airgap (the Secure Viewing Station); to view submissions, *Journalists* would have to download them, transfer them to an encrypted USB flash drive, and physically take that drive to a separate, non-networked computer for decryption and viewing. SecureDrop Workstation combines all of those steps into one workflow on one machine: a Qubes computer that combines the *Journalist Workstation* and the Secure Viewing Station.
 
 .. | securedrop_workstation_workflow |
 
@@ -33,6 +33,7 @@ For more about the security features of Qubes, see
 
 SecureDrop Workstation networking architecture
 ----------------------------------------------
+
 One key security feature of Qubes OS is that it enables users to configure the
 appropriate level of network access for each VM. For example, you could have a
 VM for password storage that has no network access, a work VM that is firewalled
@@ -48,7 +49,7 @@ adversaries. Specifically, the following VMs have no network access:
 - ``sd-gpg``, which holds the *Submission Private Key* required to decrypt
   messages, replies, and documents.
 - ``sd-devices``, which passes exported documents through to USB devices like
-  printers and encrypted flash drives.
+  printers and encrypted USB flash drives.
 
 By design, the Qubes OS host domain, ``dom0``, also does not have Internet
 access.
@@ -93,6 +94,7 @@ to discuss with us, please contact us via Signal, or send us a
 
 Why can't I save or print from the Viewer VM apps?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 When you view a file on SecureDrop Workstation, it is opened in a disposable
 VM that cannot access the network or any peripherals. The VM and all its data
 will be destroyed the moment you close the viewer application.
@@ -105,12 +107,13 @@ You cannot print from the viewer application, because it does not have access
 to peripherals. This prevents malware from exfiltrating data (e.g., via attached
 USB devices), and from targeting hardware-level security vulnerabilities.
 
-You *can* print files directly from SecureDrop Inbox by clicking "Print"
+You *can* print files directly from SecureDrop Inbox by clicking **Print**
 for a downloaded file, which will pass the file through to your USB printer
 without opening it in an interactive viewer application.
 
 Why can't I copy and paste?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 You should be able to copy and paste *within* any VM on the system, e.g.,
 from one application running in ``sd-app`` to another.
 
@@ -158,6 +161,7 @@ For more about the security features of Qubes, see
 
 How does the security of this system compare to using an air-gapped Secure Viewing Station?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The air-gapped Secure Viewing Station that is part of a SecureDrop setup offers strong
 protections against exfiltration of submissions or encryption keys by adversaries. It lacks
 important protections that SecureDrop Workstation provides. On the other hand, vulnerabilities
