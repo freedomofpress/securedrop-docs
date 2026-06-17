@@ -137,10 +137,10 @@ Therefore, we recommend rotating the *Submission Key* under the following
 circumstances:
 
 - If the user's departure was not amicable
-- If the user is still holding on to any *Secure Viewing Station* USB drive or
+- If the user is still holding on to any *Secure Viewing Station* USB flash drive or
   backup
 - If you have any other reason to believe the *Submission Private Key* or the
-  entire *Secure Viewing Station* USB may have been copied or compromised.
+  entire *Secure Viewing Station* USB flash drive may have been copied or compromised.
 
 You should still keep the old key on the *Secure Viewing Station*, or else you
 will not be able to decrypt submissions that were sent to you while that key
@@ -148,7 +148,7 @@ was in effect.
 
 **You will need:**
 
-- A *Transfer Device* (LUKS-encrypted USB drive)
+- A *Transfer Device* (LUKS-encrypted USB flash drive)
 
 On the *Secure Viewing Station*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

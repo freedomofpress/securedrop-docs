@@ -164,17 +164,17 @@ important protections that SecureDrop Workstation provides. On the other hand, v
 in Qubes OS or Xen Hypervisor may have a greater security impact than vulnerabilities
 in Tails, the operating system used on a Secure Viewing Station.
 
-A typical SVS USB drive may contain documents from multiple *Sources* and always
+A typical Secure Viewing Station USB flash drive may contain documents from multiple *Sources* and always
 contains the highly sensitive private key needed to decrypt them. An adversary who does
 manage to achieve a security compromise (e.g., through a vulnerability in a file viewer
 application) can access these other files, and may be able to exfiltrate them.
 
 In spite of the air-gap, this may be possible through physical channels used to transfer files
-off the SVS (e.g., USB drives), or by motivating the *Journalist* to perform an
+off the Secure Viewing Station (e.g., USB flash drives), or by motivating the *Journalist* to perform an
 unsafe action (e.g., `scanning a QR code <https://securedrop.org/news/security-advisory-do-not-scan-qr-codes-submitted-through-securedrop-connected-devices/>`__).
 
-Because the air-gapped SVS has no Internet access, updates can only be performed using
-another computer and a USB drive. In practice, newsrooms may not update their SVS
+Because the air-gapped Secure Viewing Station has no Internet access, updates can only be performed using
+another computer and a USB flash drive. In practice, newsrooms may not update their Secure Viewing Station
 in a timely manner, which can significantly worsen its security posture.
 
 In SecureDrop Workstation, any document received via SecureDrop is opened in a

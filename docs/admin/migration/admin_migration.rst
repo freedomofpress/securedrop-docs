@@ -59,7 +59,7 @@ Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault``
 Configure SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that your new Qubes-based *Admin-Workstation* is prepared, you can proceed with importing the correct *Journalist Interface* details and *Submission Private Key* from your Tails-based *Secure Viewing Station* and *Journalist Workstation* USB drives.
+Now that your new Qubes-based *Admin-Workstation* is prepared, you can proceed with importing the correct *Journalist Interface* details and *Submission Private Key* from your Tails-based Secure Viewing Station and *Journalist Workstation* USB flash drives.
 
 Import *Submission Private Key*
 -------------------------------
@@ -68,13 +68,13 @@ In order to decrypt submissions, you will need a copy of the
 `*Submission Private Key* <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_
 from your SecureDrop instance's Secure Viewing Station.
 
-To protect this key and preserve the air gap, you will need to connect the SVS USB to a Qubes VM with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to the ``dom0`` VM from another VM - instead, follow the steps below:
+To protect this key and preserve the air gap, you will need to connect the Secure Viewing Station USB flash drive to a Qubes VM with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to the ``dom0`` VM from another VM - instead, follow the steps below:
 
-- First, use the network manager widget in the upper right panel to disable your network connection. These instructions refer to the ``vault`` VM, which has no network access by default, but if the SVS USB is attached to another VM by mistake, this will offer some protection against exfiltration.
+- First, use the network manager widget in the upper right panel to disable your network connection. These instructions refer to the ``vault`` VM, which has no network access by default, but if the Secure Viewing Station is attached to another VM by mistake, this will offer some protection against exfiltration.
 
 - Next, choose |qubes_menu| **▸ Apps ▸ vault ▸ Thunar File Manager** to open the file manager in the ``vault`` VM.
 
-- Connect the SVS USB to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` VM. There will be three entries for the USB in the section titled **Data (Block) Devices**. Choose the *unlabeled* entry (*not* the one labeled "TAILS") annotated with a ``sys-usb`` text that ends with a number, like ``sys-usb:sdb2``. That is the persistent volume.
+- Connect the Secure Viewing Station USB flash drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` VM. There will be three entries for the USB flash drive in the section titled **Data (Block) Devices**. Choose the *unlabeled* entry (*not* the one labeled "TAILS") annotated with a ``sys-usb`` text that ends with a number, like ``sys-usb:sdb2``. That is the persistent volume.
 
   |Attach TailsData|
 
@@ -97,7 +97,7 @@ To protect this key and preserve the air gap, you will need to connect the SVS U
   .. note::
     If there are multiple keys present on the device, ``sdw-admin --configure`` will print the fingerprints of those keys for you to select which to use as the *Submission Private Key*. You can open ``<source interface address>.onion/metadata`` in Tor Browser on another network-connected computer to check the correct key fingerprint used by your SecureDrop instance.
 
-- Once the *Submission Private Key* import is complete, in the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the SVS USB.
+- Once the *Submission Private Key* import is complete, in the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the Secure Viewing Station USB flash drive.
 
 - If you were prompted for a passphrase during import, you will now need to remove the passphrase on ``sd-journalist.sec``. See :doc:`/admin/migration/removing_gpg_passphrase`.
 
@@ -113,9 +113,9 @@ Import *Journalist Interface* details
 
 SecureDrop Workstation connects to your SecureDrop instance's API via the *Journalist Interface*. In order to do so, it will need the *Journalist Interface* address and authentication info. As the clipboard from another VM cannot be copied into ``dom0`` directly, follow these steps to copy the file into place:
 
-- Locate a Tails-based *Admin Workstation* or *Journalist Workstation* USB drive. Both hold the address and authentication info for the *Journalist Interface*; if you also want to copy the *Journalist*'s password database, use the *Journalist Workstation* USB drive.
+- Locate a Tails-based *Admin Workstation* or *Journalist Workstation* USB flash drive. Both hold the address and authentication info for the *Journalist Interface*; if you also want to copy the *Journalist*'s password database, use the *Journalist Workstation* USB flash drive.
 
-- Connect the USB drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` VM. There will be 3 listings for the USB in the widget: one for the base USB, one for the Tails partition on the USB, labeled ``Tails``, and a 3rd unlabeled listing, for the persistent volume. Choose the third listing.
+- Connect the USB flash drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` VM. There will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled ``Tails``), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
 
 - In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the persistent volume passphrase to unlock and mount it. When prompted, select the option to **Forget password immediately**.
 
@@ -127,7 +127,7 @@ SecureDrop Workstation connects to your SecureDrop instance's API via the *Journ
 
   The command will print out the imported *Journalist Interface* details to confirm before proceeding.
 
-- If you used a Tails-based *Admin Workstation* USB drive, or you don't intend to copy a password database to this workstation, safely disconnect the USB drive now. In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the USB drive.
+- If you used a Tails-based *Admin Workstation* drive, or you don't intend to copy a password database to this workstation, safely disconnect the USB flash drive now. In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the USB flash drive.
 
 Copy SecureDrop login credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -144,11 +144,11 @@ In order to set up KeePassXC for easy use:
 
 .. important::
 
-   The password database from the Tails-based *Admin Workstation* contains sensitive credentials not required by *Journalists*. Make sure to copy the credentials from the Tails-based *Journalist Workstation* USB.
+   The password database from the Tails-based *Admin Workstation* contains sensitive credentials not required by *Journalists*. Make sure to copy the credentials from the Tails-based *Journalist Workstation* USB flash drive.
 
 In order to copy a *Journalist*'s login credentials:
 
-- If a Tails-based *Journalist Workstation* USB is not currently attached, connect it, attach it to the ``vault`` VM, open it in the file manager, and enter its encryption passphrase.
+- If a Tails-based *Journalist Workstation* USB flash drive is not currently attached, connect it, attach it to the ``vault`` VM, open it in the file manager, and enter its encryption passphrase.
 
 - Locate the password database. It should be in the ``Persistent`` directory, and will typically be named ``keepassx.kdbx`` or similar.
 

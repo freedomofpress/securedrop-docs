@@ -131,7 +131,7 @@ following output in your terminal. ::
 Create the Ubuntu installation media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The `Ubuntu website <https://ubuntu.com/>`__ has detailed instructions on how to
-to create a bootable Ubuntu Server USB drive.
+to create a bootable Ubuntu Server USB flash drive.
 
 Follow the instructions at the link below for your operating system, then return
 to this page:
@@ -143,7 +143,7 @@ to this page:
 - `Create a bootable Ubuntu USB drive on Linux
   <https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview>`__
 
-With the Ubuntu Server install USB ready, you may now proceed to the installation.
+With the Ubuntu Server install USB flash drive ready, you may now proceed to the installation.
 
 Perform the installation
 ~~~~~~~~~~~~~~~~~~~~~~~~

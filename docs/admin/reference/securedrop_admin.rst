@@ -128,5 +128,5 @@ Configuration information is stored on the *Admin Workstation* under
       ~/.config/securedrop-admin/tor_v3_keys.json
 
   If *Onion Service* addresses are changed, the files listed above should be shared
-  securely with other administrators - preferably in person using an encrypted transfer USB,
+  securely with other administrators - preferably in person using an encrypted USB flash drive,
   as they can be used to access the servers directly via SSH over Tor.

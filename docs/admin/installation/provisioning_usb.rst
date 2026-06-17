@@ -1,5 +1,5 @@
-Provisioning export USB devices
-===============================
+Provisioning USB *Export Devices*
+=================================
 
 The *Journalist Workstation* supports the export of submissions from the SecureDrop Inbox
 to a LUKS- or VeraCrypt-encrypted USB *Export Device*.
@@ -7,18 +7,18 @@ to a LUKS- or VeraCrypt-encrypted USB *Export Device*.
 Creating a LUKS-encrypted drive
 -------------------------------
 
-.. note:: LUKS-encrypted devices can only be used with Linux-based
+.. note:: LUKS-encrypted drives can only be used with Linux-based
   systems such as Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
 
 In order to provision a LUKS-encrypted *Export Device* for use a *Journalist Workstation*,
-you will need a fresh USB stick and a Linux-based system. Tails is recommended -
+you will need a fresh USB flash drive and a Linux-based system. Tails is recommended -
 if available, the *Secure Viewing Station* can be used, adding the extra benefit
 of its airgap:
 
 - First, boot into the *Secure Viewing Station*, without unlocking its
   persistent volume or setting an admin password.
 - Next, open the Disks utility: **Applications ▸ Utilities ▸ Disks**.
-- Connect the fresh USB stick and select it in the list in the left-hand panel.
+- Connect the fresh USB flash drive and select it in the list in the left-hand panel.
 
 .. warning:: The formatting operation will wipe any data on an existing partition.
   Make sure that you select the correct device!
@@ -57,7 +57,7 @@ Creating a VeraCrypt-encrypted drive
 - Click **Create Volume**
 - Select **Encrypt a non-system partition/drive** and click **Next**.
 - Select **Standard VeraCrypt volume** and click **Next**
-- Connect your fresh USB stick and click **Select Device...** to choose your USB.
+- Connect your fresh USB flash drive and click **Select Device...** to select it.
 
   - You may see a warning that says "We strongly recommend that inexperienced
     users create a VeraCrypt file container on the selected device/partition,

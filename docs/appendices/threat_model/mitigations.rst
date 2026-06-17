@@ -217,7 +217,7 @@ User Behavior and Hardware — SecureDrop Hardware Tampering or Failure in Opera
 Attacks on user behavior or hardware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  *Journalist* corporate workstation seized/tampered/compromised
--  Transfer device seized/stolen/lost
+-  *Export Device** seized/stolen/lost
 -  Admin *Two-Factor Authentication* device is lost or compromised
 -  Admin SSH Key is compromised
 -  SecureDrop installer misconfigures server/firewall hardware

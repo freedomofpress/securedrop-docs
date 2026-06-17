@@ -20,6 +20,12 @@ the website that *Sources* access (the *Source Interface*) and the website that
 through an *Onion Service* because *Sources*, *Journalists*, and admins
 may only connect to this server using Tor.
 
+Export Device
+-------------
+
+The *Export Device* is the physical media (e.g., designated USB flash drive) used to transfer decrypted documents from the Secure Viewing Station to a journalist's everyday workstation, or to another computer for additional processing.
+
+Please see the detailed security recommendations for the choice, configuration and use of your *Export Device* in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/installation/provisioning_usb>`.
 
 Journalist
 ----------

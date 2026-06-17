@@ -50,7 +50,7 @@ First, generate the new SSH keypair:
 You'll be asked to "Enter file in which to save the key" Type
 **Enter** to use the default location.
 
-Given that this key is on the encrypted persistence of a Tails USB,
+Given that this key is on the encrypted persistence of a Tails USB flash drive,
 you do not need to add an additional passphrase to protect the key.
 If you do elect to use a passphrase, note that you will need to manually
 type it (Tails' pinentry will not allow you to copy and paste a passphrase).

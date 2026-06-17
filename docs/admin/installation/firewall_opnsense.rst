@@ -63,7 +63,7 @@ Connect to the OPNSense web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. If you have not already done so, boot the *Admin Workstation* into
-   Tails using its designated USB drive. 
+   Tails using its designated USB flash drive. 
    
 #. Connect the *Admin Workstation* to the LAN interface. You should see
    a popup notification in Tails that says "Connection Established". If you click

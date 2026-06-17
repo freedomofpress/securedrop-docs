@@ -22,7 +22,7 @@ Those reasons and more are why using a dedicated computer
 for whistleblowing activities can be safer.
 
 To build an even stronger buffer for yourself, we recommend booting
-the computer into the `Tails operating system`_ (typically from a USB stick).
+the computer into the `Tails operating system`_ (typically from a USB flash drive).
 Tails is specifically designed to run on your computer without leaving traces
 of your activity. This may take some additional technical steps, but it is safer
 and fairly simple to get started. Even if you choose to use a dedicated computer

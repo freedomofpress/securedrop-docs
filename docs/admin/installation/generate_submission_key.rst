@@ -11,7 +11,7 @@ read on the *Secure Viewing Station*.
 
 We will now generate the *Submission Key*. If you aren't still logged into your
 *Secure Viewing Station* from the previous step, boot it using its Tails USB
-stick, with persistence enabled.
+flash drive, with persistence enabled.
 
 .. important:: The private key you will generate in the following steps is one of the most
   important secrets associated with your SecureDrop installation. This procedure
@@ -85,7 +85,7 @@ write down the 40 hexadecimal digits under *Fingerprint*.
           screenshot.
 
 At this point, you are done with the *Secure Viewing Station* for now. You
-can shut down Tails, grab the *Admin Workstation* Tails USB, and move over to your regular
+can shut down Tails, grab the *Admin Workstation* USB flash drive, and move over to your regular
 workstation.
 
 .. |GPG generate key| image:: ../../images/install/run_gpg_gen_key.png

@@ -79,16 +79,16 @@ Exporting submissions from the *Journalist Workstation*
    the risk of spreading malware to that computer. Make sure you understand the
    risks, and consider other methods to export the document (e.g., print).
 
-If you must copy a file from your *Journalist Workstation* to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that journalists are provided with an d *Encrypted USB Drive*, drive which is encrypted using `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
+If you must copy a file from your *Journalist Workstation* to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that *Journalists* are provided with an *Export Device*, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
 These instructions assume that you are following the recommended workflow.
 If you are unsure, ask your administrator.
 
-Exporting to an export USB
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exporting to an *Export Device*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Currently, a LUKS- or VeraCrypt-encrypted USB drive is required for exporting submissions.
+Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for exporting submissions.
 
-1. Insert the USB drive and wait for the ``sd-devices`` VM to start.
+1. Insert the USB flash drive and wait for the ``sd-devices`` VM to start.
 2. If your drive is using VeraCrypt, you will need to unlock it manually:
 
    1. Open the file menu by clicking on the Qubes Application menu |qubes_menu| (in the top left),
@@ -96,7 +96,7 @@ Currently, a LUKS- or VeraCrypt-encrypted USB drive is required for exporting su
    2. In the left sidebar, there should be an entry labeled **# GB Possibly Encrypted**,
       click it.
       |screenshot_veracrypt_sd_devices_files|
-   3. You will be prompted for the password configured for this USB drive:
+   3. You will be prompted for the password configured for this USB flash drive:
 
       - Volume type: leave both unchecked
       - PIM: leave empty
@@ -108,12 +108,12 @@ Currently, a LUKS- or VeraCrypt-encrypted USB drive is required for exporting su
 
 3. Back in your *Source*'s conversation, click **Export**.
    |screenshot_export_dialog|
-4. If you have not already unlocked your USB drive, you will be prompted for the
-   password configured for this USB drive.
+4. If you have not already unlocked your USB flash drive, you will be prompted for the
+   password configured for this USB flash drive.
    |screenshot_export_drive_passphrase|
 
 5. Once you see a message informing you that the export was successfully completed,
-   you can safely unplug the USB drive. Alternatively, you can leave the drive
+   you can safely unplug the USB flash drive. Alternatively, you can leave the drive
    plugged in and export additional files.
 
 Decrypting and preparing to publish

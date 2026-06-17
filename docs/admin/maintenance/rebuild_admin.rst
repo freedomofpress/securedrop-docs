@@ -1,14 +1,14 @@
-Rebuilding an *Admin Workstation* USB
--------------------------------------
+Rebuilding an *Admin Workstation*
+---------------------------------
 
-In cases where an *Admin Workstation* USB stick has been lost or destroyed, and no
+In cases where an *Admin Workstation* USB flash drive has been lost or destroyed, and no
 backup exists, it is possible to rebuild one. In order to do so, you'll need
 
  - physical access to the SecureDrop servers
- - 2 USB sticks:
+ - 2 USB flash drives:
 
-   - Tails Template USB
-   - 1 replacement *Admin Workstation* USB (USB3 and 16GB or better recommended)
+   - Tails Template drive
+   - 1 replacement *Admin Workstation* USB flash drive (USB3 and 16GB or better recommended)
 
 The process requires experience with the Linux command line and Tails, and
 can take up to 3 hours. If a backup of the SecureDrop *Application Server* is available,
@@ -16,7 +16,7 @@ can take up to 3 hours. If a backup of the SecureDrop *Application Server* is av
 may be simpler. An outline of the steps involved in rebuilding an
 *Admin Workstation* is as follows:
 
- #. Prepare the USB sticks.
+ #. Prepare the USB flash drives.
  #. (Optional) Boot the *Application* and *Monitor Server* in single user mode and reset
     the shell admin account password.
  #. Set up SSH access for the new *Admin Workstation*.
@@ -34,10 +34,10 @@ may be simpler. An outline of the steps involved in rebuilding an
                process promptly, to avoid leaving the servers in an insecure state.
 
 
-Step 1: Prepare the USB sticks
-==============================
+Step 1: Prepare the USB flash drives
+====================================
 
-First, create a new Tails
+First, create a new Tails drive
 and set up a persistent volume with a strong passphrase.
 
 Once persistence has been set up, start up the *Admin Workstation* with
@@ -432,11 +432,11 @@ Step 8: Post-rebuild tasks
 ==========================
 
 .. important::
-   Rebuilding an Admin Workstation makes changes that will prevent
+   Rebuilding an *Admin Workstation* makes changes that will prevent
    your other Tails workstations from connecting to your SecureDrop
    servers.
-   If you rebuild your Admin Workstation, you must also provision
-   all other existing Tails Workstation USBs with updated Tor
+   If you rebuild your *Admin Workstation*, you must also provision
+   all other existing Tails workstation drives updated Tor
    credentials (see below).
 
 We recommend completing the following tasks after the rebuild:
@@ -448,7 +448,7 @@ We recommend completing the following tasks after the rebuild:
  - Back up your *Admin Workstation*.
  - Delete invalid admin accounts in the *Journalist Interface*.
  - Restrict SSH access to the *Application* and *Monitor Servers* to valid
-   *Admin Workstations*. If your new *Admin Workstation* USB stick
+   *Admin Workstations*. If your new *Admin Workstation* USB flash drive
    is the only one that should have SSH access to the servers, you can remove
    access for any previous *Admin Workstations* from the terminal, using the
    commands:
@@ -462,7 +462,7 @@ We recommend completing the following tasks after the rebuild:
    sure not to remove the public key belonging to your new *Admin Workstation*.
  - :doc:`Back up the *Application Server* <backup_and_restore>` once SSH-over-Tor has
    been restored. Ensure that server and workstation backups happen regularly.
- - Provision all other Tails Workstation USBs (*Journalist* and/or *Admin Workstations*)
+ - Provision all other Tails workstation drives (*Journalist* and/or *Admin Workstations*)
    with updated Tor credentials, so that they can access SecureDrop after this rebuild.
 
    You will need to copy the following file(s) to all other *Admin* and

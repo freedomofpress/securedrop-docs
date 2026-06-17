@@ -18,13 +18,13 @@ Prerequisites
 In order to install SecureDrop Workstation and configure it to use an existing SecureDrop instance, you will need the following:
 
 - A Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations. 
-- Qubes installation medium - this guide assumes the use of a USB 3.0 stick. Qubes may also be installed via optical media, which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_.
+- Qubes installation medium - this guide assumes the use of a USB 3.0 flash drive. Qubes may also be installed via optical media, which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_.
 
-  .. note:: A USB stick with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings detailed below are applied.
+  .. note:: A USB flash drive with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings detailed below are applied.
 
 - A working computer (Linux is recommended and assumed in this guide) to use for verification and creation of the Qubes installation medium.
 
-  .. note:: A Tails USB can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB stick to transfer it to Tails for verification and creation of the installation medium.
+  .. note:: Tails can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB flash drive to transfer it to Tails for verification and creation of the installation medium.
 
 - A password manager or other system to generate and store strong passphrases for Qubes full disk encryption (FDE) and user accounts.
 
@@ -120,14 +120,14 @@ The output should look like this:
 
 Specifically, you will want to make sure that you see "Good signature" listed in the text. If it does not report a good signature, try deleting the ISO and downloading it again.
 
-Once you've verified the ISO, copy it to your installation medium - for example, if using Linux and a USB stick, using the command:
+Once you've verified the ISO, copy it to your installation medium - for example, if using Linux and a USB flash drive, using the command:
 
 .. code-block:: sh
 
   sudo dd if=Qubes-R4.2.4-x86_64.iso of=/dev/sdX bs=1048576 && sync
 
 where ``if`` is set to the path to your downloaded ISO file and ``of`` is set to
-the block device corresponding to your USB stick. Note that any data on the USB stick will be overwritten.
+the block device corresponding to your USB flash drive. Note that any data on the USB flash drive will be overwritten.
 
 .. caution:: Make sure to verify that you have the correct device name using, for example, the ``lsblk`` command. You should write to the full device (eg. ``/dev/sdc``) rather than to a partition (eg. ``/dev/sdc1``).
 
@@ -138,7 +138,7 @@ Before starting the installation, please ensure that:
   - the computer is charging
   - all USB devices like YubiKeys, mice and keyboards are disconnected
 
-To begin the Qubes installation, connect the Qubes install USB to your target computer and boot from it. You may need to bring up a boot menu at startup to do so - on Lenovo laptops, for example, you can do so by pressing **F12** on boot.
+To begin the Qubes installation, connect the Qubes installation drive you just created to your target computer and boot from it. You may need to bring up a boot menu at startup to do so - on Lenovo laptops, for example, you can do so by pressing **F12** on boot.
 
 Follow the `installation documentation <https://www.qubes-os.org/doc/installation-guide/>`_ to install Qubes on your computer, ensuring that you:
 
@@ -149,7 +149,7 @@ Follow the `installation documentation <https://www.qubes-os.org/doc/installatio
 
 .. note:: Qubes is not intended to have multiple user accounts, so your account name and password will be shared by all SecureDrop Workstation users. The password will be required to log in and unlock the screen during sessions - choosing something strong but memorable and easily typed is recommended!
 
-Once the installation is complete, you will be prompted to reboot into Qubes. Reboot, removing the install USB when the computer restarts.
+Once the installation is complete, you will be prompted to reboot into Qubes. Reboot, removing the install USB flash drive when the computer restarts.
 
 You will be prompted to enter the FDE passphrase set during installation.
 

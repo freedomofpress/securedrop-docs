@@ -60,8 +60,8 @@ SecureDrop instance.
    You may want to direct them to other secure methods of contacting you.
 #. **Locate and create an inventory of all your hardware.**
      - *SecureDrop Workstation* laptops
-     - *Export Devices* (USBs, optical drives, or external drives)
-     - Backup USBs/other storage media
+     - *Export Devices* (USB flash drives, optical drives, or external drives)
+     - Backup USB flash drives/other storage media
      - Servers
      - Firewall
 
@@ -71,13 +71,13 @@ SecureDrop instance.
 #. **Optional: Save a backup.**
    If you want to save a backup of the *Application Server* (for example, to reinstall SecureDrop in the future using the same onion address), follow
    our :doc:`backup guidelines <backup_and_restore>`. Once the backup has been
-   created, you can move it onto an encrypted device, such as a LUKS-encrypted 
-   drive. You will also require a backup of the *Submission Private Key* found on the
+   created, you can move it onto an encrypted drive, such as a LUKS-encrypted 
+   USB flash drive. You will also require a backup of the *Submission Private Key* found on the
    *SecureDrop Workstation*.
 
    If you do not require a server backup, you may choose to download specific
    submissions, and store them in a secure manner (such as on an encrypted
-   drive). 
+   USB flash drive). 
 #. **Optional: Delete submissions on the server.**
    Log into the *Journalist Workstation* and delete all sources to take advantage
    of SecureDrop's secure deletion properties. Note that depending on the
@@ -103,14 +103,14 @@ SecureDrop instance.
 #. **Disconnect the firewall and the servers from the internet.**
    Be sure to inform your network administrator of any changes to devices on
    your network.
-#. **Wipe and destroy the USB drives.**
-   Because the USB drives used for SecureDrop are all LUKS-encrypted,
-   reformatting the USB drives (in particular, overwriting a portion of internal
+#. **Wipe and destroy the USB flash drives.**
+   Because the USB flash drives used for SecureDrop are all LUKS-encrypted,
+   reformatting the USB flash drives (in particular, overwriting a portion of internal
    storage called the **LUKS header**) should be sufficient to make any existing
    data on those drives unrecoverable.
 
-   For example, you could use your *Template Tails USB* to launch Gnome Disks,
-   insert and identify the USB drive you are trying to erase, and reformat this
+   For example, you could use Tails to launch Gnome Disks,
+   insert and identify the USB flash drive you are trying to erase, and reformat this
    drive with a new, LUKS-encrypted partition, erasing the existing partition
    data.
 

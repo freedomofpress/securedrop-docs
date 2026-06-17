@@ -22,8 +22,8 @@ For an installation of SecureDrop, you must acquire:
 * At least 1 dedicated physical laptop for the *SecureDrop Workstation*.
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
-* At least 1 USB drive for OS installation media,
-  and at least 1 more USB drive if needed as an *Export Device*.
+* At least 1 USB flash drive for OS installation media,
+  and at least 1 more USB flash drive if needed as an *Export Device*.
 
 .. _Optional Hardware:
 
@@ -32,10 +32,10 @@ Additionally, you may want to consider the following purchases:
 * a printer without wireless network support, to use in combination with the
   *SecureDrop Workstation*.
 * an external hard drive for server backups.
-* a USB drive to store backups of your *SecureDrop Workstation*.
+* a USB flash drive to store backups of your *SecureDrop Workstation*.
 * a security key for HOTP authentication, such as a YubiKey, if you want to
   use hardware-based *Two-Factor Authentication* instead of a mobile app.
-* a USB drive with a physical write protection switch, or a USB write blocker,
+* a USB flash drive with a physical write protection switch, or a USB write blocker,
   if you want to mitigate the risk of introducing malware from your network to
   your *SecureDrop Workstation* during repeated use of an *Export Device*.
   
@@ -356,26 +356,26 @@ device. We currently support two options for *Two-Factor Authentication*:
 
 .. include:: ../../includes/otp-app.txt
 
-USB drives
-^^^^^^^^^^
+USB flash drives
+^^^^^^^^^^^^^^^^
 *Journalists* need physical media (known as the
 *Export Device*) to copy submissions to their everyday workstation.
 
-Our standard recommendation is to use USB drives, in combination with
+Our standard recommendation is to use USB flash drives, in combination with
 volume-level encryption and careful data hygiene. We also urge the use
 of a secure printer or similar analog conversions to 
 export documents from the *SecureDrop Workstation*, whenever possible.
 
-You may want to consider enforcing write protection on USB drives when only read
+You may want to consider enforcing write protection on USB flash drives when only read
 access is needed. We encourage you to evaluate these options in the context of
 your own threat model. When it is consistently applied and correctly implemented in hardware, write
 protection can prevent the spread of malware from the computers used to read
-files stored on an *Export Device*. The two main options to achieve write protection of USB drives are:
+files stored on an *Export Device*. The two main options to achieve write protection of USB flash drives are:
 
 - drives with a built-in physical write protection switch
 - a separate USB write blocker device as used in forensic applications.
 
-For USB drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__,
+For USB flash drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__,
 and it works well with and without encryption.
 
 It is especially advisable to enable write protection before attaching an
@@ -385,10 +385,10 @@ of the Tails operating system.
 Please review our :doc:`setup guide <provisioning_usb>`
 for additional background on setting up *Export Devices*.
 
-We also recommend buying an additional USB drive for making regular backups of
+We also recommend buying an additional USB flash drive for making regular backups of
 your *SecureDrop Workstations*.
 
-One thing to consider is that you are going to have *a lot* of USB drives to
+One thing to consider is that you are going to have *a lot* of USB flash drives to
 keep track of, so you should consider how you will label or identify them and
 buy drives accordingly. Drives that are physically larger are often easier to
 label (e.g. with tape, printed sticker or a label from a labelmaker).

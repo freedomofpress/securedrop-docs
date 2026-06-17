@@ -10,7 +10,7 @@ instructions will vary depending on the manufacturer and model of your device.
 What you need
 ~~~~~~~~~~~~~
 
-  #. A clean USB drive to download the BIOS file
+  #. A clean USB flash drive to download the BIOS file
   #. An Internet-connected workstation, such as the *Admin Workstation*
   #. A UPS (uninterrupted power supply), such as a surge-protecting power supply with a backup battery (This is not required, but strongly recommended)
   #. A keyboard and monitor
@@ -20,10 +20,10 @@ Perform backups
 
 If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the *Application Server* <backup_and_restore>` before proceeding.
 
-Prepare the USB drive
-~~~~~~~~~~~~~~~~~~~~~~~
+Prepare the USB flash drive
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the Disks application, delete existing partitions on the USB drive, if applicable, and reformat the entire device with one FAT32 partition. Note that you will lose access to all existing data on this USB drive.
+Using the Disks application, delete existing partitions on the USB flash drive, if applicable, and reformat the entire device with one FAT32 partition. Note that you will lose access to all existing data on this USB flash drive.
 
 Download and verify appropriate BIOS files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,7 +47,7 @@ Intel provides an SHA1 checksum on the download page, while ASUS offers a SHA-25
 
 |gtkhash tails|
 
-Once you have verified the hash, copy the file to your USB device.
+Once you have verified the hash, copy the file to your USB flash drive.
 
 .. _`provides a detailed explanation of this process`: https://tails.net/contribute/build/reproducible/#index3h1
 
@@ -59,8 +59,8 @@ Once you have verified the hash, copy the file to your USB device.
 Update the BIOS
 ~~~~~~~~~~~~~~~
 
-Power off the *Monitor Server*. We recommend plugging it into an uninterrupted power supply (UPS). Plug in the keyboard, monitor, and USB key, and power on the server, then press F7 when prompted to enter the BIOS Update tool.
+Power off the *Monitor Server*. We recommend plugging it into an uninterrupted power supply (UPS). Plug in the keyboard, monitor, and USB flash drive, and power on the server, then press F7 when prompted to enter the BIOS Update tool.
 
-Select the USB device and navigate to the file you have downloaded, then hit **Enter**. The update will take several minutes--do not interrupt the update or unplug the server during this time.
+Select the USB flash drive and navigate to the file you have downloaded, then hit **Enter**. The update will take several minutes--do not interrupt the update or unplug the server during this time.
 
 Repeat these steps on the *Application Server*.

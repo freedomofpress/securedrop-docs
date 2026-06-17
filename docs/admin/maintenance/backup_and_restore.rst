@@ -93,7 +93,7 @@ archive in the output of the backup command.
 
 .. warning:: The backup file contains sensitive information! It should only
              be stored on the *Admin Workstation*, or on a
-             dedicated encrypted backup USB.
+             dedicated encrypted backup USB flash drive.
 .. include:: ../../includes/backup-warning.txt
 
 Restoring from a backup
@@ -174,7 +174,7 @@ Moving a SecureDrop instance to new hardware involves:
 
    .. note::
       You will be generating fresh SSH credentials for the servers, and any
-      other *Admin Workstation* USBs will have to be
+      other *Admin Workstation* USB flash drives will have to be
       :ref:`provisioned with updated credentials <repair_admin_usbs>`.
 
 #. Ensure your *Admin Workstation* is connected to a LAN port on your
@@ -234,18 +234,18 @@ Moving a SecureDrop instance to new hardware involves:
 Repair additional *Admin Workstations*
 ''''''''''''''''''''''''''''''''''''''
 
-If you have additional *Admin Workstation* USBs, they will no longer have
+If you have additional *Admin Workstation* USB flash drives, they will no longer have
 valid SSH credentials and will need to be repaired. In these steps, the "primary
 *Admin Workstation*" is the one which you used to complete the above migration
 process.
 
 #. Prepare a fresh
-   :doc:`LUKS-encrypted USB </admin/installation/provisioning_usb>`.
+   :doc:`LUKS-encrypted USB flash drive </admin/installation/provisioning_usb>`.
    You may record the passphrase in your primary *Admin Workstation*
    KeePassXC password manager.
 
 #. Copy the following files from your primary *Admin Workstation* onto the
-   LUKS-encrypted USB:
+   LUKS-encrypted USB flash drive:
 
    - ``~/.config/securedrop-admin/tor_v3_keys.json``
    - ``~/.config/securedrop-admin/mon-ssh.auth_private``
@@ -257,7 +257,7 @@ process.
       *Admin Workstation*, you may do so. In this case, copy only the first two
       files above to your additional *Admin Workstations*.
 
-      Generate per-machine SSH keys and use a clean LUKS-encrypted USB drive
+      Generate per-machine SSH keys and use a clean LUKS-encrypted USB flash drive
       to transfer the public portions of those keys to your primary
       *Admin Workstation*, where you will then add them to the servers'
       ``authorized_keys`` files, as described :ref:`here <ssh_add_pubkey>`.
@@ -266,7 +266,7 @@ process.
 #. Boot into each additional *Admin Workstation*. Set
    `an administration password`_
    and unlock the persistent volume on the Tails welcome screen.
-   Once logged in, attach the LUKS-encrypted USB
+   Once logged in, attach the LUKS-encrypted USB flash drive
    and unlock it.
 
 #. Ensure that this *Admin Workstation* is using an up-to-date version of Tails
@@ -297,7 +297,7 @@ process.
    and ``ssh mon uptime``.
 
 #. Once all *Admin Workstations* have been updated, securely wipe the files on
-   the LUKS-encrypted USB, by right-clicking them in the file manager and selecting
+   the LUKS-encrypted USB flash drive, by right-clicking them in the file manager and selecting
    **Wipe**. Then, reformat the device using the
    **Disks** utility.
 

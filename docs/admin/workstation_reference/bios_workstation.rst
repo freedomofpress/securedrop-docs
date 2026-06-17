@@ -31,14 +31,14 @@ Once ``fwupd`` is installed, you can install available updates by running:
 Manual BIOS updates
 -------------------
 
-If your laptop is not supported by ``fwupd``, you will need to consult the manual for your specific make and model to determine how to manually apply a BIOS update. The process will likely include downloading an update file, verifying its integrity, copying it to a USB drive, and then accessing an update menu within the BIOS settings. If you have a Thinkpad, refer to the instructions for :ref:`thinkpad_bios`.
+If your laptop is not supported by ``fwupd``, you will need to consult the manual for your specific make and model to determine how to manually apply a BIOS update. The process will likely include downloading an update file, verifying its integrity, copying it to a USB flash drive, and then accessing an update menu within the BIOS settings. If you have a Thinkpad, refer to the instructions for :ref:`thinkpad_bios`.
 
 .. _thinkpad_bios:
 
 Manual BIOS on Lenovo ThinkPad laptops
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The instructions below assume the use of a Linux-based computer for the creation of a BIOS upgrade USB. To upgrade the BIOS:
+The instructions below assume the use of a Linux-based computer for the creation of a BIOS upgrade USB flash drive. To upgrade the BIOS:
 
 - Locate the ThinkPad's "machine type" in its BIOS setup program:
 
@@ -50,9 +50,9 @@ The instructions below assume the use of a Linux-based computer for the creation
 - Download the file called either **BIOS Update (Bootable CD)** or **BIOS Update (Utility & Bootable CD)**.
 
 .. note::
-  A Tails USB can be used for the verification and conversion process described below, but the Lenovo support site blocks requests over Tor, preventing the ISO download. To work around this, either:
+  A Tails drive can be used for the verification and conversion process described below, but the Lenovo support site blocks requests over Tor, preventing the ISO download. To work around this, either:
 
-  - download the BIOS ISO on a different computer and transfer it to Tails using a USB stick, or
+  - download the BIOS ISO on a different computer and transfer it to Tails using another USB flash drive, or
   - download the ISO in Tails using the Unsafe Browser as follows:
 
     - Start Tails with an administration password set and the Unsafe Browser enabled under "Additional Settings" on the Welcome Screen.
@@ -95,9 +95,9 @@ The instructions below assume the use of a Linux-based computer for the creation
 
       sudo dnf install geteltorito genisoimage
 
-- Plug in a USB and check its device name with the ``lsblk`` command - use the root device name below, not a partition (eg. ``/dev/sdc`` instead of ``/dev/sdc1``).
+- Plug in a USB flash drive and check its device name with the ``lsblk`` command - use the root device name below, not a partition (eg. ``/dev/sdc`` instead of ``/dev/sdc1``).
 
-- Write the BIOS update ISO to the USB using the following command:
+- Write the BIOS update ISO to the USB flash drive using the following command:
 
   .. code-block:: sh
 
@@ -109,10 +109,10 @@ The instructions below assume the use of a Linux-based computer for the creation
 
     The ``dd`` command will wipe data on the targeted device. Make sure that you use the correct device name.
 
-  Once complete, remove the USB.
+  Once complete, remove the USB flash drive.
 
-- Plug the USB into the ThinkPad.
+- Plug the USB flash drive into the ThinkPad.
 
 - Boot the ThinkPad and follow the prompts to enter its startup and boot menus, likely via the <Enter> and <F12> keys, respectively.
 
-- Follow the on-screen instructions to update the BIOS, including any mandatory reboots. Note that the instructions may refer to an update CD instead of your update USB.
+- Follow the on-screen instructions to update the BIOS, including any mandatory reboots. Note that the instructions may refer to an update CD instead of your update USB flash drive.

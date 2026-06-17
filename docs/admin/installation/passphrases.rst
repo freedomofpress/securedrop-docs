@@ -47,12 +47,12 @@ The *Journalist* will also need to have a two-factor authenticator, such as an A
 
 -  The secret code for the *Journalist*'s *Two-Factor Authentication*.
 
-*Export USB*
+*Export Device*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We recommend using encrypted USB drives for transferring files off of the *Journalist Workstation*.
+We recommend using encrypted USB flash drives for transferring files off of the *Journalist Workstation*.
 
-For every export operation, the user will need to enter the USB drive's encryption passphrase at least twice (on the computer they're copying from, and on the computer they're copying to). To make it easy for them to find the passphrase, we recommend storing it in the *Journalist*'s own existing password manager, which should be accessible using their smartphone.
+For every export operation, the user will need to enter the USB flash drive's encryption passphrase at least twice (on the computer they're copying from, and on the computer they're copying to). To make it easy for them to find the passphrase, we recommend storing it in the *Journalist*'s own existing password manager, which should be accessible using their smartphone.
 
 If your organization is not using a password manager already, please see
 the `Freedom of the Press Foundation guide <https://freedom.press/training/blog/choosing-password-manager/>`__

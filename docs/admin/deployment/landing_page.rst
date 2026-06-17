@@ -77,7 +77,7 @@ is to adhere to best practices.
 You can use a separate computer you've designated specifically to handle
 the submission process.
 Or, you can use an alternate operating system like Tails,
-which boots from a USB stick and erases your activity at the end of every session.
+which boots from a USB flash drive and erases your activity at the end of every session.
 
 A file contains valuable `metadata <https://ssd.eff.org/en/module/why-metadata-matters>`_ about its source — when it was created
 and downloaded, what machine was involved, the machine's owner, etc.
