@@ -166,8 +166,8 @@ In order to copy a *Journalist*'s login credentials:
 
 - Close the application window and shut down the ``vault`` VM (using the Qube widget in the upper right panel). At this time, you can also re-enable the network connection using the network manager widget.
 
-Manually importing from Tails USB drives
-------------------------------------------------------
+Manually importing from Tails drives
+------------------------------------
 
 Manually import *Submission Private Key*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

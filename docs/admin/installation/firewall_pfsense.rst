@@ -71,8 +71,7 @@ network firewall.
 Connect to the pfSense web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. If you have not already done so, boot the *Admin Workstation* into
-   Tails using its designated USB flash drive.
+#. If you have not already done so, boot the *Admin Workstation*.
 
 #. Connect the *Admin Workstation* to the LAN[1] interface. You should see
    a popup notification in Tails that says "Connection Established". If you click
