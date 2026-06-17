@@ -5,8 +5,8 @@ Each individual with a role (admin or *Journalist*) at a given SecureDrop instan
 
 Ideally, each admin and *Journalist* would only have to remember the passphrases to unlock the encrypted storage on their *Journalist Workstation* laptop.
 
-Admininistrator
----------------
+Administrator
+-------------
 
 The administrator will be using an *Admin Workstation* configured to connect to the *Application Server* and the *Monitor Server* using Tor and SSH. The tasks performed by the admin will require the following set of credentials and passphrases:
 
