@@ -254,7 +254,6 @@ interface**, scroll down, and click the **Save** button.
 Assign a static IP address to the *Admin Workstation*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 Now you will need to assign a static IP to the *Admin Workstation*.
 
 You can easily check your current IP address by *clicking* the top right of

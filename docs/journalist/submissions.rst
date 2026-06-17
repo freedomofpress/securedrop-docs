@@ -160,6 +160,7 @@ Safely working with submissions outside the *Journalist Workstation*
 
 Risks from malware
 ~~~~~~~~~~~~~~~~~~
+
 SecureDrop does not scan for or remove malware in submissions you receive. There
 are important steps you can take to protect yourself:
 

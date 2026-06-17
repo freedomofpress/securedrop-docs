@@ -48,7 +48,7 @@ The *Journalist* will also need to have a two-factor authenticator, such as an A
 -  The secret code for the *Journalist*'s *Two-Factor Authentication*.
 
 *Export Device*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 We recommend using encrypted USB flash drives for transferring files off of the *Journalist Workstation*.
 

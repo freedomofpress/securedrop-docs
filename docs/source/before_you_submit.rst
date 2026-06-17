@@ -83,6 +83,7 @@ making these decisions.
 
 Choose who to submit to
 -----------------------
+
 We recommend conducting all research related to your submission in Tor Browser.
 If you are unsure whether you are using Tor, you can visit the address
 https://check.torproject.org.

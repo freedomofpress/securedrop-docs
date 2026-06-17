@@ -154,6 +154,7 @@ our support or consent.
 
 14th-gen NUC
 ~~~~~~~~~~~~
+
 We have tested and can recommend the `ASUS NUC14RVH <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro/>`__.
 It provides both 22x80 and 22x42 M.2 ports for NVMe SSD storage, as well as a 2.5 inch drive bay for a SATA hard
 drive or SSD (if using this slot, we recommend choosing an SSD).
@@ -174,6 +175,7 @@ the picture. Cover the free ends with electrical tape after disconnecting them.
 
 13th-gen NUC
 ~~~~~~~~~~~~
+
 We have tested and can recommend the `ASUS NUC13ANHi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-13-pro/>`__.
 It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
 22x42 port for a SATA drive. It also has a 2.5 inch drive bay for a SATA hard
@@ -195,6 +197,7 @@ after disconnecting them.
 
 12th-gen NUC
 ~~~~~~~~~~~~
+
 We have tested and can recommend the `NUC12WSKi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/nuc-12-pro-mini-pc/techspec/>`__.
 It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
 22x42 port for a SATA drive.
@@ -213,6 +216,7 @@ after disconnecting them.
 
 11th-gen NUC
 ~~~~~~~~~~~~
+
 We have tested and can recommend the `Intel NUC11PAHi3 <https://www.asus.com/us/displays-desktops/nucs/nuc-kits/nuc-11-performance-kit/techspec/>`__.
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
@@ -344,6 +348,7 @@ to :doc:`configure an existing hardware firewall <network_firewall>`.
 
 Two-factor device
 ^^^^^^^^^^^^^^^^^
+
 *Two-Factor Authentication* is used when connecting to different parts of the
 SecureDrop system. Each admin and each *Journalist* needs a two-factor
 device. We currently support two options for *Two-Factor Authentication*:
@@ -358,6 +363,7 @@ device. We currently support two options for *Two-Factor Authentication*:
 
 USB flash drives
 ^^^^^^^^^^^^^^^^
+
 *Journalists* need physical media (known as the
 *Export Device*) to copy submissions to their everyday workstation.
 
@@ -396,6 +402,7 @@ label (e.g. with tape, printed sticker or a label from a labelmaker).
 
 Monitor, keyboard, mouse
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
 You will need these to do the initial installation of Ubuntu on the
 *Application* and *Monitor Servers*.
 

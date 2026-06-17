@@ -7,6 +7,7 @@ The ``securedrop-admin`` Utility
 
 Using ``securedrop-admin``
 --------------------------
+
 The ``securedrop-admin`` command-line utility is used
 to perform common server administration tasks, including:
 

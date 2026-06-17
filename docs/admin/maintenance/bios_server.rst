@@ -30,6 +30,7 @@ Download and verify appropriate BIOS files
 
 For Intel and ASUS NUC devices
 ``````````````````````````````
+
 Check the make and model of your servers, and follow the F7 BIOS update method in the documentation. The exact instructions vary by model:
 
 - `BIOS update instructions for Intel NUC with Intel Visual BIOS <https://www.intel.com/content/dam/support/us/en/documents/mini-pcs/Visual-BIOS-Update-NUC.pdf>`__

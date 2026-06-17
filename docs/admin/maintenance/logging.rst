@@ -1,5 +1,6 @@
 Investigating logs
 ==================
+
 When troubleshooting issues with your SecureDrop instance, be sure to examine
 all relevant log files on both servers. To work with logs, it is helpful to be
 familiar with commands like ``less``, ``tail`` and ``grep``; to inspect older,

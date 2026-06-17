@@ -120,6 +120,7 @@ updated base templates.
 
 Rename or delete redundant AppVMs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 By default, Qubes OS will create the AppVMs ``personal``, ``work``, ``untrusted``
 and ``vault`` as part of the installation process. Rename or delete any
 of these newly created AppVMs whose names conflict with the AppVMs you
@@ -131,6 +132,7 @@ Example: If you wish to restore the ``vault`` VM, rename or delete the existing
 
 Restore backup (SecureDrop Workstation components)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Plug in your backup medium and unlock it as during the backup. By default
 on a new system, your peripheral devices will be managed by a VM called
 ``sys-usb``.

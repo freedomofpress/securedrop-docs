@@ -3,6 +3,7 @@ Logging in via SSH
 
 SSH over tor
 ------------
+
 By default, SSH access to SecureDrop servers is routed through the Tor
 network, allowing you to access the servers
 from anywhere in the world where you have a stable internet connection and

@@ -59,6 +59,7 @@ the default location. When prompted for a passphrase, it's safe to leave it blan
 
 Step 2: (Optional) Boot the servers in single-user mode
 =======================================================
+
 If you do not have the original password for the shell admin account on the
 *Application* and *Monitor Servers*, you'll need to reset the password on each
 server by booting in single user mode. In order to do so, you'll need physical
@@ -74,6 +75,7 @@ by a space, and press **F10** to boot in single user mode.
 
 Reset the SecureDrop admin user's password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Once the root prompt appears, you'll need to reset the password for the
 SecureDrop admin user. By default this user is named `sdadmin` and has UID 1000.
 However it may have been named differently during the installation of your
@@ -98,6 +100,7 @@ password as for the *Monitor Server* - this is required in order for the
 
 Step 3: Set up *Admin Workstation* access
 =========================================
+
 Next, you'll configure the servers to allow temporary SSH access from the new *Admin
 Workstation*.
 
@@ -295,6 +298,7 @@ can obtain via the command:
 
 Retrieve OSSEC alert configuration details
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 You'll also need to retrieve the following configuration information:
 
  - SMTP server
@@ -321,6 +325,7 @@ In this example, ``smtp.gmail.com`` is the SMTP server, ``587`` is the SMTP port
 
 (Optional) Retrieve HTTPS certificate files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If your *Source Interface* was configured to use HTTPS, you will need to copy
 three related files from the *Application Server* to the *Admin Workstation*.
 

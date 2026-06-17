@@ -50,6 +50,7 @@ As a SecureDrop administrator, it is your responsibility to:
 
 Responsibilities of the SecureDrop team
 ---------------------------------------
+
 The SecureDrop team employed by Freedom of the Press Foundation (FPF) and the
 SecureDrop community maintain and develop the SecureDrop software, which
 is offered as open source software, free of charge, and at your own risk.
@@ -123,7 +124,6 @@ Keeping the system updated
 
 The admin is responsible for ensuring that updates are applied to SecureDrop. Where possible, updates are applied automatically, but some update operations require manual intervention.
 
-
 Updates: servers
 ^^^^^^^^^^^^^^^^
 
@@ -175,6 +175,7 @@ SecureDrop uses OSSEC to monitor the servers for unusual activity caused by syst
 
 Monitoring SecureDrop-related communications
 --------------------------------------------
+
 Release announcements and security advisories are posted to the `SecureDrop blog <https://securedrop.org/news>`__, which is also available as an `RSS feed <https://securedrop.org/news/feed/>`__. You can also follow us on our social media accounts (`Twitter <https://twitter.com/securedrop>`__ and `Mastodon <https://securedrop.org/news/feed/>`__).
 
 We strongly recommend :doc:`joining the SecureDrop support portal </introduction/getting_support>`. As a member of the support portal, you will receive email notifications related to all major announcements, and you can open tickets in case of technical issues. Membership is free of charge.

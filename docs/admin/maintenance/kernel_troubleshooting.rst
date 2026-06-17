@@ -1,5 +1,6 @@
 Troubleshooting kernel updates
 ==============================
+
 Kernel updates address known bugs and security vulnerabilities in the Linux
 kernel. They may be installed automatically on your *Application* and *Monitor
 Servers* as part of a SecureDrop release. All kernel updates are tested extensively
@@ -196,6 +197,7 @@ resolve compatibility issues.
 
 Test and enable an updated kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If you have changed your default kernel, we urge you to test an updated kernel
 as soon as it becomes available in a future SecureDrop release. Note that an
 update may be enforced as part of a release to protect the security of your

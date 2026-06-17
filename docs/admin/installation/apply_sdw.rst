@@ -35,6 +35,7 @@ Once the update check is complete, the SecureDrop Client will launch. Log in usi
 
 Enable password copy and paste
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If you use KeePassXC in the ``vault`` VM to manage login credentials, you can enable the user to copy passwords to SecureDrop Inbox using inter-VM copy and paste. While this is relatively safe, we recommend reviewing the section :doc:`Managing Clipboard Access </admin/workstation_reference/managing_clipboard>` of this guide, which goes into further detail on the security considerations for inter-VM copy and paste.
 
 The password manager runs in the networkless ``vault`` VM, and the SecureDrop Inbox application runs in the ``sd-app`` VM. To permit this one-directional clipboard use, issue the following command in ``dom0``:
@@ -79,6 +80,7 @@ This is a transient error that may affect any of the SecureDrop Workstation VMs.
 
 "Temporary failure resolving"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Transient network issues may cause an installation to fail. To work around this, verify that you have a working Internet connection, and re-run the ``sdw-admin --apply`` command.
 
 .. |qubes_menu| image:: ../../images/qubes_menu.png

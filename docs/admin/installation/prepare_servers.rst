@@ -6,6 +6,7 @@ Pre-install steps
 
 Upgrade the server BIOS
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Before beginning the installation process, you should upgrade your servers' BIOS
 to the most recent stable version available. This process will differ for each
 server make/model - if you are using one of the recommended NUC models, you can
@@ -13,6 +14,7 @@ find instructions in :doc:`../maintenance/bios_server`.
 
 Update BIOS settings
 ~~~~~~~~~~~~~~~~~~~~
+
 Once the BIOS has been updated, you should boot into it again to disable any unused
 hardware, including:
 
@@ -130,6 +132,7 @@ following output in your terminal. ::
 
 Create the Ubuntu installation media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The `Ubuntu website <https://ubuntu.com/>`__ has detailed instructions on how to
 to create a bootable Ubuntu Server USB flash drive.
 
@@ -286,6 +289,7 @@ Select **Done** and press **Enter** to proceed.
 
 Decline upgrade to Ubuntu Pro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The SecureDrop servers should not be registered with Ubuntu Advantage.  On the
 **Upgrade to Ubuntu Pro** screen, make sure **Skip for now** is selected, then
 choose **Continue**.
@@ -302,6 +306,7 @@ to proceed.
 
 Finish the installation
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 On the **Featured server snaps** screen, ensure that no snaps are selected and
 choose **Done** to start the server installation process.
 

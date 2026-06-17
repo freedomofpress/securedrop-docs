@@ -72,6 +72,7 @@ Other log files that may contain useful information:
 
 Not receiving emails
 ~~~~~~~~~~~~~~~~~~~~
+
 Some mail servers require that the sending email address match the account
 that authenticated to send mail. By default the *Monitor Server* will use
 ``ossec@ossec.server`` for the from line, but your mail provider may not support
@@ -84,6 +85,7 @@ then run the playbook again.
 
 Message failed to encrypt
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If OSSEC cannot encrypt the alert to the *OSSEC Alert Public Key* for the Admin
 email address (configured as ``ossec_alert_email`` in ``~/.config/securedrop-admin/site-specific``),
 the system will send a static message instead of the scheduled alert:

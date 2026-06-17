@@ -65,6 +65,7 @@ next step.
 
 Step 2: Troubleshooting login issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Issues logging in may not be network-related. If you are experiencing
 connectivity issues before or after logging in, you can skip ahead to the next section.
 
@@ -92,6 +93,7 @@ in, proceed to the next step.
 
 Step 3: Verify that all required VMs are running
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The following VMs must be running for all actions requiring network connectivity
 to work (e.g., logging in, checking for messages, downloading documents, replying
 to sources, starring sources, deleting sources):
@@ -129,6 +131,7 @@ If all required VMs are running, proceed to the next step.
 
 Step 4: Verify that required VMs have connectivity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 In step 1, you have already verified that you can connect to the
 Internet using ``sys-net``. Now, test whether ``sys-firewall`` and ``sd-proxy`` are working.
 
@@ -149,6 +152,7 @@ If the output does not include the text "Congratulations", proceed to the next s
 
 Step 5: Restart ``sd-proxy``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Restart ``sd-proxy`` to attempt to restore connectivity:
 
 1. Exit SecureDrop Inbox if it is running.
@@ -181,6 +185,7 @@ If this does not resolve the issue, please contact us for assistance.
 
 Examining logs
 ~~~~~~~~~~~~~~
+
 You may wish to examine system logs on your own, or with our guidance. You can
 examine consolidated syslogs from all SecureDrop-related VMs in the ``sd-log``
 VM. They can be found in the default user's ``~/QubesIncomingLogs`` directory.

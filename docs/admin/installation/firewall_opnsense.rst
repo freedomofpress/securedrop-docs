@@ -229,6 +229,7 @@ the Unsafe Browser and visit a host that you expect to be up (e.g. ``google.com`
 
 Update OPNSense to the latest version
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 You should update OPNSense to the latest version available before proceeding
 with the rest of the configuration. Navigate to **Lobby ▸ Dashboard** and click
 **Click to check for updates** to start the process, and follow any on-screen instructions
@@ -418,12 +419,14 @@ Finally, click **Save**.
 
 Configure the LAN, WAN, OPT1, and OPT2 interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 OPT1 and OPT2 need to be configured to use the subnets defined for the *Application*
 and *Monitor Servers*, and some additional configuration is required for the LAN
 and WAN interfaces, that is not covered by the Setup Wizard.
 
 Configure the WAN interface
 '''''''''''''''''''''''''''''
+
 First, navigate to **Interfaces ▸ [WAN]**. In the **Basic configuration** section,
 check the checkbox labeled **Prevent interface removal**.
 
@@ -435,6 +438,7 @@ Scroll down and click  **Save**, then click **Apply changes** when prompted.
 
 Configure the LAN interface
 '''''''''''''''''''''''''''''
+
 Next, navigate to **Interfaces ▸ [LAN]**. In the **Basic configuration** section,
 check the checkbox labeled **Prevent interface removal**.
 
@@ -446,6 +450,7 @@ Scroll down and click **Save**, then click **Apply changes** when prompted.
 
 Configure the OPT1 interface
 '''''''''''''''''''''''''''''
+
 Next, navigate to **Interfaces ▸ [OPT1]**. In the **Basic configuration** section,
 check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
@@ -461,6 +466,7 @@ Click **Save**, then click **Apply changes** when prompted.
 
 Configure the OPT2 interface
 '''''''''''''''''''''''''''''
+
 Finally, navigate to **Interfaces ▸ [OPT2]**. In the **Basic configuration** section,
 check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
@@ -538,9 +544,9 @@ Configure firewall rules
 
 Next, configure firewall rules for each interface.
 
-
 Configure firewall rules on LAN
 '''''''''''''''''''''''''''''''
+
 First, navigate to **Firewall ▸ Rules ▸ LAN**.  The LAN interface should have one
 automatically-generated anti-lockout rule in place, in addition to two default-allow rules.
 The default-allow rules should be removed once the SecureDrop-specific rules below
@@ -591,6 +597,7 @@ Settings ▸ Advanced**. Scroll down to the **Miscellaneous** section and check 
 
 Configure firewall rules on OPT1
 ''''''''''''''''''''''''''''''''
+
 Next, navigate to **Firewall ▸ Rules ▸ OPT1**. There should be no rules defined
 on this interface. Add the rules below:
 
@@ -669,6 +676,7 @@ Once they match the screenshot below, click **Apply Changes**.
 
 Configure firewall rules on OPT2
 ''''''''''''''''''''''''''''''''
+
 Next, navigate to **Firewall ▸ Rules ▸ OPT2**. Similarly to OPT1, there should be no rules defined
 on this interface. Add the rules below until the rules in the Web GUI match those
 in the screenshot:

@@ -26,6 +26,7 @@ update issues.
 
 Step 1: Locate the updater log
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The preflight updater runs in the ``dom0`` domain. It
 writes its log to ``~/.securedrop_updater/logs/updater.log``.
 Log files are rotated hourly; if you have started the updater
@@ -56,6 +57,7 @@ In order to locate a previous log file in the same directory:
 
 Step 2: Identify the cause(s) of the error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If the updater has run to completion, you should see a result
 line in the log file that looks similar to the following:
 
@@ -78,12 +80,14 @@ of the individual steps that have failed, other than ``recommended_action``.
 
 Step 3: Resolve the issue(s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The resolution path will depend on which step(s) failed.
 Note that ``dom0`` and ``apply_dom0`` are separate steps.
 
 
 ``dom0`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
 1. Open a terminal in ``dom0`` via |qubes_menu| **▸ Gear Icon (left-hand side) ▸ Other Tools ▸ Xfce Terminal**.
 
 2. Perform an interactive ``dom0`` update by running the
@@ -259,6 +263,7 @@ key and remove the expired one:
 
 ``sd-*-template`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 1. Click the Qubes menu and open a terminal in the impacted
    template. For example, if ``sd-small-bookworm-template`` failed to
    update, select its entry in the Qubes menu and click
@@ -282,6 +287,7 @@ key and remove the expired one:
 
 ``fedora-42-xfce`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 1. Launch the Qubes GUI Updater from the top righthand
    tray icon. Ensure the ``fedora-42-xfce`` template is
    selected.
@@ -294,6 +300,7 @@ key and remove the expired one:
 
 ``apply_dom0`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 The ``apply_dom0`` step applies any necessary configuration
 changes to the SecureDrop Workstation. If this step fails,
 this may indicate a misconfiguration, or it could be a result
@@ -324,6 +331,7 @@ If this does not resolve the issue:
 
 Step 4: Restart the updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Click the SecureDrop Inbox desktop icon to restart the updater.
 If all issues have been resolved, the updater should run to
 completion and display a success message. If the issue

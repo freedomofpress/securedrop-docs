@@ -14,6 +14,7 @@ Admin Workstation
 
 Application Server
 ------------------
+
 The *Application Server* runs the SecureDrop server application. This server hosts both
 the website that *Sources* access (the *Source Interface*) and the website that
 *Journalists* access (the *Journalist Interface*). Both are published
@@ -29,6 +30,7 @@ Please see the detailed security recommendations for the choice, configuration a
 
 Journalist
 ----------
+
 The *Journalist* uses SecureDrop to communicate with and download documents
 submitted by the *Source*. Journalists do this by using the *SecureDrop
 Workstation*.
@@ -42,6 +44,7 @@ Instructions for using SecureDrop as a *Journalist* are available in our
 
 Journalist Alert Public Key
 ---------------------------
+
 The *Journalist Alert Public Key* is used for encrypting the daily alert
 that notifies *Journalists* via encrypted email about whether or not there has been
 submission activity in the past 24 hours. The *Journalist* uses an associated
@@ -100,12 +103,14 @@ Only v3 *Onion Services* are supported by SecureDrop.
 
 OSSEC Alert Public Key
 ----------------------
+
 The *OSSEC Alert Public Key* is the GPG key that OSSEC will encrypt alerts to.
 The associated private key is used by the admin to access encrypted OSSEC alerts
 from the *Monitor Server*.
 
 Source
 ------
+
 The *Source* is the person who submits documents to SecureDrop and may use
 SecureDrop to communicate with a *Journalist*. A *Source* will always
 access SecureDrop through the *Source Interface* and must do so using Tor.
@@ -117,6 +122,7 @@ Instructions for using SecureDrop as a *Source* are available in our
 
 Source Interface
 ----------------
+
 The *Source Interface* is the website that sources will access to
 submit documents and communicate with *Journalists*. This site is
 hosted on the *Application Server* and can only be accessed through Tor.
@@ -128,6 +134,7 @@ Instructions for using the *Source Interface* are available in our :doc:`Source 
 
 Submission Key
 --------------
+
 The *Submission Key* is the GPG keypair used to encrypt and decrypt documents
 and messages sent to your SecureDrop. Because the public key and private key
 must be treated very differently, we sometimes refer to them explicitly as the
@@ -143,6 +150,7 @@ and on offline backup storage.
 
 Two-Factor Authentication
 -------------------------
+
 There are several places in the SecureDrop architecture where two-factor
 authentication is used to protect access to sensitive information or
 systems. These instances use the standard TOTP and/or HOTP algorithms,
