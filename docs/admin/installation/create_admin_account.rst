@@ -47,7 +47,7 @@ output like this:
 .. highlight:: none
 .. code::
 
-    This journalist's passphrase is: delivery propose requisite stunner dragonfly unstamped stowaway
+    This *Journalist*'s passphrase is: delivery propose requisite stunner dragonfly unstamped stowaway
 
 Passphrases include the spaces between the words, but not leading or trailing
 whitespace. Be sure to save this passphrase in the appropriate KeePassXC database.

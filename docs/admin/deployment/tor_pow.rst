@@ -35,7 +35,7 @@ To enable it on an existing SecureDrop instance, on the *Admin VM*:
 
 The prompts will include::
 
-    Enable Tor's proof-of-work defense against denial-of-service attacks for the Source Interface?: yes
+    Enable Tor's proof-of-work defense against denial-of-service attacks for the *Source Interface*?: yes
 
 Type <Enter> to accept the new default ``yes`` value.  When you finish the
 prompts, rerun the installation script::
@@ -54,4 +54,4 @@ Disabling the proof-of-work-defense
 Follow the instructions above for :ref:`enabling the proof-of-work defense
 <enable_tor_pow>`, but answer ``no`` at the prompt::
 
-    Enable Tor's proof-of-work defense against denial-of-service attacks for the Source Interface?: no
+    Enable Tor's proof-of-work defense against denial-of-service attacks for the *Source Interface*?: no

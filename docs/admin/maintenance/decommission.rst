@@ -26,10 +26,10 @@ extreme circumstances, temporarily take it down. If you decide to take down
 your SecureDrop instance, we recommend the following steps:
 
 1. Consult with *Journalists* using the system, to ensure that any active
-   sources are aware of the situation, and that source conversations can
+   *Sources* are aware of the situation, and that source conversations can
    either be paused or continued via other means.
 2. Update your SecureDrop *Landing Page* (typically a “send us tips” page,
-   or a page linked from there) to let prospective sources know that the
+   or a page linked from there) to let prospective *Sources* know that the
    outage is coming, and optionally to redirect them to other contact
    methods, such as a shared Signal tipline.
 3. :doc:`Back up your servers <../maintenance/backup_and_restore>`.
@@ -115,7 +115,7 @@ SecureDrop instance.
    data.
 
    .. caution:: Be **very** sure you are reformatting the right drive.
-      You may want to use the Secure Viewing Station laptop for this procedure
+      You may want to use the *Secure Viewing Station* laptop for this procedure
       to reduce the risk of accidentally erasing a drive on your regular-use
       machine.
 

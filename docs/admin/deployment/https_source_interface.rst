@@ -61,7 +61,7 @@ involves:
 2. Submitting the CSR to DigiCert. (This CSR demonstrates control over the private key used for HTTPS.)
 3. Scheduling a phone call and verifying your relationship to the organization.
 4. Generating another CSR, using a custom tool, leveraging the *Onion Service* private key.
-5. Submitting the second CSR to DigiCert. (This CSR demonstrates control over the private key for the onion service.)
+5. Submitting the second CSR to DigiCert. (This CSR demonstrates control over the private key for the *Onion Service*.)
 6. Downloading the certificate from the DigiCert panel.
 7. Installing the cert on the SecureDrop *Application Server*, via ``securedrop-admin``.
 

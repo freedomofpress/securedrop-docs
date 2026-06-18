@@ -89,7 +89,7 @@ recipients and anyone else interested
 - Account security fundamentals
 
    - Passphrases and Password Managers
-   - Two-factor authentication (2FA)
+   - *Two-Factor Authentication* (2FA)
 - Phishing prevention
 - Web browser security
 - IP address privacy, VPNs and Tor

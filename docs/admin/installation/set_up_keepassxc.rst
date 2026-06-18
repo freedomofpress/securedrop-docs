@@ -61,8 +61,8 @@ the template are:
 
 **Journalist**:
 
-- Auth Value: Journalist Interface
-- Onion URL: Journalist Interface
+- Auth Value: *Journalist Interface*
+- Onion URL: *Journalist Interface*
 - Personal GPG Key
 - SecureDrop Login Credentials
 

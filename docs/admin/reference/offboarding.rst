@@ -134,7 +134,7 @@ Rotate the *Submission Key*
 .. TODO Update instructions for Qubes
 
 The *Submission Private Key* is held on the airgapped *Secure Viewing Station*,
-and is not normally accessed by SecureDrop users anywhere but on the *SVS*.
+and is not normally accessed by SecureDrop users anywhere but on the *Secure Viewing Station*.
 Therefore, we recommend rotating the *Submission Key* under the following
 circumstances:
 

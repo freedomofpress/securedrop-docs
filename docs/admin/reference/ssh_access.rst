@@ -121,7 +121,7 @@ Adding users (CLI)
 ^^^^^^^^^^^^^^^^^^
 
 After the provisioning of the first admin account, we recommend
-using the Admin Interface web application for adding additional journalist
+using the *Admin Interface* web application for adding additional journalist
 and admin accounts.
 
 However, you can also add users via ``./manage.py`` in ``/var/www/securedrop/``

@@ -100,10 +100,10 @@ continuing:
    can add more later)
 -  the username of the system admin
 
-If configuring Daily Journalist Alert emails (this is optional and can be configured later), you will also need:
+If configuring daily journalist alert emails (this is optional and can be configured later), you will also need:
 -  the *Journalist Alert Public Key*
 -  the *Journalist Alert Public Key*  fingerprint
--  the email address that will receive the journalist alerts
+-  the email address that will receive the daily journalist alerts
 
 Localization of the *Source Interface* and *Journalist Interface*
 -----------------------------------------------------------------
@@ -118,7 +118,7 @@ list of supported languages to display using the codes shown in
 parentheses.
 
 .. note:: With a *Source Interface* displayed in French (for example), *Sources*
-          submitting documents are likely to expect a journalist fluent in
+          submitting documents are likely to expect a *Journalist* fluent in
           French to be available to read the documents and follow up in that
           language.
 

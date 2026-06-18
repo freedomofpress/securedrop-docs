@@ -1,5 +1,5 @@
-The admin interface
-===================
+The *Admin Interface*
+=====================
 
 The *Admin Interface* is an extended version of the *Journalist Interface*, that
 allows you to manage users and configure the appearance and behaviour of your
@@ -10,7 +10,7 @@ Logging in
 
 To log in to the *Admin Interface*, start the *Admin Workstation*
 with persistence enabled. Open the *SecureDrop Menu* and select the
-"Launch Journalist Interface" option. Tor Browser will start and load the login
+**Launch Journalist Interface** option. Tor Browser will start and load the login
 page for the *Journalist Interface*. Use your username, passphrase, and
 *Two-Factor Authentication* token to log in.
 
@@ -273,7 +273,7 @@ to protect their codename and keep it secret. To remove this restriction, unchec
 checkbox and click **Update Submission Preferences**.
 
 .. |Reset Passphrase| image:: ../../images/manual/screenshots/journalist-edit_account_user.png
-   :alt: The account editing form allows admins to change name, reset passphrase, and reset two-factor authentication.
+   :alt: The account editing form allows admins to change name, reset passphrase, and reset *Two-Factor Authentication*.
 .. |Test Alert| image:: ../../images/manual/screenshots/journalist-admin_ossec_alert_button.png
    :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
 .. |SecureDrop main page| image:: ../../images/manual/screenshots/journalist-admin_index_no_documents.png

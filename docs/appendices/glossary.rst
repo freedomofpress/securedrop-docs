@@ -24,7 +24,7 @@ may only connect to this server using Tor.
 Export Device
 -------------
 
-The *Export Device* is the physical media (e.g., designated USB flash drive) used to transfer decrypted documents from the Secure Viewing Station to a journalist's everyday workstation, or to another computer for additional processing.
+The *Export Device* is the physical media (e.g., designated USB flash drive) used to transfer decrypted documents from the *Secure Viewing Station* to a *Journalist*'s everyday workstation, or to another computer for additional processing.
 
 Please see the detailed security recommendations for the choice, configuration and use of your *Export Device* in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/installation/provisioning_usb>`.
 
@@ -32,7 +32,7 @@ Journalist
 ----------
 
 The *Journalist* uses SecureDrop to communicate with and download documents
-submitted by the *Source*. Journalists do this by using the *SecureDrop
+submitted by the *Source*. *Journalists* do this by using the *SecureDrop
 Workstation*.
 
 If a *Journalist* chooses to release any of these documents,
@@ -123,7 +123,7 @@ Instructions for using SecureDrop as a *Source* are available in our
 Source Interface
 ----------------
 
-The *Source Interface* is the website that sources will access to
+The *Source Interface* is the website that *Sources* will access to
 submit documents and communicate with *Journalists*. This site is
 hosted on the *Application Server* and can only be accessed through Tor.
 

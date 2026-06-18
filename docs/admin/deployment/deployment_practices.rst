@@ -12,7 +12,7 @@ The deployment section here covers a variety of tasks an administrator might
 need to perform to successfully deploy SecureDrop, depending on organizational
 needs and requirements.
 
-Certain topics, such as creating a landing page and onboarding *Journalists*, are
+Certain topics, such as creating a *Landing Page* and onboarding *Journalists*, are
 universal to all SecureDrop instances. Other topics are optional, and are only
 needed if they fit in with the organization's security policies and newsroom
 workflows.

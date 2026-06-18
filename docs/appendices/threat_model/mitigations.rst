@@ -190,8 +190,8 @@ Attacks on network infrastructure
 -  apt server man-in-the-middle used to serve old or malicious packages
 -  SecureDrop apt servers are compromised, or apt server man-in-the middle attack injects malicious packages
 -  News Organization network is compromised
--  OSSEC and/or journalist alert SMTP account credentials compromised
--  OSSEC and/or journalist alert private key compromised
+-  OSSEC and/or daily journalist alert SMTP account credentials compromised
+-  OSSEC and/or daily journalist alert private key compromised
 -  SMTP relay compromised
 -  Admin's network is monitored
 
@@ -223,14 +223,14 @@ Attacks on user behavior or hardware
 -  SecureDrop installer misconfigures server/firewall hardware
 -  *Source* uses tor2web or employer/corporate device
 -  *Source* shares that they are using SecureDrop/leaking documents
--  *Journalist*/administrator gets phished from a submission or otherwise breaks the SVS airgap with malware
+-  *Journalist*/administrator gets phished from a submission or otherwise breaks the *Secure Viewing Station* airgap with malware
 
 Countermeasures in user behavior recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  :doc:`Source Guide </source/source>` gives instructions on best practices for the entire submission workflow
 -  *Source Interface* banner suggests that user disables JS (high security settings in Tor Browser)
 -  :doc:`Journalist Guide </journalist/journalist>` informs users of malware risks, the importance of strict compartmentalization of SecureDrop-related activities
--  :doc:`SecureDrop Deployment Guide </admin/deployment/deployment_practices>` gives best practices for proper administration of the SecureDrop system, and its public-facing properties like the Landing Page
+-  :doc:`SecureDrop Deployment Guide </admin/deployment/deployment_practices>` gives best practices for proper administration of the SecureDrop system, and its public-facing properties like the *Landing Page*
 -  :doc:`Admin Guide </admin/installation/intro_for_admins>` gives instructions for long-term maintenance of the technical properties of the SecureDrop system, as well as operations to support *Journalists*
 -  All adminsitrator tasks are completed over Tor/Tor authenticated *Onion Services* after installation
 -  Any journalist/admin password/2FA credentials resets can only be done by an administrator with password-protected SSH capability or authenticated *Onion Service* credentials.

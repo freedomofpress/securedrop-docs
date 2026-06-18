@@ -17,7 +17,7 @@ your organization.
 .. note:: SecureDrop will bring more attention to your organization from
           security researchers and others. A *Landing Page* that fails to
           implement minimum security requirements is sure to be noticed, and
-          could undermine trust, discouraging possible Sources.
+          could undermine trust, discouraging possible *Sources*.
 
 *Landing Page* content suggestions
 ----------------------------------
@@ -105,7 +105,7 @@ The SecureDrop directory
 
 SecureDrop `maintains a directory of instances that meet our strict guidelines.
 <https://securedrop.org/directory/>`__ If you would like to be considered for
-inclusion in this directory, make sure your landing page features the necessary
+inclusion in this directory, make sure your *Landing Page* features the necessary
 items from the sample above, and is in compliance with the technical
 requirements below, then `send us a request using this form.
 <https://securedrop.org/directory/submit/>`__
@@ -416,7 +416,7 @@ monitoring system for your site, OSSEC is a free and open source host-based intr
 that includes a file integrity monitor. More information can be found
 `here. <https://www.ossec.net/>`__
 
-.. note:: We do not recommmend using the *Monitor Server* to monitor your landing page. It should be used
+.. note:: We do not recommmend using the *Monitor Server* to monitor your *Landing Page*. It should be used
   for the *Application Server* only.
 
 Don't log access to the *Landing Page* in the webserver

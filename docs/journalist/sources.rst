@@ -90,10 +90,10 @@ You will be presented with a pop-up where you will be asked to confirm if you wo
 Click **Delete Conversation** to delete all files and messages (including journalist
 replies) associated with this source, while keeping the source account active.
 The source will continue to appear in the source list, and will be able to
-communicate with you through the Source Interface.
+communicate with you through the *Source Interface*.
 
 Click **Delete Account** to also remove the source from the source list,
-and to prevent them from logging into the Source Interface. Their account will
+and to prevent them from logging into the *Source Interface*. Their account will
 be completely removed from the system.
 
 .. |screenshot_sdapp_main_view| image:: ../images/screenshot_sdapp_main_view.png

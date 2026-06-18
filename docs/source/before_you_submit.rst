@@ -45,7 +45,7 @@ Use Tor Browser
 
 Each SecureDrop may **only** be reached through the Tor Browser.
 SecureDrop pages are only available as *Onion Services*—encrypted web pages
-that end in ".onion," and only the Tor browser is able to open these pages.
+that end in ".onion," and only the Tor Browser is able to open these pages.
 
 Tor is an anonymizing network that makes it difficult for anybody observing the
 network to associate a user's identity (e.g., the computer's IP address) with
