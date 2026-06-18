@@ -2,7 +2,7 @@ Provisioning USB *Export Devices*
 =================================
 
 The *Journalist Workstation* supports the export of submissions from the SecureDrop Inbox
-to a LUKS- or VeraCrypt-encrypted USB *Export Device*.
+to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an *Export Device*.
 
 Creating a LUKS-encrypted drive
 -------------------------------
@@ -11,12 +11,11 @@ Creating a LUKS-encrypted drive
   systems such as Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
 
 In order to provision a LUKS-encrypted *Export Device* for use a *Journalist Workstation*,
-you will need a fresh USB flash drive and a Linux-based system. Tails is recommended -
-if available, the *Secure Viewing Station* can be used, adding the extra benefit
-of its airgap:
+you will need a fresh USB flash drive and a SecureDrop Workstation.
 
-- First, boot into the *Secure Viewing Station*, without unlocking its
-  persistent volume or setting an admin password.
+.. TODO update these instructions for provisioning Export Devices on Qubes
+
+- First, boot the SecureDrop Workstation.
 - Next, open the Disks utility: **Applications ▸ Utilities ▸ Disks**.
 - Connect the fresh USB flash drive and select it in the list in the left-hand panel.
 

@@ -3,8 +3,8 @@ HTTPS on the *Source Interface*
 
 .. TODO update this page for Qubes
 
-The SecureDrop *Source Interface* is served as an *Onion Service* with an ``.onion``
-address, requiring Tor Browser to access it. While *Onion Services* provide
+The SecureDrop *Source Interface* is served as an *Onion Service* with an onion
+address ending in ".onion", requiring Tor Browser to access it. While *Onion Services* provide
 end-to-end encryption by default, as well as strong anonymity, there are
 several reasons why you might want to consider deploying an additional layer of
 encryption and authentication via HTTPS:

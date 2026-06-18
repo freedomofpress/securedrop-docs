@@ -4,7 +4,7 @@ Installation overview
 Migrating from a Tails-based SecureDrop
 ---------------------------------------
 
-If you are migrating from an older Tails-based SecureDrop, using the separate *Secure Viewing Station*, *Journalist Workstation* and *Admin Workstation* USB flash drives, then skip to the :ref:`Migration Overview<migration_overview>`.
+If you are migrating from an older SecureDrop, using the separate Tails-based Secure Viewing Station, journalist workstation* and admin workstation USB flash drives, then skip to the :ref:`Migration Overview<migration_overview>`.
 
 Setting expectations
 --------------------

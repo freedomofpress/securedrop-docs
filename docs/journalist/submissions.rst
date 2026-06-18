@@ -141,7 +141,7 @@ To access the *Export Device* on your everyday workstation, follow these steps:
    the contents of interest to your everyday workstation.
 
 As a security precaution, we recommend deleting the files on the *Export
-Device* after each copy operation. If you are using write protection, you have to perform this step on the *Secure Viewing Station* to get the security benefits of write protection.
+Device* after each copy operation.
 
 When you are done, switch back to the *VeraCrypt* window, and click **Dismount**.
 
@@ -193,8 +193,7 @@ are important steps you can take to protect yourself:
 
    QR codes can contain malicious links that your device will automatically
    visit. This can alert third-parties to your actions, reveal the identities
-   of your *Sources*, and breach the air gap that is in place with the
-   *Secure Viewing Station*. 
+   of your *Sources*, and breach the isolation benefits of using Qubes.
 
    In general, be careful when opening any links provided in a SecureDrop
    submission. If you are unsure if a link is safe to click, you should

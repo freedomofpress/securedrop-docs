@@ -47,7 +47,7 @@ Install tasks:
 Import KeePassXC database
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have a KeePassXC database on your Tails-based *Admin Workstation*, you should copy it to the ``vault`` VM on the new Qubes-based *Admin-Workstation*.
+If you have a KeePassXC database on your Tails-based Admin Workstation USB flash drive, you should copy it to the ``vault`` VM on the new Qubes-based *Admin-Workstation*.
 
 Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` VM.  
 
@@ -59,7 +59,7 @@ Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault``
 Configure SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that your new Qubes-based *Admin-Workstation* is prepared, you can proceed with importing the correct *Journalist Interface* details and *Submission Private Key* from your Tails-based Secure Viewing Station and *Journalist Workstation* USB flash drives.
+Now that your new Qubes-based *Admin-Workstation* is prepared, you can proceed with importing the correct SecureDrop server details and *Submission Private Key* from your Tails-based Journalist Workstation and Secure Viewing Station USB flash drives.
 
 Import *Submission Private Key*
 -------------------------------
@@ -78,7 +78,7 @@ To protect this key and preserve the air gap, you will need to connect the Secur
 
   |Attach TailsData|
 
-- In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the SVS persistent volume passphrase to unlock and mount it. When asked if you would like to forget the password immediately or remember it until you logout, choose the option to **Forget password immediately**.
+- In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the Secure Viewing Station persistent volume passphrase to unlock and mount it. When asked if you would like to forget the password immediately or remember it until you logout, choose the option to **Forget password immediately**.
 
   .. note::
 
@@ -144,11 +144,11 @@ In order to set up KeePassXC for easy use:
 
 .. important::
 
-   The password database from the Tails-based *Admin Workstation* contains sensitive credentials not required by *Journalists*. Make sure to copy the credentials from the Tails-based *Journalist Workstation* USB flash drive.
+   The password database from the Tails-based Admin Workstation contains sensitive credentials not required by *Journalists*. Make sure to copy the credentials from the Tails-based Journalist Workstation USB flash drive.
 
 In order to copy a *Journalist*'s login credentials:
 
-- If a Tails-based *Journalist Workstation* USB flash drive is not currently attached, connect it, attach it to the ``vault`` VM, open it in the file manager, and enter its encryption passphrase.
+- If a Tails-based Journalist Workstation USB flash drive is not currently attached, connect it, attach it to the ``vault`` VM, open it in the file manager, and enter its encryption passphrase.
 
 - Locate the password database. It should be in the ``Persistent`` directory, and will typically be named ``keepassx.kdbx`` or similar.
 
@@ -197,7 +197,7 @@ If importing the *Submission Private Key*  using ``sdw-admin --configure`` fails
 
     head -n 1 /tmp/sd-journalist.sec
 
-- Unmount the SVS USB 
+- Unmount the Secure Viewing Station USB flash drive.
 
 - Run the following command in the ``dom0`` terminal:
 
