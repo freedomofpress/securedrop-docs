@@ -30,7 +30,7 @@ running a command on the *Application Server*. After that, the admin can create 
 .. _Create Admin CLI:
 
 To create an admin account via the command line,
-:doc:`SSH to the*Application Server* <../installation/test_the_installation>`,
+:doc:`SSH to the *Application Server* <../installation/test_the_installation>`,
 then:
 
 .. code:: sh
