@@ -1,7 +1,7 @@
 Logging in via SSH
 ==================
 
-SSH over tor
+SSH over Tor
 ------------
 
 By default, SSH access to SecureDrop servers is routed through the Tor
