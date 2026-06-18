@@ -160,7 +160,7 @@ For more about the security features of Qubes, see
 .. _`the Qubes OS documentation`: https://www.qubes-os.org/faq/#general--security
 
 How does the security of this system compare to using an air-gapped *Secure Viewing Station*?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The air-gapped *Secure Viewing Station* that is part of a SecureDrop setup offers strong
 protections against exfiltration of submissions or encryption keys by adversaries. It lacks

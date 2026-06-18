@@ -272,7 +272,7 @@ Sharing access
 --------------
 
 With other *Journalists* in your organization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 While SecureDrop supports having multiple journalist accounts for the document
 interface, all accounts will access the same inbox. To avoid confusion, we
 recommend news organizations assign 1-3 *Journalists* to regularly check

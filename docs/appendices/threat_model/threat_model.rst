@@ -148,7 +148,7 @@ Assumptions about the person installing SecureDrop
    organization, and for :doc:`installing SecureDrop </admin/installation/install>`.
 
 Assumptions about the *Source*'s computer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The computer correctly executes Tails or Tor Browser.
 -  The computer is not compromised by malware.
@@ -307,7 +307,7 @@ What a compromise of the workstations can surrender
    passphrase </admin/installation/passphrases>` for that key.
 
 What a compromise of the *Source*'s property can surrender
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use of `Tor Browser will leave
    traces <https://research.torproject.org/techreports/tbb-forensic-analysis-2013-06-28.pdf>`__
@@ -340,7 +340,7 @@ What a compromise of the *Source*'s property can surrender
       deleted.
 
 What a physical seizure of the *Source*'s property can surrender
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Document use of Tor or Tails, but not necessarily research into
    SecureDrop
@@ -454,7 +454,7 @@ What a physical seizure of the admin's property can achieve
    allow the attacker to access both servers and the *Journalist Interface*.
 
 What a compromise of the *Journalist*'s property can achieve
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  To access the *Journalist Interface*, the attacker needs to obtain the
    *Journalist*'s login credentials and the *Journalist*'s *Two-Factor
@@ -488,7 +488,7 @@ What a compromise of the *Journalist*'s property can achieve
       *Journalist* accounts.
 
 What a physical seizure of the *Journalist*'s property can achieve
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Tamper with the hardware.
 -  Prevent the *Journalist* from working on SecureDrop for some period of
@@ -643,7 +643,7 @@ What a physical seizure of the *Secure Viewing Station* can achieve
       is in use.
 
 What a local network attacker can achieve against the *Source*, admin, or *Journalist*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  A local network can observe when they are using Tor.
 -  A local network can block Tor and prevent them from accessing
@@ -654,7 +654,7 @@ What a local network attacker can achieve against the *Source*, admin, or *Journ
    difficult <https://blog.torproject.org/critique-website-traffic-fingerprinting-attacks>`__.
 
 What a global adversary can achieve against the *Source*, admin, or *Journalist*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  A global adversary capable of observing all Internet traffic may have
    more luck than the local network attacker in deducing use of
