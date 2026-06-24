@@ -190,8 +190,8 @@ Attacks on network infrastructure
 -  apt server man-in-the-middle used to serve old or malicious packages
 -  SecureDrop apt servers are compromised, or apt server man-in-the middle attack injects malicious packages
 -  News Organization network is compromised
--  OSSEC and/or daily journalist alert SMTP account credentials compromised
--  OSSEC and/or daily journalist alert private key compromised
+-  OSSEC and/or Daily Journalist Alert SMTP account credentials compromised
+-  OSSEC and/or Daily Journalist Alert private key compromised
 -  SMTP relay compromised
 -  Admin's network is monitored
 

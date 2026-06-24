@@ -100,10 +100,10 @@ continuing:
    can add more later)
 -  the username of the system admin
 
-If configuring daily journalist alert emails (this is optional and can be configured later), you will also need:
+If configuring Daily Journalist Alert emails (this is optional and can be configured later), you will also need:
 -  the *Journalist Alert Public Key*
 -  the *Journalist Alert Public Key*  fingerprint
--  the email address that will receive the daily journalist alerts
+-  the email address that will receive the Daily Journalist Alerts
 
 Localization of the *Source Interface* and *Journalist Interface*
 -----------------------------------------------------------------
