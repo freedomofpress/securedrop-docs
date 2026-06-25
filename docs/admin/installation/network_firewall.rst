@@ -1,4 +1,4 @@
-Set Up the Network Firewall
+Set up the network firewall
 ===========================
 
 Now that you've set up your password manager, you can move on to setting up
@@ -35,7 +35,6 @@ We currently recommend three firewalls in our :ref:`Hardware Guide <hardware_gui
   an OPNSense-based open-source hardware firewall  with 4 configurable
   network interfaces.
   
-  
 
 Configuration: pfSense
 ----------------------
@@ -47,7 +46,7 @@ Configuration: OPNSense
 If you are using an OPNSense-based firewall such as the recommended APu4D4, follow
 the instructions to :ref:`Configure an OPNSense firewall for use with SecureDrop <firewall_opnsense>`.
 
-Configuration: Other Firewalls
+Configuration: other firewalls
 ------------------------------
 
 If you are using a firewall based on an OS not listed above, you should still set it up

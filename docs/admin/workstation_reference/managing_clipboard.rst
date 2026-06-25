@@ -1,4 +1,4 @@
-Managing Clipboard Access
+Managing clipboard access
 =========================
 
 Every VM in Qubes has its own clipboard, similar to the clipboard of a Mac, Windows or Linux computer. For example, if you used the default ``work`` VM to browse the web and wanted to copy text from one browser window to another, you would use the ``Ctrl+C`` and ``Ctrl+V`` keyboard shortcuts to copy and paste. This type of clipboard usage -- copy and paste in the same VM -- also works in all VMs that are part of a SecureDrop Workstation.
@@ -8,20 +8,20 @@ In addition, Qubes supports copying information *between* VMs. This is done by u
 As an administrator, you should be aware of the following risks related to clipboard access before changing the default configuration:
 
 1. It is dangerous to copy untrusted, unsanitized content *into* a secure environment. What looks like plain text may contain character sequences that exploit security vulnerabilities in the target environment.
-2. The four-step process described above can be difficult to follow, and it is easy to make an operational mistake, such as pasting a password into a message to a source, or into a window belonging to a VM with network access.
+2. The four-step process described above can be difficult to follow, and it is easy to make an operational mistake, such as pasting a password into a message to a *Source*, or into a window belonging to a VM with network access.
 3. Like any other part of the operating system, the implementation of Qubes clipboard itself may contain undiscovered security vulnerabilities that an adversary could exploit in an attempt to exfiltrate information.
 
 With these considerations in mind, there are use cases where clipboard access may be an important part of your regular use of SecureDrop Workstation. For example:
 
-- You may want to copy passwords from a password manager to the SecureDrop App;
-- You may want to copy a message you received via SecureDrop into a secure messaging app like Signal, to share it with another journalist.
+- You may want to copy passwords from a password manager to log into SecureDrop Inbox;
+- You may want to copy a message you received via SecureDrop into a secure messaging app like Signal, to share it with another *Journalist*.
 
 To support these use cases, Qubes OS allows you to grant granular access to the ``sd-app`` clipboard (via the cross-VM clipboard) to selected VMs.
 
 Configuring clipboard access to ``sd-app``
 ------------------------------------------
 
-The process for permitting the one-directional copying of passwords from a password manager in ``vault`` to the SecureDrop Application is :ref:`outlined in the installation docs <Password Management Section>`. In general, clipboard access to SecureDrop Workstation VMs is governed by *tags* that can be applied in ``dom0`` to selected VMs:
+The process for permitting the one-directional copying of passwords from a password manager in ``vault`` to SecureDrop Inbox is :ref:`outlined in the installation docs <Password Management Section>`. In general, clipboard access to SecureDrop Workstation VMs is governed by *tags* that can be applied in ``dom0`` to selected VMs:
 
 - the tag ``sd-send-app-clipboard`` can be used to tag a VM that should be able to send its clipboard contents *to* ``sd-app`` via the cross-VM clipboard;
 - the tag ``sd-receive-app-clipboard`` can be used to tag a VM that should be able to receive its clipboard contents *from* ``sd-app`` via the cross-VM clipboard.
@@ -54,7 +54,7 @@ The syntax for revoking a tag is as follows:
 
 As before, confirm the operation via the ``ls`` subcommand.
 
-As an example, if you had a custom VM called ``work-signal`` that runs the Signal messenger, and you wanted to copy and paste messages from the SecureDrop Application *into* Signal (and potentially other applications in that VM) but not *out* of Signal into the SecureDrop App, you would issue the following commands:
+As an example, if you had a custom VM called ``work-signal`` that runs the Signal messenger, and you wanted to copy and paste messages from SecureDrop Inbox *into* Signal (and potentially other applications in that VM) but not *out* of Signal into SecureDrop Inbox, you would issue the following commands:
 
 .. code-block:: sh
 

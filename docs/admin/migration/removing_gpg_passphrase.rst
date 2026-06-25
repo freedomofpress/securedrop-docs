@@ -1,4 +1,4 @@
-Removing the Passphrase from a GPG Key
+Removing the passphrase from a GPG key
 ======================================
 
 GPG key files should not be passphrase-protected for use with SecureDrop Workstation.

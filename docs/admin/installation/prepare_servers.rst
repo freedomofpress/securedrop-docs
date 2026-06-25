@@ -1,18 +1,20 @@
-Prepare the Servers
+Prepare the servers
 ===================
 
-Pre-Install Steps
+Pre-install steps
 -----------------
 
-Upgrade the Server BIOS
+Upgrade the server BIOS
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Before beginning the installation process, you should upgrade your servers' BIOS
 to the most recent stable version available. This process will differ for each
 server make/model - if you are using one of the recommended NUC models, you can
 find instructions in :doc:`../maintenance/bios_server`.
 
-Update BIOS Settings
+Update BIOS settings
 ~~~~~~~~~~~~~~~~~~~~
+
 Once the BIOS has been updated, you should boot into it again to disable any unused
 hardware, including:
 
@@ -38,7 +40,7 @@ Install Ubuntu
 
 The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu 24.04.3 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first download and verify the Ubuntu installation media.
 
-Ubuntu Introduction
+Ubuntu introduction
 ~~~~~~~~~~~~~~~~~~~
 
 .. note:: Installing Ubuntu is simple and may even be something you are very familiar
@@ -51,7 +53,7 @@ download and verify the Ubuntu installation media.
 
 .. _download_ubuntu:
 
-Download the Ubuntu Installation Media
+Download the Ubuntu installation media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The installation media and the files required to verify it are available on the
@@ -73,7 +75,7 @@ Alternatively, you can use the command line:
 .. _SHA256SUMS: https://releases.ubuntu.com/24.04/SHA256SUMS
 .. _SHA256SUMS.gpg: https://releases.ubuntu.com/24.04/SHA256SUMS.gpg
 
-Verify the Ubuntu Installation Media
+Verify the Ubuntu installation media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You should verify the Ubuntu image you downloaded hasn't been modified by
@@ -128,10 +130,11 @@ following output in your terminal. ::
              installation. If this happens, please contact us at
              securedrop@freedom.press.
 
-Create the Ubuntu Installation Media
+Create the Ubuntu installation media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The `Ubuntu website <https://ubuntu.com/>`__ has detailed instructions on how to
-to create a bootable Ubuntu Server USB drive.
+to create a bootable Ubuntu Server USB flash drive.
 
 Follow the instructions at the link below for your operating system, then return
 to this page:
@@ -143,9 +146,9 @@ to this page:
 - `Create a bootable Ubuntu USB drive on Linux
   <https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview>`__
 
-With the Ubuntu Server install USB ready, you may now proceed to the installation.
+With the Ubuntu Server install USB flash drive ready, you may now proceed to the installation.
 
-Perform the Installation
+Perform the installation
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The steps below are the same for both the *Application Server* and the
@@ -171,7 +174,7 @@ After booting the Ubuntu image, select **Install Ubuntu Server**.
 Follow the steps to select your language, country and keyboard settings.
 Once that's done, let the installation process continue.
 
-Configure the Network
+Configure the network
 ~~~~~~~~~~~~~~~~~~~~~
 
 On the **Network connections** screen, the installer will ask you to configure
@@ -214,7 +217,7 @@ Select **Save** and press **Enter** to apply your settings. Then select **Done**
 The default values on the **Configure Proxy** and **Configure Ubuntu archive mirror**
 screens should not need to be changed. Select **Done** for both.
 
-Continue Without Updating the Installer
+Continue without updating the installer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 With the network connection now active, the installer may alert you that a
@@ -226,7 +229,7 @@ version.
 
 Select the **Continue without updating** option when prompted.
 
-Full Disk Encryption - pros and cons
+Full disk encryption - pros and cons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The use of `Full Disk Encryption (FDE)
@@ -236,7 +239,7 @@ devices that are powered down, SecureDrop's servers are designed to be always-on
 with the exception of a nightly reboot after automatic upgrades are applied.
 Given this update schedule, with FDE enabled, the servers would become unreachable
 once every 24 hours until an administrator entered the full-disk encryption
-passphrase via the console, and during that time, sources and journalists would
+passphrase via the console, and during that time, *Sources* and *Journalists* would
 be unable to access your instance.
 
 The increased responsibility for administrators, as well as the daily downtime
@@ -286,6 +289,7 @@ Select **Done** and press **Enter** to proceed.
 
 Decline upgrade to Ubuntu Pro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The SecureDrop servers should not be registered with Ubuntu Advantage.  On the
 **Upgrade to Ubuntu Pro** screen, make sure **Skip for now** is selected, then
 choose **Continue**.
@@ -300,8 +304,9 @@ for the administration account later in the installation process.
 Verify that **Allow password authentication over SSH** is selected, and choose **Done**
 to proceed.
 
-Finish the Installation
+Finish the installation
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 On the **Featured server snaps** screen, ensure that no snaps are selected and
 choose **Done** to start the server installation process.
 
@@ -309,7 +314,7 @@ Once the server installation is complete, choose **Reboot Now** to reboot the sy
 
 .. _nuc8_back_to_setup:
 
-Save the Configurations
+Save the configurations
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 When you are done, make sure you save the following information:

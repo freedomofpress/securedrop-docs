@@ -1,7 +1,7 @@
-Starting the SecureDrop App
+Starting SecureDrop Inbox
 ==============================
 
-After you log into Qubes, the SecureDrop Application will start automatically. If
+After you log into Qubes, SecureDrop Inbox will start automatically. If
 you have previously exited the application, you can double-click on the
 **SecureDrop** desktop shortcut to launch it.
 
@@ -15,7 +15,7 @@ you to automatically download and apply any available security updates:
 
 |screenshot_update_prompt|
 
-For security reasons, you will not be able to launch the SecureDrop Application until
+For security reasons, you will not be able to launch SecureDrop Inbox until
 updates have been applied. This typically takes between 10 and 30 minutes.
 
 Click "Start updates" if you are ready to start the process. (If you prefer to
@@ -29,16 +29,16 @@ You will see a progress indicator until updates are completed:
 
 At the end of this process, you may be prompted you to reboot
 if core system components were updated. Once all steps in the update process have
-been completed, the SecureDrop Application will launch automatically.
+been completed, SecureDrop Inbox will launch automatically.
 
 Signing in
 ----------
 
 To sign in, enter the username and passphrase provided to you by your
 SecureDrop administrator, as well as the two-factor code using the method you
-have set up. If you have used SecureDrop before, these
-are the same credentials that you would use to log in to the Journalist
-Interface.
+have set up. If you have used SecureDrop Workstation before, these
+are the same credentials that you would use to log in to the *Journalist
+Interface*.
 
 |screenshot_sd-app_login|
 
@@ -53,9 +53,9 @@ Seen and unseen submissions
 ---------------------------
 
 Sources with submissions (messages or files) that have not been seen by
-any journalist user will be displayed in bold text in the source list.
+any *Journalist* will be displayed in bold text in the source list.
 
-As soon as any journalist user clicks on a source with unseen submissions, it
+As soon as any *Journalist* clicks on a source with unseen submissions, it
 will be marked as seen (no longer displayed in bold text) for all users.
 
 Working offline

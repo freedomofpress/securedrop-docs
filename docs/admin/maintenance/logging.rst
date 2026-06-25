@@ -1,5 +1,6 @@
-Investigating Logs
+Investigating logs
 ==================
+
 When troubleshooting issues with your SecureDrop instance, be sure to examine
 all relevant log files on both servers. To work with logs, it is helpful to be
 familiar with commands like ``less``, ``tail`` and ``grep``; to inspect older,
@@ -19,7 +20,7 @@ Logs to examine on both servers
   including iptables configuration problems or Tor network issues. Use search
   patterns, e.g., search for "app Tor" to find log entries specific to Tor.
 
-*Application Server* Logs
+*Application Server* logs
 -------------------------
 
 See the directory ``/var/log/apache2/*`` for web server access and error logs.
@@ -51,7 +52,7 @@ sense to temporarily enable error logging. To do so:
    LogLevel debug
 
 5. Save the file and reload the configuration with ``sudo systemctl reload apache2``
-6. Visit the Source Interface and reproduce the error
+6. Visit the *Source Interface* and reproduce the error
 7. Inspect the log file ``/var/log/apache2/source-error.log`` for any details
 8. Remember to set the configuration back to the default values once your
    investigation is complete.
@@ -64,7 +65,7 @@ If you encounter an application error, and you have not modified the application
 code, please be sure to `file an issue <https://github.com/freedomofpress/securedrop/issues/new/>`_
 or contact us via securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
-*Monitor Server* Logs
+*Monitor Server* logs
 ---------------------
 
  - ``/var/ossec/logs/ossec.log``: Examine this file to investigate problems with

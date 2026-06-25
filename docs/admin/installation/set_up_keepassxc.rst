@@ -1,6 +1,6 @@
 .. _keepassxc_setup:
 
-Using the KeePassXC Password Manager
+Using the KeePassXC password manager
 ====================================
 
 Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including administrators, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
@@ -52,17 +52,17 @@ the template are:
 **Admin**:
 
 - Admin account username
-- App Server SSH Onion URL
+- *Application Server* SSH Onion address
 - Email account for sending OSSEC alerts
-- Monitor Server SSH Onion URL
+- *Monitor Server* SSH Onion address
 - Network Firewall Admin Credentials
 - *OSSEC Alert Public Key*
 - SecureDrop Login Credentials
 
 **Journalist**:
 
-- Auth Value: Journalist Interface
-- Onion URL: Journalist Interface
+- Auth Value: *Journalist Interface*
+- Onion URL: *Journalist Interface*
 - Personal GPG Key
 - SecureDrop Login Credentials
 

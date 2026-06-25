@@ -1,4 +1,4 @@
-Migration Overview
+Migration overview
 ==================
 
 .. _migration_overview:

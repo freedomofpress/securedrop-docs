@@ -1,4 +1,4 @@
-Data Flow Diagram
+Data flow diagram
 =================
 
 The following diagram captures all data flows to and from a SecureDrop deployment.

@@ -1,7 +1,7 @@
-Backup and Restore
+Backup and restore
 ==================
 
-.. TODO possibly need distinct backup and restore instructions for Qubes-based Admin and Journalist Workstations? Possibly not?
+.. TODO possibly need distinct backup and restore instructions for Qubes-based Admin and *Journalist Workstation*s? Possibly not?
 
 Qubes OS has a `backup utility <https://www.qubes-os.org/doc/backup-restore/>`_
 that allows for backup and restoration of user-specified VMs and templates.
@@ -41,8 +41,8 @@ If you have made customizations to ``dom0`` (for example, custom RPC policy file
     mkdir ~/etc-qubes && cp -r /etc/qubes ~/etc-qubes
     mkdir ~/etc-qubes-rpc && cp -r /etc/qubes-rpc ~/etc-qubes-rpc
 
-Back up SecureDrop Workstation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Back up a SecureDrop Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
   Backups contain sensitive data, and must be created and stored just as securely
@@ -120,6 +120,7 @@ updated base templates.
 
 Rename or delete redundant AppVMs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 By default, Qubes OS will create the AppVMs ``personal``, ``work``, ``untrusted``
 and ``vault`` as part of the installation process. Rename or delete any
 of these newly created AppVMs whose names conflict with the AppVMs you
@@ -129,8 +130,9 @@ Example: If you wish to restore the ``vault`` VM, rename or delete the existing
 ``vault`` VM prior to restoring the backup. You can do so in
 |qubes_menu| **▸ Apps ▸ vault ▸ Settings** (the VM must not be running).
 
-Restore Backup (SecureDrop Workstation components)
+Restore backup (SecureDrop Workstation components)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Plug in your backup medium and unlock it as during the backup. By default
 on a new system, your peripheral devices will be managed by a VM called
 ``sys-usb``.
@@ -237,7 +239,7 @@ In a ``dom0`` terminal:
     qvm-run sd-gpg 'gpg --import /home/user/QubesIncoming/dom0/sd-keys.asc'
 
 
-Restore Customized VMs, RPC Policies
+Restore customized VMs, RPC policies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 At this stage, you should have a functional SecureDrop Workstation. You may restore any additional
@@ -250,7 +252,7 @@ will need to be moved into place from the ``$RESTORE_DIR``.
 Once you are finished with the ``$RESTORE_DIR`` and have verified that your system works (download,
 decrypt, sync), you may delete the ``$RESTORE_DIR``.
 
-(Post-Migration Instructions) Destroy backup medium
+(Post-migration instructions) Destroy backup medium
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wipe (reformat) the LUKS-encrypted storage device that you used to store SecureDrop Workstation

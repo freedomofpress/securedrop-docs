@@ -1,12 +1,12 @@
-Test the Installation
+Test the installation
 =====================
 
 Test Connectivity
 -----------------
 
-.. TODO add testing Qubes, testing launching the SecureDrop application, logging in, syncing, test submission, etc.
+.. TODO add testing Qubes, testing launching the SecureDrop Inbox, logging in, syncing, test submission, etc.
 
-SSH to Both Servers Over Tor
+SSH to both servers over Tor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Assuming you haven't disabled SSH over Tor, SSH access will be
@@ -30,14 +30,14 @@ try using the verbose command format to troubleshoot: ::
          fields. The address is the first 56-character field, just add a
          ``.onion`` at the end.
 
-Log in to Both Servers via TTY
+Log in to both servers via TTY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All access to the SecureDrop servers should be performed over SSH from the
 *Admin Workstation*. To aid in troubleshooting, login via a physical keyboard
 attached to the server is also supported.
 
-Sanity-Check the Installation
+Sanity-check the installation
 -----------------------------
 
 On each server:
@@ -56,7 +56,7 @@ On the *Application Server*:
 #. Check the AppArmor status with ``sudo aa-status``. On a production
    instance all profiles should be in ``enforce`` mode.
 
-Test the Web Interfaces
+Test the web interfaces
 -----------------------
 
 #. Make sure the *Source Interface* is available, and that you can make a
@@ -66,7 +66,7 @@ Test the Web Interfaces
      shortcut. Proceed through the codename
      generation (copy this down somewhere) and submit a
      test message or file.
-   - Usage of the Source Interface is covered by our :doc:`Source User
+   - Usage of the *Source Interface* is covered by our :doc:`Source User
      Manual <../../source/source>`.
 
 #. Test that you can access the *Journalist Interface*, and that you can log
@@ -74,7 +74,7 @@ Test the Web Interfaces
 
    - Open the *Journalist Interface* in Tor Browser by clicking on its desktop
      shortcut.  Enter your passphrase and two-factor code to log in.
-   - If you have problems logging in to the *Admin/Journalist
+   - If you have problems logging in to the *Journalist
      Interface*, SSH to the *Application Server* and restart the time
      synchronization daemon to synchronize the time: ``sudo systemctl
      restart systemd-timesyncd``. Also check that your smartphone's
@@ -82,12 +82,12 @@ Test the Web Interfaces
 
 #. Test replying to the test submission.
 
-   - While logged in as an admin, you can send a reply to the test
+   - While logged in as an administrator, you can send a reply to the test
      source submission you made earlier.
    - Usage of the *Journalist Interface* is covered by our :doc:`Journalist
      User Manual <../../journalist/journalist>`.
 
-#. Test that the source received the reply.
+#. Verify that the test source account received the reply.
 
    - Within Tor Browser, navigate back to the *Source Interface* and
      use your previous test source codename to log in (or reload the
@@ -95,7 +95,7 @@ Test the Web Interfaces
      is present.
 
 #. Remove the test submissions you made prior to putting SecureDrop to
-   real use. On the main *Journalist Interface* page, select all sources and
+   real use. On the main *Journalist Interface* page, select all *Sources* and
    click **Delete selected**.
 
 Once you've tested the installation and verified that everything is

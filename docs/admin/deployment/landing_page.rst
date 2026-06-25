@@ -3,11 +3,11 @@
 *Landing Page*
 ==============
 
-SecureDrop itself runs as a Tor Onion Service. Organizations also need to
+SecureDrop itself runs as a Tor *Onion Service*. Organizations also need to
 create a SecureDrop *Landing Page* that will:
 
 * explain how SecureDrop works
-* give sources instructions on how to access the Tor Onion Service
+* give *Sources* instructions on how to access the Tor *Onion Service*
 * disclose the risks of accessing the SecureDrop instance or submitting documents
 
 We also recommend including a privacy policy (see our :ref:`Sample
@@ -17,13 +17,13 @@ your organization.
 .. note:: SecureDrop will bring more attention to your organization from
           security researchers and others. A *Landing Page* that fails to
           implement minimum security requirements is sure to be noticed, and
-          could undermine trust, discouraging possible sources.
+          could undermine trust, discouraging possible *Sources*.
 
-*Landing Page* Content Suggestions
+*Landing Page* content suggestions
 ----------------------------------
 
 The content below presents sample text for the SecureDrop component of a news
-organization’s tips page. It does not account for any specific legal
+organization's tips page. It does not account for any specific legal
 or organizational needs, but should provide guidance for any outlet getting
 started on crafting *Landing Page* language. Any tweaks to the sample content
 should be left to the legal and editorial discretion of the individual outlet,
@@ -44,9 +44,9 @@ To protect your anonymity when using SecureDrop, it is essential that you do
 not use a network or device that can easily be traced back to your real
 identity. Instead, use public wifi networks and devices you control.
 
-- Do NOT access SecureDrop on your employer’s network.
+- Do NOT access SecureDrop on your employer's network.
 
-- Do NOT access SecureDrop using your employer’s hardware.
+- Do NOT access SecureDrop using your employer's hardware.
 
 - Do NOT access SecureDrop on your home network.
 
@@ -57,14 +57,14 @@ identity. Instead, use public wifi networks and devices you control.
 Once you are connected to a public network at a cafe or library, download
 and install the desktop version of `Tor Browser <https://www.torproject.org/download/>`_.
 
-Launch Tor Browser. Visit our organization’s unique SecureDrop URL at
+Launch Tor Browser. Visit our organization's unique SecureDrop URL at
 **http://our-unique-URL.onion/**.
 Follow the instructions you find on our source page to
 send us materials and messages.
 
 When you make your first submission, you will receive a unique codename.
 Memorize it. If you write it down, be sure to destroy the copy as soon as
-you’ve committed it to memory. Use your codename to sign back in to
+you've committed it to memory. Use your codename to sign back in to
 our source page, check for responses from our journalists, and upload
 additional materials.
 
@@ -74,18 +74,18 @@ No tool can absolutely guarantee your security or anonymity.
 The best way to protect your privacy and anonymity as a source
 is to adhere to best practices.
 
-You can use a separate computer you’ve designated specifically to handle
+You can use a separate computer you've designated specifically to handle
 the submission process.
 Or, you can use an alternate operating system like Tails,
-which boots from a USB stick and erases your activity at the end of every session.
+which boots from a USB flash drive and erases your activity at the end of every session.
 
 A file contains valuable `metadata <https://ssd.eff.org/en/module/why-metadata-matters>`_ about its source — when it was created
-and downloaded, what machine was involved, the machine’s owner, etc.
+and downloaded, what machine was involved, the machine's owner, etc.
 You can scrub metadata from some files prior to submission using the Metadata
 Anonymization Toolkit featured in Tails.
 
 Your online behavior can be extremely revealing.
-Regularly monitoring our publication’s social media or website can potentially
+Regularly monitoring our publication's social media or website can potentially
 flag you as a source. Take great care to think about what your online behavior
 might reveal, and consider using Tor Browser to mitigate such monitoring.
 
@@ -100,22 +100,22 @@ Do not discuss leaking or whistleblowing, even with trusted contacts.
 
 .. _The SecureDrop Directory:
 
-The SecureDrop Directory
+The SecureDrop directory
 ----------------------------------
 
 SecureDrop `maintains a directory of instances that meet our strict guidelines.
 <https://securedrop.org/directory/>`__ If you would like to be considered for
-inclusion in this directory, make sure your landing page features the necessary
+inclusion in this directory, make sure your *Landing Page* features the necessary
 items from the sample above, and is in compliance with the technical
 requirements below, then `send us a request using this form.
 <https://securedrop.org/directory/submit/>`__
 
 There are several benefits to being included in the SecureDrop directory. The
-most significant benefit is that it will be easier for potential sources to
+most significant benefit is that it will be easier for potential *Sources* to
 find your SecureDrop instance. Additionally, being included in the directory
 makes you eligible for :doc:`an onion name. <onion_name>`
 This improves the experience by turning a lengthy, non-descriptive address
-into one that is short and memorable. For example, a long .onion address 
+into one that is short and memorable. For example, a long onion address 
 might look like: ::
 
     sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion
@@ -137,7 +137,7 @@ If you notice an increase in spam after being included in the directory, please
 let us know and we can remove your instance from the directory.
 
 
-URL and Location
+URL and location
 ----------------
 
 Your *Landing Page* must be a path at your top-level domain, e.g. 
@@ -158,11 +158,11 @@ directive.
 .. warning:: Except for rare extenuating circumstances, this is a requirement
              for inclusion in the SecureDrop Directory
 
-HTTPS Only (No Mixed Content)
+HTTPS only (no mixed content)
 -----------------------------
 
 HTTPS encryption is the number-one security requirement for your site's
-SecureDrop *Landing Page*. Without HTTPS, a source can easily be exposed as a
+SecureDrop *Landing Page*. Without HTTPS, a *Source* can easily be exposed as a
 visitor to your site.
 
 This may be difficult if your website serves advertisements or utilizes
@@ -188,17 +188,17 @@ ever to be reached over HTTPS.
 .. warning:: This is a strict requirement for inclusion in
              the SecureDrop Directory
 
-Perfect Forward Secrecy
+Perfect forward secrecy
 -----------------------
 
-Perfect Forward Secrecy (PFS) is a property of encryption protocols that
+Perfect forward secrecy (PFS) is a property of encryption protocols that
 ensures each SSL session has a unique key, meaning that if the key is
 compromised in the future it can't be used to decrypt previously
 recorded SSL sessions. You may need to talk to your CA (certificate
 authority) and CDN (content delivery network) for this, although our
 recommended configuration below provides forward secrecy.
 
-SSL Certificate Recommendations
+SSL certificate recommendations
 -------------------------------
 
 Regardless of where you choose to purchase your SSL cert and which CA
@@ -221,11 +221,11 @@ signature:
 **Don't load any resources (scripts, web fonts, etc.) from third parties
 (e.g. Google Web Fonts)**
 
-This will potentially leak information about sources to third parties,
+This will potentially leak information about *Sources* to third parties,
 which can more easily be accessed by law enforcement agencies. Simply
 copy them to your server and serve them yourself to avoid this problem.
 
-Do Not Use Third-Party Analytics, Tracking, or Advertising
+Do not use third-party analytics, tracking, or advertising
 ----------------------------------------------------------
 
 Most news websites, even those that are non-profits, use third-party analytics
@@ -235,15 +235,15 @@ for the SecureDrop *Landing Page*.
 In the past, some news organizations were heavily criticized when launching
 their SecureDrop instances because their *Landing Page* contained
 trackers. They claimed they were going to great lengths to protect
-sources' anonymity, but by having trackers on their *Landing Page*, this also
+*Sources*' anonymity, but by having trackers on their *Landing Page*, this also
 opened up multiple avenues for third parties to collect information on
-those sources. This information can potentially be accessed by law
-enforcement or intelligence agencies and could unduly expose a source.
+those *Sources*. This information can potentially be accessed by law
+enforcement or intelligence agencies and could unduly expose a *Source*.
 
 Similarly, consider avoiding Cloudflare (and other CDNs like Akamai, StackPath,
 Incapsula, Amazon CloudFront, etc.) for the SecureDrop *Landing Page*. These
-services intercept requests between a potential source and the SecureDrop
-*Landing Page* and can be used to `track`_ or collect information on sources.
+services intercept requests between a potential *Source* and the SecureDrop
+*Landing Page* and can be used to `track`_ or collect information on *Sources*.
 
 .. warning:: This is a strict requirement for inclusion in
              the SecureDrop Directory
@@ -251,15 +251,15 @@ services intercept requests between a potential source and the SecureDrop
 .. _`track`: https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 
 
-Do Not Hyperlink .onion Addresses
+Do not hyperlink onion addresses
 ---------------------------------
 Because a visitor to your *Landing Page* may not be using Tor Browser yet,
-clicking a link to your SecureDrop instance or to any other .onion address may
+clicking a link to your SecureDrop instance or to any other onion address may
 result in an error message. Worse, depending on the browser and network
 configuration, it may cause lookups that an adversary can use to identify
 SecureDrop-related behavior.
 
-Instead, we recommend including .onion addresses in plain text, without a
+Instead, we recommend including onion addresses in plain text, without a
 hyperlink.
 
 If you have been provided a short onion name for your instance, this address
@@ -275,7 +275,7 @@ text below to provide maximum clarity: ::
 .. warning:: This is a strict requirement for inclusion in
              the SecureDrop Directory
 
-Avoid Direct Links to SecureDrop.org
+Avoid direct links to securedrop.org
 ------------------------------------
 
 We appreciate that you may want to link to `the SecureDrop website <https://securedrop.org/>`__
@@ -284,7 +284,7 @@ if a visitor visits these links without using Tor Browser, this generates
 traffic that an adversary may be able to use to identify SecureDrop-related
 behavior, regardless of the use of HTTPS.
 
-We suggest offering a reference to the SecureDrop Onion Service in
+We suggest offering a reference to the SecureDrop *Onion Service* in
 plain text, without a hyperlink (as per the preceding section):
 
 **sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion**
@@ -292,7 +292,7 @@ plain text, without a hyperlink (as per the preceding section):
 .. warning:: This is a strict requirement for inclusion in
              the SecureDrop Directory
 
-Apply Security Headers
+Apply security headers
 ----------------------
 
 Security headers give instructions to the web browser on how to handle
@@ -339,7 +339,7 @@ If you intend to run nginx as your webserver instead, this will work:
     add_header Permissions-Policy "camera 'none'; display-capture 'none'; geolocation 'none'; microphone 'none'; payment 'none'; usb 'none';";
 
 
-Additional Apache Configuration
+Additional apache configuration
 -------------------------------
 
 To enforce HTTPS/SSL always, you need to set up redirection within the
@@ -416,7 +416,7 @@ monitoring system for your site, OSSEC is a free and open source host-based intr
 that includes a file integrity monitor. More information can be found
 `here. <https://www.ossec.net/>`__
 
-.. note:: We do not recommmend using the *Monitor Server* to monitor your landing page. It should be used
+.. note:: We do not recommmend using the *Monitor Server* to monitor your *Landing Page*. It should be used
   for the *Application Server* only.
 
 Don't log access to the *Landing Page* in the webserver
@@ -439,11 +439,11 @@ In nginx, logging can be disabled by adding the following directives within the
     error_log /dev/null;
 
 
-Further Security Considerations
+Further security considerations
 -------------------------------
 
 To guard your *Landing Page* against being modified by an attacker and
-directing sources to a rogue SecureDrop instance, you will need good
+directing *Sources* to a rogue SecureDrop instance, you will need good
 security practices applying to the machine where it is hosted. Whether
 it's a VPS in the cloud or dedicated server in your office, you should
 consider the following:
@@ -457,7 +457,7 @@ consider the following:
 -  Intrusion and/or integrity monitoring (see Logwatch, OSSEC, Snort,
    rkhunter, chkrootkit)
 -  Downtime alerts (Nagios or Pingdom)
--  Two-factor authentication (see libpam-google-authenticator,
+-  *Two-Factor Authentication* (see libpam-google-authenticator,
    libpam-yubico)
 
 It's preferable for the *Landing Page* to have its own segmented
@@ -483,7 +483,7 @@ or may be unable to load the page altogether because of
 Tor-specific DDoS protections.
 
 The effect of such measures cannot be tested without using Tor, and it is
-a very bad experience for a *source* if visiting a *Landing Page* doesn't work
+a very bad experience for a *Source* if visiting a *Landing Page* doesn't work
 as expected. Because of that, we **recommended strongly** that you test
 your organization's *Landing Page* using Tor *before* you start advertising it.
 
