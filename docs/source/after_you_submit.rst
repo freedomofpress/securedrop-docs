@@ -1,7 +1,7 @@
-After You Submit
+After you submit
 ================
 
-Continuing the Conversation
+Continuing the conversation
 ---------------------------
 
 If you have already submitted a document and would like to check for
@@ -15,15 +15,15 @@ The next page will ask for your secret codename. Enter it and click
 
 |Check for response|
 
-If a journalist has responded, their message will appear on the
+If a *Journalist* has responded, their message will appear on the
 next page. Before leaving the page, you should
 delete any replies. In the unlikely event that someone learns
 your codename, this will ensure that they will not be able to see the previous
-correspondences you had with journalists.
+correspondences you had with *Journalists*.
 
 |Check for a reply|
 
-After you delete the reply from the journalist, make sure you see the
+After you delete the reply from the *Journalist*, make sure you see the
 confirmation message: "Reply deleted".
 
 |Delete received messages|

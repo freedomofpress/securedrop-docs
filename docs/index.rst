@@ -253,4 +253,3 @@ or making `a donation <https://freedom.press/donate>`_.
    appendices/threat_model/threat_model.rst
    appendices/threat_model/dataflow.rst
    appendices/threat_model/mitigations.rst
-   appendices/training_schedule

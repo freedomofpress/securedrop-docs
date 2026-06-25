@@ -1,27 +1,27 @@
-Rebuilding an *Admin Workstation* USB
--------------------------------------
+Rebuilding an *Admin Workstation*
+---------------------------------
 
-In cases where an *Admin Workstation* USB stick has been lost or destroyed, and no
+In cases where an *Admin Workstation* USB flash drive has been lost or destroyed, and no
 backup exists, it is possible to rebuild one. In order to do so, you'll need
 
  - physical access to the SecureDrop servers
- - 2 USB sticks:
+ - 2 USB flash drives:
 
-   - Tails Template USB
-   - 1 replacement *Admin Workstation* USB (USB3 and 16GB or better recommended)
+   - Tails Template drive
+   - 1 replacement *Admin Workstation* USB flash drive (USB3 and 16GB or better recommended)
 
 The process requires experience with the Linux command line and Tails, and
-can take up to 3 hours. If a backup of the SecureDrop application server is available,
+can take up to 3 hours. If a backup of the SecureDrop *Application Server* is available,
 :doc:`reinstalling the instance and restoring the backup <backup_and_restore>`
 may be simpler. An outline of the steps involved in rebuilding an
 *Admin Workstation* is as follows:
 
- #. Prepare the USB sticks.
+ #. Prepare the USB flash drives.
  #. (Optional) Boot the *Application* and *Monitor Server* in single user mode and reset
     the shell admin account password.
  #. Set up SSH access for the new *Admin Workstation*.
  #. Retrieve SecureDrop configuration settings from the *Application* and *Monitor Server*.
- #. Back up and configure the SecureDrop application.
+ #. Back up and configure the *Application Server*.
  #. Run ``securedrop-admin install`` and ``securedrop-admin localconfig``
     from the new *Admin Workstation*.
  #. Configure SSH-over-TOR.
@@ -34,14 +34,14 @@ may be simpler. An outline of the steps involved in rebuilding an
                process promptly, to avoid leaving the servers in an insecure state.
 
 
-Step 1: Prepare the USB sticks
-==============================
+Step 1: Prepare the USB flash drives
+====================================
 
-First, create a new Tails
+First, create a new Tails drive
 and set up a persistent volume with a strong passphrase.
 
 Once persistence has been set up, start up the *Admin Workstation* with
-persistence enabled, install the SecureDrop application code, and set up
+persistence enabled, install the SecureDrop Inbox code, and set up
 the KeePassXC database.
 
 The *Admin Workstation* uses SSH with key authentication to connect to the servers,
@@ -59,6 +59,7 @@ the default location. When prompted for a passphrase, it's safe to leave it blan
 
 Step 2: (Optional) Boot the servers in single-user mode
 =======================================================
+
 If you do not have the original password for the shell admin account on the
 *Application* and *Monitor Servers*, you'll need to reset the password on each
 server by booting in single user mode. In order to do so, you'll need physical
@@ -74,6 +75,7 @@ by a space, and press **F10** to boot in single user mode.
 
 Reset the SecureDrop admin user's password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Once the root prompt appears, you'll need to reset the password for the
 SecureDrop admin user. By default this user is named `sdadmin` and has UID 1000.
 However it may have been named differently during the installation of your
@@ -98,6 +100,7 @@ password as for the *Monitor Server* - this is required in order for the
 
 Step 3: Set up *Admin Workstation* access
 =========================================
+
 Next, you'll configure the servers to allow temporary SSH access from the new *Admin
 Workstation*.
 
@@ -123,7 +126,7 @@ chosen, you can check as follows:
     and password.
  #. Check to see if an SSH hidden proxy service exists, using the command
     ``sudo cat /var/lib/tor/services/sshv3/hostname``. If this file exists and
-    includes an Onion URL, your instance is set up
+    includes an onion address, your instance is set up
     to use SSH over Tor and you should configure temporary SSH access
     using :ref:`these instructions <rebuild_ssh_over_tor>`.
     If not, your instance is set up to use SSH over LAN, and you should follow
@@ -201,7 +204,7 @@ local IP address as well.
 Enabling access from the new *Admin Workstation*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From the *Admin Workstation*, open a terminal and copy the *Admin Workstation's*
+From the *Admin Workstation*, open a terminal and copy the *Admin Workstation*'s
 SSH public key to the servers, substituting the values for the server administration
 username and server IP addresses in the commands below and entering the admin account's
 password when prompted:
@@ -241,7 +244,7 @@ so far, you'll need to retrieve the following files and info:
  - OSSEC alert configuration details
  - (Optional) HTTPS configuration details
 
-Retrieve GPG Public Keys
+Retrieve GPG public keys
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Copy the *Submission Public Key* with the following commands:
@@ -268,7 +271,7 @@ using the command:
  curl http://$(cat /tmp/sourcev3)/metadata
 
 Next, note the OSSEC Alerts email address (``OSSEC_EMAIL``) and, if applicable,
-the Journalist Alerts email address (``JOURNALIST_EMAIL``):
+the Daily Journalist Alerts email address (``JOURNALIST_EMAIL``):
 
 .. code:: sh
 
@@ -283,7 +286,7 @@ appropriate email address for ``alerts@example.com``):
  ssh mon sudo gpg --homedir=/var/ossec/.gnupg --export --armor alerts@example.com > ossec.pub
  gpg --import ossec.pub
 
-If a Journalist Alerts address has been configured, repeat this step for the
+If a Daily Journalist Alerts address has been configured, repeat this step for the
 *Journalist Alert Public Key*, naming it ``journalist.pub`` or similar.
 
 You will require the fingerprints for these keys during the next step, which you
@@ -295,6 +298,7 @@ can obtain via the command:
 
 Retrieve OSSEC alert configuration details
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 You'll also need to retrieve the following configuration information:
 
  - SMTP server
@@ -321,6 +325,7 @@ In this example, ``smtp.gmail.com`` is the SMTP server, ``587`` is the SMTP port
 
 (Optional) Retrieve HTTPS certificate files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If your *Source Interface* was configured to use HTTPS, you will need to copy
 three related files from the *Application Server* to the *Admin Workstation*.
 
@@ -338,10 +343,10 @@ certificate key, and chain file. When prompted for the names of these files
 during the next step, you should specify them relative to the
 ``~/.config/securedrop-admin/`` directory, i.e. as ``ssl/mydomain.crt``.
 
-Step 5: Configure and back up the Application Server
-====================================================
+Step 5: Configure and back up the *Application Server*
+======================================================
 
-Next, configure the SecureDrop application using the files and info retrieved in the
+Next, configure the SecureDrop *Application Server* using the files and info retrieved in the
 previous steps. To do so, connect to the Tor network on the
 *Admin Workstation*, open a Terminal and run the following commands:
 
@@ -353,7 +358,7 @@ The ``sdconfig`` command will prompt you to fill in configuration details
 about your instance. Use the information retrieved in the previous steps.
 When prompted whether or not to enable SSH-over-Tor, type **no**.
 
-Next, back up the Application server by running the following command in the terminal:
+Next, back up the *Application Server* by running the following command in the terminal:
 
 .. code:: sh
 
@@ -422,7 +427,7 @@ When the installation completes, run:
 Once this command completes:
 
  - verify that the Hostname references in ``~/.ssh/config`` have been updated
-   to refer to Onion URLs instead of direct IP addresses
+   to refer to onion addresses instead of direct IP addresses
  - verify that you can connect to
    the servers using ``ssh app`` and ``ssh mon``
  - verify that the *SecureDrop Menu* for the *Source* and *Journalist Interfaces*
@@ -432,11 +437,11 @@ Step 8: Post-rebuild tasks
 ==========================
 
 .. important::
-   Rebuilding an Admin Workstation makes changes that will prevent
+   Rebuilding an *Admin Workstation* makes changes that will prevent
    your other Tails workstations from connecting to your SecureDrop
    servers.
-   If you rebuild your Admin Workstation, you must also provision
-   all other existing Tails Workstation USBs with updated Tor
+   If you rebuild your *Admin Workstation*, you must also provision
+   all other existing Tails workstation drives updated Tor
    credentials (see below).
 
 We recommend completing the following tasks after the rebuild:
@@ -448,7 +453,7 @@ We recommend completing the following tasks after the rebuild:
  - Back up your *Admin Workstation*.
  - Delete invalid admin accounts in the *Journalist Interface*.
  - Restrict SSH access to the *Application* and *Monitor Servers* to valid
-   *Admin Workstations*. If your new *Admin Workstation* USB stick
+   *Admin Workstations*. If your new *Admin Workstation* USB flash drive
    is the only one that should have SSH access to the servers, you can remove
    access for any previous *Admin Workstations* from the terminal, using the
    commands:
@@ -460,9 +465,9 @@ We recommend completing the following tasks after the rebuild:
    You can also selectively remove invalid keys by logging on to the *Application*
    and *Monitor Servers* and editing the file ``~/.ssh/authorized_keys``, making
    sure not to remove the public key belonging to your new *Admin Workstation*.
- - :doc:`Back up the Application server <backup_and_restore>` once SSH-over-Tor has
+ - :doc:`Back up the *Application Server* <backup_and_restore>` once SSH-over-Tor has
    been restored. Ensure that server and workstation backups happen regularly.
- - Provision all other Tails Workstation USBs (*Journalist* and/or *Admin Workstations*)
+ - Provision all other Tails workstation drives (*Journalist* and/or *Admin Workstations*)
    with updated Tor credentials, so that they can access SecureDrop after this rebuild.
 
    You will need to copy the following file(s) to all other *Admin* and
@@ -476,5 +481,5 @@ We recommend completing the following tasks after the rebuild:
    You may copy these files using a *Transfer Device* (which must be wiped afterwards),
    or boot into each of your additional Tails workstations, plug in and unlock your
    *Admin Workstation*'s encrypted partition via the **Places** app, and manually copy
-   the file(s) from the Admin Workstation to the same directory on the target Tails
+   the file(s) from the *Admin Workstation* to the same directory on the target Tails
    workstation.

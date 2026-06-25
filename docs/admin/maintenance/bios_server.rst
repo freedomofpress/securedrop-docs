@@ -1,4 +1,4 @@
-BIOS Updates on the Servers
+BIOS updates on the servers
 ===========================
 
 Below are the steps for updating the BIOS on the *Application* and *Monitor
@@ -10,26 +10,27 @@ instructions will vary depending on the manufacturer and model of your device.
 What you need
 ~~~~~~~~~~~~~
 
-  #. A clean USB device to download the BIOS file
+  #. A clean USB flash drive to download the BIOS file
   #. An Internet-connected workstation, such as the *Admin Workstation*
   #. A UPS (uninterrupted power supply), such as a surge-protecting power supply with a backup battery (This is not required, but strongly recommended)
   #. A keyboard and monitor
 
-Perform Backups
+Perform backups
 ~~~~~~~~~~~~~~~
 
-If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the Application Server <backup_and_restore>` before proceeding.
+If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the *Application Server* <backup_and_restore>` before proceeding.
 
-Prepare the USB Stick
-~~~~~~~~~~~~~~~~~~~~~~~
+Prepare the USB flash drive
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the Disks application, delete existing partitions on the USB device, if applicable, and reformat the entire device with one FAT32 partition. Note that you will lose access to all existing data on this USB stick.
+Using the Disks application, delete existing partitions on the USB flash drive, if applicable, and reformat the entire device with one FAT32 partition. Note that you will lose access to all existing data on this USB flash drive.
 
-Download and Verify Appropriate BIOS Files
+Download and verify appropriate BIOS files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For Intel and ASUS NUC Devices
+For Intel and ASUS NUC devices
 ``````````````````````````````
+
 Check the make and model of your servers, and follow the F7 BIOS update method in the documentation. The exact instructions vary by model:
 
 - `BIOS update instructions for Intel NUC with Intel Visual BIOS <https://www.intel.com/content/dam/support/us/en/documents/mini-pcs/Visual-BIOS-Update-NUC.pdf>`__
@@ -47,7 +48,7 @@ Intel provides an SHA1 checksum on the download page, while ASUS offers a SHA-25
 
 |gtkhash tails|
 
-Once you have verified the hash, copy the file to your USB device.
+Once you have verified the hash, copy the file to your USB flash drive.
 
 .. _`provides a detailed explanation of this process`: https://tails.net/contribute/build/reproducible/#index3h1
 
@@ -59,8 +60,8 @@ Once you have verified the hash, copy the file to your USB device.
 Update the BIOS
 ~~~~~~~~~~~~~~~
 
-Power off the *Monitor Server*. We recommend plugging it into an uninterrupted power supply (UPS). Plug in the keyboard, monitor, and USB key, and power on the server, then press F7 when prompted to enter the BIOS Update tool.
+Power off the *Monitor Server*. We recommend plugging it into an uninterrupted power supply (UPS). Plug in the keyboard, monitor, and USB flash drive, and power on the server, then press F7 when prompted to enter the BIOS Update tool.
 
-Select the USB device and navigate to the file you have downloaded, then hit **Enter**. The update will take several minutes--do not interrupt the update or unplug the server during this time.
+Select the USB flash drive and navigate to the file you have downloaded, then hit **Enter**. The update will take several minutes--do not interrupt the update or unplug the server during this time.
 
 Repeat these steps on the *Application Server*.

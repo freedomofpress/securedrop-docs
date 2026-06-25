@@ -1,9 +1,9 @@
 .. _firewall_pfsense:
 
-Setting Up a pfSense Network Firewall
+Setting up a pfSense network firewall
 =====================================
 
-Before You Begin
+Before you begin
 ----------------
 
 First, consider how the firewall will be connected to the Internet. You
@@ -21,7 +21,7 @@ you will be able to connect from the LAN to the pfSense WebGUI
 configuration wizard, and from there you will be able to configure the
 network so it is working correctly.
 
-Configuring Your Firewall
+Configuring your firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since our recommended firewalls have at least 4 NICs, we will refer to the
@@ -60,7 +60,7 @@ IP and subnet definitions:
 -  Monitor Gateway: ``10.20.3.1``
 -  Monitor Server (LAN3) : ``10.20.3.2``
 
-Initial Configuration
+Initial configuration
 ---------------------
 
 Unpack the firewall, connect the power, and power on the device.
@@ -68,11 +68,10 @@ Unpack the firewall, connect the power, and power on the device.
 We will use the pfSense WebGUI to do the initial configuration of the
 network firewall.
 
-Connect to the pfSense WebGUI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect to the pfSense web GUI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. If you have not already done so, boot the *Admin Workstation* into
-   Tails using its designated USB drive.
+#. If you have not already done so, boot the *Admin Workstation*.
 
 #. Connect the *Admin Workstation* to the LAN[1] interface. You should see
    a popup notification in Tails that says "Connection Established". If you click
@@ -133,7 +132,7 @@ Connect to the pfSense WebGUI
 
 .. _intentionally disables LAN access: https://gitlab.tails.boum.org/tails/tails/-/issues/7976
 
-Alternate Hostnames
+Alternate hostnames
 ~~~~~~~~~~~~~~~~~~~
 
 Before you can set up the hardware firewall, you will need to set the
@@ -212,7 +211,7 @@ before except with the new passphrase you just set for the pfSense WebGUI.
 Once you've logged in to the WebGUI, you are ready to continue configuring
 the firewall.
 
-Connect Interfaces and Test
+Connect interfaces and test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now that the initial configuration is completed, you can connect the WAN
@@ -241,7 +240,7 @@ In order to tighten the firewall rules as much as possible, we recommend
 disabling the DHCP server and assigning a static IP address to the Admin
 Workstation instead.
 
-Disable DHCP Server on the Firewall
+Disable DHCP server on the firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To disable DHCP, navigate to **Services ▸ DHCP Server** in the pfSense
@@ -252,9 +251,8 @@ interface**, scroll down, and click the **Save** button.
 
 .. _assign_static_ip_to_workstation:
 
-Assign a Static IP Address to the *Admin Workstation*
+Assign a static IP address to the *Admin Workstation*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 Now you will need to assign a static IP to the *Admin Workstation*.
 
@@ -298,7 +296,7 @@ change. You will need you have succeeded in connecting with your new
 static IP when you are able to connect using the Tor Connection assistant,
 and you see the message "Connected to Tor successfully".
 
-Troubleshooting: DNS Servers and the Unsafe Browser
+Troubleshooting: DNS servers and the Unsafe Browser
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
 After saving the new network configuration, you may still encounter the
@@ -318,7 +316,7 @@ to Tor successfully".
 For the next step, SecureDrop Configuration, you will manually configure the
 firewall for SecureDrop, using screenshots as a reference.
 
-SecureDrop Configuration
+SecureDrop configuration
 ------------------------
 
 SecureDrop uses the firewall to achieve two primary goals:
@@ -333,7 +331,7 @@ In order to use the firewall to isolate the *Application Server* and the *Monito
 Server* from each other, we need to connect them to separate interfaces, and then set
 up firewall rules that allow them to communicate.
 
-Set Up the Firewall Rules
+Set up the firewall rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since there are a variety of firewalls with different configuration interfaces
@@ -344,7 +342,7 @@ The easiest way to set up your firewall rules is to look at the screenshots of
 a correctly configured firewall and edit the interfaces, aliases, and firewall
 rules on your firewall to match them.
 
-Set Up LAN2
+Set up LAN2
 '''''''''''
 
 We set up the LAN[1] interface during the initial configuration. We now
@@ -361,7 +359,7 @@ as the default. **Save** and **Apply Changes**.
 
 |LAN2|
 
-Set Up LAN3
+Set up LAN3
 '''''''''''
 
 Next, you will have to enable the LAN3 interface. Go to
@@ -377,7 +375,7 @@ as the default. **Save** and **Apply Changes**.
 
 |LAN3|
 
-Use Screenshots of Firewall Configuration
+Use screenshots of firewall configuration
 '''''''''''''''''''''''''''''''''''''''''
 
 Here are some example screenshots of a working pfSense firewall
@@ -447,7 +445,7 @@ message "The changes have been applied successfully". Once you've set up the
 firewall, exit the Unsafe Browser, and continue with the "Keeping pfSense up
 to date" section below.
 
-Tips for Setting Up pfSense Firewall Rules
+Tips for setting up pfSense firewall rules
 ------------------------------------------
 
 Here are some general tips for setting up pfSense firewall rules:
@@ -475,7 +473,7 @@ Here are some general tips for setting up pfSense firewall rules:
 
 .. _Keeping pfSense up to date:
 
-Keeping pfSense up to Date
+Keeping pfSense up to date
 --------------------------
 
 Periodically, the pfSense project maintainers release an update to the

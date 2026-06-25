@@ -3,7 +3,7 @@ Using a YubiKey with the *Journalist Interface*
 
 This guide describes in detail how to set up a YubiKey for two-factor
 authentication on the *Journalist Interface*. This setup is performed
-once per journalist to create a secure log-in method. The process
+once per *Journalist* to create a secure log-in method. The process
 requires some configuration steps using a separate software tool.
 
 .. note:: You will do all of these steps from within the Tails
@@ -12,7 +12,7 @@ requires some configuration steps using a separate software tool.
 What is a YubiKey?
 ------------------
 
-A YubiKey is a physical token used for two-factor authentication. They
+A YubiKey is a physical token used for *Two-Factor Authentication*. They
 are made by a company called Yubico and are `commercially available`_. Note
 that not all physical tokens are compatible with the YubiKey Personalization
 Tool; for this, you require `a key that can support OATH-HOTP`_.
@@ -21,7 +21,7 @@ Tool; for this, you require `a key that can support OATH-HOTP`_.
 
 .. _`a key that can support OATH-HOTP`: https://support.yubico.com/hc/en-us/articles/360016614780-OATH-HOTP-Yubico-Best-Practices-Guide
 
-Download and Launch the YubiKey Personalization Tool
+Download and launch the YubiKey personalization tool
 ----------------------------------------------------
 
 #. Start Tails. At the log in-screen, choose the option to allow an
@@ -43,7 +43,7 @@ Download and Launch the YubiKey Personalization Tool
 
    yubikey-personalization-gui
 
-Setting Up Hardware-Based Codes
+Setting up hardware-based codes
 -------------------------------
 
 After opening the personalization tool, click the heading
@@ -83,7 +83,7 @@ top of the window.
 
 |YubiKey Config Successful|
 
-Adding Users
+Adding users
 ------------
 
 When adding new users, a SecureDrop admin will need the
@@ -93,7 +93,7 @@ selecting the **I'm Using a YubiKey** option while :ref:`adding users
 being added to the system. This means that the new user and the admin should be
 physically present for this process.
 
-Using Your YubiKey
+Using your YubiKey
 ------------------
 
 When using a Yubikey to log-in to the *Journalist Interface*, insert

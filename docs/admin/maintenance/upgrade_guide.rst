@@ -1,2 +1,2 @@
-Upgrade Guide
+Upgrade guide
 =============

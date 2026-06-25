@@ -5,7 +5,7 @@ Now that the servers are prepared, you are ready to install and configure the Se
 
 .. _test_connectivity:
 
-Test Connectivity to Servers
+Test connectivity to servers
 ----------------------------
 
 Having set up the firewall, you can plug the *Application Server* and the *Monitor Server* into the firewall. Your *Admin Workstation* should also be connected to the firewall.
@@ -28,7 +28,7 @@ Open a terminal in ``sd-admin`` and verify that you can SSH into both servers, a
 .. tip:: If you cannot connect, check the network firewall logs for
          clues.
 
-Set Up SSH Keys
+Set up SSH keys
 ---------------
 
 Ubuntu's default SSH configuration authenticates users with their
@@ -50,7 +50,7 @@ First, generate the new SSH keypair:
 You'll be asked to "Enter file in which to save the key" Type
 **Enter** to use the default location.
 
-Given that this key is on the encrypted persistence of a Tails USB,
+Given that this key is on the encrypted persistence of a Tails USB flash drive,
 you do not need to add an additional passphrase to protect the key.
 If you do elect to use a passphrase, note that you will need to manually
 type it (Tails' pinentry will not allow you to copy and paste a passphrase).
@@ -81,7 +81,7 @@ or 'mon') as shown above.
 
 .. _configure_securedrop:
 
-Prepare Configuration Files
+Prepare configuration files
 ---------------------------
 
 Make sure you have the following information and files ready before
@@ -103,7 +103,7 @@ continuing:
 If configuring Daily Journalist Alert emails (this is optional and can be configured later), you will also need:
 -  the *Journalist Alert Public Key*
 -  the *Journalist Alert Public Key*  fingerprint
--  the email address that will receive the journalist alerts
+-  the email address that will receive the Daily Journalist Alerts
 
 Localization of the *Source Interface* and *Journalist Interface*
 -----------------------------------------------------------------
@@ -117,12 +117,12 @@ During the installation you will be given the opportunity to choose from a
 list of supported languages to display using the codes shown in
 parentheses.
 
-.. note:: With a *Source Interface* displayed in French (for example), sources
-          submitting documents are likely to expect a journalist fluent in
+.. note:: With a *Source Interface* displayed in French (for example), *Sources*
+          submitting documents are likely to expect a *Journalist* fluent in
           French to be available to read the documents and follow up in that
           language.
 
-OSSEC Alerts Public Key
+OSSEC alerts public key
 -----------------------
 
 Before proceeding, you will need to copy the *OSSEC Alert Public Key* public key to
@@ -204,7 +204,7 @@ The script will automatically validate the answers you provided and display
 error messages if any problems are detected. The answers will be
 written to the file ``~/.config/securedrop-admin/site-specific``.
 
-Optional: Configuring fingerprint verification
+Optional: configuring fingerprint verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you run your own mail server, you may wish to increase the security
@@ -250,7 +250,7 @@ playbooks.) Save ``~/.config/securedrop-admin/site-specific`` and exit the edito
 
 .. _Install SecureDrop Servers:
 
-Install SecureDrop Servers
+Install SecureDrop servers
 --------------------------
 
 Now you are ready to install! This process will configure
@@ -286,20 +286,20 @@ an email to securedrop@freedom.press.
 .. _`Source Offer`: https://github.com/freedomofpress/securedrop/blob/develop/SOURCE_OFFER
 
 Once the installation is complete, addresses and credentials for each
-onion service will be available in the following files under
+*Onion Service* will be available in the following files under
 ``~/.config/securedrop-admin``:
 
 
-V3 onion services
------------------
+V3 *Onion Services*
+-------------------
 
-- ``app-sourcev3-ths`` contains the v3 ``.onion`` address of the *Source
+- ``app-sourcev3-ths`` contains the v3 onion address of the *Source
   Interface*.
-- ``app-journalist.auth_private`` contains the ``onion`` address and private key
+- ``app-journalist.auth_private`` contains the onion address and private key
   providing access to the *Journalist Interface*.
-- ``app-ssh.auth_private`` contains the ``onion`` address and private key
+- ``app-ssh.auth_private`` contains the onion address and private key
   providing SSH access to the *Application Server*.
-- ``mon-ssh.auth_private`` contains the ``onion`` address and private key
+- ``mon-ssh.auth_private`` contains the onion address and private key
   providing SSH access to the *Monitor Server*.
 - ``tor_v3_keys.json`` contains the keypairs required for access to the
   *Journalist Interface* and SSH access to the servers - it is required for
@@ -310,7 +310,7 @@ V3 onion services
              or copied from the *Admin Workstation* for any purpose other than
              tasks such as performing backups or onboarding new users.
 
-The dynamic inventory file will automatically read the ``onion`` addresses from
+The dynamic inventory file will automatically read the onion addresses from
 the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to
 connect to the servers over SSH during subsequent playbook runs.
 

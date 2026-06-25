@@ -1,27 +1,27 @@
-Backing Up and Restoring Servers
+Backing up and restoring servers
 ================================
 
 Maintaining regular backups helps guard against data
 loss and hardware failure. Having a recent backup will allow you to redeploy
-SecureDrop without changing onion URLs, recreating journalist accounts,
-or losing previous submissions from sources.
+SecureDrop without changing onion addresses, recreating journalist accounts,
+or losing previous submissions from *Sources*.
 
 .. note:: Only the *Application Server* is backed up and restored, including
           historical submissions and both *Source Interface* and *Journalist
           Interface* URLs. The *Monitor Server* needs to be configured from
           scratch in the event of a hardware migration.
 
-Minimizing Disk Use
+Minimizing disk use
 -------------------
 
 Since the backup and restore operations both involve transferring *all* of
 your SecureDrop's stored submissions over Tor, the process can take a long time.
 
-Encouraging journalists to regularly delete older, unneeded submissions from
+Encouraging *Journalists* to regularly delete older, unneeded submissions from
 the *Journalist Interface* will save time and improve reliability when
 doing backups.
 
-.. tip:: Although it varies, the average throughput of an onion service is
+.. tip:: Although it varies, the average throughput of an *Onion Service* is
          about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
          restore accordingly.
 
@@ -56,10 +56,10 @@ contact us through the `SecureDrop Support Portal`_.
 
 .. _backing_up:
 
-Backing Up
+Backing up
 ----------
 
-Check Connectivity
+Check connectivity
 ''''''''''''''''''
 
 Open a Terminal via **Apps ▸ System Tools ▸ Console** on your *Admin Workstation* and verify it is able to run Ansible and connect to
@@ -72,7 +72,7 @@ the SecureDrop servers.
 If this command fails, see
 :ref:`Troubleshooting <troubleshooting_admin_connectivity>`.
 
-Create the Backup
+Create the backup
 '''''''''''''''''
 
 When you are ready to begin the backup, run
@@ -93,10 +93,10 @@ archive in the output of the backup command.
 
 .. warning:: The backup file contains sensitive information! It should only
              be stored on the *Admin Workstation*, or on a
-             dedicated encrypted backup USB.
+             dedicated encrypted backup USB flash drive.
 .. include:: ../../includes/backup-warning.txt
 
-Restoring from a Backup
+Restoring from a backup
 -----------------------
 
 Prerequisites
@@ -123,7 +123,7 @@ For other data recovery scenarios, see
 
 .. _restore_data:
 
-Restoring a Backup on an Existing Instance
+Restoring a backup on an existing instance
 ''''''''''''''''''''''''''''''''''''''''''
 
 To restore an existing instance to a previous state, run the command:
@@ -136,12 +136,12 @@ Make sure to replace ``sd-backup-2020-07-22--01-06-25.tar.gz`` with the filename
 for your backup archive.
 
 This command attempts to restore submissions, source and journalist accounts,
-and configuration details for the onion services used by the web interfaces and
+and configuration details for the *Onion Services* used by the web interfaces and
 SSH (if configured).
 
 .. _migrating:
 
-Migrating Using a Backup
+Migrating using a backup
 -------------------------
 
 Moving a SecureDrop instance to new hardware involves:
@@ -174,7 +174,7 @@ Moving a SecureDrop instance to new hardware involves:
 
    .. note::
       You will be generating fresh SSH credentials for the servers, and any
-      other *Admin Workstation* USBs will have to be
+      other *Admin Workstation* USB flash drives will have to be
       :ref:`provisioned with updated credentials <repair_admin_usbs>`.
 
 #. Ensure your *Admin Workstation* is connected to a LAN port on your
@@ -231,21 +231,21 @@ Moving a SecureDrop instance to new hardware involves:
 
 .. _repair_admin_usbs:
 
-Repair Additional Admin Workstations
-''''''''''''''''''''''''''''''''''''
+Repair additional *Admin Workstations*
+''''''''''''''''''''''''''''''''''''''
 
-If you have additional *Admin Workstation* USBs, they will no longer have
+If you have additional *Admin Workstation* USB flash drives, they will no longer have
 valid SSH credentials and will need to be repaired. In these steps, the "primary
 *Admin Workstation*" is the one which you used to complete the above migration
 process.
 
 #. Prepare a fresh
-   :doc:`LUKS-encrypted USB </admin/installation/provisioning_usb>`.
+   :doc:`LUKS-encrypted USB flash drive </admin/installation/provisioning_usb>`.
    You may record the passphrase in your primary *Admin Workstation*
    KeePassXC password manager.
 
 #. Copy the following files from your primary *Admin Workstation* onto the
-   LUKS-encrypted USB:
+   LUKS-encrypted USB flash drive:
 
    - ``~/.config/securedrop-admin/tor_v3_keys.json``
    - ``~/.config/securedrop-admin/mon-ssh.auth_private``
@@ -257,7 +257,7 @@ process.
       *Admin Workstation*, you may do so. In this case, copy only the first two
       files above to your additional *Admin Workstations*.
 
-      Generate per-machine SSH keys and use a clean LUKS-encrypted USB drive
+      Generate per-machine SSH keys and use a clean LUKS-encrypted USB flash drive
       to transfer the public portions of those keys to your primary
       *Admin Workstation*, where you will then add them to the servers'
       ``authorized_keys`` files, as described :ref:`here <ssh_add_pubkey>`.
@@ -266,7 +266,7 @@ process.
 #. Boot into each additional *Admin Workstation*. Set
    `an administration password`_
    and unlock the persistent volume on the Tails welcome screen.
-   Once logged in, attach the LUKS-encrypted USB
+   Once logged in, attach the LUKS-encrypted USB flash drive
    and unlock it.
 
 #. Ensure that this *Admin Workstation* is using an up-to-date version of Tails
@@ -297,7 +297,7 @@ process.
    and ``ssh mon uptime``.
 
 #. Once all *Admin Workstations* have been updated, securely wipe the files on
-   the LUKS-encrypted USB, by right-clicking them in the file manager and selecting
+   the LUKS-encrypted USB flash drive, by right-clicking them in the file manager and selecting
    **Wipe**. Then, reformat the device using the
    **Disks** utility.
 
@@ -306,16 +306,16 @@ process.
 
 .. _additional_restore_info:
 
-Additional Information
+Additional information
 ----------------------
 
 .. _restore_preserve_tor_config:
 
-Data-Only Restores
+Data-only restores
 ''''''''''''''''''
 
 The ``restore`` command normally restores both the data and the Tor
-configuration of an instance, including the .onion URLs for your instance.
+configuration of an instance, including the onion addresses for your instance.
 
 You may, however, restore data, such as submissions and journalist
 and source accounts, without altering an instance's Tor configuration, with
@@ -326,8 +326,8 @@ the following command:
    securedrop-admin restore --preserve-tor-config sd-backup-2020-07-22--01-06-25.tar.gz
 
 This is a suitable option if you have a backup archive taken from an instance
-with v2 onion services, and wish to restore it to an instance that is now using
-v3 onion services.
+with v2 *Onion Services*, and wish to restore it to an instance that is now using
+v3 *Onion Services*.
 
 If you require any assistance with migration or data recovery, please
 `contact Support`_.
