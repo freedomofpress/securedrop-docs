@@ -1,7 +1,7 @@
 Decommission SecureDrop
 =======================
 
-Protecting, Moving, or Taking Down Your SecureDrop Instance
+Protecting, moving, or taking down your SecureDrop instance
 -----------------------------------------------------------
 
 If the location hosting your SecureDrop servers is going to be empty for
@@ -14,7 +14,7 @@ servers and associated hardware:
 2. If the server room is covered by CCTV, verify that the footage will be
    monitored or reviewed periodically.
 3. Ask to have adjacent corridors included in any regular security patrols.
-4. Ask journalists to purge old submissions, to reduce the impact if the 
+4. Ask *Journalists* to purge old submissions, to reduce the impact if the 
    servers are compromised (this is good general practice in any case).
 5. If your SecureDrop instance is set up to allow SSH-over-LAN admin access,
    consider switching it to SSH-over-Tor access instead. To do so, you will
@@ -25,11 +25,11 @@ during periods of prolonged absence, it may be better to relocate it, or in
 extreme circumstances, temporarily take it down. If you decide to take down
 your SecureDrop instance, we recommend the following steps:
 
-1. Consult with journalists using the system, to ensure that any active
-   sources are aware of the situation, and that source conversations can
+1. Consult with *Journalists* using the system, to ensure that any active
+   *Sources* are aware of the situation, and that source conversations can
    either be paused or continued via other means.
-2. Update your SecureDrop landing page (typically a “send us tips” page,
-   or a page linked from there) to let prospective sources know that the
+2. Update your SecureDrop *Landing Page* (typically a “send us tips” page,
+   or a page linked from there) to let prospective *Sources* know that the
    outage is coming, and optionally to redirect them to other contact
    methods, such as a shared Signal tipline.
 3. :doc:`Back up your servers <../maintenance/backup_and_restore>`.
@@ -49,19 +49,19 @@ location or elsewhere, is a matter of reconnecting the servers to the
 firewall, attaching a WAN connection that allows unfiltered access to Tor to
 the firewall WAN port, and powering everything on.
 
-Permanently Decommissioning SecureDrop
+Permanently decommissioning SecureDrop
 --------------------------------------
 
 The following steps will guide you through the decommissioning of your
 SecureDrop instance.
 
-#. **Put a notice in advance on your landing page to inform sources that your
+#. **Put a notice in advance on your *Landing Page* to inform sources that your
    instance will soon be retired.**
    You may want to direct them to other secure methods of contacting you.
 #. **Locate and create an inventory of all your hardware.**
      - *SecureDrop Workstation* laptops
-     - *Export Devices* (USBs, optical drives, or external drives)
-     - Backup USBs/other storage media
+     - *Export Devices* (USB flash drives, optical drives, or external drives)
+     - Backup USB flash drives/other storage media
      - Servers
      - Firewall
 
@@ -69,15 +69,15 @@ SecureDrop instance.
    alias and PGP key used for receiving OSSEC alerts, in order to retire them.
 
 #. **Optional: Save a backup.**
-   If you want to save a backup of the *Application Server* (for example, to reinstall SecureDrop in the future using the same `.onion` address), follow
+   If you want to save a backup of the *Application Server* (for example, to reinstall SecureDrop in the future using the same onion address), follow
    our :doc:`backup guidelines <backup_and_restore>`. Once the backup has been
-   created, you can move it onto an encrypted device, such as a LUKS-encrypted 
-   drive. You will also require a backup of the *Submission Key* found on the
+   created, you can move it onto an encrypted drive, such as a LUKS-encrypted 
+   USB flash drive. You will also require a backup of the *Submission Private Key* found on the
    *SecureDrop Workstation*.
 
    If you do not require a server backup, you may choose to download specific
    submissions, and store them in a secure manner (such as on an encrypted
-   drive). 
+   USB flash drive). 
 #. **Optional: Delete submissions on the server.**
    Log into the *Journalist Workstation* and delete all sources to take advantage
    of SecureDrop's secure deletion properties. Note that depending on the
@@ -86,7 +86,7 @@ SecureDrop instance.
    server.
 
    You can either leave the server ample time to complete this operation, or
-   monitor the progress by SSHing to the Application server and running
+   monitor the progress by SSHing to the *Application Server* and running
 
    .. code:: sh
 
@@ -103,19 +103,19 @@ SecureDrop instance.
 #. **Disconnect the firewall and the servers from the internet.**
    Be sure to inform your network administrator of any changes to devices on
    your network.
-#. **Wipe and destroy the USB drives.**
-   Because the USB drives used for SecureDrop are all LUKS-encrypted,
-   reformatting the USB drives (in particular, overwriting a portion of internal
+#. **Wipe and destroy the USB flash drives.**
+   Because the USB flash drives used for SecureDrop are all LUKS-encrypted,
+   reformatting the USB flash drives (in particular, overwriting a portion of internal
    storage called the **LUKS header**) should be sufficient to make any existing
    data on those drives unrecoverable.
 
-   For example, you could use your *Template Tails USB* to launch Gnome Disks,
-   insert and identify the USB drive you are trying to erase, and reformat this
+   For example, you could use Tails to launch Gnome Disks,
+   insert and identify the USB flash drive you are trying to erase, and reformat this
    drive with a new, LUKS-encrypted partition, erasing the existing partition
    data.
 
    .. caution:: Be **very** sure you are reformatting the right drive.
-      You may want to use the Secure Viewing Station laptop for this procedure
+      You may want to use the *Secure Viewing Station* laptop for this procedure
       to reduce the risk of accidentally erasing a drive on your regular-use
       machine.
 
@@ -151,7 +151,7 @@ SecureDrop instance.
    select "yes."
 #. **Destroy Export media, if applicable.**
 #. **Optional: Factory-reset the firewall.**
-#. **Update your Landing Page (tips page) to reflect the fact that your organization no longer has SecureDrop.**
+#. **Update your *Landing Page* (tips page) to reflect the fact that your organization no longer has SecureDrop.**
 #. **Notify the SecureDrop Support team that your instance is no longer active.**
    If you have any questions about the decommissioning process, or about other
    secure communications options, please feel free to contact us at

@@ -1,4 +1,4 @@
-SSH Over Local Network
+SSH over local network
 ======================
 
 Under a production installation post-install, the default way to gain SSH
@@ -27,13 +27,13 @@ network instead please continue to read.
 
 .. _ssh_over_local:
 
-Configuring SSH for Local Access
+Configuring SSH for local access
 --------------------------------
 
 .. warning:: It is important that your firewall is configured adequately if you
           decide you need SSH over the local network. The install process locks
           down access as much as possible with net restrictions, SSH keys, and
-          two-factor authentication. However, you could still leave the interface
+          *Two-Factor Authentication*. However, you could still leave the interface
           exposed to unintended users if you did not properly follow our network
           firewall guide.
 

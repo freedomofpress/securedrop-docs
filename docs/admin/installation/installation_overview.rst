@@ -1,15 +1,15 @@
-Installation Overview
+Installation overview
 =====================
 
-Migrating from a Tails-Based SecureDrop
+Migrating from a Tails-based SecureDrop
 ---------------------------------------
 
-If you are migrating from an older Tails-based SecureDrop, using the separate *Secure Viewing Station*, *Journalist Workstation* and *Admin Workstation* USB drives, then skip to the :ref:`Migration Overview<migration_overview>`.
+If you are migrating from an older SecureDrop, using the separate Tails-based *Secure Viewing Station*, *Journalist workstation* and *Admin Workstation* USB flash drives, then skip to the :ref:`Migration Overview<migration_overview>`.
 
-Setting Expectations
+Setting expectations
 --------------------
 
-SecureDrop is a technical tool. It is designed to protect journalists and sources, but no tool can guarantee safety. This guide will instruct you in installing and configuring SecureDrop, but it does not explain how to use it safely and effectively. Put another way: at the end of this guide, you will have built a car; you will not know how to drive. The :ref:`Deployment Guide <deployment>` contains best practices for working with SecureDrop. Make sure to read it after completing the installation.
+SecureDrop is a technical tool. It is designed to protect *Journalists* and *Sources*, but no tool can guarantee safety. This guide will instruct you in installing and configuring SecureDrop, but it does not explain how to use it safely and effectively. Put another way: at the end of this guide, you will have built a car; you will not know how to drive. The :ref:`Deployment Guide <deployment>` contains best practices for working with SecureDrop. Make sure to read it after completing the installation.
 
 Setting up SecureDrop is a multi-step process, where each step builds on the steps that come before it. It's important that you treat the installation as a complete process, making sure not to skip any portions of the install guide or jump ahead to later content.
 
@@ -30,7 +30,7 @@ It is **critical** that you destroy this worksheet when your installation is com
 .. _`SecureDrop Installation Worksheet`: https://docs.google.com/a/freedom.press/document/d/18RMAzhx1XCgpmw366I8tItBXQTzkFy_i_D0c605DTS8/edit?usp=sharing
 
 
-Technical Summary
+Technical summary
 -----------------
 
 This installation guide will walk you through the process of setting up
@@ -39,9 +39,9 @@ the computers and services needed for a functional SecureDrop.
 During this process, you'll set up at least four devices:
 
 - *Admin Workstation*:
-   A laptop running the QubesOS operating system configured as an *Admin Workstation*, that you use to install and administer SecureDrop on the servers via SSH. If necessary (i.e. in a small newsroom), the same *SecureDrop Workstation* used for administration may be used as a *Journalist Workstation* by journalists to decrypt, view, and export submitted documents. For a larger newsroom, you may set up additional *Journalist Workstations* as needed for journalist use.
+   A laptop running the QubesOS operating system configured as an *Admin Workstation*, that you use to install and administer SecureDrop on the servers via SSH. If necessary (i.e. in a small newsroom), the same *SecureDrop Workstation* used for administration may be used as a *Journalist Workstation* by *Journalists* to decrypt, view, and export submitted documents. For a larger newsroom, you may set up additional *Journalist Workstations* as needed for *Journalist* use.
 - *Application Server*:
-   An Ubuntu server running two segmented Tor hidden services. The source connects to the *Source Interface*, a public-facing Tor Onion Service, to send messages and documents to the journalist. The journalist connects to the *Journalist Interface*, an `authenticated Tor Onion Service <https://community.torproject.org/onion-services/advanced/client-auth/>`__, using the SeucreDrop Application on a *Journalist Workstation* to download encrypted documents and respond to sources.
+   An Ubuntu server running two segmented Tor hidden services. The *Source* connects to the *Source Interface*, a public-facing Tor *Onion Service*, to send messages and documents to the *Journalist*. The *Journalist* connects to the *Journalist Interface*, an `authenticated Tor *Onion Service* <https://community.torproject.org/onion-services/advanced/client-auth/>`__, using SecureDrop Inbox on a *Journalist Workstation* to download encrypted documents and respond to *Sources*.
 - *Monitor Server*:
    An Ubuntu server that monitors the *Application Server* with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
 - Network Firewall
@@ -50,7 +50,7 @@ During this process, you'll set up at least four devices:
 A summary of the major steps is as follow:
 
 #. Acquire compatible hardware.
-#. Prepare email accounts and GPG keys for alert e-mails.
+#. Prepare email accounts and GPG keys for alert emails.
 #. Prepare an *Admin Workstation* laptop.
 #. Set up the KeePassXC password manager on the *Admin Workstation*.
 #. Install and configure the dedicated network firewall from the *Admin Workstation*. 
@@ -61,10 +61,10 @@ A summary of the major steps is as follow:
 #. Test the installation.
 
 Optionally:
-#. Prepare additional *Journalist Workstations* for use by journalists.
-#. Prepare encrypted USB *Export Drives*.
+#. Prepare additional *Journalist Workstations* for use by *Journalists*.
+#. Prepare encrypted *Export Devices*.
 
-Minimum security requirements for a SecureDrop Workstation
+Minimum security requirements for a *SecureDrop Workstation*
 ------------------------------------------------------------
 
 .. TODO Clarify differences between Journalist and Admin Workstations

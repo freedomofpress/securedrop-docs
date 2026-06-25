@@ -20,30 +20,30 @@ journalist-source communications in the first place. In addition, it attempts
 to provide a safer environment for those communications than regular corporate
 news networks, which may be compromised.
 
-Another key feature of SecureDrop is that journalists can receive submissions from unknown sources without risking the security of their own machines and
+Another key feature of SecureDrop is that *Journalists* can receive submissions from unknown sources without risking the security of their own machines and
 networks.
 
-How It Works
+How it works
 ------------
 
-Sources and journalists connect to SecureDrop using the Tor network. The SecureDrop software is running on premises on dedicated infrastructure (two physical servers and a firewall).
+*Sources* and *Journalists* connect to SecureDrop using the Tor network. The SecureDrop software is running on premises on dedicated infrastructure (two physical servers and a firewall).
 
 The following steps describe how a SecureDrop submission is submitted,
 received and reviewed:
 
-1. A source uploads a submission to the news
+1. A *Source* uploads a submission to the news
    organization using `Tor Browser <https://www.torproject.org/>`__.
 
-2. A journalist connects to SecureDrop using their *SecureDrop
-   Workstation*, where journalists can view the document,
+2. A *Journalist* connects to SecureDrop using their *SecureDrop
+   Workstation*, where *Journalists* can view the document,
    process it (e.g., to remove metadata or potential malware), print it, or
    export it to a dedicated device.
 
 .. seealso:: Check out
           :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>`
-          to read more about SecureDrop's approach to keeping sources safe.
+          to read more about SecureDrop's approach to keeping *Sources* safe.
 
-User Roles
+User roles
 --------------
 
 There are three main user roles that interact with a SecureDrop instance:
@@ -51,15 +51,15 @@ There are three main user roles that interact with a SecureDrop instance:
 :doc:`Sources </source/source>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A source submits documents and messages by using Tor Browser (or Tails) to access
-the *Source Interface*: a public onion service. Submissions are encrypted
+A *Source* submits documents and messages by using Tor Browser (or Tails) to access
+the *Source Interface*: a public *Onion Service*. Submissions are encrypted
 in place on the *Application Server* as they are uploaded.
 
 :doc:`Journalists </journalist/journalist>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Journalists working in the newsroom use a *SecureDrop Workstation* to connect
-to their SecureDrop to communicate with Sources. Journalists
+*Journalists* working in the newsroom use a *SecureDrop Workstation* to connect
+to their SecureDrop to communicate with *Sources*. *Journalists*
 download `GPG <https://www.gnupg.org/>`__-encrypted submissions.
 Apart from those deliberately published, decrypted documents are never
 accessed in an Internet-connected environment.
@@ -69,10 +69,10 @@ accessed in an Internet-connected environment.
 
 The SecureDrop servers are managed by a systems admin; for larger
 newsrooms, there may be a team of systems admins. The admin
-connects to the *Application* and *Monitor Servers* over  `authenticated onion services <https://tb-manual.torproject.org/onion-services/>`__, and manages them
+connects to the *Application* and *Monitor Servers* over  `authenticated Onion Services <https://tb-manual.torproject.org/onion-services/>`__, and manages them
 using `Ansible <https://www.ansible.com/>`__.
 
-Project History
+Project history
 ---------------
 
 The web application, which was originally called DeadDrop, was developed by
@@ -92,7 +92,7 @@ project's early years at FPF, development was driven by James Dolan and
 Today, SecureDrop is maintained by a small full-time development team at
 FPF and a growing volunteer community.
 
-Technology and Contributions
+Technology and contributions
 ----------------------------
 
 SecureDrop and SecureDrop Workstation are open source projects of
@@ -102,7 +102,7 @@ by `contributing to SecureDrop <https://developers.securedrop.org/en/latest/cont
 
 Our work would not be possible without the larger open source community.
 
-`Tor <https://www.torproject.org/?>`_ provides the foundation for the the anonymizing network that allows Sources, Journalists, and Administrators to maintain their privacy while connecting to SecureDrop.
+`Tor <https://www.torproject.org/?>`_ provides the foundation for the the anonymizing network that allows *Sources*, *Journalists*, and administrators to maintain their privacy while connecting to SecureDrop.
 
 We're deeply grateful to the SecureDrop volunteer community for translating
 our software into many languages. Their work is enabled by `Weblate <https://weblate.org/>`_, an open source platform for continuous localization. You can `make a donation <https://weblate.org/en/donate/>`_
@@ -123,7 +123,7 @@ Finally, SecureDrop Workstation relies on many other open source projects such a
 Privacy
 -------
 
-The SecureDrop application does not record your IP address, information about
+The SecureDrop web interface does not record your IP address, information about
 your browser, computer, or operating system. Furthermore, the SecureDrop pages
 do not embed third-party content or deliver persistent cookies to your browser.
 The server will only store the date and time of the newest message sent from
@@ -133,13 +133,13 @@ message is automatically deleted.
 Journalists are also encouraged to regularly delete all information from the
 SecureDrop server and store anything they would like saved in offline storage
 to minimize risk. More detailed information can be found in our
-:ref:`sample privacy policy <Sample Privacy Policy>`, which we encourage news organizations using SecureDrop to adopt from when creating their own. Make sure to also follow our :ref:`best practices for creating the SecureDrop landing page <Landing Page>` so that it logs as little information as possible as well.
+:ref:`sample privacy policy <Sample Privacy Policy>`, which we encourage news organizations using SecureDrop to adopt from when creating their own. Make sure to also follow our :ref:`best practices for creating the SecureDrop *Landing Page* <Landing Page>` so that it logs as little information as possible as well.
 
 Security
 --------
 
 While we can't guarantee 100% security (no organization or product can), the
-goal of SecureDrop is to create a significantly more secure environment for sources to share information than exists through normal digital channels. Of course, there are always risks. That said, each release of SecureDrop with major architectural changes goes through a security audit by a reputable third party security firm.
+goal of SecureDrop is to create a significantly more secure environment for *Sources* to share information than exists through normal digital channels. Of course, there are always risks. That said, each release of SecureDrop with major architectural changes goes through a security audit by a reputable third party security firm.
 
 Audits
 ------
@@ -170,13 +170,13 @@ or are able to use recycled machines sourced from within your organization.
 
 As part of priority support agreements and on a pro-bono basis for smaller news
 organizations, Freedom of the Press Foundation will visit your offices, help
-set up SecureDrop and train journalists to use it. (For pro-bono support, we
+set up SecureDrop and train *Journalists* to use it. (For pro-bono support, we
 request that our travel costs are covered.)
 
-Environment Overview
+Environment overview
 --------------------
 
-Server Infrastructure
+Server infrastructure
 ~~~~~~~~~~~~~~~~~~~~~
 
 At SecureDrop's heart is a pair of servers: the *Application (“App”) Server*,
@@ -188,39 +188,39 @@ and must be physically located on-site within your organization's premises.
 
 - *Application Server*:
    An Ubuntu server running two segmented Tor hidden
-   services. The source connects to the *Source Interface*, a public-facing Tor
-   Onion Service, to send messages and documents to the journalist. The
-   journalist connects to the *Journalist Interface*, an `authenticated Tor
-   Onion Service
+   services. The *Source* connects to the *Source Interface*, a public-facing Tor
+   *Onion Service*, to send messages and documents to the *Journalist*. The
+   *Journalist* connects to the *Journalist Interface*, an `authenticated Tor
+   *Onion Service*
    <https://community.torproject.org/onion-services/advanced/client-auth/>`__, to
-   download encrypted documents and respond to sources.
+   download encrypted documents and respond to *Sources*.
 - *Monitor Server*:
    An Ubuntu server that monitors the *Application Server*
    with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
 
 The servers connect to the network via a dedicated hardware firewall.
 
-Application Environment
+SecureDrop Workstations
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The SecureDrop application environment consists of at least one laptop,
+The SecureDrop environment consists of at least one laptop,
 in addition to the servers described above:
 
 - *SecureDrop Workstation:*
-   The laptop used by Journalists to download encrypted documents
-   and respond to sources, and used by Administrators to perform maintenance on the servers. 
+   The laptop used by *Journalists* to download encrypted documents
+   and respond to *Sources*, and used by administrators to perform maintenance on the servers. 
 
 Operation
 ---------
 
-Planning & Preparation
+Planning & preparation
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Setting up SecureDrop is a multi-step process. Before getting started, you
 should make sure that you're prepared to operate and maintain it. You'll need
 a systems admin who's familiar with Linux, the GNU utilities, and the
 Bash shell. You'll need the :doc:`hardware </admin/installation/hardware>` 
-on which SecureDrop runs — this will normally cost $2000-$3000. The journalists
+on which SecureDrop runs — this will normally cost $2000-$3000. The *Journalists*
 in your organization will need to be trained in the operation of SecureDrop,
 and you'll need to publish and promote your new SecureDrop instance afterwards —
 using your existing websites, mailing lists, and social media.
@@ -230,7 +230,7 @@ If you need help, contact the `Freedom of the Press Foundation
 <https://securedrop.org/help>`__ who will be glad to help walk you through
 the process and make sure that you're ready to proceed.
 
-Technical Setup
+Technical setup
 ~~~~~~~~~~~~~~~
 
 Once you are familiar with the architecture and have all the hardware,
@@ -238,10 +238,10 @@ Once you are familiar with the architecture and have all the hardware,
 least a day's work for your admin. We recommend that you set aside at least
 a week to :ref:`complete and test <Deployment>` your setup.
 
-Provisioning & Training
+Provisioning & training
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Once SecureDrop is installed, journalists will need to be provided with
+Once SecureDrop is installed, *Journalists* will need to be provided with
 accounts, two-factor credentials, workstations, and so on — and then
 trained to use these tools safely and reliably. You will probably also need to train additional backup admins so that you can be sure that your SecureDrop setup keeps running even when your main admin is on holiday.
 
@@ -254,7 +254,7 @@ multiple offices, training will need to happen at each location. Again, the
 `Freedom of the Press Foundation <https://securedrop.org/help>`__ are happy to
 help you plan and train your team.
 
-Going Public
+Going public
 ~~~~~~~~~~~~
 
 Once you have a SecureDrop instance and your team knows how to use it, you
@@ -268,24 +268,24 @@ SecureDrop *Landing Page* and our guide to
 .. |SecureDrop architecture highlevel overview diagram| image:: /diagrams/securedrop_overview_highlevel.png
   :width: 100%
 
-Sharing Access
+Sharing access
 --------------
 
-With Other Journalists In Your Organization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+With other *Journalists* in your organization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 While SecureDrop supports having multiple journalist accounts for the document
 interface, all accounts will access the same inbox. To avoid confusion, we
-recommend news organizations assign 1-3 journalists to regularly check
+recommend news organizations assign 1-3 *Journalists* to regularly check
 SecureDrop and make sure that they all are in contact as to who is responsible
-for responding to each source. 
+for responding to each *Source*. 
 
-With Other Organizations
+With other organizations
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Currently you cannot use SecureDrop with multiple organizations for security
 reasons. One of the benefits of SecureDrop is that it completely eliminates
 third parties from your communication channel. The media organization owns and
-operates the server that both the source and journalist connect to.
+operates the server that both the *Source* and *Journalist* connect to.
 
 Any legal request or order has to be served on the media organization operating
 the SecureDrop server, giving them a chance to challenge it before handing over

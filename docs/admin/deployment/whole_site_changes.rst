@@ -1,4 +1,4 @@
-Whole Site Changes
+Whole site changes
 ==================
 
 Ideally, some or all of the following changes are made to improve the
@@ -26,8 +26,8 @@ analysis.
 Suggested
 ---------
 
--  For publicly advertised SecureDrop instances display the Source
-   Interface's Onion Service onion address on all of the organization
+-  For publicly advertised SecureDrop instances display the *Source
+   Interface*'s *Onion Service* onion address on all of the organization
    public pages.
--  Mirror Tor Browser and Tails so sources do not have to
+-  Mirror Tor Browser and Tails so *Sources* do not have to
    visit `torproject.org <https://www.torproject.org>`__ to download it.

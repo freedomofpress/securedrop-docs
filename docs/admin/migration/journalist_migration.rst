@@ -1,4 +1,4 @@
-Migrating a Journalist Workstation
-==================================
+Migrating a *Journalist Workstation*
+====================================
 
 .. TODO

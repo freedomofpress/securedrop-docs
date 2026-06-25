@@ -9,7 +9,7 @@ successfully install and operate a SecureDrop instance, and recommends
 some specific components that we have found to work well. If you have
 any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
 
-Hardware Overview
+Hardware overview
 -----------------
 
 .. _Required Hardware:
@@ -22,8 +22,8 @@ For an installation of SecureDrop, you must acquire:
 * At least 1 dedicated physical laptop for the *SecureDrop Workstation*.
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
-* At least 1 USB drive for OS installation media,
-  and at least 1 more USB drive if needed as an *Export Device*.
+* At least 1 USB flash drive for OS installation media,
+  and at least 1 more USB flash drive if needed as an *Export Device*.
 
 .. _Optional Hardware:
 
@@ -32,10 +32,10 @@ Additionally, you may want to consider the following purchases:
 * a printer without wireless network support, to use in combination with the
   *SecureDrop Workstation*.
 * an external hard drive for server backups.
-* a USB drive to store backups of your *SecureDrop Workstation*.
+* a USB flash drive to store backups of your *SecureDrop Workstation*.
 * a security key for HOTP authentication, such as a YubiKey, if you want to
-  use hardware-based two-factor authentication instead of a mobile app.
-* a USB drive with a physical write protection switch, or a USB write blocker,
+  use hardware-based *Two-Factor Authentication* instead of a mobile app.
+* a USB flash drive with a physical write protection switch, or a USB write blocker,
   if you want to mitigate the risk of introducing malware from your network to
   your *SecureDrop Workstation* during repeated use of an *Export Device*.
   
@@ -47,6 +47,7 @@ Additionally, you may want to consider the following purchases:
 
 Advice for users on a tight budget
 ----------------------------------
+
 If you cannot afford to purchase new hardware for your
 SecureDrop instance, we encourage you to consider
 re-purposing existing hardware to use with SecureDrop. If
@@ -67,7 +68,7 @@ determination is outside the scope of this document.
 
 .. _Hardware Recommendations:
 
-Required Hardware
+Required hardware
 -----------------
 
 Servers
@@ -125,7 +126,7 @@ organization for both technical and legal reasons:
   the context of SecureDrop, this means that the provider could
   access extremely sensitive information, such as the plaintext of
   submissions or the encryption keys used to identify and access
-  the onion services.
+  the *Onion Services*.
 
 * In addition, attackers with legal authority such as law
   enforcement agencies may (depending on the jurisdiction) be able
@@ -153,6 +154,7 @@ our support or consent.
 
 14th-gen NUC
 ~~~~~~~~~~~~
+
 We have tested and can recommend the `ASUS NUC14RVH <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro/>`__.
 It provides both 22x80 and 22x42 M.2 ports for NVMe SSD storage, as well as a 2.5 inch drive bay for a SATA hard
 drive or SSD (if using this slot, we recommend choosing an SSD).
@@ -173,6 +175,7 @@ the picture. Cover the free ends with electrical tape after disconnecting them.
 
 13th-gen NUC
 ~~~~~~~~~~~~
+
 We have tested and can recommend the `ASUS NUC13ANHi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-13-pro/>`__.
 It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
 22x42 port for a SATA drive. It also has a 2.5 inch drive bay for a SATA hard
@@ -194,6 +197,7 @@ after disconnecting them.
 
 12th-gen NUC
 ~~~~~~~~~~~~
+
 We have tested and can recommend the `NUC12WSKi5 <https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/nuc-12-pro-mini-pc/techspec/>`__.
 It provides two M.2 SSD storage options: a 22x80 port for an NVMe drive, and a 
 22x42 port for a SATA drive.
@@ -212,6 +216,7 @@ after disconnecting them.
 
 11th-gen NUC
 ~~~~~~~~~~~~
+
 We have tested and can recommend the `Intel NUC11PAHi3 <https://www.asus.com/us/displays-desktops/nucs/nuc-kits/nuc-11-performance-kit/techspec/>`__.
 It provides two storage options: M.2 SSD storage and a 2.5" secondary storage
 option (SSD or HDD).
@@ -324,7 +329,7 @@ laptop that we have directly tested (in that order); however, if none of those
 suit your needs, or if you want to see if your existing hardware might be
 Qubes compatible, the HCL is a good choice.
 
-Network Firewall
+Network firewall
 ^^^^^^^^^^^^^^^^
 
 You will need one physical computer that is used as a dedicated firewall
@@ -341,11 +346,12 @@ We recommend a 4 NIC network firewall and currently provide setup instructions f
 An acceptable alternative that requires more technical expertise is
 to :doc:`configure an existing hardware firewall <network_firewall>`.
 
-Two-factor Device
+Two-factor device
 ^^^^^^^^^^^^^^^^^
-Two-factor authentication is used when connecting to different parts of the
-SecureDrop system. Each admin and each journalist needs a two-factor
-device. We currently support two options for two-factor authentication:
+
+*Two-Factor Authentication* is used when connecting to different parts of the
+SecureDrop system. Each admin and each *Journalist* needs a two-factor
+device. We currently support two options for *Two-Factor Authentication*:
 
 * Your existing smartphone with an app that computes TOTP codes
   (e.g. FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ and `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__).
@@ -355,26 +361,27 @@ device. We currently support two options for two-factor authentication:
 
 .. include:: ../../includes/otp-app.txt
 
-USB Drives
-^^^^^^^^^^
-Journalists need physical media (known as the
+USB flash drives
+^^^^^^^^^^^^^^^^
+
+*Journalists* need physical media (known as the
 *Export Device*) to copy submissions to their everyday workstation.
 
-Our standard recommendation is to use USB drives, in combination with
+Our standard recommendation is to use USB flash drives, in combination with
 volume-level encryption and careful data hygiene. We also urge the use
 of a secure printer or similar analog conversions to 
 export documents from the *SecureDrop Workstation*, whenever possible.
 
-You may want to consider enforcing write protection on USB drives when only read
+You may want to consider enforcing write protection on USB flash drives when only read
 access is needed. We encourage you to evaluate these options in the context of
 your own threat model. When it is consistently applied and correctly implemented in hardware, write
 protection can prevent the spread of malware from the computers used to read
-files stored on an *Export Device*. The two main options to achieve write protection of USB drives are:
+files stored on an *Export Device*. The two main options to achieve write protection of USB flash drives are:
 
 - drives with a built-in physical write protection switch
 - a separate USB write blocker device as used in forensic applications.
 
-For USB drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__,
+For USB flash drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__,
 and it works well with and without encryption.
 
 It is especially advisable to enable write protection before attaching an
@@ -384,22 +391,23 @@ of the Tails operating system.
 Please review our :doc:`setup guide <provisioning_usb>`
 for additional background on setting up *Export Devices*.
 
-We also recommend buying an additional USB drive for making regular backups of
+We also recommend buying an additional USB flash drive for making regular backups of
 your *SecureDrop Workstations*.
 
-One thing to consider is that you are going to have *a lot* of USB drives to
+One thing to consider is that you are going to have *a lot* of USB flash drives to
 keep track of, so you should consider how you will label or identify them and
 buy drives accordingly. Drives that are physically larger are often easier to
 label (e.g. with tape, printed sticker or a label from a labelmaker).
 
 
-Monitor, Keyboard, Mouse
+Monitor, keyboard, mouse
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
 You will need these to do the initial installation of Ubuntu on the
 *Application* and *Monitor Servers*.
 
 
-Optional Hardware
+Optional hardware
 -----------------
 
 This hardware is not *required* to run a SecureDrop instance, but most
@@ -427,7 +435,7 @@ Driverless
 
 You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
 
-USB Ports
+USB ports
 ~~~~~~~~~
 
 SecureDrop Workstation only supports printing over USB, so ensure the printer you select has a **USB port**.
@@ -445,7 +453,7 @@ To maintain the isolation of SecureDrop Workstation, it is essential that your p
 * Use this printer exclusively with SecureDrop Workstation and do not connect it directly to other computers.
 
 
-Backup Storage
+Backup storage
 ^^^^^^^^^^^^^^
 
 It's useful to run periodic backups of the servers in case of failure. We
@@ -453,7 +461,7 @@ recommend buying an external hard drive to store server backups.
 
 .. include:: ../../includes/encrypting-drives.txt
 
-Hardware End-of-Life
+Hardware end-of-life
 --------------------
 
 No matter what hardware you decide to use, it's important to be mindful of
