@@ -19,17 +19,24 @@ nonprofit organization.
 How it works
 ------------
 
-Sources and journalists connect to SecureDrop using the Tor network. A source
-uploads a submission via `Tor Browser <https://www.torproject.org/>`__ to the
-*Source Interface*, a public onion service. A journalist then connects using
-their *SecureDrop Workstation* to view, process, and respond to submissions.
-Submissions are encrypted in place on the *Application Server* as they are
-uploaded, and decrypted documents are never accessed in an Internet-connected
-environment.
+.. figure:: /diagrams/securedrop_overview_highlevel.png
 
-SecureDrop connects journalists and their sources directly, without third parties, and substantially limits recorded metadata. It puts news organizations in control to challenge any legal orders seeking data.
+*Sources* and *Journalists* connect to SecureDrop using the Tor network. The SecureDrop software is running on premises on dedicated infrastructure (two physical servers and a firewall).
 
-.. seealso:: :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>`
+The following steps describe how a SecureDrop submission is submitted,
+received and reviewed:
+
+1. A *Source* uploads a submission to the news
+   organization using `Tor Browser <https://www.torproject.org/>`__.
+
+2. A *Journalist* connects to SecureDrop using their *SecureDrop
+   Workstation*, where *Journalists* can view the document,
+   process it (e.g., to remove metadata or potential malware), print it, or
+   export it to a dedicated device.
+
+.. seealso:: Check out
+          :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>`
+          to read more about SecureDrop's approach to keeping *Sources* safe.
 
 
 User roles
