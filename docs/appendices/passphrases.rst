@@ -1,5 +1,5 @@
-Passphrases overview
-====================
+Passphrases
+===========
 
 Each individual with a role (admin or *Journalist*) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation. 
 
