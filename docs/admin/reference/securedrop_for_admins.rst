@@ -1,5 +1,5 @@
-Introduction for SecureDrop administrators
-==========================================
+SecureDrop for *administrators*
+===============================
 
 SecureDrop servers are managed by a systems administrator.
 

@@ -168,7 +168,6 @@ or making `a donation <https://freedom.press/donate>`_.
    :maxdepth: 2
    :hidden:
 
-   admin/installation/intro_for_admins
    admin/installation/installation_overview
    admin/installation/passphrases.rst
    admin/installation/email_alerts
@@ -223,6 +222,7 @@ or making `a donation <https://freedom.press/donate>`_.
    :maxdepth: 2
    :hidden:
    
+   admin/reference/securedrop_for_admins
    admin/reference/admin_interface
    admin/reference/ossec_alerts
    admin/reference/ssh_access
