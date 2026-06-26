@@ -23,7 +23,7 @@ information to send to a news organization, it may be okay to use a traditional
 methods such as phone or email when reaching out.
 
 SecureDrop can accept both messages and individual file uploads (up to 500MB).
-If you have multiple files to submit, you may do that. As a *source*, you can also
+If you have multiple files to submit, you may do that. As a *Source*, you can also
 return to receive follow-up correspondence with an organization,
 or to send additional information. Dozens of news organizations
 — from *ProPublica* to *The New York Times* — use SecureDrop
