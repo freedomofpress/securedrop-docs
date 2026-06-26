@@ -164,7 +164,7 @@ RAM and storage, we recommend that you disconnect the wireless antennae leads
 from the AX211 component. They're the wires highlighted in the red box in
 the picture. Cover the free ends with electrical tape after disconnecting them.
 
-.. figure:: ../../images/hardware/nuc14_leads.jpg
+.. figure:: ../images/hardware/nuc14_leads.jpg
 
   The location of the wireless card within the NUC14
 
@@ -187,7 +187,7 @@ you remove the wireless card and disconnect the wireless antennae leads
 from the AX211 component. Be sure to cover the free ends with electrical tape
 after disconnecting them.
 
-.. figure:: ../../images/hardware/nuc13_leads.jpg
+.. figure:: ../images/hardware/nuc13_leads.jpg
 
   The location of the wireless card within the NUC13
   
@@ -208,7 +208,7 @@ you remove the wireless card and disconnect the wireless antennae leads
 from the AX211 component. Be sure to cover the free ends with electrical tape
 after disconnecting them.
 
-.. figure:: ../../images/hardware/nuc12_leads.jpg
+.. figure:: ../images/hardware/nuc12_leads.jpg
 
   The location of the wireless card within the NUC12
   
@@ -231,7 +231,7 @@ the picture. Cover the free ends with electrical tape after disconnecting them.
 Before the initial OS installation, boot into the BIOS by pressing **F2** at
 startup and adjust the system configuration:
 
-.. |NUC11 leads| image:: ../../images/hardware/nuc11_leads.jpg
+.. |NUC11 leads| image:: ../images/hardware/nuc11_leads.jpg
 
 Workstations
 ^^^^^^^^^^^^
@@ -344,7 +344,7 @@ We recommend a 4 NIC network firewall and currently provide setup instructions f
   running `pfSense Plus <https://www.pfsense.org/>`__. This device is overspecced for SecureDrop's purposes, but can be used if the other cheaper firewalls can't be procured.
 
 An acceptable alternative that requires more technical expertise is
-to :doc:`configure an existing hardware firewall <network_firewall>`.
+to :doc:`configure an existing hardware firewall <../admin/installation/network_firewall>`.
 
 Two-factor device
 ^^^^^^^^^^^^^^^^^
@@ -359,7 +359,7 @@ device. We currently support two options for *Two-Factor Authentication*:
 * A dedicated hardware dongle that computes HOTP codes (e.g. a
   `YubiKey <https://www.yubico.com/setup/>`__).
 
-.. include:: ../../includes/otp-app.txt
+.. include:: ../includes/otp-app.txt
 
 USB flash drives
 ^^^^^^^^^^^^^^^^
@@ -388,7 +388,7 @@ It is especially advisable to enable write protection before attaching an
 *Export Device* to an everyday workstation that lacks the security protections
 of the Tails operating system.
 
-Please review our :doc:`setup guide <provisioning_usb>`
+Please review our :doc:`setup guide <../admin/installation/provisioning_usb>`
 for additional background on setting up *Export Devices*.
 
 We also recommend buying an additional USB flash drive for making regular backups of
@@ -429,9 +429,9 @@ Driverless
 
 *SecureDrop Workstation* implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
 
-.. figure:: ../workstation_reference/images/airprint.jpg
+.. figure:: ../admin/workstation_reference/images/airprint.jpg
 
-.. figure:: ../workstation_reference/images/moipra.jpg
+.. figure:: ../admin/workstation_reference/images/moipra.jpg
 
 You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
 
@@ -459,7 +459,7 @@ Backup storage
 It's useful to run periodic backups of the servers in case of failure. We
 recommend buying an external hard drive to store server backups.
 
-.. include:: ../../includes/encrypting-drives.txt
+.. include:: ../includes/encrypting-drives.txt
 
 Hardware end-of-life
 --------------------

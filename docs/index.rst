@@ -134,6 +134,7 @@ or making `a donation <https://freedom.press/donate>`_.
 
    introduction/what_makes_securedrop_unique
    introduction/securedrop_workstation
+   introduction/hardware
    introduction/getting_support
    introduction/history
 
@@ -169,7 +170,6 @@ or making `a donation <https://freedom.press/donate>`_.
 
    admin/installation/intro_for_admins
    admin/installation/installation_overview
-   admin/installation/hardware
    admin/installation/passphrases.rst
    admin/installation/email_alerts
    admin/installation/prepare_sdw

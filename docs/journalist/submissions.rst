@@ -61,7 +61,7 @@ A full list of supported filetypes can be found `here <https://github.com/freedo
 Printing submissions from the *Journalist Workstation*
 ------------------------------------------------------
 
-To print a document, a :doc:`compatible printer <../admin/installation/hardware>`  must be plugged into the computer's USB port.
+To print a document, a :doc:`compatible printer <../introduction/hardware>`  must be plugged into the computer's USB port.
 
 1. Click "Print" button and wait for ``sd-devices`` qube to start.
 2. You will prompted to attach your printer.
