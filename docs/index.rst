@@ -169,7 +169,6 @@ or making `a donation <https://freedom.press/donate>`_.
    :hidden:
 
    admin/installation/installation_overview
-   admin/installation/passphrases.rst
    admin/installation/email_alerts
    admin/installation/prepare_sdw
    admin/installation/generate_submission_key
@@ -257,6 +256,7 @@ or making `a donation <https://freedom.press/donate>`_.
    :hidden:
 
    appendices/glossary
+   appendices/passphrases
    appendices/threat_model/threat_model.rst
    appendices/threat_model/dataflow.rst
    appendices/threat_model/mitigations.rst

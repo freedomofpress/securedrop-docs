@@ -28,7 +28,7 @@ The administrator will be using an *Admin Workstation* configured to connect to 
 
 The admin will also need to have a way to generate *Two-Factor Authentication* codes.
 
-.. include:: ../../includes/otp-app.txt
+.. include:: ../includes/otp-app.txt
 
 And the admin will also have the following two credentials:
 
@@ -106,4 +106,4 @@ space or hyphen.
 |screenshot of KeePassXC passphrase generation feature, showing a
 randomly generated 7-word passphrase|
 
-.. |screenshot of KeePassXC passphrase generation feature, showing a randomly generated 7-word passphrase| image:: ../../images/screenshots/keepassxc-diceware.png
+.. |screenshot of KeePassXC passphrase generation feature, showing a randomly generated 7-word passphrase| image:: ../images/screenshots/keepassxc-diceware.png
