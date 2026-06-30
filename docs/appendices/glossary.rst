@@ -89,18 +89,6 @@ service address for the SecureDrop website.
 Read more about `*Onion Services* in Tor's glossary
 <https://support.torproject.org/onionservices/>`__.
 
-Onion Service versions
-""""""""""""""""""""""
-
-Distinguishing between different generations of *Onion Services* is easy:
-v3 addresses are longer (56 characters) than v2 addresses (16 characters).
-
-The third generation of *Onion Services* (v3) provides stronger cryptographic
-algorithms than v2 *Onion Services*, and includes redesigned protocols that
-guard against service information leaks on the Tor network.
-
-Only v3 *Onion Services* are supported by SecureDrop.
-
 OSSEC Alert Public Key
 ----------------------
 
