@@ -6,7 +6,7 @@ The *Journalist Workstation* aggregates system logs from all its VMs in the ``sd
 Please note that while the logs do not include original filenames or message contents, they do contain sensitive information, e.g.:
 
 - timing and usage information related to SecureDrop access
-- the two-word designation for a given *Source*
+- the two-word designation for a given Source
 - metadata about submissions and replies
 - error messages that disclose further details
 

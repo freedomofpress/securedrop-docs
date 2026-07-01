@@ -1,12 +1,12 @@
-SecureDrop for *Sources*
+SecureDrop for Sources
 ========================
 
 .. note::
 
-   This guide provides an introduction to using SecureDrop as a *Source*.
+   This guide provides an introduction to using SecureDrop as a Source.
    It is not exhaustive, it does not address ethical or legal dimensions of
    whistleblowing, and it does not speak to other methods for confidentially
-   communicating with *Journalists*. Please proceed at your own risk. For additional
+   communicating with Journalists. Please proceed at your own risk. For additional
    background, also see the Freedom of the Press Foundation guide, `How to Share Sensitive
    Leaks With the Press <https://freedom.press/news/sharing-sensitive-leaks-press/>`__.
 
@@ -21,14 +21,14 @@ What is SecureDrop?
 -------------------
 
 SecureDrop is a tool that news organizations and NGOs use that enables secure
-and anonymous communication between whistleblowers and *Journalists*.
+and anonymous communication between whistleblowers and Journalists.
 No personal information is collected; information submitted to SecureDrop is
 encrypted, and SecureDrop is not a “cloud” service. If you don't have sensitive
 information to send to a news organization, it may be okay to use a traditional
 methods such as phone or email when reaching out.
 
 SecureDrop can accept both messages and individual file uploads (up to 500MB).
-If you have multiple files to submit, you may do that. As a *Source*, you can also
+If you have multiple files to submit, you may do that. As a Source, you can also
 return to receive follow-up correspondence with an organization,
 or to send additional information. Dozens of news organizations
 — from *ProPublica* to *The New York Times* — use SecureDrop

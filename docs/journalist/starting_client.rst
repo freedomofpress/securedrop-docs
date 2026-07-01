@@ -53,9 +53,9 @@ Seen and unseen submissions
 ---------------------------
 
 Sources with submissions (messages or files) that have not been seen by
-any *Journalist* will be displayed in bold text in the source list.
+any Journalist will be displayed in bold text in the source list.
 
-As soon as any *Journalist* clicks on a source with unseen submissions, it
+As soon as any Journalist clicks on a source with unseen submissions, it
 will be marked as seen (no longer displayed in bold text) for all users.
 
 Working offline

@@ -203,11 +203,11 @@ into your servers, you should first perform the following troubleshooting steps:
 
 #. **Ensure that you are connected to Tor.** 
 
-#. **Ensure your servers are online.** Visit the *Admin Interface* to check
-   your *Application Server* is online, and you can trigger a 
-   :ref:`test OSSEC alert <test-OSSEC-alert>` to verify your *Monitor Server* is online.
+#. **Ensure your servers are online.** Visit the Admin Interface to check
+   your Application Server is online, and you can trigger a 
+   :ref:`test OSSEC alert <test-OSSEC-alert>` to verify your Monitor Server is online.
 
-#. **Ensure that SSH aliases and *Onion Service* authentication are configured:**
+#. **Ensure that SSH aliases and Onion Service authentication are configured:**
 
    - First, ensure that the correct configuration files are present in
      ``~/.config/securedrop-admin``:

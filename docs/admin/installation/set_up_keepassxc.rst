@@ -52,14 +52,14 @@ the template are:
 **Admin**:
 
 - Admin account username
-- *Application Server* SSH Onion address
+- Application Server SSH Onion address
 - Email account for sending OSSEC alerts
-- *Monitor Server* SSH Onion address
+- Monitor Server SSH Onion address
 - Network Firewall Admin Credentials
-- *OSSEC Alert Public Key*
+- OSSEC Alert Public Key
 - SecureDrop Login Credentials
 
-**Journalist**:
+*Journalist*:
 
 - Auth Value: *Journalist Interface*
 - Onion URL: *Journalist Interface*

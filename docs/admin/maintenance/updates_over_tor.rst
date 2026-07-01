@@ -12,13 +12,13 @@ configured to provide unrestricted access.
 Configuring updates over Tor
 ----------------------------
 
-These steps will need to be applied to both the *Application Server* and the
-*Monitor Server*.
+These steps will need to be applied to both the Application Server and the
+Monitor Server.
 
 As mentioned earlier, this is meant to be a temporary measure.
 Notably, running ``securedrop-admin install`` will overwrite these changes.
 
-1. From your *Admin Workstation*, SSH into the *Application Server* or *Monitor Server* using ``ssh app`` or ``ssh mon``.
+1. From your Admin Workstation, SSH into the Application Server or Monitor Server using ``ssh app`` or ``ssh mon``.
 2. Run ``sudo nano /etc/tor/torrc`` to edit the Tor configuration.
    Replace the first line of ``SocksPort 0`` with ``SocksPort 127.0.0.1:9050`` and save the file.
 3. Run ``sudo systemctl reload tor@default`` for the new configuration to take effect.
@@ -36,4 +36,4 @@ Notably, running ``securedrop-admin install`` will overwrite these changes.
 Disabling updates over Tor
 --------------------------
 
-From your *Admin Workstation*, run ``securedrop-admin install``. This will overwrite all the above changes.
+From your Admin Workstation, run ``securedrop-admin install``. This will overwrite all the above changes.

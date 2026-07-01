@@ -4,11 +4,11 @@ Backing up and restoring servers
 Maintaining regular backups helps guard against data
 loss and hardware failure. Having a recent backup will allow you to redeploy
 SecureDrop without changing onion addresses, recreating journalist accounts,
-or losing previous submissions from *Sources*.
+or losing previous submissions from Sources.
 
-.. note:: Only the *Application Server* is backed up and restored, including
-          historical submissions and both *Source Interface* and *Journalist
-          Interface* URLs. The *Monitor Server* needs to be configured from
+.. note:: Only the Application Server is backed up and restored, including
+          historical submissions and both Source Interface and *Journalist
+          Interface* URLs. The Monitor Server needs to be configured from
           scratch in the event of a hardware migration.
 
 Minimizing disk use
@@ -17,15 +17,15 @@ Minimizing disk use
 Since the backup and restore operations both involve transferring *all* of
 your SecureDrop's stored submissions over Tor, the process can take a long time.
 
-Encouraging *Journalists* to regularly delete older, unneeded submissions from
-the *Journalist Interface* will save time and improve reliability when
+Encouraging Journalists to regularly delete older, unneeded submissions from
+the Admin Interface will save time and improve reliability when
 doing backups.
 
-.. tip:: Although it varies, the average throughput of an *Onion Service* is
+.. tip:: Although it varies, the average throughput of an Onion Service is
          about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
          restore accordingly.
 
-On the *Application Server*, open a Terminal via **Apps ▸ System Tools ▸ Console** on the *Admin Workstation* and run
+On the Application Server, open a Terminal via **Apps ▸ System Tools ▸ Console** on the Admin Workstation and run
 
 .. code:: sh
 
@@ -62,7 +62,7 @@ Backing up
 Check connectivity
 ''''''''''''''''''
 
-Open a Terminal via **Apps ▸ System Tools ▸ Console** on your *Admin Workstation* and verify it is able to run Ansible and connect to
+Open a Terminal via **Apps ▸ System Tools ▸ Console** on your Admin Workstation and verify it is able to run Ansible and connect to
 the SecureDrop servers.
 
 .. code:: sh
@@ -83,7 +83,7 @@ When you are ready to begin the backup, run
 
 The backup command will display updates on its progress as the backup is created.
 Run time will vary depending on connectivity and the number of submissions
-saved on the *Application Server*.
+saved on the Application Server.
 
 When the backup action is complete, the backup will be stored as a compressed
 archive in ``~/.config/securedrop-admin``. The filename
@@ -92,7 +92,7 @@ initiated, and ending with ``.tar.gz``. You can find the full path to the backup
 archive in the output of the backup command.
 
 .. warning:: The backup file contains sensitive information! It should only
-             be stored on the *Admin Workstation*, or on a
+             be stored on the Admin Workstation, or on a
              dedicated encrypted backup USB flash drive.
 .. include:: ../../includes/backup-warning.txt
 
@@ -102,10 +102,10 @@ Restoring from a backup
 Prerequisites
 '''''''''''''
 
-To perform a restore, boot into the *Admin Workstation* and
+To perform a restore, boot into the Admin Workstation and
 ensure that your ``.tar.gz`` backup archive has been copied to
 ``~/.config/securedrop-admin``.
-(If you are using the same *Admin Workstation* as you did when you took the
+(If you are using the same Admin Workstation as you did when you took the
 backup, the archive will already be in place).
 
 If you are restoring data onto an existing instance (for example, for data
@@ -136,7 +136,7 @@ Make sure to replace ``sd-backup-2020-07-22--01-06-25.tar.gz`` with the filename
 for your backup archive.
 
 This command attempts to restore submissions, source and journalist accounts,
-and configuration details for the *Onion Services* used by the web interfaces and
+and configuration details for the Onion Services used by the web interfaces and
 SSH (if configured).
 
 .. _migrating:
@@ -146,7 +146,7 @@ Migrating using a backup
 
 Moving a SecureDrop instance to new hardware involves:
 
-  - Backing up the old instance and preserving configuration and credentials from the *Admin Workstation*;
+  - Backing up the old instance and preserving configuration and credentials from the Admin Workstation;
   - Installing SecureDrop on new hardware;
   - Restoring the backup to the new instance and repairing credentials.
 
@@ -155,16 +155,16 @@ Moving a SecureDrop instance to new hardware involves:
    the target instance to use SSH-over-LAN or perform a data-only backup.
    See :ref:`Data-only Restores <additional_restore_info>` for more information.
 
-.. note::  The instructions below assume that you are using the same *Admin Workstation*
+.. note::  The instructions below assume that you are using the same Admin Workstation
    that was used to manage your old instance. If you are using a new *Admin
    Workstation* you will need to first install the 
-   securedrop-admin package and prerequisites on it. Then you may copy the config directory ``~/.config/securedrop-admin`` and backup archive from the old *Admin Workstation* to the new workstation (using an encrypted *Transfer Device*), and proceed with the instructions below.
+   securedrop-admin package and prerequisites on it. Then you may copy the config directory ``~/.config/securedrop-admin`` and backup archive from the old Admin Workstation to the new workstation (using an encrypted *Transfer Device*), and proceed with the instructions below.
 
 #. If you have not already done so, :ref:`back up the existing installation <backing_up>`.
    The instructions below assume that the backup has been created
    and renamed ``sd-backup-old.tar.gz``.
 
-#. Move the existing *Admin Workstation* SSH configuration out of the way via
+#. Move the existing Admin Workstation SSH configuration out of the way via
    the Terminal via **Apps ▸ System Tools ▸ Console**, using the commands:
 
    .. code:: sh
@@ -174,18 +174,18 @@ Moving a SecureDrop instance to new hardware involves:
 
    .. note::
       You will be generating fresh SSH credentials for the servers, and any
-      other *Admin Workstation* USB flash drives will have to be
+      other Admin Workstation USB flash drives will have to be
       :ref:`provisioned with updated credentials <repair_admin_usbs>`.
 
-#. Ensure your *Admin Workstation* is connected to a LAN port on your
+#. Ensure your Admin Workstation is connected to a LAN port on your
    network firewall, and
    :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
 
 
-#. Install Ubuntu 24.04 on the *Application* and *Monitor Servers*, following
+#. Install Ubuntu 24.04 on the *Application* and Monitor Servers, following
    the :doc:`server setup instructions</admin/installation/prepare_servers>` to install
    with the correct settings, test connectivity, and set up SSH keys to allow
-   for *Admin Workstation* access.
+   for Admin Workstation access.
 
    .. note::
 
@@ -231,20 +231,20 @@ Moving a SecureDrop instance to new hardware involves:
 
 .. _repair_admin_usbs:
 
-Repair additional *Admin Workstations*
+Repair additional Admin Workstations
 ''''''''''''''''''''''''''''''''''''''
 
-If you have additional *Admin Workstation* USB flash drives, they will no longer have
+If you have additional Admin Workstation USB flash drives, they will no longer have
 valid SSH credentials and will need to be repaired. In these steps, the "primary
-*Admin Workstation*" is the one which you used to complete the above migration
+Admin Workstation" is the one which you used to complete the above migration
 process.
 
 #. Prepare a fresh
    :doc:`LUKS-encrypted USB flash drive </admin/installation/provisioning_usb>`.
-   You may record the passphrase in your primary *Admin Workstation*
+   You may record the passphrase in your primary Admin Workstation
    KeePassXC password manager.
 
-#. Copy the following files from your primary *Admin Workstation* onto the
+#. Copy the following files from your primary Admin Workstation onto the
    LUKS-encrypted USB flash drive:
 
    - ``~/.config/securedrop-admin/tor_v3_keys.json``
@@ -254,25 +254,25 @@ process.
 
    .. note::
       Alternatively, if you wish to use different SSH credentials for each
-      *Admin Workstation*, you may do so. In this case, copy only the first two
-      files above to your additional *Admin Workstations*.
+      Admin Workstation, you may do so. In this case, copy only the first two
+      files above to your additional Admin Workstations.
 
       Generate per-machine SSH keys and use a clean LUKS-encrypted USB flash drive
       to transfer the public portions of those keys to your primary
-      *Admin Workstation*, where you will then add them to the servers'
+      Admin Workstation, where you will then add them to the servers'
       ``authorized_keys`` files, as described :ref:`here <ssh_add_pubkey>`.
       You may also `contact Support`_ for assistance.
 
-#. Boot into each additional *Admin Workstation*. Set
+#. Boot into each additional Admin Workstation. Set
    `an administration password`_
    and unlock the persistent volume on the Tails welcome screen.
    Once logged in, attach the LUKS-encrypted USB flash drive
    and unlock it.
 
-#. Ensure that this *Admin Workstation* is using an up-to-date version of Tails
+#. Ensure that this Admin Workstation is using an up-to-date version of Tails
    and is running the latest SecureDrop application code, |version|.
 
-#. As you did with the primary *Admin Workstation*, archive the existing
+#. As you did with the primary Admin Workstation, archive the existing
    SSH configuration:
 
    .. code:: sh
@@ -296,7 +296,7 @@ process.
 #. Test connectivity to each server by running ``ssh app uptime``
    and ``ssh mon uptime``.
 
-#. Once all *Admin Workstations* have been updated, securely wipe the files on
+#. Once all Admin Workstations have been updated, securely wipe the files on
    the LUKS-encrypted USB flash drive, by right-clicking them in the file manager and selecting
    **Wipe**. Then, reformat the device using the
    **Disks** utility.
@@ -326,8 +326,8 @@ the following command:
    securedrop-admin restore --preserve-tor-config sd-backup-2020-07-22--01-06-25.tar.gz
 
 This is a suitable option if you have a backup archive taken from an instance
-with v2 *Onion Services*, and wish to restore it to an instance that is now using
-v3 *Onion Services*.
+with v2 Onion Services, and wish to restore it to an instance that is now using
+v3 Onion Services.
 
 If you require any assistance with migration or data recovery, please
 `contact Support`_.

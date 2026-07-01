@@ -23,7 +23,7 @@ Users
 ~~~~~
 
 The following table of the users who interact with the SecureDrop web application.
-Note that the airgapped *Secure Viewing Station* with the GPG *Submission Key* is required to decrypt
+Note that the airgapped *Secure Viewing Station* with the GPG Submission Key is required to decrypt
 submissions or messages.
 
 +------------------+----------+-------------------------------------------------+
@@ -113,25 +113,25 @@ Assumptions
 
 The following assumptions are accepted in the threat model of every SecureDrop project:
 
-Assumptions about the *Source*
+Assumptions about the Source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  The *Source* acts reasonably and in good faith, e.g. if the *Source* were to give their credentials or private key material to the attacker that would be unreasonable.
--  The *Source* would like to remain anonymous, even against a forensic
+-  The Source acts reasonably and in good faith, e.g. if the Source were to give their credentials or private key material to the attacker that would be unreasonable.
+-  The Source would like to remain anonymous, even against a forensic
    attacker.
--  The *Source* obtains an authentic copy of Tails and Tor Browser.
--  The *Source* follows our :doc:`guidelines </source/source>`
+-  The Source obtains an authentic copy of Tails and Tor Browser.
+-  The Source follows our :doc:`guidelines </source/source>`
    for using SecureDrop.
--  The *Source* is accessing an authentic SecureDrop site.
+-  The Source is accessing an authentic SecureDrop site.
 
-Assumptions about the admin and the *Journalist*
+Assumptions about the admin and the Journalist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  The admin and the *Journalist* act reasonably and in good faith, e.g.
+-  The admin and the Journalist act reasonably and in good faith, e.g.
    if either of them were to give their credentials or private key
    material to the attacker that would be unreasonable.
--  The admin and the *Journalist* obtain authentic copies of Tails.
--  The *Journalist* follows our
+-  The admin and the Journalist obtain authentic copies of Tails.
+-  The Journalist follows our
    :doc:`guidelines </journalist/journalist>` for using SecureDrop
    and working with submitted documents.
 
@@ -147,13 +147,13 @@ Assumptions about the person installing SecureDrop
    up the :ref:`landing page <Landing Page>` for the
    organization, and for :doc:`installing SecureDrop </admin/installation/install>`.
 
-Assumptions about the *Source*'s computer
+Assumptions about the Source's computer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The computer correctly executes Tails or Tor Browser.
 -  The computer is not compromised by malware.
 
-Assumptions about the *Admin Workstation* and the *Journalist Workstation*
+Assumptions about the Admin Workstation and the *Journalist Workstation*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The computer correctly executes Tails.
@@ -179,15 +179,15 @@ Assumptions about the SecureDrop hardware
 Assumptions about the organization hosting SecureDrop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  The organization wants to preserve the anonymity of its *Sources*.
--  The organization acts in the interest of allowing *Sources* to submit
+-  The organization wants to preserve the anonymity of its Sources.
+-  The organization acts in the interest of allowing Sources to submit
    documents, regardless of the contents of these documents.
 -  The users of the system, and those with physical access to the
    servers, can be trusted to uphold the previous assumptions unless the
    entire organization has been compromised.
 -  The organization is prepared to push back on any and all requests to
    compromise the integrity of the system and its users, including
-   requests to deanonymize *Sources*, block document submissions, or hand
+   requests to deanonymize Sources, block document submissions, or hand
    over encrypted or decrypted submissions.
 
 Assumptions about the world
@@ -197,7 +197,7 @@ Assumptions about the world
    valid.
 -  The security assumptions of scrypt with randomly-generated salts are
    valid.
--  The security/anonymity assumptions of Tor and the *Onion Service*
+-  The security/anonymity assumptions of Tor and the Onion Service
    protocol are valid.
 -  The security assumptions of the Tails operating system are valid.
 -  The security assumptions of SecureDrop dependencies, specifically
@@ -235,46 +235,46 @@ Assets
 Implications of SecureDrop area compromise
 ------------------------------------------
 
-What a compromise of the *Application Server* can surrender
+What a compromise of the Application Server can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The server sees the plaintext codename, used as the login identifier,
-   of every *Source*.
--  The server sees all HTTP requests made by the*Source*, the admin, and
-   the *Journalist*.
--  The server sees the plaintext submissions of every *Source*.
--  The server sees the plaintext communication between *Journalists* and
-   their *Sources*.
--  The server stores the onion service private key for the *Source* interface.
+   of every Source.
+-  The server sees all HTTP requests made by theSource, the admin, and
+   the Journalist.
+-  The server sees the plaintext submissions of every Source.
+-  The server sees the plaintext communication between Journalists and
+   their Sources.
+-  The server stores the onion service private key for the Source interface.
 -  The server stores the onion service private key and authentication token for
    the *Journalist Interface*.
 -  The server stores and (optional) TLS private key and certificate (if HTTPS
-   is enabled on the *Source* interface)
+   is enabled on the Source interface)
 -  The server stores hashes of codenames, created with scrypt and
    randomly-generated salts.
 -  The server stores journalist password hashes, created with script and
    randomly-generated salts, as well as TOTP seeds.
 -  The server stores only encrypted submissions and communication on
    disk.
--  The server stores a GPG key for each *Source*, with the *Source*'s
+-  The server stores a GPG key for each Source, with the Source's
    codename as the passphrase.
 -  The server may `store plaintext submissions in memory for at most 24
    hours <https://github.com/freedomofpress/securedrop/pull/805>`__.
 -  The server stores sanitized Tor logs, created using the `SafeLogging
    option <https://www.torproject.org/docs/tor-manual.html.en>`__, for
-   the *Source Interface*, the *Journalist Interface*, and SSH.
+   the Source Interface, the *Journalist Interface*, and SSH.
 -  The server stores both access and error logs for the *Journalist
    Interface*.
 -  The server stores connection history and audit logs for the admin.
--  The server can connect to the *Monitor Server* using an SSH key and a
+-  The server can connect to the Monitor Server using an SSH key and a
    passphrase.
 
-What a compromise of the *Monitor Server* can surrender
+What a compromise of the Monitor Server can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The server stores the plaintext alerts on disk, data may also reside
    in RAM.
--  The server stores the *OSSEC Alert Public Key* the OSSEC alerts are
+-  The server stores the OSSEC Alert Public Key the OSSEC alerts are
    encrypted to.
 -  The server stores plaintext credentials for the SMTP relay used to
    send OSSEC alerts.
@@ -285,17 +285,17 @@ What a compromise of the *Monitor Server* can surrender
    SSH.
 -  The server stores connection history and audit logs for the admin.
 -  The server stores OSSEC and Procmail logs on disk.
--  The server can connect to the *Application Server* using an SSH key and
+-  The server can connect to the Application Server using an SSH key and
    a passphrase.
 
 What a compromise of the workstations can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  The *Admin Workstation* requires Tails with a persistent volume,
+-  The Admin Workstation requires Tails with a persistent volume,
    which stores information such as GPG and SSH keys, as well as a
    :doc:`database with passphrases </admin/installation/passphrases>`
-   for the *Application Server*, the *Monitor Server*, and the GPG key the
-   *Monitor Server* will encrypt OSSEC alerts to.
+   for the Application Server, the Monitor Server, and the GPG key the
+   Monitor Server will encrypt OSSEC alerts to.
 -  The *Journalist Workstation* requires Tails with a persistent
    volume, which stores information such as the onion service value
    required to connect to the *Journalist Interface*, as well as a :doc:`database
@@ -306,51 +306,51 @@ What a compromise of the workstations can surrender
    GPG key, as well as a :doc:`database with the
    passphrase </admin/installation/passphrases>` for that key.
 
-What a compromise of the *Source*'s property can surrender
+What a compromise of the Source's property can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use of `Tor Browser will leave
    traces <https://research.torproject.org/techreports/tbb-forensic-analysis-2013-06-28.pdf>`__
-   that can be discovered through a forensic analysis of the *Source*'s
+   that can be discovered through a forensic analysis of the Source's
    property following either a compromise or physical seizure. Unless
-   the compromise or seizure happens while the *Source* is submitting
+   the compromise or seizure happens while the Source is submitting
    documents to SecureDrop, the traces will not include information
    about sites visited or actions performed in the browser.
 -  Use of Tails with a persistent volume will leave traces on the device
    the operating system was installed on. Unless the compromise or
-   seizure happens while the *Source* is submitting documents to
+   seizure happens while the Source is submitting documents to
    SecureDrop, or using the persistent volume, the traces will not
    include information about sites visited or actions performed in the
    browser or on the system.
--  SecureDrop 0.3 encourages *Sources* to protect their codenames by
-   memorizing them. If a *Source* cannot memorize the codename right away,
+-  SecureDrop 0.3 encourages Sources to protect their codenames by
+   memorizing them. If a Source cannot memorize the codename right away,
    we recommend writing it down and keeping it in a safe place at first,
-   and gradually working to memorize it over time. Once the *Source* has
+   and gradually working to memorize it over time. Once the Source has
    memorized it, they should destroy the written copy. If the
-   *Source* does write down the codename, a compromise or physical seizure
-   of the *Source*'s property may result in the attacker obtaining the
-   *Source*'s codename.
+   Source does write down the codename, a compromise or physical seizure
+   of the Source's property may result in the attacker obtaining the
+   Source's codename.
 -  An attacker with access to the **source's codename** can:
 
-   -  Show that the *Source* has visited the SecureDrop site, but not
+   -  Show that the Source has visited the SecureDrop site, but not
       necessarily submitted anything.
    -  Upload new documents or submit messages.
-   -  Communicate with the *Journalist* as that *Source*.
-   -  See any replies from *Journalists* that the *Source* has not yet
+   -  Communicate with the Journalist as that Source.
+   -  See any replies from Journalists that the Source has not yet
       deleted.
 
-What a physical seizure of the *Source*'s property can surrender
+What a physical seizure of the Source's property can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Document use of Tor or Tails, but not necessarily research into
    SecureDrop
--  Prevent the *Source* from submitting documents by taking the device the
+-  Prevent the Source from submitting documents by taking the device the
    documents are stored on.
 -  If the property is seized while powered on, the attacker can also
    analyze any plaintext information that resides in RAM.
 -  Tamper with the hardware.
--  A physical seizure of, and access to, the *Source*'s codename will
-   allow the attacker to access the *Source Interface* as that *Source*.
+-  A physical seizure of, and access to, the Source's codename will
+   allow the attacker to access the Source Interface as that Source.
 
 -  A physical seizure of the admin's property will allow the attacker
    to:
@@ -369,8 +369,8 @@ What a physical seizure of the *Source*'s property can surrender
 What compromise of the admin's property can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  To access the *Journalist Interface*, the *Application Server*, or the
-   *Monitor Server*, the attacker needs to obtain the admin's login
+-  To access the *Journalist Interface*, the Application Server, or the
+   Monitor Server, the attacker needs to obtain the admin's login
    credentials and the admin's *Two-Factor Authentication* device. Unless
    the attacker has physical access to the servers, the attacker will
    also need to obtain the onion service values for the Interface and
@@ -390,8 +390,8 @@ What compromise of the admin's property can surrender
    -  Add, modify, and delete files on the volume.
    -  Access the onion service values used by the Interfaces and the
       servers.
-   -  Access SSH keys and passphrases for the *Application Server* and the
-      *Monitor Server*.
+   -  Access SSH keys and passphrases for the Application Server and the
+      Monitor Server.
    -  Access the GPG key and passphrase for the encrypted OSSEC email
       alerts.
    -  Access the credentials for the account the encrypt alerts are sent
@@ -401,35 +401,35 @@ What compromise of the admin's property can surrender
 -  An attacker with admin access to the *Journalist Interface* can:
 
    -  Add, modify, and delete journalist users.
-   -  Change the codenames associated with *Sources* within the Interface.
+   -  Change the codenames associated with Sources within the Interface.
    -  Download, but not decrypt, submissions.
-   -  Communicate with *Sources*.
+   -  Communicate with Sources.
    -  Delete one or more submissions.
-   -  Delete one or more *Sources*, which destroys all communication with
-      that *Source* and prevents the *Source* from ever logging back in with
+   -  Delete one or more Sources, which destroys all communication with
+      that Source and prevents the Source from ever logging back in with
       that codename.
 
--  An attacker with admin access to the *Application Server* can:
+-  An attacker with admin access to the Application Server can:
 
    -  Add, modify, and delete software, configurations, and other files.
-   -  See all HTTP requests made by the *Source*, the admin, and the
-      *Journalist*.
-   -  See the plaintext codename of a *Source* as they are logging in.
-   -  See the plaintext communication between a *Source* and a *Journalist*
+   -  See all HTTP requests made by the Source, the admin, and the
+      Journalist.
+   -  See the plaintext codename of a Source as they are logging in.
+   -  See the plaintext communication between a Source and a Journalist
       as it happens.
    -  See the stored list of hashed codenames.
    -  Access the GPG public key used to encrypt communications between a
-      *Journalist* and a *Source*.
+      Journalist and a Source.
    -  Download stored, encrypted submissions and replies from the
-      *Journalists*.
-   -  Decrypt replies from the *Journalists* if the *Source*'s codename, and
+      Journalists.
+   -  Decrypt replies from the Journalists if the Source's codename, and
       thus the passphrase, is known.
    -  Analyze any plaintext information that resides in RAM, which may
       include plaintext of submissions made within the past 24 hours.
    -  Review logs stored on the system.
-   -  Access the *Monitor Server*.
+   -  Access the Monitor Server.
 
--  An attacker with admin access to the *Monitor Server* can:
+-  An attacker with admin access to the Monitor Server can:
 
    -  Add, modify, and delete software, configurations, and other files.
    -  Change the SMTP relay, email address, and GPG key used for OSSEC
@@ -438,7 +438,7 @@ What compromise of the admin's property can surrender
    -  Review logs stored on the system.
    -  Trigger arbitrary commands to be executed by the OSSEC agent user,
       which, assuming the attacker is able to escalate privileges, may
-      affect the *Application Server*.
+      affect the Application Server.
 
 What a physical seizure of the admin's property can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -453,58 +453,58 @@ What a physical seizure of the admin's property can achieve
    volume, password database, and *Two-Factor Authentication* device will
    allow the attacker to access both servers and the *Journalist Interface*.
 
-What a compromise of the *Journalist*'s property can achieve
+What a compromise of the Journalist's property can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  To access the *Journalist Interface*, the attacker needs to obtain the
-   *Journalist*'s login credentials and the *Journalist*'s *Two-Factor
+   Journalist's login credentials and the Journalist's *Two-Factor
    Authentication* device or seed. Unless the attacker has physical access to the
    server, the attacker will also need to obtain the onion service
    value for the *Interface*. This information is stored in a
    password-protected database in a persistent volume on the
-   *Journalist*'s Tails device. The volume is protected by a passphrase.
-   If the *Journalist*'s *Two-Factor Authentication* device is a mobile
+   Journalist's Tails device. The volume is protected by a passphrase.
+   If the Journalist's *Two-Factor Authentication* device is a mobile
    phone, this will also be protected by a passphrase.
--  An attacker with access to the *Journalist*'s computer can:
+-  An attacker with access to the Journalist's computer can:
 
    -  Access any stored, decrypted documents taken off the Secure
       Viewing Station.
 
 -  An attacker with access to the **persistent volume** on the
-   *Journalist*'s Tails device can:
+   Journalist's Tails device can:
 
    -  Add, modify, and delete files on the volume.
    -  Access the onion service values used by the *Journalist Interface*.
-   -  Access SSH keys and passphrases for the *Application Server* and the
-      *Monitor Server*.
+   -  Access SSH keys and passphrases for the Application Server and the
+      Monitor Server.
 
--  An attacker with *Journalist* access to the *Journalist Interface* can:
+-  An attacker with Journalist access to the *Journalist Interface* can:
 
-   -  Change the codenames associated with *Sources* within the interface.
+   -  Change the codenames associated with Sources within the interface.
    -  Download, but not decrypt, submissions.
    -  Delete one or more submissions.
-   -  Communicate with *Sources*.
-   -  If the *Journalist* has admin privileges on SecureDrop, they can create new
-      *Journalist* accounts.
+   -  Communicate with Sources.
+   -  If the Journalist has admin privileges on SecureDrop, they can create new
+      Journalist accounts.
 
-What a physical seizure of the *Journalist*'s property can achieve
+What a physical seizure of the Journalist's property can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Tamper with the hardware.
--  Prevent the *Journalist* from working on SecureDrop for some period of
+-  Prevent the Journalist from working on SecureDrop for some period of
    time.
 -  Access any stored, decrypted documents taken off the Secure Viewing
    Station.
 -  If the property is seized while powered on, the attacker can also
    analyze any plaintext information that resides in RAM.
--  A physical seizure of, and access to, the *Journalist*'s Tails
+-  A physical seizure of, and access to, the Journalist's Tails
    persistent volume, password database, and *Two-Factor Authentication*
    device will allow the attacker to access the *Journalist Interface*.
 
-What a compromise of the *Application Server* can achieve
+What a compromise of the Application Server can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  If the *Application Server* is compromised, the system user the
+-  If the Application Server is compromised, the system user the
    attacker has control over defines what kind of information the
    attacker will be able to view and what kind of actions the attacker
    can perform.
@@ -513,14 +513,14 @@ What a compromise of the *Application Server* can achieve
    -  View, modify, and delete all files owned by this user. This
       includes sanitized Tor logs, created using the `SafeLogging
       option <https://www.torproject.org/docs/tor-manual.html.en>`__,
-      for SSH, the *Source Interface* and the *Journalist Interface*.
+      for SSH, the Source Interface and the *Journalist Interface*.
    -  View, modify, and delete the Tor configuration file, root is
       required to reload the config.
 
 -  An attacker with access to the **ossec** user can:
 
    -  Add, view, modify, and delete the log files, and in doing so send
-      inaccurate information to the *Monitor Server* and the admin.
+      inaccurate information to the Monitor Server and the admin.
 
 -  An attacker with access to the **www-data** user can:
 
@@ -531,10 +531,10 @@ What a compromise of the *Application Server* can achieve
       configuration files.
    -  View, modify, and delete both access and error logs for the
       *Journalist Interface*.
-   -  View any HTTP requests made by the *Source*, the admin, and the
-      *Journalist* in that moment. This includes seeing plaintext
+   -  View any HTTP requests made by the Source, the admin, and the
+      Journalist in that moment. This includes seeing plaintext
       codenames, submissions, and communications.
-   -  Add and delete communications between a *Journalist* and a *Source* by
+   -  Add and delete communications between a Journalist and a Source by
       writing to the database.
 
 -  An attacker with access to the **root** user can:
@@ -545,10 +545,10 @@ What a compromise of the *Application Server* can achieve
       not able to decrypt submissions or communications, unless the
       attacker has access to the encryption key required to do so.
 
-What a physical seizure of the *Application Server* can achieve
+What a physical seizure of the Application Server can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  If the *Application Server* is seized, the attacker will be able to
+-  If the Application Server is seized, the attacker will be able to
    view any and all unencrypted files on the server. An attacker will be able
    to modify any and all files on the server. This includes all
    files in use by the SecureDrop Application. If the server is seized
@@ -556,10 +556,10 @@ What a physical seizure of the *Application Server* can achieve
    information that resides in RAM. The attacker can also tamper with
    the hardware.
 
-What a compromise of the *Monitor Server* can achieve
+What a compromise of the Monitor Server can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  If the *Monitor Server* is compromised, the system user the attacker
+-  If the Monitor Server is compromised, the system user the attacker
    has control over defines what kind of information the attacker will
    be able to view and what kind of actions the attacker can perform.
 -  An attacker with access to the **debian-tor** user can:
@@ -575,7 +575,7 @@ What a compromise of the *Monitor Server* can achieve
 
    -  View all ossec logs and alerts on disk.
    -  Modify the ossec configuration.
-   -  Send (or suppress) emails to administrators and *Journalists*.
+   -  Send (or suppress) emails to administrators and Journalists.
 
 -  An attacker with access to the **root** user can:
 
@@ -585,26 +585,26 @@ What a compromise of the *Monitor Server* can achieve
       to decrypt encrypted email alerts, unless the attacker has access
       to the encryption key required to do so.
 
-What a physical seizure of the *Monitor Server* can achieve
+What a physical seizure of the Monitor Server can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  If the *Monitor Server* is seized, the attacker will be able to view
+-  If the Monitor Server is seized, the attacker will be able to view
    any and all unencrypted files on the server. This includes all files
    in use by OSSEC. If the server is seized while it is powered on, the
    attacker can also analyze any plaintext information that resides in
    RAM. The attacker can also tamper with the hardware.
--  If the *Monitor Server* is no longer online or tampered with, this will
+-  If the Monitor Server is no longer online or tampered with, this will
    have an effect on the quantity and accuracy of notifications sent to
-   admins or *Journalists*.
+   admins or Journalists.
 
 What a compromise of the *Secure Viewing Station* can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The *Secure Viewing Station* is only useful to an attacker while
    powered on and with the Tails persistent volume mounted. The attacker
-   may learn more if the *Transfer Device* or the *Export Device* are in use at
+   may learn more if the *Transfer Device* or the Export Device are in use at
    the time of compromise or seizure. A physical seizure of this machine, its
-   Tails device, the *Transfer Device* or the *Export Device* will also achieve
+   Tails device, the *Transfer Device* or the Export Device will also achieve
    nothing, assuming that the Tails and VeraCrypt implementations of full-disk
    encryption work as expected.
 
@@ -612,13 +612,13 @@ What a compromise of the *Secure Viewing Station* can achieve
 
    -  Run commands as the **amnesia** user.
    -  View, modify, and delete files owned by the **amnesia** user. This
-      includes the *Submission Private Key* used to encrypt and decrypt
+      includes the Submission Private Key used to encrypt and decrypt
       submitted documents.
    -  View, modify, and delete submissions in encrypted form
    -  View, modify, and delete decrypted submissions, if they are stored in
-      decrypted form on the *Secure Viewing Station*, or if the *Export Device*
+      decrypted form on the *Secure Viewing Station*, or if the Export Device
       is in use.
-   -  Export the *Submission Private Key* key (unless there is a passphrase
+   -  Export the Submission Private Key key (unless there is a passphrase
       set).
 
 What a physical seizure of the *Secure Viewing Station* can achieve
@@ -626,9 +626,9 @@ What a physical seizure of the *Secure Viewing Station* can achieve
 
 -  The *Secure Viewing Station* is only useful to an attacker while
    powered on and with the Tails persistent volume mounted. The attacker
-   may learn more if the *Transfer Device* or the *Export Device* are in use at
+   may learn more if the *Transfer Device* or the Export Device are in use at
    the time of compromise or seizure. A physical seizure of this machine, its
-   Tails device, the *Transfer Device* or the *Export Device* will also achieve
+   Tails device, the *Transfer Device* or the Export Device will also achieve
    nothing, assuming that the Tails and VeraCrypt implementations of full-disk
    encryption work as expected.
 -  A physical seizure of the *Secure Viewing Station*, while on and with
@@ -636,13 +636,13 @@ What a physical seizure of the *Secure Viewing Station* can achieve
 
    -  Tamper with the hardware.
    -  Run commands as the **amnesia** user.
-   -  View, modify, and delete the *Submission Private Key* used to encrypt and
+   -  View, modify, and delete the Submission Private Key used to encrypt and
       decrypt submitted documents.
    -  View, modify, and delete decrypted submissions, if they are stored in
-      decrypted form on the *Secure Viewing Station*, or if the *Export Device*
+      decrypted form on the *Secure Viewing Station*, or if the Export Device
       is in use.
 
-What a local network attacker can achieve against the *Source*, admin, or *Journalist*
+What a local network attacker can achieve against the Source, admin, or Journalist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  A local network can observe when they are using Tor.
@@ -653,35 +653,35 @@ What a local network attacker can achieve against the *Source*, admin, or *Journ
    `research suggests this is very
    difficult <https://blog.torproject.org/critique-website-traffic-fingerprinting-attacks>`__.
 
-What a global adversary can achieve against the *Source*, admin, or *Journalist*
+What a global adversary can achieve against the Source, admin, or Journalist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  A global adversary capable of observing all Internet traffic may have
    more luck than the local network attacker in deducing use of
    SecureDrop by looking at request sizes, plaintext uploads and
    encrypted downloads.
--  A global adversary may be able to link a *Source* to a specific
+-  A global adversary may be able to link a Source to a specific
    SecureDrop server.
--  A global adversary may be able to link a *Source* to a specific
-   *Journalist*.
+-  A global adversary may be able to link a Source to a specific
+   Journalist.
 -  A global adversary may be able to correlate data points during a leak
    investigation, including looking at who has read up on SecureDrop and
    who has used Tor.
 -  A global adversary may be able to forge an SSL certificate and use it
-   to spoof an organization's HTTPS *Landing Page*, thereby tricking the
-   *Source* into visiting a fake SecureDrop site.
+   to spoof an organization's HTTPS Landing Page, thereby tricking the
+   Source into visiting a fake SecureDrop site.
 
 What a random person on the internet can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  A random person can attempt to DoS the SecureDrop server and
-   overwhelm the *Journalists* by generating a high number of codenames
+   overwhelm the Journalists by generating a high number of codenames
    and uploading many large documents.
 -  A random person can submit empty, forged, or inaccurate documents.
 -  A random person can submit malicious documents, e.g. malware that
    will attempt to compromise the *Secure Viewing Station*.
 -  A random person can attempt to get sensitive information from a
-   SecureDrop user's browser session, such as the *Source*'s codename.
+   SecureDrop user's browser session, such as the Source's codename.
 -  A random person can attempt to compromise the SecureDrop server by
    attacking the exposed attack surface, including the kernel network
    stack, Tor, Apache, the SecureDrop web interfaces, Python, OpenSSH,

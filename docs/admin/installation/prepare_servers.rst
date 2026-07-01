@@ -38,7 +38,7 @@ enumerate recommended BIOS settings for hardware that we have tested.
 Install Ubuntu
 ---------------
 
-The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu 24.04.3 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first download and verify the Ubuntu installation media.
+The SecureDrop Application Server and Monitor Server run **Ubuntu 24.04.3 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first download and verify the Ubuntu installation media.
 
 Ubuntu introduction
 ~~~~~~~~~~~~~~~~~~~
@@ -47,7 +47,7 @@ Ubuntu introduction
   with, but it is **strongly** encouraged that you read and follow this documentation
   exactly as there are some "gotchas" that may cause your SecureDrop setup to break.
 
-The SecureDrop *Application Server* and *Monitor Server* run **Ubuntu Server
+The SecureDrop Application Server and Monitor Server run **Ubuntu Server
 24.04.3 LTS (Noble Numbat)**. To install Ubuntu on the servers, you must first
 download and verify the Ubuntu installation media.
 
@@ -151,8 +151,8 @@ With the Ubuntu Server install USB flash drive ready, you may now proceed to the
 Perform the installation
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The steps below are the same for both the *Application Server* and the
-*Monitor Server*.
+The steps below are the same for both the Application Server and the
+Monitor Server.
 
 Start by inserting the Ubuntu installation media into the server. Boot
 or reboot the server with the installation media inserted, and enter the
@@ -187,7 +187,7 @@ The **Edit eno1 IPv4 configuration** dialog will be displayed. In the
 **IPv4 Method** menu, select **Manual**, then add your server-specific settings.
 
 .. note:: For a production install with a pfSense network firewall in place, the
-  *Application Server* and the *Monitor Server* are on separate networks.
+  Application Server and the Monitor Server are on separate networks.
   You may choose your own network settings at this point, but make sure
   the settings you choose are unique on the firewall's network and
   remember to propagate your choices through the rest of the installation process.
@@ -196,7 +196,7 @@ Below are the configurations you should enter, assuming you used the
 default network settings from the network firewall guide. If you did not,
 adjust these settings accordingly.
 
--  *Application Server*:
+-  Application Server:
 
   -  **Subnet:** 10.20.2.0/24
   -  **Address:** 10.20.2.2
@@ -204,7 +204,7 @@ adjust these settings accordingly.
   -  **Name servers:** 8.8.8.8, 8.8.4.4
   -  **Search domains:** *should be left blank*
 
--  *Monitor Server*:
+-  Monitor Server:
 
   -  **Subnet:** 10.20.3.0/24
   -  **Address:** 10.20.3.2
@@ -239,7 +239,7 @@ devices that are powered down, SecureDrop's servers are designed to be always-on
 with the exception of a nightly reboot after automatic upgrades are applied.
 Given this update schedule, with FDE enabled, the servers would become unreachable
 once every 24 hours until an administrator entered the full-disk encryption
-passphrase via the console, and during that time, *Sources* and *Journalists* would
+passphrase via the console, and during that time, Sources and Journalists would
 be unable to access your instance.
 
 The increased responsibility for administrators, as well as the daily downtime
@@ -272,8 +272,8 @@ The administrator account username and password should be the same for both
 servers:
 
 - **Your name:** Specify the administrator account name, e.g. ``SecureDrop Admin``
-- **Your server's name:** Use ``app`` for the *Application Server*, and ``mon`` for
-  the *Monitor Server*
+- **Your server's name:** Use ``app`` for the Application Server, and ``mon`` for
+  the Monitor Server
 - **Pick a username:** Specify the administrator account username, e.g. ``sdadmin``
 - **Choose a password:** Specify a strong password for the administrator account.
   A Diceware-generated passphrase is recommended.
@@ -282,8 +282,8 @@ servers:
 Select **Done** and press **Enter** to proceed.
 
 .. warning:: The username and password you choose must be the same on both the
-             *Application Server* and the *Monitor Server*. When you install
-             SecureDrop on the servers from your *Admin Workstation* in a later step, you will
+             Application Server and the Monitor Server. When you install
+             SecureDrop on the servers from your Admin Workstation in a later step, you will
              only be allowed to enter one password, so it must be identical on
              both servers.
 
@@ -319,8 +319,8 @@ Save the configurations
 
 When you are done, make sure you save the following information:
 
--  The IP address of the *Application Server*
--  The IP address of the *Monitor Server*
+-  The IP address of the Application Server
+-  The IP address of the Monitor Server
 -  The non-root user's name and passphrase for the servers.
 
 

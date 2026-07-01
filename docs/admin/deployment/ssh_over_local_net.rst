@@ -38,7 +38,7 @@ Configuring SSH for local access
           firewall guide.
 
 .. warning:: This setting will lock you out of SSH access to your instance if your
-          *Admin Workstation* passes through a NAT in order to get to the
+          Admin Workstation passes through a NAT in order to get to the
           SecureDrop servers. If you are unsure whether this is the case, please
           consult your firewall configuration or network administrator.
 
@@ -81,7 +81,7 @@ Then you'll have to run the installation script:
           twice. This is due to the behind the scenes configuration changes being
           done to switch between Tor and the local network.
 
-Finally, re-configure your *Admin Workstation* as follows:
+Finally, re-configure your Admin Workstation as follows:
 
 .. code:: sh
 

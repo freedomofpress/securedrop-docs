@@ -90,7 +90,7 @@ passphrase is stored securely outside SecureDrop Workstation.
 
 .. note::
  This passphrase protects sensitive components of your SecureDrop instance,
- including the *Submission Private Key*, and unencrypted submissions (if
+ including the Submission Private Key, and unencrypted submissions (if
  ``sd-app`` is backed up). Ensure it is a very strong password and is
  stored securely.
 

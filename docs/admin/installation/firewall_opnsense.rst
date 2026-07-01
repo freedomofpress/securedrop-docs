@@ -21,8 +21,8 @@ and from there you will be able to configure the network so it is working correc
 
 The recommended TekLager APU4D4 has 4 NICs: WAN, LAN,
 OPT1, and OPT2. This allows for a dedicated port on the network
-firewall for each component of SecureDrop (*Application Server*,
-*Monitor Server*, and *Admin Workstation*).
+firewall for each component of SecureDrop (Application Server,
+Monitor Server, and Admin Workstation).
 
 Depending on your network configuration, you should define the following
 values before continuing.
@@ -62,9 +62,9 @@ network firewall.
 Connect to the OPNSense web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. If you have not already done so, boot the *Admin Workstation*. 
+#. If you have not already done so, boot the Admin Workstation. 
    
-#. Connect the *Admin Workstation* to the LAN interface. You should see
+#. Connect the Admin Workstation to the LAN interface. You should see
    a popup notification in Tails that says "Connection Established". If you click
    on the network icon in the upper right of the Tails Desktop, you should see that the "Wired Connection" is active:
 
@@ -95,7 +95,7 @@ Connect to the OPNSense web GUI
    has a bright red border to remind you to be careful when using
    it. You should close it once you're done configuring the firewall
    and use Tor Browser for any other web browsing you might do on
-   the *Admin Workstation*.
+   the Admin Workstation.
 
    |Unsafe Browser Homepage|
 
@@ -187,7 +187,7 @@ To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click
 
 #. **Set Root Password**: If the password was already reset during the 2FA setup, you
    don't need to set it again. If it was not, then set a strong password now and
-   store it in the *Admin Workstation*'s KeePassXC database. Click **Next**
+   store it in the Admin Workstation's KeePassXC database. Click **Next**
    to continue.
 
 #. **Reload Configuration**: Click **Reload** to apply the changes you made in the
@@ -305,7 +305,7 @@ Disable DHCP on the firewall
 ----------------------------
 
 OPNSense runs a DHCP server on the LAN interface by default. At this
-stage in the documentation, the *Admin Workstation* likely has an IP address
+stage in the documentation, the Admin Workstation likely has an IP address
 assigned via that DHCP server.
 
 In order to tighten the firewall rules as much as possible, we recommend
@@ -321,10 +321,10 @@ and click **Save**.
 
 |OPNSense - Disable DHCP|
 
-Assign a static IP address to the *Admin Workstation*
+Assign a static IP address to the Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now you will need to assign a static IP to the *Admin Workstation*.
+Now you will need to assign a static IP to the Admin Workstation.
 
 You can easily check your current IP address by *clicking* the top right of
 the menu bar, clicking on the **Wired Connection** and then clicking **Wired
@@ -352,7 +352,7 @@ that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
 	  wizard.
 
 
-Fill in the static networking information for the *Admin Workstation*:
+Fill in the static networking information for the Admin Workstation:
 
 -  Address: ``10.20.1.2``
 -  Netmask: ``255.255.255.0``
@@ -394,19 +394,19 @@ SecureDrop uses the firewall to achieve two primary goals:
 #. Isolating SecureDrop from the existing network, which may be
    compromised (especially if it is a venerable network in a large
    organization like a newsroom).
-#. Isolating the *Application Server* and the *Monitor Server* from each other
+#. Isolating the Application Server and the Monitor Server from each other
    as much as possible, to reduce attack surface.
 
-In order to use the firewall to isolate the *Application Server* and the *Monitor
+In order to use the firewall to isolate the Application Server and the *Monitor
 Server* from each other, we need to connect them to separate interfaces, and then set
 up firewall rules that allow them to communicate.
 
 Enable the OPT1 and OPT2 interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The OPT1 and OPT2 interfaces will be used for the *Application Server* and *Monitor
-Server* respectively. To enable them, first connect the *Application Server* to the
-physical OPT1 port and the *Monitor Server* to the OPT2 port.
+The OPT1 and OPT2 interfaces will be used for the Application Server and *Monitor
+Server* respectively. To enable them, first connect the Application Server to the
+physical OPT1 port and the Monitor Server to the OPT2 port.
 
 Next, navigate to **Interfaces ▸ Assignments**. LAN and WAN will already be enabled.
 Click the **+** button in the **New Interface** section to enable the OPT1 interface
@@ -421,7 +421,7 @@ Configure the LAN, WAN, OPT1, and OPT2 interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 OPT1 and OPT2 need to be configured to use the subnets defined for the *Application*
-and *Monitor Servers*, and some additional configuration is required for the LAN
+and Monitor Servers, and some additional configuration is required for the LAN
 and WAN interfaces, that is not covered by the Setup Wizard.
 
 Configure the WAN interface

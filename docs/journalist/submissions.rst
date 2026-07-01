@@ -1,7 +1,7 @@
 Working with submissions
 ========================
 
-When a *Source* submits files, you will see a Download button in the conversation
+When a Source submits files, you will see a Download button in the conversation
 flow, a file size, and light-gray text that says "Encrypted File."
 
 |screenshot_file_before_download|
@@ -79,11 +79,11 @@ Exporting submissions from the *Journalist Workstation*
    the risk of spreading malware to that computer. Make sure you understand the
    risks, and consider other methods to export the document (e.g., print).
 
-If you must copy a file from your *Journalist Workstation* to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that *Journalists* are provided with an *Export Device*, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
+If you must copy a file from your *Journalist Workstation* to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that Journalists are provided with an Export Device, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
 These instructions assume that you are following the recommended workflow.
 If you are unsure, ask your administrator.
 
-Exporting to an *Export Device*
+Exporting to an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for exporting submissions.
@@ -106,7 +106,7 @@ Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for export
       |screenshot_veracrypt_sd_devices_files_unlock|
    4. Click **Connect**.
 
-3. Back in your *Source*'s conversation, click **Export**.
+3. Back in your Source's conversation, click **Export**.
    |screenshot_export_dialog|
 4. If you have not already unlocked your USB flash drive, you will be prompted for the
    password configured for this USB flash drive.
@@ -127,17 +127,17 @@ Decrypting and preparing to publish
    the `Freedom of the Press Foundation guide <https://freedom.press/training/encryption-toolkit-media-makers/veracrypt-guide/>`__
    for working with VeraCrypt.
 
-To access the *Export Device* on your everyday workstation, follow these steps:
+To access the Export Device on your everyday workstation, follow these steps:
 
-1. If your *Export Device* has a physical write protection switch, make sure it
+1. If your Export Device has a physical write protection switch, make sure it
    is in the *locked* position.
-2. Plug the *Export Device* into your everyday workstation.
+2. Plug the Export Device into your everyday workstation.
 3. Launch the *VeraCrypt* application.
-4. Click **Select Device** and select the *Export Device*, then click **OK**.
+4. Click **Select Device** and select the Export Device, then click **OK**.
 5. Click **Mount**.
-6. Enter the passphrase for your *Export Device*. You should find this in your
+6. Enter the passphrase for your Export Device. You should find this in your
    own personal password manager.
-7. Open the *Export Device* in your operating system's file manager, and copy
+7. Open the Export Device in your operating system's file manager, and copy
    the contents of interest to your everyday workstation.
 
 As a security precaution, we recommend deleting the files on the *Export
@@ -193,7 +193,7 @@ are important steps you can take to protect yourself:
 
    QR codes can contain malicious links that your device will automatically
    visit. This can alert third-parties to your actions, reveal the identities
-   of your *Sources*, and breach the isolation benefits of using Qubes.
+   of your Sources, and breach the isolation benefits of using Qubes.
 
    In general, be careful when opening any links provided in a SecureDrop
    submission. If you are unsure if a link is safe to click, you should

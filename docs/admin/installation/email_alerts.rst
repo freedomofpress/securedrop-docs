@@ -8,20 +8,20 @@ SecureDrop sends different alerts by PGP-encrypted email. Before installing Secu
 Optional: Daily Journalist Alerts
 ---------------------------------
 
-When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for *Journalists* to be notified daily via encrypted email about whether or not there has been submission activity in the past 24 hours.
+When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for Journalists to be notified daily via encrypted email about whether or not there has been submission activity in the past 24 hours.
 
-If the email shows submissions were received, the *Journalist* can check their *Journalist Workstation*.
+If the email shows submissions were received, the Journalist can check their *Journalist Workstation*.
 
 .. note::
 
    For security reasons, the email will be sent every 24 hours, regardless
    of whether there are new submissions or not. The notification is sent after
-   the daily reboot of the *Application Server*. The subject of the email will
+   the daily reboot of the Application Server. The subject of the email will
    always be "Submissions in the past 24h". To find out whether there were
-   submissions or not, a *Journalist* must decrypt the contents of the email.
+   submissions or not, a Journalist must decrypt the contents of the email.
 
-In the simplest case a *Journalist* will provides their email and GPG public key to
-you, the admin. If a team of *Journalist* wants to receive these daily alerts, they 
+In the simplest case a Journalist will provides their email and GPG public key to
+you, the admin. If a team of Journalist wants to receive these daily alerts, they 
 should share a GPG key and ask the admin to setup a mail alias
 (SecureDrop does not provide that service) so they all receive the alerts and
 are able to decrypt them.
@@ -30,9 +30,9 @@ It is not possible to specify multiple email addresses for email notifications. 
 
 If you wish to enable this, you will need:
 
--  the email address that will receive the *Journalist* alerts
--  the *Journalist Alert Public Key*
--  the *Journalist Alert Public Key* fingerprint
+-  the email address that will receive the Journalist alerts
+-  the Journalist Alert Public Key
+-  the Journalist Alert Public Key fingerprint
 
 Daily Journalist Alerts can be configured during or after installation. 
 
@@ -44,16 +44,16 @@ OSSEC alerts
 OSSEC is an open source host-based intrusion detection system (IDS) that
 SecureDrop uses to perform log analysis, file integrity checking, policy
 monitoring, rootkit detection, and real-time alerting. It is installed on
-the *Monitor Server* and constitutes that machine's main function. OSSEC
+the Monitor Server and constitutes that machine's main function. OSSEC
 works in a server-agent scheme; that is, the OSSEC server extends its
-existing functions to the *Application Server* through an agent installed
+existing functions to the Application Server through an agent installed
 on that server, covering monitoring for both machines.
 
 In order to receive email alerts from OSSEC, you need to supply several
 settings during the SecureDrop server installation:
 
 - The email address that will receive alerts from OSSEC
-- The *OSSEC Alert Public Key* and its fingerprint
+- The OSSEC Alert Public Key and its fingerprint
 - The reachable hostname of your SMTP relay
 - The secure SMTP port of your SMTP relay
   (typically 25, 587, or 465; must support TLS encryption)
@@ -100,7 +100,7 @@ you can connect to an SMTP server, which will always transmit a reply code of 22
 
 In some cases, authentication or transport encryption mechanisms will
 vary and you may require later edits to the Postfix configuration
-(mainly /etc/postfix/main.cf) on the *Monitor Server* in order to get
+(mainly /etc/postfix/main.cf) on the Monitor Server in order to get
 alerts to work. You can consult `Postfix's official
 documentation <https://www.postfix.org/documentation.html>`__ for help,
 although we've described some common scenarios in the

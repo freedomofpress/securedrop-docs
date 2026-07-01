@@ -5,14 +5,14 @@ Deployment overview
 
 Once SecureDrop is installed on a news organization's servers, it's important
 for the administrator to configure it in a way that provides the greatest
-protection for *Sources* and *Journalists*, given the unique needs and constraints
+protection for Sources and Journalists, given the unique needs and constraints
 of the organization.
 
 The deployment section here covers a variety of tasks an administrator might
 need to perform to successfully deploy SecureDrop, depending on organizational
 needs and requirements.
 
-Certain topics, such as creating a *Landing Page* and onboarding *Journalists*, are
+Certain topics, such as creating a Landing Page and onboarding Journalists, are
 universal to all SecureDrop instances. Other topics are optional, and are only
 needed if they fit in with the organization's security policies and newsroom
 workflows.
@@ -25,7 +25,7 @@ Protecting the security of the system
 =====================================
 
 SecureDrop is only as secure as the environment that surrounds it. To keep
-*Sources* safe, the news organization's website, physical space, and dedicated
+Sources safe, the news organization's website, physical space, and dedicated
 SecureDrop hardware must employ a set of basic security best practices or risk
 losing any source protection provided by SecureDrop.
 

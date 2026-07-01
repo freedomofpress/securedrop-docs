@@ -24,7 +24,7 @@ Common OSSEC alerts
 
 Package updates
 ^^^^^^^^^^^^^^^
-The SecureDrop *Application* and *Monitor Servers* check for package updates every day.
+The SecureDrop *Application* and Monitor Servers check for package updates every day.
 As updates are automatically installed, OSSEC will notice and send out alerts. You
 may see any number of these alerts in the email, as several alerts can be batched in
 a single email. You should also see them in an email named ``Daily Report: File Changes``.
@@ -63,7 +63,7 @@ Surprising changes to configuration files, or new or changed files unrelated to
 the daily updates, may warrant further investigation.
 
 Occasionally your SecureDrop Servers will send an alert for failing to connect
-to Tor relays. Since SecureDrop runs as a Tor *Onion Service*, it is possible
+to Tor relays. Since SecureDrop runs as a Tor Onion Service, it is possible
 for Tor connections to timeout or become overloaded. ::
 
     Received From: (app)
@@ -113,7 +113,7 @@ To resolve the issue, you can :ref:`clean them up <submission-cleanup>`.
 Instance misconfigurations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 In addition, SecureDrop performs a small set of daily configuration checks to ensure
-that the iptables rules configured on the *Application* and *Monitor Server* match
+that the iptables rules configured on the *Application* and Monitor Server match
 the expected configuration. If they do not, you may receive a level 12 alert
 like the following: ::
 

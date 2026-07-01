@@ -1,7 +1,7 @@
-Off-board administrators and *Journalists*
+Off-board administrators and Journalists
 ==========================================
 
-When *Journalists* and SecureDrop administrators leave your organization, it is
+When Journalists and SecureDrop administrators leave your organization, it is
 important to off-board them from SecureDrop.
 
 .. important:: Additional measures may need to be taken if the
@@ -16,15 +16,15 @@ Off-boarding checklist
 
 - :doc:`Inform the SecureDrop Support </introduction/getting_support>` team that the user should be removed from any support Signal groups, and indicate if any new staff
   members should be added.
-- Delete the user's account on the *Journalist Interface*.
-- Retrieve *SecureDrop Workstation* laptops, *Backup* drive(s), 
+- Delete the user's account on the Admin Interface.
+- Retrieve SecureDrop Workstation laptops, *Backup* drive(s), 
   and any other SecureDrop hardware or materials.
 - If the user receives email alerts (OSSEC alerts or daily submission
   notifications), either directly or as a member of an email alias, remove them
   from those alerts and :ref:`set up someone new <ossec_guide>` to
   receive those alerts.
-- (Circumstance-dependent) If you have specific concerns that the *Submission Private Key* has been compromised, you should consider a full reinstall of
-  SecureDrop. At minimum, you should :ref:`rotate the *Submission Key*
+- (Circumstance-dependent) If you have specific concerns that the Submission Private Key has been compromised, you should consider a full reinstall of
+  SecureDrop. At minimum, you should :ref:`rotate the Submission Key
   <rotate_submission_key>`.
 
 Additional steps for off-boarding administrators
@@ -41,7 +41,7 @@ Additional steps for off-boarding administrators
   if only from within your organization's network, you may want to rotate its
   login credentials.
 - Back up and :ref:`rotate the SSH key <rotate_ssh_key>` to
-  prevent unauthorized SSH access to the *Application* and *Monitor Servers* in
+  prevent unauthorized SSH access to the *Application* and Monitor Servers in
   the event that this user has retained their Admin SSH credentials.
 
 
@@ -83,14 +83,14 @@ the SSH key, you should rotate the key in the following manner.
 
 
 #.  Add this key to the list of authorized keys.
-    SSH to the *Application Server* and append this new key to the list of
+    SSH to the Application Server and append this new key to the list of
     authorized keys by using
 
     .. code:: sh
 
       cat newkey.pub >> ~/.ssh/authorized_keys
 
-    Be sure to use the command as above so that you append the key, instead of replacing the file. While you are still on the *Application Server*, you can then delete the file ``newkey.pub`` from wherever you scp'd it to (i.e. your home directory). Repeat this process with the *Monitor Server*.
+    Be sure to use the command as above so that you append the key, instead of replacing the file. While you are still on the Application Server, you can then delete the file ``newkey.pub`` from wherever you scp'd it to (i.e. your home directory). Repeat this process with the Monitor Server.
 
 
 #.  Rename SSH keys.
@@ -105,14 +105,14 @@ the SSH key, you should rotate the key in the following manner.
 
 
 #.  Test SSH connection.
-    Test that you can still ssh into the *Application* and *Monitor Servers* (you
+    Test that you can still ssh into the *Application* and Monitor Servers (you
     can test with ``ssh app host`` and ``ssh mon host``).
 
 
 #.  Restrict SSH access to the new key.
 
       .. important:: If you have other users who also have SSH access to the
-         *Application* and *Monitor Servers*, the next step will revoke their
+         *Application* and Monitor Servers, the next step will revoke their
          access. Their public keys will have to be re-appended to the
          ``authorized_keys`` file on each server, as in step 3.
 
@@ -124,24 +124,24 @@ the SSH key, you should rotate the key in the following manner.
 
    This removes all other SSH keys, except for the new key that you are
    currently using, from the list of authorized keys on the *Application* and
-   *Monitor Servers*.
+   Monitor Servers.
 
 .. _rotate_submission_key:
 
-Rotate the *Submission Key*
+Rotate the Submission Key
 ---------------------------
 
 .. TODO Update instructions for Qubes
 
-The *Submission Private Key* is held on the airgapped *Secure Viewing Station*,
+The Submission Private Key is held on the airgapped *Secure Viewing Station*,
 and is not normally accessed by SecureDrop users anywhere but on the *Secure Viewing Station*.
-Therefore, we recommend rotating the *Submission Key* under the following
+Therefore, we recommend rotating the Submission Key under the following
 circumstances:
 
 - If the user's departure was not amicable
 - If the user is still holding on to any *Secure Viewing Station* USB flash drive or
   backup
-- If you have any other reason to believe the *Submission Private Key* or the
+- If you have any other reason to believe the Submission Private Key or the
   entire *Secure Viewing Station* USB flash drive may have been copied or compromised.
 
 You should still keep the old key on the *Secure Viewing Station*, or else you
@@ -158,7 +158,7 @@ On the *Secure Viewing Station*
 .. TODO remove this section, replace with instructions for key rotation on the SDW laptops
 
 #. From the *Secure Viewing Station* Apps Menu, choose **Accessories ▸
-   Kleopatra**, and select the *Submission Key* from the list of available
+   Kleopatra**, and select the Submission Key from the list of available
    keys.
 
 
@@ -236,7 +236,7 @@ On the *Secure Viewing Station*
    |revoked|
 
 #. Now :doc:`follow the instructions <../installation/generate_submission_key>`
-   to create a new *Submission Key.* Copy the fingerprint and new *Submission Public Key* to
+   to create a new *Submission Key.* Copy the fingerprint and new Submission Public Key to
    your *Transfer Device*.
 
 .. |select securedrop key| image:: ../../images/offboard/key_list.png

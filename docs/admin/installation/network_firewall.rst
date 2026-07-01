@@ -2,7 +2,7 @@ Set up the network firewall
 ===========================
 
 Now that you've set up your password manager, you can move on to setting up
-the Network Firewall. You should stay logged in to the *Admin Workstation* to
+the Network Firewall. You should stay logged in to the Admin Workstation to
 access the Network Firewall's web interface for configuration.
 
 Unfortunately, due to the wide variety of firewalls that may be used, we
@@ -52,8 +52,8 @@ Configuration: other firewalls
 If you are using a firewall based on an OS not listed above, you should still set it up
 use the same overall configuration and ruleset as defined for the supported models.
 
-The *Application* and *Monitor Servers* should be set up on separate subnets configured on
-separate physical NICs, with the *Admin Workstation* also on a separate subnet if possible.
+The *Application* and Monitor Servers should be set up on separate subnets configured on
+separate physical NICs, with the Admin Workstation also on a separate subnet if possible.
 Including the WAN connection, a minimum of 4 NICs must be available.
 
 The abstract ruleset required by SecureDrop can be described as follows:
@@ -62,14 +62,14 @@ The abstract ruleset required by SecureDrop can be described as follows:
 
 * Disable DHCP (in case the firewall is providing a DHCP server by default)
 * Disallow all traffic by default (inbound or outbound)
-* Allow UDP OSSEC (port 1514) from *Application Server* to *Monitor Server*
-* Allow TCP ossec agent auth (port 1515) from *Application Server* to *Monitor Server*
-* Allow TCP/UDP DNS from *Application Server* and *Monitor Server* to the IPs of known name servers
-* Allow UDP NTP from *Application Server* and *Monitor Server* to all
-* Allow TCP any port from *Application Server* and *Monitor Server* to all (this is needed for making connections to the Tor network)
-* Allow TCP 80/443 from *Admin Workstation* to all (in case there is a need to access the web interface of the firewall)
-* Allow TCP SSH from *Admin Workstation* to *Application Server* and *Monitor Server*
-* Allow TCP any port from *Admin Workstation* to all
+* Allow UDP OSSEC (port 1514) from Application Server to Monitor Server
+* Allow TCP ossec agent auth (port 1515) from Application Server to Monitor Server
+* Allow TCP/UDP DNS from Application Server and Monitor Server to the IPs of known name servers
+* Allow UDP NTP from Application Server and Monitor Server to all
+* Allow TCP any port from Application Server and Monitor Server to all (this is needed for making connections to the Tor network)
+* Allow TCP 80/443 from Admin Workstation to all (in case there is a need to access the web interface of the firewall)
+* Allow TCP SSH from Admin Workstation to Application Server and Monitor Server
+* Allow TCP any port from Admin Workstation to all
 
 This can be implemented with iptables, Cisco IOS etc. if you have the necessary
 expertise.

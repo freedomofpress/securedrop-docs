@@ -1,8 +1,8 @@
-Provisioning USB *Export Devices*
+Provisioning USB Export Devices
 =================================
 
 The *Journalist Workstation* supports the export of submissions from the SecureDrop Inbox
-to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an *Export Device*.
+to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an Export Device.
 
 Creating a LUKS-encrypted drive
 -------------------------------
@@ -10,7 +10,7 @@ Creating a LUKS-encrypted drive
 .. note:: LUKS-encrypted drives can only be used with Linux-based
   systems such as Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
 
-In order to provision a LUKS-encrypted *Export Device* for use a *Journalist Workstation*,
+In order to provision a LUKS-encrypted Export Device for use a *Journalist Workstation*,
 you will need a fresh USB flash drive and a SecureDrop Workstation.
 
 .. TODO update these instructions for provisioning Export Devices on Qubes
@@ -34,7 +34,7 @@ you will need a fresh USB flash drive and a SecureDrop Workstation.
   passphrase is highly recommended.
 - Once the password is set, click **Format**, then when prompted, click **Format**
   again. The formatting process should take only a few seconds.
-- Once formatting is complete, you will need to provide the *Export Device* and
+- Once formatting is complete, you will need to provide the Export Device and
   its decryption password to the *Journalist Workstation* users. Make sure that
   they store it and its password securely, as it will contain decrypted
   submissions.
@@ -47,7 +47,7 @@ Creating a VeraCrypt-encrypted drive
 
 .. warning::
 
-   If you plan to use your *Export Device* with computers running macOS 15
+   If you plan to use your Export Device with computers running macOS 15
    ("Sequoia") or later, you must also perform the VeraCrypt setup on that
    version of macOS.
 
@@ -84,7 +84,7 @@ Creating a VeraCrypt-encrypted drive
 - Wait until VeraCrypt says "The VeraCrypt volume has been successfully created." Until
   this pops up, it may look like the program is frozen, but it's running in the background.
 - Click **OK** and then **Exit** to finish formatting process.
-- Once formatting is complete, you will need to provide the *Export Device* and
+- Once formatting is complete, you will need to provide the Export Device and
   its decryption password to the *Journalist Workstation* users. Make sure that
   they store it and its password securely, as it will contain decrypted
   submissions.

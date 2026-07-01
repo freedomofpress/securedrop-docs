@@ -1,19 +1,19 @@
-SecureDrop for *Journalists*
+SecureDrop for Journalists
 ============================
 
 .. include:: ../includes/provide-feedback.txt
 
 This guide presents an overview of the SecureDrop system for a
-*Journalist*. It covers the core functions necessary to start working
+Journalist. It covers the core functions necessary to start working
 with the platform: logging in securely, viewing documents, editing
-documents, and interacting with *Sources*.
+documents, and interacting with Sources.
 
-*Journalists* will use the *Journalist Workstation* to read, print, and
+Journalists will use the *Journalist Workstation* to read, print, and
 otherwise prepare documents for publication. Apart from those deliberately
 published, decrypted documents are never opened in an environment with
 direct access to the Internet
 
-SecureDrop provides a number of benefits intended to protect *Journalists*.
+SecureDrop provides a number of benefits intended to protect Journalists.
 Communications through SecureDrop are encrypted in transit, so messages
 cannot be easily intercepted and read while they are moving across the
 Internet, and are also encrypted on the server so if any attacker manages
@@ -27,8 +27,8 @@ It also helps in the event of a subpoena or court order. All servers are
 owned by the individual news organization, so no third-party companies
 can be secretly subpoenaed. Additionally, SecureDrop limits the amount of
 metadata it collects and saves, so there's no trail showing exactly when
-a *Journalist* was exchanging messages with a *Source*, or details that might give
-the *Source* away.
+a Journalist was exchanging messages with a Source, or details that might give
+the Source away.
 
 For full details about what makes SecureDrop a unique and useful tool for
-*Journalists*, :doc:`see here. </introduction/what_makes_securedrop_unique>`
+Journalists, :doc:`see here. </introduction/what_makes_securedrop_unique>`

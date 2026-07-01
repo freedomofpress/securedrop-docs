@@ -76,7 +76,7 @@ the servers during the install, you will receive a pre-install error reminding
 you that it must be turned off before the installation can proceed.
 
 Likewise, SecureBoot is not fully supported by QubesOS, and cannot be used with
-*SecureDrop Workstations*.
+SecureDrop Workstations.
 
 For instructions on how to enable or disable the SecureBoot feature for your
 device, please consult the manufacturer's manual for BIOS settings, as they
@@ -264,7 +264,7 @@ Install `securedrop-admin` tooling
 
 .. _securedrop_workstation_generate_private_key:
 
-Generate *Submission Private Key*
+Generate Submission Private Key
 ---------------------------------
 
 .. TODO

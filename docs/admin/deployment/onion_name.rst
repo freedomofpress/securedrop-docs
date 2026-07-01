@@ -5,7 +5,7 @@ What are onion names?
 ^^^^^^^^^^^^^^^^^^^^^
 
 Onion names are short, memorable addresses that visitors can use to access an 
-*Onion Service* (e.g., a news organization's SecureDrop) using Tor Browser. 
+Onion Service (e.g., a news organization's SecureDrop) using Tor Browser. 
 
 Imagine a SecureDrop instance for a new organization called
 *The New York World* with an onion address like this:
@@ -45,7 +45,7 @@ Getting an onion name
 Freedom of the Press Foundation maintains onion names for SecureDrop instances
 which:
 
-* are using v3 *Onion Services*
+* are using v3 Onion Services
 * are part of the SecureDrop Directory
 
 We will generally approve onion names that meaningfully correspond to your name
@@ -56,7 +56,7 @@ country code (e.g. ``<organization>.<country code>.securedrop.tor.onion``).
 If your SecureDrop instance is not part of the directory yet, you can 
 :ref:`begin the process here<The SecureDrop Directory>`. In order to be
 eligible for inclusion, your SecureDrop and its associated clearnet
-*Landing Page* must be set up consistent with the best practices recommended
+Landing Page must be set up consistent with the best practices recommended
 in our documentation.
 
 If you are already part of the SecureDrop directory and would like a short
@@ -67,10 +67,10 @@ Does This Replace the original address?
 
 No, the onion name is only a human-friendly name for the full-length address.
 The original v3 address can continue to be used like normal, this just gives
-*Sources* an easier to remember option for accessing your SecureDrop.
+Sources an easier to remember option for accessing your SecureDrop.
 
 We recommend that you list both the onion name and the full v3 address on your
-*Landing Page*. This allows *Sources* to verify both addresses against the
+Landing Page. This allows Sources to verify both addresses against the
 information included in our directory, and also provides a fallback should
 the onion name fail to load for any reason.
 
@@ -98,10 +98,10 @@ reasons including but not limited to:
 * an instance is stuck on an old software version, and can no longer
   be considered secure;
 * an instance is unreachable for extended periods of time;
-* the configuration of an instance or the associated *Landing Page*
+* the configuration of an instance or the associated Landing Page
   differs substantially from our security recommendations in a manner
-  that may put *Sources* at risk.
+  that may put Sources at risk.
 
 Unless the removal is an emergency, we will attempt to offer a substantial
 grace period prior to the revocation of an onion name, to ensure you can inform
-your *Sources* about the change to your onion address.
+your Sources about the change to your onion address.

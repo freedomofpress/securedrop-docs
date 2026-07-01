@@ -4,12 +4,12 @@ Installation overview
 Migrating from a Tails-based SecureDrop
 ---------------------------------------
 
-If you are migrating from an older SecureDrop, using the separate Tails-based *Secure Viewing Station*, *Journalist workstation* and *Admin Workstation* USB flash drives, then skip to the :ref:`Migration Overview<migration_overview>`.
+If you are migrating from an older SecureDrop, using the separate Tails-based *Secure Viewing Station*, *Journalist workstation* and Admin Workstation USB flash drives, then skip to the :ref:`Migration Overview<migration_overview>`.
 
 Setting expectations
 --------------------
 
-SecureDrop is a technical tool. It is designed to protect *Journalists* and *Sources*, but no tool can guarantee safety. This guide will instruct you in installing and configuring SecureDrop, but it does not explain how to use it safely and effectively. Put another way: at the end of this guide, you will have built a car; you will not know how to drive. The :ref:`Deployment Guide <deployment>` contains best practices for working with SecureDrop. Make sure to read it after completing the installation.
+SecureDrop is a technical tool. It is designed to protect Journalists and Sources, but no tool can guarantee safety. This guide will instruct you in installing and configuring SecureDrop, but it does not explain how to use it safely and effectively. Put another way: at the end of this guide, you will have built a car; you will not know how to drive. The :ref:`Deployment Guide <deployment>` contains best practices for working with SecureDrop. Make sure to read it after completing the installation.
 
 Setting up SecureDrop is a multi-step process, where each step builds on the steps that come before it. It's important that you treat the installation as a complete process, making sure not to skip any portions of the install guide or jump ahead to later content.
 
@@ -38,12 +38,12 @@ the computers and services needed for a functional SecureDrop.
 
 During this process, you'll set up at least four devices:
 
-- *Admin Workstation*:
-   A laptop running the QubesOS operating system configured as an *Admin Workstation*, that you use to install and administer SecureDrop on the servers via SSH. If necessary (i.e. in a small newsroom), the same *SecureDrop Workstation* used for administration may be used as a *Journalist Workstation* by *Journalists* to decrypt, view, and export submitted documents. For a larger newsroom, you may set up additional *Journalist Workstations* as needed for *Journalist* use.
-- *Application Server*:
-   An Ubuntu server running two segmented Tor hidden services. The *Source* connects to the *Source Interface*, a public-facing Tor *Onion Service*, to send messages and documents to the *Journalist*. The *Journalist* connects to the *Journalist Interface*, an `authenticated Tor *Onion Service* <https://community.torproject.org/onion-services/advanced/client-auth/>`__, using SecureDrop Inbox on a *Journalist Workstation* to download encrypted documents and respond to *Sources*.
-- *Monitor Server*:
-   An Ubuntu server that monitors the *Application Server* with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
+- Admin Workstation:
+   A laptop running the QubesOS operating system configured as an Admin Workstation, that you use to install and administer SecureDrop on the servers via SSH. If necessary (i.e. in a small newsroom), the same SecureDrop Workstation used for administration may be used as a *Journalist Workstation* by Journalists to decrypt, view, and export submitted documents. For a larger newsroom, you may set up additional *Journalist Workstations* as needed for Journalist use.
+- Application Server:
+   An Ubuntu server running two segmented Tor hidden services. The Source connects to the Source Interface, a public-facing Tor Onion Service, to send messages and documents to the Journalist. The Journalist connects to the Admin Interface, an `authenticated Tor Onion Service <https://community.torproject.org/onion-services/advanced/client-auth/>`__, using SecureDrop Inbox on a *Journalist Workstation* to download encrypted documents and respond to Sources.
+- Monitor Server:
+   An Ubuntu server that monitors the Application Server with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
 - Network Firewall
    A hardware firewall dedicated to your SecureDrop installation. 
 
@@ -51,31 +51,31 @@ A summary of the major steps is as follow:
 
 #. Acquire compatible hardware.
 #. Prepare email accounts and GPG keys for alert emails.
-#. Prepare an *Admin Workstation* laptop.
-#. Set up the KeePassXC password manager on the *Admin Workstation*.
-#. Install and configure the dedicated network firewall from the *Admin Workstation*. 
+#. Prepare an Admin Workstation laptop.
+#. Set up the KeePassXC password manager on the Admin Workstation.
+#. Install and configure the dedicated network firewall from the Admin Workstation. 
 #. Prepare the (*Application* and *Monitor*) servers.
-#. Install SecureDrop on the servers from the *Admin Workstation*.
-#. Complete local configuration of the *Admin Workstation*.
+#. Install SecureDrop on the servers from the Admin Workstation.
+#. Complete local configuration of the Admin Workstation.
 #. Create the first Admin user.
 #. Test the installation.
 
 Optionally:
-#. Prepare additional *Journalist Workstations* for use by *Journalists*.
-#. Prepare encrypted *Export Devices*.
+#. Prepare additional *Journalist Workstations* for use by Journalists.
+#. Prepare encrypted Export Devices.
 
-Minimum security requirements for a *SecureDrop Workstation*
+Minimum security requirements for a SecureDrop Workstation
 ------------------------------------------------------------
 
 .. TODO Clarify differences between Journalist and Admin Workstations
 
-A *SecureDrop Workstation* (either an *Admin Workstation* or a *Journalist Workstation*) contains both a copy of the *Submission Private Key*, and encrypted and decrypted messages and submissions. It's critical to ensure that appropriate security practices are applied to a *SecureDrop Workstation*.
+A SecureDrop Workstation (either an Admin Workstation or a *Journalist Workstation*) contains both a copy of the Submission Private Key, and encrypted and decrypted messages and submissions. It's critical to ensure that appropriate security practices are applied to a SecureDrop Workstation.
 
-- *SecureDrop Workstations* should be stored in a secure and locked room, with access restricted to
+- SecureDrop Workstations should be stored in a secure and locked room, with access restricted to
   users and administrators. The room may be monitored externally, but there should be no internal
   monitoring.
 - A wired Internet connection that does not restrict Tor must be available for
-  the *SecureDrop Workstation*. This connection should either be dedicated to *SecureDrop
+  the SecureDrop Workstation. This connection should either be dedicated to *SecureDrop
   Workstation*, or should be on a fully segregated subnet from the rest of the
   corporate network.
 - Users should not bring other electronic devices into the room, with the
@@ -86,7 +86,7 @@ A *SecureDrop Workstation* (either an *Admin Workstation* or a *Journalist Works
 Minimum security requirements for the SecureDrop servers
 ------------------------------------------------------------
 
--  The *Application* and *Monitor Servers* should be dedicated physical machines, not virtual machines.
+-  The *Application* and Monitor Servers should be dedicated physical machines, not virtual machines.
 -  A trusted location to host the servers. The servers should be hosted in a location that is owned or occupied by the organization to ensure that their legal department can not be bypassed with gag orders.
 -  The SecureDrop servers should be on a separate internet connection or completely segmented from the corporate network, such as a dedicated subnet with DENY rules for all traffic to and from the corporate LAN.
 -  All traffic from the corporate network should be blocked at the SecureDrop's point of demarcation.
