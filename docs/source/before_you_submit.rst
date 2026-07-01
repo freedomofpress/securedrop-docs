@@ -8,6 +8,13 @@ What NOT to do
 * DO NOT access SecureDrop using your employer's hardware.
 * DO NOT access SecureDrop on your home internet network.
 
+What to do
+----------
+
+* **DO** carefully read the remaining instructions, that will carefully
+  step-through the reasons why we advise the above, and provide guidance
+  to minimize risk when using SecureDrop.
+  
 Suggested devices for using SecureDrop
 --------------------------------------
 
