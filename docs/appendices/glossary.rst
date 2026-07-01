@@ -5,23 +5,34 @@ A number of terms used in this guide, and in the `SecureDrop workflow
 diagram <what_is_securedrop>`, are specific to SecureDrop. 
 The list below attempts to enumerate and define these terms.
 
+.. _glossary_administrator:
+
 Administrator
 -------------
 
-The *Administrator* installs, deploys, and maintains a SecureDrop instance. They connect to the *Application* and *Monitor* servers using an *Admin Workstation*. 
+The *Administrator* installs, deploys, and maintains a SecureDrop instance. They connect to the *Application* and *Monitor* servers (using SSH) and to the *Admin Interface* (using Tor Browser) from an *Admin Workstation*. 
+
+.. _glossary_admin_workstation:
+
+Admin Interface
+---------------
+
+The *Admin Interface* is the web-based interface *Administrators* use to add and manage SecureDrop users. It is hosted by the *Application Server* as an authenticated *Onion Service*, thus it can only be reached using Tor Browser with the correct authentication token.
 
 Admin Workstation
 -----------------
 
 The *Admin Workstation* is a laptop running Qubes OS, initially configured as a *SecureDrop Workstation* but with additional tools and credentials added to allow an *Administrator* to install and maintain a SecureDrop instance. 
 
+.. _glossary_application_server:
+
 Application Server
 ------------------
 
 The *Application Server* runs the SecureDrop server application. This server hosts both
-the website that *Sources* access (the *Source Interface*) and the website that
-*Journalists* access (the *Journalist Interface*). Both are published
-as *Onion Services*, thus *Sources* and *Journalists* may only connect to them using Tor.
+the website that *Sources* access (the *Source Interface*), the *Admin Interface*, and the API endpoint that *SecureDrop Inbox* connects to so *Journalists* may download and reply to submissions.
+
+.. _glossary_export_device:
 
 Export Device
 -------------
@@ -29,6 +40,8 @@ Export Device
 The *Export Device* is a physical USB flash drive used to transfer decrypted documents from a *SecureDrop Workstation* to a *Journalist*'s everyday workstation, or to another computer for additional processing.
 
 Please see the detailed security recommendations for the choice, configuration and use of your *Export Device* in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/installation/provisioning_usb>`.
+
+.. _glossary_journalist:
 
 Journalist
 ----------
@@ -43,6 +56,8 @@ being transferred to another computer.
 
 Instructions for using SecureDrop as a *Journalist* are available in our
 :doc:`Journalist Guide </journalist/journalist>`.
+
+.. _glossary_journalist_alert_key:
 
 Journalist Alert Key
 --------------------
@@ -61,6 +76,8 @@ The *Landing Page* is the public-facing webpage for a SecureDrop instance. This
 page is hosted as a standard (i.e. non-Tor) webpage on the news organization's
 website. It provides first instructions for potential *Sources* and includes
 the the onion address for the instance's :ref:`Source Interface <glossary_source_interface>`.
+
+.. _glossary_monitor_server:
 
 Monitor Server
 --------------
@@ -82,20 +99,26 @@ as well as for SSH access to the servers in SSH-over-Tor mode.
 ``sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion`` is the onion
 address for the *Onion Service* version of the SecureDrop website. 
 
-Authenticated *Onion Services* require an additional authentication token be provided when connecting to the server. The *Journalist Interface* and SSH access to the servers (in SSH-over-Tor mode) are authenticated *Onion Services*.
+Authenticated *Onion Services* require an additional authentication token be provided when connecting to the server. The *Admin Interface*, the API endpoint connected to by *SecureDrop Inbox*, and SSH access to the servers (in SSH-over-Tor mode) are all authenticated *Onion Services*.
 
 Read more about `Onion Services in Tor's glossary
 <https://support.torproject.org/onionservices/>`__.
+
+.. _glossary_ossec_alert_key:
 
 OSSEC Alert Key
 ---------------
 
 The *OSSEC Alert Public Key* is the GPG key that the *Monitor Server* uses to encrypt e-mail alerts send to the *Administrator*. The *Administrator* uses an associated *OSSEC Alert Private Key* to decrypt the e-mails. 
 
+.. _glossary_securedrop_inbox:
+
 SecureDrop Inbox
 ----------------
 
 *SecureDrop Inbox* is the central application on a *SecureDrop Workstation*. It allows *Journalists* to connect to their SecureDrop instance, download and decrypt messages from *Sources*, and compose and send replies. *SecureDrop Inbox* can only run on a *SecureDrop Workstation*.
+
+.. _glossary_securedrop_workstation:
 
 SecureDrop Workstation
 ----------------------
@@ -103,6 +126,8 @@ SecureDrop Workstation
 The *SecureDrop Workstation* is a laptop running Qubes OS, with *SecureDrop Inbox* installed and configured to connect to a specific SecureDrop instance and use the unique features of Qubes OS to protect *Journalists* while handling submissions. Each *Journalist* may have their own *SecureDrop Workstation*, or it may be shared among several *Journalists*. 
 
 Read more about :doc:`*SecureDrop Workstation* and Qubes OS</introduction/securedrop_workstation>`.
+
+.. _glossary_source:
 
 Source
 ------
@@ -126,7 +151,7 @@ hosted on the *Application Server* and can only be accessed through Tor.
 Instructions for using the *Source Interface* are available in our :doc:`Source Guide
 </source/source>`.
 
-.. _submission-key:
+.. _glossary_submission-key:
 
 Submission Key
 --------------
