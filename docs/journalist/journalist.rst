@@ -8,7 +8,7 @@ Journalist. It covers the core functions necessary to start working
 with the platform: logging in securely, viewing documents, editing
 documents, and interacting with Sources.
 
-Journalists will use the *Journalist Workstation* to read, print, and
+Journalists will use a Qubes-based :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` running the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` application to read, print, and
 otherwise prepare documents for publication. Apart from those deliberately
 published, decrypted documents are never opened in an environment with
 direct access to the Internet

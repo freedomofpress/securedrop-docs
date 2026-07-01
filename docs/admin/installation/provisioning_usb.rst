@@ -1,8 +1,8 @@
 Provisioning USB Export Devices
 =================================
 
-The *Journalist Workstation* supports the export of submissions from the SecureDrop Inbox
-to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an Export Device.
+SecureDrop Workstation supports the export of submissions from the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>`
+to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an :ref:`Export Device<glossary_export_device>`.
 
 Creating a LUKS-encrypted drive
 -------------------------------
@@ -10,7 +10,7 @@ Creating a LUKS-encrypted drive
 .. note:: LUKS-encrypted drives can only be used with Linux-based
   systems such as Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
 
-In order to provision a LUKS-encrypted Export Device for use a *Journalist Workstation*,
+In order to provision a LUKS-encrypted Export Device,
 you will need a fresh USB flash drive and a SecureDrop Workstation.
 
 .. TODO update these instructions for provisioning Export Devices on Qubes
@@ -35,7 +35,7 @@ you will need a fresh USB flash drive and a SecureDrop Workstation.
 - Once the password is set, click **Format**, then when prompted, click **Format**
   again. The formatting process should take only a few seconds.
 - Once formatting is complete, you will need to provide the Export Device and
-  its decryption password to the *Journalist Workstation* users. Make sure that
+  its decryption password to the Journalists who will be using it. Make sure that
   they store it and its password securely, as it will contain decrypted
   submissions.
 
@@ -85,6 +85,6 @@ Creating a VeraCrypt-encrypted drive
   this pops up, it may look like the program is frozen, but it's running in the background.
 - Click **OK** and then **Exit** to finish formatting process.
 - Once formatting is complete, you will need to provide the Export Device and
-  its decryption password to the *Journalist Workstation* users. Make sure that
+  its decryption password to the Journalists who will be using it. Make sure that
   they store it and its password securely, as it will contain decrypted
   submissions.

@@ -85,12 +85,12 @@ Connect to the pfSense web GUI
       wireless network), you may encounter problems trying
       to connect the pfSense WebGUI.
 
-#. Launch the **Unsafe Browser** from the menu bar: **Apps ▸ Internet ▸
+#. Launch the Unsafe Browser from the menu bar: **Apps ▸ Internet ▸
    Unsafe Browser**.
 
    |Launching the Unsafe Browser|
 
-   .. note:: The *Unsafe Browser* is, as the name suggests, **unsafe**
+   .. note:: The Unsafe Browser is, as the name suggests, **unsafe**
         (its traffic is not routed through Tor). However, it is
         the only option because Tails `intentionally disables LAN
         access`_ in the **Tor Browser**.
@@ -108,7 +108,7 @@ Connect to the pfSense web GUI
 
    |Unsafe Browser Homepage|
 
-#. Navigate to the pfSense WebGUI in the *Unsafe Browser*:
+#. Navigate to the pfSense WebGUI in the Unsafe Browser:
    ``https://192.168.1.1``
 
    .. note:: If you have trouble connecting, go to your network settings and
@@ -206,7 +206,7 @@ Workstation a static IP address that is known to be in the subnet to
 continue.
 
 Now the WebGUI will be available on the Admin Gateway address. Navigate
-to ``https://<Admin Gateway IP>`` in the *Unsafe Browser*, and login as
+to ``https://<Admin Gateway IP>`` in the Unsafe Browser, and login as
 before except with the new passphrase you just set for the pfSense WebGUI.
 Once you've logged in to the WebGUI, you are ready to continue configuring
 the firewall.

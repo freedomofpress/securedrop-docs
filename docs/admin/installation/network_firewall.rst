@@ -2,8 +2,8 @@ Set up the network firewall
 ===========================
 
 Now that you've set up your password manager, you can move on to setting up
-the Network Firewall. You should stay logged in to the Admin Workstation to
-access the Network Firewall's web interface for configuration.
+the network firewall. You should stay be logged into the :ref:`Admin Workstation<glossary_admin_workstation>` to
+access the network firewall's web interface for configuration.
 
 Unfortunately, due to the wide variety of firewalls that may be used, we
 do not provide specific instructions to cover every type or variation in
@@ -52,7 +52,7 @@ Configuration: other firewalls
 If you are using a firewall based on an OS not listed above, you should still set it up
 use the same overall configuration and ruleset as defined for the supported models.
 
-The *Application* and Monitor Servers should be set up on separate subnets configured on
+The Application and Monitor Servers should be set up on separate subnets configured on
 separate physical NICs, with the Admin Workstation also on a separate subnet if possible.
 Including the WAN connection, a minimum of 4 NICs must be available.
 

@@ -5,7 +5,7 @@ What are onion names?
 ^^^^^^^^^^^^^^^^^^^^^
 
 Onion names are short, memorable addresses that visitors can use to access an 
-Onion Service (e.g., a news organization's SecureDrop) using Tor Browser. 
+:ref:`Onion Service<glossary_onion_service>` (e.g., a news organization's SecureDrop) using Tor Browser. 
 
 Imagine a SecureDrop instance for a new organization called
 *The New York World* with an onion address like this:

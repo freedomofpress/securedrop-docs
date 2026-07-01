@@ -3,7 +3,7 @@
 Using the KeePassXC password manager
 ====================================
 
-Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including administrators, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
+Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including Administrator, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
 
 Template password database
 ------------------------------------
@@ -58,11 +58,11 @@ the template are:
 - Network Firewall Admin Credentials
 - OSSEC Alert Public Key
 - SecureDrop Login Credentials
+- Auth Value: Admin Interface
+- Onion URL: Admin Interface
 
-*Journalist*:
+**Journalist**:
 
-- Auth Value: *Journalist Interface*
-- Onion URL: *Journalist Interface*
 - Personal GPG Key
 - SecureDrop Login Credentials
 

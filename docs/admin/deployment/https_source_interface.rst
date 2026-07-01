@@ -3,7 +3,7 @@ HTTPS on the Source Interface
 
 .. TODO update this page for Qubes
 
-The SecureDrop Source Interface is served as an Onion Service with an onion
+The SecureDrop :ref:`Source Interface<glossary_source_interface>` is served as an :ref:`Onion Service<glossary_onion_service>` with an onion
 address ending in ".onion", requiring Tor Browser to access it. While Onion Services provide
 end-to-end encryption by default, as well as strong anonymity, there are
 several reasons why you might want to consider deploying an additional layer of
@@ -63,14 +63,14 @@ involves:
 4. Generating another CSR, using a custom tool, leveraging the Onion Service private key.
 5. Submitting the second CSR to DigiCert. (This CSR demonstrates control over the private key for the Onion Service.)
 6. Downloading the certificate from the DigiCert panel.
-7. Installing the cert on the SecureDrop Application Server, via ``securedrop-admin``.
+7. Installing the cert on the SecureDrop :ref:`Application Server<glossary_application_server>`, via ``securedrop-admin``.
 
 For SecureDrop, you should perform these steps on the Admin Workstation.
-Below are detailed steps for use on Tails:
+Below are detailed steps for use on an :ref:`Admin Workstation<glossary_admin_workstation>`:
 
 .. code:: sh
 
-    # On the Admin Workstation, generate the first CSR
+    # Generate the first CSR
     mkdir ~/Persistent/sd-https-key-generation
     cd ~/Persistent/sd-https-key-generation
     openssl req -new -newkey rsa:4096 -nodes -keyout sd.key -out sd.csr

@@ -8,7 +8,7 @@ The ``securedrop-admin`` Utility
 Using ``securedrop-admin``
 --------------------------
 
-The ``securedrop-admin`` command-line utility is used
+The ``securedrop-admin`` command-line utility is used on an :ref:`Admin Workstation<glossary_admin_workstation>`
 to perform common server administration tasks, including:
 
 * configuring and installing SecureDrop
@@ -19,9 +19,9 @@ to perform common server administration tasks, including:
 You can list all available ``securedrop-admin`` actions using the command
 ``securedrop-admin --help``
 
-.. note:: If your team has multiple admins, each with their own Admin Workstation, you
+.. note:: If your team has multiple Administrators, each with their own Admin Workstation, you
   must take steps to manually synchronize any configuration changes made via ``securedrop-admin``
-  with each other. See `Managing Configuration Updates with Multiple Admins`_
+  with each other. See `Managing Configuration Updates with Multiple Administrators`_
 
 Updating the server configuration
 ---------------------------------
@@ -55,7 +55,7 @@ In both cases, follow these steps:
 
    ``~/.config/securedrop-admin/site-specific``
 #. Run ``securedrop-admin install``. This will apply the configuration to your
-   *Application* and Monitor Server, and enforce the canonical state of the
+   Application and Monitor Server, and enforce the canonical state of the
    server configuration.
 
 .. include:: ../../includes/rerun-install-is-safe.txt
@@ -92,20 +92,20 @@ languages as needed. Locale changes will be applied after the next reboot.
 
 .. _multiple_admins:
 
-Managing configuration updates with multiple admins
----------------------------------------------------
+Managing configuration updates with multiple Administrators
+-----------------------------------------------------------
 
-Organizations with multiple admins should set up a way to synchronize
-any changes one admin makes to the server configuration, as by default those
+Organizations with multiple Administrators should set up a way to synchronize
+any changes one Administrator makes to the server configuration, as by default those
 changes are stored only on their individual Admin Workstation.
 
 Configuration changes will be flagged by OSSEC and will generate alerts, but
-if other admins don't regularly review OSSEC alerts they may miss important
+if other Administrators don't regularly review OSSEC alerts they may miss important
 changes, such as an update to the Submission Public Key. If they subsequently
 run ``securedrop-admin install`` from their Admin Workstation, they will
 revert the server configuration to an older version.
 
-The simplest approach to keeping workstations in sync is to inform other admins
+The simplest approach to keeping workstations in sync is to inform other Administrators
 of changes as you make them, for example via a secure Signal group chat. Any such
 communications should happen over a platform that provides E2EE, as you may need to
 share sensitive information.
@@ -114,7 +114,7 @@ Configuration information is stored on the Admin Workstation under
 ``~/.config/securedrop-admin``:
 
 * ``~/.config/securedrop-admin/site-specific`` contains settings written by
-  ``securedrop-admin sdconfig`` - if it is changed other admins should be notified.
+  ``securedrop-admin sdconfig`` - if it is changed other Administrators should be notified.
 * The Submission Public Key and OSSEC Alert Public Key should be present
   under ``~/.config/securedrop-admin``. If these keys are rotated, the public keys
   should be updated on other Admin Workstations.
@@ -129,5 +129,5 @@ Configuration information is stored on the Admin Workstation under
       ~/.config/securedrop-admin/tor_v3_keys.json
 
   If Onion Service addresses are changed, the files listed above should be shared
-  securely with other administrators - preferably in person using an encrypted USB flash drive,
+  securely with other Administrators - preferably in person using an encrypted USB flash drive,
   as they can be used to access the servers directly via SSH over Tor.

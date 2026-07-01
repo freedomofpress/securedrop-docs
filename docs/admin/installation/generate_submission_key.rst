@@ -4,13 +4,13 @@ Generate the Submission Key
 .. These instructions will be replaced with whatever mechanism the all-on-Qubes SecureDrop Workstation uses to generate the submission key.
 
 When a document or message is submitted to SecureDrop by a Source, it is
-automatically encrypted with the Submission Key. The private part
-of this key is only stored on the *Secure Viewing Station* which is never
+automatically encrypted with the :ref:`Submission Key<glossary_submission_key>`. The private part
+of this key is only stored on the Secure Viewing Station which is never
 connected to the Internet. SecureDrop submissions can only be decrypted and
-read on the *Secure Viewing Station*.
+read on the Secure Viewing Station.
 
 We will now generate the Submission Key. If you aren't still logged into your
-*Secure Viewing Station* from the previous step, boot it using its Tails USB
+Secure Viewing Station from the previous step, boot it using its Tails USB
 flash drive, with persistence enabled.
 
 .. important:: The private key you will generate in the following steps is one of the most
@@ -84,7 +84,7 @@ write down the 40 hexadecimal digits under *Fingerprint*.
 .. note:: Your fingerprint will be different from the one in the example
           screenshot.
 
-At this point, you are done with the *Secure Viewing Station* for now. You
+At this point, you are done with the Secure Viewing Station for now. You
 can shut down Tails, grab the Admin Workstation USB flash drive, and move over to your regular
 workstation.
 

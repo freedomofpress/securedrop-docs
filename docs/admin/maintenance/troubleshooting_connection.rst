@@ -85,7 +85,7 @@ If you use the two-factor app on your phone for other websites and services,
 make sure that you have selected the correct user account. It should be labeled
 **SecureDrop**.
 
-If you have access to a Tails-based *Journalist Workstation*, verify whether you
+If you have access to a Tails-based Journalist Workstation, verify whether you
 can access SecureDrop from Tails.
 
 If you are certain that your credentials are correct but you are unable to log

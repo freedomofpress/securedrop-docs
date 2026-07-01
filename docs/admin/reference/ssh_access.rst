@@ -37,7 +37,7 @@ the Admin Interface or ``securedrop-admin``. However, in some cases,
 you may need to SSH in order to troubleshoot and fix a problem that cannot be
 resolved via these tools.
 
-You can access your Application Server and Monitor Server via SSH by
+You can access your Application Server and Monitor Server via SSH from an Admin Workstation by
 using either the ``ssh app`` or ``ssh mon`` commands (respectively).
 
 In this section we cover basic commands you may find useful when you SSH into

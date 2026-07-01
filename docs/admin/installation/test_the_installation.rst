@@ -74,8 +74,7 @@ Test the web interfaces
 
    - Open the Admin Interface in Tor Browser by clicking on its desktop
      shortcut.  Enter your passphrase and two-factor code to log in.
-   - If you have problems logging in to the *Journalist
-     Interface*, SSH to the Application Server and restart the time
+   - If you have problems logging in to the Admin Interface, SSH to the Application Server and restart the time
      synchronization daemon to synchronize the time: ``sudo systemctl
      restart systemd-timesyncd``. Also check that your smartphone's
      time is accurate and set to network time in its device settings.

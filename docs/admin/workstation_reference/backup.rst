@@ -1,7 +1,7 @@
 Backup and restore
 ==================
 
-.. TODO possibly need distinct backup and restore instructions for Qubes-based Admin and *Journalist Workstation*s? Possibly not?
+.. TODO possibly need distinct backup and restore instructions for Qubes-based Admin and  Workstations? Possibly not?
 
 Qubes OS has a `backup utility <https://www.qubes-os.org/doc/backup-restore/>`_
 that allows for backup and restoration of user-specified VMs and templates.

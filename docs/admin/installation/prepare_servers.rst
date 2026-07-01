@@ -238,11 +238,11 @@ with SecureDrop is **not recommended**. While FDE does offer data protection for
 devices that are powered down, SecureDrop's servers are designed to be always-on,
 with the exception of a nightly reboot after automatic upgrades are applied.
 Given this update schedule, with FDE enabled, the servers would become unreachable
-once every 24 hours until an administrator entered the full-disk encryption
+once every 24 hours until an Administrator entered the full-disk encryption
 passphrase via the console, and during that time, Sources and Journalists would
 be unable to access your instance.
 
-The increased responsibility for administrators, as well as the daily downtime
+The increased responsibility for Administrators, as well as the daily downtime
 and limited scenarios in which FDE would be a net security benefit, inform this
 recommendation, but you may make a decision based on your own requirements.
 (See this `GitHub issue <https://github.com/freedomofpress/securedrop/issues/511#issuecomment-50823554>`_

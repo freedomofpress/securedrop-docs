@@ -1,8 +1,8 @@
 Communicating with sources
 ==========================
 
-The *Journalist Workstation* lets Journalists check SecureDrop, decrypt and securely
-view submissions, and reply to sources, all on the same computer.
+SecureDrop Inbox lets Journalists check SecureDrop, decrypt and securely
+view submissions, and reply to sources.
 
 Once logged in, you will see a chat-like user interface:
 
@@ -53,7 +53,7 @@ different conversation.
 
 .. note:: If a reply fails to be sent successfully, it will still be visible in
   subsequent sessions, including to any other users logging into the same
-  physical *Journalist Workstation*.
+  physical SecureDrop Workstation.
 
 Deleting conversations and source accounts
 ------------------------------------------

@@ -34,8 +34,8 @@ received and reviewed:
 1. A Source uploads a submission to the news
    organization using `Tor Browser <https://www.torproject.org/>`__.
 
-2. A Journalist connects to SecureDrop using their *SecureDrop
-   Workstation*, where Journalists can view the document,
+2. A Journalist connects to SecureDrop using their SecureDrop
+   Workstation, where Journalists can view the document,
    process it (e.g., to remove metadata or potential malware), print it, or
    export it to a dedicated device.
 
@@ -69,7 +69,7 @@ accessed in an Internet-connected environment.
 
 The SecureDrop servers are managed by a systems admin; for larger
 newsrooms, there may be a team of systems admins. The admin
-connects to the *Application* and Monitor Servers over  `authenticated Onion Services <https://tb-manual.torproject.org/onion-services/>`__, and manages them
+connects to the Application and Monitor Servers over  `authenticated Onion Services <https://tb-manual.torproject.org/onion-services/>`__, and manages them
 using `Ansible <https://www.ansible.com/>`__.
 
 Project history
@@ -179,8 +179,8 @@ Environment overview
 Server infrastructure
 ~~~~~~~~~~~~~~~~~~~~~
 
-At SecureDrop's heart is a pair of servers: the *Application (“App”) Server*,
-which runs the core SecureDrop software, and the *Monitor (“Mon”) Server*,
+At SecureDrop's heart is a pair of servers: the Application (“App”) Server,
+which runs the core SecureDrop software, and the Monitor (“Mon”) Server,
 which keeps track of the Application Server and sends out alerts if there's a
 problem. These two servers run on dedicated hardware connected to a dedicated
 firewall appliance. They are typically located physically inside the newsroom,
@@ -206,7 +206,7 @@ SecureDrop Workstations
 The SecureDrop environment consists of at least one laptop,
 in addition to the servers described above:
 
-- *SecureDrop Workstation:*
+- SecureDrop Workstation:
    The laptop used by Journalists to download encrypted documents
    and respond to Sources, and used by administrators to perform maintenance on the servers. 
 

@@ -5,7 +5,7 @@ Every VM in Qubes has its own clipboard, similar to the clipboard of a Mac, Wind
 
 In addition, Qubes supports copying information *between* VMs. This is done by using `special keyboard shortcuts <https://www.qubes-os.org/doc/copy-paste/>`_, ``Ctrl+Shift+C`` and ``Ctrl+Shift+V``, in a four-step process. By default, this is disabled for all VMs that are part of a SecureDrop Workstation, consistent with the `principle of least privilege <https://en.wikipedia.org/wiki/Principle_of_least_privilege>`__.
 
-As an administrator, you should be aware of the following risks related to clipboard access before changing the default configuration:
+As an Administrator, you should be aware of the following risks related to clipboard access before changing the default configuration:
 
 1. It is dangerous to copy untrusted, unsanitized content *into* a secure environment. What looks like plain text may contain character sequences that exploit security vulnerabilities in the target environment.
 2. The four-step process described above can be difficult to follow, and it is easy to make an operational mistake, such as pasting a password into a message to a Source, or into a window belonging to a VM with network access.

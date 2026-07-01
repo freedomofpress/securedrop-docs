@@ -76,12 +76,12 @@ Connect to the OPNSense web GUI
       wireless network), you may encounter problems trying
       to connect the firewall's Web GUI.
 
-#. Launch the **Unsafe Browser** from the menu bar: **Apps ▸ Internet ▸
+#. Launch the Unsafe Browser from the menu bar: **Apps ▸ Internet ▸
    Unsafe Browser**.
 
    |Launching the Unsafe Browser|
 
-   .. note:: The *Unsafe Browser* is, as the name suggests, **unsafe**
+   .. note:: The Unsafe Browser is, as the name suggests, **unsafe**
         (its traffic is not routed through Tor). However, it is
         the only option because Tails intentionally disables LAN
         access in the **Tor Browser**.
@@ -99,7 +99,7 @@ Connect to the OPNSense web GUI
 
    |Unsafe Browser Homepage|
 
-#. Navigate to the OPNSense Web GUI in the *Unsafe Browser*:
+#. Navigate to the OPNSense Web GUI in the Unsafe Browser:
    ``https://192.168.1.1``
 
    .. note:: If you have trouble connecting, go to your network settings and
@@ -132,7 +132,7 @@ Set a strong password
 Navigate to **System ▸ Access ▸ Users** and click the edit button for the ``root``
 user. On the subsequent page, set a strong admin password. We recommend generating
 a strong passphrase with KeePassXC and saving it in the Tails Persistent folder using
-the provided KeePassXC database template. *Two-Factor Authentication* will be enabled 
+the provided KeePassXC database template. Two-factor authentication will be enabled 
 in a later step.
 
 Set alternate hostnames
@@ -206,7 +206,7 @@ Workstation a static IP address that is known to be in the subnet to
 continue.
 
 The Web GUI will now be available on the *Admin Gateway* IP address. Navigate
-to ``https://<Admin Gateway IP>`` in the *Unsafe Browser* and log in to the ``root``
+to ``https://<Admin Gateway IP>`` in the Unsafe Browser and log in to the ``root``
 account using an OTP token and the passphrase you just set.
 
 Once you've logged in to the Web GUI, you are ready to continue configuring
@@ -238,10 +238,10 @@ to apply several updates in a row to get to the latest version.
 
 |OPNSense - no updates|
 
-Enable *Two-Factor Authentication*
+Enable two-factor authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-OPNSense supports *Two-Factor Authentication* (2FA) via mobile apps such as Google Authenticator
+OPNSense supports two-factor authentication (2FA) via mobile apps such as Google Authenticator
 or FreeOTP. To set it up, first make sure you have a mobile device available with
 your choice of 2FA app.
 
@@ -420,7 +420,7 @@ Finally, click **Save**.
 Configure the LAN, WAN, OPT1, and OPT2 interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-OPT1 and OPT2 need to be configured to use the subnets defined for the *Application*
+OPT1 and OPT2 need to be configured to use the subnets defined for the Application
 and Monitor Servers, and some additional configuration is required for the LAN
 and WAN interfaces, that is not covered by the Setup Wizard.
 

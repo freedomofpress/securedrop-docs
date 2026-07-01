@@ -3,8 +3,8 @@
 Landing Page
 ==============
 
-SecureDrop itself runs as a Tor Onion Service. Organizations also need to
-create a SecureDrop Landing Page that will:
+SecureDrop itself runs as a Tor :ref:`Onion Service<glossary_onion_service>`. Organizations also need to
+create a SecureDrop :ref:`Landing Page<glossary_landing_page>` that will:
 
 * explain how SecureDrop works
 * give Sources instructions on how to access the Tor Onion Service
@@ -209,8 +209,8 @@ When you do this, it's imperative that you use SHA-2 as the hashing
 algorithm instead of SHA-1, which is `being phased
 out <https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html>`__.
 You should also choose a key size of *at least* 2048 bits. These
-parameters will help ensure that the encryption used on your *Landing
-Page* is sufficiently strong. The following example OpenSSL command will
+parameters will help ensure that the encryption used on your Landing
+Page is sufficiently strong. The following example OpenSSL command will
 create a private key and CSR with a 4096-bit key length and a SHA-256
 signature:
 
@@ -457,7 +457,7 @@ consider the following:
 -  Intrusion and/or integrity monitoring (see Logwatch, OSSEC, Snort,
    rkhunter, chkrootkit)
 -  Downtime alerts (Nagios or Pingdom)
--  *Two-Factor Authentication* (see libpam-google-authenticator,
+-  Two-factor authentication (see libpam-google-authenticator,
    libpam-yubico)
 
 It's preferable for the Landing Page to have its own segmented

@@ -23,7 +23,7 @@ Users
 ~~~~~
 
 The following table of the users who interact with the SecureDrop web application.
-Note that the airgapped *Secure Viewing Station* with the GPG Submission Key is required to decrypt
+Note that the airgapped Secure Viewing Station with the GPG Submission Key is required to decrypt
 submissions or messages.
 
 +------------------+----------+-------------------------------------------------+
@@ -158,10 +158,10 @@ Assumptions about the Admin Workstation and the *Journalist Workstation*
 
 -  The computer correctly executes Tails.
 -  The computer and the Tails device are not compromised by malware.
--  The *Two-Factor Authentication* device used with the workstation are
+-  The two-factor authentication device used with the workstation are
    not compromised by malware.
 
-Assumptions about the *Secure Viewing Station*
+Assumptions about the Secure Viewing Station
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The computer is airgapped.Onion 
@@ -301,7 +301,7 @@ What a compromise of the workstations can surrender
    required to connect to the *Journalist Interface*, as well as a :doc:`database
    with passphrases </admin/installation/passphrases>` for the
    *Journalist Interface*.
--  The *Secure Viewing Station* requires Tails with a persistent
+-  The Secure Viewing Station requires Tails with a persistent
    volume, which stores information such as the SecureDrop application's
    GPG key, as well as a :doc:`database with the
    passphrase </admin/installation/passphrases>` for that key.
@@ -363,7 +363,7 @@ What a physical seizure of the Source's property can surrender
       analyze any plaintext information that resides in RAM.
 
 -  A physical seizure of, and access to, the admin's Tails persistent
-   volume, password database, and *Two-Factor Authentication* device will
+   volume, password database, and two-factor authentication device will
    allow the attacker to access both servers and the *Journalist Interface*.
 
 What compromise of the admin's property can surrender
@@ -371,7 +371,7 @@ What compromise of the admin's property can surrender
 
 -  To access the *Journalist Interface*, the Application Server, or the
    Monitor Server, the attacker needs to obtain the admin's login
-   credentials and the admin's *Two-Factor Authentication* device. Unless
+   credentials and the admin's two-factor authentication device. Unless
    the attacker has physical access to the servers, the attacker will
    also need to obtain the onion service values for the Interface and
    the servers. This information is stored in a password-protected
@@ -450,7 +450,7 @@ What a physical seizure of the admin's property can achieve
 -  If the property is seized while powered on, the attacker can also
    analyze any plaintext information that resides in RAM.
 -  A physical seizure of, and access to, the admin's Tails persistent
-   volume, password database, and *Two-Factor Authentication* device will
+   volume, password database, and two-factor authentication device will
    allow the attacker to access both servers and the *Journalist Interface*.
 
 What a compromise of the Journalist's property can achieve
@@ -463,7 +463,7 @@ What a compromise of the Journalist's property can achieve
    value for the *Interface*. This information is stored in a
    password-protected database in a persistent volume on the
    Journalist's Tails device. The volume is protected by a passphrase.
-   If the Journalist's *Two-Factor Authentication* device is a mobile
+   If the Journalist's two-factor authentication device is a mobile
    phone, this will also be protected by a passphrase.
 -  An attacker with access to the Journalist's computer can:
 
@@ -498,7 +498,7 @@ What a physical seizure of the Journalist's property can achieve
 -  If the property is seized while powered on, the attacker can also
    analyze any plaintext information that resides in RAM.
 -  A physical seizure of, and access to, the Journalist's Tails
-   persistent volume, password database, and *Two-Factor Authentication*
+   persistent volume, password database, and two-factor authentication
    device will allow the attacker to access the *Journalist Interface*.
 
 What a compromise of the Application Server can achieve
@@ -597,10 +597,10 @@ What a physical seizure of the Monitor Server can achieve
    have an effect on the quantity and accuracy of notifications sent to
    admins or Journalists.
 
-What a compromise of the *Secure Viewing Station* can achieve
+What a compromise of the Secure Viewing Station can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  The *Secure Viewing Station* is only useful to an attacker while
+-  The Secure Viewing Station is only useful to an attacker while
    powered on and with the Tails persistent volume mounted. The attacker
    may learn more if the *Transfer Device* or the Export Device are in use at
    the time of compromise or seizure. A physical seizure of this machine, its
@@ -608,7 +608,7 @@ What a compromise of the *Secure Viewing Station* can achieve
    nothing, assuming that the Tails and VeraCrypt implementations of full-disk
    encryption work as expected.
 
--  A compromise of the *Secure Viewing Station* allows the attacker to:
+-  A compromise of the Secure Viewing Station allows the attacker to:
 
    -  Run commands as the **amnesia** user.
    -  View, modify, and delete files owned by the **amnesia** user. This
@@ -616,22 +616,22 @@ What a compromise of the *Secure Viewing Station* can achieve
       submitted documents.
    -  View, modify, and delete submissions in encrypted form
    -  View, modify, and delete decrypted submissions, if they are stored in
-      decrypted form on the *Secure Viewing Station*, or if the Export Device
+      decrypted form on the Secure Viewing Station, or if the Export Device
       is in use.
    -  Export the Submission Private Key key (unless there is a passphrase
       set).
 
-What a physical seizure of the *Secure Viewing Station* can achieve
+What a physical seizure of the Secure Viewing Station can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  The *Secure Viewing Station* is only useful to an attacker while
+-  The Secure Viewing Station is only useful to an attacker while
    powered on and with the Tails persistent volume mounted. The attacker
    may learn more if the *Transfer Device* or the Export Device are in use at
    the time of compromise or seizure. A physical seizure of this machine, its
    Tails device, the *Transfer Device* or the Export Device will also achieve
    nothing, assuming that the Tails and VeraCrypt implementations of full-disk
    encryption work as expected.
--  A physical seizure of the *Secure Viewing Station*, while on and with
+-  A physical seizure of the Secure Viewing Station, while on and with
    the persistent volume decrypted and mounted, allows the attacker to:
 
    -  Tamper with the hardware.
@@ -639,7 +639,7 @@ What a physical seizure of the *Secure Viewing Station* can achieve
    -  View, modify, and delete the Submission Private Key used to encrypt and
       decrypt submitted documents.
    -  View, modify, and delete decrypted submissions, if they are stored in
-      decrypted form on the *Secure Viewing Station*, or if the Export Device
+      decrypted form on the Secure Viewing Station, or if the Export Device
       is in use.
 
 What a local network attacker can achieve against the Source, admin, or Journalist
@@ -679,7 +679,7 @@ What a random person on the internet can achieve
    and uploading many large documents.
 -  A random person can submit empty, forged, or inaccurate documents.
 -  A random person can submit malicious documents, e.g. malware that
-   will attempt to compromise the *Secure Viewing Station*.
+   will attempt to compromise the Secure Viewing Station.
 -  A random person can attempt to get sensitive information from a
    SecureDrop user's browser session, such as the Source's codename.
 -  A random person can attempt to compromise the SecureDrop server by

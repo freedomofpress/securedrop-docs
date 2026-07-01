@@ -35,17 +35,15 @@ Signing in
 ----------
 
 To sign in, enter the username and passphrase provided to you by your
-SecureDrop administrator, as well as the two-factor code using the method you
-have set up. If you have used SecureDrop Workstation before, these
-are the same credentials that you would use to log in to the *Journalist
-Interface*.
+SecureDrop Administrator, as well as the two-factor code using the method you
+have set up.
 
 |screenshot_sd-app_login|
 
 Troubleshooting tips
 ~~~~~~~~~~~~~~~~~~~~
 If you have trouble running the updater or logging in, please contact your
-administrator. Our :doc:`network troubleshooting guide 
+Administrator. Our :doc:`network troubleshooting guide 
 <../admin/maintenance/troubleshooting_connection>`
 for administrators gives detailed steps for investigating connectivity issues.
 
@@ -76,7 +74,7 @@ offline mode and can be accessed even when you are not logged in.
 |screenshot_offline_mode|
 
 .. important:: Protecting downloaded submissions is another reason why
-   The *Journalist Workstation* needs to be powered off completely when it is not in
+   The SecureDrop Workstation needs to be powered off completely when it is not in
    use.
 
 .. |screenshot_desktop-shortcut| image:: ../images/screenshot_desktop-shortcut.png

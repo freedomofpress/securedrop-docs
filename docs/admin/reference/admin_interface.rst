@@ -1,18 +1,16 @@
 The Admin Interface
 =====================
 
-The Admin Interface is an extended version of the Admin Interface, that
-allows you to manage users and configure the appearance and behaviour of your
+The :ref:`Admin Interface<glossary_admin_interface>` allows you to manage users and configure the appearance and behaviour of your
 instance's web interfaces.
 
 Logging in
 ^^^^^^^^^^
 
-To log in to the Admin Interface, start the Admin Workstation
-with persistence enabled. Open the *SecureDrop Menu* and select the
+To log in to the Admin Interface, start the :ref:`Admin Workstation<glossary_admin_workstation>`. Open the *SecureDrop Menu* and select the
 **Launch Journalist Interface** option. Tor Browser will start and load the login
 page for the Admin Interface. Use your username, passphrase, and
-*Two-Factor Authentication* token to log in.
+two-factor authentication token to log in.
 
 By default, you will be logged in to the Admin Interface's source list page.
 
@@ -22,7 +20,7 @@ In the course of normal administration operations you should not need to view me
 the :doc:`journalist guide <../../journalist/journalist>`.
 
 .. note::
-  If you have lost your login information or your *Two-Factor Authentication* is no longer
+  If you have lost your login information or your two-factor authentication is no longer
   valid, you can create another account with admin privileges via the command line
   on the Application Server. See :ref:`here <Create Admin CLI>` for more information.
 
@@ -43,8 +41,8 @@ Adding users
 After logging in, you can add new user accounts for the Journalists at your organization
 who will be checking the system for submissions. Make sure the Journalist is
 physically in the same room as you when you do this, as they will have to be present
-to enable *Two-Factor Authentication*. SecureDrop supports the use of either a
-smartphone authenticator app or a Yubikey for *Two-Factor Authentication*. If an
+to enable two-factor authentication. SecureDrop supports the use of either a
+smartphone authenticator app or a Yubikey for two-factor authentication. If an
 app is to be used, the Journalist should install it before proceeding with the
 account setup.
 
@@ -61,7 +59,7 @@ account setup.
 #. Hand the keyboard over to the Journalist so they can create their own username.
 #. Once they're done entering a username for themselves, have them save their pre-generated Diceware passphrase to their password manager.
 #. If the new account should also have admin privileges, allowing them to add or delete other journalist accounts, select **Is Admin**.
-#. Finally, set up *Two-Factor Authentication* for the account, following one of the two procedures below for your chosen method.
+#. Finally, set up two-factor authentication for the account, following one of the two procedures below for your chosen method.
 
 .. note::
    The username **deleted** is reserved, as it is used to mark accounts which
@@ -75,7 +73,7 @@ account setup.
 FreeOTP
 ~~~~~~~
 
-#. If the Journalist is using FreeOTP or another app for *Two-Factor Authentication*, click **Add User** to proceed to the next page.
+#. If the Journalist is using FreeOTP or another app for two-factor authentication, click **Add User** to proceed to the next page.
 
    |Enable FreeOTP|
 
@@ -83,7 +81,7 @@ FreeOTP
 #. If they have difficulty scanning the barcode, they can tap on the icon at the top that shows a plus and the symbol of a key and use their phone's keyboard to input the two-factor secret into the ``Secret`` input field, without whitespace.
 #. Inside the FreeOTP app, a new entry for this account will appear on the main screen, with a six-digit number that recycles to a new number every thirty seconds.  The Journalist should enter the six-digit number in the  **Verification code** field at the bottom of the **Enable FreeOTP** form and click **Submit**.
 
-If *Two-Factor Authentication* was set up successfully, you will be redirected back
+If two-factor authentication was set up successfully, you will be redirected back
 to the Admin Interface and will see a confirmation that the two-factor code was
 verified.
 
@@ -95,7 +93,7 @@ verified.
 YubiKey
 ~~~~~~~
 
-#. If the Journalist wishes to use a YubiKey for *Two-Factor Authentication*, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide <../deployment/yubikey_setup>`.
+#. If the Journalist wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide <../deployment/yubikey_setup>`.
 
    |Enable YubiKey|
 
@@ -105,10 +103,10 @@ YubiKey
 
 #. If everything was set up correctly, you will be redirected back to the Admin Interface, where you should see a flashed message that says "The two-factor code for user *new username* was verified successfully.".
 
-The Journalist will require their username, passphrase, and *Two-Factor Authentication*
+The Journalist will require their username, passphrase, and two-factor authentication
 method whenever they check SecureDrop. Make sure that they have memorised their
 username and passphrase, or stored them in their password manager, and that they
-can keep their *Two-Factor Authentication* device secure.
+can keep their two-factor authentication device secure.
 
 .. |Enable YubiKey| image:: ../../images/manual/screenshots/journalist-admin_add_user_hotp.png
    :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
@@ -117,13 +115,13 @@ can keep their *Two-Factor Authentication* device secure.
 
 .. _Passphrases_and_two-factor_resets:
 
-Passphrases and *Two-Factor Authentication* resets
+Passphrases and two-factor authentication resets
 --------------------------------------------------
 
 .. warning:: Both of these operations will lock a user out of their
    SecureDrop account. Users should be physically present when their passphrase
-   or *Two-Factor Authentication* method is reset. If this is not possible, store
-   the passphrase and/or *Two-Factor Authentication* secret in your own password
+   or two-factor authentication method is reset. If this is not possible, store
+   the passphrase and/or two-factor authentication secret in your own password
    manager before securely transmitting them to the user in question, and delete
    them once the user has confirmed they can successfully log in.
 
@@ -139,7 +137,7 @@ can reset their account as follows:
 
 |Reset Passphrase|
 
-Next, you can either rotate their passphrase or reset *Two-Factor Authentication*
+Next, you can either rotate their passphrase or reset two-factor authentication
 for their account.
 
 To change their passphrase to the randomly-generated passphrase shown:
@@ -148,14 +146,14 @@ To change their passphrase to the randomly-generated passphrase shown:
   #. Make sure the new passphrase is saved in a password manager.
   #. Click **Reset Password**
 
-To reset *Two-Factor Authentication*:
+To reset two-factor authentication:
 
-  #. Click the button that corresponds to the user's chosen *Two-Factor Authentication* method:
+  #. Click the button that corresponds to the user's chosen two-factor authentication method:
 
      * Click **Reset Mobile App Credentials** for accounts using FreeOTP or a similar authentication app
      * Click **Reset Security Key Credentials** for accounts using a Yubikey
 
-  #. Follow the on-screen instructions to complete the process and verify their new *Two-Factor Authentication* credentials.
+  #. Follow the on-screen instructions to complete the process and verify their new two-factor authentication credentials.
 
 
 Off-boarding users
@@ -168,7 +166,7 @@ Instance configuration
 
 The Instance Configuration section of the Admin Interface allows you to:
 
-* update the organization name and logo displayed on the Source and *Journalist Interfaces*
+* update the organization name and logo displayed on the Source and Admin Interfaces
 * set submission preferences for the Source Interface
 * send test OSSEC alerts.
 
@@ -273,7 +271,7 @@ to protect their codename and keep it secret. To remove this restriction, unchec
 checkbox and click **Update Submission Preferences**.
 
 .. |Reset Passphrase| image:: ../../images/manual/screenshots/journalist-edit_account_user.png
-   :alt: The account editing form allows admins to change name, reset passphrase, and reset *Two-Factor Authentication*.
+   :alt: The account editing form allows admins to change name, reset passphrase, and reset two-factor authentication.
 .. |Test Alert| image:: ../../images/manual/screenshots/journalist-admin_ossec_alert_button.png
    :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
 .. |SecureDrop main page| image:: ../../images/manual/screenshots/journalist-admin_index_no_documents.png

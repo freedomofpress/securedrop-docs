@@ -3,7 +3,7 @@ Promoting your SecureDrop instance
 
 At Freedom of the Press Foundation, we've found news organizations that get the
 most out of SecureDrop are those who promote it regularly and effectively.
-SecureDrop will only be used by Sources if they know it exists, so it's best
+SecureDrop will only be used by :ref:`Sources<glossary_source>` if they know it exists, so it's best
 to promote its use in a variety of ways so that a wide swath of people will see
 it.
 

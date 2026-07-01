@@ -1,14 +1,14 @@
 Install SecureDrop on the servers
 =================================
 
-Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` VM on the Admin Workstation you prepared earlier. 
+Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` VM on the :ref:`Admin Workstation<glossary_admin_workstation>` you prepared earlier. 
 
 .. _test_connectivity:
 
 Test connectivity to servers
 ----------------------------
 
-Having set up the firewall, you can plug the Application Server and the Monitor Server into the firewall. Your Admin Workstation should also be connected to the firewall.
+Having set up the firewall, you can plug the :ref:`Application Server<glossary_application_server>` and the :ref:`Monitor Server<glossary_monitor_server>` into the firewall. Your Admin Workstation should also be connected to the firewall.
 
 If you are using a setup where there is a switch on the LAN port, plug the Application Server
 into the switch and plug the Monitor Server into the OPT1 port.
@@ -34,8 +34,8 @@ Set up SSH keys
 Ubuntu's default SSH configuration authenticates users with their
 passphrases; however, public key authentication is more secure, and once
 it's set up it is also easier to use. In this section, you will create
-a new SSH key for authenticating to both servers. Since the *Admin
-Workstation* was set up with `SSH Client Persistence`_, this key will be saved
+a new SSH key for authenticating to both servers. Since the Admin
+Workstation was set up with `SSH Client Persistence`_, this key will be saved
 on the Admin Workstation and can be used in the future to authenticate to
 the servers in order to perform administrative tasks.
 
@@ -293,8 +293,8 @@ Onion Service will be available in the following files under
 V3 Onion Services
 -------------------
 
-- ``app-sourcev3-ths`` contains the v3 onion address of the *Source
-  Interface*.
+- ``app-sourcev3-ths`` contains the v3 onion address of the Source
+  Interface.
 - ``app-journalist.auth_private`` contains the onion address and private key
   providing access to the Admin Interface.
 - ``app-ssh.auth_private`` contains the onion address and private key

@@ -7,8 +7,7 @@ SecureDrop without changing onion addresses, recreating journalist accounts,
 or losing previous submissions from Sources.
 
 .. note:: Only the Application Server is backed up and restored, including
-          historical submissions and both Source Interface and *Journalist
-          Interface* URLs. The Monitor Server needs to be configured from
+          historical submissions and both Source Interface and Admin Interface onion addresses. The Monitor Server needs to be configured from
           scratch in the event of a hardware migration.
 
 Minimizing disk use
@@ -17,15 +16,14 @@ Minimizing disk use
 Since the backup and restore operations both involve transferring *all* of
 your SecureDrop's stored submissions over Tor, the process can take a long time.
 
-Encouraging Journalists to regularly delete older, unneeded submissions from
-the Admin Interface will save time and improve reliability when
+Encouraging Journalists to regularly delete older, unneeded submissions will save time and improve reliability when
 doing backups.
 
 .. tip:: Although it varies, the average throughput of an Onion Service is
          about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
          restore accordingly.
 
-On the Application Server, open a Terminal via **Apps ▸ System Tools ▸ Console** on the Admin Workstation and run
+On the :ref:`Admin Workstation<glossary_admin_workstation>`, open a Terminal and run:
 
 .. code:: sh
 
@@ -37,17 +35,16 @@ via Tails' **Disks** utility to ensure you have sufficient space to perform
 a backup.
 
 If you find you cannot perform a backup or restore due to this constraint,
-and have already deleted old submissions from the *Journalist Interface*,
+and have already deleted old submissions,
 contact us through the `SecureDrop Support Portal`_.
 
 .. note:: Submissions are deleted asynchronously and one at a time, so
-          if you delete a lot of submissions through the *Journalist
-          Interface*, it may take a while for all of the submissions
+          if you delete a lot of submissions, it may take a while for all of the submissions
           to actually be deleted. SecureDrop uses ``shred`` to
           securely erase files, which takes significantly more time
           than normal file deletion. You can monitor the progress of
-          queued deletion jobs by logging in to the *Application
-          Server* over SSH and running::
+          queued deletion jobs by logging in to the Application
+          Server over SSH and running::
 
             sudo journalctl -u securedrop_rqworker
 
@@ -62,7 +59,7 @@ Backing up
 Check connectivity
 ''''''''''''''''''
 
-Open a Terminal via **Apps ▸ System Tools ▸ Console** on your Admin Workstation and verify it is able to run Ansible and connect to
+Open a Terminal on your Admin Workstation and verify it is able to run Ansible and connect to
 the SecureDrop servers.
 
 .. code:: sh
@@ -156,9 +153,9 @@ Moving a SecureDrop instance to new hardware involves:
    See :ref:`Data-only Restores <additional_restore_info>` for more information.
 
 .. note::  The instructions below assume that you are using the same Admin Workstation
-   that was used to manage your old instance. If you are using a new *Admin
-   Workstation* you will need to first install the 
-   securedrop-admin package and prerequisites on it. Then you may copy the config directory ``~/.config/securedrop-admin`` and backup archive from the old Admin Workstation to the new workstation (using an encrypted *Transfer Device*), and proceed with the instructions below.
+   that was used to manage your old instance. If you are using a new Admin
+   Workstation you will need to first install the 
+   securedrop-admin package and prerequisites on it. Then you may copy the config directory ``~/.config/securedrop-admin`` and backup archive from the old Admin Workstation to the new workstation (using an encrypted USB flash drive), and proceed with the instructions below.
 
 #. If you have not already done so, :ref:`back up the existing installation <backing_up>`.
    The instructions below assume that the backup has been created
@@ -182,7 +179,7 @@ Moving a SecureDrop instance to new hardware involves:
    :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
 
 
-#. Install Ubuntu 24.04 on the *Application* and Monitor Servers, following
+#. Install Ubuntu 24.04 on the Application and Monitor Servers, following
    the :doc:`server setup instructions</admin/installation/prepare_servers>` to install
    with the correct settings, test connectivity, and set up SSH keys to allow
    for Admin Workstation access.
@@ -213,7 +210,7 @@ Moving a SecureDrop instance to new hardware involves:
    The restore task will proceed for some time, removing v2 services if a v2+v3
    backup was used.
 
-#. Synchronize the server and *Admin Workstation's* web interface config and
+#. Synchronize the server and Admin Workstation's web interface config and
    authentication keys using the Terminal commands:
 
    .. code:: sh

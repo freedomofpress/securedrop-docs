@@ -2,7 +2,7 @@ Using a YubiKey with the Admin Interface
 ===============================================
 
 This guide describes in detail how to set up a YubiKey for two-factor
-authentication on the Admin Interface. This setup is performed
+authentication on the :ref:`Admin Interface<glossary_admin_interface>`. This setup is performed
 once per Journalist to create a secure log-in method. The process
 requires some configuration steps using a separate software tool.
 
@@ -12,7 +12,7 @@ requires some configuration steps using a separate software tool.
 What is a YubiKey?
 ------------------
 
-A YubiKey is a physical token used for *Two-Factor Authentication*. They
+A YubiKey is a physical token used for two-factor authentication. They
 are made by a company called Yubico and are `commercially available`_. Note
 that not all physical tokens are compatible with the YubiKey Personalization
 Tool; for this, you require `a key that can support OATH-HOTP`_.
@@ -86,11 +86,11 @@ top of the window.
 Adding users
 ------------
 
-When adding new users, a SecureDrop admin will need the
+When adding new users, a SecureDrop Administrator will need the
 **Secret Key** value described above. She will enter it after
 selecting the **I'm Using a YubiKey** option while :ref:`adding users
 <Adding Users>`. The new user will then have to verify their YubiKey before
-being added to the system. This means that the new user and the admin should be
+being added to the system. This means that the new user and the Administrator should be
 physically present for this process.
 
 Using your YubiKey

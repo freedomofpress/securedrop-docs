@@ -17,10 +17,10 @@ may be simpler. An outline of the steps involved in rebuilding an
 Admin Workstation is as follows:
 
  #. Prepare the USB flash drives.
- #. (Optional) Boot the *Application* and Monitor Server in single user mode and reset
+ #. (Optional) Boot the Application and Monitor Server in single user mode and reset
     the shell admin account password.
  #. Set up SSH access for the new Admin Workstation.
- #. Retrieve SecureDrop configuration settings from the *Application* and Monitor Server.
+ #. Retrieve SecureDrop configuration settings from the Application and Monitor Server.
  #. Back up and configure the Application Server.
  #. Run ``securedrop-admin install`` and ``securedrop-admin localconfig``
     from the new Admin Workstation.
@@ -29,7 +29,7 @@ Admin Workstation is as follows:
 
 
 .. important:: The rebuild process involves temporarily removing ``iptables``
-               rules on the *Application* and Monitor Servers, weakening their
+               rules on the Application and Monitor Servers, weakening their
                security. Because of this, it's important to complete the rebuild
                process promptly, to avoid leaving the servers in an insecure state.
 
@@ -61,7 +61,7 @@ Step 2: (Optional) Boot the servers in single-user mode
 =======================================================
 
 If you do not have the original password for the shell admin account on the
-*Application* and Monitor Servers, you'll need to reset the password on each
+Application and Monitor Servers, you'll need to reset the password on each
 server by booting in single user mode. In order to do so, you'll need physical
 access to the server, a keyboard, and a monitor.
 
@@ -88,7 +88,7 @@ using the `passwd` command, for example:
  passwd sdadmin
 
 .. important::
- Make sure to select a strong password, and record it in the *Admin Workstation's*
+ Make sure to select a strong password, and record it in the Admin Workstation's
  KeePassXC database.
 
 Finally, reboot the Monitor Server and verify that you can log in at the console
@@ -101,8 +101,8 @@ password as for the Monitor Server - this is required in order for the
 Step 3: Set up Admin Workstation access
 =========================================
 
-Next, you'll configure the servers to allow temporary SSH access from the new *Admin
-Workstation*.
+Next, you'll configure the servers to allow temporary SSH access from the new Admin
+Workstation.
 
 First, start the new Admin Workstation with persistence enabled and an administration
 password set.
@@ -142,7 +142,7 @@ installation. To temporarily re-enable it, you'll need to update ``iptables`` ru
 and change the sshd daemon's configuration.
 
 First, log on to the Application Server via the console, and run the following
-commands, substituting the *Admin Workstation's* static IP for ``<admin_static_ip>``:
+commands, substituting the Admin Workstation's static IP for ``<admin_static_ip>``:
 
 .. code:: sh
 
@@ -383,7 +383,7 @@ Once the command completes successfully, run
 
 Once this command is complete:
 
- - verify that the *SecureDrop Menu* for the Source and *Journalist Interfaces*
+ - verify that the *SecureDrop Menu* for the Source and Admin Interfaces
    works correctly, opening their respective homepages in Tor Browser.
 
 To revert the changes made to enable temporary local SSH access, you
@@ -430,7 +430,7 @@ Once this command completes:
    to refer to onion addresses instead of direct IP addresses
  - verify that you can connect to
    the servers using ``ssh app`` and ``ssh mon``
- - verify that the *SecureDrop Menu* for the Source and *Journalist Interfaces*
+ - verify that the *SecureDrop Menu* for the Source and Admin Interfaces
    works correctly, opening their respective homepages in Tor Browser.
 
 Step 8: Post-rebuild tasks
@@ -452,7 +452,7 @@ We recommend completing the following tasks after the rebuild:
    workflow with a new submission.
  - Back up your Admin Workstation.
  - Delete invalid admin accounts in the Admin Interface.
- - Restrict SSH access to the *Application* and Monitor Servers to valid
+ - Restrict SSH access to the Application and Monitor Servers to valid
    Admin Workstations. If your new Admin Workstation USB flash drive
    is the only one that should have SSH access to the servers, you can remove
    access for any previous Admin Workstations from the terminal, using the
@@ -462,7 +462,7 @@ We recommend completing the following tasks after the rebuild:
 
      securedrop-admin reset_admin_access
 
-   You can also selectively remove invalid keys by logging on to the *Application*
+   You can also selectively remove invalid keys by logging on to the Application
    and Monitor Servers and editing the file ``~/.ssh/authorized_keys``, making
    sure not to remove the public key belonging to your new Admin Workstation.
  - :doc:`Back up the Application Server <backup_and_restore>` once SSH-over-Tor has
@@ -470,15 +470,15 @@ We recommend completing the following tasks after the rebuild:
  - Provision all other Tails workstation drives (Journalist and/or Admin Workstations)
    with updated Tor credentials, so that they can access SecureDrop after this rebuild.
 
-   You will need to copy the following file(s) to all other *Admin* and
-   *Journalist Workstations*, replacing the existing files of the same name:
+   You will need to copy the following file(s) to all other Admin and
+   SecureDrop Workstations, replacing the existing files of the same name:
 
    .. code:: sh
 
     ~/.config/securedrop-admin/app-journalist.auth_private
     ~/.config/securedrop-admin/tor-v3-keys.json # for Admin Workstations only
 
-   You may copy these files using a *Transfer Device* (which must be wiped afterwards),
+   You may copy these files using a encrypted USB flash drive (which must be wiped afterwards),
    or boot into each of your additional Tails workstations, plug in and unlock your
    Admin Workstation's encrypted partition via the **Places** app, and manually copy
    the file(s) from the Admin Workstation to the same directory on the target Tails

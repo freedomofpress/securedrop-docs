@@ -4,7 +4,7 @@
 Hardware
 ========
 
-This document outlines the required hardware components necessary to
+This page outlines the required hardware components necessary to
 successfully install and operate a SecureDrop instance, and recommends
 some specific components that we have found to work well. If you have
 any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
@@ -34,7 +34,7 @@ Additionally, you may want to consider the following purchases:
 * an external hard drive for server backups.
 * a USB flash drive to store backups of your SecureDrop Workstation.
 * a security key for HOTP authentication, such as a YubiKey, if you want to
-  use hardware-based *Two-Factor Authentication* instead of a mobile app.
+  use hardware-based two-factor authentication instead of a mobile app.
 * a USB flash drive with a physical write protection switch, or a USB write blocker,
   if you want to mitigate the risk of introducing malware from your network to
   your SecureDrop Workstation during repeated use of an Export Device.
@@ -74,10 +74,10 @@ Required hardware
 Servers
 ^^^^^^^
 
-* Application Server: 1 physical server to run the SecureDrop web services.
+* :ref:`Application Server<glossary_application_server>`: 1 physical server to run the SecureDrop web services.
 
-* Monitor Server: 1 physical server which monitors activity on the
-  Application Server and sends email notifications to an admin.
+* :ref:`Monitor Server<glossary_monitor_server>`: 1 physical server which monitors activity on the
+  Application Server and sends email notifications to an Administrator.
   
 We recommend using NUCs for the servers and routinely test new models for compatibility.
 NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet,
@@ -349,9 +349,9 @@ to :doc:`configure an existing hardware firewall <network_firewall>`.
 Two-factor device
 ^^^^^^^^^^^^^^^^^
 
-*Two-Factor Authentication* is used when connecting to different parts of the
-SecureDrop system. Each admin and each Journalist needs a two-factor
-device. We currently support two options for *Two-Factor Authentication*:
+Two-factor authentication is used when connecting to different parts of the
+SecureDrop system. Each Administrator and each Journalist needs a two-factor
+device. We currently support two options for two-factor authentication:
 
 * Your existing smartphone with an app that computes TOTP codes
   (e.g. FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ and `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__).
@@ -404,7 +404,7 @@ Monitor, keyboard, mouse
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will need these to do the initial installation of Ubuntu on the
-*Application* and Monitor Servers.
+Application and Monitor Servers.
 
 
 Optional hardware

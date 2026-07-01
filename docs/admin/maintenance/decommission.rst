@@ -79,7 +79,7 @@ SecureDrop instance.
    submissions, and store them in a secure manner (such as on an encrypted
    USB flash drive). 
 #. **Optional: Delete submissions on the server.**
-   Log into the *Journalist Workstation* and delete all sources to take advantage
+   Log into the SecureDrop Inbox and delete all sources to take advantage
    of SecureDrop's secure deletion properties. Note that depending on the
    number of sources on your server, it may take anywhere from several minutes
    to an hour or more for the submissions to be completely deleted from the
@@ -115,7 +115,7 @@ SecureDrop instance.
    data.
 
    .. caution:: Be **very** sure you are reformatting the right drive.
-      You may want to use the *Secure Viewing Station* laptop for this procedure
+      You may want to use the Secure Viewing Station laptop for this procedure
       to reduce the risk of accidentally erasing a drive on your regular-use
       machine.
 
