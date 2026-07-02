@@ -2,8 +2,8 @@ Troubleshooting kernel updates
 ==============================
 
 Kernel updates address known bugs and security vulnerabilities in the Linux
-kernel. They may be installed automatically on your Application and *Monitor
-Servers* as part of a SecureDrop release. All kernel updates are tested extensively
+kernel. They may be installed automatically on your Application and Monitor
+Servers as part of a SecureDrop release. All kernel updates are tested extensively
 against :ref:`recommended hardware <Specific Hardware Recommendations>`. If
 things do go wrong (e.g., the server does not boot after a kernel update), 
 the following instructions will help you to roll back to the previous, 

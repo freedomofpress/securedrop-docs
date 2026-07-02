@@ -1,21 +1,16 @@
 SecureDrop for Sources
 ========================
 
-.. note::
+.. warning:: 
+    
+    This source guide below is meant to illustrate the source submission process
+    for journalists and newsrooms, and is not intended to instruct sources how
+    to safely use SecureDrop. If you are potentially interested in sharing
+    information to a news organization via SecureDrop, you should:
 
-   This guide provides an introduction to using SecureDrop as a Source.
-   It is not exhaustive, it does not address ethical or legal dimensions of
-   whistleblowing, and it does not speak to other methods for confidentially
-   communicating with Journalists. Please proceed at your own risk. For additional
-   background, also see the Freedom of the Press Foundation guide, `How to Share Sensitive
-   Leaks With the Press <https://freedom.press/news/sharing-sensitive-leaks-press/>`__.
-
-
-.. warning:: Freedom of the Press Foundation has no access to any other
-   organization's SecureDrop instance, and cannot assist directly in your
-   communications with them. If you plan to use SecureDrop to maintain your
-   anonymity, you should not discuss your own use of it with others via unsafe
-   methods, including email to Freedom of the Press Foundation.
+    1. Start from a place with public Wi-Fi, like a coffee shop. Use a computer you own and control. Do not use a mobile phone or tablet. Never use a workplace computer or network.
+    2. Download, install, and open Tor Browser, then visit ``howto.securedrop.tor.onion``
+    
 
 What is SecureDrop?
 -------------------
@@ -40,13 +35,3 @@ you can do to help protect your anonymity when using SecureDrop.
 Note that your Internet Service Provider, or ISP (e.g., Comcast/Xfinity,
 Cox, Wave, etc), may already have a record of your visit to this website,
 docs.securedrop.org.
-
-**Before you begin...**
-
-* DO NOT access SecureDrop on your employer's network.
-* DO NOT access SecureDrop using your employer's hardware.
-* DO NOT access SecureDrop on your home internet network.
-
-* **DO** carefully read the remaining instructions, that will carefully
-  step-through the reasons why we advise the above, and provide guidance
-  to minimize risk when using SecureDrop.

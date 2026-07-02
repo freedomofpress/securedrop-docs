@@ -327,8 +327,8 @@ SecureDrop uses the firewall to achieve two primary goals:
 #. Isolating the Application Server and the Monitor Server from each other
    as much as possible, to reduce attack surface.
 
-In order to use the firewall to isolate the Application Server and the *Monitor
-Server* from each other, we need to connect them to separate interfaces, and then set
+In order to use the firewall to isolate the Application Server and the Monitor
+Server from each other, we need to connect them to separate interfaces, and then set
 up firewall rules that allow them to communicate.
 
 Set up the firewall rules

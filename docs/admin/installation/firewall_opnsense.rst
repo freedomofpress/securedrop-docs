@@ -397,15 +397,15 @@ SecureDrop uses the firewall to achieve two primary goals:
 #. Isolating the Application Server and the Monitor Server from each other
    as much as possible, to reduce attack surface.
 
-In order to use the firewall to isolate the Application Server and the *Monitor
-Server* from each other, we need to connect them to separate interfaces, and then set
+In order to use the firewall to isolate the Application Server and the Monitor
+Server from each other, we need to connect them to separate interfaces, and then set
 up firewall rules that allow them to communicate.
 
 Enable the OPT1 and OPT2 interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The OPT1 and OPT2 interfaces will be used for the Application Server and *Monitor
-Server* respectively. To enable them, first connect the Application Server to the
+The OPT1 and OPT2 interfaces will be used for the Application Server and Monitor
+Server respectively. To enable them, first connect the Application Server to the
 physical OPT1 port and the Monitor Server to the OPT2 port.
 
 Next, navigate to **Interfaces ▸ Assignments**. LAN and WAN will already be enabled.

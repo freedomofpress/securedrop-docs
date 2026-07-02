@@ -31,9 +31,8 @@ Get started
 
 :doc:`I am a journalist and would like information about how to best use this system. <journalist/journalist>`
 
-.. note:: The terms in italics are terms of art specific to SecureDrop. The
-	  :doc:`Glossary </appendices/glossary>` provides more-precise
-          definitions of these and other terms. SecureDrop is designed against
+.. note:: The :doc:`Glossary </appendices/glossary>` provides more-precise
+          definitions of terms and concepts particular to SecureDrop. SecureDrop is designed against
           a comprehensive :doc:`threat model </appendices/threat_model/threat_model>`, and has a specific notion of the :doc:`roles </appendices/glossary>` that are involved in its operation.
 
 .. toctree::
