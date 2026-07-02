@@ -17,9 +17,7 @@ encryption and authentication via HTTPS:
   they are communicating with the intended organization when they access a
   given Source Interface.
 
-* SecureDrop supports v3 Onion Services, which use updated cryptographic
-  primitives that provide better transport-layer encryption than those used
-  by v2 Onion Services. Using HTTPS on the Source Interface will provide
+* Using HTTPS on the Source Interface will provide
   an extra layer of encryption for data in transit.
 
 .. _`SecureDrop Directory`: https://securedrop.org/directory/

@@ -207,8 +207,7 @@ Moving a SecureDrop instance to new hardware involves:
 
        securedrop-admin restore sd-backup-old.tar.gz
 
-   The restore task will proceed for some time, removing v2 services if a v2+v3
-   backup was used.
+   The restore task will proceed for some time.
 
 #. Synchronize the server and Admin Workstation's web interface config and
    authentication keys using the Terminal commands:
@@ -321,10 +320,6 @@ the following command:
 .. code:: sh
 
    securedrop-admin restore --preserve-tor-config sd-backup-2020-07-22--01-06-25.tar.gz
-
-This is a suitable option if you have a backup archive taken from an instance
-with v2 Onion Services, and wish to restore it to an instance that is now using
-v3 Onion Services.
 
 If you require any assistance with migration or data recovery, please
 `contact Support`_.
