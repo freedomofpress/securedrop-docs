@@ -16,6 +16,7 @@ How to submit
    communications with them. If you plan to use SecureDrop to maintain your
    anonymity, you should not discuss your own use of it with others via unsafe
    methods, including email to Freedom of the Press Foundation.
+   
 
 Making your first submission
 ----------------------------
