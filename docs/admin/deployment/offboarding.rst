@@ -317,6 +317,133 @@ Return to the Secure Viewing Station
    and updating the fingerprint when prompted. You do not have to run
    ``securedrop-admin install`` again, since you have already pushed the
    changes to the server.
+   
+   
+Rotate Onion services keys
+--------------------------
+
+There are a three pairs of authenticated onion service keys that are used to
+secure access to various resources within a SecureDrop environment. These are:
+
+* Keys to access the Journalist interface
+* Keys to access the *Application Server* when SSH-over-Tor is enabled, and
+* Keys to access the *Monitor Server* when SSH-over-Tor is enabled
+
+To rotate these credentials, you can follow the steps below. 
+
+.. note::
+
+   Rotating the authenticated onion service keys will not change the Onion
+   addresses for the services. Your *Source Interface* and *Journalist
+   Interface* addresses will remain the same.
+
+#. Prepare your *Admin Workstation* to generate new keys: 
+   
+   .. code:: sh
+
+    rm ~/.config/securedrop-admin/app-journalist.auth_private
+    rm ~/.config/securedrop-admin/app-sourcev3.auth_private
+    mv ~/.config/securedrop-admin/tor_v3_keys.json ~/.config/securedrop-admin/tor_v3_keys.json.bak
+    
+#. Generate new keys on your *Admin Workstation*:
+
+   .. code:: sh
+   
+    securedrop-admin generate_v3_keys
+    
+#. Push the new keys to your SecureDrop server:
+
+   .. code:: sh
+   
+    securedrop-admin install
+    
+   .. important::
+
+      If you have SSH-over-Tor enabled, the first install run **will fail**
+      midway through the run, due to the keys for SSH getting swapped out. This
+      is expected. When you see this failure message, you need to do the following:
+   
+      1. Open the ``~/.config/securedrop-admin/tor_v3_keys.json`` file and locate the new private keys for both the *Application* and *Monitor Server* SSH access. They will be marked ``"app_ssh_private_key"`` and ``"mon_ssh_private_key"``.
+   
+      2. Open the ``~/.config/securedrop-admin/app-ssh.auth_private`` file, and replace the previous key (the last portion of the line, directly following ``:x25519:``) with the new key. 
+   
+      3. Repeat the process for ``~/.config/securedrop-admin/mon-ssh.auth_private``
+   
+      4. Reboot your *Admin Workstation*
+   
+      5. SSH into each server and confirm access
+   
+      6. Repeat the ``securedrop-admin install`` command, which should complete successfully this time
+    
+#. Configure your *Admin Workstation* to use the new keys:
+
+   .. code:: sh
+    
+    securedrop-admin localconfig
+    
+   and reboot when prompted.
+   
+#. Confirm you can login to the *Journalist Interface*
+
+#. Clean up leftover backup files
+
+   .. code:: sh
+   
+    rm ~/.config/securedrop-admin/tor_v3_keys.json.bak
+    rm ~/.config/securedrop-admin/app-journalist.auth_private.bak
+    rm ~/.config/securedrop-admin/app-sourcev3.auth_private.bak
+   
+#. Update the keys on *Journalist Workstation*, *SecureDrop Workstation*,
+   or other *Admin Workstation* drives.
+    
+      * For *Journalist Workstation* drives, copy:
+   
+        .. code:: sh
+   
+         ~/.config/securedrop-admin/app-journalist.auth_private
+    
+        from your *Admin Workstation* to a *Transfer Device*, then copy it
+        to the corresponding location on the *Journalist Workstation*. Apply
+        the changes via:
+    
+        .. code:: sh
+     
+         securedrop-admin localconfig
+     
+        and reboot when prompted. Once rebooted, verify that you can login to the
+        *Journalist Interface*.
+   
+      * For *Admin Workstation* drives, copy: 
+   
+        .. code:: sh
+   
+         ~/.config/securedrop-admin/app-journalist.auth_private
+         ~/.config/securedrop-admin/app-ssh.auth_private
+         ~/.config/securedrop-admin/mon-ssh.auth_private
+         ~/.config/securedrop-admin/tor-v3-keys.json
+    
+        from the original *SecureDrop Workstation* to a *Transfer Device*, then copy
+        it to the corresponding location on the other *Admin Workstation.* Apply
+        the changes via:
+   
+        .. code:: sh
+   
+         securedrop-admin localconfig
+    
+        and reboot when prompted. Once rebooted, verify that you can login to the
+        *Journalist Interface*, and connect to both the *App* and *Mon* servers via
+        SSH.
+   
+      * For *SecureDrop Workstation*, repeat the import process as 
+        `outlined here. <https://workstation.securedrop.org/en/stable/admin/install/install.html#import-journalist-interface-details>`__
+   
+        Make sure to run:
+   
+        .. code:: sh
+   
+         sdw-admin --apply
+    
+        to apply the changes. Then, verify you are able to login to SecureDrop Inbox.
 
 .. _getting_support:
 
