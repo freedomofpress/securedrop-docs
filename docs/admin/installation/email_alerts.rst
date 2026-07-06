@@ -1,11 +1,48 @@
 Prepare email accounts
 ======================
 
-SecureDrop sends different alerts by PGP-encrypted email. Before installing SecureDrop, you must select or prepare the email accounts where you would like these alerts to be sent. In the case of OSSEC alerts (which you must set up), configuring an SMTP relay is also required. 
+SecureDrop sends two different types of alerts by OpenPGP-encrypted email:
+
+1. OSSEC alerts sent from the Monitor Server to the Administrator, which must be configured
+2. Daily Journalist alerts sent from the Application Server to a Journalist, which is optional to configure
+
+Before installing SecureDrop, you must select or prepare the email accounts where you would like these alerts to be sent. You may use pre-existing email addresses, or you may set up new, dedicated ones. In either case, you must configure OpenPGP encryption for the email addresses you intend to use. You will require the relevant PGP public keys when installing SecureDrop at a later step. 
+
+In the case of OSSEC alerts, configuring an SMTP relay is also required. 
+
+.. _pgp_encrypted_email:
+
+Set up an email address to receive PGP-encrypted email
+------------------------------------------------------
+
+PGP email encrypted requires the recipient to generate a PGP keypair, which consists of a private key and public key. For the purposes of SecureDrop's OSSEC or Daily Journalist Alert emails, the public key(s) must be installed on the servers by an Administrator and the respective recipients must have an email client configured with the private key to receive and decrypt the alert emails. 
+
+If you are not familiar with configuring OpenPGP-encrypted email yourself, listed before are a few easy options we recommend. With any of these options, there will be an ability to export (sometimes called "backup") your public key and view the key fingerprint. 
+
+.. warning::
+  When exporting your *public key* to for use during SecureDrop installation, it is important to ensure you do not accidentally export your *private key*. 
+
+Mailvelope
+~~~~~~~~~~
+
+`Mailvelope<https://mailvelope.com/>` is a browser extension that add PGP encryption to a variety of common web-based email clients, including Gmail/Google Workspace and Outlook/Microsoft 365. Mailvelope takes care of generating a PGP keypair if you do not already have one. 
+
+.. note::
+  By default, Mailvelope will upload the public key to their own Mailvelope Key Server upon creation of the keypair. Unless you are using this keypair outside of receiving SecureDrop alerts, you should **uncheck** this option.
+
+Thunderbird
+~~~~~~~~~~~
+
+The open-source cross-platform e-mail client `Thunderbird<https://www.thunderbird.net>` also provides built in support for PGP encrpytion, including `generating keypairs<https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_i-have-never-used-openpgp-with-thunderbird-before-how-do-i-setup-openpgp>` and `exporting keys<https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_how-can-i-export-my-secret-or-public-key>`. 
+
+Proton Mail
+~~~~~~~~~~~
+
+Proton Mail is a privacy-focused e-mail provider that implements PGP encryption by default. Every Proton Mail account has a PGP keypair, and you can easily `export the public key<https://proton.me/support/download-public-private-key>`.
 
 .. _daily_journalist_alerts:
 
-Optional: Daily Journalist Alerts
+Optional: Daily Journalist alerts
 ---------------------------------
 
 When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for *Journalists* to be notified daily via encrypted email about whether or not there has been submission activity in the past 24 hours.
@@ -20,13 +57,13 @@ If the email shows submissions were received, the *Journalist* can check their *
    always be "Submissions in the past 24h". To find out whether there were
    submissions or not, a *Journalist* must decrypt the contents of the email.
 
-In the simplest case a *Journalist* will provides their email and GPG public key to
+In the simplest case a *Journalist* will provides their email and PGP public key to
 you, the admin. If a team of *Journalist* wants to receive these daily alerts, they 
-should share a GPG key and ask the admin to setup a mail alias
+should share a PGP key and ask the admin to setup a mail alias
 (SecureDrop does not provide that service) so they all receive the alerts and
 are able to decrypt them.
 
-It is not possible to specify multiple email addresses for email notifications. If there are multiple intended recipients, use an alias or mailing list. However, all subscribers must share the GPG private key, as it is not possible to specify multiple keys.
+It is not possible to specify multiple email addresses for email notifications. If there are multiple intended recipients, use an alias or mailing list. However, all subscribers must share the PGP private key, as it is not possible to specify multiple keys.
 
 If you wish to enable this, you will need:
 
@@ -64,7 +101,7 @@ settings during the SecureDrop server installation:
 Email address and public key
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You must specify the email and GPG public key that you'll be using to receive alerts and decrypt the alert emails. You can use a pre-existing email and GPG key or create a new one specifically for receiving these alerts. 
+You must specify the email and PGP public key that you'll be using to receive alerts and decrypt the alert emails. You can use a pre-existing email and PGP key or create a new one specifically for receiving these alerts. 
 
 This could be your work email, or an alias for a group of IT admins at your organization. It helps for your mail client to have the ability to filter the numerous messages from OSSEC into a separate folder.
 
@@ -80,7 +117,7 @@ the SecureDrop servers are functioning is worth it. If a third-party
 SMTP relay is used, that relay will be able to learn information such as
 the IP address the alerts were sent from, the subject of the alerts, and
 the destination email address the alerts were sent to. Only the body of
-an alert email is encrypted with the recipient's GPG key. A third-party
+an alert email is encrypted with the recipient's PGP key. A third-party
 SMTP relay could also prevent you from receiving any or specific alerts.
 
 The SMTP relay that you use should support SASL authentication and SMTP
