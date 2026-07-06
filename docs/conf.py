@@ -100,9 +100,9 @@ todo_include_todos = False
 # -- Options for HTML output ----------------------------------------------
 
 try:
-    import sphinx_rtd_theme
+    import sphinx_book_theme
 
-    html_theme = "sphinx_rtd_theme"
+    html_theme = "sphinx_book_theme"
 except ImportError:
     # This theme is included with Sphinx and is quite nice (based
     # on the Pocoo themes), but since we're using the RTD theme
