@@ -329,7 +329,11 @@ secure access to various resources within a SecureDrop environment. These are:
 * Keys to access the *Application Server* when SSH-over-Tor is enabled, and
 * Keys to access the *Monitor Server* when SSH-over-Tor is enabled
 
-To rotate these credentials, you can follow the steps below. 
+If you have reason to believe these credentials may have been copied or
+compromised, you should rotate them. The ``securedrop-admin`` utility provides
+a built-in tool to generate a new, complete set of keys. You can follow the
+steps below to temporarily back up your current keys, generate a new set, 
+then deploy them to your SecureDrop Server and Journalist Workstations.
 
 .. note::
 
@@ -339,15 +343,16 @@ To rotate these credentials, you can follow the steps below.
 
 #. Prepare your *Admin Workstation* to generate new keys: 
    
-First, delete the existing `app-journalist.auth_private` (containing the *Journalist Interface* private key and onion address) and `app-sourcev3.ths` (containing the *Source Interface* address):
+   First, delete the existing ``app-journalist.auth_private`` (containing the *Journalist Interface* private key and onion address) and ``app-sourcev3.ths`` (containing the *Source Interface* address) files:
+   
    .. code:: sh
 
     rm ~/.config/securedrop-admin/app-journalist.auth_private
-    rm ~/.config/securedrop-admin/app-sourcev3.ths
+    rm ~/.config/securedrop-admin/app-sourcev3-ths
     
-Then, move `tor_v3_keys.json` (which contains the keypairs for the *Journalist Interface* and the servers) to delete the original and leave a backup version of the file:
+   Then, move ``tor_v3_keys.json`` (which contains the keypairs for the *Journalist Interface* and the servers) to delete the original and leave a backup version of the file:
 
-    .. code:: sh
+   .. code:: sh
 
     mv ~/.config/securedrop-admin/tor_v3_keys.json ~/.config/securedrop-admin/tor_v3_keys.json.bak
     
@@ -367,7 +372,22 @@ Then, move `tor_v3_keys.json` (which contains the keypairs for the *Journalist I
 
       If you have SSH-over-Tor enabled, the first install run **will fail**
       midway through the run, due to the keys for SSH getting swapped out. This
-      is expected. When you see this failure message, you need to do the following:
+      is expected. 
+      
+      The install run should show an error during one of the two tasks below:
+      
+      .. code:: sh
+      
+       RUNNING HANDLER [tor-hidden-services : Waiting for SSH connect (slow)...]
+       
+       RUNNING HANDLER [tor-hidden-services : Clear out SSH connections, to prevent reuse of stale ControlPersist file.]
+       
+      .. warning::
+      
+       If the install run fails in a different or earlier task, try running the install playbook again.
+       If it continues to fail at a different point, do not continue and :ref:`contact support <getting_support>`.
+      
+      When you see this failure message, you need to do the following:
    
       1. Open the ``~/.config/securedrop-admin/tor_v3_keys.json`` file and locate the new private keys for both the *Application* and *Monitor Server* SSH access. They will be marked ``"app_ssh_private_key"`` and ``"mon_ssh_private_key"``.
    
@@ -387,7 +407,7 @@ Then, move `tor_v3_keys.json` (which contains the keypairs for the *Journalist I
     
     securedrop-admin localconfig
     
-   and reboot when prompted.
+   and reboot if prompted.
    
 #. Confirm you can login to the *Journalist Interface*
 
