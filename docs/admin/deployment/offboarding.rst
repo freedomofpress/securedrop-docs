@@ -440,8 +440,8 @@ Then, move `tor_v3_keys.json` (which contains the keypairs for the *Journalist I
         *Journalist Interface*, and connect to both the *App* and *Mon* servers via
         SSH.
    
-      * For *SecureDrop Workstation*, repeat the import process as 
-        `outlined here. <https://workstation.securedrop.org/en/stable/admin/install/install.html#import-journalist-interface-details>`__
+      * For *SecureDrop Workstation*, manually copy the *Journalist Interface* details from the *Admin Workstation* to the configuration file in ``dom0`` and then apply the changes as
+        `outlined here. <https://workstation.securedrop.org/en/stable/admin/install/troubleshoot.html#failed-to-import-journalist-interface-details>`__
    
         Make sure to run:
    
