@@ -409,7 +409,7 @@ Then, move `tor_v3_keys.json` (which contains the keypairs for the *Journalist I
          ~/.config/securedrop-admin/app-journalist.auth_private
     
         from your *Admin Workstation* to a *Transfer Device*, then copy it
-        to the corresponding location on the *Journalist Workstation*. Apply
+        to the ``~/.config/securedrop-admin/`` directory on the *Journalist Workstation*. Apply
         the changes via:
     
         .. code:: sh
