@@ -339,10 +339,16 @@ To rotate these credentials, you can follow the steps below.
 
 #. Prepare your *Admin Workstation* to generate new keys: 
    
+First, delete the existing `app-journalist.auth_private` (containing the *Journalist Interface* private key and onion address) and `app-sourcev3.ths` (containing the *Source Interface* address):
    .. code:: sh
 
     rm ~/.config/securedrop-admin/app-journalist.auth_private
-    rm ~/.config/securedrop-admin/app-sourcev3.auth_private
+    rm ~/.config/securedrop-admin/app-sourcev3.ths
+    
+Then, move `tor_v3_keys.json` (which contains the keypairs for the *Journalist Interface* and the servers) to delete the original and leave a backup version of the file:
+
+    .. code:: sh
+
     mv ~/.config/securedrop-admin/tor_v3_keys.json ~/.config/securedrop-admin/tor_v3_keys.json.bak
     
 #. Generate new keys on your *Admin Workstation*:
