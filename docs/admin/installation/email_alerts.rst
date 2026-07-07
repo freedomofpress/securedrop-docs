@@ -47,7 +47,7 @@ Optional: Daily Journalist alerts
 
 When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for *Journalists* to be notified daily via encrypted Daily Journalist Alert emails about whether or not there has been submission activity in the past 24 hours. If the email shows submissions were received, the *Journalist* can check their *Journalist Workstation*.
 
-Daily Journalist Alerts are optional, and can be configured during or after installation.
+Daily Journalist alerts are optional, and can be configured during or after installation.
 
 .. note::
 
