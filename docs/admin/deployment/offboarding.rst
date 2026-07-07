@@ -429,7 +429,7 @@ Then, move `tor_v3_keys.json` (which contains the keypairs for the *Journalist I
          ~/.config/securedrop-admin/tor-v3-keys.json
     
         from the original *SecureDrop Workstation* to a *Transfer Device*, then copy
-        it to the corresponding location on the other *Admin Workstation.* Apply
+        them to the ``~/.config/securedrop-admin/`` directory on the other *Admin Workstation.* Apply
         the changes via:
    
         .. code:: sh
