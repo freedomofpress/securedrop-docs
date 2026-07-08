@@ -35,10 +35,10 @@ received and reviewed:
    organization using `Tor Browser <https://www.torproject.org/>`__.
 
 2. A *Journalist* connects to SecureDrop using their *SecureDrop
-   Workstation*, which provides a virtual airgapped environment to
-   decrypt the submission, after which *Journalists* can view the document
-   using an offline VM, process it (e.g., to remove metadata or potential malware),
-   print it, or export it to a dedicated device.
+   Workstation*, which provides separate isolated environments to
+   decrypt and then view the document before processing it 
+   (e.g., to remove metadata or potential malware),
+   printing it, or exporting it to a dedicated device.
 
 .. seealso:: Check out
           :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>`
