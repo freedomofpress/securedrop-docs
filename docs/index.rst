@@ -75,10 +75,7 @@ There are three main user roles that interact with a SecureDrop instance:
 Infrastructure overview
 -----------------------
 
-SecureDrop runs on two dedicated servers, one of which is the *Application 
-Server* that hosts the *Source* and *Journalist Interfaces*, and the other
-which is a *Monitor Server* that runs an intrusion detection service and sends 
-email alerts.
+SecureDrop runs on two dedicated servers: the *Application Server* that hosts the *Source* and *Journalist Interfaces*, and the *Monitor Server* that runs an intrusion detection service and sends email alerts.
   
 The servers operate on a segmented network connected directly to a dedicated
 hardware firewall.
