@@ -17,7 +17,7 @@ Setting up an email addresses and PGP keys
 
 OpenPGP-encrypted email requires the recipient to generate a PGP key pair, which consists of a private key and public key, and then distribute the public key. For the purposes of SecureDrop's OSSEC or Daily Journalist Alert emails, the public keys must be installed on the servers by an Administrator and the respective recipients must have an email client configured with the corresponding private key. 
 
-If you are not familiar with configuring OpenPGP-encrypted email yourself, listed below are a few easy options we recommend. Each of these options provide the ability to export (or "backup") the public key and view the key fingerprint, which are the two things you need to have on-hand for each alert type when installing or configuring the SecureDrop servers. 
+If you are not familiar with configuring OpenPGP-encrypted email yourself, listed below are a few options we recommend. Each of these options provide the ability to export the public key and view the key fingerprint, which are the two things you need to have on-hand for each alert type when installing or configuring the SecureDrop servers. 
 
 .. warning::
   When exporting your *public key* for use during SecureDrop installation, it is important to ensure you do not accidentally export your *private key*. 
