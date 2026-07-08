@@ -25,7 +25,7 @@ If you are not familiar with configuring OpenPGP-encrypted email yourself, liste
 Mailvelope
 ~~~~~~~~~~
 
-`Mailvelope<https://mailvelope.com/>` is a browser extension that add PGP encryption to a variety of common web-based email clients, including Gmail/Google Workspace and Outlook/Microsoft 365. Mailvelope takes care of generating a PGP key pair if you do not already have one. 
+`Mailvelope<https://mailvelope.com/>` is a browser extension that adds PGP encryption to a variety of common web-based email clients, including Gmail/Google Workspace and Outlook/Microsoft 365. Mailvelope takes care of generating a PGP key pair if you do not already have one. 
 
 .. note::
   By default, Mailvelope will upload the public key to their own Mailvelope Key Server upon creation of the key pair. Unless you are using this key pair outside of receiving SecureDrop alerts, you should **uncheck** this option.
