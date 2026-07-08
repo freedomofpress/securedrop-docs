@@ -12,10 +12,7 @@ anonymous sources. It is a free and open source source project of the
 `Freedom of the Press Foundation (FPF) <https://freedom.press/>`_, a US-based
 nonprofit organization.
 
-SecureDrop connects journalists and their sources directly,
-without third parties, and substantially limits recorded metadata.
-It puts news organizations in control to challenge any legal orders
-seeking data.
+SecureDrop connects journalists and their sources directly, in a way that substantially limits recorded metadata. Without third party intermediaries, SecureDrop helps protect potential sources, and puts news organizations in a strong position to challenge legal orders for data.
 
 .. note:: This documentation is also available as a Tor Onion Service at
           http://dftlffjdogaragaxkc6jqxpo77s7rrngimyoq7uuq3clowhmttblcoyd.onion/en/stable/.
