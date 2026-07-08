@@ -84,7 +84,7 @@ works in a server-agent scheme; that is, the OSSEC server extends its
 existing functions to the *Application Server* through an agent installed
 on that server, covering monitoring for both machines.
 
-The SecureDrop installation process requires that you configure OSSEC email alerts. You need to supply several
+The SecureDrop installation process requires that you configure OSSEC email alerts. You must supply several
 settings during installation:
 
 - The email address that will receive alerts from OSSEC
