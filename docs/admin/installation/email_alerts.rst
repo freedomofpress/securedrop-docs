@@ -57,7 +57,7 @@ Daily Journalist alerts are optional, and can be configured during or after inst
    always be "Submissions in the past 24h". To find out whether there were
    submissions or not, a *Journalist* must decrypt the contents of the email.
 
-In the simplest case a *Journalist* will provides their email and PGP public key to
+In the simplest case a *Journalist* will provide their email and PGP public key to
 you, the admin. If a team of *Journalist* wants to receive these daily alerts, they 
 should share a PGP key and ask the admin to setup a mail alias
 (SecureDrop does not provide that service) so they all receive the alerts and
