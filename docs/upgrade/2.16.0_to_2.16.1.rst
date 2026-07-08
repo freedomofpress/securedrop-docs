@@ -15,7 +15,7 @@ disabled and have run the ``securedrop-admin install`` command since
 December 2025.
 
 To see if your server was affected, and if so, how to remediate the issue,
-please refer to the `announcement for the 2.16.1 release <https://securedrop.org/news/advisory_securedrop-2_16_1-released/>`_.
+please refer to the `announcement for the 2.16.1 release <https://securedrop.org/news/advisory-securedrop-2_16_1-released/>`_.
 
 Update Workstations to SecureDrop 2.16.1
 ----------------------------------------
