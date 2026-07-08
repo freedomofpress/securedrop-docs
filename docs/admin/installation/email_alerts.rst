@@ -20,7 +20,7 @@ OpenPGP-encrypted email requires the recipient to generate a PGP key pair, which
 If you are not familiar with configuring OpenPGP-encrypted email yourself, listed below are a few easy options we recommend. Each of these options provide the ability to export (or "backup") the public key and view the key fingerprint, which are the two things you need to have on-hand for each alert type when installing or configuring the SecureDrop servers. 
 
 .. warning::
-  When exporting your *public key* to for use during SecureDrop installation, it is important to ensure you do not accidentally export your *private key*. 
+  When exporting your *public key* for use during SecureDrop installation, it is important to ensure you do not accidentally export your *private key*. 
 
 Mailvelope
 ~~~~~~~~~~
