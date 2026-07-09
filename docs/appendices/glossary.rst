@@ -73,6 +73,8 @@ that notifies Journalists about whether or not there has been
 submission activity in the past 24 hours. The Journalist uses an associated
 Journalist Alert Private Key to decrypt the alerts.
 
+This Journalist Alert Key pair is created when :doc:`preparing email accounts for alerts</admin/installation/email_alerts>`.
+
 .. _glossary_landing_page:
 
 Landing Page
@@ -119,6 +121,8 @@ OSSEC Alert Key
 ---------------
 
 The OSSEC Alert Public Key is the GPG key that the Monitor Server uses to encrypt e-mail alerts send to the Administrator. The Administrator uses an associated OSSEC Alert Private Key to decrypt the e-mails. 
+
+This OSSEC Alert Key pair is created when :doc:`preparing email accounts for alerts</admin/installation/email_alerts>`.
 
 .. _glossary_securedrop_inbox:
 
