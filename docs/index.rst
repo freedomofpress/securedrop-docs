@@ -23,7 +23,7 @@ How it works
 
 .. figure:: /diagrams/securedrop_overview_highlevel.png
 
-*Sources* and *Journalists* connect to SecureDrop using the Tor network. The SecureDrop software is running on premises on dedicated infrastructure (two physical servers and a firewall).
+*Sources* and *Journalists* connect to SecureDrop using the Tor network. The SecureDrop software runs on-premises on dedicated infrastructure (two physical servers and a firewall).
 
 The following steps describe how a SecureDrop submission is submitted,
 received and reviewed:
