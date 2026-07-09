@@ -1,16 +1,53 @@
-Prepare email accounts
-======================
+Prepare email accounts for alerts
+=================================
 
-SecureDrop sends different alerts by PGP-encrypted email. Before installing SecureDrop, you must select or prepare the email accounts where you would like these alerts to be sent. In the case of OSSEC alerts (which are required), configuring an SMTP relay is also required. 
+SecureDrop sends two different types of alerts by OpenPGP-encrypted email:
+
+1. OSSEC alerts sent from the Monitor Server to the Administrator, which must be configured
+2. Daily Journalist alerts sent from the Application Server to a Journalist, which is optional to configure
+
+Before installing SecureDrop, you must have appropriate email addresses configured with OpenPGP encryption to receive these alerts. You may use pre-existing email addresses, or you may set up new ones dedicated to your SecureDrop.
+
+In the case of OSSEC alerts, configuring an SMTP relay is also required. 
+
+.. _pgp_encrypted_email:
+
+Setting up an email addresses and PGP keys
+------------------------------------------
+
+OpenPGP-encrypted email requires the recipient to generate a PGP key pair, which consists of a private key and public key, and then distribute the public key. For the purposes of SecureDrop's OSSEC or Daily Journalist Alert emails, the public keys must be installed on the servers by an Administrator and the respective recipients must have an email client configured with the corresponding private key. 
+
+If you are not familiar with configuring OpenPGP-encrypted email yourself, listed below are a few options we recommend. Each of these options provide the ability to export the public key and view the key fingerprint, which are the two things you need to have on-hand for each alert type when installing or configuring the SecureDrop servers. 
+
+.. warning::
+  When exporting your *public key* for use during SecureDrop installation, it is important to ensure you do not accidentally export your *private key*. 
+
+Mailvelope
+~~~~~~~~~~
+
+`Mailvelope<https://mailvelope.com/>` is a browser extension that adds PGP encryption to a variety of common web-based email clients, including Gmail/Google Workspace and Outlook/Microsoft 365. Mailvelope takes care of generating a PGP key pair if you do not already have one. 
+
+.. note::
+  By default, Mailvelope will upload the public key to their own Mailvelope Key Server upon creation of the key pair. Unless you are using this key pair outside of receiving SecureDrop alerts, you should **uncheck** this option.
+
+Thunderbird
+~~~~~~~~~~~
+
+The open-source cross-platform e-mail client `Thunderbird<https://www.thunderbird.net>` also provides built in support for PGP encryption, including `generating key pairs<https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_i-have-never-used-openpgp-with-thunderbird-before-how-do-i-setup-openpgp>` and `exporting keys<https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_how-can-i-export-my-secret-or-public-key>`. 
+
+Proton Mail
+~~~~~~~~~~~
+
+Proton Mail is a privacy-focused e-mail provider that implements PGP encryption by default. Every Proton Mail account has a PGP key pair, and you can easily `export the public key<https://proton.me/support/download-public-private-key>`.
 
 .. _daily_journalist_alerts:
 
-Optional: Daily Journalist Alerts
+Optional: Daily Journalist alerts
 ---------------------------------
 
-When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for Journalists to be notified daily via encrypted email about whether or not there has been submission activity in the past 24 hours.
+When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for Journalists to be notified daily via encrypted Daily Journalist Alert emails about whether or not there has been submission activity in the past 24 hours. If the email shows submissions were received, the Journalist can check their SecureDrop Workstation.
 
-If the email shows submissions were received, the Journalist can check their SecureDrop Workstation.
+Daily Journalist alerts are optional, and can be configured during or after installation.
 
 .. note::
 
@@ -20,26 +57,24 @@ If the email shows submissions were received, the Journalist can check their Sec
    always be "Submissions in the past 24h". To find out whether there were
    submissions or not, a Journalist must decrypt the contents of the email.
 
-In the simplest case a Journalist will provides their email and GPG public key to
+In the simplest case a Journalist will provide their email and Journalist Alert Public Key to
 you, the Administrator. If a team of Journalist wants to receive these daily alerts, they 
-should share a GPG key and ask the Administrator to setup a mail alias
+should share a Journalist Alert Public Key and ask the admin to setup a mail alias
 (SecureDrop does not provide that service) so they all receive the alerts and
 are able to decrypt them.
 
-It is not possible to specify multiple email addresses for email notifications. If there are multiple intended recipients, use an alias or mailing list. However, all subscribers must share the GPG private key, as it is not possible to specify multiple keys.
+It is not possible to specify multiple email addresses for email notifications. If there are multiple intended recipients, use an alias or mailing list. However, all subscribers must share the Journalist Alert Private Key, as it is not possible to specify multiple keys.
 
 If you wish to enable this, you will need:
 
--  the email address that will receive the Journalist alerts
--  the :ref:`Journalist Alert Public Key<glossary_journalist_alert_key>`
--  the Journalist Alert Public Key fingerprint
-
-Daily Journalist Alerts can be configured during or after installation. 
+-  The email address that will receive the Journalist alerts
+-  The Journalist Alert Public Key
+-  The Journalist Alert Public Key fingerprint
 
 .. _ossec_guide:
 
 OSSEC alerts
------------------------
+------------
 
 OSSEC is an open source host-based intrusion detection system (IDS) that
 SecureDrop uses to perform log analysis, file integrity checking, policy
@@ -49,11 +84,12 @@ works in a server-agent scheme; that is, the OSSEC server extends its
 existing functions to the Application Server through an agent installed
 on that server, covering monitoring for both machines.
 
-In order to receive email alerts from OSSEC, you need to supply several
-settings during the SecureDrop server installation:
+The SecureDrop installation process requires that you configure OSSEC email alerts. You must supply several
+settings during installation:
 
 - The email address that will receive alerts from OSSEC
-- The :ref:`OSSEC Alert Public Key<glossary_ossec_alert_key>` and its fingerprint
+- The OSSEC Alert Public Key
+- The OSSEC Alert Public Key fingerprint
 - The reachable hostname of your SMTP relay
 - The secure SMTP port of your SMTP relay
   (typically 25, 587, or 465; must support TLS encryption)
@@ -64,9 +100,7 @@ settings during the SecureDrop server installation:
 Email address and public key
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You must specify the email and GPG public key that you'll be using to receive alerts and decrypt the alert emails. You can use a pre-existing email and GPG key or create a new one specifically for receiving these alerts. 
-
-This could be your work email, or an alias for a group of IT staff at your organization. It helps for your mail client to have the ability to filter the numerous messages from OSSEC into a separate folder.
+You must specify the email and PGP public key that you'll be using to receive and decrypt OSSEC alerts. As an Administrator, this could be your work email, or an alias for a group of IT Administrators at your organization. It helps for your mail client to have the ability to filter the numerous messages from OSSEC into a separate folder.
 
 SMTP relay
 ~~~~~~~~~~
@@ -80,7 +114,7 @@ the SecureDrop servers are functioning is worth it. If a third-party
 SMTP relay is used, that relay will be able to learn information such as
 the IP address the alerts were sent from, the subject of the alerts, and
 the destination email address the alerts were sent to. Only the body of
-an alert email is encrypted with the recipient's GPG key. A third-party
+an alert email is encrypted with the recipient's PGP key. A third-party
 SMTP relay could also prevent you from receiving any or specific alerts.
 
 The SMTP relay that you use should support SASL authentication and SMTP
@@ -108,10 +142,10 @@ although we've described some common scenarios in the
 
 .. _ossec_gmail:
 
-Using Gmail for OSSEC alerts
+Using Gmail as an SMTP relay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It's possible SecureDrop to use Google's servers to deliver the
+It's possible for SecureDrop to use Google's servers to deliver the
 alerts, but it's not ideal from a security perspective. This option
 should be regarded as a backup plan. Keep in mind that you're leaking
 metadata about the timing of alerts to a third party — the alerts are
