@@ -80,7 +80,7 @@ Landing Page
 
 The Landing Page is the public-facing webpage for a SecureDrop instance. This
 page is hosted as a standard (i.e. non-Tor) webpage on the news organization's
-website. It provides first instructions for potential Sources and includes
+website. It provides instructions for potential Sources and includes
 the the onion address for the instance's :ref:`Source Interface <glossary_source_interface>`.
 
 .. _glossary_monitor_server:
