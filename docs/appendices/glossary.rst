@@ -33,7 +33,7 @@ The Admin Workstation is a laptop running Qubes OS, initially configured as a Se
 Application Server
 ------------------
 
-The Application Server is a physical computer housed on-premises running the SecureDrop server application. Based on our :doc:`recommendations</admin/installation/hardware>`, this is typically a NUC or similar Mini PC. The Application hosts both
+The Application Server is a physical computer housed on-premises running the SecureDrop server application. Based on our :doc:`recommendations</admin/installation/hardware>`, this is typically a NUC or similar Mini PC. The Application hosts
 the website that Sources access (the Source Interface), the Admin Interface, and the API endpoint that SecureDrop Inbox connects to so Journalists may download and reply to submissions.
 
 Instructions and tips for accessing the Application Server over SSH are on the :ref:`SSH access page<server SSH access>`.
