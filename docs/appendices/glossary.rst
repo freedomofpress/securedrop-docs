@@ -10,7 +10,7 @@ The list below attempts to enumerate and define these terms.
 Administrator
 -------------
 
-The Administrator installs, deploys, and maintains a SecureDrop instance. They connect to the Application and Monitor servers (using SSH) and to the Admin Interface (using Tor Browser) from an Admin Workstation. 
+The Administrator installs, deploys, and maintains a SecureDrop instance. They have physical access to the Application and Monitor servers, as well as the dedicated hardware firewall. Typically, they use an Admin Workstation to connect to the Application and Monitor servers (using SSH) and to the Admin Interface (using Tor Browser). 
 
 .. _glossary_admin_interface:
 
