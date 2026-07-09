@@ -88,10 +88,11 @@ the the onion address for the instance's :ref:`Source Interface <glossary_source
 Monitor Server
 --------------
 
-The Monitor Server is physical computer housed on-premises running the `OSSEC<https://www.ossec.net/>` intrusion detection software to monitor the Application Server and send out an email alert if something seems wrong. Like the Application server, it is typically a NUC or similar Mini PC. Only Administrators connect
-to this server.
+The Monitor Server is physical computer housed on-premises running the `OSSEC<https://www.ossec.net/>` intrusion detection software to monitor the Application Server. It sends OSSEC email alerts to the Administrator when changes are detected on the Application Server which could indicate a potential compromise. Like the Application server, it is typically a NUC or similar Mini PC. Only Administrators connect to this server.
 
 Instructions and tips for accessing the Monitor Server over SSH are on the :ref:`SSH access page<server SSH access>`.
+
+Instructions on how to interpret OSSEC email alerts are on the :doc:`Analyzing OSSEC alerts page</admin/reference/ossec_alerts>`.
 
 .. _glossary_onion_service:
 

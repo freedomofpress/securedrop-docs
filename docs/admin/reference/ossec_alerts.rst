@@ -1,7 +1,7 @@
 .. _AnalyzingAlerts:
 
-Analyzing the alerts
---------------------
+Analyzing OSSEC alerts
+----------------------
 
 Understanding the contents of the OSSEC alerts requires a background and
 knowledge in Linux systems administration. They may be confusing, and at
