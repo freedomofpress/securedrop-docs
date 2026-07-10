@@ -12,7 +12,7 @@ attributes that will be important to have:
 
 * Experience with managing Linux-based systems from the command line.
 * Proficiency with network hardware such as firewalls and switches (e.g. pfSense).
-* Experience with QubesOS.
+* Experience with Qubes OS.
 * Experience with configuration management tools such as Ansible, Salt, Chef, or Puppet.
 * Ability to use and configure secure communication tools such as GPG.
 

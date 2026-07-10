@@ -75,7 +75,7 @@ installs a hardened, security-focused version of the Linux kernel
 the servers during the install, you will receive a pre-install error reminding
 you that it must be turned off before the installation can proceed.
 
-Likewise, SecureBoot is not fully supported by QubesOS, and cannot be used with
+Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with
 *SecureDrop Workstations*.
 
 For instructions on how to enable or disable the SecureBoot feature for your

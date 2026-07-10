@@ -39,7 +39,7 @@ the computers and services needed for a functional SecureDrop.
 During this process, you'll set up at least four devices:
 
 - *Admin Workstation*:
-   A laptop running the QubesOS operating system configured as an *Admin Workstation*, that you use to install and administer SecureDrop on the servers via SSH. If necessary (i.e. in a small newsroom), the same *SecureDrop Workstation* used for administration may be used as a *Journalist Workstation* by *Journalists* to decrypt, view, and export submitted documents. For a larger newsroom, you may set up additional *Journalist Workstations* as needed for *Journalist* use.
+   A laptop running the Qubes OS operating system configured as an *Admin Workstation*, that you use to install and administer SecureDrop on the servers via SSH. If necessary (i.e. in a small newsroom), the same *SecureDrop Workstation* used for administration may be used as a *Journalist Workstation* by *Journalists* to decrypt, view, and export submitted documents. For a larger newsroom, you may set up additional *Journalist Workstations* as needed for *Journalist* use.
 - *Application Server*:
    An Ubuntu server running two segmented Tor hidden services. The *Source* connects to the *Source Interface*, a public-facing Tor *Onion Service*, to send messages and documents to the *Journalist*. The *Journalist* connects to the *Journalist Interface*, an `authenticated Tor *Onion Service* <https://community.torproject.org/onion-services/advanced/client-auth/>`__, using SecureDrop Inbox on a *Journalist Workstation* to download encrypted documents and respond to *Sources*.
 - *Monitor Server*:
