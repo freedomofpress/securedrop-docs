@@ -161,6 +161,14 @@ or making `a donation <https://freedom.press/donate>`_.
    journalist/sources
    journalist/submissions
    journalist/ending_session
+   
+.. toctree::
+   :caption: Admin Guide
+   :name: adminguidetoc
+   :maxdepth: 2
+   :hidden:
+   
+   admin/reference/securedrop_for_admins
 
 .. toctree::
    :caption: Admin Guide: Installation
@@ -217,11 +225,10 @@ or making `a donation <https://freedom.press/donate>`_.
 
 .. toctree::
    :caption: Admin Guide: Reference
-   :name: adminguidetoc
+   :name: adminguidereferencetoc
    :maxdepth: 2
    :hidden:
-   
-   admin/reference/securedrop_for_admins
+
    admin/reference/admin_interface
    admin/reference/ossec_alerts
    admin/reference/ssh_access
@@ -257,6 +264,7 @@ or making `a donation <https://freedom.press/donate>`_.
 
    appendices/glossary
    appendices/passphrases
+   appendices/hardware_recommendations.rst
    appendices/threat_model/threat_model.rst
    appendices/threat_model/dataflow.rst
    appendices/threat_model/mitigations.rst
