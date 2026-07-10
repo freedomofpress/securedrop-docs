@@ -158,7 +158,7 @@ After the disk is unlocked and Qubes starts, you will be prompted to complete th
 On the configuration screen, ensure that the following options are checked:
 
  - Default Template should be set to **Fedora 41 Xfce**
- - **Create default system qubes (sys-net, sys-firewall, default dispVM)**
+ - **Create default system qubes (sys-net, sys-firewall, default DispVM)**
  - **Make sys-firewall and sys-usb disposable**
 
 If there is a grayed out option "USB qube configuration disabled", make a note of this. An additional setup step will be required (see next section).
