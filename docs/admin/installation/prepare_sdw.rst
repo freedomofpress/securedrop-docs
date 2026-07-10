@@ -163,7 +163,7 @@ On the configuration screen, ensure that the following options are checked:
 
 If there is a grayed out option "USB qube configuration disabled", make a note of this. An additional setup step will be required (see next section).
 
-Finally, click **Finish Configuration** to set up the default system template and app.
+Finally, click **Finish Configuration** to set up the default system template and app qubes.
 
 Once the initial setup is complete, the login dialog will be displayed. Log in using the username and password set during installation.
 
