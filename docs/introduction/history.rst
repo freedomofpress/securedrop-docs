@@ -51,7 +51,7 @@ we encourage you to support.
    `donating to their work <https://www.localizationlab.org/donate>`_.
 
 `Python <https://www.python.org/>`_
-   The primary programming language used in SecureDrop. You can support it by
+   A significant amount of SecureDrop is written in the Python programming language. You can support it by
    `donating to the Python Software Foundation <https://www.python.org/psf/donations/>`_.
 
 `Debian <https://www.debian.org/>`_ and `Fedora <https://fedoraproject.org/>`_
