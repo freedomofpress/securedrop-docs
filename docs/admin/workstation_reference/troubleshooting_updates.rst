@@ -72,7 +72,7 @@ line in the log file that looks similar to the following:
   'sd-small-bookworm-template': <UpdateStatus.UPDATES_OK: '0'>,
   'recommended_action': <UpdateStatus.UPDATES_FAILED: '3'>}
 
-In this example, the ``fedora-42-xfce`` VM has failed to update.
+In this example, the ``fedora-42-xfce`` qube has failed to update.
 This is indicated by the text ``<UpdateStatus.UPDATES_FAILED: '3'>``.
 
 It is possible that multiple steps have failed. Make note of any
@@ -124,7 +124,7 @@ your system is trying to use an old copy of the SecureDrop Release
 Signing Key. You can perform the following steps to fetch the updated
 key and remove the expired one:
 
-1. **Start a terminal** in the "work" VM via the menu: |qubes_menu| **▸ Apps ▸ work ▸ Xfce Terminal**
+1. **Start a terminal** in the ``work`` qube via the menu: |qubes_menu| **▸ Apps ▸ work ▸ Xfce Terminal**
 
 2. **Download the key:**
 
@@ -318,13 +318,13 @@ If this does not resolve the issue:
 
    Like the ``updater.log`` file, this file is rotated hourly.
 
-2. Copy this file to a networked VM by using the ``qvm-copy-to-vm``
-   command. For example, to copy the file to the ``work`` VM:
+2. Copy this file to a networked qube by using the ``qvm-copy-to-vm``
+   command. For example, to copy the file to the ``work`` qube:
 
    ``qvm-copy-to-vm work ~/.securedrop_updater/logs/updater-detail.log``
 
 3. The file can now be found in ``~/QubesIncoming/dom0/`` in the
-   ``work`` VM.
+   ``work`` qube.
 
    Send us the file through a secure channel, such as via Signal.
    We will provide further instructions.

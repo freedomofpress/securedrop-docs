@@ -12,7 +12,7 @@ SSH to both servers over Tor
 Assuming you haven't disabled SSH over Tor, SSH access will be
 restricted to the Tor network.
 
-On the *Admin Workstation*, you should be able to SSH to the *Application Server* and the *Monitor Server* from the ``sd_admin`` VM ::
+On the *Admin Workstation*, you should be able to SSH to the *Application Server* and the *Monitor Server* from the ``sd_admin`` qube ::
 
    ssh app
    ssh mon
@@ -25,7 +25,7 @@ try using the verbose command format to troubleshoot: ::
    ssh <username>@<mon .onion>
 
 .. tip:: Check the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files
-         in the ``~/.config/securedrop-admin`` directory in the ``sd_admin`` VM to find the ssh onion
+         in the ``~/.config/securedrop-admin`` directory in the ``sd_admin`` qube to find the ssh onion
          service addresses. The files contain one line with 4 colon-delimited
          fields. The address is the first 56-character field, just add a
          ``.onion`` at the end.

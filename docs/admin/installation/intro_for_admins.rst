@@ -113,7 +113,7 @@ are available to support this:
   web interface features such as organizations logos and submission preferences
 * :ref:`Server SSH access<server SSH access>` is also available, to allow administrators to
   troubleshoot server issues and perform manual updates.
-* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the *Admin VM*
+* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the ``sd-admin`` qube.
   to configure and install SecureDrop, to perform operations including server backups and restores,
   and to update the server configuration after installation.
 

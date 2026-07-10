@@ -55,7 +55,7 @@ the SSH key, you should rotate the key in the following manner.
 
 
 #.  Create a new SSH keypair.
-    From an *Admin* VM, run
+    From the ``sd-admin`` qube, run
 
     .. code:: sh
 
@@ -116,7 +116,7 @@ the SSH key, you should rotate the key in the following manner.
          access. Their public keys will have to be re-appended to the
          ``authorized_keys`` file on each server, as in step 3.
 
-   From an *Admin VM*, run
+   From an ``sd-admin`` qube, run
 
     .. code:: sh
 
