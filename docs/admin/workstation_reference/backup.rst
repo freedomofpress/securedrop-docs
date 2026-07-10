@@ -240,7 +240,7 @@ In a ``dom0`` terminal:
 
 
 Restore customized qubes, RPC policies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 At this stage, you should have a functional SecureDrop Workstation. You may restore any additional
 customizations or additional qubes, being mindful that you are responsible for the security

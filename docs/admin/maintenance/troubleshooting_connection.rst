@@ -92,7 +92,7 @@ If you are certain that your credentials are correct but you are unable to log
 in, proceed to the next step.
 
 Step 3: Verify that all required qubes are running
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following qubes must be running for all actions requiring network connectivity
 to work (e.g., logging in, checking for messages, downloading documents, replying
@@ -130,7 +130,7 @@ please contact us for assistance.
 If all required qubes are running, proceed to the next step.
 
 Step 4: Verify that required qubes have connectivity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In step 1, you have already verified that you can connect to the
 Internet using ``sys-net``. Now, test whether ``sys-firewall`` and ``sd-proxy`` are working.
