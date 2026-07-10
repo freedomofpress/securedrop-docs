@@ -113,7 +113,15 @@ except ImportError:
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-# html_theme_options = {}
+
+html_theme_options = {
+    "use_download_button": False,
+    "show_toc_level": 2,
+}
+
+html_sidebars = {
+    "**": ["navbar-logo.html", "search-button-field.html", "sbt-sidebar-nav.html", "download.html"]
+}
 
 html_context = {
     "display_github": True,
@@ -136,7 +144,7 @@ html_context = {
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "../static/i/favicon.png"
+html_logo = "../static/i/logo.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
