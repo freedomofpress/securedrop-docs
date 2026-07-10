@@ -1,3 +1,5 @@
+.. _mitigations:
+
 Attacks and countermeasures on the SecureDrop environment
 =========================================================
 
