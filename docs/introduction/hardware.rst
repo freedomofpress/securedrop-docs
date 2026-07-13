@@ -166,7 +166,7 @@ You will need one physical computer that is used as a dedicated firewall
 for the SecureDrop servers.
 
 We recommend a 4 NIC network firewall and currently provide setup instructions for pfSense and OPNSense.
-You can :ref:` find our list of recommended hardware firewalls here.<hardware_recommendations_firewall>`
+You can :ref:`find our list of recommended hardware firewalls here.<hardware_recommendations_firewall>`
 
 An acceptable alternative that requires more technical expertise is
 to :doc:`configure an existing hardware firewall <../admin/installation/network_firewall>`.
