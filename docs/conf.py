@@ -122,21 +122,14 @@ html_theme_options = {
     "use_source_button": True,
     "repository_branch": "book-theme",
     "use_edit_page_button": True,
-    "path_to_docs": "docs/"
+    "path_to_docs": "docs/",
+    "use_fullscreen_button": False
 }
 
 html_sidebars = {
     "**": ["navbar-logo.html", "search-button-field.html", "sbt-sidebar-nav.html", "download.html"]
 }
 
-# html_context = {
-#     "display_github": True,
-#     "github_user": "freedomofpress",
-#     "github_repo": "securedrop-docs",
-#     "github_version": "main",
-#     "conf_py_path": "/docs/",
-#     "source_suffix": source_suffix,
-# }
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
