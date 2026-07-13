@@ -102,7 +102,7 @@ todo_include_todos = False
 try:
     import sphinx_book_theme
 
-    html_theme = "sphinx_book_theme"
+    html_theme = "alabaster"
 except ImportError:
     # This theme is included with Sphinx and is quite nice (based
     # on the Pocoo themes), but since we're using the RTD theme
@@ -115,12 +115,11 @@ except ImportError:
 # documentation.
 
 html_theme_options = {
-    "use_download_button": False,
-    "show_toc_level": 2,
+
 }
 
 html_sidebars = {
-    "**": ["navbar-logo.html", "search-button-field.html", "sbt-sidebar-nav.html", "download.html"]
+
 }
 
 html_context = {
@@ -144,7 +143,7 @@ html_context = {
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "../static/i/logo.png"
+html_logo = "../static/i/favicon.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
