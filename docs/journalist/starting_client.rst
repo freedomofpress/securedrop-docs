@@ -80,14 +80,14 @@ offline mode and can be accessed even when you are not logged in.
    use.
 
 .. |screenshot_desktop-shortcut| image:: ../images/screenshot_desktop-shortcut.png
-  :width: 100%
+
 .. |screenshot_update_prompt| image:: ../images/screenshot_update_prompt.png
-  :width: 100%
+
 .. |screenshot_apply_updates| image:: ../images/screenshot_apply_updates.png
-  :width: 100%
+
 .. |screenshot_sd-app_login| image:: ../images/screenshot_sd-app_login.png
-  :width: 100%
+
 .. |screenshot_use_offline| image:: ../images/screenshot_use_offline.png
-  :width: 100%
+
 .. |screenshot_offline_mode| image:: ../images/screenshot_offline_mode.png
-  :width: 100%
+

@@ -117,20 +117,26 @@ except ImportError:
 html_theme_options = {
     "use_download_button": False,
     "show_toc_level": 2,
+    "home_page_in_toc": True,
+    "repository_url": "https://github.com/freedomofpress/securedrop-docs",
+    "use_source_button": True,
+    "repository_branch": "book-theme",
+    "use_edit_page_button": True,
+    "path_to_docs": "docs/"
 }
 
 html_sidebars = {
     "**": ["navbar-logo.html", "search-button-field.html", "sbt-sidebar-nav.html", "download.html"]
 }
 
-html_context = {
-    "display_github": True,
-    "github_user": "freedomofpress",
-    "github_repo": "securedrop-docs",
-    "github_version": "main",
-    "conf_py_path": "/docs/",
-    "source_suffix": source_suffix,
-}
+# html_context = {
+#     "display_github": True,
+#     "github_user": "freedomofpress",
+#     "github_repo": "securedrop-docs",
+#     "github_version": "main",
+#     "conf_py_path": "/docs/",
+#     "source_suffix": source_suffix,
+# }
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
@@ -157,6 +163,7 @@ html_logo = "../static/i/logo.png"
 html_static_path = ['_static']
 html_css_files = [
     'rtd_dark.css',
+    'custom.css'
 ]
 
 # Add any extra paths that contain custom files (such as robots.txt or
