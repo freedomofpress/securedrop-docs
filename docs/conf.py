@@ -115,7 +115,8 @@ except ImportError:
 # documentation.
 
 html_theme_options = {
-
+    "fixed_sidebar": True,
+    
 }
 
 html_sidebars = {
