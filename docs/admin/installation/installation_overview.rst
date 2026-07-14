@@ -62,6 +62,7 @@ A summary of the major steps is as follow:
 #. Acquire compatible hardware.
 #. Prepare email accounts and GPG keys for alert emails.
 #. Prepare an *Admin Workstation* laptop.
+#. Generate the *Submission Key*
 #. Set up the KeePassXC password manager on the *Admin Workstation*.
 #. Install and configure the dedicated network firewall from the *Admin Workstation*. 
 #. Prepare the (*Application* and *Monitor*) servers.
@@ -74,6 +75,7 @@ Optionally:
 
 #. Prepare additional *Journalist Workstations* for use by *Journalists*.
 #. Prepare encrypted *Export Devices*.
+#. Troubleshoot any issues that occurred during installation
 
 Minimum security requirements for a *SecureDrop Workstation*
 ------------------------------------------------------------
