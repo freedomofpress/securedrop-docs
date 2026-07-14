@@ -84,7 +84,7 @@ Systems
 
 For more information about the various systems involved in a SecureDrop
 deployment, please visit the
-:doc:`hardware section </introduction/hardware>`.
+:doc:`hardware section <../../admin/installation/hardware>`.
 
 +------------------+----------+-------------------------------------------------+
 | System           | Description                                                |

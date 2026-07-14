@@ -7,7 +7,7 @@ Hardware
 This document outlines the required hardware components necessary to
 successfully install and operate a SecureDrop instance, and recommends
 some specific components that we have found to work well. For specific
-hardware recommendations, see :doc:`../appendices/hardware_recommendations`.
+hardware recommendations, see :doc:`../../appendices/hardware_recommendations`.
 If you have any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
 
 Hardware overview
@@ -169,7 +169,7 @@ We recommend a 4 NIC network firewall and currently provide setup instructions f
 You can :ref:`find our list of recommended hardware firewalls here.<hardware_recommendations_firewall>`
 
 An acceptable alternative that requires more technical expertise is
-to :doc:`configure an existing hardware firewall <../admin/installation/network_firewall>`.
+to :doc:`configure an existing hardware firewall <network_firewall>`.
 
 Two-factor device
 ^^^^^^^^^^^^^^^^^
@@ -213,7 +213,7 @@ It is especially advisable to enable write protection before attaching an
 *Export Device* to an everyday workstation that lacks the security protections
 of the Tails operating system.
 
-Please review our :doc:`setup guide <../admin/installation/provisioning_usb>`
+Please review our :doc:`setup guide <provisioning_usb>`
 for additional background on setting up *Export Devices*.
 
 We also recommend buying an additional USB flash drive for making regular backups of
@@ -254,9 +254,9 @@ Driverless
 
 *SecureDrop Workstation* implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
 
-.. figure:: ../admin/workstation_reference/images/airprint.jpg
+.. figure:: ../workstation_reference/images/airprint.jpg
 
-.. figure:: ../admin/workstation_reference/images/moipra.jpg
+.. figure:: ../workstation_reference/images/moipra.jpg
 
 You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
 
