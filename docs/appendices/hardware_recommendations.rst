@@ -201,6 +201,12 @@ We recommend a 4 NIC network firewall and currently provide setup instructions f
 An acceptable alternative that requires more technical expertise is
 to :doc:`configure an existing hardware firewall <../admin/installation/network_firewall>`.
 
+USB drives
+^^^^^^^^^^
+
+For USB flash drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__,
+and it works well with and without encryption.
+
 
 .. _hardware_recommendations_eol:
 

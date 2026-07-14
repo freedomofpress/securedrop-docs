@@ -263,6 +263,7 @@ or making `a donation <https://freedom.press/donate>`_.
    :hidden:
 
    appendices/glossary
+   appendices/faq
    appendices/passphrases
    appendices/hardware_recommendations.rst
    appendices/threat_model/threat_model.rst

@@ -5,8 +5,7 @@ Hardware
 ========
 
 This document outlines the required hardware components necessary to
-successfully install and operate a SecureDrop instance, and recommends
-some specific components that we have found to work well. For specific
+successfully install and operate a SecureDrop instance. For specific
 hardware recommendations, see :doc:`../../appendices/hardware_recommendations`.
 If you have any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
 
@@ -51,21 +50,20 @@ Advice for users on a tight budget
 
 If you cannot afford to purchase new hardware for your
 SecureDrop instance, we encourage you to consider
-re-purposing existing hardware to use with SecureDrop. If
-you are comfortable working with hardware, this is a great
-way to set up a SecureDrop instance for cheap.
-
+re-purposing existing hardware to use with SecureDrop.
 Since SecureDrop's throughput is significantly limited by
 the use of Tor for all connections, there is no need to use
 top of the line hardware for any of the servers or the
 firewall.
 
-We recommend against re-purposing Apple Macintosh
-laptops and desktops, due to incompatibility with Qubes OS.
-
 If you choose to use recycled hardware, you should of course
 consider whether or not it is trustworthy; making that
 determination is outside the scope of this document.
+
+.. warning::
+
+   Apple Macintosh computers cannot be re-purposed,
+   due to incompatibility with Qubes OS.
 
 Required hardware
 -----------------
@@ -84,69 +82,23 @@ and low-power devices, which makes them suitable for deployment in a wide range
 of environments. Originally produced by Intel, ASUS has taken over production
 beginning with the 14th generation.
 
-There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`__
-to choose from. We currently recommend the 11th through 14th generation NUC models.
-See our :ref:`hardware recommendations list <hardware_recommendations_servers>` for details
-on specific models.
-
-.. note:: If using non-recommended hardware, ensure you remove as much
-    extraneous hardware as physically possible from your servers. This
-    could include: speakers, cameras, microphones, fingerprint readers,
-    wireless, and Bluetooth cards.
-    
 NUCs typically come as kits, and some assembly is required. You will need to
-purchase the RAM and hard drive separately for each NUC and insert both into the
+purchase the RAM and solid state drive separately for each NUC and insert both into the
 NUC before it can be used. We recommend:
 
 -  2x 240GB SSDs (2.5" or M.2, depending on your choice of kit)
 -  1x memory kit of compatible 2x8GB sticks
    -  You can put one 8GB memory stick in each of the servers.
 
-We are often asked if it is acceptable to run SecureDrop on
-cloud servers (e.g. Amazon EC2, DigitalOcean, etc.) or on dedicated
-servers in third-party datacenters instead of on dedicated hardware
-hosted in the organization. This request is generally motivated by a
-desire for cost savings and/or convenience. However: we consider it
-**critical** to have dedicated physical machines hosted within the
-organization for both technical and legal reasons:
+There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`__
+to choose from. We currently recommend the 11th through 14th generation NUC models.
+See our :ref:`hardware recommendations list <hardware_recommendations_servers>` for details
+on specific models.
 
-* While the documents are stored encrypted at rest (via PGP) on the
-  SecureDrop *Application Server*, the documents hit server memory
-  unencrypted (unless the source used the GPG key provided to
-  encrypt the documents first before submitting), and are then
-  encrypted in server memory before being written to disk. If the
-  machines are compromised then the security of source material
-  uploaded from that point on cannot be assured. The machines are
-  hardened to prevent compromise for this reason. However, if an
-  attacker has physical access to the servers either because the
-  dedicated servers are located in a datacenter or because the
-  servers are not dedicated and may have another virtual machine
-  co-located on the same server, then the attacker may be able to
-  compromise the machines. In addition, cloud servers are trivially
-  accessible and manipulable by the provider that operates them. In
-  the context of SecureDrop, this means that the provider could
-  access extremely sensitive information, such as the plaintext of
-  submissions or the encryption keys used to identify and access
-  the *Onion Services*.
-
-* In addition, attackers with legal authority such as law
-  enforcement agencies may (depending on the jurisdiction) be able
-  to compel physical access, potentially with a gag order attached,
-  meaning that the third party hosting your servers or VMs may be
-  legally unable to tell you that law enforcement has been given
-  access to your SecureDrop servers.
-
-One of the core goals of SecureDrop is to avoid the potential
-compromise of sources through the compromise of third-party
-communications providers. Therefore, we consider the use of
-virtualization for production instances of SecureDrop to be an
-unacceptable compromise and do not support it. Instead, dedicated
-servers should be hosted in a physically secure location in the
-organization itself. While it is technically possible to modify
-SecureDrop's automated installation process to work on virtualized
-servers (for example, we do so to support our CI pipeline), doing so
-in order to run it on cloud servers is at your own risk and without
-our support or consent.
+.. note:: No matter what equipment you use, ensure you remove as much
+    extraneous hardware as physically possible from your servers. This
+    could include: speakers, cameras, microphones, fingerprint readers,
+    wireless, and Bluetooth cards.
 
 Workstations
 ^^^^^^^^^^^^
@@ -192,22 +144,18 @@ USB flash drives
 *Journalists* need physical media (known as the
 *Export Device*) to copy submissions to their everyday workstation.
 
-Our standard recommendation is to use USB flash drives, in combination with
+Our recommendation is to use USB flash drives, in combination with
 volume-level encryption and careful data hygiene. We also urge the use
 of a secure printer or similar analog conversions to 
 export documents from the *SecureDrop Workstation*, whenever possible.
 
 You may want to consider enforcing write protection on USB flash drives when only read
-access is needed. We encourage you to evaluate these options in the context of
-your own threat model. When it is consistently applied and correctly implemented in hardware, write
-protection can prevent the spread of malware from the computers used to read
-files stored on an *Export Device*. The two main options to achieve write protection of USB flash drives are:
+access is needed. The two main options to achieve write protection of USB flash drives are:
 
 - drives with a built-in physical write protection switch
 - a separate USB write blocker device as used in forensic applications.
 
-For USB flash drives with physical write protection, we have tested the `Kanguru SS3 <https://www.kanguru.com/products/kanguru-ss3>`__,
-and it works well with and without encryption.
+:ref:`USB drives that we have tested with physical write protection can be found here.<hardware_recommendations_firewall>`
 
 It is especially advisable to enable write protection before attaching an
 *Export Device* to an everyday workstation that lacks the security protections
