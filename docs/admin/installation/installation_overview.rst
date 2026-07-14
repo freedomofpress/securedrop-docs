@@ -55,6 +55,25 @@ During this process, you'll set up at least four devices:
    An Ubuntu server that monitors the *Application Server* with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
 - Network Firewall
    A hardware firewall dedicated to your SecureDrop installation. 
+   
+
+A summary of the major steps is as follow:  
+
+#. Acquire compatible hardware.
+#. Prepare email accounts and GPG keys for alert emails.
+#. Prepare an *Admin Workstation* laptop.
+#. Set up the KeePassXC password manager on the *Admin Workstation*.
+#. Install and configure the dedicated network firewall from the *Admin Workstation*. 
+#. Prepare the (*Application* and *Monitor*) servers.
+#. Install SecureDrop on the servers from the *Admin Workstation*.
+#. Complete local configuration of the *Admin Workstation*.
+#. Create the first Admin user.
+#. Test the installation.
+
+Optionally:
+
+#. Prepare additional *Journalist Workstations* for use by *Journalists*.
+#. Prepare encrypted *Export Devices*.
 
 Minimum security requirements for a *SecureDrop Workstation*
 ------------------------------------------------------------
