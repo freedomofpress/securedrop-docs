@@ -54,8 +54,7 @@ The following filetypes are currently supported for viewing on the *Journalist W
 
 A full list of supported filetypes can be found `here <https://github.com/freedomofpress/securedrop-client/blob/main/workstation-config/mimeapps.list.sd-viewer>`_.
 
-.. tip:: In Qubes, window border colors are used to signify different virtual
-   machines.
+.. tip:: In Qubes, window border colors are used to signify different qubes.
 
 .. _`the Qubes OS documentation`: https://www.qubes-os.org
 

@@ -92,8 +92,8 @@ to discuss with us, please contact us via Signal, or send us a
 
 .. _`PGP-encrypted email`: https://securedrop.org/sites/default/files/fpf-email.asc
 
-Why can't I save or print from applications in the viewer qube?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Why can't I save or print from applications in the disposable qubes?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you view a file on SecureDrop Workstation, it is opened in a disposable
 qube that cannot access the network or any peripherals. The qube and all its data
