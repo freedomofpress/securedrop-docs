@@ -47,9 +47,9 @@ Install tasks:
 Import KeePassXC database
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have a KeePassXC database on your Tails-based *Admin Workstation* USB flash drive, you should copy it to the ``vault`` VM on the new Qubes-based *Admin-Workstation*.
+If you have a KeePassXC database on your Tails-based *Admin Workstation* USB flash drive, you should copy it to the ``vault`` qube on the new Qubes-based *Admin-Workstation*.
 
-Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` VM.  
+Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` qube.  
 
 .. include:: /admin/installation/set_up_keepassxc.rst
   :start-after: .. _keepasscx_template_database:
@@ -68,13 +68,13 @@ In order to decrypt submissions, you will need a copy of the
 `*Submission Private Key* <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_
 from your SecureDrop instance's *Secure Viewing Station*.
 
-To protect this key and preserve the air gap, you will need to connect the *Secure Viewing Station* USB flash drive to a Qubes VM with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to the ``dom0`` VM from another VM - instead, follow the steps below:
+To protect this key and preserve the air gap, you will need to connect the *Secure Viewing Station* USB flash drive to a qube with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to the ``dom0`` qube from another qube - instead, follow the steps below:
 
-- First, use the network manager widget in the upper right panel to disable your network connection. These instructions refer to the ``vault`` VM, which has no network access by default, but if the *Secure Viewing Station* is attached to another VM by mistake, this will offer some protection against exfiltration.
+- First, use the network manager widget in the upper right panel to disable your network connection. These instructions refer to the ``vault`` qube, which has no network access by default, but if the *Secure Viewing Station* is attached to another qube by mistake, this will offer some protection against exfiltration.
 
-- Next, choose |qubes_menu| **▸ Apps ▸ vault ▸ Thunar File Manager** to open the file manager in the ``vault`` VM.
+- Next, choose |qubes_menu| **▸ Apps ▸ vault ▸ Thunar File Manager** to open the file manager in the ``vault`` qube.
 
-- Connect the *Secure Viewing Station* USB flash drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` VM. There will be three entries for the USB flash drive in the section titled **Data (Block) Devices**. Choose the *unlabeled* entry (*not* the one labeled "TAILS") annotated with a ``sys-usb`` text that ends with a number, like ``sys-usb:sdb2``. That is the persistent volume.
+- Connect the *Secure Viewing Station* USB flash drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` qube. There will be three entries for the USB flash drive in the section titled **Data (Block) Devices**. Choose the *unlabeled* entry (*not* the one labeled "TAILS") annotated with a ``sys-usb`` text that ends with a number, like ``sys-usb:sdb2``. That is the persistent volume.
 
   |Attach TailsData|
 
@@ -111,11 +111,11 @@ To protect this key and preserve the air gap, you will need to connect the *Secu
 Import *Journalist Interface* details
 -------------------------------------
 
-SecureDrop Workstation connects to your SecureDrop instance's API via the *Journalist Interface*. In order to do so, it will need the *Journalist Interface* address and authentication info. As the clipboard from another VM cannot be copied into ``dom0`` directly, follow these steps to copy the file into place:
+SecureDrop Workstation connects to your SecureDrop instance's API via the *Journalist Interface*. In order to do so, it will need the *Journalist Interface* address and authentication info. As the clipboard from another qube cannot be copied into ``dom0`` directly, follow these steps to copy the file into place:
 
 - Locate a Tails-based *Admin Workstation* or *Journalist Workstation* USB flash drive. Both hold the address and authentication info for the *Journalist Interface*; if you also want to copy the *Journalist*'s password database, use the *Journalist Workstation* USB flash drive.
 
-- Connect the USB flash drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` VM. There will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled ``Tails``), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
+- Connect the USB flash drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` qube. There will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled ``Tails``), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
 
 - In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the persistent volume passphrase to unlock and mount it. When prompted, select the option to **Forget password immediately**.
 
@@ -132,7 +132,7 @@ SecureDrop Workstation connects to your SecureDrop instance's API via the *Journ
 Copy SecureDrop login credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When launching SecureDrop Inbox must enter their username, passphrase and two-factor code to connect with the SecureDrop server. You can manage these passphrases using the KeePassXC password manager in the ``vault`` VM. If this laptop will be used by more than one *Journalist*, we recommend that you shut down the ``vault`` VM now (using the Qube widget in the upper right panel), skip this section, and use a smartphone password manager instead.
+When launching SecureDrop Inbox must enter their username, passphrase and two-factor code to connect with the SecureDrop server. You can manage these passphrases using the KeePassXC password manager in the ``vault`` qube. If this laptop will be used by more than one *Journalist*, we recommend that you shut down the ``vault`` qube now (using the Qube widget in the upper right panel), skip this section, and use a smartphone password manager instead.
 
 In order to set up KeePassXC for easy use:
 
@@ -148,7 +148,7 @@ In order to set up KeePassXC for easy use:
 
 In order to copy a *Journalist*'s login credentials:
 
-- If a Tails-based *Journalist Workstation* USB flash drive is not currently attached, connect it, attach it to the ``vault`` VM, open it in the file manager, and enter its encryption passphrase.
+- If a Tails-based *Journalist Workstation* USB flash drive is not currently attached, connect it, attach it to the ``vault`` qube, open it in the file manager, and enter its encryption passphrase.
 
 - Locate the password database. It should be in the ``Persistent`` directory, and will typically be named ``keepassx.kdbx`` or similar.
 
@@ -164,7 +164,7 @@ In order to copy a *Journalist*'s login credentials:
 
 - Inspect each section of the password database to ensure that it contains only the information required by the *Journalist* to log in.
 
-- Close the application window and shut down the ``vault`` VM (using the Qube widget in the upper right panel). At this time, you can also re-enable the network connection using the network manager widget.
+- Close the application window and shut down the ``vault`` qube (using the Qube widget in the upper right panel). At this time, you can also re-enable the network connection using the network manager widget.
 
 Manually importing from Tails drives
 ------------------------------------

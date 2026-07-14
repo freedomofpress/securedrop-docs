@@ -38,7 +38,7 @@ connection notification, it is most likely due to one of these causes.
 
 .. important::
 
-   Not all VMs in Qubes OS have Internet access. For example, opening a terminal via
+   Not all qubes in Qubes OS have Internet access. For example, opening a terminal via
    |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal** opens a ``dom0``
    terminal without Internet access. See our :ref:`networking architecture <Networking Architecture>`
    overview for additional background.
@@ -49,7 +49,7 @@ verify whether your connection is working by opening a terminal in ``sys-net``:
 |screenshot_q_widget_sysnet_run_terminal|
 
 1. Click the Qubes Domains menu |blue_qube| in the in the system tray (top right area).
-2. A list of running VMs should appear. Select ``sys-net`` from the list, and
+2. A list of running qubes should appear. Select ``sys-net`` from the list, and
    click **Run Terminal**.
 3. In the terminal window, type the command ``ping -c 5 google.com``.
 
@@ -91,10 +91,10 @@ can access SecureDrop from Tails.
 If you are certain that your credentials are correct but you are unable to log
 in, proceed to the next step.
 
-Step 3: Verify that all required VMs are running
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 3: Verify that all required qubes are running
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following VMs must be running for all actions requiring network connectivity
+The following qubes must be running for all actions requiring network connectivity
 to work (e.g., logging in, checking for messages, downloading documents, replying
 to sources, starring sources, deleting sources):
 
@@ -105,32 +105,32 @@ to sources, starring sources, deleting sources):
 - ``sys-firewall``
 - ``sys-net``
 
-You can verify whether a VM is running or not by clicking the |blue_qube| icon in the
-system tray (top right). Only VMs that are currently running will appear in the
+You can verify whether a qube is running or not by clicking the |blue_qube| icon in the
+system tray (top right). Only qubes that are currently running will appear in the
 list:
 
 |screenshot_q_widget_vm_list|
 
-If a required VM is not running, you can launch it from the Qube Manager. Open
+If a required qube is not running, you can launch it from the Qube Manager. Open
 the Qube Manager by clicking **Open Qube Manager** in the menu above. A window
 like the following should appear:
 
 |screenshot_qube_manager|
 
-To start a VM, select it from the list, right-click it, and click **Start/Resume
+To start a qube, select it from the list, right-click it, and click **Start/Resume
 Qube**. Alternatively, you can click the "Play" button in the toolbar.
 
 |screenshot_start_resume_qube|
 
-In ordinary use, VMs required by SecureDrop should be started on boot or when
-they are needed. If you repeatedly experience problems with a necessary VM not
-running, or if an error message is displayed when attempting to start the VM,
+In ordinary use, qubes required by SecureDrop should be started on boot or when
+they are needed. If you repeatedly experience problems with a necessary qube not
+running, or if an error message is displayed when attempting to start the qube,
 please contact us for assistance.
 
-If all required VMs are running, proceed to the next step.
+If all required qubes are running, proceed to the next step.
 
-Step 4: Verify that required VMs have connectivity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 4: Verify that required qubes have connectivity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In step 1, you have already verified that you can connect to the
 Internet using ``sys-net``. Now, test whether ``sys-firewall`` and ``sd-proxy`` are working.
@@ -158,8 +158,8 @@ Restart ``sd-proxy`` to attempt to restore connectivity:
 1. Exit SecureDrop Inbox if it is running.
 2. Click the Qubes Application menu |qubes_menu| icon in the system tray (top left).
 3. Click **Run Qube Manager**
-4. Right-click ``sd-proxy`` in the list of VMs. Click **Shutdown qube**.
-5. Right-click ``sd-proxy`` in the list of VMs. Click **Start/Resume qube**.
+4. Right-click ``sd-proxy`` in the list of qubes. Click **Shutdown qube**.
+5. Right-click ``sd-proxy`` in the list of qubes. Click **Start/Resume qube**.
 
 If this does not resolve the issue, proceed to the next step.
 
@@ -172,8 +172,8 @@ Step 7: Restart ``sys-net`` and ``sys-firewall``
    step.
 
 Using the same procedure as in the previous step, shut down ``sd-proxy``. Attempt to shut down
-``sys-firewall``. You may see an error message telling you that other VMs still
-require access to ``sys-firewall``. Save your work in those VMs, shut them
+``sys-firewall``. You may see an error message telling you that other qubes still
+require access to ``sys-firewall``. Save your work in those qubes, shut them
 down, and attempt to shut down ``sys-firewall`` again.
 
 Finally, shut down ``sys-net``. The network manager icon should disappear.
@@ -187,8 +187,8 @@ Examining logs
 ~~~~~~~~~~~~~~
 
 You may wish to examine system logs on your own, or with our guidance. You can
-examine consolidated syslogs from all SecureDrop-related VMs in the ``sd-log``
-VM. They can be found in the default user's ``~/QubesIncomingLogs`` directory.
+examine consolidated syslogs from all SecureDrop-related qubes in the ``sd-log``
+qube. They can be found in the default user's ``~/QubesIncomingLogs`` directory.
 
 In addition, you may want to examine ``/var/log/syslog`` in ``sys-net`` and
 ``sys-firewall``.

@@ -75,7 +75,7 @@ installs a hardened, security-focused version of the Linux kernel
 the servers during the install, you will receive a pre-install error reminding
 you that it must be turned off before the installation can proceed.
 
-Likewise, SecureBoot is not fully supported by QubesOS, and cannot be used with
+Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with
 *SecureDrop Workstations*.
 
 For instructions on how to enable or disable the SecureBoot feature for your
@@ -157,20 +157,20 @@ After the disk is unlocked and Qubes starts, you will be prompted to complete th
 
 On the configuration screen, ensure that the following options are checked:
 
- - Default Template should be set to "Fedora 41 Xfce"
- - "Create default system qubes (sys-net, sys-firewall, default DispVM)"
- - "Make sys-firewall and sys-usb disposable"
+ - Default Template should be set to **Fedora 43 Xfce**
+ - **Create default system qubes (sys-net, sys-firewall, default DispVM)**
+ - **Make sys-firewall and sys-usb disposable**
 
 If there is a grayed out option "USB qube configuration disabled", make a note of this. An additional setup step will be required (see next section).
 
-Finally, click **Finish Configuration** to set up the default system TemplateVMs and AppVMs.
+Finally, click **Finish Configuration** to set up the default system templates and app qubes.
 
 Once the initial setup is complete, the login dialog will be displayed. Log in using the username and password set during installation.
 
 (Hardware-dependent) Apply USB fixes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If, during the installation, you encountered the grayed out option "USB qube configuration disabled", you must now create a VM to access your USB devices. If you did not encounter this issue, you can skip this section.
+If, during the installation, you encountered the grayed out option "USB qube configuration disabled", you must now create a qube to access your USB devices. If you did not encounter this issue, you can skip this section.
 
 To create a USB qube, open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
 
@@ -202,7 +202,7 @@ While we recommend against the use of a USB keyboard for security reasons, this 
 Apply ``dom0`` updates (estimated wait time: 15-30 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``dom0`` is the most trusted domain on Qubes OS, and has privileged access to all other VMs. As such, it is important to ensure that all available security updates have been applied to ``dom0`` as the first step after the installation.
+``dom0`` is the most trusted domain on Qubes OS, and has privileged access to all other qubes. As such, it is important to ensure that all available security updates have been applied to ``dom0`` as the first step after the installation.
 
 After logging in, use the network manager widget in the upper-right panel to configure your network connection.
 
@@ -225,7 +225,7 @@ After logging in again, confirm that the network manager successfully connects y
 
   .. note:: If Tor connections are blocked on your network, you may need to configure Tor to use bridges in order to get a connection. For more information, see the `Anon Connection Wizard <https://www.whonix.org/wiki/Anon_Connection_Wizard>`_ documentation.
 
-- Once Tor has connected, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system VMs. in the ``[Dom0] Qubes Update`` window, check all entries in the list above except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system's VMs will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
+- Once Tor has connected, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system qubes. in the ``[Dom0] Qubes Update`` window, check all entries in the list above except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system qubes will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
 
 .. _securedrop_workstation_install:
 

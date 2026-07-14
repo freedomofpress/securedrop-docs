@@ -55,7 +55,7 @@ we encourage you to support.
    `donating to the Python Software Foundation <https://www.python.org/psf/donations/>`_.
 
 `Debian <https://www.debian.org/>`_ and `Fedora <https://fedoraproject.org/>`_
-   Power SecureDrop Workstation VMs; both rely on volunteer contributions and
+   Power SecureDrop Workstation' virtual machines; both rely on volunteer contributions and
    financial support.
 
 `GNOME <https://www.gnome.org/>`_

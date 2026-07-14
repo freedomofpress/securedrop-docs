@@ -240,7 +240,7 @@ In order to install and use *SecureDrop Workstation*, you will need a Qubes-comp
 
 - 64-bit Intel processor with virtualization support
 - a minimum of 32GB RAM
-- sufficient disk space for the Qubes OS base install and SecureDrop Workstation VMs (a 128GB or greater SSD is recommended)
+- sufficient disk space for the Qubes OS base install and SecureDrop Workstation (a 128GB or greater SSD is recommended)
 
 We recommend against a device that requires an external USB keyboard or other externally-connected devices, for security reasons. In practice this usually means that you should run SecureDrop Workstation on a Qubes-compatible laptop. Not all laptops support Qubes, and some may require additional customization. We recommend (in order) either a Qubes-certified laptop, one of the laptop models we use for development and testing, or a computer from the community-maintained Qubes Hardware compatibility list.
 

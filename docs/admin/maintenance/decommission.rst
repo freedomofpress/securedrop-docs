@@ -18,7 +18,7 @@ servers and associated hardware:
    servers are compromised (this is good general practice in any case).
 5. If your SecureDrop instance is set up to allow SSH-over-LAN admin access,
    consider switching it to SSH-over-Tor access instead. To do so, you will
-   need to update the server configuration using the Admin VM.
+   need to update the server configuration using the ``sd-admin`` qube.
 
 In some cases, if you are not able to ensure the security of your instance
 during periods of prolonged absence, it may be better to relocate it, or in
@@ -145,8 +145,8 @@ SecureDrop instance.
 
    Another option is to re-install a clean version of Ubuntu server with full-
    disk encryption enabled. During the disk-partitioning portion of the
-   installation wizard, select *Guided - use entire disk and set up encrypted
-   LVM*. You will need to reclaim the space that was taken up by your previous
+   installation wizard, select **Guided - use entire disk and set up encrypted
+   LVM**. You will need to reclaim the space that was taken up by your previous
    installation, so whenever prompted to unmount and reclaim unused partitions,
    select "yes."
 #. **Destroy Export media, if applicable.**

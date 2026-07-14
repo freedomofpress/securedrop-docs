@@ -12,7 +12,7 @@ attributes that will be important to have:
 
 * Experience with managing Linux-based systems from the command line.
 * Proficiency with network hardware such as firewalls and switches (e.g. pfSense).
-* Experience with QubesOS.
+* Experience with Qubes OS.
 * Experience with configuration management tools such as Ansible, Salt, Chef, or Puppet.
 * Ability to use and configure secure communication tools such as GPG.
 
@@ -113,7 +113,7 @@ are available to support this:
   web interface features such as organizations logos and submission preferences
 * :ref:`Server SSH access<server SSH access>` is also available, to allow administrators to
   troubleshoot server issues and perform manual updates.
-* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the *Admin VM*
+* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the ``sd-admin`` qube.
   to configure and install SecureDrop, to perform operations including server backups and restores,
   and to update the server configuration after installation.
 

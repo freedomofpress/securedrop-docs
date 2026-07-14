@@ -1,7 +1,7 @@
 Install SecureDrop on the servers
 =================================
 
-Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` VM on the *Admin Workstation* you prepared earlier. 
+Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` qube on the *Admin Workstation* you prepared earlier. 
 
 .. _test_connectivity:
 
@@ -126,7 +126,7 @@ OSSEC alerts public key
 -----------------------
 
 Before proceeding, you will need to copy the *OSSEC Alert Public Key* public key to
-``~/.config/securedrop-admin`` in the ``sd-admin`` VM.
+``~/.config/securedrop-admin`` in the ``sd-admin`` qube.
 
 If you don't have your GPG key ready, you can run GnuPG on the command line in
 order to find, import, and export your public key. It's best to copy the key
