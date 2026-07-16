@@ -29,19 +29,6 @@ are covered.)
 
 .. include:: ../../includes/provide-feedback.txt
 
-Tracking your progress
-----------------------
-
-To assist in the installation process, we offer a `SecureDrop Installation Worksheet`_, which you can print out and complete as you go. Only complete this worksheet on paper, never electronically.
-
-It is **critical** that you destroy this worksheet when your installation is complete and all of your passphrases have been safely stored in a password manager.
-
-.. warning:: Remember to destroy the `SecureDrop Installation Worksheet`_ after the
-             installation is complete.
-
-.. _`SecureDrop Installation Worksheet`: https://docs.google.com/a/freedom.press/document/d/18RMAzhx1XCgpmw366I8tItBXQTzkFy_i_D0c605DTS8/edit?usp=sharing
-
-
 Technical summary
 -----------------
 
@@ -56,7 +43,6 @@ During this process, you'll set up at least four devices:
 - Network Firewall
    A hardware firewall dedicated to your SecureDrop installation. 
    
-
 A summary of the major steps is as follow:  
 
 #. Acquire compatible hardware.
@@ -76,6 +62,19 @@ Optionally:
 #. Prepare additional *Journalist Workstations* for use by *Journalists*.
 #. Prepare encrypted *Export Devices*.
 #. Troubleshoot any issues that occurred during installation
+
+Tracking your progress
+----------------------
+
+To assist in the installation process, we offer a `SecureDrop Installation Worksheet`_, which you can print out and complete as you go. Only complete this worksheet on paper, never electronically.
+
+It is **critical** that you destroy this worksheet when your installation is complete and all of your passphrases have been safely stored in a password manager.
+
+.. warning:: Remember to destroy the `SecureDrop Installation Worksheet`_ after the
+             installation is complete.
+
+.. _`SecureDrop Installation Worksheet`: https://docs.google.com/a/freedom.press/document/d/18RMAzhx1XCgpmw366I8tItBXQTzkFy_i_D0c605DTS8/edit?usp=sharing
+
 
 Minimum security requirements for a *SecureDrop Workstation*
 ------------------------------------------------------------
