@@ -1,6 +1,8 @@
 Frequently Asked Questions
 ==========================
+
 .. _faq_physically_hosted:
+
 Why must SecureDrop be physically hosted?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

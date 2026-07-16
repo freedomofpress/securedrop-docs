@@ -57,7 +57,7 @@ There are three main user roles that interact with a SecureDrop instance:
    with sources. Journalists download encrypted submissions and process
    them in an air-gapped environment.
 
-:doc:`Admins </admin/installation/intro_for_admins>`
+:doc:`Admins </admin/reference/securedrop_for_admins>`
    Manage the *Application* and *Monitor Servers* over authenticated onion
    services.
 
