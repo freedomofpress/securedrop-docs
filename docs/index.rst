@@ -57,7 +57,7 @@ There are three main user roles that interact with a SecureDrop instance:
    with sources. Journalists download encrypted submissions and process
    them in an air-gapped environment.
 
-:doc:`Admins </admin/installation/intro_for_admins>`
+:doc:`Admins </admin/reference/securedrop_for_admins>`
    Manage the *Application* and *Monitor Servers* over authenticated onion
    services.
 
@@ -160,6 +160,14 @@ or making `a donation <https://freedom.press/donate>`_.
    journalist/sources
    journalist/submissions
    journalist/ending_session
+   
+.. toctree::
+   :caption: Admin Guide
+   :name: adminguidetoc
+   :maxdepth: 2
+   :hidden:
+   
+   admin/reference/securedrop_for_admins
 
 .. toctree::
    :caption: Admin Guide: Installation
@@ -167,10 +175,8 @@ or making `a donation <https://freedom.press/donate>`_.
    :maxdepth: 2
    :hidden:
 
-   admin/installation/intro_for_admins
    admin/installation/installation_overview
    admin/installation/hardware
-   admin/installation/passphrases.rst
    admin/installation/email_alerts
    admin/installation/prepare_sdw
    admin/installation/generate_submission_key
@@ -219,10 +225,10 @@ or making `a donation <https://freedom.press/donate>`_.
 
 .. toctree::
    :caption: Admin Guide: Reference
-   :name: adminguidetoc
+   :name: adminguidereferencetoc
    :maxdepth: 2
    :hidden:
-   
+
    admin/reference/admin_interface
    admin/reference/ossec_alerts
    admin/reference/ssh_access
@@ -257,6 +263,9 @@ or making `a donation <https://freedom.press/donate>`_.
    :hidden:
 
    appendices/glossary
+   appendices/faq
+   appendices/passphrases
+   appendices/hardware_recommendations.rst
    appendices/threat_model/threat_model.rst
    appendices/threat_model/dataflow.rst
    appendices/threat_model/mitigations.rst
