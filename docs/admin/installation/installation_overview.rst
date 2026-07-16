@@ -98,7 +98,7 @@ A *SecureDrop Workstation* (either an *Admin Workstation* or a *Journalist Works
 Minimum security requirements for the SecureDrop servers
 ------------------------------------------------------------
 
--  The *Application* and *Monitor Servers* should be dedicated physical machines, not virtual machines.
+-  The *Application* and *Monitor Servers* should be dedicated physical machines, not virtual machines, :ref:`nor hosted on cloud servers<faq_physically_hosted>`..
 -  A trusted location to host the servers. The servers should be hosted in a location that is owned or occupied by the organization to ensure that their legal department can not be bypassed with gag orders.
 -  The SecureDrop servers should be on a separate internet connection or completely segmented from the corporate network, such as a dedicated subnet with DENY rules for all traffic to and from the corporate LAN.
 -  All traffic from the corporate network should be blocked at the SecureDrop's point of demarcation.
