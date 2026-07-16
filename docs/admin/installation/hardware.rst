@@ -136,7 +136,7 @@ device. We currently support two options for *Two-Factor Authentication*:
 * A dedicated hardware dongle that computes HOTP codes (e.g. a
   `YubiKey <https://www.yubico.com/setup/>`__).
 
-.. include:: ../includes/otp-app.txt
+.. include:: ../../includes/otp-app.txt
 
 USB flash drives
 ^^^^^^^^^^^^^^^^
@@ -232,7 +232,7 @@ Backup storage
 It's useful to run periodic backups of the servers in case of failure. We
 recommend buying an external hard drive to store server backups.
 
-.. include:: ../includes/encrypting-drives.txt
+.. include:: ../../includes/encrypting-drives.txt
 
 Hardware end-of-life
 --------------------
