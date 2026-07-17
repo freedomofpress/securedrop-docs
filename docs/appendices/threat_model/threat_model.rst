@@ -84,7 +84,7 @@ Systems
 
 For more information about the various systems involved in a SecureDrop
 deployment, please visit the
-:doc:`hardware section </admin/installation/hardware>`.
+:doc:`hardware section <../../admin/installation/hardware>`.
 
 +------------------+----------+-------------------------------------------------+
 | System           | Description                                                |
@@ -293,18 +293,18 @@ What a compromise of the workstations can surrender
 
 -  The Admin Workstation requires Tails with a persistent volume,
    which stores information such as GPG and SSH keys, as well as a
-   :doc:`database with passphrases </admin/installation/passphrases>`
+   :doc:`database with passphrases </appendices/passphrases>`
    for the Application Server, the Monitor Server, and the GPG key the
    Monitor Server will encrypt OSSEC alerts to.
 -  The *Journalist Workstation* requires Tails with a persistent
    volume, which stores information such as the onion service value
    required to connect to the *Journalist Interface*, as well as a :doc:`database
-   with passphrases </admin/installation/passphrases>` for the
+   with passphrases </appendices/passphrases>` for the
    *Journalist Interface*.
 -  The Secure Viewing Station requires Tails with a persistent
    volume, which stores information such as the SecureDrop application's
    GPG key, as well as a :doc:`database with the
-   passphrase </admin/installation/passphrases>` for that key.
+   passphrase </appendices/passphrases>` for that key.
 
 What a compromise of the Source's property can surrender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

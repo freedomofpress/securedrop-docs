@@ -1,5 +1,5 @@
-Introduction for SecureDrop Administrators
-==========================================
+SecureDrop for Administrators
+=============================
 
 SecureDrop servers are managed by a :ref:`Administrator<glossary_administrator>`.
 
@@ -12,7 +12,7 @@ attributes that will be important to have:
 
 * Experience with managing Linux-based systems from the command line.
 * Proficiency with network hardware such as firewalls and switches (e.g. pfSense).
-* Experience with QubesOS.
+* Experience with Qubes OS.
 * Experience with configuration management tools such as Ansible, Salt, Chef, or Puppet.
 * Ability to use and configure secure communication tools such as GPG.
 
@@ -113,7 +113,7 @@ are available to support this:
   web interface features such as organizations logos and submission preferences
 * :ref:`Server SSH access<server SSH access>` is also available, to allow Administrators to
   troubleshoot server issues and perform manual updates.
-* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the Admin Workstation
+* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the ``sd-admin`` qube.
   to configure and install SecureDrop, to perform operations including server backups and restores,
   and to update the server configuration after installation.
 
@@ -179,20 +179,6 @@ Monitoring SecureDrop-related communications
 Release announcements and security advisories are posted to the `SecureDrop blog <https://securedrop.org/news>`__, which is also available as an `RSS feed <https://securedrop.org/news/feed/>`__. You can also follow us on our social media accounts (`Twitter <https://twitter.com/securedrop>`__ and `Mastodon <https://securedrop.org/news/feed/>`__).
 
 We strongly recommend :doc:`joining the SecureDrop support portal </introduction/getting_support>`. As a member of the support portal, you will receive email notifications related to all major announcements, and you can open tickets in case of technical issues. Membership is free of charge.
-
-Installation support
---------------------
-
-Any organization can install SecureDrop for free and also make modifications because the project is open source.
-
-Because the installation and operation are complex, and because SecureDrop can only be as secure as the  operational security practices followed by its users, Freedom of the Press Foundation will also help  organizations install SecureDrop and train Journalists and Administrators.
-
-If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us. We do ask news organizations that can afford to pay for installation support, training and maintenance to do so.
-
-As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train Journalists to use it. (For  pro-bono support, we request that our travel costs
-are covered.) 
-
-.. include:: ../../includes/provide-feedback.txt
 
 .. |Reset Passphrase| image:: ../../images/manual/screenshots/journalist-edit_account_user.png
    :alt: The account editing form allows admins to change name, reset passphrase, and reset two-factor authentication.

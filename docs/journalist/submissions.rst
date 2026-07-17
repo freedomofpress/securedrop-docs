@@ -29,13 +29,13 @@ Viewing submissions on the SecureDrop Workstation
 ---------------------------------------------------
 
 To view a downloaded submission, click its filename. This will open
-the file in a temporary environment, called a "disposable VM." The file you
+the file in a temporary environment, called a "disposable" qube. The file you
 clicked on will open in a new window with a different colored border and a
 window title prefixed with "disp" (meaning disposable).
 
 |screenshot_dispvm|
 
-This disposable VM is a special isolated environment; it does not have internet access, and isolates the files that you are viewing from other sensitive files and applications on the SecureDrop Workstation.
+This disposable qube is a special isolated environment; it does not have internet access, and isolates the files that you are viewing from other sensitive files and applications on the SecureDrop Workstation.
 
 Supported filetypes
 ~~~~~~~~~~~~~~~~~~~
@@ -54,8 +54,7 @@ The following filetypes are currently supported for viewing on the SecureDrop Wo
 
 A full list of supported filetypes can be found `here <https://github.com/freedomofpress/securedrop-client/blob/main/workstation-config/mimeapps.list.sd-viewer>`_.
 
-.. tip:: In Qubes, window border colors are used to signify different virtual
-   machines.
+.. tip:: In Qubes, window border colors are used to signify different qubes.
 
 .. _`the Qubes OS documentation`: https://www.qubes-os.org
 
@@ -64,7 +63,7 @@ Printing submissions from the SecureDrop Workstation
 
 To print a document, a :doc:`compatible printer <../admin/installation/hardware>`  must be plugged into the computer's USB port.
 
-1. Click "Print" button and wait for ``sd-devices`` VM to start.
+1. Click "Print" button and wait for ``sd-devices`` qube to start.
 2. You will prompted to attach your printer.
 3. A Print Document dialog will appear, from which you can configure different print options before printing the document.
 
@@ -88,7 +87,7 @@ Exporting to an Export Device
 
 Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for exporting submissions.
 
-1. Insert the USB flash drive and wait for the ``sd-devices`` VM to start.
+1. Insert the USB flash drive and wait for the ``sd-devices`` qube to start.
 2. If your drive is using VeraCrypt, you will need to unlock it manually:
 
    1. Open the file menu by clicking on the Qubes Application menu |qubes_menu| (in the top left),

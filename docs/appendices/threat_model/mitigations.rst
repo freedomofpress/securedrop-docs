@@ -1,3 +1,5 @@
+.. _mitigations:
+
 Attacks and countermeasures on the SecureDrop environment
 =========================================================
 
@@ -163,11 +165,11 @@ Countermeasures against malicious apt installs
 
 Countermeasures against malicious Qubes or Ubuntu ISOs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--   SecureDrop :doc:`Admin Guide </admin/installation/intro_for_admins>` instructs Users/Administrators to validate checksum/signatures of downloaded images
+-   SecureDrop :doc:`Admin Guide </admin/reference/securedrop_for_admins>` instructs Users/Administrators to validate checksum/signatures of downloaded images
 
 Countermeasures against vulnerabilities in the hardware firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  SecureDrop :doc:`Admin Guide </admin/installation/intro_for_admins>` informs Administrators to update the hardware firewall and provides a very restrictive policy for accessing the administrative interface (blocked on app and mon ports of the firewall).
+-  SecureDrop :doc:`Admin Guide </admin/reference/securedrop_for_admins>` informs Administrators to update the hardware firewall and provides a very restrictive policy for accessing the administrative interface (blocked on app and mon ports of the firewall).
 -  Alert emails are sent out to Administrators when there are critical pfSense vulnerabilities.
 -  Application and Monitor Servers use IPTables as host-based firewall for defense-in-depth
 -  All application traffic is over Tor Onion Services (end-to-end encrypted) and all software packages are signed. Only DNS and NTP are transmitted over HTTP (unauthenticated and in cleartext)
@@ -231,6 +233,6 @@ Countermeasures in user behavior recommendations
 -  Source Interface banner suggests that user disables JS (high security settings in Tor Browser)
 -  :doc:`Journalist Guide </journalist/journalist>` informs users of malware risks, the importance of strict compartmentalization of SecureDrop-related activities
 -  :doc:`SecureDrop Deployment Guide </admin/deployment/deployment_practices>` gives best practices for proper administration of the SecureDrop system, and its public-facing properties like the Landing Page
--  :doc:`Admin Guide </admin/installation/intro_for_admins>` gives instructions for long-term maintenance of the technical properties of the SecureDrop system, as well as operations to support Journalists
+-  :doc:`Admin Guide </admin/reference/securedrop_for_admins>` gives instructions for long-term maintenance of the technical properties of the SecureDrop system, as well as operations to support Journalists
 -  All Administrator tasks are completed over Tor/Tor authenticated Onion Services after installation
 -  Any journalist/admin password/2FA credentials resets can only be done by an Administrator with password-protected SSH capability or authenticated Onion Service credentials.

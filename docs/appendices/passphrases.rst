@@ -1,5 +1,5 @@
-Passphrases overview
-====================
+Passphrases
+===========
 
 Each individual with a role (Administrator or Journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation. 
 
@@ -28,7 +28,7 @@ The Administrator will be using an Admin Workstation configured to connect to th
 
 The Administrator will also need to have a way to generate two-factor authentication codes.
 
-.. include:: ../../includes/otp-app.txt
+.. include:: ../includes/otp-app.txt
 
 And the Administrator will also have the following two credentials:
 
@@ -93,7 +93,7 @@ All SecureDrop users---Sources, Journalists, and Administrators---are required t
 How to generate a strong, unique passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We recommend using a unique, 7-word passphrase for each case described above. We encourage each end user to use KeePassXC, an easy-to-use password manager included in QubesOS, to generate and retain strong and unique passphrases. The SecureDrop installation includes a template that you can use to initialize this database, which will be explained when you set up your first :ref:`Admin Workstation <keepassxc_setup>`.
+We recommend using a unique, 7-word passphrase for each case described above. We encourage each end user to use KeePassXC, an easy-to-use password manager included in Qubes OS, to generate and retain strong and unique passphrases. The SecureDrop installation includes a template that you can use to initialize this database, which will be explained when you set up your first :ref:`Admin Workstation <keepassxc_setup>`.
 
 Using KeePassXC to generate a passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,4 +106,4 @@ space or hyphen.
 |screenshot of KeePassXC passphrase generation feature, showing a
 randomly generated 7-word passphrase|
 
-.. |screenshot of KeePassXC passphrase generation feature, showing a randomly generated 7-word passphrase| image:: ../../images/screenshots/keepassxc-diceware.png
+.. |screenshot of KeePassXC passphrase generation feature, showing a randomly generated 7-word passphrase| image:: ../images/screenshots/keepassxc-diceware.png

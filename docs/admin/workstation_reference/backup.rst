@@ -4,7 +4,7 @@ Backup and restore
 .. TODO possibly need distinct backup and restore instructions for Qubes-based Admin and  Workstations? Possibly not?
 
 Qubes OS has a `backup utility <https://www.qubes-os.org/doc/backup-restore/>`_
-that allows for backup and restoration of user-specified VMs and templates.
+that allows for backup and restoration of user-specified qubes and templates.
 
 SecureDrop Workstation requires only that you back up instance-specific secrets
 and configuration files, although you can optionally back up some additional local
@@ -69,20 +69,20 @@ will re-download from your SecureDrop server.
 Ensure your storage medium is plugged in, attached to ``sd-devices``,
 and unlocked.
 
-Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup Qubes**, and move all VMs from
+Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup Qubes**, and move all qubes from
 "Selected" to "Available" by pressing the ``<<`` button.
 
-To target a VM for backup, highlight it and move it into the "Selected"
+To target a qube for backup, highlight it and move it into the "Selected"
 column by pressing the ``>`` button. Select:
 
 - ``dom0``
-- the ``sd-app`` VM (optional), noting the warning above
-- any customized VMs (and their templates) that you may wish to preserve,
+- the ``sd-app`` qube (optional), noting the warning above
+- any customized qubes (and their templates) that you may wish to preserve,
   noting the warning above.
 
-You do not need to back up the other ``sd-`` VMs.
+You do not need to back up the other ``sd-`` qubes.
 
-Click "Next", and in "Backup destination," specify the VM and directory
+Click "Next", and in "Backup destination," specify the qube and directory
 corresponding to your storage medium's current mount point.
 
 Set a strong, unique backup passphrase (7-word diceware), and ensure this
@@ -105,7 +105,7 @@ This can be done by using the Restore Backup GUI tool and selecting
 .. warning::
   Any files or data not mentioned above and not backed up elsewhere will be destroyed.
   Ensure that any other data on your system (for example, using KeepassXC
-  in the ``vault`` VM, or data stored in other VMs) have been backed up and the
+  in the ``vault`` qube, or data stored in other qubes) have been backed up and the
   integrity of the backup has been verified before proceeding.
 
 Restore
@@ -118,23 +118,23 @@ To restore SecureDrop Workstation, follow our
 :doc:`pre-install tasks </admin/installation/prepare_sdw>` to provision a Qubes OS system complete with
 updated base templates.
 
-Rename or delete redundant AppVMs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Rename or delete redundant app qubes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, Qubes OS will create the AppVMs ``personal``, ``work``, ``untrusted``
+By default, Qubes OS will create the app qubes ``personal``, ``work``, ``untrusted``
 and ``vault`` as part of the installation process. Rename or delete any
-of these newly created AppVMs whose names conflict with the AppVMs you
+of these newly created app qubes whose names conflict with the app qubes you
 intend to restore from a backup.
 
-Example: If you wish to restore the ``vault`` VM, rename or delete the existing
-``vault`` VM prior to restoring the backup. You can do so in
-|qubes_menu| **▸ Apps ▸ vault ▸ Settings** (the VM must not be running).
+Example: If you wish to restore the ``vault`` qube, rename or delete the existing
+``vault`` qube prior to restoring the backup. You can do so in
+|qubes_menu| **▸ Apps ▸ vault ▸ Settings** (the qube must not be running).
 
 Restore backup (SecureDrop Workstation components)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Plug in your backup medium and unlock it as during the backup. By default
-on a new system, your peripheral devices will be managed by a VM called
+on a new system, your peripheral devices will be managed by a qube called
 ``sys-usb``.
 
 Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Restore Backup**,
@@ -143,22 +143,22 @@ Restore options, unless you have made customizations to the backup. Enter the
 decryption/verification passphrase, and proceed to restoring the available
 qubes (which should include ``dom0`` and possibly ``sd-app``).
 
-We suggest restoring only those VMs, provisioning SecureDrop Workstation, and then
-restoring any customized VMs you may have had once that process is complete. This way
+We suggest restoring only those qubes, provisioning SecureDrop Workstation, and then
+restoring any customized qubes you may have had once that process is complete. This way
 SecureDrop Workstation is provisioned on a clean system and can implement the security
-measures it requires before any additional VMs are configured.
+measures it requires before any additional qubes are configured.
 
 .. note::
   When migrating to a newer version of Qubes OS (for example, Qubes 4.1 to Qubes 4.2),
-  you may notice that the original templates for certain VMs are not present on your
+  you may notice that the original templates for certain qubes are not present on your
   new machine. For the purposes of this guide (optional ``sd-app`` backup),
-  this is not a problem. Allow the VM to be restored with the default template
+  this is not a problem. Allow the qube to be restored with the default template
   suggested by the operating system (the current Fedora base template). **Do not start
-  the VM.** Continue through the reinstallation process. The correct template will be
+  the qube.** Continue through the reinstallation process. The correct template will be
   configured as you follow the rest of these instructions.
 
-  If you are restoring your own customized VMs and templates, you will need to take
-  additional steps. You may decide to create new templates for your custom VMs and
+  If you are restoring your own customized qubes and templates, you will need to take
+  additional steps. You may decide to create new templates for your custom qubes and
   provision them with the necessary applications/customizations (recommended), or
   you may upgrade your existing templates following the upstream documentation
   (`Fedora templates <https://www.qubes-os.org/doc/templates/fedora/#upgrading>`_,
@@ -177,14 +177,14 @@ measures it requires before any additional VMs are configured.
 Reinstall SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do not already have a ``work`` VM, create it with default networking settings:
+If you do not already have a ``work`` qube, create it with default networking settings:
 
   .. code-block:: sh
 
     qvm-create -l blue work
 
 Then, :ref:`download and verify <download_rpm>` the SecureDrop Workstation
-.rpm to the ``work`` VM and copy it to ``dom0``.
+.rpm to the ``work`` qube and copy it to ``dom0``.
 
 Once you have a valid .rpm file in ``dom0``, install the .rpm by running:
 
@@ -212,7 +212,7 @@ follow the format of the `example configuration file <https://raw.githubusercont
 with values for its fields (e.g., ``hostname``, ``submission_key_fpr``) specific to
 your configuration. The file may be formatted in a single line without whitespace.
 The third file is a backup of key material from ``sd-gpg`` and will be moved into
-that VM when you have reprovisioned the system.
+that qube when you have reprovisioned the system.
 
 Verify that the configuration is valid:
 
@@ -239,11 +239,11 @@ In a ``dom0`` terminal:
     qvm-run sd-gpg 'gpg --import /home/user/QubesIncoming/dom0/sd-keys.asc'
 
 
-Restore customized VMs, RPC policies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Restore customized qubes, RPC policies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 At this stage, you should have a functional SecureDrop Workstation. You may restore any additional
-customizations or additional VMs, being mindful that you are responsible for the security
+customizations or additional qubes, being mindful that you are responsible for the security
 implications of customizing this system.
 
 Customizations in ``dom0`` must be restored manually, meaning that any RPC policies you have added
