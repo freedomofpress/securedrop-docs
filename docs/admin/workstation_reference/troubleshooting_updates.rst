@@ -1,11 +1,10 @@
 Troubleshooting system updates
 ==============================
 
-After you log into Qubes, the preflight updater will prompt you to check for available
+After you unlock your SecureDrop Workstation, the preflight updater will prompt you to check for available
 system updates at least once per day.
 
-If updates fail for any reason, the preflight updater will
-not launch SecureDrop Inbox until the
+If updates fail for any reason, SecureDrop Inbox will not launch until the
 underlying issue has been resolved. This is to ensure
 that the system is in a secure state before you
 interact with SecureDrop.
@@ -14,7 +13,7 @@ interact with SecureDrop.
    :alt: A screenshot of the preflight update window,
          displaying a failed update error message. The
          title reads "Security updates failed", and the
-         message instructs the user to contact the administrator
+         message instructs the user to contact the Administrator
          to correct the error. SecureDrop Inbox cannot
          be started until the error is corrected.
 

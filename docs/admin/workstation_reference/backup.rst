@@ -1,7 +1,7 @@
 Backup and restore
 ==================
 
-.. TODO possibly need distinct backup and restore instructions for Qubes-based Admin and *Journalist Workstation*s? Possibly not?
+.. TODO possibly need distinct backup and restore instructions for Qubes-based Admin and  Workstations? Possibly not?
 
 Qubes OS has a `backup utility <https://www.qubes-os.org/doc/backup-restore/>`_
 that allows for backup and restoration of user-specified qubes and templates.
@@ -90,7 +90,7 @@ passphrase is stored securely outside SecureDrop Workstation.
 
 .. note::
  This passphrase protects sensitive components of your SecureDrop instance,
- including the *Submission Private Key*, and unencrypted submissions (if
+ including the Submission Private Key, and unencrypted submissions (if
  ``sd-app`` is backed up). Ensure it is a very strong password and is
  stored securely.
 

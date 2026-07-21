@@ -2,12 +2,12 @@ Whole site changes
 ==================
 
 Ideally, some or all of the following changes are made to improve the
-overall security of the path to the *Landing Page* and obfuscate traffic
+overall security of the path to the :ref:`Landing Page<glossary_landing_page>` and obfuscate traffic
 analysis.
 
 #. Make your entire site available through HTTPS.
 
-   - That way, visits to your *Landing Page* won't stand out as the only encrypted
+   - That way, visits to your Landing Page won't stand out as the only encrypted
      traffic to your site.
 
 #. Include an iframe for all (or a random subset of) visitors, loading
@@ -26,8 +26,8 @@ analysis.
 Suggested
 ---------
 
--  For publicly advertised SecureDrop instances display the *Source
-   Interface*'s *Onion Service* onion address on all of the organization
+-  For publicly advertised SecureDrop instances display the :ref:`Source
+   Interface<glossary_source_interface>`'s :ref:`Onion Service<glossary_onion_service>` onion address on all of the organization
    public pages.
--  Mirror Tor Browser and Tails so *Sources* do not have to
+-  Mirror Tor Browser and Tails so Sources do not have to
    visit `torproject.org <https://www.torproject.org>`__ to download it.

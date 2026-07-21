@@ -28,7 +28,7 @@ Since our recommended firewalls have at least 4 NICs, we will refer to the
 relevant ports as WAN[1], LAN[1], LAN2, and LAN3.  (Bracketed numbers may be
 present on the physical ports' labels but not in the pfSense UI.) In this case,
 we can now use a dedicated port on the network firewall for each component of
-SecureDrop (*Application Server*, *Monitor Server*, and *Admin Workstation*).
+SecureDrop (Application Server, Monitor Server, and Admin Workstation).
 
 Depending on your network configuration, you should define the IP and subnet
 values your instance will use before continuing. We recommend the default values
@@ -71,9 +71,9 @@ network firewall.
 Connect to the pfSense web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. If you have not already done so, boot the *Admin Workstation*.
+#. If you have not already done so, boot the Admin Workstation.
 
-#. Connect the *Admin Workstation* to the LAN[1] interface. You should see
+#. Connect the Admin Workstation to the LAN[1] interface. You should see
    a popup notification in Tails that says "Connection Established". If you click
    on the network icon in the upper right of the Tails Desktop, you should see that the Wired Connection is active:
 
@@ -85,12 +85,12 @@ Connect to the pfSense web GUI
       wireless network), you may encounter problems trying
       to connect the pfSense WebGUI.
 
-#. Launch the **Unsafe Browser** from the menu bar: **Apps ▸ Internet ▸
+#. Launch the Unsafe Browser from the menu bar: **Apps ▸ Internet ▸
    Unsafe Browser**.
 
    |Launching the Unsafe Browser|
 
-   .. note:: The *Unsafe Browser* is, as the name suggests, **unsafe**
+   .. note:: The Unsafe Browser is, as the name suggests, **unsafe**
         (its traffic is not routed through Tor). However, it is
         the only option because Tails `intentionally disables LAN
         access`_ in the **Tor Browser**.
@@ -104,11 +104,11 @@ Connect to the pfSense web GUI
    has a bright red border to remind you to be careful when using
    it. You should close it once you're done configuring the firewall
    and use Tor Browser for any other web browsing you might do on
-   the *Admin Workstation*.
+   the Admin Workstation.
 
    |Unsafe Browser Homepage|
 
-#. Navigate to the pfSense WebGUI in the *Unsafe Browser*:
+#. Navigate to the pfSense WebGUI in the Unsafe Browser:
    ``https://192.168.1.1``
 
    .. note:: If you have trouble connecting, go to your network settings and
@@ -206,7 +206,7 @@ Workstation a static IP address that is known to be in the subnet to
 continue.
 
 Now the WebGUI will be available on the Admin Gateway address. Navigate
-to ``https://<Admin Gateway IP>`` in the *Unsafe Browser*, and login as
+to ``https://<Admin Gateway IP>`` in the Unsafe Browser, and login as
 before except with the new passphrase you just set for the pfSense WebGUI.
 Once you've logged in to the WebGUI, you are ready to continue configuring
 the firewall.
@@ -233,7 +233,7 @@ Disable DHCP on the LAN
 -----------------------
 
 pfSense runs a DHCP server on the LAN[1] interface by default. At this
-stage in the documentation, the *Admin Workstation* likely has an IP address
+stage in the documentation, the Admin Workstation likely has an IP address
 assigned via that DHCP server.
 
 In order to tighten the firewall rules as much as possible, we recommend
@@ -251,10 +251,10 @@ interface**, scroll down, and click the **Save** button.
 
 .. _assign_static_ip_to_workstation:
 
-Assign a static IP address to the *Admin Workstation*
+Assign a static IP address to the Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now you will need to assign a static IP to the *Admin Workstation*.
+Now you will need to assign a static IP to the Admin Workstation.
 
 You can easily check your current IP address by *clicking* the top right of
 the menu bar, clicking on the **Wired Connection** and then clicking **Wired
@@ -282,7 +282,7 @@ that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
 	  servers that you used for the network firewall in the setup
 	  wizard.
 
-Fill in the static networking information for the *Admin Workstation*:
+Fill in the static networking information for the Admin Workstation:
 
 -  Address: ``10.20.1.2``
 -  Netmask: ``255.255.255.0``
@@ -324,11 +324,11 @@ SecureDrop uses the firewall to achieve two primary goals:
 #. Isolating SecureDrop from the existing network, which may be
    compromised (especially if it is a venerable network in a large
    organization like a newsroom).
-#. Isolating the *Application Server* and the *Monitor Server* from each other
+#. Isolating the Application Server and the Monitor Server from each other
    as much as possible, to reduce attack surface.
 
-In order to use the firewall to isolate the *Application Server* and the *Monitor
-Server* from each other, we need to connect them to separate interfaces, and then set
+In order to use the firewall to isolate the Application Server and the Monitor
+Server from each other, we need to connect them to separate interfaces, and then set
 up firewall rules that allow them to communicate.
 
 Set up the firewall rules
@@ -346,8 +346,8 @@ Set up LAN2
 '''''''''''
 
 We set up the LAN[1] interface during the initial configuration. We now
-need to set up the LAN2 interface for the *Application Server*. Start by
-connecting the *Application Server* to the LAN2 port. Then use the WebGUI
+need to set up the LAN2 interface for the Application Server. Start by
+connecting the Application Server to the LAN2 port. Then use the WebGUI
 to configure the LAN2 interface. Go to **Interfaces ▸ LAN2**, and check
 the box to **Enable Interface**. Use these settings:
 
@@ -464,7 +464,7 @@ Here are some general tips for setting up pfSense firewall rules:
    default in pfSense, so you don't need to add explicit rules (iptables
    ``LOGNDROP``) for that.
 #. Since some of the rules are almost identical except for whether they
-   allow traffic from the *Application Server* or the *Monitor Server*, you can use
+   allow traffic from the Application Server or the Monitor Server, you can use
    the "add a new rule based on this one" button to save time creating a
    copy of the rule on the other interface.
 #. If you are troubleshooting connectivity, the firewall logs can be

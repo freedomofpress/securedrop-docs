@@ -12,7 +12,7 @@ SSH to both servers over Tor
 Assuming you haven't disabled SSH over Tor, SSH access will be
 restricted to the Tor network.
 
-On the *Admin Workstation*, you should be able to SSH to the *Application Server* and the *Monitor Server* from the ``sd_admin`` qube ::
+On the Admin Workstation, you should be able to SSH to the Application Server and the Monitor Server from the ``sd_admin`` qube ::
 
    ssh app
    ssh mon
@@ -34,7 +34,7 @@ Log in to both servers via TTY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All access to the SecureDrop servers should be performed over SSH from the
-*Admin Workstation*. To aid in troubleshooting, login via a physical keyboard
+Admin Workstation. To aid in troubleshooting, login via a physical keyboard
 attached to the server is also supported.
 
 Sanity-check the installation
@@ -51,7 +51,7 @@ On each server:
    started. If not, review our :doc:`OSSEC Alerts
    Guide </admin/reference/ossec_alerts>`.
 
-On the *Application Server*:
+On the Application Server:
 
 #. Check the AppArmor status with ``sudo aa-status``. On a production
    instance all profiles should be in ``enforce`` mode.
@@ -59,23 +59,22 @@ On the *Application Server*:
 Test the web interfaces
 -----------------------
 
-#. Make sure the *Source Interface* is available, and that you can make a
+#. Make sure the Source Interface is available, and that you can make a
    submission.
 
-   - Open the *Source Interface* in Tor Browser by clicking on its desktop
+   - Open the Source Interface in Tor Browser by clicking on its desktop
      shortcut. Proceed through the codename
      generation (copy this down somewhere) and submit a
      test message or file.
-   - Usage of the *Source Interface* is covered by our :doc:`Source User
+   - Usage of the Source Interface is covered by our :doc:`Source User
      Manual <../../source/source>`.
 
-#. Test that you can access the *Journalist Interface*, and that you can log
+#. Test that you can access the Admin Interface, and that you can log
    in as the admin user you just created.
 
-   - Open the *Journalist Interface* in Tor Browser by clicking on its desktop
+   - Open the Admin Interface in Tor Browser by clicking on its desktop
      shortcut.  Enter your passphrase and two-factor code to log in.
-   - If you have problems logging in to the *Journalist
-     Interface*, SSH to the *Application Server* and restart the time
+   - If you have problems logging in to the Admin Interface, SSH to the Application Server and restart the time
      synchronization daemon to synchronize the time: ``sudo systemctl
      restart systemd-timesyncd``. Also check that your smartphone's
      time is accurate and set to network time in its device settings.
@@ -84,18 +83,18 @@ Test the web interfaces
 
    - While logged in as an administrator, you can send a reply to the test
      source submission you made earlier.
-   - Usage of the *Journalist Interface* is covered by our :doc:`Journalist
+   - Usage of the Admin Interface is covered by our :doc:`Journalist
      User Manual <../../journalist/journalist>`.
 
 #. Verify that the test source account received the reply.
 
-   - Within Tor Browser, navigate back to the *Source Interface* and
+   - Within Tor Browser, navigate back to the Source Interface and
      use your previous test source codename to log in (or reload the
      page if it's still open) and check that the reply you just made
      is present.
 
 #. Remove the test submissions you made prior to putting SecureDrop to
-   real use. On the main *Journalist Interface* page, select all *Sources* and
+   real use. On the main Admin Interface page, select all Sources and
    click **Delete selected**.
 
 Once you've tested the installation and verified that everything is

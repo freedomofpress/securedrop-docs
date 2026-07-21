@@ -4,11 +4,11 @@ SecureDrop Workstation and Qubes OS
 What is SecureDrop Workstation?
 -------------------------------
 
-A SecureDrop Workstation is a laptop used by a *Journalist* to connect to a SecureDrop instance and securely view submissions and reply to messages from *Sources*. The SecureDrop Workstation is based on Qubes OS and it consists of several different isolated virtual machines (called "qubes"), so that everything a *Journalist* needs to use SecureDrop resides on one computer.
+A :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` is a laptop used by a :ref:`Journalist<glossary_journalist>` to connect to a SecureDrop instance and securely view submissions and reply to messages from :ref:`Sources<glossary_source>`. The SecureDrop Workstation is based on Qubes OS and it consists of several different isolated virtual machines (called "qubes"), so that everything a Journalist needs to use SecureDrop resides on one computer.
 
-Encryption and decryption happen with one click using a network-isolated qube that holds the SecureDrop *Submission Private Key*. Submissions can be viewed securely on the same machine thanks to a `feature of Qubes`_ that creates temporary "disposable" qubes in which to view untrusted content without exposing the rest of the system to that content. *Journalists* use the SecureDrop Workstation to decrypt, view, reply to, and export submissions.
+Encryption and decryption happen with one click using a network-isolated qube that holds the SecureDrop :ref:`Submission Private Key<glossary_submission_key>`. Submissions can be viewed securely on the same machine thanks to a `feature of Qubes`_ that creates temporary "disposable" qubes in which to view untrusted content without exposing the rest of the system to that content. Journalists use the SecureDrop Workstation to decrypt, view, reply to, and export submissions.
 
-A key feature of SecureDrop is that *Journalists* can receive submissions from unknown *Sources* without risking the security of their own machines and networks. Previously, SecureDrop accomplished this by using a physical airgap (the *Secure Viewing Station*); to view submissions, *Journalists* would have to download them, transfer them to an encrypted USB flash drive, and physically take that drive to a separate, non-networked computer for decryption and viewing. SecureDrop Workstation combines all of those steps into one workflow on one machine: a Qubes computer that combines the *Journalist Workstation* and the *Secure Viewing Station*.
+A key feature of SecureDrop is that Journalists can receive submissions from unknown Sources without risking the security of their own machines and networks. Previously, SecureDrop accomplished this by using a physical airgap; to view submissions, Journalists would have to download them using a "Journalist Workstation", transfer them to an encrypted USB flash drive, and physically take that drive to a separate, non-networked computer (the "Secure Viewing Station") for decryption and viewing. The SecureDrop Workstation combines all of those steps into one workflow on one machine: a Qubes computer that combines the previous Journalist Workstation and the Secure Viewing Station.
 
 .. | securedrop_workstation_workflow |
 
@@ -43,10 +43,10 @@ SecureDrop Workstation tightly controls access to the network, in order to
 prevent the exfiltration of messages, replies, documents, or encryption keys by
 adversaries. Specifically, the following qubes have no network access:
 
-- ``sd-app``, which runs SecureDrop Inbox, and holds decrypted messages,
+- ``sd-app``, which runs :ref:`SecureDrop Inbox<glossary_securedrop_inbox>`, and holds decrypted messages,
   replies, and attachments.
 - ``sd-viewer``, which is the template for disposable qubes used for opening and viewing attachments.
-- ``sd-gpg``, which holds the *Submission Private Key* required to decrypt
+- ``sd-gpg``, which holds the Submission Private Key required to decrypt
   messages, replies, and documents.
 - ``sd-devices``, which passes exported documents through to USB devices like
   printers and encrypted USB flash drives.
@@ -60,7 +60,7 @@ access.
    not work. That is the expected behavior.
 
 Because SecureDrop Inbox must connect to the SecureDrop
-*Application Server* in order to send or retrieve messages, documents, and
+:ref:`Application Server<glossary_application_server>` in order to send or retrieve messages, documents, and
 replies, it can communicate through Qubes-internal Remote Procedure Calls (RPCs)
 with another qube, ``sd-proxy``, which can only access the open Internet through
 the Tor network.
@@ -79,11 +79,6 @@ running for SecureDrop Inbox to successfully connect to the server.
 Installing additional software on the SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Right now, the project is designed to make the *Journalist* experience
-easier by combining the functionality of the *Journalist Workstation* and Secure
-Viewing Station. The main focus is making sure that checking SecureDrop is
-easier and faster.
-
 While we hope to add advanced tooling and document-processing options down the line,
 at this time we request that you do not change the configuration of the workstation
 or install additional software on it. If you have specific needs that you would like
@@ -95,7 +90,7 @@ to discuss with us, please contact us via Signal, or send us a
 Why can't I save or print from applications in the disposable qubes?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you view a file on SecureDrop Workstation, it is opened in a disposable
+When you view a file on a SecureDrop Workstation, it is opened in a disposable
 qube that cannot access the network or any peripherals. The qube and all its data
 will be destroyed the moment you close the viewer application.
 
@@ -159,26 +154,26 @@ For more about the security features of Qubes, see
 .. _`Xen hypervisor`: https://wiki.xen.org/wiki/Xen_Project_Software_Overview
 .. _`the Qubes OS documentation`: https://www.qubes-os.org/faq/#general--security
 
-How does the security of this system compare to using an air-gapped *Secure Viewing Station*?
+How does the security of this system compare to using an air-gapped Secure Viewing Station?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The air-gapped *Secure Viewing Station* that is part of a SecureDrop setup offers strong
+The air-gapped Secure Viewing Station that is part of a SecureDrop setup offers strong
 protections against exfiltration of submissions or encryption keys by adversaries. It lacks
 important protections that SecureDrop Workstation provides. On the other hand, vulnerabilities
 in Qubes OS or Xen Hypervisor may have a greater security impact than vulnerabilities
-in Tails, the operating system used on a *Secure Viewing Station*.
+in Tails, the operating system used on a Secure Viewing Station.
 
-A typical *Secure Viewing Station* USB flash drive may contain documents from multiple *Sources* and always
+A typical Secure Viewing Station USB flash drive may contain documents from multiple Sources and always
 contains the highly sensitive private key needed to decrypt them. An adversary who does
 manage to achieve a security compromise (e.g., through a vulnerability in a file viewer
 application) can access these other files, and may be able to exfiltrate them.
 
 In spite of the air-gap, this may be possible through physical channels used to transfer files
-off the *Secure Viewing Station* (e.g., USB flash drives), or by motivating the *Journalist* to perform an
+off the Secure Viewing Station (e.g., USB flash drives), or by motivating the Journalist to perform an
 unsafe action (e.g., `scanning a QR code <https://securedrop.org/news/security-advisory-do-not-scan-qr-codes-submitted-through-securedrop-connected-devices/>`__).
 
-Because the air-gapped *Secure Viewing Station* has no Internet access, updates can only be performed using
-another computer and a USB flash drive. In practice, newsrooms may not update their *Secure Viewing Station*
+Because the air-gapped Secure Viewing Station has no Internet access, updates can only be performed using
+another computer and a USB flash drive. In practice, newsrooms may not update their Secure Viewing Station
 in a timely manner, which can significantly worsen its security posture.
 
 In SecureDrop Workstation, any document received via SecureDrop is opened in a

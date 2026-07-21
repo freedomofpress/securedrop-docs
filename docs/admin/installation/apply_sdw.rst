@@ -1,12 +1,12 @@
-Apply configuration to *Admin Workstation*
-=====================================================
+Apply configuration to Admin Workstation
+========================================
 
-With the servers installed and configured, the final step is to install the SecureDrop Inbox on the *Admin Workstation* and fully configure the machine.
+With the servers installed and configured, the final step is to configure the Admin Workstation.
 
 .. _install_configure_securedrop_app:
 
-Install and configure SecureDrop Inbox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configure SecureDrop Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - These steps should be performed from a ``dom0`` terminal. **Start a dom0 terminal** via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
 
@@ -20,8 +20,8 @@ Install and configure SecureDrop Inbox
 
 This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple qubes and installs supporting packages. When the command finishes, reboot the machine to complete the installation. This SecureDrop Workstation is finally ready to use!
 
-Test the *Admin Workstation*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test the SecureDrop Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The preflight updater will start automatically after logging into the system. Please follow the preflight updater's instructions. 
 
@@ -29,7 +29,7 @@ The preflight updater will start automatically after logging into the system. Pl
 
     If you close SecureDrop Inbox during your session, you can launch it again using the SecureDrop icon on the desktop. 
 
-Once the update check is complete, the SecureDrop Client will launch. Log in using an existing journalist account and verify that *Sources* are listed and submissions can be downloaded, decrypted, and viewed.
+Once the update check is complete, :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` will launch. Log in using an existing journalist account and verify that Sources are listed and submissions can be downloaded, decrypted, and viewed.
 
 .. _Password Management Section:
 

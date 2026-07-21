@@ -15,7 +15,7 @@ desire for cost savings and/or convenience. However: we consider it
 organization for both technical and legal reasons:
 
 * While the documents are stored encrypted at rest (via PGP) on the
-  SecureDrop *Application Server*, the documents hit server memory
+  SecureDrop Application Server, the documents hit server memory
   unencrypted (unless the source used the GPG key provided to
   encrypt the documents first before submitting), and are then
   encrypted in server memory before being written to disk. If the
@@ -31,7 +31,7 @@ organization for both technical and legal reasons:
   the context of SecureDrop, this means that the provider could
   access extremely sensitive information, such as the plaintext of
   submissions or the encryption keys used to identify and access
-  the *Onion Services*.
+  the Onion Services.
 
 * In addition, attackers with legal authority such as law
   enforcement agencies may (depending on the jurisdiction) be able

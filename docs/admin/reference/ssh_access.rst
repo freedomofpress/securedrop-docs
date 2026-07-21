@@ -23,7 +23,7 @@ can :ref:`review the SSH portion of our Admin Guide <server SSH access>`.
 If you'd like to make adjustments to the SSH configuration, or disable SSH
 access over Tor, you can do so by following the steps here.
 
-In addition to remote SSH access, the web-based *Admin Interface* is also
+In addition to remote SSH access, the web-based Admin Interface is also
 from any location with a network connection and access
 to the Tor network.
 
@@ -33,15 +33,15 @@ Server SSH access
 ------------------
 
 Generally, you should avoid directly SSHing into the servers in favor of using
-the *Admin Interface* or ``securedrop-admin``. However, in some cases,
+the Admin Interface or ``securedrop-admin``. However, in some cases,
 you may need to SSH in order to troubleshoot and fix a problem that cannot be
 resolved via these tools.
 
-You can access your *Application Server* and *Monitor Server* via SSH by
+You can access your Application Server and Monitor Server via SSH from an Admin Workstation by
 using either the ``ssh app`` or ``ssh mon`` commands (respectively).
 
 In this section we cover basic commands you may find useful when you SSH into
-the *Application Server* and *Monitor Server*.
+the Application Server and Monitor Server.
 
 .. tip:: When you SSH into either SecureDrop server, you will be dropped into a
         ``tmux`` session. ``tmux`` is a screen multiplexer - it allows you to tile
@@ -79,7 +79,7 @@ Investigating logs
 
 Consult our :doc:`Investigating Logs <../maintenance/logging>` topic guide for locations of the
 most relevant log files you may want to examine as part of troubleshooting, and
-for how to enable error logging for the *Source Interface*.
+for how to enable error logging for the Source Interface.
 
 .. include:: ../../includes/get-logs.txt
 
@@ -94,7 +94,7 @@ update `is announced`_, you can opt to fetch the update immediately.
 .. important::
 
    Except where otherwise indicated, make sure to update both your
-   *Application Server* and your *Monitor Server*.
+   Application Server and your Monitor Server.
 
 
 To update your servers immediately, you can SSH
@@ -114,14 +114,14 @@ into each server (via ``ssh app`` and ``ssh mon``) and run the following command
 .. _`is announced`:
   https://securedrop.org/news
 
-*Application Server*
+Application Server
 --------------------
 
 Adding users (CLI)
 ^^^^^^^^^^^^^^^^^^
 
 After the provisioning of the first admin account, we recommend
-using the *Admin Interface* web application for adding additional journalist
+using the Admin Interface web application for adding additional journalist
 and admin accounts.
 
 However, you can also add users via ``./manage.py`` in ``/var/www/securedrop/``
@@ -196,7 +196,7 @@ server, their encrypted files may still exist in backups. We recommend
 that you delete old backup files with ``shred``, which is available on
 Tails.
 
-*Monitor Server*
+Monitor Server
 ----------------
 
 Restart OSSEC

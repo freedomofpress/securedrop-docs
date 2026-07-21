@@ -45,7 +45,7 @@ Proton Mail is a privacy-focused e-mail provider that implements PGP encryption 
 Optional: Daily Journalist alerts
 ---------------------------------
 
-When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for *Journalists* to be notified daily via encrypted Daily Journalist Alert emails about whether or not there has been submission activity in the past 24 hours. If the email shows submissions were received, the *Journalist* can check their *Journalist Workstation*.
+When a SecureDrop has little activity and receives only a few submissions every other week, checking daily only to find there is nothing is a burden. It is more convenient for Journalists to be notified daily via encrypted Daily Journalist Alert emails about whether or not there has been submission activity in the past 24 hours. If the email shows submissions were received, the Journalist can check their SecureDrop Workstation.
 
 Daily Journalist alerts are optional, and can be configured during or after installation.
 
@@ -53,23 +53,23 @@ Daily Journalist alerts are optional, and can be configured during or after inst
 
    For security reasons, the email will be sent every 24 hours, regardless
    of whether there are new submissions or not. The notification is sent after
-   the daily reboot of the *Application Server*. The subject of the email will
+   the daily reboot of the Application Server. The subject of the email will
    always be "Submissions in the past 24h". To find out whether there were
-   submissions or not, a *Journalist* must decrypt the contents of the email.
+   submissions or not, a Journalist must decrypt the contents of the email.
 
-In the simplest case a *Journalist* will provide their email and PGP public key to
-you, the admin. If a team of *Journalist* wants to receive these daily alerts, they 
-should share a PGP key and ask the admin to setup a mail alias
+In the simplest case a Journalist will provide their email and Journalist Alert Public Key to
+you, the Administrator. If a team of Journalist wants to receive these daily alerts, they 
+should share a Journalist Alert Public Key and ask the admin to setup a mail alias
 (SecureDrop does not provide that service) so they all receive the alerts and
 are able to decrypt them.
 
-It is not possible to specify multiple email addresses for email notifications. If there are multiple intended recipients, use an alias or mailing list. However, all subscribers must share the PGP private key, as it is not possible to specify multiple keys.
+It is not possible to specify multiple email addresses for email notifications. If there are multiple intended recipients, use an alias or mailing list. However, all subscribers must share the Journalist Alert Private Key, as it is not possible to specify multiple keys.
 
 If you wish to enable this, you will need:
 
--  The email address that will receive the *Journalist* alerts
--  The *Journalist Alert Public Key*
--  The *Journalist Alert Public Key* fingerprint
+-  The email address that will receive the Journalist alerts
+-  The Journalist Alert Public Key
+-  The Journalist Alert Public Key fingerprint
 
 .. _ossec_guide:
 
@@ -79,17 +79,17 @@ OSSEC alerts
 OSSEC is an open source host-based intrusion detection system (IDS) that
 SecureDrop uses to perform log analysis, file integrity checking, policy
 monitoring, rootkit detection, and real-time alerting. It is installed on
-the *Monitor Server* and constitutes that machine's main function. OSSEC
+the Monitor Server and constitutes that machine's main function. OSSEC
 works in a server-agent scheme; that is, the OSSEC server extends its
-existing functions to the *Application Server* through an agent installed
+existing functions to the Application Server through an agent installed
 on that server, covering monitoring for both machines.
 
 The SecureDrop installation process requires that you configure OSSEC email alerts. You must supply several
 settings during installation:
 
 - The email address that will receive alerts from OSSEC
-- The *OSSEC Alert Public Key*
-- The *OSSEC Alert Public Key* fingerprint
+- The OSSEC Alert Public Key
+- The OSSEC Alert Public Key fingerprint
 - The reachable hostname of your SMTP relay
 - The secure SMTP port of your SMTP relay
   (typically 25, 587, or 465; must support TLS encryption)
@@ -134,7 +134,7 @@ you can connect to an SMTP server, which will always transmit a reply code of 22
 
 In some cases, authentication or transport encryption mechanisms will
 vary and you may require later edits to the Postfix configuration
-(mainly /etc/postfix/main.cf) on the *Monitor Server* in order to get
+(mainly /etc/postfix/main.cf) on the Monitor Server in order to get
 alerts to work. You can consult `Postfix's official
 documentation <https://www.postfix.org/documentation.html>`__ for help,
 although we've described some common scenarios in the

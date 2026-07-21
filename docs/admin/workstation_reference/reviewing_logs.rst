@@ -1,12 +1,12 @@
 Reviewing and exporting logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The *Journalist Workstation* aggregates system logs from all its qubes in the ``sd-log`` qube, in the folder ``~/QubesIncomingLogs``, with one subfolder for each qube. You can inspect these logs directly in the ``sd-log`` qube, or you can copy them to another qube, e.g., for purposes of sharing logs with the SecureDrop development team.
+SecureDrop Inbox aggregates system logs from all its qubes in the ``sd-log`` qube, in the folder ``~/QubesIncomingLogs``, with one subfolder for each qube. You can inspect these logs directly in the ``sd-log`` qube, or you can copy them to another qube, e.g., for purposes of sharing logs with the SecureDrop development team.
 
 Please note that while the logs do not include original filenames or message contents, they do contain sensitive information, e.g.:
 
 - timing and usage information related to SecureDrop access
-- the two-word designation for a given *Source*
+- the two-word designation for a given Source
 - metadata about submissions and replies
 - error messages that disclose further details
 

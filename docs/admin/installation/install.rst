@@ -1,19 +1,19 @@
 Install SecureDrop on the servers
 =================================
 
-Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` qube on the *Admin Workstation* you prepared earlier. 
+Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` qube on the :ref:`Admin Workstation<glossary_admin_workstation>` you prepared earlier. 
 
 .. _test_connectivity:
 
 Test connectivity to servers
 ----------------------------
 
-Having set up the firewall, you can plug the *Application Server* and the *Monitor Server* into the firewall. Your *Admin Workstation* should also be connected to the firewall.
+Having set up the firewall, you can plug the :ref:`Application Server<glossary_application_server>` and the :ref:`Monitor Server<glossary_monitor_server>` into the firewall. Your Admin Workstation should also be connected to the firewall.
 
-If you are using a setup where there is a switch on the LAN port, plug the *Application Server*
-into the switch and plug the *Monitor Server* into the OPT1 port.
+If you are using a setup where there is a switch on the LAN port, plug the Application Server
+into the switch and plug the Monitor Server into the OPT1 port.
 
-You should make sure you can connect from the *Admin Workstation* to both of the servers before continuing with the
+You should make sure you can connect from the Admin Workstation to both of the servers before continuing with the
 installation.
 
 Open a terminal in ``sd-admin`` and verify that you can SSH into both servers, authenticating with your server administrator username (e.g. ``sdadmin``) and password:
@@ -34,9 +34,9 @@ Set up SSH keys
 Ubuntu's default SSH configuration authenticates users with their
 passphrases; however, public key authentication is more secure, and once
 it's set up it is also easier to use. In this section, you will create
-a new SSH key for authenticating to both servers. Since the *Admin
-Workstation* was set up with `SSH Client Persistence`_, this key will be saved
-on the *Admin Workstation* and can be used in the future to authenticate to
+a new SSH key for authenticating to both servers. Since the Admin
+Workstation was set up with `SSH Client Persistence`_, this key will be saved
+on the Admin Workstation and can be used in the future to authenticate to
 the servers in order to perform administrative tasks.
 
 .. _SSH Client Persistence: https://tails.net/doc/persistent_storage/configure/index.en.html#index11h2
@@ -87,10 +87,10 @@ Prepare configuration files
 Make sure you have the following information and files ready before
 continuing:
 
--  the *Application Server* local IP address
--  the *Monitor Server* local IP address
--  the *Submission Public Key* (*generated earlier*)
--  the *Submission Key* fingerprint
+-  the Application Server local IP address
+-  the Monitor Server local IP address
+-  the Submission Public Key (*generated earlier*)
+-  the Submission Key fingerprint
 -  the email address that will receive alerts from OSSEC
 -  the GPG public key and fingerprint for the email address that will
    receive the alerts
@@ -101,14 +101,14 @@ continuing:
 -  the username of the system admin
 
 If configuring Daily Journalist Alert emails (this is optional and can be configured later), you will also need:
--  the *Journalist Alert Public Key*
--  the *Journalist Alert Public Key*  fingerprint
+-  the Journalist Alert Public Key
+-  the Journalist Alert Public Key  fingerprint
 -  the email address that will receive the Daily Journalist Alerts
 
-Localization of the *Source Interface* and *Journalist Interface*
+Localization of the Source Interface and Admin Interface
 -----------------------------------------------------------------
 
-The *Source Interface* and *Journalist Interface* are translated in the following
+The Source Interface and Admin Interface are translated in the following
 languages:
 
 https://github.com/freedomofpress/securedrop/blob/develop/securedrop/i18n.rst
@@ -117,15 +117,15 @@ During the installation you will be given the opportunity to choose from a
 list of supported languages to display using the codes shown in
 parentheses.
 
-.. note:: With a *Source Interface* displayed in French (for example), *Sources*
-          submitting documents are likely to expect a *Journalist* fluent in
+.. note:: With a Source Interface displayed in French (for example), Sources
+          submitting documents are likely to expect a Journalist fluent in
           French to be available to read the documents and follow up in that
           language.
 
 OSSEC alerts public key
 -----------------------
 
-Before proceeding, you will need to copy the *OSSEC Alert Public Key* public key to
+Before proceeding, you will need to copy the OSSEC Alert Public Key public key to
 ``~/.config/securedrop-admin`` in the ``sd-admin`` qube.
 
 If you don't have your GPG key ready, you can run GnuPG on the command line in
@@ -259,8 +259,8 @@ the remote servers. In a terminal in ``sd-admin`` run the following command: ::
 
     securedrop-admin install
 
-You will be prompted to enter the sudo passphrase for the *Application Server* and
-*Monitor Server* (which should be the same).
+You will be prompted to enter the sudo passphrase for the Application Server and
+Monitor Server (which should be the same).
 
 The installation process will take some time. It will return you to the
 terminal prompt when complete.
@@ -286,28 +286,28 @@ an email to securedrop@freedom.press.
 .. _`Source Offer`: https://github.com/freedomofpress/securedrop/blob/develop/SOURCE_OFFER
 
 Once the installation is complete, addresses and credentials for each
-*Onion Service* will be available in the following files under
+Onion Service will be available in the following files under
 ``~/.config/securedrop-admin``:
 
 
-V3 *Onion Services*
+V3 Onion Services
 -------------------
 
-- ``app-sourcev3-ths`` contains the v3 onion address of the *Source
-  Interface*.
+- ``app-sourcev3-ths`` contains the v3 onion address of the Source
+  Interface.
 - ``app-journalist.auth_private`` contains the onion address and private key
-  providing access to the *Journalist Interface*.
+  providing access to the Admin Interface.
 - ``app-ssh.auth_private`` contains the onion address and private key
-  providing SSH access to the *Application Server*.
+  providing SSH access to the Application Server.
 - ``mon-ssh.auth_private`` contains the onion address and private key
-  providing SSH access to the *Monitor Server*.
+  providing SSH access to the Monitor Server.
 - ``tor_v3_keys.json`` contains the keypairs required for access to the
-  *Journalist Interface* and SSH access to the servers - it is required for
+  Admin Interface and SSH access to the servers - it is required for
   future runs of ``securedrop-admin install``.
 
 .. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file
              contain secret keys that should not be shared with third parties,
-             or copied from the *Admin Workstation* for any purpose other than
+             or copied from the Admin Workstation for any purpose other than
              tasks such as performing backups or onboarding new users.
 
 The dynamic inventory file will automatically read the onion addresses from

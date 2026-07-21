@@ -4,7 +4,7 @@
 Hardware
 ========
 
-This document outlines the required hardware components necessary to
+This page outlines the required hardware components necessary to
 successfully install and operate a SecureDrop instance. For specific
 hardware recommendations, see :doc:`../../appendices/hardware_recommendations`.
 If you have any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
@@ -19,25 +19,25 @@ For an installation of SecureDrop, you must acquire:
 * 2 computers (with storage drives) to use as the SecureDrop servers.
 * A mouse, keyboard, and monitor (along with any necessary dongles or adapters) for
   installing the servers.
-* At least 1 dedicated physical laptop for the *SecureDrop Workstation*.
+* At least 1 dedicated physical laptop for the SecureDrop Workstation.
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
 * At least 1 USB flash drive for OS installation media,
-  and at least 1 more USB flash drive if needed as an *Export Device*.
+  and at least 1 more USB flash drive if needed as an Export Device.
 
 .. _Optional Hardware:
 
 Additionally, you may want to consider the following purchases:
 
 * a printer without wireless network support, to use in combination with the
-  *SecureDrop Workstation*.
+  SecureDrop Workstation.
 * an external hard drive for server backups.
-* a USB flash drive to store backups of your *SecureDrop Workstation*.
+* a USB flash drive to store backups of your SecureDrop Workstation.
 * a security key for HOTP authentication, such as a YubiKey, if you want to
-  use hardware-based *Two-Factor Authentication* instead of a mobile app.
+  use hardware-based two-factor authentication instead of a mobile app.
 * a USB flash drive with a physical write protection switch, or a USB write blocker,
   if you want to mitigate the risk of introducing malware from your network to
-  your *SecureDrop Workstation* during repeated use of an *Export Device*.
+  your SecureDrop Workstation during repeated use of an Export Device.
   
 .. tip::
 
@@ -71,10 +71,10 @@ Required hardware
 Servers
 ^^^^^^^
 
-* *Application Server*: 1 physical server to run the SecureDrop web services.
+* :ref:`Application Server<glossary_application_server>`: 1 physical server to run the SecureDrop web services.
 
-* *Monitor Server*: 1 physical server which monitors activity on the
-  *Application Server* and sends email notifications to an admin.
+* :ref:`Monitor Server<glossary_monitor_server>`: 1 physical server which monitors activity on the
+  Application Server and sends email notifications to an Administrator.
   
 We recommend using NUCs for the servers and routinely test new models for compatibility.
 NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet,
@@ -103,7 +103,7 @@ on specific models.
 Workstations
 ^^^^^^^^^^^^
 
-In order to install and use *SecureDrop Workstation*, you will need a Qubes-compatible computer with the following specifications:
+In order to install and use SecureDrop Workstation, you will need a Qubes-compatible computer with the following specifications:
 
 - 64-bit Intel processor with virtualization support
 - a minimum of 32GB RAM
@@ -126,9 +126,9 @@ to :doc:`configure an existing hardware firewall <network_firewall>`.
 Two-factor device
 ^^^^^^^^^^^^^^^^^
 
-*Two-Factor Authentication* is used when connecting to different parts of the
-SecureDrop system. Each admin and each *Journalist* needs a two-factor
-device. We currently support two options for *Two-Factor Authentication*:
+Two-factor authentication is used when connecting to different parts of the
+SecureDrop system. Each Administrator and each Journalist needs a two-factor
+device. We currently support two options for two-factor authentication:
 
 * Your existing smartphone with an app that computes TOTP codes
   (e.g. FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ and `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__).
@@ -141,13 +141,13 @@ device. We currently support two options for *Two-Factor Authentication*:
 USB flash drives
 ^^^^^^^^^^^^^^^^
 
-*Journalists* need physical media (known as the
-*Export Device*) to copy submissions to their everyday workstation.
+Journalists need physical media (known as the
+Export Device) to copy submissions to their everyday workstation.
 
 Our recommendation is to use USB flash drives, in combination with
 volume-level encryption and careful data hygiene. We also urge the use
 of a secure printer or similar analog conversions to 
-export documents from the *SecureDrop Workstation*, whenever possible.
+export documents from the SecureDrop Workstation, whenever possible.
 
 You may want to consider enforcing write protection on USB flash drives when only read
 access is needed. The two main options to achieve write protection of USB flash drives are:
@@ -158,14 +158,14 @@ access is needed. The two main options to achieve write protection of USB flash 
 :ref:`USB drives that we have tested with physical write protection can be found here.<hardware_recommendations_firewall>`
 
 It is especially advisable to enable write protection before attaching an
-*Export Device* to an everyday workstation that lacks the security protections
+Export Device to an everyday workstation that lacks the security protections
 of the Tails operating system.
 
 Please review our :doc:`setup guide <provisioning_usb>`
-for additional background on setting up *Export Devices*.
+for additional background on setting up Export Devices.
 
 We also recommend buying an additional USB flash drive for making regular backups of
-your *SecureDrop Workstations*.
+your SecureDrop Workstations.
 
 One thing to consider is that you are going to have *a lot* of USB flash drives to
 keep track of, so you should consider how you will label or identify them and
@@ -177,7 +177,7 @@ Monitor, keyboard, mouse
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will need these to do the initial installation of Ubuntu on the
-*Application* and *Monitor Servers*.
+Application and Monitor Servers.
 
 
 Optional hardware
@@ -200,7 +200,7 @@ These requirements are expanded below.
 Driverless
 ~~~~~~~~~~
 
-*SecureDrop Workstation* implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
+SecureDrop Workstation implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
 
 .. figure:: ../workstation_reference/images/airprint.jpg
 

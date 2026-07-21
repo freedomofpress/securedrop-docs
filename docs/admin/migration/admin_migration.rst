@@ -13,8 +13,8 @@ Pre-install tasks:
 Install tasks:
 ~~~~~~~~~~~~~~
 
-#. Copy the *Submission Key*
-#. Copy *Journalist Interface* details
+#. Copy the Submission Key
+#. Copy Admin Interface details
 #. Copy SecureDrop login credentials
 #. Download and install SecureDrop Workstation
 #. Configure SecureDrop Workstation
@@ -47,7 +47,7 @@ Install tasks:
 Import KeePassXC database
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have a KeePassXC database on your Tails-based *Admin Workstation* USB flash drive, you should copy it to the ``vault`` qube on the new Qubes-based *Admin-Workstation*.
+If you have a KeePassXC database on your Tails-based Admin Workstation USB flash drive, you should copy it to the ``vault`` qube on the new Qubes-based Admin Workstation.
 
 Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` qube.  
 
@@ -59,26 +59,26 @@ Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault``
 Configure SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that your new Qubes-based *Admin-Workstation* is prepared, you can proceed with importing the correct SecureDrop server details and *Submission Private Key* from your Tails-based *Journalist Workstation* and *Secure Viewing Station* USB flash drives.
+Now that your new Qubes-based Admin Workstation is prepared, you can proceed with importing the correct SecureDrop server details and Submission Private Key from your Tails-based Journalist Workstation and Secure Viewing Station USB flash drives.
 
-Import *Submission Private Key*
+Import Submission Private Key
 -------------------------------
 
 In order to decrypt submissions, you will need a copy of the
-`*Submission Private Key* <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_
-from your SecureDrop instance's *Secure Viewing Station*.
+`Submission Private Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_
+from your SecureDrop instance's Secure Viewing Station.
 
-To protect this key and preserve the air gap, you will need to connect the *Secure Viewing Station* USB flash drive to a qube with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to the ``dom0`` qube from another qube - instead, follow the steps below:
+To protect this key and preserve the air gap, you will need to connect the Secure Viewing Station USB flash drive to a qube with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to the ``dom0`` qube from another qube - instead, follow the steps below:
 
-- First, use the network manager widget in the upper right panel to disable your network connection. These instructions refer to the ``vault`` qube, which has no network access by default, but if the *Secure Viewing Station* is attached to another qube by mistake, this will offer some protection against exfiltration.
+- First, use the network manager widget in the upper right panel to disable your network connection. These instructions refer to the ``vault`` qube, which has no network access by default, but if the Secure Viewing Station is attached to another qube by mistake, this will offer some protection against exfiltration.
 
 - Next, choose |qubes_menu| **▸ Apps ▸ vault ▸ Thunar File Manager** to open the file manager in the ``vault`` qube.
 
-- Connect the *Secure Viewing Station* USB flash drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` qube. There will be three entries for the USB flash drive in the section titled **Data (Block) Devices**. Choose the *unlabeled* entry (*not* the one labeled "TAILS") annotated with a ``sys-usb`` text that ends with a number, like ``sys-usb:sdb2``. That is the persistent volume.
+- Connect the Secure Viewing Station USB flash drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` qube. There will be three entries for the USB flash drive in the section titled **Data (Block) Devices**. Choose the *unlabeled* entry (*not* the one labeled "TAILS") annotated with a ``sys-usb`` text that ends with a number, like ``sys-usb:sdb2``. That is the persistent volume.
 
   |Attach TailsData|
 
-- In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the *Secure Viewing Station* persistent volume passphrase to unlock and mount it. When asked if you would like to forget the password immediately or remember it until you logout, choose the option to **Forget password immediately**.
+- In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the Secure Viewing Station persistent volume passphrase to unlock and mount it. When asked if you would like to forget the password immediately or remember it until you logout, choose the option to **Forget password immediately**.
 
   .. note::
 
@@ -86,18 +86,18 @@ To protect this key and preserve the air gap, you will need to connect the *Secu
 
   |Unlock TailsData|
 
-- Open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**. Once the terminal window opens, run the following command to import the *Submission Private Key*:
+- Open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**. Once the terminal window opens, run the following command to import the Submission Private Key:
 
   .. code-block:: sh 
 
       sdw-admin --configure
 
-  Follow the command prompts to complete *Submission Private Key* import. 
+  Follow the command prompts to complete Submission Private Key import. 
 
   .. note::
-    If there are multiple keys present on the device, ``sdw-admin --configure`` will print the fingerprints of those keys for you to select which to use as the *Submission Private Key*. You can open ``<source interface address>.onion/metadata`` in Tor Browser on another network-connected computer to check the correct key fingerprint used by your SecureDrop instance.
+    If there are multiple keys present on the device, ``sdw-admin --configure`` will print the fingerprints of those keys for you to select which to use as the Submission Private Key. You can open ``<source interface address>.onion/metadata`` in Tor Browser on another network-connected computer to check the correct key fingerprint used by your SecureDrop instance.
 
-- Once the *Submission Private Key* import is complete, in the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the *Secure Viewing Station* USB flash drive.
+- Once the Submission Private Key import is complete, in the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the Secure Viewing Station USB flash drive.
 
 - If you were prompted for a passphrase during import, you will now need to remove the passphrase on ``sd-journalist.sec``. See :doc:`/admin/migration/removing_gpg_passphrase`.
 
@@ -108,12 +108,12 @@ To protect this key and preserve the air gap, you will need to connect the *Secu
 
 .. _copy_journalist:
 
-Import *Journalist Interface* details
+Import Admin Interface details
 -------------------------------------
 
-SecureDrop Workstation connects to your SecureDrop instance's API via the *Journalist Interface*. In order to do so, it will need the *Journalist Interface* address and authentication info. As the clipboard from another qube cannot be copied into ``dom0`` directly, follow these steps to copy the file into place:
+SecureDrop Workstation connects to your SecureDrop instance's API via the Admin Interface. In order to do so, it will need the Admin Interface address and authentication info. As the clipboard from another qube cannot be copied into ``dom0`` directly, follow these steps to copy the file into place:
 
-- Locate a Tails-based *Admin Workstation* or *Journalist Workstation* USB flash drive. Both hold the address and authentication info for the *Journalist Interface*; if you also want to copy the *Journalist*'s password database, use the *Journalist Workstation* USB flash drive.
+- Locate a Tails-based Admin Workstation or Journalist Workstation USB flash drive. Both hold the address and authentication info for the Admin Interface; if you also want to copy the Journalist's password database, use the Journalist Workstation USB flash drive.
 
 - Connect the USB flash drive to a USB port on the Qubes computer, then use the devices widget in the upper right panel to attach it to the ``vault`` qube. There will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled ``Tails``), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
 
@@ -125,14 +125,14 @@ SecureDrop Workstation connects to your SecureDrop instance's API via the *Journ
 
       sdw-admin --configure 
 
-  The command will print out the imported *Journalist Interface* details to confirm before proceeding.
+  The command will print out the imported Admin Interface details to confirm before proceeding.
 
-- If you used a Tails-based *Admin Workstation* drive, or you don't intend to copy a password database to this workstation, safely disconnect the USB flash drive now. In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the USB flash drive.
+- If you used a Tails-based Admin Workstation drive, or you don't intend to copy a password database to this workstation, safely disconnect the USB flash drive now. In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the USB flash drive.
 
 Copy SecureDrop login credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When launching SecureDrop Inbox must enter their username, passphrase and two-factor code to connect with the SecureDrop server. You can manage these passphrases using the KeePassXC password manager in the ``vault`` qube. If this laptop will be used by more than one *Journalist*, we recommend that you shut down the ``vault`` qube now (using the Qube widget in the upper right panel), skip this section, and use a smartphone password manager instead.
+When launching SecureDrop Inbox must enter their username, passphrase and two-factor code to connect with the SecureDrop server. You can manage these passphrases using the KeePassXC password manager in the ``vault`` qube. If this laptop will be used by more than one Journalist, we recommend that you shut down the ``vault`` qube now (using the Qube widget in the upper right panel), skip this section, and use a smartphone password manager instead.
 
 In order to set up KeePassXC for easy use:
 
@@ -144,11 +144,11 @@ In order to set up KeePassXC for easy use:
 
 .. important::
 
-   The password database from the Tails-based *Admin Workstation* contains sensitive credentials not required by *Journalists*. Make sure to copy the credentials from the Tails-based *Journalist Workstation* USB flash drive.
+   The password database from the Tails-based Admin Workstation contains sensitive credentials not required by Journalists. Make sure to copy the credentials from the Tails-based Journalist Workstation USB flash drive.
 
-In order to copy a *Journalist*'s login credentials:
+In order to copy a Journalist's login credentials:
 
-- If a Tails-based *Journalist Workstation* USB flash drive is not currently attached, connect it, attach it to the ``vault`` qube, open it in the file manager, and enter its encryption passphrase.
+- If a Tails-based Journalist Workstation USB flash drive is not currently attached, connect it, attach it to the ``vault`` qube, open it in the file manager, and enter its encryption passphrase.
 
 - Locate the password database. It should be in the ``Persistent`` directory, and will typically be named ``keepassx.kdbx`` or similar.
 
@@ -156,25 +156,25 @@ In order to copy a *Journalist*'s login credentials:
 
 - Drag and drop the password database to copy it.
 
-- In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the *Journalist Workstation* USB. Close this file manager window.
+- In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the Journalist Workstation USB flash drive. Close this file manager window.
 
 - In the file manager window that displays the home directory, open the copy you made of the password database by double-clicking it.
 
 - If the database is passwordless, KeePassXC may display a security warning when opening it. To preserve convenient passwordless access, you can protect the database using a key file, via **Database ▸ Database settings ▸ Security ▸ Add additional protection ▸ Add Key File ▸ Generate**. This key file has to be selected when you open the database, but KeePassXC will remember the last selection.
 
-- Inspect each section of the password database to ensure that it contains only the information required by the *Journalist* to log in.
+- Inspect each section of the password database to ensure that it contains only the information required by the Journalist to log in.
 
 - Close the application window and shut down the ``vault`` qube (using the Qube widget in the upper right panel). At this time, you can also re-enable the network connection using the network manager widget.
 
 Manually importing from Tails drives
 ------------------------------------
 
-Manually import *Submission Private Key*
+Manually import Submission Private Key
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If importing the *Submission Private Key*  using ``sdw-admin --configure`` fails, you can also copy the *Submission Private Key* manually.
+If importing the Submission Private Key  using ``sdw-admin --configure`` fails, you can also copy the Submission Private Key manually.
 
-- Open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**. Once the terminal window opens, run the following command to list the *Submission Private Key* details, including its fingerprint:
+- Open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**. Once the terminal window opens, run the following command to list the Submission Private Key details, including its fingerprint:
 
   .. code-block:: sh
 
@@ -189,7 +189,7 @@ If importing the *Submission Private Key*  using ``sdw-admin --configure`` fails
       "gpg --homedir /run/media/user/TailsData/gnupg --export-secret-keys --armor <SVSFingerprint>" \
       > /tmp/sd-journalist.sec
 
-  where ``<SVSFingerprint>`` is the *Submission Private Key* fingerprint, typed as a single unit without whitespace. This will copy the *Submission Private Key* in ASCII format to a temporary file in dom0, ``/tmp/sd-journalist.sec``.
+  where ``<SVSFingerprint>`` is the Submission Private Key fingerprint, typed as a single unit without whitespace. This will copy the Submission Private Key in ASCII format to a temporary file in dom0, ``/tmp/sd-journalist.sec``.
 
 - Verify the that the file starts with ``-----BEGIN PGP PRIVATE KEY BLOCK-----`` using the command:
 
@@ -197,7 +197,7 @@ If importing the *Submission Private Key*  using ``sdw-admin --configure`` fails
 
     head -n 1 /tmp/sd-journalist.sec
 
-- Unmount the *Secure Viewing Station* USB flash drive.
+- Unmount the Secure Viewing Station USB flash drive.
 
 - Run the following command in the ``dom0`` terminal:
 
@@ -205,18 +205,18 @@ If importing the *Submission Private Key*  using ``sdw-admin --configure`` fails
 
     sudo cp /tmp/sd-journalist.sec /usr/share/securedrop-workstation-dom0-config/
 
-- You can run ``sdw-admin --configure`` to now import the *Journalist Interface* details and complete configuration. 
+- You can run ``sdw-admin --configure`` to now import the Admin Interface details and complete configuration. 
 
-  Alternatively, follow the steps below to do so manually. Once both *Submission Private Key* and *Journalist Interface* details are imported, proceed with :ref:`configuring the workstation<manual_configure>`.
+  Alternatively, follow the steps below to do so manually. Once both Submission Private Key and Admin Interface details are imported, proceed with :ref:`configuring the workstation<manual_configure>`.
 
 .. _manual_copy_journalist: 
 
-Manually import *Journalist Interface* details
+Manually import Admin Interface details
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If importing the *Journalist Interface* details using ``sdw-admin --configure`` fails, you can copy the configuration file to ``dom0`` manually.
+If importing the Admin Interface details using ``sdw-admin --configure`` fails, you can copy the configuration file to ``dom0`` manually.
 
-- If your *Journalist Interface* is based on SecureDrop 2.13.0 or later, use the following command:
+- If your Admin Interface is based on SecureDrop 2.13.0 or later, use the following command:
 
   .. code-block:: sh
 
@@ -224,7 +224,7 @@ If importing the *Journalist Interface* details using ``sdw-admin --configure`` 
       "cat /run/media/user/TailsData/securedrop-admin/app-journalist.auth_private" \
       > /tmp/journalist.txt
 
-- If your *Journalist Interface* is based on SecureDrop 2.12.10 or earlier, use the following command:
+- If your Admin Interface is based on SecureDrop 2.12.10 or earlier, use the following command:
 
   .. code-block:: sh
 
@@ -241,9 +241,9 @@ If you encounter a validation error due to a password-protected GPG key, see :do
 
 .. _manual_configure:
 
-Once the *Journalist Interface* details and *Submission Private Key* have been copied to ``dom0``, you can create the configuration for the SecureDrop Workstation.
+Once the Admin Interface details and Submission Private Key have been copied to ``dom0``, you can create the configuration for the SecureDrop Workstation.
 
-- Your *Submission Private Key* has a unique fingerprint required for the configuration. Obtain the fingerprint by using this command:
+- Your Submission Private Key has a unique fingerprint required for the configuration. Obtain the fingerprint by using this command:
 
   .. code-block:: sh
 
@@ -260,9 +260,9 @@ Once the *Journalist Interface* details and *Submission Private Key* have been c
 
 - The ``config.json`` file must be updated with the correct values for your instance. Open it with root privileges in a text editor such as ``vi`` or ``nano`` and update the following fields' values:
 
-  - **submission_key_fpr**: use the value of the *Submission Private Key* fingerprint as displayed above
-  - **hidserv.hostname**: use the hostname of the *Journalist Interface*, including the ``.onion`` TLD
-  - **hidserv.key**: use the private v3 *Onion Service* authorization key value
+  - **submission_key_fpr**: use the value of the Submission Private Key fingerprint as displayed above
+  - **hidserv.hostname**: use the hostname of the Admin Interface, including the ``.onion`` TLD
+  - **hidserv.key**: use the private v3 Onion Service authorization key value
   - **environment**: use the value ``prod``
 
 .. note::

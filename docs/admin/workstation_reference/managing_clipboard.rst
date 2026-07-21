@@ -5,16 +5,16 @@ Every qube in Qubes has its own clipboard, similar to the clipboard of a Mac, Wi
 
 In addition, Qubes supports copying information *between* qubes. This is done by using `special keyboard shortcuts <https://www.qubes-os.org/doc/copy-paste/>`_, ``Ctrl+Shift+C`` and ``Ctrl+Shift+V``, in a four-step process. By default, this is disabled for all qubes that are part of a SecureDrop Workstation, consistent with the `principle of least privilege <https://en.wikipedia.org/wiki/Principle_of_least_privilege>`__.
 
-As an administrator, you should be aware of the following risks related to clipboard access before changing the default configuration:
+As an Administrator, you should be aware of the following risks related to clipboard access before changing the default configuration:
 
 1. It is dangerous to copy untrusted, unsanitized content *into* a secure environment. What looks like plain text may contain character sequences that exploit security vulnerabilities in the target environment.
-2. The four-step process described above can be difficult to follow, and it is easy to make an operational mistake, such as pasting a password into a message to a *Source*, or into a window belonging to a qube with network access.
+2. The four-step process described above can be difficult to follow, and it is easy to make an operational mistake, such as pasting a password into a message to a Source, or into a window belonging to a qube with network access.
 3. Like any other part of the operating system, the implementation of Qubes clipboard itself may contain undiscovered security vulnerabilities that an adversary could exploit in an attempt to exfiltrate information.
 
 With these considerations in mind, there are use cases where clipboard access may be an important part of your regular use of SecureDrop Workstation. For example:
 
 - You may want to copy passwords from a password manager to log into SecureDrop Inbox;
-- You may want to copy a message you received via SecureDrop into a secure messaging app like Signal, to share it with another *Journalist*.
+- You may want to copy a message you received via SecureDrop into a secure messaging app like Signal, to share it with another Journalist.
 
 To support these use cases, Qubes OS allows you to grant granular access to the ``sd-app`` clipboard (via the inter-qube clipboard) to selected qubes.
 

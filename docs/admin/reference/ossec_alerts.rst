@@ -1,7 +1,7 @@
 .. _AnalyzingAlerts:
 
-Analyzing the alerts
---------------------
+Analyzing OSSEC alerts
+----------------------
 
 Understanding the contents of the OSSEC alerts requires a background and
 knowledge in Linux systems administration. They may be confusing, and at
@@ -13,7 +13,7 @@ particularly concerning messages with direct investigation.
 An initial SecureDrop install will generate quite a few alerts as OSSEC is installed
 early in the install process.
 As part of the administration of a SecureDrop instance, regularly looking through
-the generated alerts provides administrators with information on the overall health of
+the generated alerts provides Administrators with information on the overall health of
 the SecureDrop instance.
 
 OSSEC alerts will range from a severity level of 1 (lowest) to 14 (highest), and as a baseline, you
@@ -24,7 +24,7 @@ Common OSSEC alerts
 
 Package updates
 ^^^^^^^^^^^^^^^
-The SecureDrop *Application* and *Monitor Servers* check for package updates every day.
+The SecureDrop Application and Monitor Servers check for package updates every day.
 As updates are automatically installed, OSSEC will notice and send out alerts. You
 may see any number of these alerts in the email, as several alerts can be batched in
 a single email. You should also see them in an email named ``Daily Report: File Changes``.
@@ -63,7 +63,7 @@ Surprising changes to configuration files, or new or changed files unrelated to
 the daily updates, may warrant further investigation.
 
 Occasionally your SecureDrop Servers will send an alert for failing to connect
-to Tor relays. Since SecureDrop runs as a Tor *Onion Service*, it is possible
+to Tor relays. Since SecureDrop runs as a Tor Onion Service, it is possible
 for Tor connections to timeout or become overloaded. ::
 
     Received From: (app)
@@ -113,7 +113,7 @@ To resolve the issue, you can :ref:`clean them up <submission-cleanup>`.
 Instance misconfigurations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 In addition, SecureDrop performs a small set of daily configuration checks to ensure
-that the iptables rules configured on the *Application* and *Monitor Server* match
+that the iptables rules configured on the Application and Monitor Server match
 the expected configuration. If they do not, you may receive a level 12 alert
 like the following: ::
 
@@ -134,7 +134,7 @@ OSSEC will send an alert when the `securedrop-admin` tool is used to backup, res
 
     Rule: 400001 fired (level 13) -> "Ansible playbook run on server (securedrop-admin install, backup, or restore)."
 
-**Action**: You should ensure that this action was performed by you or a fellow administrator.
+**Action**: You should ensure that this action was performed by you or a fellow Administrator.
 
 If you believe that the system is behaving abnormally, you should
 :doc:`contact us</introduction/getting_support>` for
