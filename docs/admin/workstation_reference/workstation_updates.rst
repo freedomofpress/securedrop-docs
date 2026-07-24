@@ -39,7 +39,7 @@ interact with SecureDrop.
    The error displayed when the preflight updater
    does not successfully complete the update.
 
-This guide offers troubleshooting steps for common
+Below are some troubleshooting steps for common
 update issues.
 
 Step 1: Locate the updater log
