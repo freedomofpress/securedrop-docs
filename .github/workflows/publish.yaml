@@ -27,3 +27,25 @@ jobs:
       add-branch-tags: true
     secrets:
       registry-password: ${{ secrets.GITHUB_TOKEN }}
+
+  notify:
+    uses: freedomofpress/actionslib/.github/workflows/update-k8s-trigger.yaml@main
+    needs:
+    - build
+    if: ${{ needs.build.result == 'success' && github.ref_name == 'main' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        cluster:
+        - production
+        - staging
+    permissions:
+      contents: read
+      actions: read
+      pull-requests: read
+    with:
+      trigger: sdo-docs/${{ matrix.cluster }}
+      sha: ${{ github.sha }}
+    secrets:
+      local-token: ${{ secrets.GITHUB_TOKEN }}
+      k8s-configs-token: ${{ secrets.K8S_CONFIGS_GITHUB_TOKEN }}
