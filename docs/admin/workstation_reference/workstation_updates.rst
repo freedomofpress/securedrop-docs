@@ -16,11 +16,9 @@ Verifying version numbers
 
 You can find the version number of the SecureDrop Inbox running on your workstation on the login screen when you open the Inbox.
 
-The version number for the SecureDrop Workstation itself can be found by running: ::
+The version number for the SecureDrop Workstation itself can be found by running the following command in a ``dom0`` Terminal: ::
   
   sudo dnf list securedrop-workstation-dom0-config
-  
-in a ``dom0`` Terminal.
 
 Troubleshooting updates
 -----------------------
