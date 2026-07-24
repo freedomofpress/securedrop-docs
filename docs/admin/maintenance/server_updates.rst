@@ -6,7 +6,7 @@ Automatic updates
 
 SecureDrop servers check for updates automatically, and install updates without any manual action or intervention within 24 hours of each new SecureDrop release.
 
-`The current SecureDrop server version number is available at securedrop.org. <https://securedrop.org/>`__
+`The latest SecureDrop server version number is available at securedrop.org. <https://securedrop.org/>`__
 
 Manual updates
 --------------
