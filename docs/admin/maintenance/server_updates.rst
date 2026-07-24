@@ -22,7 +22,7 @@ You can verify the installed version number by running: ::
 
     sudo apt policy securedrop-app-code
     
-The current SecureDrop version is also visible within the Source Interface.
+The current SecureDrop version is also visible at the bottom of the Source Interface.
 
 
 Configuring updates over Tor
