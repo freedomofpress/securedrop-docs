@@ -139,9 +139,6 @@ To access the Export Device on your everyday workstation, follow these steps:
 7. Open the Export Device in your operating system's file manager, and copy
    the contents of interest to your everyday workstation.
 
-As a security precaution, we recommend deleting the files on the Export
-Device after each copy operation.
-
 When you are done, switch back to the VeraCrypt window, and click **Dismount**.
 
 You are now ready to write articles and blog posts, edit video and
@@ -151,6 +148,14 @@ audio, and begin publishing important, high-impact work!
          </admin/deployment/getting_the_most_out_of_securedrop>` to read
          about encouraging sources to use SecureDrop.
 
+Securely erase an Export Device
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Even you regularly deletes files from your Export Device, there remains the possibility that those files will be recoverable by anyone with the decryption password. Because of the underlying technology, simply overwriting data or other "file shredding" techniques are insufficient to securely delete files from USB flash drives.
+
+To protect against the possibility that a compromised Export Device decryption password will give someone access to traces or the full contents of previously exported files, you should securely erase your Export Devices on a regular schedule. You may also wish to do this on a case-by-case basis after handling particularly sensitive files or if you believe a decryption password may be compromised. 
+
+You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
 
 Safely working with submissions outside the SecureDrop Workstation
 --------------------------------------------------------------------
