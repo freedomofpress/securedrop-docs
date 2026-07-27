@@ -6,39 +6,39 @@ Setting up a pfSense network firewall
 Before you begin
 ----------------
 
-First, consider how the firewall will be connected to the Internet. You
-will need to provision several unique subnets, which should not conflict
-with the network configuration on the WAN interface. If you are unsure,
-consult your local system administrator.
 
-Many firewalls, including the recommended pfSense-based devices,
-automatically set up the LAN interface on ``192.168.1.1/24``. This
-particular private network is also a very common choice for home and
-office routers. If you are connecting the firewall to a router with the
-same subnet (common in a small office, home, or testing environment),
-you will probably be unable to connect to the network at first. However,
-you will be able to connect from the LAN to the pfSense WebGUI
-configuration wizard, and from there you will be able to configure the
-network so it is working correctly.
+First, consider how the firewall will be connected to the Internet.
+You will need to provision several unique subnets, which should not conflict with the network configuration on the WAN interface.
+If you are unsure, consult your local system administrator.
+
+
+Many firewalls, including the recommended pfSense-based devices, automatically set up the LAN interface on ``192.168.1.1/24``.
+This particular private network is also a very common choice for home and office routers.
+If you are connecting the firewall to a router with the same subnet (common in a small office, home, or testing environment), you will probably be unable to connect to the network at first.
+However, you will be able to connect from the LAN to the pfSense WebGUI configuration wizard, and from there you will be able to configure the network so it is working correctly.
+
 
 Configuring your firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Since our recommended firewalls have at least 4 NICs, we will refer to the
-relevant ports as WAN[1], LAN[1], LAN2, and LAN3.  (Bracketed numbers may be
-present on the physical ports' labels but not in the pfSense UI.) In this case,
-we can now use a dedicated port on the network firewall for each component of
-SecureDrop (Application Server, Monitor Server, and Admin Workstation).
 
-Depending on your network configuration, you should define the IP and subnet
-values your instance will use before continuing. We recommend the default values
-below:
+Since our recommended firewalls have at least 4 NICs, we will refer to the relevant ports as WAN[1], LAN[1], LAN2, and LAN3.
+(Bracketed numbers may be present on the physical ports' labels but not in the pfSense UI.)
+In this case, we can now use a dedicated port on the network firewall for each component of SecureDrop (Application Server, Monitor Server, and Admin Workstation).
+
+
+Depending on your network configuration, you should define the IP and subnet values your instance will use before continuing.
+We recommend the default values below:
+
 
 IP and subnet definitions:
 ''''''''''''''''''''''''''
 .. raw:: html
 
-   <!-- -->
+
+   <!
+   -- -->
+
 
 -  Admin Subnet: ``10.20.1.0/24``
 -  Admin Gateway: ``10.20.1.1``
@@ -46,7 +46,10 @@ IP and subnet definitions:
 
 .. raw:: html
 
-   <!-- -->
+
+   <!
+   -- -->
+
 
 -  Application Subnet: ``10.20.2.0/24``
 -  Application Gateway: ``10.20.2.1``
@@ -54,7 +57,10 @@ IP and subnet definitions:
 
 .. raw:: html
 
-   <!-- -->
+
+   <!
+   -- -->
+
 
 -  Monitor Subnet: ``10.20.3.0/24``
 -  Monitor Gateway: ``10.20.3.1``
@@ -63,10 +69,12 @@ IP and subnet definitions:
 Initial configuration
 ---------------------
 
+
 Unpack the firewall, connect the power, and power on the device.
 
-We will use the pfSense WebGUI to do the initial configuration of the
-network firewall.
+
+We will use the pfSense WebGUI to do the initial configuration of the network firewall.
+
 
 Connect to the pfSense web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -135,14 +143,13 @@ Connect to the pfSense web GUI
 Alternate hostnames
 ~~~~~~~~~~~~~~~~~~~
 
-Before you can set up the hardware firewall, you will need to set the
-**Alternate Hostnames** setting after logging in. You will see the Setup
-Wizard but you should exit out of it by navigating to **System ▸ Advanced**.
-In the **Alternate Hostnames** dialog box, add ``192.168.1.1`` as well as the
-IP address of the *Admin Gateway*. If you decide against using our recommended
-defaults for the *Admin Gateway*, you should include that value here. After
-saving these settings you should be able to go back to **System** and
-select **Setup Wizard**.
+
+Before you can set up the hardware firewall, you will need to set the **Alternate Hostnames** setting after logging in.
+You will see the Setup Wizard but you should exit out of it by navigating to **System ▸ Advanced**.
+In the **Alternate Hostnames** dialog box, add ``192.168.1.1`` as well as the IP address of the *Admin Gateway*.
+If you decide against using our recommended defaults for the *Admin Gateway*, you should include that value here.
+After saving these settings you should be able to go back to **System** and select **Setup Wizard**.
+
 
 |Alternate Hostnames|
 
@@ -194,58 +201,55 @@ Setup Wizard
    click the corresponding "here" link to "continue on to the pfSense
    webConfigurator".
 
-At this point, since you (probably) changed the LAN[1] subnet settings from
-their defaults, you will no longer be able to connect after reloading
-the firewall and the next request will probably time out. This is not an
-error - the firewall has reloaded and is working correctly. To connect
-to the new LAN[1] interface, unplug and reconnect your network cable to get
-a new network address assigned via DHCP. Note that if you used a subnet
-with fewer addresses than ``/24``, the default DHCP configuration in
-pfSense may not work. In this case, you should assign the Admin
-Workstation a static IP address that is known to be in the subnet to
-continue.
 
-Now the WebGUI will be available on the Admin Gateway address. Navigate
-to ``https://<Admin Gateway IP>`` in the Unsafe Browser, and login as
-before except with the new passphrase you just set for the pfSense WebGUI.
-Once you've logged in to the WebGUI, you are ready to continue configuring
-the firewall.
+At this point, since you (probably) changed the LAN[1] subnet settings from their defaults, you will no longer be able to connect after reloading the firewall and the next request will probably time out.
+This is not an error - the firewall has reloaded and is working correctly.
+To connect to the new LAN[1] interface, unplug and reconnect your network cable to get a new network address assigned via DHCP.
+Note that if you used a subnet with fewer addresses than ``/24``, the default DHCP configuration in pfSense may not work.
+In this case, you should assign the Admin Workstation a static IP address that is known to be in the subnet to continue.
+
+
+Now the WebGUI will be available on the Admin Gateway address.
+Navigate to ``https://<Admin Gateway IP>`` in the Unsafe Browser, and login as before except with the new passphrase you just set for the pfSense WebGUI.
+Once you've logged in to the WebGUI, you are ready to continue configuring the firewall.
+
 
 Connect interfaces and test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that the initial configuration is completed, you can connect the WAN
-port without potentially conflicting with the default LAN[1] settings (as
-explained earlier). Connect the WAN port to the external network. You
-can watch the WAN entry in the Interfaces table on the pfSense WebGUI
-homepage to see as it changes from down (red arrow pointing down) to up
-(green arrow pointing up). This usually takes several seconds. The WAN's
-IP address will be shown once it comes up.
 
-Finally, test connectivity to make sure you are able to connect to the
-Internet through the WAN. The easiest way to do this is to use ping
-(**Diagnostics** → **Ping** in the WebGUI). Enter an external hostname or IP
-that you expect to be up (e.g. ``google.com``) and click "Ping".
+Now that the initial configuration is completed, you can connect the WAN port without potentially conflicting with the default LAN[1] settings (as explained earlier).
+Connect the WAN port to the external network.
+You can watch the WAN entry in the Interfaces table on the pfSense WebGUI homepage to see as it changes from down (red arrow pointing down) to up (green arrow pointing up).
+This usually takes several seconds.
+The WAN's IP address will be shown once it comes up.
+
+
+Finally, test connectivity to make sure you are able to connect to the Internet through the WAN.
+The easiest way to do this is to use ping (**Diagnostics** → **Ping** in the WebGUI).
+Enter an external hostname or IP that you expect to be up (e.g. ``google.com``) and click "Ping".
+
 
 |Ping|
 
 Disable DHCP on the LAN
 -----------------------
 
-pfSense runs a DHCP server on the LAN[1] interface by default. At this
-stage in the documentation, the Admin Workstation likely has an IP address
-assigned via that DHCP server.
 
-In order to tighten the firewall rules as much as possible, we recommend
-disabling the DHCP server and assigning a static IP address to the Admin
-Workstation instead.
+pfSense runs a DHCP server on the LAN[1] interface by default.
+At this stage in the documentation, the Admin Workstation likely has an IP address assigned via that DHCP server.
+
+
+In order to tighten the firewall rules as much as possible, we recommend disabling the DHCP server and assigning a static IP address to the Admin Workstation instead.
+
 
 Disable DHCP server on the firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To disable DHCP, navigate to **Services ▸ DHCP Server** in the pfSense
-WebGUI. Uncheck the box labeled **Enable DHCP server on LAN
-interface**, scroll down, and click the **Save** button.
+
+To disable DHCP, navigate to **Services ▸ DHCP Server** in the pfSense WebGUI.
+Uncheck the box labeled **Enable DHCP server on LAN interface**, scroll down, and click the **Save** button.
+
 
 |Disable DHCP|
 
@@ -254,19 +258,22 @@ interface**, scroll down, and click the **Save** button.
 Assign a static IP address to the Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 Now you will need to assign a static IP to the Admin Workstation.
 
-You can easily check your current IP address by *clicking* the top right of
-the menu bar, clicking on the **Wired Connection** and then clicking **Wired
-Settings**.
+
+You can easily check your current IP address by *clicking* the top right of the menu bar, clicking on the **Wired Connection** and then clicking **Wired Settings**.
+
 
 |Wired Settings|
 
+
 From here you can click on the cog beside the wired network connection:
 
-This will take you to the network settings. Change to the **IPv4** tab. Ensure
-that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
-**DNS** is in the "off" position, as highlighted in the screenshot below:
+
+This will take you to the network settings.
+Change to the **IPv4** tab.
+Ensure that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for **DNS** is in the "off" position, as highlighted in the screenshot below:
 
 
 .. note:: The Unsafe Browser will not launch when using a manual
@@ -278,11 +285,12 @@ that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
 	  so you can continue to use the Unsafe Browser to access the
 	  WebGUI in future sessions.
 
-	  We recommend keeping it simple and using the same DNS
-	  servers that you used for the network firewall in the setup
-	  wizard.
+
+	  We recommend keeping it simple and using the same DNS servers that you used for the network firewall in the setup wizard.
+
 
 Fill in the static networking information for the Admin Workstation:
+
 
 -  Address: ``10.20.1.2``
 -  Netmask: ``255.255.255.0``
@@ -290,36 +298,34 @@ Fill in the static networking information for the Admin Workstation:
 
 |4 NIC Admin Workstation Static IP Configuration|
 
-Click **Apply**. If the network does not come up within 15 seconds or
-so, try disconnecting and reconnecting your network cable to trigger the
-change. You will need you have succeeded in connecting with your new
-static IP when you are able to connect using the Tor Connection assistant,
-and you see the message "Connected to Tor successfully".
+
+Click **Apply**.
+If the network does not come up within 15 seconds or so, try disconnecting and reconnecting your network cable to trigger the change.
+You will need you have succeeded in connecting with your new static IP when you are able to connect using the Tor Connection assistant, and you see the message "Connected to Tor successfully".
+
 
 Troubleshooting: DNS servers and the Unsafe Browser
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
-After saving the new network configuration, you may still encounter the
-"No DNS servers configured" error when trying to launch the Unsafe
-Browser. If you encounter this issue, you can resolve it by
-disconnecting from the network and then reconnecting, which causes the
-network configuration to be reloaded.
 
-To do this, click the network icon in the system toolbar, and click
-**Disconnect** under the name of the currently active network
-connection, which is displayed in bold. After it disconnects, click
-the network icon again and click the name of the connection to
-reconnect. You should see a popup notification that says "Connection
-Established", and the Tor Connection assistant should show the message "Connected
-to Tor successfully".
+After saving the new network configuration, you may still encounter the "No DNS servers configured" error when trying to launch the Unsafe Browser.
+If you encounter this issue, you can resolve it by disconnecting from the network and then reconnecting, which causes the network configuration to be reloaded.
 
-For the next step, SecureDrop Configuration, you will manually configure the
-firewall for SecureDrop, using screenshots as a reference.
+
+To do this, click the network icon in the system toolbar, and click **Disconnect** under the name of the currently active network connection, which is displayed in bold.
+After it disconnects, click the network icon again and click the name of the connection to reconnect.
+You should see a popup notification that says "Connection Established", and the Tor Connection assistant should show the message "Connected to Tor successfully".
+
+
+For the next step, SecureDrop Configuration, you will manually configure the firewall for SecureDrop, using screenshots as a reference.
+
 
 SecureDrop configuration
 ------------------------
 
+
 SecureDrop uses the firewall to achieve two primary goals:
+
 
 #. Isolating SecureDrop from the existing network, which may be
    compromised (especially if it is a venerable network in a large
@@ -327,69 +333,83 @@ SecureDrop uses the firewall to achieve two primary goals:
 #. Isolating the Application Server and the Monitor Server from each other
    as much as possible, to reduce attack surface.
 
-In order to use the firewall to isolate the Application Server and the Monitor
-Server from each other, we need to connect them to separate interfaces, and then set
-up firewall rules that allow them to communicate.
+
+In order to use the firewall to isolate the Application Server and the Monitor Server from each other, we need to connect them to separate interfaces, and then set up firewall rules that allow them to communicate.
+
 
 Set up the firewall rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Since there are a variety of firewalls with different configuration interfaces
-and underlying sets of software, we cannot provide a set of network firewall
-rules to match every use case.
 
-The easiest way to set up your firewall rules is to look at the screenshots of
-a correctly configured firewall and edit the interfaces, aliases, and firewall
-rules on your firewall to match them.
+Since there are a variety of firewalls with different configuration interfaces and underlying sets of software, we cannot provide a set of network firewall rules to match every use case.
+
+
+The easiest way to set up your firewall rules is to look at the screenshots of a correctly configured firewall and edit the interfaces, aliases, and firewall rules on your firewall to match them.
+
 
 Set up LAN2
 '''''''''''
 
-We set up the LAN[1] interface during the initial configuration. We now
-need to set up the LAN2 interface for the Application Server. Start by
-connecting the Application Server to the LAN2 port. Then use the WebGUI
-to configure the LAN2 interface. Go to **Interfaces ▸ LAN2**, and check
-the box to **Enable Interface**. Use these settings:
+
+We set up the LAN[1] interface during the initial configuration.
+We now need to set up the LAN2 interface for the Application Server.
+Start by connecting the Application Server to the LAN2 port.
+Then use the WebGUI to configure the LAN2 interface.
+Go to **Interfaces ▸ LAN2**, and check the box to **Enable Interface**.
+Use these settings:
+
 
 -  IPv4 Configuration Type: Static IPv4
 -  IPv4 Address: ``10.20.2.1`` (Application Gateway IP)
 
-Make sure that the CIDR routing prefix is correct (``/24``). Leave everything else
-as the default. **Save** and **Apply Changes**.
+
+Make sure that the CIDR routing prefix is correct (``/24``).
+Leave everything else as the default.
+**Save** and **Apply Changes**.
+
 
 |LAN2|
 
 Set up LAN3
 '''''''''''
 
-Next, you will have to enable the LAN3 interface. Go to
-**Interfaces ▸ LAN3**, and check the box to **Enable Interface**. LAN3
-interface is set up similarly to how we set up LAN2 in the previous
-section. Use these settings:
+
+Next, you will have to enable the LAN3 interface.
+Go to **Interfaces ▸ LAN3**, and check the box to **Enable Interface**.
+LAN3 interface is set up similarly to how we set up LAN2 in the previous section.
+Use these settings:
+
 
 -  IPv4 Configuration Type: Static IPv4
 -  IPv4 Address: ``10.20.3.1`` (Monitor Gateway IP)
 
-Make sure that the CIDR routing prefix is correct (``/24``). Leave everything else
-as the default. **Save** and **Apply Changes**.
+
+Make sure that the CIDR routing prefix is correct (``/24``).
+Leave everything else as the default.
+**Save** and **Apply Changes**.
+
 
 |LAN3|
 
 Use screenshots of firewall configuration
 '''''''''''''''''''''''''''''''''''''''''
 
-Here are some example screenshots of a working pfSense firewall
-configuration. You will add the firewall rules until they match what is
-shown on the screenshots.
 
-First, we will configure IP and port aliases. Navigate to **Firewall ▸ Aliases**
-and you should see a screen with no currently defined IP aliases:
+Here are some example screenshots of a working pfSense firewall configuration.
+You will add the firewall rules until they match what is shown on the screenshots.
+
+
+First, we will configure IP and port aliases.
+Navigate to **Firewall ▸ Aliases** and you should see a screen with no currently defined IP aliases:
+
 
 |Blank IP Aliases|
+
 
 Next you will click **Add** to add each IP alias.
 You should leave the **Type** as **Host**.
 Make aliases for the following:
+
 
 - ``admin_workstation``: ``10.20.1.2``
 - ``app_server``: ``10.20.2.2``
@@ -399,56 +419,78 @@ Make aliases for the following:
 
 |Add Firewall Alias|
 
+
 Click **Save** to add the alias.
+
 
 Keep adding aliases until the screenshot matches what is shown here:
 
+
 |Firewall IP Aliases Pre Save|
 
-Finally, click **Apply Changes**. This will save your changes. You should see a
-message "The changes have been applied successfully":
+
+Finally, click **Apply Changes**.
+This will save your changes.
+You should see a message "The changes have been applied successfully":
+
 
 |Firewall IP Aliases Post Save|
 
+
 Next click "Ports" for the port aliases, and add the following ports:
+
 
 - OSSEC: ``1514``
 - ossec_agent_auth: ``1515``
 
+
 Your configuration should match this screenshot:
+
 
 |Port Aliases|
 
-Next we will configure firewall rules for each interface. Navigate to **Firewall ▸
-Rules** to add firewall rules for the LAN1, LAN2, and LAN3 interfaces.
+
+Next we will configure firewall rules for each interface.
+Navigate to **Firewall ▸ Rules** to add firewall rules for the LAN1, LAN2, and LAN3 interfaces.
+
 
 .. warning:: Be sure not to delete the Anti-Lockout Rule on the LAN1 interface.
     Deleting this rule will lock you out of the pfSense WebGUI.
 
-Add or remove rules until they match the following screenshots by clicking **Add**
-to add a rule.
+
+Add or remove rules until they match the following screenshots by clicking **Add** to add a rule.
+
 
 **LAN[1] interface:**
 
+
 |Firewall LAN Rules|
+
 
 **LAN2 interface:**
 
+
 |Firewall LAN2 Rules|
+
 
 **LAN3 interface:**
 
+
 |Firewall LAN3 Rules|
 
-Finally, click **Apply Changes**. This will save your changes. You should see a
-message "The changes have been applied successfully". Once you've set up the
-firewall, exit the Unsafe Browser, and continue with the "Keeping pfSense up
-to date" section below.
+
+Finally, click **Apply Changes**.
+This will save your changes.
+You should see a message "The changes have been applied successfully".
+Once you've set up the firewall, exit the Unsafe Browser, and continue with the "Keeping pfSense up to date" section below.
+
 
 Tips for setting up pfSense firewall rules
 ------------------------------------------
 
+
 Here are some general tips for setting up pfSense firewall rules:
+
 
 #. Create aliases for the repeated values (IPs and ports).
 #. pfSense is a stateful firewall, which means that you don't need
@@ -476,38 +518,44 @@ Here are some general tips for setting up pfSense firewall rules:
 Keeping pfSense up to date
 --------------------------
 
-Periodically, the pfSense project maintainers release an update to the
-pfSense software running on your firewall. You will be notified by the
-appearance of text saying that there is a new version in the **Version**
-section of the "Status: Dashboard" page (the home page of the WebGUI).
+
+Periodically, the pfSense project maintainers release an update to the pfSense software running on your firewall.
+You will be notified by the appearance of text saying that there is a new version in the **Version** section of the "Status: Dashboard" page (the home page of the WebGUI).
+
 
 |Update available|
 
-If you see that an update is available, we recommend installing it. Most
-of these updates are for minor bugfixes, but occasionally they can
-contain important security fixes. You should keep apprised of updates
-yourself by checking the `pfSense Blog posts with the "releases"
-tag <https://www.netgate.com/blog/tag/releases>`__.
+
+If you see that an update is available, we recommend installing it.
+Most of these updates are for minor bugfixes, but occasionally they can contain important security fixes.
+You should keep apprised of updates yourself by checking the `pfSense Blog posts with the "releases" tag <https://www.netgate.com/blog/tag/releases>`__.
+
 
 .. note:: You can subscribe to email updates on https://www.netgate.com.
 
-To install the update, click the Download icon next to the update then click
-the "Confirm" button:
+
+To install the update, click the Download icon next to the update then click the "Confirm" button:
+
 
 |Firewall Update Confirmation|
 
+
 You will see a page with a progress bar while pfSense performs the upgrade:
+
 
 |Firewall Update Progress|
 
 .. note:: This may take a while, so be patient!
 
+
 Once it is complete, you will see a notification of successful upgrade:
+
 
 |Firewall Update Complete|
 
-The *Network Firewall* configuration is now complete, allowing you to move
-to the next step: :doc:`setting up the servers. <prepare_servers>`
+
+The *Network Firewall* configuration is now complete, allowing you to move to the next step: :doc:`setting up the servers.
+<prepare_servers>`
 
 
 .. |Wired Connected| image:: ../../images/firewall/wired_connected.png
@@ -540,4 +588,3 @@ to the next step: :doc:`setting up the servers. <prepare_servers>`
 .. |Firewall Update Confirmation| image:: ../../images/firewall/system_update.png
 .. |Firewall Update Progress| image:: ../../images/firewall/system_is_updating.png
 .. |Firewall Update Complete| image:: ../../images/firewall/system_update_complete.png
-

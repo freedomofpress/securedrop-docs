@@ -4,9 +4,9 @@ Decommission SecureDrop
 Protecting, moving, or taking down your SecureDrop instance
 -----------------------------------------------------------
 
-If the location hosting your SecureDrop servers is going to be empty for
-extended periods of time, you should take steps to ensure the security of your
-servers and associated hardware:
+
+If the location hosting your SecureDrop servers is going to be empty for extended periods of time, you should take steps to ensure the security of your servers and associated hardware:
+
 
 1. Ensure that the room where the servers are installed is locked by default,
    and that only authorized personnel have access. If possible, have access
@@ -20,10 +20,10 @@ servers and associated hardware:
    consider switching it to SSH-over-Tor access instead. To do so, you will
    need to update the server configuration using the ``sd-admin`` qube.
 
-In some cases, if you are not able to ensure the security of your instance
-during periods of prolonged absence, it may be better to relocate it, or in
-extreme circumstances, temporarily take it down. If you decide to take down
-your SecureDrop instance, we recommend the following steps:
+
+In some cases, if you are not able to ensure the security of your instance during periods of prolonged absence, it may be better to relocate it, or in extreme circumstances, temporarily take it down.
+If you decide to take down your SecureDrop instance, we recommend the following steps:
+
 
 1. Consult with Journalists using the system, to ensure that any active
    Sources are aware of the situation, and that source conversations can
@@ -44,16 +44,15 @@ your SecureDrop instance, we recommend the following steps:
              them, this would still provide valuable metadata about source
              conversations.
 
-In most cases, restoring the instance, whether in their original hosting
-location or elsewhere, is a matter of reconnecting the servers to the
-firewall, attaching a WAN connection that allows unfiltered access to Tor to
-the firewall WAN port, and powering everything on.
+
+In most cases, restoring the instance, whether in their original hosting location or elsewhere, is a matter of reconnecting the servers to the firewall, attaching a WAN connection that allows unfiltered access to Tor to the firewall WAN port, and powering everything on.
+
 
 Permanently decommissioning SecureDrop
 --------------------------------------
 
-The following steps will guide you through the decommissioning of your
-SecureDrop instance.
+
+The following steps will guide you through the decommissioning of your SecureDrop instance.
 
 #. **Put a notice in advance on your Landing Page to inform sources that your
    instance will soon be retired.**
@@ -159,4 +158,3 @@ SecureDrop instance.
    (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__)
    or via the `support portal <https://support.freedom.press/>`__.
    
-

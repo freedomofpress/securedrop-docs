@@ -1,8 +1,9 @@
 Off-board Administrators and Journalists
 ==========================================
 
-When Journalists and SecureDrop Administrators leave your organization, it is
-important to off-board them from SecureDrop.
+
+When Journalists and SecureDrop Administrators leave your organization, it is important to off-board them from SecureDrop.
+
 
 .. important:: Additional measures may need to be taken if the
    user's departure is on unfriendly terms. These measures will vary
@@ -50,8 +51,8 @@ Additional steps for off-boarding Administrators
 Rotate SSH keys on the SecureDrop servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are concerned that the user may have a copy of
-the SSH key, you should rotate the key in the following manner.
+
+If you are concerned that the user may have a copy of the SSH key, you should rotate the key in the following manner.
 
 
 #.  Create a new SSH keypair.
@@ -59,11 +60,17 @@ the SSH key, you should rotate the key in the following manner.
 
     .. code:: sh
 
+
       ssh-keygen -t rsa -b 4096
 
-    and make sure to change the key name. This is the only parameter you need
-    to change. For example, instead of ``/home/amnesia/.ssh/id_rsa``, call the
-    key ``/home/amnesia/.ssh/newkey``. You don't need a passphrase for the key.
+
+    and make sure to change the key name.
+    This is the only parameter you need to change.
+    For example, instead of ``/home/amnesia/.
+    ssh/id_rsa``, call the key ``/home/amnesia/.
+    ssh/newkey``.
+    You don't need a passphrase for the key.
+
 
     .. _ssh_add_pubkey:
 
@@ -73,13 +80,19 @@ the SSH key, you should rotate the key in the following manner.
 
     .. code:: sh
 
-      scp -O /home/amnesia/.ssh/newkey.pub scp://app
+
+      scp -O /home/amnesia/.
+      ssh/newkey.pub scp://app
+
 
     and
 
+
     .. code:: sh
 
-      scp -O /home/amnesia/.ssh/newkey.pub scp://mon
+
+      scp -O /home/amnesia/.
+      ssh/newkey.pub scp://mon
 
 
 #.  Add this key to the list of authorized keys.
@@ -88,9 +101,14 @@ the SSH key, you should rotate the key in the following manner.
 
     .. code:: sh
 
-      cat newkey.pub >> ~/.ssh/authorized_keys
 
-    Be sure to use the command as above so that you append the key, instead of replacing the file. While you are still on the Application Server, you can then delete the file ``newkey.pub`` from wherever you scp'd it to (i.e. your home directory). Repeat this process with the Monitor Server.
+      cat newkey.pub >> ~/.
+      ssh/authorized_keys
+
+
+    Be sure to use the command as above so that you append the key, instead of replacing the file.
+    While you are still on the Application Server, you can then delete the file ``newkey.pub`` from wherever you scp'd it to (i.e. your home directory).
+    Repeat this process with the Monitor Server.
 
 
 #.  Rename SSH keys.
@@ -98,8 +116,13 @@ the SSH key, you should rotate the key in the following manner.
 
     .. code:: sh
 
-      mv /home/amnesia/.ssh/id_rsa /home/amnesia/.ssh/id_rsa_old
-      mv /home/amnesia/.ssh/id_rsa.pub /home/amnesia/.ssh/id_rsa_old.pub
+
+      mv /home/amnesia/.
+      ssh/id_rsa /home/amnesia/.
+      ssh/id_rsa_old mv /home/amnesia/.
+      ssh/id_rsa.pub /home/amnesia/.
+      ssh/id_rsa_old.pub
+
 
     Then, rename your ``newkey`` and ``newkey.pub`` to ``id_rsa`` and ``id_rsa.pub``.
 
@@ -116,15 +139,18 @@ the SSH key, you should rotate the key in the following manner.
          access. Their public keys will have to be re-appended to the
          ``authorized_keys`` file on each server, as in step 3.
 
+
    From an ``sd-admin`` qube, run
+
 
     .. code:: sh
 
+
       securedrop-admin reset_admin_access
 
-   This removes all other SSH keys, except for the new key that you are
-   currently using, from the list of authorized keys on the Application and
-   Monitor Servers.
+
+   This removes all other SSH keys, except for the new key that you are currently using, from the list of authorized keys on the Application and Monitor Servers.
+
 
 .. _rotate_submission_key:
 
@@ -133,10 +159,10 @@ Rotate the Submission Key
 
 .. TODO Update instructions for Qubes
 
-The Submission Private Key is held on the airgapped Secure Viewing Station,
-and is not normally accessed by SecureDrop users anywhere but on the Secure Viewing Station.
-Therefore, we recommend rotating the Submission Key under the following
-circumstances:
+
+The Submission Private Key is held on the airgapped Secure Viewing Station, and is not normally accessed by SecureDrop users anywhere but on the Secure Viewing Station.
+Therefore, we recommend rotating the Submission Key under the following circumstances:
+
 
 - If the user's departure was not amicable
 - If the user is still holding on to any Secure Viewing Station USB flash drive or
@@ -144,11 +170,12 @@ circumstances:
 - If you have any other reason to believe the Submission Private Key or the
   entire Secure Viewing Station USB flash drive may have been copied or compromised.
 
-You should still keep the old key on the Secure Viewing Station, or else you
-will not be able to decrypt submissions that were sent to you while that key
-was in effect.
+
+You should still keep the old key on the Secure Viewing Station, or else you will not be able to decrypt submissions that were sent to you while that key was in effect.
+
 
 **You will need:**
+
 
 - A LUKS-encrypted USB flash drive
 
@@ -180,56 +207,53 @@ On the Secure Viewing Station
 
    .. code:: sh
 
+
       gpg --list-keys
 
-   In the output, locate the "Old SecureDrop Submission Key". It should
-   look similar to this:
+
+   In the output, locate the "Old SecureDrop Submission Key".
+   It should look similar to this:
+
 
    .. code:: text
 
-      pub   rsa4096/0x1CB396626CA370AB 2022-08-16 [SC]
-            Key fingerprint = 6A7F 116B 3C22 4F36 7275 236A 1CB3 9662 6CA3 70AB
-      uid         [ultimate] Old SecureDrop Submission Key (Retired 2022-08-16)
-      uid         [ultimate] SecureDrop (SecureDrop Submission Key)
-      sub   rsa4096/0x228C92459E3D16DE 2022-08-16 [E]
 
-   Make note of the ID of the key, which is the portion of the key after the slash
-   in the first line. In this example, the key ID would be: ``0x1CB396626CA370AB``
+      pub   rsa4096/0x1CB396626CA370AB 2022-08-16 [SC] Key fingerprint = 6A7F 116B 3C22 4F36 7275 236A 1CB3 9662 6CA3 70AB uid         [ultimate] Old SecureDrop Submission Key (Retired 2022-08-16) uid         [ultimate] SecureDrop (SecureDrop Submission Key) sub   rsa4096/0x228C92459E3D16DE 2022-08-16 [E]
+
+
+   Make note of the ID of the key, which is the portion of the key after the slash in the first line.
+   In this example, the key ID would be: ``0x1CB396626CA370AB``
+
 
 #. Generate a revocation certificate, by running the command below
    (replacing ``<KEY_ID>`` with the ID you noted in the step above):
 
    .. code:: sh
 
+
       gpg --output revoke.asc --gen-revoke <KEY_ID>
 
-   This will launch an interactive prompt, where you can supply the following
-   values:
+
+   This will launch an interactive prompt, where you can supply the following values:
+
 
    .. code:: text
 
-      Create a revocation certificate for this key? (y/N) y
-      Please select the reason for the revocation:
-        0 = No reason specified
-        1 = Key has been compromised
-        2 = Key is superseded
-        3 = Key is no longer used
-        Q = Cancel
-      (Probably you want to select 1 here)
-      Your decision? 2
-      Enter an optional description; end it with an empty line:
-      > <Just Press Enter>
-      Reason for revocation: Key is superseded
-      (No description given)
-      Is this okay? (y/N) y
-      ASCII armored output forced.
+
+      Create a revocation certificate for this key?
+      (y/N) y Please select the reason for the revocation: 0 = No reason specified 1 = Key has been compromised 2 = Key is superseded 3 = Key is no longer used Q = Cancel (Probably you want to select 1 here) Your decision?
+      2 Enter an optional description; end it with an empty line: > <Just Press Enter> Reason for revocation: Key is superseded (No description given) Is this okay?
+      (y/N) y ASCII armored output forced.
       Revocation certificate created.
+
 
 #. Import the revocation certificate:
 
    .. code:: sh
 
+
       gpg --import revoke.asc
+
 
 #. Return to Kleopatra, and make sure the key is now marked as **Revoked**.
 
@@ -245,4 +269,3 @@ On the Secure Viewing Station
 .. |edit key name| image:: ../../images/offboard/change_name.png
 .. |new list| image:: ../../images/offboard/new_list.png
 .. |revoked| image:: ../../images/offboard/revoked.png
-

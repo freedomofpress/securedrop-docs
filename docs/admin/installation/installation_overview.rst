@@ -4,35 +4,55 @@ Installation overview
 Migrating from a Tails-based SecureDrop
 ---------------------------------------
 
+
 If you are migrating from an older SecureDrop, using the separate Tails-based "Secure Viewing Station", "Journalist workstation" and "Admin Workstation" USB flash drives, then skip to the :ref:`Migration Overview<migration_overview>`.
+
 
 Setting expectations
 --------------------
 
-SecureDrop is a technical tool. It is designed to protect Journalists and Sources, but no tool can guarantee safety. This guide will instruct you in installing and configuring SecureDrop, but it does not explain how to use it safely and effectively. The :ref:`deployment guide <deployment>` contains best practices for working with SecureDrop. Make sure to read it after completing the installation.
 
-Setting up SecureDrop is a multi-step process, where each step builds on the steps that come before it. It's important that you treat the installation as a complete process, making sure not to skip any portions of the install guide or jump ahead to later content.
+SecureDrop is a technical tool.
+It is designed to protect Journalists and Sources, but no tool can guarantee safety.
+This guide will instruct you in installing and configuring SecureDrop, but it does not explain how to use it safely and effectively.
+The :ref:`deployment guide <deployment>` contains best practices for working with SecureDrop.
+Make sure to read it after completing the installation.
 
-Once you have all the necessary hardware, :doc:`setting up SecureDrop <install>` will take at least a day's work. After installation, you will need at least one more day to :ref:`complete and test <Deployment>` your setup.
+
+Setting up SecureDrop is a multi-step process, where each step builds on the steps that come before it.
+It's important that you treat the installation as a complete process, making sure not to skip any portions of the install guide or jump ahead to later content.
+
+
+Once you have all the necessary hardware, :doc:`setting up SecureDrop <install>` will take at least a day's work.
+After installation, you will need at least one more day to :ref:`complete and test <Deployment>` your setup.
+
 
 Installation support
 --------------------
 
+
 Any organization can install SecureDrop for free and also make modifications because the project is open source.
+
 
 Because the installation and operation are complex, and because SecureDrop can only be as secure as the  operational security practices followed by its users, Freedom of the Press Foundation will also help  organizations install SecureDrop and train *Journalists* and administrators.
 
-If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us. We do ask news organizations that can afford to pay for installation support, training and maintenance to do so.
 
-As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train *Journalists* to use it. (For  pro-bono support, we request that our travel costs
-are covered.) 
+If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us.
+We do ask news organizations that can afford to pay for installation support, training and maintenance to do so.
+
+
+As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train *Journalists* to use it.
+(For  pro-bono support, we request that our travel costs are covered.)
+
 
 .. include:: ../../includes/provide-feedback.txt
 
 Technical summary
 -----------------
 
+
 During this process, you'll set up at least four devices:
+
 
 - Admin Workstation:
    A laptop running the Qubes OS operating system configured as an Admin Workstation, that you use to install and administer SecureDrop on the servers via SSH. If necessary (i.e. in a small newsroom), the same laptop may also serve as a :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` where Journalists decrypt, view, and export submitted documents. For a larger newsroom, you may set up additional SecureDrop Workstations as needed for Journalist use.
@@ -42,8 +62,10 @@ During this process, you'll set up at least four devices:
    An Ubuntu server that monitors the Application Server with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
 - Network Firewall
    A hardware firewall dedicated to your SecureDrop installation. 
-   
-A summary of the major steps is as follow:  
+
+
+A summary of the major steps is as follow:
+
 
 #. Acquire compatible hardware.
 #. Prepare email accounts and GPG keys for alert emails.
@@ -57,7 +79,9 @@ A summary of the major steps is as follow:
 #. Create the first Administrator user.
 #. Test the installation.
 
+
 Optionally:
+
 
 #. Prepare additional Journalist Workstations for use by Journalists.
 #. Prepare encrypted Export Devices.
@@ -66,9 +90,13 @@ Optionally:
 Tracking your progress
 ----------------------
 
-To assist in the installation process, we offer a `SecureDrop Installation Worksheet`_, which you can print out and complete as you go. Only complete this worksheet on paper, never electronically.
+
+To assist in the installation process, we offer a `SecureDrop Installation Worksheet`_, which you can print out and complete as you go.
+Only complete this worksheet on paper, never electronically.
+
 
 It is **critical** that you destroy this worksheet when your installation is complete and all of your passphrases have been safely stored in a password manager.
+
 
 .. warning:: Remember to destroy the `SecureDrop Installation Worksheet`_ after the
              installation is complete.
@@ -81,7 +109,10 @@ Minimum security requirements for a SecureDrop Workstation
 
 .. TODO Clarify differences between Journalist and Admin Workstations
 
-A SecureDrop Workstation contains both a copy of the :ref:`Submission Private Key<glossary_submission_key>`, and encrypted and decrypted messages and submissions. It's critical to ensure that appropriate security practices are applied to a SecureDrop Workstation.
+
+A SecureDrop Workstation contains both a copy of the :ref:`Submission Private Key<glossary_submission_key>`, and encrypted and decrypted messages and submissions.
+It's critical to ensure that appropriate security practices are applied to a SecureDrop Workstation.
+
 
 - SecureDrop Workstations should always be powered off when not in use, and
   stored somewhere secure. Never leave them unattended.

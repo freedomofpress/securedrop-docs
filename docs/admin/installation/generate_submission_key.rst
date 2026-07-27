@@ -3,15 +3,15 @@ Generate the Submission Key
 
 .. These instructions will be replaced with whatever mechanism the all-on-Qubes SecureDrop Workstation uses to generate the submission key.
 
-When a document or message is submitted to SecureDrop by a Source, it is
-automatically encrypted with the :ref:`Submission Key<glossary_submission_key>`. The private part
-of this key is only stored on the Secure Viewing Station which is never
-connected to the Internet. SecureDrop submissions can only be decrypted and
-read on the Secure Viewing Station.
 
-We will now generate the Submission Key. If you aren't still logged into your
-Secure Viewing Station from the previous step, boot it using its Tails USB
-flash drive, with persistence enabled.
+When a document or message is submitted to SecureDrop by a Source, it is automatically encrypted with the :ref:`Submission Key<glossary_submission_key>`.
+The private part of this key is only stored on the Secure Viewing Station which is never connected to the Internet.
+SecureDrop submissions can only be decrypted and read on the Secure Viewing Station.
+
+
+We will now generate the Submission Key.
+If you aren't still logged into your Secure Viewing Station from the previous step, boot it using its Tails USB flash drive, with persistence enabled.
+
 
 .. important:: The private key you will generate in the following steps is one of the most
   important secrets associated with your SecureDrop installation. This procedure
@@ -56,37 +56,40 @@ Create the key
 Export the Submission Public Key
 ----------------------------------
 
-Navigate to **Apps ▸ Accessories ▸ Kleopatra** to open a
-graphical interface to manage GPG keys. Once Kleopatra opens you will find
-a list of keys, including the SecureDrop Submission Key you just created.
 
-Click to select the key, then click the "Export…" button in the toolbar
-above.
+Navigate to **Apps ▸ Accessories ▸ Kleopatra** to open a graphical interface to manage GPG keys.
+Once Kleopatra opens you will find a list of keys, including the SecureDrop Submission Key you just created.
+
+
+Click to select the key, then click the "Export…" button in the toolbar above.
+
 
 |My Keys|
 
-Save the key to the *Transfer Device* by changing the location to
-``/media/amnesia/Transfer Device``, then set the filename to 
-``SecureDrop.asc``. Once that is set, click the *Save* button to finish 
-exporting the key to the transfer device.
+
+Save the key to the *Transfer Device* by changing the location to ``/media/amnesia/Transfer Device``, then set the filename to ``SecureDrop.asc``.
+Once that is set, click the *Save* button to finish exporting the key to the transfer device.
+
 
 .. note:: This is the public key only.
 
 |Export Key|
 
+
 After exporting the public key, you will be returned back to the list of keys.
-You'll need to provide the fingerprint of the Submission Key during the
-installation. Go ahead and double-click on the Submission Key, then
-write down the 40 hexadecimal digits under *Fingerprint*.
+You'll need to provide the fingerprint of the Submission Key during the installation.
+Go ahead and double-click on the Submission Key, then write down the 40 hexadecimal digits under *Fingerprint*.
+
 
 |Fingerprint|
 
 .. note:: Your fingerprint will be different from the one in the example
           screenshot.
 
-At this point, you are done with the Secure Viewing Station for now. You
-can shut down Tails, grab the Admin Workstation USB flash drive, and move over to your regular
-workstation.
+
+At this point, you are done with the Secure Viewing Station for now.
+You can shut down Tails, grab the Admin Workstation USB flash drive, and move over to your regular workstation.
+
 
 .. |GPG generate key| image:: ../../images/install/run_gpg_gen_key.png
 .. |GPG key options| image:: ../../images/install/key_options.png

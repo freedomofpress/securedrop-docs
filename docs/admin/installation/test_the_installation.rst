@@ -9,17 +9,20 @@ Test Connectivity
 SSH to both servers over Tor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Assuming you haven't disabled SSH over Tor, SSH access will be
-restricted to the Tor network.
+
+Assuming you haven't disabled SSH over Tor, SSH access will be restricted to the Tor network.
+
 
 On the Admin Workstation, you should be able to SSH to the Application Server and the Monitor Server from the ``sd_admin`` qube ::
+
 
    ssh app
    ssh mon
 
-The SSH aliases should have been configured automatically by running
-the ``securedrop-admin localconfig`` command. If you're unable to connect via aliases,
-try using the verbose command format to troubleshoot: ::
+
+The SSH aliases should have been configured automatically by running the ``securedrop-admin localconfig`` command.
+If you're unable to connect via aliases, try using the verbose command format to troubleshoot: ::
+
 
    ssh <username>@<app .onion>
    ssh <username>@<mon .onion>
@@ -33,14 +36,17 @@ try using the verbose command format to troubleshoot: ::
 Log in to both servers via TTY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All access to the SecureDrop servers should be performed over SSH from the
-Admin Workstation. To aid in troubleshooting, login via a physical keyboard
-attached to the server is also supported.
+
+All access to the SecureDrop servers should be performed over SSH from the Admin Workstation.
+To aid in troubleshooting, login via a physical keyboard attached to the server is also supported.
+
 
 Sanity-check the installation
 -----------------------------
 
+
 On each server:
+
 
 #. Check that you can execute privileged commands by running ``sudo su``.
 #. Verify that you are booted into a grsec kernel: run ``uname -r``
@@ -51,7 +57,9 @@ On each server:
    started. If not, review our :doc:`OSSEC Alerts
    Guide </admin/reference/ossec_alerts>`.
 
+
 On the Application Server:
+
 
 #. Check the AppArmor status with ``sudo aa-status``. On a production
    instance all profiles should be in ``enforce`` mode.
@@ -97,5 +105,5 @@ Test the web interfaces
    real use. On the main Admin Interface page, select all Sources and
    click **Delete selected**.
 
-Once you've tested the installation and verified that everything is
-working, see :doc:`How to Use SecureDrop <../../journalist/journalist>`.
+
+Once you've tested the installation and verified that everything is working, see :doc:`How to Use SecureDrop <../../journalist/journalist>`.

@@ -10,26 +10,26 @@ will need to provision several unique subnets, which should not conflict
 with the network configuration on the WAN interface. If you are unsure,
 consult your local system administrator.
 
-Many firewalls, including the recommended OPNSense device,
-automatically set up the LAN interface on ``192.168.1.1/24``. This
-particular private network is also a very common choice for home and
-office routers. If you are connecting the firewall to a router with the
-same subnet (common in a small office, home, or testing environment),
-you will probably be unable to connect to the network at first. However,
-you will be able to connect from the LAN to the firewall's Web GUI,
-and from there you will be able to configure the network so it is working correctly.
 
-The recommended TekLager APU4D4 has 4 NICs: WAN, LAN,
-OPT1, and OPT2. This allows for a dedicated port on the network
-firewall for each component of SecureDrop (Application Server,
-Monitor Server, and Admin Workstation).
+Many firewalls, including the recommended OPNSense device, automatically set up the LAN interface on ``192.168.1.1/24``.
+This particular private network is also a very common choice for home and office routers.
+If you are connecting the firewall to a router with the same subnet (common in a small office, home, or testing environment), you will probably be unable to connect to the network at first.
+However, you will be able to connect from the LAN to the firewall's Web GUI, and from there you will be able to configure the network so it is working correctly.
 
-Depending on your network configuration, you should define the following
-values before continuing.
+
+The recommended TekLager APU4D4 has 4 NICs: WAN, LAN, OPT1, and OPT2.
+This allows for a dedicated port on the network firewall for each component of SecureDrop (Application Server, Monitor Server, and Admin Workstation).
+
+
+Depending on your network configuration, you should define the following values before continuing.
+
 
 .. raw:: html
 
-   <!-- -->
+
+   <!
+   -- -->
+
 
 -  Admin Subnet: ``10.20.1.0/24``
 -  Admin Gateway: ``10.20.1.1``
@@ -37,7 +37,10 @@ values before continuing.
 
 .. raw:: html
 
-   <!-- -->
+
+   <!
+   -- -->
+
 
 -  Application Subnet: ``10.20.2.0/24``
 -  Application Gateway: ``10.20.2.1``
@@ -45,7 +48,10 @@ values before continuing.
 
 .. raw:: html
 
-   <!-- -->
+
+   <!
+   -- -->
+
 
 -  Monitor Subnet: ``10.20.3.0/24``
 -  Monitor Gateway: ``10.20.3.1``
@@ -54,16 +60,18 @@ values before continuing.
 Initial configuration
 ---------------------
 
+
 Unpack the firewall, connect the power, and power on the device.
 
-We will use the OPNSense Web GUI to do the initial configuration of the
-network firewall.
+
+We will use the OPNSense Web GUI to do the initial configuration of the network firewall.
+
 
 Connect to the OPNSense web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. If you have not already done so, boot the Admin Workstation. 
-   
+
 #. Connect the Admin Workstation to the LAN interface. You should see
    a popup notification in Tails that says "Connection Established". If you click
    on the network icon in the upper right of the Tails Desktop, you should see that the "Wired Connection" is active:
@@ -121,40 +129,44 @@ Connect to the OPNSense web GUI
 
    |OPNSENSE - Default Login|
 
-If this is your first time logging in to the firewall, the setup wizard will be
-displayed. You should not step through it at this point, however, as there are
-other tasks to complete. To exit, click the OPNSense logo in the top left corner
-of the screen.
+
+If this is your first time logging in to the firewall, the setup wizard will be displayed.
+You should not step through it at this point, however, as there are other tasks to complete.
+To exit, click the OPNSense logo in the top left corner of the screen.
+
 
 Set a strong password
 ~~~~~~~~~~~~~~~~~~~~~
 
-Navigate to **System ▸ Access ▸ Users** and click the edit button for the ``root``
-user. On the subsequent page, set a strong admin password. We recommend generating
-a strong passphrase with KeePassXC and saving it in the Tails Persistent folder using
-the provided KeePassXC database template. Two-factor authentication will be enabled 
-in a later step.
+
+Navigate to **System ▸ Access ▸ Users** and click the edit button for the ``root`` user.
+On the subsequent page, set a strong admin password.
+We recommend generating a strong passphrase with KeePassXC and saving it in the Tails Persistent folder using the provided KeePassXC database template.
+Two-factor authentication will be enabled in a later step.
+
 
 Set alternate hostnames
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Before you can set up the hardware firewall, you will need to set the
-**Alternate Hostnames** setting.
 
-First, navigate to **System ▸ Settings ▸ Administration**.  In the **Web GUI** section,
-update the **Alternate Hostnames** field with the values ``192.168.1.1`` and the
-IP address of the *Admin Gateway* (``10.20.1.1`` if you are using the recommended
-default values), separated by a space.
+Before you can set up the hardware firewall, you will need to set the **Alternate Hostnames** setting.
+
+
+First, navigate to **System ▸ Settings ▸ Administration**.
+In the **Web GUI** section, update the **Alternate Hostnames** field with the values ``192.168.1.1`` and the IP address of the *Admin Gateway* (``10.20.1.1`` if you are using the recommended default values), separated by a space.
+
 
    |OPNSense - alternate hostnames|
 
+
 Finally, scroll to the bottom of the page and click **Save**.
+
 
 Configure interfaces via the Setup Wizard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click
-**Next**.
+
+To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click **Next**.
 
 
 #. **General Information**: Leave your hostname as the default, ``OPNsense``.
@@ -164,9 +176,12 @@ To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click
    we recommend using Google's DNS servers: ``8.8.8.8`` and ``8.8.4.4``.
    Uncheck the **Override DNS** checkbox.
 
+
    In the **Unbound DNS** section, uncheck **Enable Resolver**.
 
+
    Click **Next**.
+
 
    |OPNSense General Info|
 
@@ -177,7 +192,9 @@ To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click
    enter here. For many environments, the default of DHCP will work and the
    rest of the fields can be left at their default values.
 
+
    Click **Next** to proceed.
+
 
 #. **Configure LAN Interface**: Use the IP address of the *Admin Gateway*
    (``10.20.1.1``) and the subnet mask (``/24``) of the *Admin Subnet*. Click
@@ -193,99 +210,101 @@ To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click
 #. **Reload Configuration**: Click **Reload** to apply the changes you made in the
    Setup Wizard.
 
-At this point, since the LAN subnet settings were changed from
-their defaults, you will no longer be able to connect after reloading
-the firewall and the reload will time out. This is not an
-error - the firewall has reloaded and is working correctly.
 
-To connect to the new LAN interface, unplug and reconnect your network cable to
-get a new network address assigned via DHCP. Note that if you used a subnet
-with fewer addresses than ``/24``, the default DHCP configuration in
-OPNSense may not work. In this case, you should assign the Admin
-Workstation a static IP address that is known to be in the subnet to
-continue.
+At this point, since the LAN subnet settings were changed from their defaults, you will no longer be able to connect after reloading the firewall and the reload will time out.
+This is not an error - the firewall has reloaded and is working correctly.
 
-The Web GUI will now be available on the *Admin Gateway* IP address. Navigate
-to ``https://<Admin Gateway IP>`` in the Unsafe Browser and log in to the ``root``
-account using an OTP token and the passphrase you just set.
 
-Once you've logged in to the Web GUI, you are ready to continue configuring
-the firewall.
+To connect to the new LAN interface, unplug and reconnect your network cable to get a new network address assigned via DHCP.
+Note that if you used a subnet with fewer addresses than ``/24``, the default DHCP configuration in OPNSense may not work.
+In this case, you should assign the Admin Workstation a static IP address that is known to be in the subnet to continue.
+
+
+The Web GUI will now be available on the *Admin Gateway* IP address.
+Navigate to ``https://<Admin Gateway IP>`` in the Unsafe Browser and log in to the ``root`` account using an OTP token and the passphrase you just set.
+
+
+Once you've logged in to the Web GUI, you are ready to continue configuring the firewall.
+
 
 Connect interfaces and test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that the initial configuration is completed, you can connect the WAN
-port without potentially conflicting with the default LAN settings (as
-explained earlier). Connect the WAN port to the external network. You
-can watch the WAN entry in the Interfaces table on the OPNSense Dashboard
-homepage to see as it changes from down (red arrow pointing down) to up
-(green arrow pointing up). This usually takes several seconds. The WAN's
-IP address will be shown once it comes up.
 
-Finally, test connectivity to make sure you are able to connect to the
-Internet through the WAN. The easiest way to do this is to open another tab in
-the Unsafe Browser and visit a host that you expect to be up (e.g. ``google.com``).
+Now that the initial configuration is completed, you can connect the WAN port without potentially conflicting with the default LAN settings (as explained earlier).
+Connect the WAN port to the external network.
+You can watch the WAN entry in the Interfaces table on the OPNSense Dashboard homepage to see as it changes from down (red arrow pointing down) to up (green arrow pointing up).
+This usually takes several seconds.
+The WAN's IP address will be shown once it comes up.
+
+
+Finally, test connectivity to make sure you are able to connect to the Internet through the WAN.
+The easiest way to do this is to open another tab in the Unsafe Browser and visit a host that you expect to be up (e.g. ``google.com``).
+
 
 Update OPNSense to the latest version
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You should update OPNSense to the latest version available before proceeding
-with the rest of the configuration. Navigate to **Lobby ▸ Dashboard** and click
-**Click to check for updates** to start the process, and follow any on-screen instructions
-to complete the update. Note that a reboot may be required, and you may also need
-to apply several updates in a row to get to the latest version.
+
+You should update OPNSense to the latest version available before proceeding with the rest of the configuration.
+Navigate to **Lobby ▸ Dashboard** and click **Click to check for updates** to start the process, and follow any on-screen instructions to complete the update.
+Note that a reboot may be required, and you may also need to apply several updates in a row to get to the latest version.
+
 
 |OPNSense - no updates|
 
 Enable two-factor authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-OPNSense supports two-factor authentication (2FA) via mobile apps such as Google Authenticator
-or FreeOTP. To set it up, first make sure you have a mobile device available with
-your choice of 2FA app.
 
-Next, in the OPNSense Web GUI, navigate to **System ▸ Access ▸ Servers** and
-click **+** to add a new server.
+OPNSense supports two-factor authentication (2FA) via mobile apps such as Google Authenticator or FreeOTP.
+To set it up, first make sure you have a mobile device available with your choice of 2FA app.
+
+
+Next, in the OPNSense Web GUI, navigate to **System ▸ Access ▸ Servers** and click **+** to add a new server.
+
 
 |OPNSense - auth server|
 
 .. note:: The time on your firewall must be set correctly for 2FA to work properly.
     This should happen automatically once the WAN connection is established.
 
-On the next page, enter ``TOTP Local`` in the **Descriptive name** field and choose
-``Local + Timebased One Time Password`` from the **Type** dropdown. Leave the other
-fields at their default values and click **Save**
 
-Next, navigate to **System ▸ Access ▸ Users** and click the edit button for the ``root``
-user. Scroll down the page to the **OTP seed** section and check the 
-**Generate new secret (160bit)** checkbox. Finally, click **Save**.
+On the next page, enter ``TOTP Local`` in the **Descriptive name** field and choose ``Local + Timebased One Time Password`` from the **Type** dropdown.
+Leave the other fields at their default values and click **Save**
+
+
+Next, navigate to **System ▸ Access ▸ Users** and click the edit button for the ``root`` user.
+Scroll down the page to the **OTP seed** section and check the **Generate new secret (160bit)** checkbox.
+Finally, click **Save**.
+
 
 |OPNSense - otpcheck|
 
-Once the page has reloaded, scroll down to the **OTP QR code** section and click
-**Click to unhide**, then scan the generated QR code with your mobile auth application
-of choice.
+
+Once the page has reloaded, scroll down to the **OTP QR code** section and click **Click to unhide**, then scan the generated QR code with your mobile auth application of choice.
+
 
 |OPNSense - qrscan|
 
-If you wish, you may also save the OTP seed value displayed above the QR code in
-your Tails KeePassXC database - this isn't required, but will allow you to set up TOTP
-on another mobile device if you need to in the future.
+
+If you wish, you may also save the OTP seed value displayed above the QR code in your Tails KeePassXC database - this isn't required, but will allow you to set up TOTP on another mobile device if you need to in the future.
+
 
 Test your new login credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To verify that your new password and OTP secret are working, navigate to **System ▸
-Access ▸ Tester**. Select ``TOTP Local`` from the **Authentication Server** dropdown,
-enter the ``root`` username in the **Username** field, and enter your OTP token and 
-password concatenated like ``123456PASSWORD`` in the **Password** field.
+
+To verify that your new password and OTP secret are working, navigate to **System ▸ Access ▸ Tester**.
+Select ``TOTP Local`` from the **Authentication Server** dropdown, enter the ``root`` username in the **Username** field, and enter your OTP token and password concatenated like ``123456PASSWORD`` in the **Password** field.
 Then click **Test**.
+
 
 |OPNSense - testuserhappy|
 
-If the test fails, make sure you have used the correct OTP code and password, and
-edit the ``root`` user record as necessary.
+
+If the test fails, make sure you have used the correct OTP code and password, and edit the ``root`` user record as necessary.
+
 
 .. note:: You must enter the OTP token and passphrase concatenated as a single
     string like ``123456PASSWORD`` in the **Password** field.
@@ -294,9 +313,11 @@ edit the ``root`` user record as necessary.
   will be locked out of the firewall Web GUI and console if the account is not
   set up correctly!
 
-Finally,  navigate to **System ▸ Settings ▸ Administration** and scroll down to the
-**Authentication** section at the bottom of the page. In the **Server** dropdown,
-select ``TOTP Local`` and deselect ``Local Database.``. Click **Save**.
+
+Finally,  navigate to **System ▸ Settings ▸ Administration** and scroll down to the **Authentication** section at the bottom of the page.
+In the **Server** dropdown, select ``TOTP Local`` and deselect ``Local Database.``.
+Click **Save**.
+
 
    |OPNSense - totp server|
 
@@ -304,39 +325,44 @@ select ``TOTP Local`` and deselect ``Local Database.``. Click **Save**.
 Disable DHCP on the firewall
 ----------------------------
 
-OPNSense runs a DHCP server on the LAN interface by default. At this
-stage in the documentation, the Admin Workstation likely has an IP address
-assigned via that DHCP server.
 
-In order to tighten the firewall rules as much as possible, we recommend
-disabling the DHCP server and assigning a static IP address to the Admin
-Workstation instead.
+OPNSense runs a DHCP server on the LAN interface by default.
+At this stage in the documentation, the Admin Workstation likely has an IP address assigned via that DHCP server.
+
+
+In order to tighten the firewall rules as much as possible, we recommend disabling the DHCP server and assigning a static IP address to the Admin Workstation instead.
+
 
 Disable DHCP server on the LAN interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 To disable DHCP, navigate to **Services ▸ DHCPv4 ▸ [LAN]** in the Web GUI.
-Uncheck the **Enable DHCP server on the LAN interface** checkbox, scroll down,
-and click **Save**.
+Uncheck the **Enable DHCP server on the LAN interface** checkbox, scroll down, and click **Save**.
+
 
 |OPNSense - Disable DHCP|
 
 Assign a static IP address to the Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 Now you will need to assign a static IP to the Admin Workstation.
 
-You can easily check your current IP address by *clicking* the top right of
-the menu bar, clicking on the **Wired Connection** and then clicking **Wired
-Settings**.
+
+You can easily check your current IP address by *clicking* the top right of the menu bar, clicking on the **Wired Connection** and then clicking **Wired Settings**.
+
 
 |Wired Settings|
 
+
 From here you can click on the cog beside the wired network connection:
 
-This will take you to the network settings. Change to the **IPv4** tab. Ensure
-that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
-**DNS** is in the "off" position, as highlighted in the screenshot below:
+
+This will take you to the network settings.
+Change to the **IPv4** tab.
+Ensure that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for **DNS** is in the "off" position, as highlighted in the screenshot below:
+
 
 .. note:: The Unsafe Browser will not launch when using a manual
 	  network configuration if it does not have DNS servers
@@ -347,12 +373,12 @@ that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for
 	  so you can continue to use the Unsafe Browser to access the
 	  WebGUI in future sessions.
 
-	  We recommend keeping it simple and using the same DNS
-	  servers that you used for the network firewall in the setup
-	  wizard.
+
+	  We recommend keeping it simple and using the same DNS servers that you used for the network firewall in the setup wizard.
 
 
 Fill in the static networking information for the Admin Workstation:
+
 
 -  Address: ``10.20.1.2``
 -  Netmask: ``255.255.255.0``
@@ -360,36 +386,34 @@ Fill in the static networking information for the Admin Workstation:
 
 |4 NIC Admin Workstation Static IP Configuration|
 
-Click **Apply**. If the network does not come up within 15 seconds or
-so, try disconnecting and reconnecting your network cable to trigger the
-change. You will need you have succeeded in connecting with your new
-static IP when you are able to connect using the Tor Connection assistant,
-and you see the message "Connected to Tor successfully".
+
+Click **Apply**.
+If the network does not come up within 15 seconds or so, try disconnecting and reconnecting your network cable to trigger the change.
+You will need you have succeeded in connecting with your new static IP when you are able to connect using the Tor Connection assistant, and you see the message "Connected to Tor successfully".
+
 
 Troubleshooting: DNS servers and the Unsafe Browser
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
-After saving the new network configuration, you may still encounter the
-"No DNS servers configured" error when trying to launch the Unsafe
-Browser. If you encounter this issue, you can resolve it by
-disconnecting from the network and then reconnecting, which causes the
-network configuration to be reloaded.
 
-To do this, click the network icon in the system toolbar, and click
-**Disconnect** under the name of the currently active network
-connection, which is displayed in bold. After it disconnects, click
-the network icon again and click the name of the connection to
-reconnect. You should see a popup notification that says "Connection
-Established", and the Tor Connection assistant should show the message "Connected
-to Tor successfully".
+After saving the new network configuration, you may still encounter the "No DNS servers configured" error when trying to launch the Unsafe Browser.
+If you encounter this issue, you can resolve it by disconnecting from the network and then reconnecting, which causes the network configuration to be reloaded.
 
-For the next step, SecureDrop Configuration, you will manually configure the
-firewall for SecureDrop, using screenshots as a reference.
+
+To do this, click the network icon in the system toolbar, and click **Disconnect** under the name of the currently active network connection, which is displayed in bold.
+After it disconnects, click the network icon again and click the name of the connection to reconnect.
+You should see a popup notification that says "Connection Established", and the Tor Connection assistant should show the message "Connected to Tor successfully".
+
+
+For the next step, SecureDrop Configuration, you will manually configure the firewall for SecureDrop, using screenshots as a reference.
+
 
 SecureDrop configuration
 ------------------------
 
+
 SecureDrop uses the firewall to achieve two primary goals:
+
 
 #. Isolating SecureDrop from the existing network, which may be
    compromised (especially if it is a venerable network in a large
@@ -397,102 +421,117 @@ SecureDrop uses the firewall to achieve two primary goals:
 #. Isolating the Application Server and the Monitor Server from each other
    as much as possible, to reduce attack surface.
 
-In order to use the firewall to isolate the Application Server and the Monitor
-Server from each other, we need to connect them to separate interfaces, and then set
-up firewall rules that allow them to communicate.
+
+In order to use the firewall to isolate the Application Server and the Monitor Server from each other, we need to connect them to separate interfaces, and then set up firewall rules that allow them to communicate.
+
 
 Enable the OPT1 and OPT2 interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The OPT1 and OPT2 interfaces will be used for the Application Server and Monitor
-Server respectively. To enable them, first connect the Application Server to the
-physical OPT1 port and the Monitor Server to the OPT2 port.
 
-Next, navigate to **Interfaces ▸ Assignments**. LAN and WAN will already be enabled.
-Click the **+** button in the **New Interface** section to enable the OPT1 interface
-on the next available NIC (``igb2`` in the screenshot below). Once OPT1 has been
-added, click **+** again to add OPT2 (on ``igb3`` in the screenshot below)
+The OPT1 and OPT2 interfaces will be used for the Application Server and Monitor Server respectively.
+To enable them, first connect the Application Server to the physical OPT1 port and the Monitor Server to the OPT2 port.
+
+
+Next, navigate to **Interfaces ▸ Assignments**.
+LAN and WAN will already be enabled.
+Click the **+** button in the **New Interface** section to enable the OPT1 interface on the next available NIC (``igb2`` in the screenshot below).
+Once OPT1 has been added, click **+** again to add OPT2 (on ``igb3`` in the screenshot below)
+
 
 Finally, click **Save**.
+
 
 |OPNSense - assign interfaces|
 
 Configure the LAN, WAN, OPT1, and OPT2 interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-OPT1 and OPT2 need to be configured to use the subnets defined for the Application
-and Monitor Servers, and some additional configuration is required for the LAN
-and WAN interfaces, that is not covered by the Setup Wizard.
+
+OPT1 and OPT2 need to be configured to use the subnets defined for the Application and Monitor Servers, and some additional configuration is required for the LAN and WAN interfaces, that is not covered by the Setup Wizard.
+
 
 Configure the WAN interface
 '''''''''''''''''''''''''''''
 
-First, navigate to **Interfaces ▸ [WAN]**. In the **Basic configuration** section,
-check the checkbox labeled **Prevent interface removal**.
 
-In the **Generic configuration**
-section, make sure that the **Block private networks** and **Block bogon networks**
-checkboxes are checked.
+First, navigate to **Interfaces ▸ [WAN]**.
+In the **Basic configuration** section, check the checkbox labeled **Prevent interface removal**.
+
+
+In the **Generic configuration** section, make sure that the **Block private networks** and **Block bogon networks** checkboxes are checked.
+
 
 Scroll down and click  **Save**, then click **Apply changes** when prompted.
+
 
 Configure the LAN interface
 '''''''''''''''''''''''''''''
 
-Next, navigate to **Interfaces ▸ [LAN]**. In the **Basic configuration** section,
-check the checkbox labeled **Prevent interface removal**.
 
-In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4
-Configuration Type** dropdown, and ``None`` in the **IPV6 Configuration Type**
-dropdown.
+Next, navigate to **Interfaces ▸ [LAN]**.
+In the **Basic configuration** section, check the checkbox labeled **Prevent interface removal**.
+
+
+In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4 Configuration Type** dropdown, and ``None`` in the **IPV6 Configuration Type** dropdown.
+
 
 Scroll down and click **Save**, then click **Apply changes** when prompted.
+
 
 Configure the OPT1 interface
 '''''''''''''''''''''''''''''
 
-Next, navigate to **Interfaces ▸ [OPT1]**. In the **Basic configuration** section,
-check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
-In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4
-Configuration Type** dropdown, and ``None`` in the **IPV6 Configuration Type**
-dropdown.
+Next, navigate to **Interfaces ▸ [OPT1]**.
+In the **Basic configuration** section, check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
-Scroll down. In the **Static IPv4 Configuration** section, enter the *Application
-Gateway* IP address and routing prefix (``10.20.2.1`` and ``24`` if you are using
-the recommended values).
+
+In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4 Configuration Type** dropdown, and ``None`` in the **IPV6 Configuration Type** dropdown.
+
+
+Scroll down.
+In the **Static IPv4 Configuration** section, enter the *Application Gateway* IP address and routing prefix (``10.20.2.1`` and ``24`` if you are using the recommended values).
+
 
 Click **Save**, then click **Apply changes** when prompted.
+
 
 Configure the OPT2 interface
 '''''''''''''''''''''''''''''
 
-Finally, navigate to **Interfaces ▸ [OPT2]**. In the **Basic configuration** section,
-check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
-In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4
-Configuration Type** dropdown, and ``None`` in the **IPV6 Configuration Type**
-dropdown.
+Finally, navigate to **Interfaces ▸ [OPT2]**.
+In the **Basic configuration** section, check the checkboxes labeled **Enable interface** and **Prevent interface removal**.
 
-Scroll down. In the **Static IPv4 Configuration** section, enter the *Monitor
-Gateway* IP address and routing prefix (``10.20.3.1`` and ``24`` if you are using
-the recommended values).
+
+In the **Generic configuration** section, select ``Static IPv4`` in the **IPv4 Configuration Type** dropdown, and ``None`` in the **IPV6 Configuration Type** dropdown.
+
+
+Scroll down.
+In the **Static IPv4 Configuration** section, enter the *Monitor Gateway* IP address and routing prefix (``10.20.3.1`` and ``24`` if you are using the recommended values).
+
 
 Click **Save**, then click **Apply changes** when prompted.
+
 
 Configure firewall aliases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order to simplify firewall rule setup, the next step is to configure aliases
-for hosts and ports referred to in the rules.
 
-To start, first navigate to **Firewall ▸ Aliases**. You should see some system-defined
-aliases as shown below:
+In order to simplify firewall rule setup, the next step is to configure aliases for hosts and ports referred to in the rules.
+
+
+To start, first navigate to **Firewall ▸ Aliases**.
+You should see some system-defined aliases as shown below:
+
 
 |OPNSense - Alias Start|
 
-Click the **+** button to add new aliases. You should add the aliases defined in
-the table below (assuming recommended values for IP addresses):
+
+Click the **+** button to add new aliases.
+You should add the aliases defined in the table below (assuming recommended values for IP addresses):
+
 
 .. list-table:: Firewall Aliases
    :header-rows: 1
@@ -533,26 +572,35 @@ the table below (assuming recommended values for IP addresses):
      - Port(s)
      - ``80``, ``443``
 
+
 When complete, the **Aliases** page should look like this:
+
 
 |OPNSense - aliases end|
 
+
 Scroll down and click **Apply** to save and apply your new aliases.
+
 
 Configure firewall rules
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 Next, configure firewall rules for each interface.
+
 
 Configure firewall rules on LAN
 '''''''''''''''''''''''''''''''
 
-First, navigate to **Firewall ▸ Rules ▸ LAN**.  The LAN interface should have one
-automatically-generated anti-lockout rule in place, in addition to two default-allow rules.
-The default-allow rules should be removed once the SecureDrop-specific rules below
-have been added. The anti-lockout feature should be disabled as a last step.
+
+First, navigate to **Firewall ▸ Rules ▸ LAN**.
+The LAN interface should have one automatically-generated anti-lockout rule in place, in addition to two default-allow rules.
+The default-allow rules should be removed once the SecureDrop-specific rules below have been added.
+The anti-lockout feature should be disabled as a last step.
+
 
 The rules needed are described in this table:
+
 
 .. list-table:: Firewall Rules - LAN
    :header-rows: 1
@@ -582,24 +630,33 @@ The rules needed are described in this table:
      - *
      - Tor from Tails
 
-Add or remove rules until they match the following screenshot including ordering. Click the **+**
-button to add a rule.
+
+Add or remove rules until they match the following screenshot including ordering.
+Click the **+** button to add a rule.
+
 
 |OPNSense - Firewall LAN Rules|
 
+
 Once the rules match, click **Apply Changes.**
 
-Finally, remove the default anti-lockout rule. First, navigate to **Firewall ▸
-Settings ▸ Advanced**. Scroll down to the **Miscellaneous** section and check the
-**Disable anti-lockout** checkbox. Then, click **Save**.
+
+Finally, remove the default anti-lockout rule.
+First, navigate to **Firewall ▸ Settings ▸ Advanced**.
+Scroll down to the **Miscellaneous** section and check the **Disable anti-lockout** checkbox.
+Then, click **Save**.
+
 
 |OPNSense - Disable Antilockout|
 
 Configure firewall rules on OPT1
 ''''''''''''''''''''''''''''''''
 
-Next, navigate to **Firewall ▸ Rules ▸ OPT1**. There should be no rules defined
-on this interface. Add the rules below:
+
+Next, navigate to **Firewall ▸ Rules ▸ OPT1**.
+There should be no rules defined on this interface.
+Add the rules below:
+
 
 .. list-table:: Firewall Rules - OPT1
    :header-rows: 1
@@ -672,14 +729,17 @@ on this interface. Add the rules below:
 
 Once they match the screenshot below, click **Apply Changes**.
 
+
 |OPNSense Firewall OPT1 Rules|
 
 Configure firewall rules on OPT2
 ''''''''''''''''''''''''''''''''
 
-Next, navigate to **Firewall ▸ Rules ▸ OPT2**. Similarly to OPT1, there should be no rules defined
-on this interface. Add the rules below until the rules in the Web GUI match those
-in the screenshot:
+
+Next, navigate to **Firewall ▸ Rules ▸ OPT2**.
+Similarly to OPT1, there should be no rules defined on this interface.
+Add the rules below until the rules in the Web GUI match those in the screenshot:
+
 
 .. list-table:: Firewall Rules - OPT2
    :header-rows: 1
@@ -735,15 +795,20 @@ in the screenshot:
 
 |OPNSense Firewall OPT2 Rules|
 
+
 Finally, click **Apply Changes**.
 
-The *Network Firewall* configuration is now complete, allowing you to move
-to the next step: :doc:`setting up the servers. <prepare_servers>`
+
+The *Network Firewall* configuration is now complete, allowing you to move to the next step: :doc:`setting up the servers.
+<prepare_servers>`
+
 
 Troubleshooting tips
 --------------------
 
+
 Here are some general tips for setting up OPNSense firewall rules:
+
 
 #. Create aliases for the repeated values (IPs and ports).
 #. OPNSense is a stateful firewall, which means that you don't need
@@ -762,15 +827,15 @@ Here are some general tips for setting up OPNSense firewall rules:
 Keeping OPNSense up to date
 ---------------------------
 
-Periodically, the OPNSense project maintainers release an update to the
-OPNSense software running on your firewall. You can check for updates using
-the link on the OPNSense dashboard.
 
-If you see that an update is available, we recommend installing it. Most
-of these updates are for minor bugfixes, but occasionally they can
-contain important security fixes. You should keep apprised of updates
-yourself by checking the `OPNSense Blog <https://opnsense.org/blog/>`__ or subscribing
-to the `OPNSense Blog RSS feed <https://opnsense.org/blog/rss>`__.
+Periodically, the OPNSense project maintainers release an update to the OPNSense software running on your firewall.
+You can check for updates using the link on the OPNSense dashboard.
+
+
+If you see that an update is available, we recommend installing it.
+Most of these updates are for minor bugfixes, but occasionally they can contain important security fixes.
+You should keep apprised of updates yourself by checking the `OPNSense Blog <https://opnsense.org/blog/>`__ or subscribing to the `OPNSense Blog RSS feed <https://opnsense.org/blog/rss>`__.
+
 
 .. |Wired Connected| image:: ../../images/firewall/wired_connected.png
 .. |OPNSense - Your Connection is Insecure| image:: ../../images/opnsense/opnsense-insecure.png

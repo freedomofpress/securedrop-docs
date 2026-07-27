@@ -1,30 +1,32 @@
 Threat model
 ============
 
-This document outlines the threat model for SecureDrop 0.3 and is
-inspired by a `document Adam Langley wrote for Pond
-<https://web.archive.org/web/20150326154506/https://pond.imperialviolet.org/threat.html>`__.
-The threat model is defined in terms of what each possible adversary
-can achieve. This document is always a work in progress. If you have
-questions or comments, please open an issue on GitHub or send an email
-to securedrop@freedom.press.
 
-The threat model for the `SecureDrop Workstation based on Qubes OS <https://workstation.securedrop.org/>`__
-is summarized in a `separate document <https://github.com/freedomofpress/securedrop-workstation/#user-content-threat-model>`__.
+This document outlines the threat model for SecureDrop 0.3 and is inspired by a `document Adam Langley wrote for Pond <https://web.archive.org/web/20150326154506/https://pond.imperialviolet.org/threat.html>`__.
+The threat model is defined in terms of what each possible adversary can achieve.
+This document is always a work in progress.
+If you have questions or comments, please open an issue on GitHub or send an email to securedrop@freedom.press.
+
+
+The threat model for the `SecureDrop Workstation based on Qubes OS <https://workstation.securedrop.org/>`__ is summarized in a `separate document <https://github.com/freedomofpress/securedrop-workstation/#user-content-threat-model>`__.
+
 
 Actors
 ------
 
+
 The SecureDrop ecosystem comprises a host of actors, organized by the following high-level categories: :ref:`Users <users>`, :ref:`Adversaries <adversaries>`, and :ref:`Systems <systems>`.
+
 
 .. _users:
 
 Users
 ~~~~~
 
+
 The following table of the users who interact with the SecureDrop web application.
-Note that the airgapped Secure Viewing Station with the GPG Submission Key is required to decrypt
-submissions or messages.
+Note that the airgapped Secure Viewing Station with the GPG Submission Key is required to decrypt submissions or messages.
+
 
 +------------------+----------+-------------------------------------------------+
 | User Type        | Trust Level                                                |
@@ -50,8 +52,9 @@ submissions or messages.
 Adversaries
 ~~~~~~~~~~~
 
-We consider the following classes of attackers for the design and
-assessment of SecureDrop:
+
+We consider the following classes of attackers for the design and assessment of SecureDrop:
+
 
 +------------------+----------+-------------------------------------------------+
 | Adversary        | Capabilities                                               |
@@ -82,9 +85,9 @@ assessment of SecureDrop:
 Systems
 ~~~~~~~
 
-For more information about the various systems involved in a SecureDrop
-deployment, please visit the
-:doc:`hardware section <../../admin/installation/hardware>`.
+
+For more information about the various systems involved in a SecureDrop deployment, please visit the :doc:`hardware section <../../admin/installation/hardware>`.
+
 
 +------------------+----------+-------------------------------------------------+
 | System           | Description                                                |
@@ -111,7 +114,9 @@ deployment, please visit the
 Assumptions
 -----------
 
+
 The following assumptions are accepted in the threat model of every SecureDrop project:
+
 
 Assumptions about the Source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

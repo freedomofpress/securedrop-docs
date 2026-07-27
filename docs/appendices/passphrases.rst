@@ -1,14 +1,21 @@
 Passphrases
 ===========
 
-Each individual with a role (Administrator or Journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation. 
+
+Each individual with a role (Administrator or Journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases.
+The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation.
+
 
 Ideally, each Administrator and Journalist would only have to remember the passphrases to unlock the encrypted storage on their Admin or SecureDrop Workstation laptop.
+
 
 Administrator
 -------------
 
-The Administrator will be using an Admin Workstation configured to connect to the Application Server and the Monitor Server using Tor and SSH. The tasks performed by the Administrator will require the following set of credentials and passphrases:
+
+The Administrator will be using an Admin Workstation configured to connect to the Application Server and the Monitor Server using Tor and SSH.
+The tasks performed by the Administrator will require the following set of credentials and passphrases:
+
 
 - The Qubes full disk encryption (FDE) password of the Admin Workstation, required to unlock system storage on boot.
 - The Qubes system user password for the Admin Workstation, required to log in.
@@ -26,11 +33,15 @@ The Administrator will be using an Admin Workstation configured to connect to th
    -  The Onion Services values required to connect to the Application and
       Monitor Servers.
 
+
 The Administrator will also need to have a way to generate two-factor authentication codes.
+
 
 .. include:: ../includes/otp-app.txt
 
+
 And the Administrator will also have the following two credentials:
+
 
 -  The secret code for the Application Server's two-factor authentication.
 -  The secret code for the Monitor Server's two-factor authentication.
@@ -38,32 +49,44 @@ And the Administrator will also have the following two credentials:
 Journalist
 ------------
 
-The Journalist will be using a SecureDrop Workstation to view submissions with SecureDrop Inbox. The tasks performed by the Journalist will require the following set of passphrases:
+
+The Journalist will be using a SecureDrop Workstation to view submissions with SecureDrop Inbox.
+The tasks performed by the Journalist will require the following set of passphrases:
+
 
 -  The Qubes full disk encryption (FDE) password of the SecureDrop Workstation they use, required to unlock system storage on boot.
 -  The Qubes system user password for the SecureDrop Workstation they use, required to log in.
 
-The Journalist will also need to have a two-factor authenticator, such as an Android or iOS device with FreeOTP installed, or a YubiKey. This means the Journalist will also have the following credential:
+
+The Journalist will also need to have a two-factor authenticator, such as an Android or iOS device with FreeOTP installed, or a YubiKey.
+This means the Journalist will also have the following credential:
+
 
 -  The secret code for the Journalist's two-factor authentication.
 
 Export Device
 ~~~~~~~~~~~~~~~
 
+
 We recommend using encrypted USB flash drives for transferring files off of the SecureDrop Workstation.
 
-For every export operation, the user will need to enter the USB flash drive's encryption passphrase at least twice (on the computer they're copying from, and on the computer they're copying to). To make it easy for them to find the passphrase, we recommend storing it in the Journalist's own existing password manager, which should be accessible using their smartphone.
 
-If your organization is not using a password manager already, please see
-the `Freedom of the Press Foundation guide <https://freedom.press/training/blog/choosing-password-manager/>`__
-to choosing one.
+For every export operation, the user will need to enter the USB flash drive's encryption passphrase at least twice (on the computer they're copying from, and on the computer they're copying to).
+To make it easy for them to find the passphrase, we recommend storing it in the Journalist's own existing password manager, which should be accessible using their smartphone.
+
+
+If your organization is not using a password manager already, please see the `Freedom of the Press Foundation guide <https://freedom.press/training/blog/choosing-password-manager/>`__ to choosing one.
+
 
 .. _passphrase_best_practices:
 
 Passphrase best practices
 -------------------------
 
-All SecureDrop users---Sources, Journalists, and Administrators---are required to memorize at least one passphrase. This section describes best practices for passphrase management in the context of SecureDrop.
+
+All SecureDrop users---Sources, Journalists, and Administrators---are required to memorize at least one passphrase.
+This section describes best practices for passphrase management in the context of SecureDrop.
+
 
 #. **Do** memorize your passphrase.
 
@@ -84,24 +107,28 @@ All SecureDrop users---Sources, Journalists, and Administrators---are required t
 
 #. **Do not** use your passphrase anywhere else.
 
-   If you use your SecureDrop passphrase on another system, a compromise of that
-   system could theoretically be used to compromise SecureDrop. You should avoid
-   reusing passphrases in general, but it is especially important to avoid doing
-   so in the context of SecureDrop.
+
+   If you use your SecureDrop passphrase on another system, a compromise of that system could theoretically be used to compromise SecureDrop.
+   You should avoid reusing passphrases in general, but it is especially important to avoid doing so in the context of SecureDrop.
 
 
 How to generate a strong, unique passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We recommend using a unique, 7-word passphrase for each case described above. We encourage each end user to use KeePassXC, an easy-to-use password manager included in Qubes OS, to generate and retain strong and unique passphrases. The SecureDrop installation includes a template that you can use to initialize this database, which will be explained when you set up your first :ref:`Admin Workstation <keepassxc_setup>`.
+
+We recommend using a unique, 7-word passphrase for each case described above.
+We encourage each end user to use KeePassXC, an easy-to-use password manager included in Qubes OS, to generate and retain strong and unique passphrases.
+The SecureDrop installation includes a template that you can use to initialize this database, which will be explained when you set up your first :ref:`Admin Workstation <keepassxc_setup>`.
+
 
 Using KeePassXC to generate a passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a random passphrase using KeePassXC, launch the application,
-then click the **dice icon**. Then click the **Passphrase** tab and set the
-**Word Count** to 7. You can optionally set a **Word Separator**, for example a
-space or hyphen.
+
+To create a random passphrase using KeePassXC, launch the application, then click the **dice icon**.
+Then click the **Passphrase** tab and set the **Word Count** to 7.
+You can optionally set a **Word Separator**, for example a space or hyphen.
+
 
 |screenshot of KeePassXC passphrase generation feature, showing a
 randomly generated 7-word passphrase|

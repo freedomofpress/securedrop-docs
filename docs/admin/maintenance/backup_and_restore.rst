@@ -1,10 +1,10 @@
 Backing up and restoring servers
 ================================
 
-Maintaining regular backups helps guard against data
-loss and hardware failure. Having a recent backup will allow you to redeploy
-SecureDrop without changing onion addresses, recreating journalist accounts,
-or losing previous submissions from Sources.
+
+Maintaining regular backups helps guard against data loss and hardware failure.
+Having a recent backup will allow you to redeploy SecureDrop without changing onion addresses, recreating journalist accounts, or losing previous submissions from Sources.
+
 
 .. note:: Only the Application Server is backed up and restored, including
           historical submissions and both Source Interface and Admin Interface onion addresses. The Monitor Server needs to be configured from
@@ -13,30 +13,32 @@ or losing previous submissions from Sources.
 Minimizing disk use
 -------------------
 
-Since the backup and restore operations both involve transferring *all* of
-your SecureDrop's stored submissions over Tor, the process can take a long time.
 
-Encouraging Journalists to regularly delete older, unneeded submissions will save time and improve reliability when
-doing backups.
+Since the backup and restore operations both involve transferring *all* of your SecureDrop's stored submissions over Tor, the process can take a long time.
+
+
+Encouraging Journalists to regularly delete older, unneeded submissions will save time and improve reliability when doing backups.
+
 
 .. tip:: Although it varies, the average throughput of an Onion Service is
          about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
          restore accordingly.
 
+
 On the :ref:`Admin Workstation<glossary_admin_workstation>`, open a Terminal and run:
+
 
 .. code:: sh
 
+
        ssh app sudo du -sh /var/lib/securedrop/store
 
-Compare the output of this command (which approximates the size of a backup
-archive) to the amount of free space on your Tails persistent volume
-via Tails' **Disks** utility to ensure you have sufficient space to perform
-a backup.
 
-If you find you cannot perform a backup or restore due to this constraint,
-and have already deleted old submissions,
-contact us through the `SecureDrop Support Portal`_.
+Compare the output of this command (which approximates the size of a backup archive) to the amount of free space on your Tails persistent volume via Tails' **Disks** utility to ensure you have sufficient space to perform a backup.
+
+
+If you find you cannot perform a backup or restore due to this constraint, and have already deleted old submissions, contact us through the `SecureDrop Support Portal`_.
+
 
 .. note:: Submissions are deleted asynchronously and one at a time, so
           if you delete a lot of submissions, it may take a while for all of the submissions
@@ -45,6 +47,7 @@ contact us through the `SecureDrop Support Portal`_.
           than normal file deletion. You can monitor the progress of
           queued deletion jobs by logging in to the Application
           Server over SSH and running::
+
 
             sudo journalctl -u securedrop_rqworker
 
@@ -59,34 +62,42 @@ Backing up
 Check connectivity
 ''''''''''''''''''
 
-Open a Terminal on your Admin Workstation and verify it is able to run Ansible and connect to
-the SecureDrop servers.
+
+Open a Terminal on your Admin Workstation and verify it is able to run Ansible and connect to the SecureDrop servers.
+
 
 .. code:: sh
 
+
    ssh app uptime
 
-If this command fails, see
-:ref:`Troubleshooting <troubleshooting_admin_connectivity>`.
+
+If this command fails, see :ref:`Troubleshooting <troubleshooting_admin_connectivity>`.
+
 
 Create the backup
 '''''''''''''''''
 
+
 When you are ready to begin the backup, run
+
 
 .. code:: sh
 
+
    securedrop-admin backup
 
-The backup command will display updates on its progress as the backup is created.
-Run time will vary depending on connectivity and the number of submissions
-saved on the Application Server.
 
-When the backup action is complete, the backup will be stored as a compressed
-archive in ``~/.config/securedrop-admin``. The filename
-will begin ``sd-backup``, followed by a timestamp of when the backup was
-initiated, and ending with ``.tar.gz``. You can find the full path to the backup
-archive in the output of the backup command.
+The backup command will display updates on its progress as the backup is created.
+Run time will vary depending on connectivity and the number of submissions saved on the Application Server.
+
+
+When the backup action is complete, the backup will be stored as a compressed archive in ``~/.
+config/securedrop-admin``.
+The filename will begin ``sd-backup``, followed by a timestamp of when the backup was initiated, and ending with ``.
+tar.gz``.
+You can find the full path to the backup archive in the output of the backup command.
+
 
 .. warning:: The backup file contains sensitive information! It should only
              be stored on the Admin Workstation, or on a
@@ -99,22 +110,21 @@ Restoring from a backup
 Prerequisites
 '''''''''''''
 
-To perform a restore, boot into the Admin Workstation and
-ensure that your ``.tar.gz`` backup archive has been copied to
-``~/.config/securedrop-admin``.
-(If you are using the same Admin Workstation as you did when you took the
-backup, the archive will already be in place).
 
-If you are restoring data onto an existing instance (for example, for data
-recovery purposes), see
-:ref:`Restoring a Backup on an Existing Instance <restore_data>`.
+To perform a restore, boot into the Admin Workstation and ensure that your ``.
+tar.gz`` backup archive has been copied to ``~/.
+config/securedrop-admin``.
+(If you are using the same Admin Workstation as you did when you took the backup, the archive will already be in place).
 
-If you are reinstalling SecureDrop and then restoring from a backup (for
-example, for hardware migration, operating system upgrade, or disaster
-recovery purposes), see :ref:`Migrating Using a Backup <migrating>`.
 
-For other data recovery scenarios, see
-:ref:`Additional Information <additional_restore_info>` or `contact Support`_.
+If you are restoring data onto an existing instance (for example, for data recovery purposes), see :ref:`Restoring a Backup on an Existing Instance <restore_data>`.
+
+
+If you are reinstalling SecureDrop and then restoring from a backup (for example, for hardware migration, operating system upgrade, or disaster recovery purposes), see :ref:`Migrating Using a Backup <migrating>`.
+
+
+For other data recovery scenarios, see :ref:`Additional Information <additional_restore_info>` or `contact Support`_.
+
 
 .. _contact Support: https://support-docs.securedrop.org/
 
@@ -123,25 +133,30 @@ For other data recovery scenarios, see
 Restoring a backup on an existing instance
 ''''''''''''''''''''''''''''''''''''''''''
 
+
 To restore an existing instance to a previous state, run the command:
+
 
 .. code:: sh
 
+
    securedrop-admin restore sd-backup-2020-07-22--01-06-25.tar.gz
 
-Make sure to replace ``sd-backup-2020-07-22--01-06-25.tar.gz`` with the filename
-for your backup archive.
 
-This command attempts to restore submissions, source and journalist accounts,
-and configuration details for the Onion Services used by the web interfaces and
-SSH (if configured).
+Make sure to replace ``sd-backup-2020-07-22--01-06-25.tar.gz`` with the filename for your backup archive.
+
+
+This command attempts to restore submissions, source and journalist accounts, and configuration details for the Onion Services used by the web interfaces and SSH (if configured).
+
 
 .. _migrating:
 
 Migrating using a backup
 -------------------------
 
+
 Moving a SecureDrop instance to new hardware involves:
+
 
   - Backing up the old instance and preserving configuration and credentials from the Admin Workstation;
   - Installing SecureDrop on new hardware;
@@ -166,8 +181,11 @@ Moving a SecureDrop instance to new hardware involves:
 
    .. code:: sh
 
-      ssh-add -D
-      find ~/.ssh/ -type f -exec mv {} {}.bak \;
+
+      ssh-add -D find ~/.
+      ssh/ -type f -exec mv {} {}.
+      bak \;
+
 
    .. note::
       You will be generating fresh SSH credentials for the servers, and any
@@ -186,6 +204,7 @@ Moving a SecureDrop instance to new hardware involves:
 
    .. note::
 
+
       You may need to wait approximately 10-15 minutes after installing
       Ubuntu 24.04 for the servers to become reachable via SSH.
 
@@ -194,28 +213,31 @@ Moving a SecureDrop instance to new hardware involves:
    (``securedrop-admin sdconfig``), the values will be prepopulated based on
    the old instance's configuration, which is still stored in ``~/.config/securedrop-admin``. Press **Enter** to accept each value.
 
-   Proceed through the installation by running
-   ``securedrop-admin install`` then ``securedrop-admin localconfig``.
-   If SSH-over-Tor is configured, run
-   ``ssh app uptime`` and ``ssh mon uptime``  in the Terminal to verify SSH
-   connectivity.
+
+   Proceed through the installation by running ``securedrop-admin install`` then ``securedrop-admin localconfig``.
+   If SSH-over-Tor is configured, run ``ssh app uptime`` and ``ssh mon uptime``  in the Terminal to verify SSH connectivity.
+
 
 #. Restore from the old instance's backup (e.g. ``sd-backup-old.tar.gz``) using
    the Terminal command:
 
    .. code:: sh
 
+
        securedrop-admin restore sd-backup-old.tar.gz
 
+
    The restore task will proceed for some time.
+
 
 #. Synchronize the server and Admin Workstation's web interface config and
    authentication keys using the Terminal commands:
 
    .. code:: sh
 
-      securedrop-admin install
-      securedrop-admin localconfig
+
+      securedrop-admin install securedrop-admin localconfig
+
 
 #. :doc:`Test the new instance <../installation/test_the_installation>` to
    verify that the web interfaces are available and the servers can be
@@ -230,10 +252,10 @@ Moving a SecureDrop instance to new hardware involves:
 Repair additional Admin Workstations
 ''''''''''''''''''''''''''''''''''''''
 
-If you have additional Admin Workstation USB flash drives, they will no longer have
-valid SSH credentials and will need to be repaired. In these steps, the "primary
-Admin Workstation" is the one which you used to complete the above migration
-process.
+
+If you have additional Admin Workstation USB flash drives, they will no longer have valid SSH credentials and will need to be repaired.
+In these steps, the "primary Admin Workstation" is the one which you used to complete the above migration process.
+
 
 #. Prepare a fresh
    :doc:`LUKS-encrypted USB flash drive </admin/installation/provisioning_usb>`.
@@ -253,11 +275,10 @@ process.
       Admin Workstation, you may do so. In this case, copy only the first two
       files above to your additional Admin Workstations.
 
-      Generate per-machine SSH keys and use a clean LUKS-encrypted USB flash drive
-      to transfer the public portions of those keys to your primary
-      Admin Workstation, where you will then add them to the servers'
-      ``authorized_keys`` files, as described :ref:`here <ssh_add_pubkey>`.
+
+      Generate per-machine SSH keys and use a clean LUKS-encrypted USB flash drive to transfer the public portions of those keys to your primary Admin Workstation, where you will then add them to the servers' ``authorized_keys`` files, as described :ref:`here <ssh_add_pubkey>`.
       You may also `contact Support`_ for assistance.
+
 
 #. Boot into each additional Admin Workstation. Set
    `an administration password`_
@@ -273,8 +294,11 @@ process.
 
    .. code:: sh
 
-       ssh-add -D
-       find ~/.ssh/ -type f -exec mv {} {}.bak \;
+
+       ssh-add -D find ~/.
+       ssh/ -type f -exec mv {} {}.
+       bak \;
+
 
 #. From the LUKS-encrypted USB, copy ``~/.ssh/id_rsa`` and
    ``~/.ssh/id_rsa.pub`` to the ``~/.ssh/`` directory.
@@ -287,7 +311,9 @@ process.
 
    .. code:: sh
 
+
       securedrop-admin localconfig
+
 
 #. Test connectivity to each server by running ``ssh app uptime``
    and ``ssh mon uptime``.
@@ -310,21 +336,24 @@ Additional information
 Data-only restores
 ''''''''''''''''''
 
-The ``restore`` command normally restores both the data and the Tor
-configuration of an instance, including the onion addresses for your instance.
 
-You may, however, restore data, such as submissions and journalist
-and source accounts, without altering an instance's Tor configuration, with
-the following command:
+The ``restore`` command normally restores both the data and the Tor configuration of an instance, including the onion addresses for your instance.
+
+
+You may, however, restore data, such as submissions and journalist and source accounts, without altering an instance's Tor configuration, with the following command:
+
 
 .. code:: sh
 
+
    securedrop-admin restore --preserve-tor-config sd-backup-2020-07-22--01-06-25.tar.gz
 
-If you require any assistance with migration or data recovery, please
-`contact Support`_.
+
+If you require any assistance with migration or data recovery, please `contact Support`_.
+
 
 .. _contact Support: https://support-docs.securedrop.org/
 .. |br| raw:: html
+
 
     <br>

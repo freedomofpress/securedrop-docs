@@ -1,46 +1,53 @@
 Working with submissions
 ========================
 
-When a Source submits files, you will see a Download button in the conversation
-flow, a file size, and light-gray text that says "Encrypted File."
+
+When a Source submits files, you will see a Download button in the conversation flow, a file size, and light-gray text that says "Encrypted File."
+
 
 |screenshot_file_before_download|
 
 Downloading
 -----------
 
-To download a file, click the **Download** button. An animated spinner will
-indicate that the file is downloading, and a progress bar will indicate
-the download's progress:
+
+To download a file, click the **Download** button.
+An animated spinner will indicate that the file is downloading, and a progress bar will indicate the download's progress:
+
 
 |screenshot_file_downloading|
 
-If necessary, you can pause the download by clicking "Pause," and resume
-the download later with "Resume."
 
-Once the file has been downloaded and decrypted, the filename will be visible,
-as will the action **Export** and **Print**. The displayed file size may increase
-after the download is complete, because the SecureDrop Client automatically
-decompresses the downloaded file.
+If necessary, you can pause the download by clicking "Pause," and resume the download later with "Resume."
+
+
+Once the file has been downloaded and decrypted, the filename will be visible, as will the action **Export** and **Print**.
+The displayed file size may increase after the download is complete, because the SecureDrop Client automatically decompresses the downloaded file.
+
 
 |screenshot_file_download_successful|
 
 Viewing submissions on the SecureDrop Workstation
 ---------------------------------------------------
 
-To view a downloaded submission, click its filename. This will open
-the file in a temporary environment, called a "disposable" qube. The file you
-clicked on will open in a new window with a different colored border and a
-window title prefixed with "disp" (meaning disposable).
+
+To view a downloaded submission, click its filename.
+This will open the file in a temporary environment, called a "disposable" qube.
+The file you clicked on will open in a new window with a different colored border and a window title prefixed with "disp" (meaning disposable).
+
 
 |screenshot_dispvm|
 
+
 This disposable qube is a special isolated environment; it does not have internet access, and isolates the files that you are viewing from other sensitive files and applications on the SecureDrop Workstation.
+
 
 Supported filetypes
 ~~~~~~~~~~~~~~~~~~~
 
+
 The following filetypes are currently supported for viewing on the SecureDrop Workstation:
+
 
 * .txt, .csv, .pdf
 * Microsoft Office files (.doc, .docx, .xls, .xlsx, .ppt, .pptx)
@@ -52,7 +59,9 @@ The following filetypes are currently supported for viewing on the SecureDrop Wo
 * Compressed archives: .zip, .tar.gz (although printer support for files inside
   an archive is still to be implemented)
 
+
 A full list of supported filetypes can be found `here <https://github.com/freedomofpress/securedrop-client/blob/main/workstation-config/mimeapps.list.sd-viewer>`_.
+
 
 .. tip:: In Qubes, window border colors are used to signify different qubes.
 
@@ -61,7 +70,9 @@ A full list of supported filetypes can be found `here <https://github.com/freedo
 Printing submissions from the SecureDrop Workstation
 ------------------------------------------------------
 
+
 To print a document, a :doc:`compatible printer <../admin/installation/hardware>`  must be plugged into the computer's USB port.
+
 
 1. Click "Print" button and wait for ``sd-devices`` qube to start.
 2. You will prompted to attach your printer.
@@ -72,20 +83,25 @@ Exporting submissions from the SecureDrop Workstation
 
 .. important::
 
+
    SecureDrop does not scan for or remove malware. If the file
    you received contains malware targeting the operating system and applications
    running on your everyday workstation, copying it in its original form carries
    the risk of spreading malware to that computer. Make sure you understand the
    risks, and consider other methods to export the document (e.g., print).
 
+
 If you must copy a file from your SecureDrop Workstation to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that Journalists are provided with an Export Device, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
 These instructions assume that you are following the recommended workflow.
 If you are unsure, ask your Administrator.
 
+
 Exporting to an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for exporting submissions.
+
 
 1. Insert the USB flash drive and wait for the ``sd-devices`` qube to start.
 2. If your drive is using VeraCrypt, you will need to unlock it manually:
@@ -120,13 +136,16 @@ Decrypting and preparing to publish
 
 .. note::
 
+
    To decrypt a VeraCrypt drive on a Windows or Mac workstation, you need
    to have the VeraCrypt software installed. If you are unsure if you have the
    software installed or how to use it, ask your Administrator, or see
    the `Freedom of the Press Foundation guide <https://freedom.press/training/encryption-toolkit-media-makers/veracrypt-guide/>`__
    for working with VeraCrypt.
 
+
 To access the Export Device on your everyday workstation, follow these steps:
+
 
 1. If your Export Device has a physical write protection switch, make sure it
    is in the *locked* position.
@@ -139,13 +158,15 @@ To access the Export Device on your everyday workstation, follow these steps:
 7. Open the Export Device in your operating system's file manager, and copy
    the contents of interest to your everyday workstation.
 
-As a security precaution, we recommend deleting the files on the Export
-Device after each copy operation.
+
+As a security precaution, we recommend deleting the files on the Export Device after each copy operation.
+
 
 When you are done, switch back to the VeraCrypt window, and click **Dismount**.
 
-You are now ready to write articles and blog posts, edit video and
-audio, and begin publishing important, high-impact work!
+
+You are now ready to write articles and blog posts, edit video and audio, and begin publishing important, high-impact work!
+
 
 .. tip:: Check out our SecureDrop :doc:`Promotion Guide
          </admin/deployment/getting_the_most_out_of_securedrop>` to read
@@ -160,28 +181,30 @@ Safely working with submissions outside the SecureDrop Workstation
 Risks from malware
 ~~~~~~~~~~~~~~~~~~
 
-SecureDrop does not scan for or remove malware in submissions you receive. There
-are important steps you can take to protect yourself:
+
+SecureDrop does not scan for or remove malware in submissions you receive.
+There are important steps you can take to protect yourself:
+
 
 1. **Keep your SecureDrop Workstation up-to-date.**
 
 2. **Print documents from the SecureDrop Workstation instead of exporting them
    digitally, whenever possible.**
 
-   Printing documents prevents the proliferation of malware to your everyday
-   workstation, and eliminates most categories of embedded metadata. Note that
-   printing a document may still preserve watermarks, printer codes,
-   steganographically encoded data, or other information not visible to the
-   naked eye.
+
+   Printing documents prevents the proliferation of malware to your everyday workstation, and eliminates most categories of embedded metadata.
+   Note that printing a document may still preserve watermarks, printer codes, steganographically encoded data, or other information not visible to the naked eye.
+
 
 3. **Consult with your Administrator or your digital security staff before
    copying files digitally.**
 
-   If you must copy a file in digital form (because of its format, the volume
-   of information, or for other reasons), we recommend taking the time to
-   consult with technical experts within the organization.
+
+   If you must copy a file in digital form (because of its format, the volume of information, or for other reasons), we recommend taking the time to consult with technical experts within the organization.
+
 
    .. tip::
+
 
       Converting files to simpler formats (e.g., PDF to PNG) can help reduce the
       risk of malware. Tails provides both graphical and command-line utilities
@@ -190,31 +213,33 @@ are important steps you can take to protect yourself:
 4. **Never scan QR codes embedded in documents using a network-connected
    device.**
 
-   QR codes can contain malicious links that your device will automatically
-   visit. This can alert third-parties to your actions, reveal the identities
-   of your Sources, and breach the isolation benefits of using Qubes.
 
-   In general, be careful when opening any links provided in a SecureDrop
-   submission. If you are unsure if a link is safe to click, you should
-   consult internally, or contact Freedom of the Press Foundation for
-   assistance.
+   QR codes can contain malicious links that your device will automatically visit.
+   This can alert third-parties to your actions, reveal the identities of your Sources, and breach the isolation benefits of using Qubes.
+
+
+   In general, be careful when opening any links provided in a SecureDrop submission.
+   If you are unsure if a link is safe to click, you should consult internally, or contact Freedom of the Press Foundation for assistance.
+
 
 5. **Don't photograph submissions using your smartphone, and be careful with all
    digital photography**.
 
-   Many smartphones are configured to back up photographs to cloud services,
-   immediately or intermittently; newer digital cameras have similar
-   functionality. Not all backup settings may be visible to you.
 
-   Any digital photograph will include certain metadata by default, which may
-   reveal sensitive information about your SecureDrop usage patterns
-   (potentially including GPS coordinates) to anyone who gains access
-   to the file.
+   Many smartphones are configured to back up photographs to cloud services, immediately or intermittently; newer digital cameras have similar functionality.
+   Not all backup settings may be visible to you.
 
-Fully mitigating the risks of malware received via SecureDrop is beyond the
-scope of this documentation. If you have questions, you can :doc:`contact us </introduction/getting_support>`. Please do **NOT** disclose details about the contents of any submission you have received.
+
+   Any digital photograph will include certain metadata by default, which may reveal sensitive information about your SecureDrop usage patterns (potentially including GPS coordinates) to anyone who gains access to the file.
+
+
+Fully mitigating the risks of malware received via SecureDrop is beyond the scope of this documentation.
+If you have questions, you can :doc:`contact us </introduction/getting_support>`.
+Please do **NOT** disclose details about the contents of any submission you have received.
+
 
 .. tip::
+
 
    This is only a very limited introduction. Freedom of the Press Foundation
    publishes and maintains `digital security guides for journalists <https://freedom.press/training/>`__,
