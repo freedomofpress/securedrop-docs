@@ -240,19 +240,18 @@ or making `a donation <https://freedom.press/donate>`_.
    :maxdepth: 2
    :hidden:
 
-   admin/maintenance/upgrade_guide
+   admin/maintenance/server_updates
+   admin/workstation_reference/workstation_updates
    admin/maintenance/logging
    admin/maintenance/troubleshooting_connection
    admin/maintenance/backup_and_restore
    admin/maintenance/rebuild_admin
-   admin/maintenance/updates_over_tor
-   admin/maintenance/kernel_troubleshooting
    admin/maintenance/bios_server
    admin/maintenance/decommission
    admin/workstation_reference/backup
    admin/workstation_reference/bios_workstation
    admin/workstation_reference/reviewing_logs
-   admin/workstation_reference/troubleshooting_updates
+   
    admin/workstation_reference/managing_clipboard
 
 .. toctree::

@@ -1,8 +1,27 @@
-Troubleshooting system updates
-==============================
+Updating SecureDrop Workstation
+===============================
+
+Preflight updates
+-----------------
 
 After you unlock your SecureDrop Workstation, the preflight updater will prompt you to check for available
-system updates at least once per day.
+updates at least once per day.
+
+The preflight updater delivers new SecureDrop Inbox releases, SecureDrop Workstation updates, and updates to the underlying Qubes operating system.
+
+Verifying version numbers
+-------------------------
+
+`The latest SecureDrop Inbox and Workstation version numbers are available at securedrop.org. <https://securedrop.org/>`__
+
+You can find the version number of the SecureDrop Inbox running on your workstation on the login screen when you open the Inbox.
+
+The version number for the SecureDrop Workstation itself can be found by running the following command in a ``dom0`` Terminal: ::
+  
+  sudo dnf list securedrop-workstation-dom0-config
+
+Troubleshooting updates
+-----------------------
 
 If updates fail for any reason, SecureDrop Inbox will not launch until the
 underlying issue has been resolved. This is to ensure
@@ -20,7 +39,7 @@ interact with SecureDrop.
    The error displayed when the preflight updater
    does not successfully complete the update.
 
-This guide offers troubleshooting steps for common
+Below are some troubleshooting steps for common
 update issues.
 
 Step 1: Locate the updater log
