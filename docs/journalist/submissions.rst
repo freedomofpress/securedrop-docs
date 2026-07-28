@@ -151,9 +151,11 @@ audio, and begin publishing important, high-impact work!
 Securely erase an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Even you regularly deletes files from your Export Device, there remains the possibility that those files will be recoverable by anyone with the decryption password. Because of the underlying technology, simply overwriting data or other "file shredding" techniques are insufficient to securely delete files from USB flash drives.
+Due to the underlying technology of USB flash drives, Export Devices are likely to retain recoverable portions of files that have been stored on them even if those files have been delete. 
 
-To protect against the possibility that a compromised Export Device decryption password will give someone access to traces or the full contents of previously exported files, you should securely erase your Export Devices on a regular schedule. You may also wish to do this on a case-by-case basis after handling particularly sensitive files or if you believe a decryption password may be compromised. 
+To protect against the possibility that a compromised encryption password will yield access to traces of previously exported files, you should securely erase your Export Devices on a regular basis. You may also wish to do this on a case-by-case basis after handling particularly sensitive files or if you believe a decryption password may be compromised. 
+
+Securely erasing an Export Device can only be done by re-formatting and re-encrypting the USB flash drive with a new encryption password. You can follow the :doc:`same steps</admin/installation/provisioning_usb>` used to initially create the Export Device, or contact your Administrator.
 
 You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
 

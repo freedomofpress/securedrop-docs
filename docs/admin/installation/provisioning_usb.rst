@@ -92,8 +92,8 @@ Creating a VeraCrypt-encrypted drive
 Securely erase Export Devices
 -----------------------------
 
-Even if a Journalist regularly deletes files from an Export Device, there remains the possibility that those files will be recoverable by anyone with the decryption password. Because of the underlying technology, simply overwriting data or other "file shredding" techniques are insufficient to securely delete files from USB flash drives.
+Due to the underlying technology of USB flash drives, Export Devices are likely to retain recoverable portions of files that have been stored on them even if those files have been delete. 
 
-To protect against the possibility that a compromised Export Device decryption password will give someone access to traces or the full contents of previously exported files, you should securely erase your Export Devices on a regular basis. This is done by re-formatting and re-encrypting the USB flash drive with a new encryption password, following the steps above for a LUKS or VeraCrypt drive as appropriate. You may then reissue the Export Devices to Journalists and provide them with the new decryption password.
+To protect against the possibility that a compromised encryption password will yield access to traces of previously exported files, you should securely erase your Export Devices on a regular basis. This can only be done by re-formatting and re-encrypting the USB flash drive with a new encryption password, following the steps above for a LUKS or VeraCrypt drive as appropriate. You may then reissue the Export Devices to Journalists and provide them with the new decryption password.
 
 You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
