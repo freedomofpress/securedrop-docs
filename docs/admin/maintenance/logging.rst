@@ -20,19 +20,19 @@ Logs to examine on both servers
   including iptables configuration problems or Tor network issues. Use search
   patterns, e.g., search for "app Tor" to find log entries specific to Tor.
 
-*Application Server* logs
--------------------------
+:ref:`Application Server<glossary_application_server>` logs
+-----------------------------------------------------------
 
 See the directory ``/var/log/apache2/*`` for web server access and error logs.
-In production systems, logging is only enabled for the *Journalist Interface*
+In production systems, logging is only enabled for the :ref:`Admin Interface<glossary_admin_interface>`
 to the files ``journalist-access.log`` and ``journalist-error.log``, and the 
 logs do not contain IP address information. 
 
-When investigating an application error on the *Source Interface* (e.g.,
+When investigating an application error on the :ref:`Source Interface<glossary_source_interface>` (e.g.,
 if you see an "Internal Server Error" when submitting a document), it can make
 sense to temporarily enable error logging. To do so:
 
-1. Log into your *Application Server* from your *Admin Workstation* via ``ssh app``
+1. Log into your Application Server from your Admin Workstation via ``ssh app``
 2. Edit the file ``/etc/apache2/sites-enabled/source.conf`` (requires ``sudo``)
 3. Comment out the old ``ErrorLog`` and ``LogLevel`` directives, e.g., like so:
 
@@ -52,7 +52,7 @@ sense to temporarily enable error logging. To do so:
    LogLevel debug
 
 5. Save the file and reload the configuration with ``sudo systemctl reload apache2``
-6. Visit the *Source Interface* and reproduce the error
+6. Visit the Source Interface and reproduce the error
 7. Inspect the log file ``/var/log/apache2/source-error.log`` for any details
 8. Remember to set the configuration back to the default values once your
    investigation is complete.
@@ -65,8 +65,8 @@ If you encounter an application error, and you have not modified the application
 code, please be sure to `file an issue <https://github.com/freedomofpress/securedrop/issues/new/>`_
 or contact us via securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
-*Monitor Server* logs
----------------------
+:ref:`Monitor Server<glossary_monitor_server>` logs
+---------------------------------------------------
 
  - ``/var/ossec/logs/ossec.log``: Examine this file to investigate problems with
    OSSEC itself not functioning as expected (e.g., you are not seeing alerts

@@ -1,9 +1,74 @@
+Updating SecureDrop server
+==========================
+
+Automatic updates
+-----------------
+
+SecureDrop servers check for updates automatically, and install updates without any manual action or intervention within 24 hours of each new SecureDrop release.
+
+`The latest SecureDrop server version number is available at securedrop.org. <https://securedrop.org/>`__
+
+Manual updates
+--------------
+
+You can manually update by running: ::
+
+  sudo apt update
+  sudo apt upgrade
+
+from both the Application and Monitor servers.
+
+You can verify the installed version number by running: ::
+
+    sudo apt policy securedrop-app-code
+    
+The current SecureDrop version is also visible at the bottom of the Source Interface.
+
+
+Configuring updates over Tor
+----------------------------
+
+In case of censorship or blocking of the SecureDrop APT repository
+(``apt.freedom.press``), which provides automatic updates, Tor can be
+configured to provide unrestricted access.
+
+.. note:: This is only meant as a temporary measure. SecureDrop generally
+          expects an unfiltered internet connection. If you are facing long-term
+          censorship, :ref:`please contact us<Getting Support>` for other options.
+
+These steps will need to be applied to both the Application Server and the
+Monitor Server.
+
+As mentioned earlier, this is meant to be a temporary measure.
+Notably, running ``securedrop-admin install`` will overwrite these changes.
+
+1. From your Admin Workstation, SSH into the Application Server or Monitor Server using ``ssh app`` or ``ssh mon``.
+2. Run ``sudo nano /etc/tor/torrc`` to edit the Tor configuration.
+   Replace the first line of ``SocksPort 0`` with ``SocksPort 127.0.0.1:9050`` and save the file.
+3. Run ``sudo systemctl reload tor@default`` for the new configuration to take effect.
+4. Run ``sudo apt-get install apt-transport-tor --yes``.
+5. Run ``sudo nano /etc/apt/sources.list.d/apt_freedom_press.list`` to edit the URL to begin with a "tor+" prefix.
+   The new contents should be:
+
+.. code::
+
+    deb [arch=amd64] tor+https://apt.freedom.press noble main
+
+6. Run ``sudo apt update`` and verify there are no error messages. This checks that
+   fetching updates works
+
+Disabling updates over Tor
+--------------------------
+
+From your Admin Workstation, run ``securedrop-admin install``. This will overwrite all the above changes.
+
+
 Troubleshooting kernel updates
-==============================
+------------------------------
 
 Kernel updates address known bugs and security vulnerabilities in the Linux
-kernel. They may be installed automatically on your *Application* and *Monitor
-Servers* as part of a SecureDrop release. All kernel updates are tested extensively
+kernel. They may be installed automatically on your Application and Monitor
+Servers as part of a SecureDrop release. All kernel updates are tested extensively
 against :ref:`recommended hardware <Specific Hardware Recommendations>`. If
 things do go wrong (e.g., the server does not boot after a kernel update), 
 the following instructions will help you to roll back to the previous, 
@@ -15,9 +80,9 @@ First, you need to physically access each server. Power down the server
 and power the server back up.
 
 If you have access to the password for your admin user, you can use it to log into
-each server without the use of *Two-Factor Authentication*, which was disabled
+each server without the use of two-factor authentication, which was disabled
 for keyboard logins in SecureDrop 0.8.0. You may have saved the password in the
-KeePassXC database on your *Admin Workstation*. If you do not have the password,
+KeePassXC database on your Admin Workstation. If you do not have the password,
 you can boot into single user mode instead.
 
 Boot into single user mode
@@ -171,7 +236,7 @@ that you report them to us so that we may incorporate any necessary
 changes to our updated kernel, and so that we can work with you to
 switch back to the new kernel as soon as possible.
 
-Run the following commands via SSH from the *Admin Workstation*:
+Run the following commands via SSH from the Admin Workstation:
 
 .. code:: sh
 
@@ -205,8 +270,8 @@ instance. Please consult the `release notes <https://securedrop.org/news/release
 for details about kernel updates.
 
 You can test a kernel update without downtime for your instance by booting your
-*Monitor Server* with the new kernel. Log into your *Monitor Server* using
-the *Admin Workstation*. Shut down the server safely using the command
+Monitor Server with the new kernel. Log into your Monitor Server using
+the Admin Workstation. Shut down the server safely using the command
 ``sudo poweroff``. Ensure that the server is fully powered off.
 
 Attach required peripherals and power the server back up. After the GRUB bootloader
@@ -247,13 +312,21 @@ This change still has to be applied to take effect on the next boot:
 
   sudo update-grub
 
-Safely shut down the *Monitor Server*, remove attached peripherals, and reboot
-it. Verify  that it is working correctly by logging in using your *Admin
-Workstation*. If everything is working as expected, you can make the same change
-to ``/etc/default/grub`` on your *Application Server* as well. Remember to again
+Safely shut down the Monitor Server, remove attached peripherals, and reboot
+it. Verify  that it is working correctly by logging in using your Admin
+Workstation. If everything is working as expected, you can make the same change
+to ``/etc/default/grub`` on your Application Server as well. Remember to again
 run the command ``sudo update-grub`` when you are done.
 
-You can make the change on the *Application Server* from your *Admin Workstation*
+You can make the change on the Application Server from your Admin Workstation
 and reboot the server using the command ``sudo reboot``.
 
 Subsequent kernel updates will again be applied automatically.
+
+Getting Support
+---------------
+
+Should you require further support with your SecureDrop installation, we are
+happy to help!
+
+.. include:: ../../includes/getting-support.txt

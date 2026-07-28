@@ -1,24 +1,24 @@
 BIOS updates on the servers
 ===========================
 
-Below are the steps for updating the BIOS on the *Application* and *Monitor
-Servers*. We provide instructions for Intel and ASUS NUC devices, in accordance with
+Below are the steps for updating the BIOS on the Application and Monitor
+Servers. We provide instructions for Intel and ASUS NUC devices, in accordance with
 :ref:`our hardware recommendations <Hardware Recommendations>`. You should also
-update the BIOS on other computers such as the *Admin Workstation,* but those
+update the BIOS on other computers such as the Admin Workstation, but those
 instructions will vary depending on the manufacturer and model of your device.
 
 What you need
 ~~~~~~~~~~~~~
 
   #. A clean USB flash drive to download the BIOS file
-  #. An Internet-connected workstation, such as the *Admin Workstation*
+  #. An Internet-connected workstation, such as the Admin Workstation
   #. A UPS (uninterrupted power supply), such as a surge-protecting power supply with a backup battery (This is not required, but strongly recommended)
   #. A keyboard and monitor
 
 Perform backups
 ~~~~~~~~~~~~~~~
 
-If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the *Application Server* <backup_and_restore>` before proceeding.
+If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the Application Server <backup_and_restore>` before proceeding.
 
 Prepare the USB flash drive
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,8 +60,8 @@ Once you have verified the hash, copy the file to your USB flash drive.
 Update the BIOS
 ~~~~~~~~~~~~~~~
 
-Power off the *Monitor Server*. We recommend plugging it into an uninterrupted power supply (UPS). Plug in the keyboard, monitor, and USB flash drive, and power on the server, then press F7 when prompted to enter the BIOS Update tool.
+Power off the Monitor Server. We recommend plugging it into an uninterrupted power supply (UPS). Plug in the keyboard, monitor, and USB flash drive, and power on the server, then press F7 when prompted to enter the BIOS Update tool.
 
 Select the USB flash drive and navigate to the file you have downloaded, then hit **Enter**. The update will take several minutes--do not interrupt the update or unplug the server during this time.
 
-Repeat these steps on the *Application Server*.
+Repeat these steps on the Application Server.

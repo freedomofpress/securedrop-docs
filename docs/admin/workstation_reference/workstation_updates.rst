@@ -1,11 +1,29 @@
-Troubleshooting system updates
-==============================
+Updating SecureDrop Workstation
+===============================
 
-After you log into Qubes, the preflight updater will prompt you to check for available
-system updates at least once per day.
+Preflight updates
+-----------------
 
-If updates fail for any reason, the preflight updater will
-not launch SecureDrop Inbox until the
+After you unlock your SecureDrop Workstation, the preflight updater will prompt you to check for available
+updates at least once per day.
+
+The preflight updater delivers new SecureDrop Inbox releases, SecureDrop Workstation updates, and updates to the underlying Qubes operating system.
+
+Verifying version numbers
+-------------------------
+
+`The latest SecureDrop Inbox and Workstation version numbers are available at securedrop.org. <https://securedrop.org/>`__
+
+You can find the version number of the SecureDrop Inbox running on your workstation on the login screen when you open the Inbox.
+
+The version number for the SecureDrop Workstation itself can be found by running the following command in a ``dom0`` Terminal: ::
+  
+  sudo dnf list securedrop-workstation-dom0-config
+
+Troubleshooting updates
+-----------------------
+
+If updates fail for any reason, SecureDrop Inbox will not launch until the
 underlying issue has been resolved. This is to ensure
 that the system is in a secure state before you
 interact with SecureDrop.
@@ -14,14 +32,14 @@ interact with SecureDrop.
    :alt: A screenshot of the preflight update window,
          displaying a failed update error message. The
          title reads "Security updates failed", and the
-         message instructs the user to contact the administrator
+         message instructs the user to contact the Administrator
          to correct the error. SecureDrop Inbox cannot
          be started until the error is corrected.
 
    The error displayed when the preflight updater
    does not successfully complete the update.
 
-This guide offers troubleshooting steps for common
+Below are some troubleshooting steps for common
 update issues.
 
 Step 1: Locate the updater log
@@ -72,7 +90,7 @@ line in the log file that looks similar to the following:
   'sd-small-bookworm-template': <UpdateStatus.UPDATES_OK: '0'>,
   'recommended_action': <UpdateStatus.UPDATES_FAILED: '3'>}
 
-In this example, the ``fedora-42-xfce`` VM has failed to update.
+In this example, the ``fedora-42-xfce`` qube has failed to update.
 This is indicated by the text ``<UpdateStatus.UPDATES_FAILED: '3'>``.
 
 It is possible that multiple steps have failed. Make note of any
@@ -124,7 +142,7 @@ your system is trying to use an old copy of the SecureDrop Release
 Signing Key. You can perform the following steps to fetch the updated
 key and remove the expired one:
 
-1. **Start a terminal** in the "work" VM via the menu: |qubes_menu| **▸ Apps ▸ work ▸ Xfce Terminal**
+1. **Start a terminal** in the ``work`` qube via the menu: |qubes_menu| **▸ Apps ▸ work ▸ Xfce Terminal**
 
 2. **Download the key:**
 
@@ -318,13 +336,13 @@ If this does not resolve the issue:
 
    Like the ``updater.log`` file, this file is rotated hourly.
 
-2. Copy this file to a networked VM by using the ``qvm-copy-to-vm``
-   command. For example, to copy the file to the ``work`` VM:
+2. Copy this file to a networked qube by using the ``qvm-copy-to-vm``
+   command. For example, to copy the file to the ``work`` qube:
 
    ``qvm-copy-to-vm work ~/.securedrop_updater/logs/updater-detail.log``
 
 3. The file can now be found in ``~/QubesIncoming/dom0/`` in the
-   ``work`` VM.
+   ``work`` qube.
 
    Send us the file through a secure channel, such as via Signal.
    We will provide further instructions.

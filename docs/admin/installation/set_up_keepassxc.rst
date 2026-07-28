@@ -3,7 +3,7 @@
 Using the KeePassXC password manager
 ====================================
 
-Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including administrators, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
+Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including Administrator, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
 
 Template password database
 ------------------------------------
@@ -14,7 +14,7 @@ To facilitate using KeePassXC to organize all the credentials needed for using a
 
 .. _keepasscx_template_database:
 
--  Open the KeePassXC program |KeePassXC| in the `vault` VM
+-  Open the KeePassXC program |KeePassXC| in the ``vault`` qube
 -  Select **Database ▸ Open database**, and navigate to the location of
    **/path/to/Passwords.kdbx**, select it, and click **Open**
 -  Leave the password blank and click **OK**. If you receive an "Unlock failed"
@@ -22,7 +22,7 @@ To facilitate using KeePassXC to organize all the credentials needed for using a
 -  Edit entries as required.
 -  Select **Database ▸ Save Database** to save your changes.
 
-The next time you use KeepassXC in `vault`, the database at ``/path/to/Passwords.kdbx``
+The next time you use KeepassXC in ``vault``, the database at ``/path/to/Passwords.kdbx``
 will be selected by default.
 
 KeePassXC will show a warning every time you attempt to open a database without
@@ -52,17 +52,17 @@ the template are:
 **Admin**:
 
 - Admin account username
-- *Application Server* SSH Onion address
+- Application Server SSH Onion address
 - Email account for sending OSSEC alerts
-- *Monitor Server* SSH Onion address
+- Monitor Server SSH Onion address
 - Network Firewall Admin Credentials
-- *OSSEC Alert Public Key*
+- OSSEC Alert Public Key
 - SecureDrop Login Credentials
+- Auth Value: Admin Interface
+- Onion URL: Admin Interface
 
 **Journalist**:
 
-- Auth Value: *Journalist Interface*
-- Onion URL: *Journalist Interface*
 - Personal GPG Key
 - SecureDrop Login Credentials
 

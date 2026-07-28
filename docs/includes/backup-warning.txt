@@ -5,7 +5,7 @@
   
   If this happens, a backup was successfully generated, but it is still
   on the server. Run this command from your ``~/.config/securedrop-admin``
-  directory to copy the backup your *Admin Workstation*:
+  directory to copy the backup your Admin Workstation:
   
   .. code:: bash
 

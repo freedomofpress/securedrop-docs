@@ -1,18 +1,18 @@
-Introduction for SecureDrop administrators
-==========================================
+SecureDrop for Administrators
+=============================
 
-SecureDrop servers are managed by a systems administrator.
+SecureDrop servers are managed by a :ref:`Administrator<glossary_administrator>`.
 
-For larger newsrooms, there may be a team of systems admins, but at least one person within the organization will need to serve as the administrator. In some situations, such as smaller news organizations where a *Journalist* has the technical capacity to administer systems, one person can serve as both *Journalist* and administrator. When possible, we advise having a dedicated staff member serving the role of SecureDrop administrator.
+For larger newsrooms, there may be a team of Administrators, but at least one person within the organization will need to serve as the administrator. In some situations, such as smaller news organizations where a Journalist has the technical capacity to administer systems, one person can serve as both Journalist and administrator. When possible, we advise having a dedicated staff member serving the role of SecureDrop administrator.
 
-The admin connects to the *Application* and *Monitor Servers* over `authenticated *Onion Services* <https://tb-manual.torproject.org/onion-services/>`__, and manages them using `Ansible <https://www.ansible.com/>`__.
+The Administratopr connects to the Application and Monitor Servers over `authenticated Onion Services <https://tb-manual.torproject.org/onion-services/>`__, and manages them using `Ansible <https://www.ansible.com/>`__.
 
-If you are considering becoming a SecureDrop administrator, below are some
+If you are considering becoming a SecureDrop Administrator, below are some
 attributes that will be important to have:
 
 * Experience with managing Linux-based systems from the command line.
 * Proficiency with network hardware such as firewalls and switches (e.g. pfSense).
-* Experience with QubesOS.
+* Experience with Qubes OS.
 * Experience with configuration management tools such as Ansible, Salt, Chef, or Puppet.
 * Ability to use and configure secure communication tools such as GPG.
 
@@ -22,14 +22,14 @@ This Admin Guide covers planning, installation, deployment, and ongoing maintena
 
 .. _Responsibilities:
 
-Responsibilities of SecureDrop administrators
+Responsibilities of SecureDrop Administrators
 ---------------------------------------------
 
 The SecureDrop architecture contains multiple machines and hardened servers.
 While many of the installation and maintenance tasks have been automated, a
 skilled Linux admin is required to responsibly run the system.
 
-As a SecureDrop administrator, it is your responsibility to:
+As a SecureDrop Administrator, it is your responsibility to:
 
 * :doc:`install SecureDrop </admin/installation/installation_overview>`
 * :ref:`manage users <manage_users>`
@@ -43,7 +43,7 @@ As a SecureDrop administrator, it is your responsibility to:
 * ensure that SecureDrop Workstations are kept up to date
 * investigate and respond to security incidents
 * schedule and perform required maintenance tasks, such as operating system upgrades
-* ensure that *Journalists* adhere to the documented processes for checking SecureDrop, communicating with *Sources*, and reviewing documents
+* ensure that Journalists adhere to the documented processes for checking SecureDrop, communicating with Sources, and reviewing documents
 * verify the integrity of SecureDrop code
 * avoid the installation of unsupported code or patches
 * :doc:`decommission SecureDrop after it is no longer in use </admin//maintenance/decommission>`
@@ -57,7 +57,7 @@ is offered as open source software, free of charge, and at your own risk.
 
 FPF offers :doc:`paid priority support services </introduction/getting_support>`. We are
 happy to provide assistance with installing the system, with training of
-administrators and *Journalists*, and with investigation of technical issues
+Administrators and Journalists, and with investigation of technical issues
 and incidents.
 
 .. note::
@@ -93,10 +93,10 @@ or via our `contact form <https://securedrop.org/help/>`__.
 Managing users
 --------------
 
-Admins are responsible for managing user credentials and encouraging best practices. (See
+Adminstrators are responsible for managing user credentials and encouraging best practices. (See
 :ref:`Passphrase Best Practices<passphrase_best_practices>`.)
-The admin will also have access to the *Journalist Interface*, via her own username, passphrase,
-and *Two-Factor Authentication* method (using a smartphone application or YubiKey).
+The Administrator will also have access to the Admin Interface, via her own username, passphrase,
+and two-factor authentication method (using a smartphone application or YubiKey).
 
 See :ref:`User Management<User Management>` for more information on adding and managing
 users.
@@ -106,14 +106,14 @@ users.
 Managing the system configuration
 ---------------------------------
 
-Admins are responsible for configuring and maintaining the system. Several tools
+Administrators are responsible for configuring and maintaining the system. Several tools
 are available to support this:
 
-* :ref:`The Admin Interface<The Admin Interface>` allows the admin to manage users and configure
+* :ref:`The Admin Interface<The Admin Interface>` allows the Administrator to manage users and configure
   web interface features such as organizations logos and submission preferences
-* :ref:`Server SSH access<server SSH access>` is also available, to allow administrators to
+* :ref:`Server SSH access<server SSH access>` is also available, to allow Administrators to
   troubleshoot server issues and perform manual updates.
-* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the *Admin VM*
+* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the ``sd-admin`` qube.
   to configure and install SecureDrop, to perform operations including server backups and restores,
   and to update the server configuration after installation.
 
@@ -122,12 +122,12 @@ are available to support this:
 Keeping the system updated
 --------------------------
 
-The admin is responsible for ensuring that updates are applied to SecureDrop. Where possible, updates are applied automatically, but some update operations require manual intervention.
+The Administrator is responsible for ensuring that updates are applied to SecureDrop. Where possible, updates are applied automatically, but some update operations require manual intervention.
 
 Updates: servers
 ^^^^^^^^^^^^^^^^
 
-The admin should be aware of all SecureDrop updates and take any required manual action if requested in the `SecureDrop Release Blog`_ (`RSS feed`_). We also recommend registering with the `SecureDrop Support Portal`_ to stay apprised of upcoming releases.
+The Administrator should be aware of all SecureDrop updates and take any required manual action if requested in the `SecureDrop Release Blog`_ (`RSS feed`_). We also recommend registering with the `SecureDrop Support Portal`_ to stay apprised of upcoming releases.
 
 Most often, the SecureDrop servers will automatically update via ``apt``. However, occasionally you will need to take other manual steps. If you are in touch with us directly for :doc:`support </introduction/getting_support>`, we will let you know in advance of major releases if manual intervention will be required.
 
@@ -137,7 +137,7 @@ Most often, the SecureDrop servers will automatically update via ``apt``. Howeve
 Updates: network firewall
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Given all traffic first hits the network firewall as it faces the non-Tor public network, the admin should ensure that critical security patches are applied to the firewall.
+Given all traffic first hits the network firewall as it faces the non-Tor public network, the Administrator should ensure that critical security patches are applied to the firewall.
 
 Because of recent changes to the frequency and scope of security updates, we do not recommend the use of pfSense Community Edition (CE). pfSense Plus continues to receive necessary security updates on a regular basis, and is provided with the purchase of most Netgate firewalls. If you wish to use a custom firewall or alternate option, we recommend using an OPNSense-based solution.
 
@@ -161,7 +161,7 @@ SecureDrop Workstation includes an updater application that runs automatically o
 Monitoring OSSEC alerts
 -----------------------
 
-SecureDrop uses OSSEC to monitor the servers for unusual activity caused by system configuration issues or security breaches. The admin should decrypt and read all OSSEC alerts. Report any suspicious events to FPF through the `SecureDrop Support Portal`_. See the :doc:`OSSEC Guide </admin/reference/ossec_alerts>` for more information on common OSSEC alerts.
+SecureDrop uses OSSEC to monitor the servers for unusual activity caused by system configuration issues or security breaches. The Administrator should decrypt and read all OSSEC alerts. Report any suspicious events to FPF through the `SecureDrop Support Portal`_. See the :doc:`OSSEC Guide </admin/reference/ossec_alerts>` for more information on common OSSEC alerts.
 
 .. warning:: Do not post logs or alerts to public forums without first carefully
          examining and redacting any sensitive information.
@@ -179,20 +179,6 @@ Monitoring SecureDrop-related communications
 Release announcements and security advisories are posted to the `SecureDrop blog <https://securedrop.org/news>`__, which is also available as an `RSS feed <https://securedrop.org/news/feed/>`__. You can also follow us on our social media accounts (`Twitter <https://twitter.com/securedrop>`__ and `Mastodon <https://securedrop.org/news/feed/>`__).
 
 We strongly recommend :doc:`joining the SecureDrop support portal </introduction/getting_support>`. As a member of the support portal, you will receive email notifications related to all major announcements, and you can open tickets in case of technical issues. Membership is free of charge.
-
-Installation support
---------------------
-
-Any organization can install SecureDrop for free and also make modifications because the project is open source.
-
-Because the installation and operation are complex, and because SecureDrop can only be as secure as the  operational security practices followed by its users, Freedom of the Press Foundation will also help  organizations install SecureDrop and train *Journalists* and administrators.
-
-If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us. We do ask news organizations that can afford to pay for installation support, training and maintenance to do so.
-
-As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train *Journalists* to use it. (For  pro-bono support, we request that our travel costs
-are covered.) 
-
-.. include:: ../../includes/provide-feedback.txt
 
 .. |Reset Passphrase| image:: ../../images/manual/screenshots/journalist-edit_account_user.png
    :alt: The account editing form allows admins to change name, reset passphrase, and reset two-factor authentication.

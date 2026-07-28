@@ -74,7 +74,7 @@ Not receiving emails
 ~~~~~~~~~~~~~~~~~~~~
 
 Some mail servers require that the sending email address match the account
-that authenticated to send mail. By default the *Monitor Server* will use
+that authenticated to send mail. By default the Monitor Server will use
 ``ossec@ossec.server`` for the from line, but your mail provider may not support
 the mismatch between the domain of that value and your real mail host.
 If the Admin email address (configured as ``ossec_alert_email`` in
@@ -86,7 +86,7 @@ then run the playbook again.
 Message failed to encrypt
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If OSSEC cannot encrypt the alert to the *OSSEC Alert Public Key* for the Admin
+If OSSEC cannot encrypt the alert to the OSSEC Alert Public Key for the Admin
 email address (configured as ``ossec_alert_email`` in ``~/.config/securedrop-admin/site-specific``),
 the system will send a static message instead of the scheduled alert:
 
@@ -100,7 +100,7 @@ Troubleshooting SMTP TLS
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Your choice of SMTP relay server must support STARTTLS and have a valid
-server certificate. By default, the *Monitor Server*'s Postfix
+server certificate. By default, the Monitor Server's Postfix
 configuration will try to validate the server certificate using the
 default root store (in Ubuntu, this is maintained in the
 ``ca-certificates`` package). You can override this by setting
@@ -155,7 +155,7 @@ For example, if I'm testing Gmail as my SMTP relay
 store results in ``Verify return code: 0 (ok)`` because their
 certificate is valid and signed by one of the roots in the default
 store. This indicates that can be successfully used to securely relay
-email in the default configuration of the *Monitor Server*.
+email in the default configuration of the Monitor Server.
 
 If your SMTP relay server does not successfully verify, you should use
 the return code and its text description to help you diagnose the cause.

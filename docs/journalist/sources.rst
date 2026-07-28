@@ -1,8 +1,8 @@
 Communicating with sources
 ==========================
 
-The *Journalist Workstation* lets *Journalists* check SecureDrop, decrypt and securely
-view submissions, and reply to sources, all on the same computer.
+SecureDrop Inbox lets Journalists check SecureDrop, decrypt and securely
+view submissions, and reply to sources.
 
 Once logged in, you will see a chat-like user interface:
 
@@ -30,7 +30,7 @@ source list.
 
 |screenshot_sdapp_main_view|
 
-*Journalists* sending replies are assigned different colors and identified with
+Journalists sending replies are assigned different colors and identified with
 their initials. Move your mouse pointer over the initials to reveal the full
 name.
 
@@ -53,7 +53,7 @@ different conversation.
 
 .. note:: If a reply fails to be sent successfully, it will still be visible in
   subsequent sessions, including to any other users logging into the same
-  physical *Journalist Workstation*.
+  physical SecureDrop Workstation.
 
 Deleting conversations and source accounts
 ------------------------------------------
@@ -62,7 +62,7 @@ As part of routine SecureDrop usage, we recommend that you establish data retent
 
 If you delete messages and files for a source, the source will continue to appear
 in the list of sources in SecureDrop Inbox, and they will still be able
-to log into the *Source Interface* using their codename. Consider using this
+to log into the Source Interface using their codename. Consider using this
 option as part of regular deletion of reviewed submissions, especially if you
 are not sure that all communication with the source has concluded.
 
@@ -90,10 +90,10 @@ You will be presented with a pop-up where you will be asked to confirm if you wo
 Click **Delete Conversation** to delete all files and messages (including journalist
 replies) associated with this source, while keeping the source account active.
 The source will continue to appear in the source list, and will be able to
-communicate with you through the *Source Interface*.
+communicate with you through the Source Interface.
 
 Click **Delete Account** to also remove the source from the source list,
-and to prevent them from logging into the *Source Interface*. Their account will
+and to prevent them from logging into the Source Interface. Their account will
 be completely removed from the system.
 
 .. |screenshot_sdapp_main_view| image:: ../images/screenshot_sdapp_main_view.png
