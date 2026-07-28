@@ -15,16 +15,13 @@ The Administrator will be using an Admin Workstation configured to connect to th
 -  Additional credentials, which we recommend adding to Tails' KeePassXC password
    manager during the installation:
 
-   -  The Application Server and Monitor Server admin username and password
-      (required to be the same for both servers).
-   -  The network firewall username and password.
-   -  The SSH private key and, if set, the key's passphrase.
-   -  The OSSEC Alert Public Key.
-   -  The Administrator's personal GPG public key, if you want to potentially encrypt
-      sensitive files to it for further analysis.
-   -  The account details for the destination email address for OSSEC alerts.
-   -  The Onion Services values required to connect to the Application and
-      Monitor Servers.
+   - The Application Server and Monitor Server admin username and password (required to be the same for both servers).
+   - The network firewall username and password.
+   - The SSH private key and, if set, the key's passphrase.
+   - The OSSEC Alert Public Key.
+   - The Administrator's personal GPG public key, if you want to potentially encrypt sensitive files to it for further analysis.
+   - The account details for the destination email address for OSSEC alerts.
+   - The Onion Services values required to connect to the Application and Monitor Servers.
 
 The Administrator will also need to have a way to generate two-factor authentication codes.
 
@@ -32,20 +29,20 @@ The Administrator will also need to have a way to generate two-factor authentica
 
 And the Administrator will also have the following two credentials:
 
--  The secret code for the Application Server's two-factor authentication.
--  The secret code for the Monitor Server's two-factor authentication.
+- The secret code for the Application Server's two-factor authentication.
+- The secret code for the Monitor Server's two-factor authentication.
 
 Journalist
 ------------
 
 The Journalist will be using a SecureDrop Workstation to view submissions with SecureDrop Inbox. The tasks performed by the Journalist will require the following set of passphrases:
 
--  The Qubes full disk encryption (FDE) password of the SecureDrop Workstation they use, required to unlock system storage on boot.
--  The Qubes system user password for the SecureDrop Workstation they use, required to log in.
+- The Qubes full disk encryption (FDE) password of the SecureDrop Workstation they use, required to unlock system storage on boot.
+- The Qubes system user password for the SecureDrop Workstation they use, required to log in.
 
 The Journalist will also need to have a two-factor authenticator, such as an Android or iOS device with FreeOTP installed, or a YubiKey. This means the Journalist will also have the following credential:
 
--  The secret code for the Journalist's two-factor authentication.
+- The secret code for the Journalist's two-factor authentication.
 
 Export Device
 ~~~~~~~~~~~~~~~
@@ -66,7 +63,6 @@ Passphrase best practices
 All SecureDrop users---Sources, Journalists, and Administrators---are required to memorize at least one passphrase. This section describes best practices for passphrase management in the context of SecureDrop.
 
 #. **Do** memorize your passphrase.
-
 #. If necessary, **do** write your passphrase down temporarily while you
    memorize it.
 
@@ -75,13 +71,11 @@ All SecureDrop users---Sources, Journalists, and Administrators---are required t
                 destroy the paper as soon as you feel comfortable that you have
                 the passphrase memorized. **Do not** store your passphrase on
                 any digital device, such as your computer or mobile phone.
-
 #. **Do** review your passphrase regularly. It's easy to forget a long or
    complex passphrase if you only use it infrequently.
 
    .. tip:: We recommend reviewing your passphrase (e.g. by ensuring that you
             can log in to your SecureDrop account) on at least a monthly basis.
-
 #. **Do not** use your passphrase anywhere else.
 
    If you use your SecureDrop passphrase on another system, a compromise of that

@@ -38,15 +38,16 @@ There are two primary reasons why you may want to update the system configuratio
 
 In both cases, follow these steps:
 
-#. Determine the current version of `securedrop-admin` you have installed on your Admin Workstation by running:
+#.  Determine the current version of ``securedrop-admin`` you have installed.
+    On your Admin Workstation, run:
 
-  .. code:: sh
+    .. code:: sh
 
-    apt-cache policy securedrop-admin
+      apt-cache policy securedrop-admin
 
-  If the version is the same as the version number displayed in the footer of your Source Interface, you are running the applicable version of the SecureDrop code on your workstation, and can proceed to the next step.
-
-  If the versions differ, **it is not safe to proceed**. Follow the upgrade instructions associated with the `release notes for the most recent release of SecureDrop <https://securedrop.org/news/release-announcement/>`__. Apply all available updates, including for the Tails operating system.
+    If the version is the same as the version number displayed in the footer of your Source Interface, you are running the applicable version of the SecureDrop code on your workstation, and can proceed to the next step. 
+    
+    If the versions differ, **it is not safe to proceed**. Follow the upgrade instructions associated with the `release notes for the most recent release of SecureDrop <https://securedrop.org/news/release-announcement/>`__. Apply all available updates, including for the Tails operating system.
 
 #. Run ``securedrop-admin sdconfig``. This will display the current
    configuration, one line at a time, and allow you to change it. At this point,
@@ -113,21 +114,17 @@ share sensitive information.
 Configuration information is stored on the Admin Workstation under
 ``~/.config/securedrop-admin``:
 
-* ``~/.config/securedrop-admin/site-specific`` contains settings written by
+- ``~/.config/securedrop-admin/site-specific`` contains settings written by
   ``securedrop-admin sdconfig`` - if it is changed other Administrators should be notified.
-* The Submission Public Key and OSSEC Alert Public Key should be present
+- The Submission Public Key and OSSEC Alert Public Key should be present
   under ``~/.config/securedrop-admin``. If these keys are rotated, the public keys
   should be updated on other Admin Workstations.
-* Onion Service information is stored in several files:
+- Onion Service information is stored in several files: ::
 
-    .. code-block:: none
+    ~/.config/securedrop-admin/app-ssh.auth_private
+    ~/.config/securedrop-admin/mon-ssh.auth_private
+    ~/.config/securedrop-admin/app-journalist.auth_private
+    ~/.config/securedrop-admin/app-sourcev3-ths
+    ~/.config/securedrop-admin/tor_v3_keys.json
 
-      ~/.config/securedrop-admin/app-ssh.auth_private
-      ~/.config/securedrop-admin/mon-ssh.auth_private
-      ~/.config/securedrop-admin/app-journalist.auth_private
-      ~/.config/securedrop-admin/app-sourcev3-ths
-      ~/.config/securedrop-admin/tor_v3_keys.json
-
-  If Onion Service addresses are changed, the files listed above should be shared
-  securely with other Administrators - preferably in person using an encrypted USB flash drive,
-  as they can be used to access the servers directly via SSH over Tor.
+- If Onion Service addresses are changed, the files listed above should be shared securely with other Administrators - preferably in person using an encrypted USB flash drive, as they can be used to access the servers directly via SSH over Tor.

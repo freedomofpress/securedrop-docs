@@ -9,9 +9,7 @@ Configure SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - These steps should be performed from a ``dom0`` terminal. **Start a dom0 terminal** via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
-
 - Configure infinite scrollback for your terminal via **Edit ▸ Preferences ▸ General ▸ Unlimited scrollback**. This helps to ensure that you will be able to review any error output printed to the terminal during the installation.
-
 - Finally, in the ``dom0`` terminal, run the command:
 
   .. code-block:: sh
@@ -25,9 +23,9 @@ Test the SecureDrop Workstation
 
 The preflight updater will start automatically after logging into the system. Please follow the preflight updater's instructions. 
 
-  .. note::
+.. note::
 
-    If you close SecureDrop Inbox during your session, you can launch it again using the SecureDrop icon on the desktop. 
+  If you close SecureDrop Inbox during your session, you can launch it again using the SecureDrop icon on the desktop. 
 
 Once the update check is complete, :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` will launch. Log in using an existing journalist account and verify that Sources are listed and submissions can be downloaded, decrypted, and viewed.
 

@@ -196,21 +196,21 @@ Below are the configurations you should enter, assuming you used the
 default network settings from the network firewall guide. If you did not,
 adjust these settings accordingly.
 
--  Application Server:
+- Application Server:
 
-  -  **Subnet:** 10.20.2.0/24
-  -  **Address:** 10.20.2.2
-  -  **Gateway:** 10.20.2.1
-  -  **Name servers:** 8.8.8.8, 8.8.4.4
-  -  **Search domains:** *should be left blank*
+  - **Subnet:** 10.20.2.0/24
+  - **Address:** 10.20.2.2
+  - **Gateway:** 10.20.2.1
+  - **Name servers:** 8.8.8.8, 8.8.4.4
+  - **Search domains:** *should be left blank*
 
--  Monitor Server:
+- Monitor Server:
 
-  -  **Subnet:** 10.20.3.0/24
-  -  **Address:** 10.20.3.2
-  -  **Gateway:** 10.20.3.1
-  -  **Name servers:** 8.8.8.8, 8.8.4.4
-  -  **Search domains:** *should be left blank*
+  - **Subnet:** 10.20.3.0/24
+  - **Address:** 10.20.3.2
+  - **Gateway:** 10.20.3.1
+  - **Name servers:** 8.8.8.8, 8.8.4.4
+  - **Search domains:** *should be left blank*
 
 Select **Save** and press **Enter** to apply your settings. Then select **Done** and press **Enter**.
 
@@ -319,8 +319,8 @@ Save the configurations
 
 When you are done, make sure you save the following information:
 
--  The IP address of the Application Server
--  The IP address of the Monitor Server
--  The non-root user's name and passphrase for the servers.
+- The IP address of the Application Server
+- The IP address of the Monitor Server
+- The non-root user's name and passphrase for the servers.
 
 

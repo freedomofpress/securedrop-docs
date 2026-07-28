@@ -120,7 +120,7 @@ html_theme_options = {
     "home_page_in_toc": True,
     "repository_url": "https://github.com/freedomofpress/securedrop-docs",
     "use_source_button": True,
-    "repository_branch": "book-theme",
+    "repository_branch": "main",
     "use_edit_page_button": True,
     "path_to_docs": "docs/",
     "use_fullscreen_button": False

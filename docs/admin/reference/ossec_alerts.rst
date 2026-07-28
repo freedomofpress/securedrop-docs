@@ -117,12 +117,12 @@ that the iptables rules configured on the Application and Monitor Server match
 the expected configuration. If they do not, you may receive a level 12 alert
 like the following: ::
 
-      Received From: (app) 10.20.2.2->/var/ossec/checksdconfig.py
-      Rule: 400900 fired (level 12) ->
-      "Indicates a problem with the configuration of the SecureDrop servers."
-      Portion of the log(s):
-      ossec: output: '/var/ossec/checksdconfig.py': System configuration error:
-      The iptables default drop rules are incorrect.
+    Received From: (app) 10.20.2.2->/var/ossec/checksdconfig.py
+    Rule: 400900 fired (level 12) ->
+    "Indicates a problem with the configuration of the SecureDrop servers."
+    Portion of the log(s):
+    ossec: output: '/var/ossec/checksdconfig.py': System configuration error:
+    The iptables default drop rules are incorrect.
 
 Alternatively, the error text may say: ``The iptables rules have not been configured.``
 To resolve the issue, you can reinstate the standard iptables

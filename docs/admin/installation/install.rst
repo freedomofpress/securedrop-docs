@@ -43,7 +43,7 @@ the servers in order to perform administrative tasks.
 
 First, generate the new SSH keypair:
 
-::
+.. code:: sh
 
     ssh-keygen -t rsa -b 4096
 
@@ -87,23 +87,20 @@ Prepare configuration files
 Make sure you have the following information and files ready before
 continuing:
 
--  the Application Server local IP address
--  the Monitor Server local IP address
--  the Submission Public Key (*generated earlier*)
--  the Submission Key fingerprint
--  the email address that will receive alerts from OSSEC
--  the GPG public key and fingerprint for the email address that will
-   receive the alerts
--  connection information for the SMTP relay that handles OSSEC alerts
-   (see the :doc:`OSSEC Alerts Guide </admin/installation/email_alerts>`)
--  the username of a journalist who will be using SecureDrop (you
-   can add more later)
--  the username of the system admin
+- the Application Server local IP address
+- the Monitor Server local IP address
+- the Submission Public Key (*generated earlier*)
+- the Submission Key fingerprint
+- the email address that will receive alerts from OSSEC
+- the GPG public key and fingerprint for the email address that will receive the alerts
+- connection information for the SMTP relay that handles OSSEC alerts (see the :doc:`OSSEC Alerts Guide </admin/installation/email_alerts>`)
+- the username of a journalist who will be using SecureDrop (you can add more later)
+- the username of the system admin
 
 If configuring Daily Journalist Alert emails (this is optional and can be configured later), you will also need:
 
 -  the Journalist Alert Public Key
--  the Journalist Alert Public Key  fingerprint
+-  the Journalist Alert Public Key fingerprint
 -  the email address that will receive the Daily Journalist Alerts
 
 Localization of the Source Interface and Admin Interface
@@ -233,9 +230,7 @@ If you are using Tails, you will not be able to connect directly with
 ``openssl s_client`` due to the default firewall rules. To get around
 this, proxy the requests over Tor by adding ``torify`` at the beginning
 of the command. The output of the command above should look like the
-following:
-
-::
+following: ::
 
     6D:87:EE:CB:D0:37:2F:88:B8:29:06:FB:35:F4:65:00:7F:FD:84:29
 

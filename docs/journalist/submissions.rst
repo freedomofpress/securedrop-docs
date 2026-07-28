@@ -90,12 +90,12 @@ Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for export
 1. Insert the USB flash drive and wait for the ``sd-devices`` qube to start.
 2. If your drive is using VeraCrypt, you will need to unlock it manually:
 
-   1. Open the file menu by clicking on the Qubes Application menu |qubes_menu| (in the top left),
+   a. Open the file menu by clicking on the Qubes Application menu |qubes_menu| (in the top left),
       select **sd-devices** and click **Files**.
-   2. In the left sidebar, there should be an entry labeled **# GB Possibly Encrypted**,
+   b. In the left sidebar, there should be an entry labeled **# GB Possibly Encrypted**,
       click it.
       |screenshot_veracrypt_sd_devices_files|
-   3. You will be prompted for the password configured for this USB flash drive:
+   c. You will be prompted for the password configured for this USB flash drive:
 
       - Volume type: leave both unchecked
       - PIM: leave empty
@@ -103,7 +103,7 @@ Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for export
       - Forget password immediately: selected
 
       |screenshot_veracrypt_sd_devices_files_unlock|
-   4. Click **Connect**.
+   d. Click **Connect**.
 
 3. Back in your Source's conversation, click **Export**.
    |screenshot_export_dialog|
@@ -164,7 +164,6 @@ SecureDrop does not scan for or remove malware in submissions you receive. There
 are important steps you can take to protect yourself:
 
 1. **Keep your SecureDrop Workstation up-to-date.**
-
 2. **Print documents from the SecureDrop Workstation instead of exporting them
    digitally, whenever possible.**
 
@@ -173,7 +172,6 @@ are important steps you can take to protect yourself:
    printing a document may still preserve watermarks, printer codes,
    steganographically encoded data, or other information not visible to the
    naked eye.
-
 3. **Consult with your Administrator or your digital security staff before
    copying files digitally.**
 
@@ -186,7 +184,6 @@ are important steps you can take to protect yourself:
       Converting files to simpler formats (e.g., PDF to PNG) can help reduce the
       risk of malware. Tails provides both graphical and command-line utilities
       that can be used for this purpose.
-
 4. **Never scan QR codes embedded in documents using a network-connected
    device.**
 
@@ -198,7 +195,6 @@ are important steps you can take to protect yourself:
    submission. If you are unsure if a link is safe to click, you should
    consult internally, or contact Freedom of the Press Foundation for
    assistance.
-
 5. **Don't photograph submissions using your smartphone, and be careful with all
    digital photography**.
 
@@ -222,20 +218,20 @@ scope of this documentation. If you have questions, you can :doc:`contact us </i
    for news organization staff.
 
 .. |screenshot_file_before_download| image:: ../images/screenshot_file_before_download.png
-  :width: 100%
+
 .. |screenshot_file_downloading| image:: ../images/screenshot_file_downloading.png
-  :width: 100%
+
 .. |screenshot_file_download_successful| image:: ../images/screenshot_file_download_successful.png
-  :width: 100%
+
 .. |screenshot_dispvm| image:: ../images/screenshot_dispvm.png
-  :width: 100%
+
 .. |screenshot_export_dialog| image:: ../images/screenshot_export_dialog.png
-  :width: 100%
+
 .. |screenshot_export_drive_passphrase| image:: ../images/screenshot_export_drive_passphrase.png
-  :width: 100%
+
 .. |screenshot_veracrypt_sd_devices_files| image:: ../images/screenshot_veracrypt_sd_devices_files.png
-  :width: 100%
+
 .. |screenshot_veracrypt_sd_devices_files_unlock| image:: ../images/screenshot_veracrypt_sd_devices_files_unlock.png
-  :width: 100%
+
 .. |qubes_menu| image:: ../images/qubes_menu.png
   :alt: Qubes Application menu

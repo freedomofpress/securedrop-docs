@@ -14,10 +14,7 @@ We also recommend including a privacy policy (see our :ref:`Sample
 Privacy Policy`) describing what data is collected and how it will be used by
 your organization.
 
-.. note:: SecureDrop will bring more attention to your organization from
-          security researchers and others. A Landing Page that fails to
-          implement minimum security requirements is sure to be noticed, and
-          could undermine trust, discouraging possible Sources.
+.. note:: SecureDrop will bring more attention to your organization from security researchers and others. A Landing Page that fails to implement minimum security requirements is sure to be noticed, and could undermine trust, discouraging possible Sources.
 
 Landing Page content suggestions
 ----------------------------------
@@ -45,11 +42,8 @@ not use a network or device that can easily be traced back to your real
 identity. Instead, use public wifi networks and devices you control.
 
 - Do NOT access SecureDrop on your employer's network.
-
 - Do NOT access SecureDrop using your employer's hardware.
-
 - Do NOT access SecureDrop on your home network.
-
 - DO access SecureDrop on a network not associated with you, like the wifi at a library or cafe.
 
 **Got it. How can I submit files and messages through SecureDrop?**
@@ -155,8 +149,7 @@ block, which can be defined similarly in nginx by using the
 `location {} <https://nginx.org/en/docs/http/ngx_http_core_module.html#location>`__
 directive.
 
-.. warning:: Except for rare extenuating circumstances, this is a requirement
-             for inclusion in the SecureDrop Directory
+.. warning:: Except for rare extenuating circumstances, this is a requirement for inclusion in the SecureDrop Directory
 
 HTTPS only (no mixed content)
 -----------------------------
@@ -185,8 +178,7 @@ preload list <https://hstspreload.org/>`__ if you can meet all
 of the requirements. This will tell web browsers that the site is only
 ever to be reached over HTTPS.
 
-.. warning:: This is a strict requirement for inclusion in
-             the SecureDrop Directory
+.. warning:: This is a strict requirement for inclusion in the SecureDrop Directory
 
 Perfect forward secrecy
 -----------------------
@@ -212,9 +204,7 @@ You should also choose a key size of *at least* 2048 bits. These
 parameters will help ensure that the encryption used on your Landing
 Page is sufficiently strong. The following example OpenSSL command will
 create a private key and CSR with a 4096-bit key length and a SHA-256
-signature:
-
-::
+signature: ::
 
     openssl req -new -newkey rsa:4096 -nodes -sha256 -keyout domain.com.key -out domain.com.csr
 
@@ -245,14 +235,13 @@ Incapsula, Amazon CloudFront, etc.) for the SecureDrop Landing Page. These
 services intercept requests between a potential Source and the SecureDrop
 Landing Page and can be used to `track`_ or collect information on Sources.
 
-.. warning:: This is a strict requirement for inclusion in
-             the SecureDrop Directory
+.. warning:: This is a strict requirement for inclusion in the SecureDrop Directory
 
 .. _`track`: https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 
-
 Do not hyperlink onion addresses
 ---------------------------------
+
 Because a visitor to your Landing Page may not be using Tor Browser yet,
 clicking a link to your SecureDrop instance or to any other onion address may
 result in an error message. Worse, depending on the browser and network
@@ -272,8 +261,7 @@ text below to provide maximum clarity: ::
     Alternately, you can access the instance by entering: <long onion address>
 
 
-.. warning:: This is a strict requirement for inclusion in
-             the SecureDrop Directory
+.. warning:: This is a strict requirement for inclusion in the SecureDrop Directory
 
 Avoid direct links to securedrop.org
 ------------------------------------
@@ -289,8 +277,7 @@ plain text, without a hyperlink (as per the preceding section):
 
 **sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion**
 
-.. warning:: This is a strict requirement for inclusion in
-             the SecureDrop Directory
+.. warning:: This is a strict requirement for inclusion in the SecureDrop Directory
 
 Apply security headers
 ----------------------
@@ -305,9 +292,7 @@ You can use the site
 `securityheaders.com <https://securityheaders.com>`__ to easily test
 your website's security headers.
 
-If you use Apache, you can use these:
-
-::
+If you use Apache, you can use these: ::
 
     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
     Header edit Set-Cookie ^(.*)$ $;HttpOnly
@@ -322,9 +307,7 @@ If you use Apache, you can use these:
     Header set Referrer-Policy "no-referrer"
     Header set Permissions-Policy "camera 'none'; display-capture 'none'; geolocation 'none'; microphone 'none'; payment 'none'; usb 'none';"
 
-If you intend to run nginx as your webserver instead, this will work:
-
-::
+If you intend to run nginx as your webserver instead, this will work: ::
 
     add_header Cache-Control "max-age=0, no-cache, no-store, must-revalidate";
     add_header Pragma no-cache;
@@ -343,24 +326,18 @@ Additional apache configuration
 -------------------------------
 
 To enforce HTTPS/SSL always, you need to set up redirection within the
-HTTP (port 80) virtual host:
-
-::
+HTTP (port 80) virtual host: ::
 
     RewriteEngine On
     RewriteCond %{HTTPS} off
     RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
-The same thing can be achieved in nginx with a single line:
-
-::
+The same thing can be achieved in nginx with a single line: ::
 
     return 301 https://$server_name$request_uri;
 
 In your SSL (port 443) virtual host, set up HSTS and use these settings
-to give preference to the most secure cipher suites:
-
-::
+to give preference to the most secure cipher suites: ::
 
     Header set Strict-Transport-Security "max-age=16070400;"
     SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
@@ -368,28 +345,21 @@ to give preference to the most secure cipher suites:
     SSLCompression off
     SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
 
-Here's a similar example for nginx:
-
-::
+Here's a similar example for nginx: ::
 
     add_header Strict-Transport-Security max-age=16070400;
     ssl_protocols TLSv1.2;
     ssl_prefer_server_ciphers on;
     ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
 
-Here's a similar example for nginx if the system supports TLS 1.3:
-
-::
+Here's a similar example for nginx if the system supports TLS 1.3: ::
 
     add_header Strict-Transport-Security max-age=16070400;
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_prefer_server_ciphers on;
     ssl_ciphers "TLS-CHACHA20-POLY1305-SHA256:TLS-AES-256-GCM-SHA384:TLS-AES-128-GCM-SHA256:EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
 
-.. note:: We have prioritized security in selecting these cipher suites, so if
-          you choose to use them then your site might not be compatible with
-          legacy or outdated browsers and operating systems. For a good
-          reference check out `Mozilla's recommendations <https://wiki.mozilla.org/Security/Server_Side_TLS>`__.
+.. note:: We have prioritized security in selecting these cipher suites, so if you choose to use them then your site might not be compatible with legacy or outdated browsers and operating systems. For a good reference check out `Mozilla's recommendations <https://wiki.mozilla.org/Security/Server_Side_TLS>`__.
 
 You'll need to run ``a2enmod headers ssl rewrite`` for all these to
 work. You should also set ``ServerSignature Off`` and
@@ -400,12 +370,7 @@ If you use nginx, `you can follow this
 link <https://gist.github.com/mtigas/8601685>`__ and use the
 configuration example provided by ProPublica.
 
-.. warning:: Setting the ``Referrer-policy`` header to ``no-referrer`` is a
-             strict requirement for inclusion in the SecureDrop directory. 
-             Setting the remaining headers as described is strongly
-             recommended, but will be reviewed on a case-by-case basis
-             for inclusion in the directory and does not necessarily prevent
-             the instance from being included.
+.. warning:: Setting the ``Referrer-policy`` header to ``no-referrer`` is a strict requirement for inclusion in the SecureDrop directory. Setting the remaining headers as described is strongly recommended, but will be reviewed on a case-by-case basis for inclusion in the directory and does not necessarily prevent the instance from being included.
 
 Set up change detection monitoring for the web application configuration and Landing Page content
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -416,28 +381,22 @@ monitoring system for your site, OSSEC is a free and open source host-based intr
 that includes a file integrity monitor. More information can be found
 `here. <https://www.ossec.net/>`__
 
-.. note:: We do not recommmend using the Monitor Server to monitor your Landing Page. It should be used
-  for the Application Server only.
+.. note:: We do not recommmend using the Monitor Server to monitor your Landing Page. It should be used for the Application Server only.
 
 Don't log access to the Landing Page in the webserver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Here's an Apache example that would exclude the Landing Page from
-logging. However you still need to make sure no other assets get logged!
-
-::
+logging. However you still need to make sure no other assets get logged! ::
 
     SetEnvIf Request_URI "^/securedrop($|(\/.*))" dontlog
     CustomLog logs/access_log common env=!dontlog
 
 In nginx, logging can be disabled by adding the following directives within the
-Landing Page ``location {}`` block:
-
-::
+Landing Page ``location {}`` block: ::
 
     access_log off;
     error_log /dev/null;
-
 
 Further security considerations
 -------------------------------

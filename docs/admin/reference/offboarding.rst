@@ -111,20 +111,20 @@ the SSH key, you should rotate the key in the following manner.
 
 #.  Restrict SSH access to the new key.
 
-      .. important:: If you have other users who also have SSH access to the
-         Application and Monitor Servers, the next step will revoke their
-         access. Their public keys will have to be re-appended to the
-         ``authorized_keys`` file on each server, as in step 3.
-
-   From an ``sd-admin`` qube, run
+    .. important:: If you have other users who also have SSH access to the
+        Application and Monitor Servers, the next step will revoke their
+        access. Their public keys will have to be re-appended to the
+        ``authorized_keys`` file on each server, as in step 3.
+        
+    From an ``sd-admin`` qube, run
 
     .. code:: sh
 
       securedrop-admin reset_admin_access
 
-   This removes all other SSH keys, except for the new key that you are
-   currently using, from the list of authorized keys on the Application and
-   Monitor Servers.
+    This removes all other SSH keys, except for the new key that you are
+    currently using, from the list of authorized keys on the Application and
+    Monitor Servers.
 
 .. _rotate_submission_key:
 

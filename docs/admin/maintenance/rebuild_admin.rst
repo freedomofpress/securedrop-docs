@@ -2,13 +2,13 @@ Rebuilding an Admin Workstation
 ---------------------------------
 
 In cases where an Admin Workstation USB flash drive has been lost or destroyed, and no
-backup exists, it is possible to rebuild one. In order to do so, you'll need
+backup exists, it is possible to rebuild one. In order to do so, you'll need:
 
- - physical access to the SecureDrop servers
- - 2 USB flash drives:
+- physical access to the SecureDrop servers
+- 2 USB flash drives:
 
-   - Tails Template drive
-   - 1 replacement Admin Workstation USB flash drive (USB3 and 16GB or better recommended)
+  - Tails Template drive
+  - 1 replacement Admin Workstation USB flash drive (USB3 and 16GB or better recommended)
 
 The process requires experience with the Linux command line and Tails, and
 can take up to 3 hours. If a backup of the SecureDrop Application Server is available,
@@ -16,16 +16,14 @@ can take up to 3 hours. If a backup of the SecureDrop Application Server is avai
 may be simpler. An outline of the steps involved in rebuilding an
 Admin Workstation is as follows:
 
- #. Prepare the USB flash drives.
- #. (Optional) Boot the Application and Monitor Server in single user mode and reset
-    the shell admin account password.
- #. Set up SSH access for the new Admin Workstation.
- #. Retrieve SecureDrop configuration settings from the Application and Monitor Server.
- #. Back up and configure the Application Server.
- #. Run ``securedrop-admin install`` and ``securedrop-admin localconfig``
-    from the new Admin Workstation.
- #. Configure SSH-over-TOR.
- #. Complete post-rebuild tasks.
+#. Prepare the USB flash drives.
+#. (Optional) Boot the Application and Monitor Server in single user mode and reset the shell admin account password.
+#. Set up SSH access for the new Admin Workstation.
+#. Retrieve SecureDrop configuration settings from the Application and Monitor Server.
+#. Back up and configure the Application Server.
+#. Run ``securedrop-admin install`` and ``securedrop-admin localconfig`` from the new Admin Workstation.
+#. Configure SSH-over-TOR.
+#. Complete post-rebuild tasks.
 
 
 .. important:: The rebuild process involves temporarily removing ``iptables``
@@ -122,15 +120,8 @@ Next, determine whether your instance was set up to allow administrative access
 via SSH over Tor, or via SSH over LAN. If you don't know which option was originally
 chosen, you can check as follows:
 
- #. Log in to the Application Server via the console using the adminstration username
-    and password.
- #. Check to see if an SSH hidden proxy service exists, using the command
-    ``sudo cat /var/lib/tor/services/sshv3/hostname``. If this file exists and
-    includes an onion address, your instance is set up
-    to use SSH over Tor and you should configure temporary SSH access
-    using :ref:`these instructions <rebuild_ssh_over_tor>`.
-    If not, your instance is set up to use SSH over LAN, and you should follow
-    :ref:`these instructions instead <rebuild_ssh_over_lan>`.
+#. Log in to the Application Server via the console using the adminstration username and password.
+#. Check to see if an SSH hidden proxy service exists, using the command ``sudo cat /var/lib/tor/services/sshv3/hostname``. If this file exists and includes an onion address, your instance is set up to use SSH over Tor and you should configure temporary SSH access using :ref:`these instructions <rebuild_ssh_over_tor>`. If not, your instance is set up to use SSH over LAN, and you should follow :ref:`these instructions instead <rebuild_ssh_over_lan>`.
 
 .. _rebuild_ssh_over_tor:
 

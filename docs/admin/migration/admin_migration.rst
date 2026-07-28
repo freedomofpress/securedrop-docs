@@ -102,9 +102,7 @@ To protect this key and preserve the air gap, you will need to connect the Secur
 - If you were prompted for a passphrase during import, you will now need to remove the passphrase on ``sd-journalist.sec``. See :doc:`/admin/migration/removing_gpg_passphrase`.
 
 .. |Attach TailsData| image:: /admin/migration/images/attach_usb.png
-  :width: 100%
 .. |Unlock Tailsdata| image:: /admin/migration/images/unlock_tails_usb.png
-  :width: 100%
 
 .. _copy_journalist:
 

@@ -135,8 +135,9 @@ Install Qubes OS (estimated wait time: 30-45 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before starting the installation, please ensure that:
-  - the computer is charging
-  - all USB devices like YubiKeys, mice and keyboards are disconnected
+
+- the computer is charging
+- all USB devices like YubiKeys, mice and keyboards are disconnected
 
 To begin the Qubes installation, connect the Qubes installation drive you just created to your target computer and boot from it. You may need to bring up a boot menu at startup to do so - on Lenovo laptops, for example, you can do so by pressing **F12** on boot.
 
@@ -157,9 +158,9 @@ After the disk is unlocked and Qubes starts, you will be prompted to complete th
 
 On the configuration screen, ensure that the following options are checked:
 
- - Default Template should be set to **Fedora 43 Xfce**
- - **Create default system qubes (sys-net, sys-firewall, default DispVM)**
- - **Make sys-firewall and sys-usb disposable**
+- Default Template should be set to **Fedora 43 Xfce**
+- **Create default system qubes (sys-net, sys-firewall, default DispVM)**
+- **Make sys-firewall and sys-usb disposable**
 
 If there is a grayed out option "USB qube configuration disabled", make a note of this. An additional setup step will be required (see next section).
 
