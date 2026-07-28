@@ -151,7 +151,7 @@ audio, and begin publishing important, high-impact work!
 Securely erase an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Due to the underlying technology of USB flash drives, Export Devices are likely to retain recoverable portions of files that have been stored on them even if those files have been delete. 
+Due to the underlying technology of USB flash drives, Export Devices are likely to retain recoverable portions of files that have been stored on them even if those files have been deleted. 
 
 To protect against the possibility that a compromised encryption password will yield access to traces of previously exported files, you should securely erase your Export Devices on a regular basis. You may also wish to do this on a case-by-case basis after handling particularly sensitive files or if you believe a decryption password may be compromised. 
 
