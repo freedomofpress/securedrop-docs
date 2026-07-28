@@ -100,9 +100,9 @@ todo_include_todos = False
 # -- Options for HTML output ----------------------------------------------
 
 try:
-    import sphinx_rtd_theme
+    import sphinx_book_theme
 
-    html_theme = "sphinx_rtd_theme"
+    html_theme = "sphinx_book_theme"
 except ImportError:
     # This theme is included with Sphinx and is quite nice (based
     # on the Pocoo themes), but since we're using the RTD theme
@@ -113,16 +113,23 @@ except ImportError:
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-# html_theme_options = {}
 
-html_context = {
-    "display_github": True,
-    "github_user": "freedomofpress",
-    "github_repo": "securedrop-docs",
-    "github_version": "main",
-    "conf_py_path": "/docs/",
-    "source_suffix": source_suffix,
+html_theme_options = {
+    "use_download_button": False,
+    "show_toc_level": 2,
+    "home_page_in_toc": True,
+    "repository_url": "https://github.com/freedomofpress/securedrop-docs",
+    "use_source_button": True,
+    "repository_branch": "main",
+    "use_edit_page_button": True,
+    "path_to_docs": "docs/",
+    "use_fullscreen_button": False
 }
+
+html_sidebars = {
+    "**": ["navbar-logo.html", "search-button-field.html", "sbt-sidebar-nav.html", "download.html"]
+}
+
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
@@ -136,7 +143,7 @@ html_context = {
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "../static/i/favicon.png"
+html_logo = "../static/i/logo.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -149,6 +156,7 @@ html_logo = "../static/i/favicon.png"
 html_static_path = ['_static']
 html_css_files = [
     'rtd_dark.css',
+    'custom.css'
 ]
 
 # Add any extra paths that contain custom files (such as robots.txt or

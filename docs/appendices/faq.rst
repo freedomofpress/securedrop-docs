@@ -32,7 +32,6 @@ organization for both technical and legal reasons:
   access extremely sensitive information, such as the plaintext of
   submissions or the encryption keys used to identify and access
   the Onion Services.
-
 * In addition, attackers with legal authority such as law
   enforcement agencies may (depending on the jurisdiction) be able
   to compel physical access, potentially with a gag order attached,

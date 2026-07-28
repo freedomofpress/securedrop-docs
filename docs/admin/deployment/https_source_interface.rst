@@ -100,6 +100,7 @@ see instructions below for installing the certificate on the SecureDrop Applicat
 
 Harica
 ~~~~~~
+
 The Greek CA `Harica`_ is now providing Domain Validation (DV) certificates for
 onion addresses. DV certificates are less useful for authentication purposes,
 but may still be used to provide another layer of encryption for Source traffic.
@@ -150,27 +151,22 @@ on your Admin Workstation:
 
 This command will prompt you for the following information::
 
-  Whether HTTPS should be enabled on Source Interface (requires EV cert): yes
-  Local filepath to HTTPS certificate (optional, only if using HTTPS on Source Interface): sd.crt
-  Local filepath to HTTPS certificate key (optional, only if using HTTPS on Source Interface): sd.key
-  Local filepath to HTTPS certificate chain file (optional, only if using HTTPS on Source Interface): ca.crt
+    Whether HTTPS should be enabled on Source Interface (requires EV cert): yes
+    Local filepath to HTTPS certificate (optional, only if using HTTPS on Source Interface): sd.crt
+    Local filepath to HTTPS certificate key (optional, only if using HTTPS on Source Interface): sd.key
+    Local filepath to HTTPS certificate chain file (optional, only if using HTTPS on Source Interface): ca.crt
 
 The filenames should match the names of the files provided to you by DigiCert,
 and should be saved inside the ``~/.config/securedrop-admin`` directory. You'll
 rerun the configuration scripts: ::
 
-    securedrop-admin install
+  securedrop-admin install
 
 The webserver configuration will be updated to apply the HTTPS settings.
 Confirm that you can access the Source Interface at
 ``https://<onion_address>.onion``, and also that the HTTP URL
 ``http://<onion_address>.onion`` redirects automatically to HTTPS.
 
-.. note:: By default, Tor Browser will send an OCSP request to a Certificate
-    Authority (CA) to check if the Source Interface certificate has been revoked.
-    Fortunately, this occurs through Tor. However, this means that a CA or anyone
-    along the path can learn the time that a Tor user visited the SecureDrop
-    Source Interface. Future versions of SecureDrop will add OCSP stapling support
-    to remove this request. See `OCSP discussion`_ for the full discussion.
+.. note:: By default, Tor Browser will send an OCSP request to a Certificate Authority (CA) to check if the Source Interface certificate has been revoked. Fortunately, this occurs through Tor. However, this means that a CA or anyone along the path can learn the time that a Tor user visited the SecureDrop Source Interface. Future versions of SecureDrop will add OCSP stapling support to remove this request. See `OCSP discussion`_ for the full discussion.
 
 .. _`OCSP discussion`: https://github.com/freedomofpress/securedrop/issues/1941

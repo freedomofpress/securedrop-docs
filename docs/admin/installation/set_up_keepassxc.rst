@@ -49,26 +49,22 @@ that you are able to access it as expected.
 In case you wish to manually create a database, the suggested password fields in
 the template are:
 
-**Admin**:
+Admin:
+   - Admin account username
+   - Application Server SSH Onion address
+   - Email account for sending OSSEC alerts
+   - Monitor Server SSH Onion address
+   - Network Firewall Admin Credentials
+   - OSSEC Alert Public Key
+   - SecureDrop Login Credentials
+   - Auth Value: Admin Interface
+   - Onion URL: Admin Interface
 
-- Admin account username
-- Application Server SSH Onion address
-- Email account for sending OSSEC alerts
-- Monitor Server SSH Onion address
-- Network Firewall Admin Credentials
-- OSSEC Alert Public Key
-- SecureDrop Login Credentials
-- Auth Value: Admin Interface
-- Onion URL: Admin Interface
+Journalist:
+   - Personal GPG Key
+   - SecureDrop Login Credentials
 
-**Journalist**:
-
-- Personal GPG Key
-- SecureDrop Login Credentials
-
-**Backup**:
-
-- This section contains clones of the above entries in case a user
-  accidentally overwrites an entry.
+Backup:
+   - This section contains clones of the above entries in case a user accidentally overwrites an entry.
 
 As you proceed with the installation, enter the credentials you create in this database as you go.

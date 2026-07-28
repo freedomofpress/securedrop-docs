@@ -67,9 +67,9 @@ It is not possible to specify multiple email addresses for email notifications. 
 
 If you wish to enable this, you will need:
 
--  The email address that will receive the Journalist alerts
--  The Journalist Alert Public Key
--  The Journalist Alert Public Key fingerprint
+- The email address that will receive the Journalist alerts
+- The Journalist Alert Public Key
+- The Journalist Alert Public Key fingerprint
 
 .. _ossec_guide:
 

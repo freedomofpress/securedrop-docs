@@ -75,12 +75,14 @@ Creating a VeraCrypt-encrypted drive
 
   - Filesystem: exFAT
   - Quick Format: unselected
+  
 - Click **Next**. VeraCrypt will now collect entropy from your mouse movements.
   Randomly move your mouse cursor around the screen until the progress bar is filled up.
   Then click **Format**.
 
   - You will be reminded that all files on the device will be erased and lost and given
     a final confirmation to begin. Click **Yes**.
+
 - Wait until VeraCrypt says "The VeraCrypt volume has been successfully created." Until
   this pops up, it may look like the program is frozen, but it's running in the background.
 - Click **OK** and then **Exit** to finish formatting process.

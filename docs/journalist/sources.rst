@@ -8,15 +8,12 @@ Once logged in, you will see a chat-like user interface:
 
 - The top of the left panel shows your username, if you are logged in, or the
   sign-in button.
-  
 - The action area of the left panel provides the ability to search for sources,
   toggle the sort order, select multiple sources, and delete sources.
-
 - The larger portion of the left panel holds the list of sources that have submitted to your
   instance. Each source is identified to you with a two word pseudonym. You will also
   see the date of the last source activity, an icon to indicate if a source contains attachments,
   and a button to mark a source as starred.
-
 - The right panel holds the conversation view. All parts of the conversation
   with a specific source (messages, files, and journalist replies) will be
   displayed here.
@@ -97,13 +94,13 @@ and to prevent them from logging into the Source Interface. Their account will
 be completely removed from the system.
 
 .. |screenshot_sdapp_main_view| image:: ../images/screenshot_sdapp_main_view.png
-  :width: 100%
+
 .. |screenshot_send_reply| image:: ../images/screenshot_send_reply.png
-  :width: 100%
+
 .. |screenshot_confirm_delete|  image:: ../images/screenshot_delete_sources_dialog.png
-  :width: 100%
+
 .. |screenshot_delete_sources_select|  image:: ../images/screenshot_delete_sources_select.png
-  :width: 100%
+
 
 Deleting multiple conversations
 '''''''''''''''''''''''''''''''

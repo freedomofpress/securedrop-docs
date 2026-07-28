@@ -1,0 +1,5 @@
+html[data-theme=dark] {
+    --pst-color-link: #79b1ff;
+    --pst-color-info-bg: #0e52d3;
+    --pst-color-success-bg: #008a44;
+}

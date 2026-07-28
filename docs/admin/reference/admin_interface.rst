@@ -142,18 +142,18 @@ for their account.
 
 To change their passphrase to the randomly-generated passphrase shown:
 
-  #. Have the Journalist enter their current passphrase and two-factor code.
-  #. Make sure the new passphrase is saved in a password manager.
-  #. Click **Reset Password**
+#. Have the Journalist enter their current passphrase and two-factor code.
+#. Make sure the new passphrase is saved in a password manager.
+#. Click **Reset Password**
 
 To reset two-factor authentication:
 
-  #. Click the button that corresponds to the user's chosen two-factor authentication method:
+#. Click the button that corresponds to the user's chosen two-factor authentication method:
 
-     * Click **Reset Mobile App Credentials** for accounts using FreeOTP or a similar authentication app
-     * Click **Reset Security Key Credentials** for accounts using a Yubikey
+   * Click **Reset Mobile App Credentials** for accounts using FreeOTP or a similar authentication app
+   * Click **Reset Security Key Credentials** for accounts using a Yubikey
 
-  #. Follow the on-screen instructions to complete the process and verify their new two-factor authentication credentials.
+#. Follow the on-screen instructions to complete the process and verify their new two-factor authentication credentials.
 
 
 Off-boarding users

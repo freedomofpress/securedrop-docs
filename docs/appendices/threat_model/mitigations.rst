@@ -38,201 +38,201 @@ Application code — Source Interface and Admin Interface
 
 Attacks to the application code — Source Interface and Admin Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  Configuration vulnerability in Source or Admin Interface
--  Lack of segmentation between Source and Admin Interface
--  Session management vulnerability in Source or Admin Interface
--  Malicious input vulnerability in Source or Admin Interface
--  Configuration  vulnerability in Source or Admin Interface
--  Authentication vulnerability in Source or Admin Interface
--  Access control vulnerability in Source or Admin Interface
--  Data protection vulnerability in Source or Admin Interface
--  Communications vulnerability in Source or Admin Interface
--  Error handling and logging vulnerability in Source or Admin Interface
--  HTTP security configuration vulnerability in Source or Admin Interface
--  File and resource vulnerability in Source or Admin Interface
--  Business logic vulnerability in Source or Admin Interface
--  Web services vulnerability in Source or Admin Interface
+- Configuration vulnerability in Source or Admin Interface
+- Lack of segmentation between Source and Admin Interface
+- Session management vulnerability in Source or Admin Interface
+- Malicious input vulnerability in Source or Admin Interface
+- Configuration  vulnerability in Source or Admin Interface
+- Authentication vulnerability in Source or Admin Interface
+- Access control vulnerability in Source or Admin Interface
+- Data protection vulnerability in Source or Admin Interface
+- Communications vulnerability in Source or Admin Interface
+- Error handling and logging vulnerability in Source or Admin Interface
+- HTTP security configuration vulnerability in Source or Admin Interface
+- File and resource vulnerability in Source or Admin Interface
+- Business logic vulnerability in Source or Admin Interface
+- Web services vulnerability in Source or Admin Interface
 
 Countermeasures on both Source and Admin Interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  Interfaces run on an end-to-end encrypted Tor Onion Service
--  Sensitive source and submission data is sent through HTTP POST
--  All source submissions are encrypted with GPG at rest using the airgapped Submission Key
--  Interface sessions are invalidated after a user logs out or inactivity over 120 minutes
--  Session control on *Interface* includes CSRF token in Flask Framework
--  All Interface session data (except language and locale selection) is discarded at logout, and fully deleted upon exiting Tor Browser
--  A number of mitigations are in place as protection against malicious input vulnerabilities on the Source and Admin Interfaces:
 
-    - X-XSS-PROTECTION is enabled
-    - Content-Security-Policy is set to "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
-    - SQLAlchemy is used as ORM for all database queries
-    - Application does not execute uploaded submission data
--  A number of mitigations are in place as protection against the risk of an HTTP misconfiguration on the Source and Admin Interfaces:
+- Interfaces run on an end-to-end encrypted Tor Onion Service
+- Sensitive source and submission data is sent through HTTP POST
+- All source submissions are encrypted with GPG at rest using the airgapped Submission Key
+- Interface sessions are invalidated after a user logs out or inactivity over 120 minutes
+- Session control on *Interface* includes CSRF token in Flask Framework
+- All Interface session data (except language and locale selection) is discarded at logout, and fully deleted upon exiting Tor Browser
+- A number of mitigations are in place as protection against malicious input vulnerabilities on the Source and Admin Interfaces:
 
-    - Cache control header is set to “no store;”
-    - HTTP headers do not expose version information of system components
-    - X-Content-Type is set to "nosniff;"
-    - Content-Security-Policy is set to "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
-    - X-XSS-Protection is set to "1"
+  - X-XSS-PROTECTION is enabled
+  - Content-Security-Policy is set to "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
+  - SQLAlchemy is used as ORM for all database queries
+  - Application does not execute uploaded submission data
+
+- A number of mitigations are in place as protection against the risk of an HTTP misconfiguration on the Source and Admin Interfaces:
+
+  - Cache control header is set to “no store;”
+  - HTTP headers do not expose version information of system components
+  - X-Content-Type is set to "nosniff;"
+  - Content-Security-Policy is set to "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
+  - X-XSS-Protection is set to "1"
 
 Countermeasures unique to Source Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  TLS on Source Interface is opt-in with an EV cert
--  Only HTTP GET, POST and HEAD methods are allowed
--  A number of mitigations are in place as protection against access control vulnerabilities on the Source Interface:
+- TLS on Source Interface is opt-in with an EV cert
+- Only HTTP GET, POST and HEAD methods are allowed
+- A number of mitigations are in place as protection against access control vulnerabilities on the Source Interface:
 
-    - Source codenames are long and automatically generated
-    - Hashed codenames are stored in a database hashed with a unique salt
-    - Source codename reset functionality is not available
-    - Source login does not display information about prior submissions
-    - Source login requires 7-word codename to check Source Interface for replies
+  - Source codenames are long and automatically generated
+  - Hashed codenames are stored in a database hashed with a unique salt
+  - Source codename reset functionality is not available
+  - Source login does not display information about prior submissions
+  - Source login requires 7-word codename to check Source Interface for replies
 
 Countermeasures unique to Admin Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  Admin Interface is located behind an authenticated Onion Service and only privileged users have required authorization token
--  Only HTTP GET, POST, HEAD and DELETE methods are allowed
--  A number of mitigations are in place as protection against access control vulnerabilities on the Admin Interface:
+- Admin Interface is located behind an authenticated Onion Service and only privileged users have required authorization token
+- Only HTTP GET, POST, HEAD and DELETE methods are allowed
+- A number of mitigations are in place as protection against access control vulnerabilities on the Admin Interface:
 
-    - Apache autoindex module is disabled
-    - Journalist/Administrator passphrases are long and automatically generated
-    - Passphrases are stored in a database hashed with a unique salt
-    - Account generation/revocation/reset is restricted to Admin role
-    - Two-factor authentication is required (via a TOTP app, or an HOTP
-      device like a YubiKey)
+  - Apache autoindex module is disabled
+  - Journalist/Administrator passphrases are long and automatically generated
+  - Passphrases are stored in a database hashed with a unique salt
+  - Account generation/revocation/reset is restricted to Admin role
+  - Two-factor authentication is required (via a TOTP app, or an HOTP device like a YubiKey)
 
 Application Server and Monitor Server
 -----------------------------------------
 
 Attacks on the Application Server and Monitor Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  Application or Monitor Server configuration error
--  Source or Admin Interface is framed
--  Application or Monitor Server is compromised
--  Attacker exploits postfix
--  Known vulnerabilities in the Linux kernel or packages used by the Application and Monitor Servers
+- Application or Monitor Server configuration error
+- Source or Admin Interface is framed
+- Application or Monitor Server is compromised
+- Attacker exploits postfix
+- Known vulnerabilities in the Linux kernel or packages used by the Application and Monitor Servers
 
 Countermeasures on both Application and Monitor Servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  Grsecurity/PaX linux patches prevent the exploitation of certain memory-corruption attacks
--  AppArmor profiles further reduce process capabilities through Mandatory Access Control
--  All SecureDrop infrastructure is provisioned via infrastructure-as-code (Ansible scripts)
--  A cron job ensures that automatic nightly security updates are applied for OS packages
--  Admin Interface uses ATHS cookie
--  Monitor Server should only expose SSH via Tor Onion Service. All other traffic should be blocked by firewall
+- Grsecurity/PaX linux patches prevent the exploitation of certain memory-corruption attacks
+- AppArmor profiles further reduce process capabilities through Mandatory Access Control
+- All SecureDrop infrastructure is provisioned via infrastructure-as-code (Ansible scripts)
+- A cron job ensures that automatic nightly security updates are applied for OS packages
+- Admin Interface uses ATHS cookie
+- Monitor Server should only expose SSH via Tor Onion Service. All other traffic should be blocked by firewall
 
 Countermeasures unique to Application Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  SecureDrop Source and Admin Interfaces uses X-Frame-Options: DENY header
--  Browser Same Origin Policy should prevent the SecureDrop page from trivial modifications, but more complex attacks are mitigated via the X-Frame-Options: DENY HTTP header
+- SecureDrop Source and Admin Interfaces uses X-Frame-Options: DENY header
+- Browser Same Origin Policy should prevent the SecureDrop page from trivial modifications, but more complex attacks are mitigated via the X-Frame-Options: DENY HTTP header
 
 Countermeasures unique to Monitor Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  OSSEC is used for intrusion detection/file integrity monitoring, and are sent to Administrators via end-to-end encrypted email
+- OSSEC is used for intrusion detection/file integrity monitoring, and are sent to Administrators via end-to-end encrypted email
 
 SecureDrop dependencies — Python, Tor, Linux Kernel, apt, Qubes, Ubuntu, or hardware firewall vulnerabilities
 -------------------------------------------------------------------------------------------------------------
 
 Attacks on SecureDrop dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  Known vulnerabilities in Python or libraries used by SecureDrop
--  Known vulnerabilities in Tor (incl. Onion Service cryptography, authentication)
--  Malicious apt package installed at install-time or during updates
--  Known weakness in Onion Service cryptography
--  GitHub is compromised
--  Firewall is not up-to-date
--  Qubes ISO malicious
--  Ubuntu ISO malicious
--  Tor apt repo compromised
--  Ubuntu apt repo compromised
--  Tor Browser exploit
--  Vulnerabilities/Compromise of Hardware Firewall
+- Known vulnerabilities in Python or libraries used by SecureDrop
+- Known vulnerabilities in Tor (incl. Onion Service cryptography, authentication)
+- Malicious apt package installed at install-time or during updates
+- Known weakness in Onion Service cryptography
+- GitHub is compromised
+- Firewall is not up-to-date
+- Qubes ISO malicious
+- Ubuntu ISO malicious
+- Tor apt repo compromised
+- Ubuntu apt repo compromised
+- Tor Browser exploit
+- Vulnerabilities/Compromise of Hardware Firewall
 
 Countermeasures against vulnerabilities in Python or libraries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  FPF performs vulnerability management for all Python packages used by SecureDrop
--  CI will run safety check to ensure dependencies do not have a CVE associated with the `version <https://github.com/freedomofpress/securedrop/commit/e9c13ff3d09dfc446bc28da4347f627b5533b150>`__
+- FPF performs vulnerability management for all Python packages used by SecureDrop
+- CI will run safety check to ensure dependencies do not have a CVE associated with the `version <https://github.com/freedomofpress/securedrop/commit/e9c13ff3d09dfc446bc28da4347f627b5533b150>`__
 
 Countermeasures against vulnerabilities in Tor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  A cron job ensures that automatic nightly security updates are applied for OS packages, including Tor
--  Grsecurity/PaX linux patches prevent the exploitation of certain memory-corruption attacks
--  AppArmor profiles further reduce process capabilities through Mandatory Access Control
--  Onion Service authentication is used as a complementary authentication and only used for defense-in-depth/attack surface reduction
+- A cron job ensures that automatic nightly security updates are applied for OS packages, including Tor
+- Grsecurity/PaX linux patches prevent the exploitation of certain memory-corruption attacks
+- AppArmor profiles further reduce process capabilities through Mandatory Access Control
+- Onion Service authentication is used as a complementary authentication and only used for defense-in-depth/attack surface reduction
 
 Countermeasures against malicious apt installs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  apt does GPG signature verification of all packages as long as it's not explicitly disabled
+- apt does GPG signature verification of all packages as long as it's not explicitly disabled
 
 Countermeasures against malicious Qubes or Ubuntu ISOs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--   SecureDrop :doc:`Admin Guide </admin/reference/securedrop_for_admins>` instructs Users/Administrators to validate checksum/signatures of downloaded images
+- SecureDrop :doc:`Admin Guide </admin/reference/securedrop_for_admins>` instructs Users/Administrators to validate checksum/signatures of downloaded images
 
 Countermeasures against vulnerabilities in the hardware firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  SecureDrop :doc:`Admin Guide </admin/reference/securedrop_for_admins>` informs Administrators to update the hardware firewall and provides a very restrictive policy for accessing the administrative interface (blocked on app and mon ports of the firewall).
--  Alert emails are sent out to Administrators when there are critical pfSense vulnerabilities.
--  Application and Monitor Servers use IPTables as host-based firewall for defense-in-depth
--  All application traffic is over Tor Onion Services (end-to-end encrypted) and all software packages are signed. Only DNS and NTP are transmitted over HTTP (unauthenticated and in cleartext)
+- SecureDrop :doc:`Admin Guide </admin/reference/securedrop_for_admins>` informs Administrators to update the hardware firewall and provides a very restrictive policy for accessing the administrative interface (blocked on app and mon ports of the firewall).
+- Alert emails are sent out to Administrators when there are critical pfSense vulnerabilities.
+- Application and Monitor Servers use IPTables as host-based firewall for defense-in-depth
+- All application traffic is over Tor Onion Services (end-to-end encrypted) and all software packages are signed. Only DNS and NTP are transmitted over HTTP (unauthenticated and in cleartext)
 
 Network Infrastructure — FPF Infrastructure or Organization Corporate Network
 -----------------------------------------------------------------------------
 
 Attacks on network infrastructure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  Landing Page source control is compromised
--  Landing Page host is compromised
--  Landing Page is framed or unavailable
--  Landing Page DNS leaks from SecureDrop/leaks-related subdomain
--  Communications vulnerability in Source or Admin Interface
--  DNS requests to news organization's subdomain for SecureDrop Landing Page, 
-   Freedom.press, torproject.org Tor activity, SD submissions may be correlated
--  SecureDrop.org is compromised
--  User web traffic to SecureDrop Landing Page uses CDN and may be logged
--  Tor network exploit
--  apt server man-in-the-middle used to serve old or malicious packages
--  SecureDrop apt servers are compromised, or apt server man-in-the middle attack injects malicious packages
--  News Organization network is compromised
--  OSSEC and/or Daily Journalist Alert SMTP account credentials compromised
--  OSSEC and/or Daily Journalist Alert private key compromised
--  SMTP relay compromised
--  Admin's network is monitored
+- Landing Page source control is compromised
+- Landing Page host is compromised
+- Landing Page is framed or unavailable
+- Landing Page DNS leaks from SecureDrop/leaks-related subdomain
+- Communications vulnerability in Source or Admin Interface
+- DNS requests to news organization's subdomain for SecureDrop Landing Page, Freedom.press, torproject.org Tor activity, SD submissions may be correlated
+- SecureDrop.org is compromised
+- User web traffic to SecureDrop Landing Page uses CDN and may be logged
+- Tor network exploit
+- apt server man-in-the-middle used to serve old or malicious packages
+- SecureDrop apt servers are compromised, or apt server man-in-the middle attack injects malicious packages
+- News Organization network is compromised
+- OSSEC and/or Daily Journalist Alert SMTP account credentials compromised
+- OSSEC and/or Daily Journalist Alert private key compromised
+- SMTP relay compromised
+- Admin's network is monitored
 
 Countermeasures in FPF infrastructure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  Builds are independently validated by multiple developers
--  Release files containing hashes (MD5, SHA1, SHA256, SHA512) of package file and package hashes are signed with an airgapped GPG key
--  Developer key list is published and GPG-signed with the directory key
--  SecureDrop updates are packaged in a .deb file and served through FPF's apt repo
--  Source code is validated/verified before packaging and signing the .deb
+- Builds are independently validated by multiple developers
+- Release files containing hashes (MD5, SHA1, SHA256, SHA512) of package file and package hashes are signed with an airgapped GPG key
+- Developer key list is published and GPG-signed with the directory key
+- SecureDrop updates are packaged in a .deb file and served through FPF's apt repo
+- Source code is validated/verified before packaging and signing the .deb
 
 Countermeasures in news organization corporate network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  SecureDrop environment should be strictly segregated from corporate environment
--  Most SecureDrop traffic goes over Tor and as such is encrypted end-to-end
--  Alert emails to Journalists and Administrators are GPG-encrypted (but not signed) to provide confidentiality
--  OSSEC alerts are scrubbed for sensitive contents (application data, server IPs)
--  Documented deployment best practices provide instructions to strengthen Landing Page security and privacy
+- SecureDrop environment should be strictly segregated from corporate environment
+- Most SecureDrop traffic goes over Tor and as such is encrypted end-to-end
+- Alert emails to Journalists and Administrators are GPG-encrypted (but not signed) to provide confidentiality
+- OSSEC alerts are scrubbed for sensitive contents (application data, server IPs)
+- Documented deployment best practices provide instructions to strengthen Landing Page security and privacy
 
 User Behavior and Hardware — SecureDrop Hardware Tampering or Failure in Operational Security
 ---------------------------------------------------------------------------------------------
 
 Attacks on user behavior or hardware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  Journalist corporate workstation seized/tampered/compromised
--  Export Device* seized/stolen/lost
--  Administrator two-factor authentication device is lost or compromised
--  Administrator SSH Key is compromised
--  SecureDrop installer misconfigures server/firewall hardware
--  Source uses tor2web or employer/corporate device
--  Source shares that they are using SecureDrop/leaking documents
--  Journalist/Administrator gets phished from a submission or otherwise breaks the Secure Viewing Station airgap with malware
+- Journalist corporate workstation seized/tampered/compromised
+- Export Device* seized/stolen/lost
+- Administrator two-factor authentication device is lost or compromised
+- Administrator SSH Key is compromised
+- SecureDrop installer misconfigures server/firewall hardware
+- Source uses tor2web or employer/corporate device
+- Source shares that they are using SecureDrop/leaking documents
+- Journalist/Administrator gets phished from a submission or otherwise breaks the Secure Viewing Station airgap with malware
 
 Countermeasures in user behavior recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--  :doc:`Source Guide </source/source>` gives instructions on best practices for the entire submission workflow
--  Source Interface banner suggests that user disables JS (high security settings in Tor Browser)
--  :doc:`Journalist Guide </journalist/journalist>` informs users of malware risks, the importance of strict compartmentalization of SecureDrop-related activities
--  :doc:`SecureDrop Deployment Guide </admin/deployment/deployment_practices>` gives best practices for proper administration of the SecureDrop system, and its public-facing properties like the Landing Page
--  :doc:`Admin Guide </admin/reference/securedrop_for_admins>` gives instructions for long-term maintenance of the technical properties of the SecureDrop system, as well as operations to support Journalists
--  All Administrator tasks are completed over Tor/Tor authenticated Onion Services after installation
--  Any journalist/admin password/2FA credentials resets can only be done by an Administrator with password-protected SSH capability or authenticated Onion Service credentials.
+- :doc:`Source Guide </source/source>` gives instructions on best practices for the entire submission workflow
+- Source Interface banner suggests that user disables JS (high security settings in Tor Browser)
+- :doc:`Journalist Guide </journalist/journalist>` informs users of malware risks, the importance of strict compartmentalization of SecureDrop-related activities
+- :doc:`SecureDrop Deployment Guide </admin/deployment/deployment_practices>` gives best practices for proper administration of the SecureDrop system, and its public-facing properties like the Landing Page
+- :doc:`Admin Guide </admin/reference/securedrop_for_admins>` gives instructions for long-term maintenance of the technical properties of the SecureDrop system, as well as operations to support Journalists
+- All Administrator tasks are completed over Tor/Tor authenticated Onion Services after installation
+- Any journalist/admin password/2FA credentials resets can only be done by an Administrator with password-protected SSH capability or authenticated Onion Service credentials.

@@ -26,8 +26,5 @@ analysis.
 Suggested
 ---------
 
--  For publicly advertised SecureDrop instances display the :ref:`Source
-   Interface<glossary_source_interface>`'s :ref:`Onion Service<glossary_onion_service>` onion address on all of the organization
-   public pages.
--  Mirror Tor Browser and Tails so Sources do not have to
-   visit `torproject.org <https://www.torproject.org>`__ to download it.
+- For publicly advertised SecureDrop instances display the :ref:`Source Interface<glossary_source_interface>`'s :ref:`Onion Service<glossary_onion_service>` onion address on all of the organization public pages.
+- Mirror Tor Browser and Tails so Sources do not have to visit `torproject.org <https://www.torproject.org>`__ to download it.

@@ -142,9 +142,8 @@ your system is trying to use an old copy of the SecureDrop Release
 Signing Key. You can perform the following steps to fetch the updated
 key and remove the expired one:
 
-1. **Start a terminal** in the ``work`` qube via the menu: |qubes_menu| **▸ Apps ▸ work ▸ Xfce Terminal**
-
-2. **Download the key:**
+#. **Start a terminal** in the ``work`` qube via the menu: |qubes_menu| **▸ Apps ▸ work ▸ Xfce Terminal**
+#. **Download the key:**
 
    *Run command:*
 
@@ -159,8 +158,7 @@ key and remove the expired one:
       gpg: key 188EDD3B7B22E6A3: public key "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" imported
       gpg: Total number processed: 1
       gpg: imported: 1
-
-3. **Verify the expiry is 2027-05-24:**
+#. **Verify the expiry is 2027-05-24:**
 
    *Run command:*
 
@@ -176,8 +174,7 @@ key and remove the expired one:
          2359E6538C0613E652955E6C188EDD3B7B22E6A3
       uid           [ unknown] SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>
       sub   rsa4096 2021-05-10 [E] [expires: 2027-05-24]
-
-4. **Export the downloaded key:**
+#. **Export the downloaded key:**
 
    *Run command:*
 
@@ -186,8 +183,7 @@ key and remove the expired one:
       gpg --armor --export "2359 E653 8C06 13E6 5295 5E6C 188E DD3B 7B22 E6A3" > securedrop-release-key.pub
 
    *No output expected.*
-
-5. **Print the exported key's checksum:**
+#. **Print the exported key's checksum:**
 
    *Run command:*
 
@@ -200,12 +196,10 @@ key and remove the expired one:
    .. code-block::
 
       fedef93de425668541545373952b5f92bac4ac1f1253fe5b64c2be2fc941073b securedrop-release-key.pub
-
-6. **Start a dom0 terminal** via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
+#. **Start a dom0 terminal** via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
 
    The remaining commands will all be executed in this dom0 terminal.
-
-7. **Copy the key into dom0:**
+#. **Copy the key into dom0:**
 
    *Run command:*
 
@@ -214,8 +208,7 @@ key and remove the expired one:
       qvm-run --pass-io work cat securedrop-release-key.pub > /tmp/securedrop-release-key.pub
 
    *No output expected.*
-
-8. **Verify the key checksum matches:**
+#. **Verify the key checksum matches:**
 
    *Run command:*
 
@@ -228,8 +221,7 @@ key and remove the expired one:
    .. code-block::
 
       fedef93de425668541545373952b5f92bac4ac1f1253fe5b64c2be2fc941073b /tmp/securedrop-release-key.pub
-
-9. **Copy the key into place:**
+#. **Copy the key into place:**
 
    *Run command:*
 
@@ -238,8 +230,7 @@ key and remove the expired one:
       sudo cp /tmp/securedrop-release-key.pub /etc/pki/rpm-gpg/RPM-GPG-KEY-securedrop-workstation
 
    *No output expected.*
-
-10. **Delete the old key from RPM:**
+#. **Delete the old key from RPM:**
 
    *Run command:*
 
@@ -247,10 +238,8 @@ key and remove the expired one:
 
       sudo rpm -e gpg-pubkey-7b22e6a3-609966ad
 
-
    *No output expected.*
-
-11. **Import the new key into RPM:**
+#. **Import the new key into RPM:**
 
    *Run command:*
 
@@ -259,9 +248,7 @@ key and remove the expired one:
       sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-securedrop-workstation
 
    *No output expected.*
-
-
-12. **Verify the expiry is 2027-05-24:**
+#. **Verify the expiry is 2027-05-24:**
 
    *Run command:*
 
@@ -286,19 +273,17 @@ key and remove the expired one:
    template. For example, if ``sd-small-bookworm-template`` failed to
    update, select its entry in the Qubes menu and click
    **Terminal**.
+2. Perform an interactive template update by running the the following commands:
 
-2. Perform an interactive template update by running the
-   the following commands:
+   .. code-block::
 
-   ``sudo apt update``
+      sudo apt update
+      sudo apt upgrade
 
-   ``sudo apt upgrade``
-
-  The SecureDrop and Whonix templates are based on Debian
-  GNU/Linux. The ``apt update`` comand will ensure the package
-  index is up-to-date, and the ``apt upgrade`` comand will
-  apply updates.
-
+   The SecureDrop and Whonix templates are based on Debian
+   GNU/Linux. The ``apt update`` comand will ensure the package
+   index is up-to-date, and the ``apt upgrade`` comand will
+   apply updates.
 3. Follow the prompts to resolve any issues. If you are
    unsure on how to resolve an error, please contact us
    for assistance.
@@ -309,10 +294,8 @@ key and remove the expired one:
 1. Launch the Qubes GUI Updater from the top righthand
    tray icon. Ensure the ``fedora-42-xfce`` template is
    selected.
-
 2. Run the updater, observing the output in the
    updater dialog.
-
 3. If the update is not successful, contact Support
    and provide the output you see in the dialog.
 
@@ -335,12 +318,10 @@ If this does not resolve the issue:
    information about the ``apply_dom0`` step.
 
    Like the ``updater.log`` file, this file is rotated hourly.
-
 2. Copy this file to a networked qube by using the ``qvm-copy-to-vm``
    command. For example, to copy the file to the ``work`` qube:
 
    ``qvm-copy-to-vm work ~/.securedrop_updater/logs/updater-detail.log``
-
 3. The file can now be found in ``~/QubesIncoming/dom0/`` in the
    ``work`` qube.
 

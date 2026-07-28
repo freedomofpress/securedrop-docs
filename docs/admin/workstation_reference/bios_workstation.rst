@@ -11,8 +11,8 @@ These instructions should work for many recent laptops, including the two ThinkP
 
 If your laptop has Ubuntu preinstalled, run its **Software Updater** twice as follows:
 
-  #. to install software updates, especially for the ``fwupd`` package; and then
-  #. to run ``fwupd`` to update the BIOS automatically.
+#. to install software updates, especially for the ``fwupd`` package; and then
+#. to run ``fwupd`` to update the BIOS automatically.
 
 If **Software Updater** offers to run ``fwupd`` during step (1), decline until step (2), to make sure ``fwupd`` itself has received its latest security updates.
 
@@ -23,10 +23,10 @@ If your laptop has another Linux distribution installed, use the built-in softwa
 
 Once ``fwupd`` is installed, you can install available updates by running:
 
-  .. code-block:: sh
-  
-    fwupdmgr refresh
-    fwupdmgr update
+.. code-block:: sh
+
+  fwupdmgr refresh
+  fwupdmgr update
 
 Manual BIOS updates
 -------------------

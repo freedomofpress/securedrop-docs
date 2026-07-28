@@ -143,9 +143,9 @@ Migrating using a backup
 
 Moving a SecureDrop instance to new hardware involves:
 
-  - Backing up the old instance and preserving configuration and credentials from the Admin Workstation;
-  - Installing SecureDrop on new hardware;
-  - Restoring the backup to the new instance and repairing credentials.
+- Backing up the old instance and preserving configuration and credentials from the Admin Workstation;
+- Installing SecureDrop on new hardware;
+- Restoring the backup to the new instance and repairing credentials.
 
 .. note:: If you need to restore from a backup from an instance configured to
    use SSH-over-LAN onto an SSH-over-Tor instance, you must either first update
