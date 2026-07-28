@@ -104,23 +104,10 @@ SecureDrop instance.
    Be sure to inform your network administrator of any changes to devices on
    your network.
 #. **Wipe and destroy the USB flash drives.**
-   Because the USB flash drives used for SecureDrop are all LUKS-encrypted,
-   reformatting the USB flash drives (in particular, overwriting a portion of internal
-   storage called the **LUKS header**) should be sufficient to make any existing
-   data on those drives unrecoverable.
-
-   For example, you could use Tails to launch Gnome Disks,
-   insert and identify the USB flash drive you are trying to erase, and reformat this
-   drive with a new, LUKS-encrypted partition, erasing the existing partition
-   data.
-
-   .. caution:: Be **very** sure you are reformatting the right drive.
-      You may want to use the Secure Viewing Station laptop for this procedure
-      to reduce the risk of accidentally erasing a drive on your regular-use
-      machine.
+   The USB flash drives used for SecureDrop are all encrypted, either with LUKS or Veracrypt. To securely wipe this kind of storage media, it is necessary to re-format *and re-encrypt* the drive, following the :doc:`same steps used in their initial creation</admin/installation/provisioning_usb>`. This will destroy the encryption headers, making any data on the drives unrecoverable. 
 
    You may also choose to destroy the drives by physical means, such as using a
-   hammer or purpose-built shredder to pulverize or destroy the drive.
+   hammer or purpose-built shredder to pulverize the drive.
 #. **Wipe and destroy the storage drives on the servers.**
    SecureDrop submissions are stored GPG-encrypted on the Application Server.
    Unless your SecureDrop Submission Key is compromised (or a significant
