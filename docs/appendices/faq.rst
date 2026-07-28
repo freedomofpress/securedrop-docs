@@ -6,13 +6,7 @@ Frequently Asked Questions
 Why must SecureDrop be physically hosted?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We are often asked if it is acceptable to run SecureDrop on
-cloud servers (e.g. Amazon EC2, DigitalOcean, etc.) or on dedicated
-servers in third-party datacenters instead of on dedicated hardware
-hosted in the organization. This request is generally motivated by a
-desire for cost savings and/or convenience. However: we consider it
-**critical** to have dedicated physical machines hosted within the
-organization for both technical and legal reasons:
+We are often asked if it is acceptable to run SecureDrop on cloud servers (e.g. Amazon EC2, DigitalOcean, etc.) or on dedicated servers in third-party datacenters instead of on dedicated hardware hosted in the organization. This request is generally motivated by a desire for cost savings and/or convenience. However: we consider it **critical** to have dedicated physical machines hosted within the organization for both technical and legal reasons:
 
 * While the documents are stored encrypted at rest (via PGP) on the
   SecureDrop Application Server, the documents hit server memory
@@ -39,14 +33,4 @@ organization for both technical and legal reasons:
   legally unable to tell you that law enforcement has been given
   access to your SecureDrop servers.
 
-One of the core goals of SecureDrop is to avoid the potential
-compromise of sources through the compromise of third-party
-communications providers. Therefore, we consider the use of
-virtualization for production instances of SecureDrop to be an
-unacceptable compromise and do not support it. Instead, dedicated
-servers should be hosted in a physically secure location in the
-organization itself. While it is technically possible to modify
-SecureDrop's automated installation process to work on virtualized
-servers (for example, we do so to support our CI pipeline), doing so
-in order to run it on cloud servers is at your own risk and without
-our support or consent.
+One of the core goals of SecureDrop is to avoid the potential compromise of sources through the compromise of third-party communications providers. Therefore, we consider the use of virtualization for production instances of SecureDrop to be an unacceptable compromise and do not support it. Instead, dedicated servers should be hosted in a physically secure location in the organization itself. While it is technically possible to modify SecureDrop's automated installation process to work on virtualized servers (for example, we do so to support our CI pipeline), doing so in order to run it on cloud servers is at your own risk and without our support or consent.

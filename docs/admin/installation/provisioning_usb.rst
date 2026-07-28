@@ -1,8 +1,7 @@
 Provisioning USB Export Devices
 =================================
 
-SecureDrop Workstation supports the export of submissions from the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>`
-to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an :ref:`Export Device<glossary_export_device>`.
+SecureDrop Workstation supports the export of submissions from the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an :ref:`Export Device<glossary_export_device>`.
 
 Creating a LUKS-encrypted drive
 -------------------------------
@@ -10,8 +9,7 @@ Creating a LUKS-encrypted drive
 .. note:: LUKS-encrypted drives can only be used with Linux-based
   systems such as Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
 
-In order to provision a LUKS-encrypted Export Device,
-you will need a fresh USB flash drive and a SecureDrop Workstation.
+In order to provision a LUKS-encrypted Export Device, you will need a fresh USB flash drive and a SecureDrop Workstation.
 
 .. TODO update these instructions for provisioning Export Devices on Qubes
 
@@ -75,7 +73,7 @@ Creating a VeraCrypt-encrypted drive
 
   - Filesystem: exFAT
   - Quick Format: unselected
-  
+
 - Click **Next**. VeraCrypt will now collect entropy from your mouse movements.
   Randomly move your mouse cursor around the screen until the progress bar is filled up.
   Then click **Format**.
@@ -94,7 +92,7 @@ Creating a VeraCrypt-encrypted drive
 Securely erase Export Devices
 -----------------------------
 
-Due to the underlying technology of USB flash drives, Export Devices are likely to retain recoverable portions of files that have been stored on them even if those files have been deleted. 
+Due to the underlying technology of USB flash drives, Export Devices are likely to retain recoverable portions of files that have been stored on them even if those files have been deleted.
 
 To protect against the possibility that a compromised encryption password will yield access to traces of previously exported files, you should securely erase your Export Devices on a regular basis. This can only be done by re-formatting and re-encrypting the USB flash drive with a new encryption password, following the steps above for a LUKS or VeraCrypt drive as appropriate. You may then reissue the Export Devices to Journalists and provide them with the new decryption password.
 

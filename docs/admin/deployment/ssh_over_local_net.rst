@@ -1,8 +1,7 @@
 SSH over local network
 ======================
 
-Under a production installation post-install, the default way to gain SSH
-administrative access is over the Tor network. This provides a number of benefits:
+Under a production installation post-install, the default way to gain SSH administrative access is over the Tor network. This provides a number of benefits:
 
 * Allows remote administration outside of the local network.
 * Provides anonymity to an administrator while logging into the SecureDrop
@@ -10,20 +9,14 @@ administrative access is over the Tor network. This provides a number of benefit
 * Can mitigate against an attacker on your local network attempting to exploit
   vulnerabilities against the SSH daemon.
 
-Most Administrators will need SSH access during the course of running a
-SecureDrop instance and a few times a year for maintenance. So the
-potential shortfalls of having SSH over Tor are not usually a major issue.
-The cons of having SSH over Tor can include:
+Most Administrators will need SSH access during the course of running a SecureDrop instance and a few times a year for maintenance. So the potential shortfalls of having SSH over Tor are not usually a major issue. The cons of having SSH over Tor can include:
 
 * Slow and delayed remote terminal performance
 * Allowing SSH access from outside of your local network can be seen as a
   potential larger security hole for some organizations, particularly those
   with tight network security controls.
 
-That being said, the default setting of only allowing SSH over Tor is a good fit
-for most organizations. If you happen to require SSH restricted to the local
-network instead please continue to read.
-
+That being said, the default setting of only allowing SSH over Tor is a good fit for most organizations. If you happen to require SSH restricted to the local network instead please continue to read.
 
 .. _ssh_over_local:
 
@@ -46,17 +39,14 @@ Configuring SSH for local access
           restricted to post-install. This will come into play particularly if
           you have multiple network interfaces.
 
-First, make sure your local SecureDrop environment is up-to-date and on the
-latest production release.
+First, make sure your local SecureDrop environment is up-to-date and on the latest production release.
 
 .. code:: sh
 
     sudo apt update
     securedrop-admin check_for_update
 
-The setting that controls SSH over LAN access is set during the ``sdconfig`` step
-of the install. Below is an example of what the prompt will look like. You can
-answer either 'no' or 'false' when you are prompted for ``Enable SSH over Tor``:
+The setting that controls SSH over LAN access is set during the ``sdconfig`` step of the install. Below is an example of what the prompt will look like. You can answer either 'no' or 'false' when you are prompted for ``Enable SSH over Tor``:
 
 .. code:: sh
 

@@ -1,9 +1,7 @@
 Whole site changes
 ==================
 
-Ideally, some or all of the following changes are made to improve the
-overall security of the path to the :ref:`Landing Page<glossary_landing_page>` and obfuscate traffic
-analysis.
+Ideally, some or all of the following changes are made to improve the overall security of the path to the :ref:`Landing Page<glossary_landing_page>` and obfuscate traffic analysis.
 
 #. Make your entire site available through HTTPS.
 

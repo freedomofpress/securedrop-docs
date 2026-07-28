@@ -49,12 +49,11 @@ Import KeePassXC database
 
 If you have a KeePassXC database on your Tails-based Admin Workstation USB flash drive, you should copy it to the ``vault`` qube on the new Qubes-based Admin Workstation.
 
-Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` qube.  
+Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` qube.
 
 .. include:: /admin/installation/set_up_keepassxc.rst
   :start-after: .. _keepasscx_template_database:
   :end-before: .. _keepassxc_manual_create_database:
-
 
 Configure SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,9 +63,7 @@ Now that your new Qubes-based Admin Workstation is prepared, you can proceed wit
 Import Submission Private Key
 -------------------------------
 
-In order to decrypt submissions, you will need a copy of the
-`Submission Private Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_
-from your SecureDrop instance's Secure Viewing Station.
+In order to decrypt submissions, you will need a copy of the `Submission Private Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_ from your SecureDrop instance's Secure Viewing Station.
 
 To protect this key and preserve the air gap, you will need to connect the Secure Viewing Station USB flash drive to a qube with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to the ``dom0`` qube from another qube - instead, follow the steps below:
 
@@ -233,7 +230,6 @@ If importing the Admin Interface details using ``sdw-admin --configure`` fails, 
 - Verify that the ``/tmp/journalist.txt`` file on ``dom0`` contains valid configuration information using the command ``cat /tmp/journalist.txt`` in the ``dom0`` terminal.
 
 - Proceed with :ref:`configuring the workstation<manual_configure>`
-
 
 If you encounter a validation error due to a password-protected GPG key, see :doc:`/admin/migration/removing_gpg_passphrase`.
 

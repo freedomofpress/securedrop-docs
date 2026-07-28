@@ -1,11 +1,7 @@
 BIOS updates on the servers
 ===========================
 
-Below are the steps for updating the BIOS on the Application and Monitor
-Servers. We provide instructions for Intel and ASUS NUC devices, in accordance with
-:ref:`our hardware recommendations <Hardware Recommendations>`. You should also
-update the BIOS on other computers such as the Admin Workstation, but those
-instructions will vary depending on the manufacturer and model of your device.
+Below are the steps for updating the BIOS on the Application and Monitor Servers. We provide instructions for Intel and ASUS NUC devices, in accordance with :ref:`our hardware recommendations <Hardware Recommendations>`. You should also update the BIOS on other computers such as the Admin Workstation, but those instructions will vary depending on the manufacturer and model of your device.
 
 What you need
 ~~~~~~~~~~~~~
@@ -37,7 +33,6 @@ Check the make and model of your servers, and follow the F7 BIOS update method i
 - `BIOS update instructions for Intel NUC with Aptio V UEFI Firmware Core <https://www.intel.com/content/dam/support/us/en/documents/mini-pcs/AptioV-BIOS-Update-NUC.pdf>`__
 - `BIOS update instructions for ASUS NUCs <https://www.asus.com/us/support/faq/1052506/>`__
 
-
 Each make and model of NUC will offer different file types; proceed to either the Intel or ASUS Download Center and download the file indicated in the documentation for the F7 method (e.g.,  ``.bio`` or ``.cap``).
 
 .. warning:: Do not download BIOS updates from anywhere other than the manufacturer's website. Be sure that you are `on the correct website`_ and that it has a valid SSL Certificate. Intel's SSL Certificate is issued to \*.intel.com and signed by DigiCert. ASUS' SSL Certificate is issued to \*.asus.com and signed by Amazon. Be sure you download the files specific to the model of your servers.
@@ -53,7 +48,6 @@ Once you have verified the hash, copy the file to your USB flash drive.
 .. _`on the correct website`: https://downloadcenter.intel.com/
 
 .. |gtkhash tails| image:: ../../images/gtkhash_bios.png
-
 
 Update the BIOS
 ~~~~~~~~~~~~~~~

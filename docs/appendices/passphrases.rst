@@ -1,7 +1,7 @@
 Passphrases
 ===========
 
-Each individual with a role (Administrator or Journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation. 
+Each individual with a role (Administrator or Journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation.
 
 Ideally, each Administrator and Journalist would only have to remember the passphrases to unlock the encrypted storage on their Admin or SecureDrop Workstation laptop.
 
@@ -51,9 +51,7 @@ We recommend using encrypted USB flash drives for transferring files off of the 
 
 For every export operation, the user will need to enter the USB flash drive's encryption passphrase at least twice (on the computer they're copying from, and on the computer they're copying to). To make it easy for them to find the passphrase, we recommend storing it in the Journalist's own existing password manager, which should be accessible using their smartphone.
 
-If your organization is not using a password manager already, please see
-the `Freedom of the Press Foundation guide <https://freedom.press/training/blog/choosing-password-manager/>`__
-to choosing one.
+If your organization is not using a password manager already, please see the `Freedom of the Press Foundation guide <https://freedom.press/training/blog/choosing-password-manager/>`__ to choosing one.
 
 .. _passphrase_best_practices:
 
@@ -83,7 +81,6 @@ All SecureDrop users---Sources, Journalists, and Administrators---are required t
    reusing passphrases in general, but it is especially important to avoid doing
    so in the context of SecureDrop.
 
-
 How to generate a strong, unique passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -92,10 +89,7 @@ We recommend using a unique, 7-word passphrase for each case described above. We
 Using KeePassXC to generate a passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a random passphrase using KeePassXC, launch the application,
-then click the **dice icon**. Then click the **Passphrase** tab and set the
-**Word Count** to 7. You can optionally set a **Word Separator**, for example a
-space or hyphen.
+To create a random passphrase using KeePassXC, launch the application, then click the **dice icon**. Then click the **Passphrase** tab and set the **Word Count** to 7. You can optionally set a **Word Separator**, for example a space or hyphen.
 
 |screenshot of KeePassXC passphrase generation feature, showing a
 randomly generated 7-word passphrase|

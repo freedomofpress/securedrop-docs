@@ -56,26 +56,58 @@ If the Qubes hardware compatibility list entry for your computer recommends the 
 Disable SecureBoot
 ~~~~~~~~~~~~~~~~~~
 
-SecureBoot is a feature available on most systems that, when enabled,
-does not allow any operating system to boot that has not been signed by a
-trusted key. By only booting to operating systems that are properly signed,
-you can be sure that the OS itself has not been corrupted or tampered with,
-at least at the boot level.
+SecureBoot is a feature available on most systems that, when enabled, does not allow any operating system to boot that has not been signed by a trusted key. By only booting to operating systems that are properly signed, you can be sure that the OS itself has not been corrupted or tampered with, at least at the boot level.
 
-**SecureBoot must be disabled on the server and Workstation hardware.** SecureDrop
-installs a hardened, security-focused version of the Linux kernel 
-(grsec) that does not support SecureBoot. If SecureBoot is enabled on either of
-the servers during the install, you will receive a pre-install error reminding
-you that it must be turned off before the installation can proceed.
+**SecureBoot must be disabled on the server and Workstation hardware.** SecureDrop installs a hardened, security-focused version of the Linux kernel (grsec) that does not support SecureBoot. If SecureBoot is enabled on either of the servers during the install, you will receive a pre-install error reminding you that it must be turned off before the installation can proceed.
 
-Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with
-SecureDrop Workstations.
+Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with SecureDrop Workstations.
 
-For instructions on how to enable or disable the SecureBoot feature for your
-device, please consult the manufacturer's manual for BIOS settings, as they
-differ for each make and model.
+For instructions on how to enable or disable the SecureBoot feature for your device, please consult the manufacturer's manual for BIOS settings, as they differ for each make and model.
 
 
+
+Follow the linked instructions to `verify the ISO <https://www.qubes-os.org/security/verifying-signatures/#how-to-verify-detached-pgp-signatures-on-qubes-isos>`_. Ensure that the ISO and hash values are in the same directory, then run:
+
+.. code-block:: sh
+
+  gpg --keyserver-options no-self-sigs-only,no-import-clean --fetch-keys https://keys.qubes-os.org/keys/qubes-release-4.2-signing-key.asc
+  gpg -v --verify Qubes-R4.2.4-x86_64.iso.DIGESTS
+  sha256sum -c Qubes-R4.2.4-x86_64.iso.DIGESTS
+
+The output should look like this:
+
+.. code-block:: sh
+
+  gpg: requesting key from 'https://keys.qubes-os.org/keys/qubes-release-4.2-signing-key.asc'
+  gpg: key E022E58F8E34D89F: public key "Qubes OS Release 4.2 Signing Key" imported
+  gpg: Total number processed: 1
+  gpg:               imported: 1
+  gpg: no ultimately trusted keys found
+
+  gpg: armor header: Hash: SHA256
+  gpg: original file name=''
+  gpg: Signature made Mon 17 Feb 2025 12:00:00 AM EST
+  gpg:                using RSA key 9C884DF3F81064A569A4A9FAE022E58F8E34D89F
+  gpg: using pgp trust model
+  gpg: Good signature from "Qubes OS Release 4.2 Signing Key" [unknown]
+  gpg: WARNING: This key is not certified with a trusted signature!
+  gpg:          There is no indication that the signature belongs to the owner.
+  Primary key fingerprint: 9C88 4DF3 F810 64A5 69A4  A9FA E022 E58F 8E34 D89F
+  gpg: textmode signature, digest algorithm SHA256, key algorithm rsa4096
+  Qubes-R4.2.4-x86_64.iso: OK
+  sha256sum: WARNING: 20 lines are improperly formatted
+
+Specifically, you will want to make sure that you see "Good signature" listed in the text. If it does not report a good signature, try deleting the ISO and downloading it again.
+
+Once you've verified the ISO, copy it to your installation medium - for example, if using Linux and a USB flash drive, using the command:
+
+.. code-block:: sh
+
+  sudo dd if=Qubes-R4.2.4-x86_64.iso of=/dev/sdX bs=1048576 && sync
+
+where ``if`` is set to the path to your downloaded ISO file and ``of`` is set to the block device corresponding to your USB flash drive. Note that any data on the USB flash drive will be overwritten.
+
+.. caution:: Make sure to verify that you have the correct device name using, for example, the ``lsblk`` command. You should write to the full device (eg. ``/dev/sdc``) rather than to a partition (eg. ``/dev/sdc1``).
 
 Install Qubes OS (estimated wait time: 30-45 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,8 +1,7 @@
 Communicating with sources
 ==========================
 
-SecureDrop Inbox lets Journalists check SecureDrop, decrypt and securely
-view submissions, and reply to sources.
+SecureDrop Inbox lets Journalists check SecureDrop, decrypt and securely view submissions, and reply to sources.
 
 Once logged in, you will see a chat-like user interface:
 
@@ -18,33 +17,24 @@ Once logged in, you will see a chat-like user interface:
   with a specific source (messages, files, and journalist replies) will be
   displayed here.
 
-
 Opening a conversation
 ----------------------
 
-To display a conversation in the conversation view, simply click a source in the
-source list.
+To display a conversation in the conversation view, simply click a source in the source list.
 
 |screenshot_sdapp_main_view|
 
-Journalists sending replies are assigned different colors and identified with
-their initials. Move your mouse pointer over the initials to reveal the full
-name.
+Journalists sending replies are assigned different colors and identified with their initials. Move your mouse pointer over the initials to reveal the full name.
 
 Highlighting conversations
 --------------------------
 
-You can highlight important conversations by clicking on the star beside a
-source's name. Starred sources will be visible as starred to everyone in your
-organization.
+You can highlight important conversations by clicking on the star beside a source's name. Starred sources will be visible as starred to everyone in your organization.
 
 Sending a reply
 ---------------
 
-Compose a reply to the selected source in the text box at the bottom of the
-conversation view. Click the **Send** button or press "Ctrl+Enter" to send
-a reply. Any replies you did not send will be discarded when you move to a
-different conversation.
+Compose a reply to the selected source in the text box at the bottom of the conversation view. Click the **Send** button or press "Ctrl+Enter" to send a reply. Any replies you did not send will be discarded when you move to a different conversation.
 
 |screenshot_send_reply|
 
@@ -57,11 +47,7 @@ Deleting conversations and source accounts
 
 As part of routine SecureDrop usage, we recommend that you establish data retention practices consistent with your organization's threat model, data lifecycle and data retention policies. Regularly deleting conversations and source accounts can mitigate risks in the event that your SecureDrop servers or a source's account details are compromised.
 
-If you delete messages and files for a source, the source will continue to appear
-in the list of sources in SecureDrop Inbox, and they will still be able
-to log into the Source Interface using their codename. Consider using this
-option as part of regular deletion of reviewed submissions, especially if you
-are not sure that all communication with the source has concluded.
+If you delete messages and files for a source, the source will continue to appear in the list of sources in SecureDrop Inbox, and they will still be able to log into the Source Interface using their codename. Consider using this option as part of regular deletion of reviewed submissions, especially if you are not sure that all communication with the source has concluded.
 
 .. note::
 
@@ -69,9 +55,7 @@ are not sure that all communication with the source has concluded.
    to the source, even if the source has not seen them yet. You will still be
    able to send new replies.
 
-If you delete the entire source account, the source will not be able to log
-in again using their codename, and all information about them will be destroyed. Consider using this option if it is clear that all communication with the source has concluded, or if the source has requested that all information about them and their submissions should be removed.
-
+If you delete the entire source account, the source will not be able to log in again using their codename, and all information about them will be destroyed. Consider using this option if it is clear that all communication with the source has concluded, or if the source has requested that all information about them and their submissions should be removed.
 
 Deleting conversations
 ''''''''''''''''''''''''''''''
@@ -84,14 +68,9 @@ You will be presented with a pop-up where you will be asked to confirm if you wo
 
 |screenshot_confirm_delete|
 
-Click **Delete Conversation** to delete all files and messages (including journalist
-replies) associated with this source, while keeping the source account active.
-The source will continue to appear in the source list, and will be able to
-communicate with you through the Source Interface.
+Click **Delete Conversation** to delete all files and messages (including journalist replies) associated with this source, while keeping the source account active. The source will continue to appear in the source list, and will be able to communicate with you through the Source Interface.
 
-Click **Delete Account** to also remove the source from the source list,
-and to prevent them from logging into the Source Interface. Their account will
-be completely removed from the system.
+Click **Delete Account** to also remove the source from the source list, and to prevent them from logging into the Source Interface. Their account will be completely removed from the system.
 
 .. |screenshot_sdapp_main_view| image:: ../images/screenshot_sdapp_main_view.png
 
@@ -101,11 +80,7 @@ be completely removed from the system.
 
 .. |screenshot_delete_sources_select|  image:: ../images/screenshot_delete_sources_select.png
 
-
 Deleting multiple conversations
 '''''''''''''''''''''''''''''''
 
-To delete multiple conversations or accounts, select more than one source
-conversation from the list, then click the delete button. You will be
-presented with the same options to **Delete Conversations** and
-**Delete Accounts** as you would with a single source conversation.
+To delete multiple conversations or accounts, select more than one source conversation from the list, then click the delete button. You will be presented with the same options to **Delete Conversations** and **Delete Accounts** as you would with a single source conversation.

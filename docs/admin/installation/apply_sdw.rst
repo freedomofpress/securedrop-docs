@@ -21,7 +21,7 @@ This command will take a considerable amount of time and approximately 4GB of ba
 Test the SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The preflight updater will start automatically after logging into the system. Please follow the preflight updater's instructions. 
+The preflight updater will start automatically after logging into the system. Please follow the preflight updater's instructions.
 
 .. note::
 

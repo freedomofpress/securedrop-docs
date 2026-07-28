@@ -3,7 +3,7 @@
 Using the KeePassXC password manager
 ====================================
 
-Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including Administrator, use the KeePassXC password manager to generate and retain strong and unique passphrases. 
+Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including Administrator, use the KeePassXC password manager to generate and retain strong and unique passphrases.
 
 Template password database
 ------------------------------------
@@ -22,21 +22,13 @@ To facilitate using KeePassXC to organize all the credentials needed for using a
 -  Edit entries as required.
 -  Select **Database ▸ Save Database** to save your changes.
 
-The next time you use KeepassXC in ``vault``, the database at ``/path/to/Passwords.kdbx``
-will be selected by default.
+The next time you use KeepassXC in ``vault``, the database at ``/path/to/Passwords.kdbx`` will be selected by default.
 
-KeePassXC will show a warning every time you attempt to open a database without
-entering a password. Because your persistent volume is encrypted, setting up this
-additional password is not strictly required. It provides some additional
-protection, e.g., if a computer is left running, at the cost of convenience.
+KeePassXC will show a warning every time you attempt to open a database without entering a password. Because your persistent volume is encrypted, setting up this additional password is not strictly required. It provides some additional protection, e.g., if a computer is left running, at the cost of convenience.
 
-For passwordless access without warnings, you can protect the database using a
-key file, via **Database ▸ Database settings ▸ Security ▸ Add additional protection
-▸ Add Key File ▸ Generate**. This key file has to be stored in your Persistent
-folder and it must be selected when you open the database.
+For passwordless access without warnings, you can protect the database using a key file, via **Database ▸ Database settings ▸ Security ▸ Add additional protection ▸ Add Key File ▸ Generate**. This key file has to be stored in your Persistent folder and it must be selected when you open the database.
 
-After configuring the password database, restart KeePassXC once to verify
-that you are able to access it as expected.
+After configuring the password database, restart KeePassXC once to verify that you are able to access it as expected.
 
 .. warning:: You will not be able to access your passwords if you
          forget the full disk encryption or the location of the key
@@ -46,8 +38,7 @@ that you are able to access it as expected.
 
 .. _keepassxc_manual_create_database:
 
-In case you wish to manually create a database, the suggested password fields in
-the template are:
+In case you wish to manually create a database, the suggested password fields in the template are:
 
 Admin:
    - Admin account username

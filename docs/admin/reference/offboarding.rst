@@ -1,8 +1,7 @@
 Off-board Administrators and Journalists
 ==========================================
 
-When Journalists and SecureDrop Administrators leave your organization, it is
-important to off-board them from SecureDrop.
+When Journalists and SecureDrop Administrators leave your organization, it is important to off-board them from SecureDrop.
 
 .. important:: Additional measures may need to be taken if the
    user's departure is on unfriendly terms. These measures will vary
@@ -44,15 +43,12 @@ Additional steps for off-boarding Administrators
   prevent unauthorized SSH access to the Application and Monitor Servers in
   the event that this user has retained their Admin SSH credentials.
 
-
 .. _rotate_ssh_key:
 
 Rotate SSH keys on the SecureDrop servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are concerned that the user may have a copy of
-the SSH key, you should rotate the key in the following manner.
-
+If you are concerned that the user may have a copy of the SSH key, you should rotate the key in the following manner.
 
 #.  Create a new SSH keypair.
     From the ``sd-admin`` qube, run
@@ -81,7 +77,6 @@ the SSH key, you should rotate the key in the following manner.
 
       scp -O /home/amnesia/.ssh/newkey.pub scp://mon
 
-
 #.  Add this key to the list of authorized keys.
     SSH to the Application Server and append this new key to the list of
     authorized keys by using
@@ -91,7 +86,6 @@ the SSH key, you should rotate the key in the following manner.
       cat newkey.pub >> ~/.ssh/authorized_keys
 
     Be sure to use the command as above so that you append the key, instead of replacing the file. While you are still on the Application Server, you can then delete the file ``newkey.pub`` from wherever you scp'd it to (i.e. your home directory). Repeat this process with the Monitor Server.
-
 
 #.  Rename SSH keys.
     Exit all SSH sessions and rename ``id_rsa`` and ``id_rsa.pub`` (the old SSH keys) to something else. For example,
@@ -103,11 +97,9 @@ the SSH key, you should rotate the key in the following manner.
 
     Then, rename your ``newkey`` and ``newkey.pub`` to ``id_rsa`` and ``id_rsa.pub``.
 
-
 #.  Test SSH connection.
     Test that you can still ssh into the Application and Monitor Servers (you
     can test with ``ssh app host`` and ``ssh mon host``).
-
 
 #.  Restrict SSH access to the new key.
 
@@ -115,7 +107,7 @@ the SSH key, you should rotate the key in the following manner.
         Application and Monitor Servers, the next step will revoke their
         access. Their public keys will have to be re-appended to the
         ``authorized_keys`` file on each server, as in step 3.
-        
+
     From an ``sd-admin`` qube, run
 
     .. code:: sh
@@ -133,10 +125,7 @@ Rotate the Submission Key
 
 .. TODO Update instructions for Qubes
 
-The Submission Private Key is held on the airgapped Secure Viewing Station,
-and is not normally accessed by SecureDrop users anywhere but on the Secure Viewing Station.
-Therefore, we recommend rotating the Submission Key under the following
-circumstances:
+The Submission Private Key is held on the airgapped Secure Viewing Station, and is not normally accessed by SecureDrop users anywhere but on the Secure Viewing Station. Therefore, we recommend rotating the Submission Key under the following circumstances:
 
 - If the user's departure was not amicable
 - If the user is still holding on to any Secure Viewing Station USB flash drive or
@@ -144,9 +133,7 @@ circumstances:
 - If you have any other reason to believe the Submission Private Key or the
   entire Secure Viewing Station USB flash drive may have been copied or compromised.
 
-You should still keep the old key on the Secure Viewing Station, or else you
-will not be able to decrypt submissions that were sent to you while that key
-was in effect.
+You should still keep the old key on the Secure Viewing Station, or else you will not be able to decrypt submissions that were sent to you while that key was in effect.
 
 **You will need:**
 
@@ -160,7 +147,6 @@ On the Secure Viewing Station
 #. From the Secure Viewing Station Apps Menu, choose **Accessories ▸
    Kleopatra**, and select the Submission Key from the list of available
    keys.
-
 
    |select securedrop key|
 
@@ -245,4 +231,3 @@ On the Secure Viewing Station
 .. |edit key name| image:: ../../images/offboard/change_name.png
 .. |new list| image:: ../../images/offboard/new_list.png
 .. |revoked| image:: ../../images/offboard/revoked.png
-

@@ -24,8 +24,7 @@ Because the installation and operation are complex, and because SecureDrop can o
 
 If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us. We do ask news organizations that can afford to pay for installation support, training and maintenance to do so.
 
-As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train *Journalists* to use it. (For  pro-bono support, we request that our travel costs
-are covered.) 
+As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train *Journalists* to use it. (For  pro-bono support, we request that our travel costs are covered.)
 
 .. include:: ../../includes/provide-feedback.txt
 
@@ -42,8 +41,8 @@ During this process, you'll set up at least four devices:
    An Ubuntu server that monitors the Application Server with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
 - Network Firewall
    A hardware firewall dedicated to your SecureDrop installation. 
-   
-A summary of the major steps is as follow:  
+
+A summary of the major steps is as follow:
 
 #. Acquire compatible hardware.
 #. Prepare email accounts and GPG keys for alert emails.
@@ -74,7 +73,6 @@ It is **critical** that you destroy this worksheet when your installation is com
              installation is complete.
 
 .. _`SecureDrop Installation Worksheet`: https://docs.google.com/a/freedom.press/document/d/18RMAzhx1XCgpmw366I8tItBXQTzkFy_i_D0c605DTS8/edit?usp=sharing
-
 
 Minimum security requirements for a SecureDrop Workstation
 ------------------------------------------------------------

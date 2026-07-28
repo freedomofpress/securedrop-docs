@@ -1,37 +1,27 @@
 Working with submissions
 ========================
 
-When a Source submits files, you will see a Download button in the conversation
-flow, a file size, and light-gray text that says "Encrypted File."
+When a Source submits files, you will see a Download button in the conversation flow, a file size, and light-gray text that says "Encrypted File."
 
 |screenshot_file_before_download|
 
 Downloading
 -----------
 
-To download a file, click the **Download** button. An animated spinner will
-indicate that the file is downloading, and a progress bar will indicate
-the download's progress:
+To download a file, click the **Download** button. An animated spinner will indicate that the file is downloading, and a progress bar will indicate the download's progress:
 
 |screenshot_file_downloading|
 
-If necessary, you can pause the download by clicking "Pause," and resume
-the download later with "Resume."
+If necessary, you can pause the download by clicking "Pause," and resume the download later with "Resume."
 
-Once the file has been downloaded and decrypted, the filename will be visible,
-as will the action **Export** and **Print**. The displayed file size may increase
-after the download is complete, because the SecureDrop Client automatically
-decompresses the downloaded file.
+Once the file has been downloaded and decrypted, the filename will be visible, as will the action **Export** and **Print**. The displayed file size may increase after the download is complete, because the SecureDrop Client automatically decompresses the downloaded file.
 
 |screenshot_file_download_successful|
 
 Viewing submissions on the SecureDrop Workstation
 ---------------------------------------------------
 
-To view a downloaded submission, click its filename. This will open
-the file in a temporary environment, called a "disposable" qube. The file you
-clicked on will open in a new window with a different colored border and a
-window title prefixed with "disp" (meaning disposable).
+To view a downloaded submission, click its filename. This will open the file in a temporary environment, called a "disposable" qube. The file you clicked on will open in a new window with a different colored border and a window title prefixed with "disp" (meaning disposable).
 
 |screenshot_dispvm|
 
@@ -78,9 +68,7 @@ Exporting submissions from the SecureDrop Workstation
    the risk of spreading malware to that computer. Make sure you understand the
    risks, and consider other methods to export the document (e.g., print).
 
-If you must copy a file from your SecureDrop Workstation to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that Journalists are provided with an Export Device, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__.
-These instructions assume that you are following the recommended workflow.
-If you are unsure, ask your Administrator.
+If you must copy a file from your SecureDrop Workstation to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that Journalists are provided with an Export Device, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__. These instructions assume that you are following the recommended workflow. If you are unsure, ask your Administrator.
 
 Exporting to an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -141,8 +129,7 @@ To access the Export Device on your everyday workstation, follow these steps:
 
 When you are done, switch back to the VeraCrypt window, and click **Dismount**.
 
-You are now ready to write articles and blog posts, edit video and
-audio, and begin publishing important, high-impact work!
+You are now ready to write articles and blog posts, edit video and audio, and begin publishing important, high-impact work!
 
 .. tip:: Check out our SecureDrop :doc:`Promotion Guide
          </admin/deployment/getting_the_most_out_of_securedrop>` to read
@@ -151,9 +138,9 @@ audio, and begin publishing important, high-impact work!
 Securely erase an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Due to the underlying technology of USB flash drives, Export Devices are likely to retain recoverable portions of files that have been stored on them even if those files have been deleted. 
+Due to the underlying technology of USB flash drives, Export Devices are likely to retain recoverable portions of files that have been stored on them even if those files have been deleted.
 
-To protect against the possibility that a compromised encryption password will yield access to traces of previously exported files, you should securely erase your Export Devices on a regular basis. You may also wish to do this on a case-by-case basis after handling particularly sensitive files or if you believe a decryption password may be compromised. 
+To protect against the possibility that a compromised encryption password will yield access to traces of previously exported files, you should securely erase your Export Devices on a regular basis. You may also wish to do this on a case-by-case basis after handling particularly sensitive files or if you believe a decryption password may be compromised.
 
 Securely erasing an Export Device can only be done by re-formatting and re-encrypting the USB flash drive with a new encryption password. You can follow the :doc:`same steps</admin/installation/provisioning_usb>` used to initially create the Export Device, or contact your Administrator.
 
@@ -167,8 +154,7 @@ Safely working with submissions outside the SecureDrop Workstation
 Risks from malware
 ~~~~~~~~~~~~~~~~~~
 
-SecureDrop does not scan for or remove malware in submissions you receive. There
-are important steps you can take to protect yourself:
+SecureDrop does not scan for or remove malware in submissions you receive. There are important steps you can take to protect yourself:
 
 1. **Keep your SecureDrop Workstation up-to-date.**
 2. **Print documents from the SecureDrop Workstation instead of exporting them
@@ -214,8 +200,7 @@ are important steps you can take to protect yourself:
    (potentially including GPS coordinates) to anyone who gains access
    to the file.
 
-Fully mitigating the risks of malware received via SecureDrop is beyond the
-scope of this documentation. If you have questions, you can :doc:`contact us </introduction/getting_support>`. Please do **NOT** disclose details about the contents of any submission you have received.
+Fully mitigating the risks of malware received via SecureDrop is beyond the scope of this documentation. If you have questions, you can :doc:`contact us </introduction/getting_support>`. Please do **NOT** disclose details about the contents of any submission you have received.
 
 .. tip::
 

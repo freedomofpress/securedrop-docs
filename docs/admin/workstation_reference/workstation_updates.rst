@@ -4,8 +4,7 @@ Updating SecureDrop Workstation
 Preflight updates
 -----------------
 
-After you unlock your SecureDrop Workstation, the preflight updater will prompt you to check for available
-updates at least once per day.
+After you unlock your SecureDrop Workstation, the preflight updater will prompt you to check for available updates at least once per day.
 
 The preflight updater delivers new SecureDrop Inbox releases, SecureDrop Workstation updates, and updates to the underlying Qubes operating system.
 
@@ -17,16 +16,13 @@ Verifying version numbers
 You can find the version number of the SecureDrop Inbox running on your workstation on the login screen when you open the Inbox.
 
 The version number for the SecureDrop Workstation itself can be found by running the following command in a ``dom0`` Terminal: ::
-  
+
   sudo dnf list securedrop-workstation-dom0-config
 
 Troubleshooting updates
 -----------------------
 
-If updates fail for any reason, SecureDrop Inbox will not launch until the
-underlying issue has been resolved. This is to ensure
-that the system is in a secure state before you
-interact with SecureDrop.
+If updates fail for any reason, SecureDrop Inbox will not launch until the underlying issue has been resolved. This is to ensure that the system is in a secure state before you interact with SecureDrop.
 
 .. figure:: images/preflight_update_failed.png
    :alt: A screenshot of the preflight update window,
@@ -39,17 +35,12 @@ interact with SecureDrop.
    The error displayed when the preflight updater
    does not successfully complete the update.
 
-Below are some troubleshooting steps for common
-update issues.
+Below are some troubleshooting steps for common update issues.
 
 Step 1: Locate the updater log
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The preflight updater runs in the ``dom0`` domain. It
-writes its log to ``~/.securedrop_updater/logs/updater.log``.
-Log files are rotated hourly; if you have started the updater
-again since the error occurred, you may need to check the
-previous log file.
+The preflight updater runs in the ``dom0`` domain. It writes its log to ``~/.securedrop_updater/logs/updater.log``. Log files are rotated hourly; if you have started the updater again since the error occurred, you may need to check the previous log file.
 
 In order to examine the most recent log file:
 
@@ -76,8 +67,7 @@ In order to locate a previous log file in the same directory:
 Step 2: Identify the cause(s) of the error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If the updater has run to completion, you should see a result
-line in the log file that looks similar to the following:
+If the updater has run to completion, you should see a result line in the log file that looks similar to the following:
 
 .. code-block:: none
 
@@ -90,18 +80,14 @@ line in the log file that looks similar to the following:
   'sd-small-bookworm-template': <UpdateStatus.UPDATES_OK: '0'>,
   'recommended_action': <UpdateStatus.UPDATES_FAILED: '3'>}
 
-In this example, the ``fedora-42-xfce`` qube has failed to update.
-This is indicated by the text ``<UpdateStatus.UPDATES_FAILED: '3'>``.
+In this example, the ``fedora-42-xfce`` qube has failed to update. This is indicated by the text ``<UpdateStatus.UPDATES_FAILED: '3'>``.
 
-It is possible that multiple steps have failed. Make note of any
-of the individual steps that have failed, other than ``recommended_action``.
+It is possible that multiple steps have failed. Make note of any of the individual steps that have failed, other than ``recommended_action``.
 
 Step 3: Resolve the issue(s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The resolution path will depend on which step(s) failed.
-Note that ``dom0`` and ``apply_dom0`` are separate steps.
-
+The resolution path will depend on which step(s) failed. Note that ``dom0`` and ``apply_dom0`` are separate steps.
 
 ``dom0`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -124,8 +110,7 @@ Note that ``dom0`` and ``apply_dom0`` are separate steps.
 Expired SecureDrop signing key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If the update fails after running ``sudo qubes-dom0-update`` as described
-above, and the terminal console displays the following message:
+If the update fails after running ``sudo qubes-dom0-update`` as described above, and the terminal console displays the following message:
 
 .. code-block:: sh
 
@@ -138,9 +123,7 @@ above, and the terminal console displays the following message:
    [...]
    Error: GPG check FAILED
 
-your system is trying to use an old copy of the SecureDrop Release
-Signing Key. You can perform the following steps to fetch the updated
-key and remove the expired one:
+your system is trying to use an old copy of the SecureDrop Release Signing Key. You can perform the following steps to fetch the updated key and remove the expired one:
 
 #. **Start a terminal** in the ``work`` qube via the menu: |qubes_menu| **▸ Apps ▸ work ▸ Xfce Terminal**
 #. **Download the key:**
@@ -265,7 +248,6 @@ key and remove the expired one:
       uid           [ unknown] SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>
       sub   rsa4096 2021-05-10 [E] [expires: 2027-05-24]
 
-
 ``sd-*-template`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -302,14 +284,9 @@ key and remove the expired one:
 ``apply_dom0`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``apply_dom0`` step applies any necessary configuration
-changes to the SecureDrop Workstation. If this step fails,
-this may indicate a misconfiguration, or it could be a result
-of download failures during the operation.
+The ``apply_dom0`` step applies any necessary configuration changes to the SecureDrop Workstation. If this step fails, this may indicate a misconfiguration, or it could be a result of download failures during the operation.
 
-We recommend first re-running the updater by double-clicking
-the SecureDrop desktop icon. This may resolve transient network
-issues.
+We recommend first re-running the updater by double-clicking the SecureDrop desktop icon. This may resolve transient network issues.
 
 If this does not resolve the issue:
 
@@ -331,10 +308,7 @@ If this does not resolve the issue:
 Step 4: Restart the updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Click the SecureDrop Inbox desktop icon to restart the updater.
-If all issues have been resolved, the updater should run to
-completion and display a success message. If the issue
-persists, please contact us for assistance.
+Click the SecureDrop Inbox desktop icon to restart the updater. If all issues have been resolved, the updater should run to completion and display a success message. If the issue persists, please contact us for assistance.
 
 .. |blue_qube| image:: ../../images/blue_qube.png
    :alt: Qubes Domains menu

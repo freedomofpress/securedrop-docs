@@ -7,8 +7,7 @@ For larger newsrooms, there may be a team of Administrators, but at least one pe
 
 The Administratopr connects to the Application and Monitor Servers over `authenticated Onion Services <https://tb-manual.torproject.org/onion-services/>`__, and manages them using `Ansible <https://www.ansible.com/>`__.
 
-If you are considering becoming a SecureDrop Administrator, below are some
-attributes that will be important to have:
+If you are considering becoming a SecureDrop Administrator, below are some attributes that will be important to have:
 
 * Experience with managing Linux-based systems from the command line.
 * Proficiency with network hardware such as firewalls and switches (e.g. pfSense).
@@ -25,9 +24,7 @@ This Admin Guide covers planning, installation, deployment, and ongoing maintena
 Responsibilities of SecureDrop Administrators
 ---------------------------------------------
 
-The SecureDrop architecture contains multiple machines and hardened servers.
-While many of the installation and maintenance tasks have been automated, a
-skilled Linux admin is required to responsibly run the system.
+The SecureDrop architecture contains multiple machines and hardened servers. While many of the installation and maintenance tasks have been automated, a skilled Linux admin is required to responsibly run the system.
 
 As a SecureDrop Administrator, it is your responsibility to:
 
@@ -51,14 +48,9 @@ As a SecureDrop Administrator, it is your responsibility to:
 Responsibilities of the SecureDrop team
 ---------------------------------------
 
-The SecureDrop team employed by Freedom of the Press Foundation (FPF) and the
-SecureDrop community maintain and develop the SecureDrop software, which
-is offered as open source software, free of charge, and at your own risk.
+The SecureDrop team employed by Freedom of the Press Foundation (FPF) and the SecureDrop community maintain and develop the SecureDrop software, which is offered as open source software, free of charge, and at your own risk.
 
-FPF offers :doc:`paid priority support services </introduction/getting_support>`. We are
-happy to provide assistance with installing the system, with training of
-Administrators and Journalists, and with investigation of technical issues
-and incidents.
+FPF offers :doc:`paid priority support services </introduction/getting_support>`. We are happy to provide assistance with installing the system, with training of Administrators and Journalists, and with investigation of technical issues and incidents.
 
 .. note::
 
@@ -66,48 +58,29 @@ and incidents.
    Press  Foundation does not offer systems administration, hosting or "remote
    hands" services.
 
-When the SecureDrop team becomes aware of a security vulnerability in SecureDrop
-or its software dependencies, we assess the impact of the vulnerability in the
-context of existing security mitigations and 
-:doc:`our threat model </appendices/threat_model/threat_model>`.
-Based on this assessment, we prioritize technical work and external communications.
+When the SecureDrop team becomes aware of a security vulnerability in SecureDrop or its software dependencies, we assess the impact of the vulnerability in the context of existing security mitigations and :doc:`our threat model </appendices/threat_model/threat_model>`. Based on this assessment, we prioritize technical work and external communications.
 
-For high severity issues that require technical changes to SecureDrop, we will
-issue a point release as soon as possible. As part of issuing a release or
-advisory, we will post further details on the SecureDrop website and to the support
-portal.
+For high severity issues that require technical changes to SecureDrop, we will issue a point release as soon as possible. As part of issuing a release or advisory, we will post further details on the SecureDrop website and to the support portal.
 
-In rare circumstances when a technical fix is extremely time sensitive, we may
-provide signed patches to impacted SecureDrop instances. Even in these cases, we
-ask that you never install code provided to you that is not signed using the
-current `SecureDrop release key <https://securedrop.org/securedrop-release-key.asc>`__.
+In rare circumstances when a technical fix is extremely time sensitive, we may provide signed patches to impacted SecureDrop instances. Even in these cases, we ask that you never install code provided to you that is not signed using the current `SecureDrop release key <https://securedrop.org/securedrop-release-key.asc>`__.
 
-When in doubt how to resolve an issue, please avoid following technical
-instructions that have not been vetted by the SecureDrop team. If you encounter
-bugs, please `report them <https://github.com/freedomofpress/securedrop/issues/new/choose>`__.
-For sensitive matters, you can contact us via the `SecureDrop Support Portal`_
-or via our `contact form <https://securedrop.org/help/>`__.
+When in doubt how to resolve an issue, please avoid following technical instructions that have not been vetted by the SecureDrop team. If you encounter bugs, please `report them <https://github.com/freedomofpress/securedrop/issues/new/choose>`__. For sensitive matters, you can contact us via the `SecureDrop Support Portal`_ or via our `contact form <https://securedrop.org/help/>`__.
 
 .. _manage_users:
 
 Managing users
 --------------
 
-Adminstrators are responsible for managing user credentials and encouraging best practices. (See
-:ref:`Passphrase Best Practices<passphrase_best_practices>`.)
-The Administrator will also have access to the Admin Interface, via her own username, passphrase,
-and two-factor authentication method (using a smartphone application or YubiKey).
+Adminstrators are responsible for managing user credentials and encouraging best practices. (See :ref:`Passphrase Best Practices<passphrase_best_practices>`.) The Administrator will also have access to the Admin Interface, via her own username, passphrase, and two-factor authentication method (using a smartphone application or YubiKey).
 
-See :ref:`User Management<User Management>` for more information on adding and managing
-users.
+See :ref:`User Management<User Management>` for more information on adding and managing users.
 
 .. _manage_config:
 
 Managing the system configuration
 ---------------------------------
 
-Administrators are responsible for configuring and maintaining the system. Several tools
-are available to support this:
+Administrators are responsible for configuring and maintaining the system. Several tools are available to support this:
 
 * :ref:`The Admin Interface<The Admin Interface>` allows the Administrator to manage users and configure
   web interface features such as organizations logos and submission preferences
