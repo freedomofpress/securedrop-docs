@@ -1,5 +1,5 @@
 Starting SecureDrop Inbox
-==============================
+=========================
 
 After you log into Qubes, SecureDrop Inbox will start automatically. If you have previously exited the application, you can double-click on the **SecureDrop** desktop shortcut to launch it.
 
@@ -30,7 +30,10 @@ To sign in, enter the username and passphrase provided to you by your SecureDrop
 
 |screenshot_sd-app_login|
 
-Troubleshooting tips ~~~~~~~~~~~~~~~~~~~~ If you have trouble running the updater or logging in, please contact your Administrator. Our :doc:`network troubleshooting guide <../admin/maintenance/troubleshooting_connection>` for administrators gives detailed steps for investigating connectivity issues.
+Troubleshooting tips
+~~~~~~~~~~~~~~~~~~~~
+
+If you have trouble running the updater or logging in, please contact your Administrator. Our :doc:`network troubleshooting guide <../admin/maintenance/troubleshooting_connection>` for administrators gives detailed steps for investigating connectivity issues.
 
 Seen and unseen submissions
 ---------------------------

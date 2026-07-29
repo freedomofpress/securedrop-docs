@@ -20,10 +20,7 @@ The process requires experience with the Linux command line and Tails, and can t
 #. Configure SSH-over-TOR.
 #. Complete post-rebuild tasks.
 
-.. important:: The rebuild process involves temporarily removing ``iptables``
-               rules on the Application and Monitor Servers, weakening their
-               security. Because of this, it's important to complete the rebuild
-               process promptly, to avoid leaving the servers in an insecure state.
+.. important:: The rebuild process involves temporarily removing ``iptables`` rules on the Application and Monitor Servers, weakening their security. Because of this, it's important to complete the rebuild process promptly, to avoid leaving the servers in an insecure state.
 
 Step 1: Prepare the USB flash drives
 ====================================
@@ -60,7 +57,7 @@ Once the root prompt appears, you'll need to reset the password for the SecureDr
 
 .. important::
  Make sure to select a strong password, and record it in the Admin Workstation's
- KeePassXC database.
+.. important:: Make sure to select a strong password, and record it in the Admin Workstation's KeePassXC database.
 
 Finally, reboot the Monitor Server and verify that you can log in at the console using the new password.
 
@@ -75,8 +72,7 @@ First, start the new Admin Workstation with persistence enabled and an administr
 
 Next, connect the new Admin Workstation to the *Hardware Firewall* via the appropriate Ethernet port, and set up its static IP address. For more information on how to do so, see :ref:`this section in the firewall setup documentation <assign_static_ip_to_workstation>`. If you do not know the correct static IP address for the Admin Workstation, and you are using a recommended pfSense-based *Hardware Firewall*, you can retrieve the address by logging into its admin interface and checking the settings under **Firewall ▸ Aliases**.
 
-.. note:: If you do not have login credentials for your pfSense firewall, check
- its user manual for instructions on resetting the administration password.
+.. note:: If you do not have login credentials for your pfSense firewall, check its user manual for instructions on resetting the administration password.
 
 Next, determine whether your instance was set up to allow administrative access via SSH over Tor, or via SSH over LAN. If you don't know which option was originally chosen, you can check as follows:
 
@@ -174,10 +170,9 @@ Step 4: Retrieve SecureDrop configuration info from the servers
 
 In addition to the account and networking information retrieved from the servers so far, you'll need to retrieve the following files and info:
 
- - GPG Submission Public Key, OSSEC Alert Public Key, and (optional)
-   Journalist Alert Public Key
- - OSSEC alert configuration details
- - (Optional) HTTPS configuration details
+- GPG Submission Public Key, OSSEC Alert Public Key, and (optional) Journalist Alert Public Key
+- OSSEC alert configuration details
+- (Optional) HTTPS configuration details
 
 Retrieve GPG public keys
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -229,11 +224,11 @@ Retrieve OSSEC alert configuration details
 
 You'll also need to retrieve the following configuration information:
 
- - SMTP server
- - SMTP port
- - SASL username
- - SASL domain
- - SASL password
+- SMTP server
+- SMTP port
+- SASL username
+- SASL domain
+- SASL password
 
 To retrieve these values, use the following command in the terminal:
 
@@ -299,8 +294,7 @@ Once the command completes successfully, run
 
 Once this command is complete:
 
- - verify that the *SecureDrop Menu* for the Source and Admin Interfaces
-   works correctly, opening their respective homepages in Tor Browser.
+- verify that the *SecureDrop Menu* for the Source and Admin Interfaces works correctly, opening their respective homepages in Tor Browser.
 
 To revert the changes made to enable temporary local SSH access, you should reboot the servers, by issuing the following commands in a terminal:
 
@@ -356,7 +350,9 @@ Step 8: Post-rebuild tasks
    servers.
    If you rebuild your Admin Workstation, you must also provision
    all other existing Tails workstation drives updated Tor
-   credentials (see below).
+.. important:: Rebuilding an Admin Workstation makes changes that will prevent your other Tails workstations from connecting to your SecureDrop servers.
+
+  If you rebuild your Admin Workstation, you must also provision all other existing Tails workstation drives updated Tor credentials (see below).
 
 We recommend completing the following tasks after the rebuild:
 
@@ -396,4 +392,29 @@ We recommend completing the following tasks after the rebuild:
    or boot into each of your additional Tails workstations, plug in and unlock your
    Admin Workstation's encrypted partition via the **Places** app, and manually copy
    the file(s) from the Admin Workstation to the same directory on the target Tails
-   workstation.
+   
+We recommend completing the following tasks after the rebuild:
+
+- Set up a new administration account on the Admin Interface, by following :doc:`these instructions <../installation/create_admin_account>`
+- Verify that submissions can be decrypted, by going through the decryption workflow with a new submission.
+- Back up your Admin Workstation.
+- Delete invalid admin accounts in the Admin Interface.
+- Restrict SSH access to the Application and Monitor Servers to valid Admin Workstations. If your new Admin Workstation USB flash drive is the only one that should have SSH access to the servers, you can remove access for any previous Admin Workstations from the terminal, using the commands:
+
+   .. code:: sh
+
+     securedrop-admin reset_admin_access
+
+  You can also selectively remove invalid keys by logging on to the Application and Monitor Servers and editing the file ``~/.ssh/authorized_keys``, making sure not to remove the public key belonging to your new Admin Workstation.
+- :doc:`Back up the Application Server <backup_and_restore>` once SSH-over-Tor has been restored. Ensure that server and workstation backups happen regularly.
+- Provision all other Tails workstation drives (Journalist and/or Admin Workstations) with updated Tor credentials, so that they can access SecureDrop after this rebuild.
+
+  You will need to copy the following file(s) to all other Admin and SecureDrop Workstations, replacing the existing files of the same name:
+
+   .. code:: sh
+
+    ~/.config/securedrop-admin/app-journalist.auth_private
+    ~/.config/securedrop-admin/tor-v3-keys.json # for Admin Workstations only
+
+  You may copy these files using a encrypted USB flash drive (which must be wiped afterwards), or boot into each of your additional Tails workstations, plug in and unlock your Admin Workstation's encrypted partition via the **Places** app, and manually copy the file(s) from the Admin Workstation to the same directory on the target Tails workstation.
+

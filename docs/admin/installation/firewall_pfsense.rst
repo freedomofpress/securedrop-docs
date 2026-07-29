@@ -17,7 +17,9 @@ Since our recommended firewalls have at least 4 NICs, we will refer to the relev
 
 Depending on your network configuration, you should define the IP and subnet values your instance will use before continuing. We recommend the default values below:
 
-IP and subnet definitions: '''''''''''''''''''''''''' .. raw:: html
+IP and subnet definitions: 
+'''''''''''''''''''''''''' 
+.. raw:: html
 
    <!-- -->
 
