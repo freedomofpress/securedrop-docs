@@ -176,6 +176,7 @@ or making `a donation <https://freedom.press/donate>`_.
 
    admin/installation/installation_overview
    admin/installation/hardware
+   admin/installation/prepare_installation_media
    admin/installation/email_alerts
    admin/installation/prepare_sdw
    admin/installation/generate_submission_key
