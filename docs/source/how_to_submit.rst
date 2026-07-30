@@ -3,12 +3,7 @@ How to submit
 
 .. note::
 
-   This guide provides an introduction to using SecureDrop as a Source.
-   It is not exhaustive, it does not address ethical or legal dimensions of
-   whistleblowing, and it does not speak to other methods for confidentially
-   communicating with Journalists. Please proceed at your own risk. For additional
-   background, also see the Freedom of the Press Foundation guide, `How to Share Sensitive
-   Leaks With the Press <https://freedom.press/news/sharing-sensitive-leaks-press/>`__.
+   This guide provides an introduction to using SecureDrop as a Source. It is not exhaustive, it does not address ethical or legal dimensions of whistleblowing, and it does not speak to other methods for confidentially communicating with Journalists. Please proceed at your own risk. For additional background, also see the Freedom of the Press Foundation guide, `How to Share Sensitive Leaks With the Press <https://freedom.press/news/sharing-sensitive-leaks-press/>`__.
 
 .. warning:: Freedom of the Press Foundation has no access to any other
    organization's SecureDrop instance, and cannot assist directly in your
@@ -42,12 +37,7 @@ Click the **Security Level** link in the warning banner, and a message bubble wi
 
 .. note::
 
-   The "Safest" setting disables the use of JavaScript on every page you visit
-   using Tor Browser, even after a browser restart. This may cause other
-   websites you visit using Tor Browser to no longer work correctly, until
-   you adjust the Security Level again. We recommend keeping the setting at
-   "Safest" during the entirety of the session in which you access an
-   organization's SecureDrop instance.
+   The "Safest" setting disables the use of JavaScript on every page you visit using Tor Browser, even after a browser restart. This may cause other websites you visit using Tor Browser to no longer work correctly, until you adjust the Security Level again. We recommend keeping the setting at "Safest" during the entirety of the session in which you access an organization's SecureDrop instance.
 
 Once you return to the SecureDrop page, it should stop displaying the warning. If this is the first time you are using SecureDrop, click the **Get Started** button.
 

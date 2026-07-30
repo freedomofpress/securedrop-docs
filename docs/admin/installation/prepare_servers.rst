@@ -192,11 +192,9 @@ Configure account and hostname
 On the **Profile setup** screen, configure the server's hostname and the administration account. The administrator account username and password should be the same for both servers:
 
 - **Your name:** Specify the administrator account name, e.g. ``SecureDrop Admin``
-- **Your server's name:** Use ``app`` for the Application Server, and ``mon`` for
-  the Monitor Server
+- **Your server's name:** Use ``app`` for the Application Server, and ``mon`` for the Monitor Server
 - **Pick a username:** Specify the administrator account username, e.g. ``sdadmin``
-- **Choose a password:** Specify a strong password for the administrator account.
-  A Diceware-generated passphrase is recommended.
+- **Choose a password:** Specify a strong password for the administrator account. A Diceware-generated passphrase is recommended.
 - **Confirm your password:** Enter the password chosen above.
 
 Select **Done** and press **Enter** to proceed.

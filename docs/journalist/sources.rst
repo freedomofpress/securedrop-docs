@@ -5,17 +5,10 @@ SecureDrop Inbox lets Journalists check SecureDrop, decrypt and securely view su
 
 Once logged in, you will see a chat-like user interface:
 
-- The top of the left panel shows your username, if you are logged in, or the
-  sign-in button.
-- The action area of the left panel provides the ability to search for sources,
-  toggle the sort order, select multiple sources, and delete sources.
-- The larger portion of the left panel holds the list of sources that have submitted to your
-  instance. Each source is identified to you with a two word pseudonym. You will also
-  see the date of the last source activity, an icon to indicate if a source contains attachments,
-  and a button to mark a source as starred.
-- The right panel holds the conversation view. All parts of the conversation
-  with a specific source (messages, files, and journalist replies) will be
-  displayed here.
+- The top of the left panel shows your username, if you are logged in, or the sign-in button.
+- The action area of the left panel provides the ability to search for sources, toggle the sort order, select multiple sources, and delete sources.
+- The larger portion of the left panel holds the list of sources that have submitted to your instance. Each source is identified to you with a two word pseudonym. You will also see the date of the last source activity, an icon to indicate if a source contains attachments, and a button to mark a source as starred.
+- The right panel holds the conversation view. All parts of the conversation with a specific source (messages, files, and journalist replies) will be displayed here.
 
 Opening a conversation
 ----------------------
@@ -51,9 +44,7 @@ If you delete messages and files for a source, the source will continue to appea
 
 .. note::
 
-   If you delete all messages and files, that includes all replies you have sent
-   to the source, even if the source has not seen them yet. You will still be
-   able to send new replies.
+   If you delete all messages and files, that includes all replies you have sent to the source, even if the source has not seen them yet. You will still be able to send new replies.
 
 If you delete the entire source account, the source will not be able to log in again using their codename, and all information about them will be destroyed. Consider using this option if it is clear that all communication with the source has concluded, or if the source has requested that all information about them and their submissions should be removed.
 

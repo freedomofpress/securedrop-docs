@@ -272,11 +272,9 @@ To guard your Landing Page against being modified by an attacker and directing S
 -  Use long, random and complex passwords
 -  Firewall rules to restrict accessible ports (see iptables or ufw)
 -  AppArmor, grsecurity, SELINUX, modsecurity
--  Intrusion and/or integrity monitoring (see Logwatch, OSSEC, Snort,
-   rkhunter, chkrootkit)
+-  Intrusion and/or integrity monitoring (see Logwatch, OSSEC, Snort, rkhunter, chkrootkit)
 -  Downtime alerts (Nagios or Pingdom)
--  Two-factor authentication (see libpam-google-authenticator,
-   libpam-yubico)
+-  Two-factor authentication (see libpam-google-authenticator, libpam-yubico)
 
 It's preferable for the Landing Page to have its own segmented environment instead of hosting it alongside other sites running potentially vulnerable software or content management systems. Check that user and group file permissions are locked down and that modules or gateway interfaces for dynamic scripting languages are not enabled. You don't want any unnecessary code or services running as this increases the attack surface.
 
@@ -295,19 +293,12 @@ The effect of such measures cannot be tested without using Tor, and it is a very
 You can do so using Tor Browser:
 
 #. Download Tor Browser from the `Tor Project website`_.
-#. Ensure the `Tor Browser security level`_ is set to "Safest"
-   by clicking on the shield icon. If not, click "Settings…", 
-   then "Change…", then select "Safest". Finally, click
-   "Save and restart" to re-launch the browser and apply
-   the new settings.
+#. Ensure the `Tor Browser security level`_ is set to "Safest" by clicking on the shield icon. If not, click "Settings…", then "Change…", then select "Safest". Finally, click "Save and restart" to re-launch the browser and apply the new settings.
 #. Visit your Landing Page.
 #. Verify that everything works as expected.
-#. Reload the page `using a different Tor circuit`_ by clicking on
-   "New Tor Circuit for this Site" in the site information menu (padlock icon in
-   the URL bar) or in the hamburger menu.
+#. Reload the page `using a different Tor circuit`_ by clicking on "New Tor Circuit for this Site" in the site information menu (padlock icon in the URL bar) or in the hamburger menu.
 #. Verify that everything still works as expected.
-#. Repeat the previous two steps several times to test with exit nodes in
-   different countries and regions.
+#. Repeat the previous two steps several times to test with exit nodes in different countries and regions.
 
 .. _`Tor Project website`: https://www.torproject.org/
 .. _`Tor Browser security level`: https://tb-manual.torproject.org/security-settings/

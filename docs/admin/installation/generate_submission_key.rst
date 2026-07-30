@@ -20,31 +20,21 @@ Create the key
 
    |GPG generate key|
 
-#. When it says **Please select what kind of key you want**, choose "*(1) RSA
-   and RSA (default)*".
+#. When it says **Please select what kind of key you want**, choose "*(1) RSA and RSA (default)*".
 #. When it asks **What keysize do you want?**, type ``4096``.
-#. When it asks **Key is valid for?**, press Enter. This means your key does
-   not expire.
-#. It will let you know that this means the key does not expire at all and ask
-   for confirmation. Type **y** and hit Enter to confirm.
+#. When it asks **Key is valid for?**, press Enter. This means your key does not expire.
+#. It will let you know that this means the key does not expire at all and ask for confirmation. Type **y** and hit Enter to confirm.
 
    |GPG key options|
 
-#. Next it will prompt you for user ID setup. Use the following options:
-     - **Real name**: "SecureDrop"
-     - **Email address**: leave this field blank
-     - **Comment**: ``[Your Organization's Name] SecureDrop Submission Key``
+#. Next it will prompt you for user ID setup. Use the following options: - **Real name**: "SecureDrop" - **Email address**: leave this field blank - **Comment**: ``[Your Organization's Name] SecureDrop Submission Key``
 
-#. GPG will confirm these options. Verify that everything is written correctly.
-   Then type ``O`` for ``(O)kay`` and hit enter to continue:
+#. GPG will confirm these options. Verify that everything is written correctly. Then type ``O`` for ``(O)kay`` and hit enter to continue:
 
    |OK to generate|
 
-#. A box will pop up (twice) asking you to type a passphrase. Since the key is
-   protected by the encryption on the Tails persistent volume, it is safe to
-   simply click **OK** without entering a passphrase.
-#. The software will ask you if you are sure. Click **Yes, protection is not
-   needed**.
+#. A box will pop up (twice) asking you to type a passphrase. Since the key is protected by the encryption on the Tails persistent volume, it is safe to simply click **OK** without entering a passphrase.
+#. The software will ask you if you are sure. Click **Yes, protection is not needed**.
 #. Wait for the key to finish generating.
 
 Export the Submission Public Key

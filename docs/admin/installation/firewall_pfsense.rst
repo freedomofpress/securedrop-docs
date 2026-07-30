@@ -55,9 +55,7 @@ Connect to the pfSense web GUI
 
 #. If you have not already done so, boot the Admin Workstation.
 
-#. Connect the Admin Workstation to the LAN[1] interface. You should see
-   a popup notification in Tails that says "Connection Established". If you click
-   on the network icon in the upper right of the Tails Desktop, you should see that the Wired Connection is active:
+#. Connect the Admin Workstation to the LAN[1] interface. You should see a popup notification in Tails that says "Connection Established". If you click on the network icon in the upper right of the Tails Desktop, you should see that the Wired Connection is active:
 
    |Wired Connected|
 
@@ -67,8 +65,7 @@ Connect to the pfSense web GUI
       wireless network), you may encounter problems trying
       to connect the pfSense WebGUI.
 
-#. Launch the Unsafe Browser from the menu bar: **Apps ▸ Internet ▸
-   Unsafe Browser**.
+#. Launch the Unsafe Browser from the menu bar: **Apps ▸ Internet ▸ Unsafe Browser**.
 
    |Launching the Unsafe Browser|
 
@@ -77,21 +74,15 @@ Connect to the pfSense web GUI
         the only option because Tails `intentionally disables LAN
         access`_ in the **Tor Browser**.
 
-#. You will see a pop-up notification that says "Starting the Unsafe
-   Browser..."
+#. You will see a pop-up notification that says "Starting the Unsafe Browser..."
 
    |Pop-up notification|
 
-#. After a few seconds, the Unsafe Browser should launch. The window
-   has a bright red border to remind you to be careful when using
-   it. You should close it once you're done configuring the firewall
-   and use Tor Browser for any other web browsing you might do on
-   the Admin Workstation.
+#. After a few seconds, the Unsafe Browser should launch. The window has a bright red border to remind you to be careful when using it. You should close it once you're done configuring the firewall and use Tor Browser for any other web browsing you might do on the Admin Workstation.
 
    |Unsafe Browser Homepage|
 
-#. Navigate to the pfSense WebGUI in the Unsafe Browser:
-   ``https://192.168.1.1``
+#. Navigate to the pfSense WebGUI in the Unsafe Browser: ``https://192.168.1.1``
 
    .. note:: If you have trouble connecting, go to your network settings and
       make sure that you have an IPv4 address in the ``192.168.1.1/24`` range.
@@ -100,15 +91,11 @@ Connect to the pfSense web GUI
       However, make sure not to configure your Tails device to have the same IP
       as the firewall (``192.168.1.1``).
 
-#. The firewall uses a self-signed certificate, so you will see a "Potential
-   Security Risk Ahead" warning when you connect. This is expected.
-   You can safely continue by clicking **Advanced**, then **Accept
-   the Risk and Continue**.
+#. The firewall uses a self-signed certificate, so you will see a "Potential Security Risk Ahead" warning when you connect. This is expected. You can safely continue by clicking **Advanced**, then **Accept the Risk and Continue**.
 
    |Your Connection is Insecure|
 
-#. You should see the login page for the pfSense GUI. Log in with the
-   default username and passphrase (``admin`` / ``pfsense``).
+#. You should see the login page for the pfSense GUI. Log in with the default username and passphrase (``admin`` / ``pfsense``).
 
    |Default pfSense|
 
@@ -130,44 +117,25 @@ Before you can set up the hardware firewall, you will need to set the **Alternat
 Setup Wizard
 ~~~~~~~~~~~~
 
-#. If you're setting up a brand new (or recently factory reset) router,
-   logging in to the pfSense WebGUI will automatically start the Setup
-   Wizard. Click **Next**, then **Next** again. Don't sign up for a pfSense Gold
-   subscription (unless you want to).
+#. If you're setting up a brand new (or recently factory reset) router, logging in to the pfSense WebGUI will automatically start the Setup Wizard. Click **Next**, then **Next** again. Don't sign up for a pfSense Gold subscription (unless you want to).
 
-#. On the "General Information" page, we recommend leaving your hostname as
-   the default (pfSense). There is no relevant domain for SecureDrop, so we
-   recommend setting this to ``securedrop.local`` or something similar. Use
-   your preferred DNS servers. If you don't know what DNS servers to use,
-   we recommend using Google's DNS servers: ``8.8.8.8`` and ``8.8.4.4``.
-   Click Next.
+#. On the "General Information" page, we recommend leaving your hostname as the default (pfSense). There is no relevant domain for SecureDrop, so we recommend setting this to ``securedrop.local`` or something similar. Use your preferred DNS servers. If you don't know what DNS servers to use, we recommend using Google's DNS servers: ``8.8.8.8`` and ``8.8.4.4``. Click Next.
 
    |pfSense General Info|
 
 #. Leave the defaults for "Time Server Information". Click **Next**.
 
-#. On "Configure WAN Interface", enter the appropriate configuration for
-   your network. Consult your local sysadmin if you are unsure what to
-   enter here. For many environments, the default of DHCP will work and the
-   rest of the fields can be left blank. Click **Next**.
+#. On "Configure WAN Interface", enter the appropriate configuration for your network. Consult your local sysadmin if you are unsure what to enter here. For many environments, the default of DHCP will work and the rest of the fields can be left blank. Click **Next**.
 
-   * If your firewall is behind another firewall or NAT device, you will need
-     to deselect the **Block private networks from entering via WAN** option to
-     allow traffic to and from your upstream network.
+   * If your firewall is behind another firewall or NAT device, you will need to deselect the **Block private networks from entering via WAN** option to allow traffic to and from your upstream network.
 
-#. For "Configure LAN Interface", use the IP address of the *Admin Gateway*
-   (``10.20.1.1``) and the subnet mask (``/24``) of the *Admin Subnet*. Click
-   **Next**.
+#. For "Configure LAN Interface", use the IP address of the *Admin Gateway* (``10.20.1.1``) and the subnet mask (``/24``) of the *Admin Subnet*. Click **Next**.
 
    |Configure LAN Interface|
 
-#. Set a strong admin passphrase. We recommend generating a strong passphrase
-   with KeePassXC, and saving it in the Tails Persistent folder using the
-   provided KeePassXC database template. Click **Next**.
+#. Set a strong admin passphrase. We recommend generating a strong passphrase with KeePassXC, and saving it in the Tails Persistent folder using the provided KeePassXC database template. Click **Next**.
 
-#. Click Reload. Once the reload completes and the web page refreshes,
-   click the corresponding "here" link to "continue on to the pfSense
-   webConfigurator".
+#. Click Reload. Once the reload completes and the web page refreshes, click the corresponding "here" link to "continue on to the pfSense webConfigurator".
 
 At this point, since you (probably) changed the LAN[1] subnet settings from their defaults, you will no longer be able to connect after reloading the firewall and the next request will probably time out. This is not an error - the firewall has reloaded and is working correctly. To connect to the new LAN[1] interface, unplug and reconnect your network cable to get a new network address assigned via DHCP. Note that if you used a subnet with fewer addresses than ``/24``, the default DHCP configuration in pfSense may not work. In this case, you should assign the Admin Workstation a static IP address that is known to be in the subnet to continue.
 
@@ -220,9 +188,7 @@ This will take you to the network settings. Change to the **IPv4** tab. Ensure t
 	  so you can continue to use the Unsafe Browser to access the
 	  WebGUI in future sessions.
 
-	  We recommend keeping it simple and using the same DNS
-	  servers that you used for the network firewall in the setup
-	  wizard.
+	  We recommend keeping it simple and using the same DNS servers that you used for the network firewall in the setup wizard.
 
 Fill in the static networking information for the Admin Workstation:
 
@@ -248,11 +214,8 @@ SecureDrop configuration
 
 SecureDrop uses the firewall to achieve two primary goals:
 
-#. Isolating SecureDrop from the existing network, which may be
-   compromised (especially if it is a venerable network in a large
-   organization like a newsroom).
-#. Isolating the Application Server and the Monitor Server from each other
-   as much as possible, to reduce attack surface.
+#. Isolating SecureDrop from the existing network, which may be compromised (especially if it is a venerable network in a large organization like a newsroom).
+#. Isolating the Application Server and the Monitor Server from each other as much as possible, to reduce attack surface.
 
 In order to use the firewall to isolate the Application Server and the Monitor Server from each other, we need to connect them to separate interfaces, and then set up firewall rules that allow them to communicate.
 
@@ -352,25 +315,12 @@ Tips for setting up pfSense firewall rules
 Here are some general tips for setting up pfSense firewall rules:
 
 #. Create aliases for the repeated values (IPs and ports).
-#. pfSense is a stateful firewall, which means that you don't need
-   corresponding rules to allow incoming traffic in response to outgoing
-   traffic (like you would in, e.g. iptables with
-   ``--state ESTABLISHED,RELATED``). pfSense does this for you
-   automatically.
-#. You should create the rules *on the interface where the traffic
-   originates*.
-#. Make sure you delete the default "allow all" rule on the LAN
-   interface. Leave the "Anti-Lockout" rule enabled.
-#. Any traffic that is not explicitly passed is logged and dropped by
-   default in pfSense, so you don't need to add explicit rules (iptables
-   ``LOGNDROP``) for that.
-#. Since some of the rules are almost identical except for whether they
-   allow traffic from the Application Server or the Monitor Server, you can use
-   the "add a new rule based on this one" button to save time creating a
-   copy of the rule on the other interface.
-#. If you are troubleshooting connectivity, the firewall logs can be
-   very helpful. You can find them in the WebGUI in *Status → System
-   Logs → Firewall*.
+#. pfSense is a stateful firewall, which means that you don't need corresponding rules to allow incoming traffic in response to outgoing traffic (like you would in, e.g. iptables with ``--state ESTABLISHED,RELATED``). pfSense does this for you automatically.
+#. You should create the rules *on the interface where the traffic originates*.
+#. Make sure you delete the default "allow all" rule on the LAN interface. Leave the "Anti-Lockout" rule enabled.
+#. Any traffic that is not explicitly passed is logged and dropped by default in pfSense, so you don't need to add explicit rules (iptables ``LOGNDROP``) for that.
+#. Since some of the rules are almost identical except for whether they allow traffic from the Application Server or the Monitor Server, you can use the "add a new rule based on this one" button to save time creating a copy of the rule on the other interface.
+#. If you are troubleshooting connectivity, the firewall logs can be very helpful. You can find them in the WebGUI in *Status → System Logs → Firewall*.
 
 .. _Keeping pfSense up to date:
 

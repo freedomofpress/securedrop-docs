@@ -94,18 +94,13 @@ The resolution path will depend on which step(s) failed. Note that ``dom0`` and 
 
 1. Open a terminal in ``dom0`` via |qubes_menu| **▸ Gear Icon (left-hand side) ▸ Other Tools ▸ Xfce Terminal**.
 
-2. Perform an interactive ``dom0`` update by running the
-   following command:
+2. Perform an interactive ``dom0`` update by running the following command:
 
    ``sudo qubes-dom0-update``
 
-3. Follow the prompts to resolve any issues. If you are
-   unsure on how to resolve an error, please contact us
-   for assistance.
+3. Follow the prompts to resolve any issues. If you are unsure on how to resolve an error, please contact us for assistance.
 
-4. Reboot the system. ``dom0`` updates are often
-   security-sensitive, and may require a reboot to take
-   effect.
+4. Reboot the system. ``dom0`` updates are often security-sensitive, and may require a reboot to take effect.
 
 Expired SecureDrop signing key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -114,14 +109,8 @@ If the update fails after running ``sudo qubes-dom0-update`` as described above,
 
 .. code-block:: sh
 
-   1. Certificiate 188EDD3B7B22E6A3 invalid: certificate is not alive
-       because: The primary key is not live
-       because: Expired on 2023-07-04T10:52:20Z
-   2. Key 188EDD3B7B22E6A3 invalid: key is not alive
-       because: The primary key is not live
-       because: Expired on 2023-07-04T10:52:20Z
-   [...]
-   Error: GPG check FAILED
+   1. Certificiate 188EDD3B7B22E6A3 invalid: certificate is not alive because: The primary key is not live because: Expired on 2023-07-04T10:52:20Z
+   2. Key 188EDD3B7B22E6A3 invalid: key is not alive because: The primary key is not live because: Expired on 2023-07-04T10:52:20Z [...] Error: GPG check FAILED
 
 your system is trying to use an old copy of the SecureDrop Release Signing Key. You can perform the following steps to fetch the updated key and remove the expired one:
 
@@ -251,10 +240,7 @@ your system is trying to use an old copy of the SecureDrop Release Signing Key. 
 ``sd-*-template`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Click the Qubes menu and open a terminal in the impacted
-   template. For example, if ``sd-small-bookworm-template`` failed to
-   update, select its entry in the Qubes menu and click
-   **Terminal**.
+1. Click the Qubes menu and open a terminal in the impacted template. For example, if ``sd-small-bookworm-template`` failed to update, select its entry in the Qubes menu and click **Terminal**.
 2. Perform an interactive template update by running the the following commands:
 
    .. code-block::
@@ -273,13 +259,9 @@ your system is trying to use an old copy of the SecureDrop Release Signing Key. 
 ``fedora-42-xfce`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Launch the Qubes GUI Updater from the top righthand
-   tray icon. Ensure the ``fedora-42-xfce`` template is
-   selected.
-2. Run the updater, observing the output in the
-   updater dialog.
-3. If the update is not successful, contact Support
-   and provide the output you see in the dialog.
+1. Launch the Qubes GUI Updater from the top righthand tray icon. Ensure the ``fedora-42-xfce`` template is selected.
+2. Run the updater, observing the output in the updater dialog.
+3. If the update is not successful, contact Support and provide the output you see in the dialog.
 
 ``apply_dom0`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -290,9 +272,7 @@ We recommend first re-running the updater by double-clicking the SecureDrop desk
 
 If this does not resolve the issue:
 
-1. Locate the ``updater-detail.log`` file in the same directory
-   as the ``updater.log`` file. This file contains more detailed
-   information about the ``apply_dom0`` step.
+1. Locate the ``updater-detail.log`` file in the same directory as the ``updater.log`` file. This file contains more detailed information about the ``apply_dom0`` step.
 
    Like the ``updater.log`` file, this file is rotated hourly.
 2. Copy this file to a networked qube by using the ``qvm-copy-to-vm``

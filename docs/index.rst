@@ -22,14 +22,9 @@ How it works
 
 The following steps describe how a SecureDrop submission is submitted, received and reviewed:
 
-1. A *Source* uploads a submission to the news
-   organization using `Tor Browser <https://www.torproject.org/>`__.
+1. A *Source* uploads a submission to the news organization using `Tor Browser <https://www.torproject.org/>`__.
 
-2. A *Journalist* connects to SecureDrop using their *SecureDrop
-   Workstation*, which provides separate isolated environments to
-   decrypt and then view the document before processing it 
-   (e.g., to remove metadata or potential malware),
-   printing it, or exporting it to a dedicated device.
+2. A *Journalist* connects to SecureDrop using their *SecureDrop Workstation*, which provides separate isolated environments to decrypt and then view the document before processing it (e.g., to remove metadata or potential malware), printing it, or exporting it to a dedicated device.
 
 .. seealso:: Check out
           :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>`

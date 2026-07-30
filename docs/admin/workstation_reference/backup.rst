@@ -9,11 +9,8 @@ SecureDrop Workstation requires only that you back up instance-specific secrets 
 
 To perform backups, you will need:
 
-- a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/reference/provisioning_usb.html>`_ 
-  USB or LUKS-encrypted external hard drive (of sufficient size,
-  if backing up additional local data)
-- a secure place to store backup credentials (such as a password manager
-  on your primary laptop)
+- a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/reference/provisioning_usb.html>`_ USB or LUKS-encrypted external hard drive (of sufficient size, if backing up additional local data)
+- a secure place to store backup credentials (such as a password manager on your primary laptop)
 
 Backup
 ------
@@ -45,19 +42,9 @@ Back up a SecureDrop Workstation
   Backups contain sensitive data, and must be created and stored just as securely
   as SecureDrop Workstation itself.
 
-  If performing this backup as part of a migration (from one machine to another
-  or from one version of Qubes OS to another), we suggest you retain the backup
-  only during the migration process, and destroy it after the migration
-  is complete. The easiest way to do this is to create a LUKS-encrypted drive,
-  follow this guide to create your backup, and then wipe (reformat) or destroy the
-  drive after you have successfully restored it onto the new machine, which should
-  ideally happen the same day. In all cases, follow your organization's internal
-  policies on handling sensitive assets and information.
+  If performing this backup as part of a migration (from one machine to another or from one version of Qubes OS to another), we suggest you retain the backup only during the migration process, and destroy it after the migration is complete. The easiest way to do this is to create a LUKS-encrypted drive, follow this guide to create your backup, and then wipe (reformat) or destroy the drive after you have successfully restored it onto the new machine, which should ideally happen the same day. In all cases, follow your organization's internal policies on handling sensitive assets and information.
 
-  If you are looking to back up your own customized components of SecureDrop Workstation
-  for long-term storage, we suggest taking that backup separately from the backup
-  of SecureDrop Workstation components so that you can avoid proliferating copies of
-  sensitive assets.
+  If you are looking to back up your own customized components of SecureDrop Workstation for long-term storage, we suggest taking that backup separately from the backup of SecureDrop Workstation components so that you can avoid proliferating copies of sensitive assets.
 
 Before starting your backup, decide whether you want to back up your data from ``sd-app``. If you skip this step, the first time you log in, your submissions will re-download from your SecureDrop server.
 
@@ -69,8 +56,7 @@ To target a qube for backup, highlight it and move it into the "Selected" column
 
 - ``dom0``
 - the ``sd-app`` qube (optional), noting the warning above
-- any customized qubes (and their templates) that you may wish to preserve,
-  noting the warning above.
+- any customized qubes (and their templates) that you may wish to preserve, noting the warning above.
 
 You do not need to back up the other ``sd-`` qubes.
 
@@ -129,22 +115,13 @@ We suggest restoring only those qubes, provisioning SecureDrop Workstation, and 
   the qube.** Continue through the reinstallation process. The correct template will be
   configured as you follow the rest of these instructions.
 
-  If you are restoring your own customized qubes and templates, you will need to take
-  additional steps. You may decide to create new templates for your custom qubes and
-  provision them with the necessary applications/customizations (recommended), or
-  you may upgrade your existing templates following the upstream documentation
-  (`Fedora templates <https://www.qubes-os.org/doc/templates/fedora/#upgrading>`_,
-  `Debian templates <https://www.qubes-os.org/doc/templates/debian/#upgrading>`_),
-  then upgrade their package repositories to the Qubes 4.2 repositories using:
+  If you are restoring your own customized qubes and templates, you will need to take additional steps. You may decide to create new templates for your custom qubes and provision them with the necessary applications/customizations (recommended), or you may upgrade your existing templates following the upstream documentation (`Fedora templates <https://www.qubes-os.org/doc/templates/fedora/#upgrading>`_, `Debian templates <https://www.qubes-os.org/doc/templates/debian/#upgrading>`_), then upgrade their package repositories to the Qubes 4.2 repositories using:
 
   .. code-block:: sh
 
-    sudo qubes-dom0-update -y qubes-dist-upgrade
-    qubes-dist-upgrade --template-standalone --upgrade
+    sudo qubes-dom0-update -y qubes-dist-upgrade qubes-dist-upgrade --template-standalone --upgrade
 
-  More information can be
-  found in the `upstream documentation <https://www.qubes-os.org/doc/upgrade/4.2/#clean-installation>`_.
-  Contact Support with any questions.
+  More information can be found in the `upstream documentation <https://www.qubes-os.org/doc/upgrade/4.2/#clean-installation>`_. Contact Support with any questions.
 
 Reinstall SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

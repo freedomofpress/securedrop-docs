@@ -51,11 +51,7 @@ Daily Journalist alerts are optional, and can be configured during or after inst
 
 .. note::
 
-   For security reasons, the email will be sent every 24 hours, regardless
-   of whether there are new submissions or not. The notification is sent after
-   the daily reboot of the Application Server. The subject of the email will
-   always be "Submissions in the past 24h". To find out whether there were
-   submissions or not, a Journalist must decrypt the contents of the email.
+   For security reasons, the email will be sent every 24 hours, regardless of whether there are new submissions or not. The notification is sent after the daily reboot of the Application Server. The subject of the email will always be "Submissions in the past 24h". To find out whether there were submissions or not, a Journalist must decrypt the contents of the email.
 
 In the simplest case a Journalist will provide their email and Journalist Alert Public Key to you, the Administrator. If a team of Journalist wants to receive these daily alerts, they should share a Journalist Alert Public Key and ask the admin to setup a mail alias (SecureDrop does not provide that service) so they all receive the alerts and are able to decrypt them.
 
@@ -80,8 +76,7 @@ The SecureDrop installation process requires that you configure OSSEC email aler
 - The OSSEC Alert Public Key
 - The OSSEC Alert Public Key fingerprint
 - The reachable hostname of your SMTP relay
-- The secure SMTP port of your SMTP relay
-  (typically 25, 587, or 465; must support TLS encryption)
+- The secure SMTP port of your SMTP relay (typically 25, 587, or 465; must support TLS encryption)
 - An email username to authenticate to the SMTP relay
 - The domain name of the email used to send OSSEC alerts
 - The password of the email used to send OSSEC alerts

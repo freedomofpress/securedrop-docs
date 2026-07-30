@@ -3,10 +3,7 @@ SecureDrop for Sources
 
 .. warning:: 
 
-    This source guide below is meant to illustrate the source submission process
-    for journalists and newsrooms, and is not intended to instruct sources how
-    to safely use SecureDrop. If you are potentially interested in sharing
-    information to a news organization via SecureDrop, you should:
+    This source guide below is meant to illustrate the source submission process for journalists and newsrooms, and is not intended to instruct sources how to safely use SecureDrop. If you are potentially interested in sharing information to a news organization via SecureDrop, you should:
 
     1. Start from a place with public Wi-Fi, like a coffee shop. Use a computer you own and control. Do not use a mobile phone or tablet. Never use a workplace computer or network.
     2. Download, install, and open Tor Browser, then visit ``howto.securedrop.tor.onion``

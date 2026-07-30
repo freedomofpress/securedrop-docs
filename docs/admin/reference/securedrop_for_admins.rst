@@ -33,8 +33,7 @@ As a SecureDrop Administrator, it is your responsibility to:
 * :ref:`manage the system configuration <manage_config>`
 * :ref:`ensure that servers, firewall and workstations are kept up-to-date <manage_updates>`
 * :ref:`monitor OSSEC alerts <monitoring_ossec>`
-* :ref:`monitor the SecureDrop team's release and security-related
-  communications <monitoring_comms>`
+* :ref:`monitor the SecureDrop team's release and security-related communications <monitoring_comms>`
 * apply available firmware updates to all SecureDrop hardware
 * ensure that the SecureDrop environment is physically secure and monitored
 * ensure that SecureDrop Workstations are kept up to date
@@ -54,9 +53,7 @@ FPF offers :doc:`paid priority support services </introduction/getting_support>`
 
 .. note::
 
-   Each SecureDrop instance is hosted and operated independently. Freedom of the
-   Press  Foundation does not offer systems administration, hosting or "remote
-   hands" services.
+   Each SecureDrop instance is hosted and operated independently. Freedom of the Press  Foundation does not offer systems administration, hosting or "remote hands" services.
 
 When the SecureDrop team becomes aware of a security vulnerability in SecureDrop or its software dependencies, we assess the impact of the vulnerability in the context of existing security mitigations and :doc:`our threat model </appendices/threat_model/threat_model>`. Based on this assessment, we prioritize technical work and external communications.
 
@@ -82,13 +79,9 @@ Managing the system configuration
 
 Administrators are responsible for configuring and maintaining the system. Several tools are available to support this:
 
-* :ref:`The Admin Interface<The Admin Interface>` allows the Administrator to manage users and configure
-  web interface features such as organizations logos and submission preferences
-* :ref:`Server SSH access<server SSH access>` is also available, to allow Administrators to
-  troubleshoot server issues and perform manual updates.
-* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the ``sd-admin`` qube.
-  to configure and install SecureDrop, to perform operations including server backups and restores,
-  and to update the server configuration after installation.
+* :ref:`The Admin Interface<The Admin Interface>` allows the Administrator to manage users and configure web interface features such as organizations logos and submission preferences
+* :ref:`Server SSH access<server SSH access>` is also available, to allow Administrators to troubleshoot server issues and perform manual updates.
+* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the ``sd-admin`` qube. to configure and install SecureDrop, to perform operations including server backups and restores, and to update the server configuration after installation.
 
 .. _manage_updates:
 

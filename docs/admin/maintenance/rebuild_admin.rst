@@ -308,9 +308,7 @@ Step 7: Set up SSH-over Tor
 
 .. note::
 
-   Without performing this step, you will not be able to access your SecureDrop
-   servers from outside the local network. See 
-   :doc:`../deployment/ssh_over_local_net` for more information.
+   Without performing this step, you will not be able to access your SecureDrop servers from outside the local network. See :doc:`../deployment/ssh_over_local_net` for more information.
 
 Rerun the command:
 
@@ -334,12 +332,9 @@ When the installation completes, run:
 
 Once this command completes:
 
- - verify that the Hostname references in ``~/.ssh/config`` have been updated
-   to refer to onion addresses instead of direct IP addresses
- - verify that you can connect to
-   the servers using ``ssh app`` and ``ssh mon``
- - verify that the *SecureDrop Menu* for the Source and Admin Interfaces
-   works correctly, opening their respective homepages in Tor Browser.
+ - verify that the Hostname references in ``~/.ssh/config`` have been updated to refer to onion addresses instead of direct IP addresses
+ - verify that you can connect to the servers using ``ssh app`` and ``ssh mon``
+ - verify that the *SecureDrop Menu* for the Source and Admin Interfaces works correctly, opening their respective homepages in Tor Browser.
 
 Step 8: Post-rebuild tasks
 ==========================
@@ -356,17 +351,11 @@ Step 8: Post-rebuild tasks
 
 We recommend completing the following tasks after the rebuild:
 
- - Set up a new administration account on the Admin Interface, by following
-   :doc:`these instructions <../installation/create_admin_account>`
- - Verify that submissions can be decrypted, by going through the decryption
-   workflow with a new submission.
+ - Set up a new administration account on the Admin Interface, by following :doc:`these instructions <../installation/create_admin_account>`
+ - Verify that submissions can be decrypted, by going through the decryption workflow with a new submission.
  - Back up your Admin Workstation.
  - Delete invalid admin accounts in the Admin Interface.
- - Restrict SSH access to the Application and Monitor Servers to valid
-   Admin Workstations. If your new Admin Workstation USB flash drive
-   is the only one that should have SSH access to the servers, you can remove
-   access for any previous Admin Workstations from the terminal, using the
-   commands:
+ - Restrict SSH access to the Application and Monitor Servers to valid Admin Workstations. If your new Admin Workstation USB flash drive is the only one that should have SSH access to the servers, you can remove access for any previous Admin Workstations from the terminal, using the commands:
 
    .. code:: sh
 
@@ -392,7 +381,7 @@ We recommend completing the following tasks after the rebuild:
    or boot into each of your additional Tails workstations, plug in and unlock your
    Admin Workstation's encrypted partition via the **Places** app, and manually copy
    the file(s) from the Admin Workstation to the same directory on the target Tails
-   
+
 We recommend completing the following tasks after the rebuild:
 
 - Set up a new administration account on the Admin Interface, by following :doc:`these instructions <../installation/create_admin_account>`
@@ -417,4 +406,3 @@ We recommend completing the following tasks after the rebuild:
     ~/.config/securedrop-admin/tor-v3-keys.json # for Admin Workstations only
 
   You may copy these files using a encrypted USB flash drive (which must be wiped afterwards), or boot into each of your additional Tails workstations, plug in and unlock your Admin Workstation's encrypted partition via the **Places** app, and manually copy the file(s) from the Admin Workstation to the same directory on the target Tails workstation.
-

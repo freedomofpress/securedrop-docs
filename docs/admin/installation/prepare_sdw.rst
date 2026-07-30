@@ -17,8 +17,15 @@ Prerequisites
 
 In order to install SecureDrop Workstation and configure it to use an existing SecureDrop instance, you will need the following:
 
-- A Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations. 
-- :ref:`Qubes installation media <prepare_installation_media>`
+- A Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations.
+- Qubes installation medium - this guide assumes the use of a USB 3.0 flash drive. Qubes may also be installed via optical media, which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_.
+
+  .. note:: A USB flash drive with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings detailed below are applied.
+
+- A working computer (Linux is recommended and assumed in this guide) to use for verification and creation of the Qubes installation medium.
+
+  .. note:: Tails can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB flash drive to transfer it to Tails for verification and creation of the installation medium.
+
 - A password manager or other system to generate and store strong passphrases for Qubes full disk encryption (FDE) and user accounts.
 
 A basic knowledge of the Qubes OS is helpful.
@@ -39,9 +46,7 @@ Once the BIOS is up-to-date, boot into the BIOS setup utility and update its set
 - Set a password to access the BIOS (and record the password in your password manager).
 - Disable BIOS downgrades.
 - Enable Data Execution Prevention.
-- Enable virtualization support (required for Qubes OS).
-  - for Intel-based devices, **Intel VT-d** and **Intel VT-x** should be enabled
-  - for AMD-based devices, **AMD-VI** and **AMD-V** should be enabled
+- Enable virtualization support (required for Qubes OS). - for Intel-based devices, **Intel VT-d** and **Intel VT-x** should be enabled - for AMD-based devices, **AMD-VI** and **AMD-V** should be enabled
 - Disable unnecessary I/O options such as Wireless WAN and  Bluetooth.
 - Disable unnecessary network options such as Wake-on-LAN and UEFI network stacks.
 - Disable Thunderbolt ports, or any other ports that allow Direct Memory Access (DMA).
@@ -155,10 +160,7 @@ To create a USB qube, open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_m
 
 .. tip::
 
-  For quicker access, you can add the ``dom0`` terminal to the "Favorites" section of the
-  Qubes menu (identified by a bookmark symbol). Right-click the entry and select
-  **Add to favorites**. To remove it at a later time, right-click the entry in your
-  list of favorites and select **Remove from favorites**.
+  For quicker access, you can add the ``dom0`` terminal to the "Favorites" section of the Qubes menu (identified by a bookmark symbol). Right-click the entry and select **Add to favorites**. To remove it at a later time, right-click the entry in your list of favorites and select **Remove from favorites**.
 
 Run the following command:
 

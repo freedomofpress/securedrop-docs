@@ -126,12 +126,9 @@ Moving a SecureDrop instance to new hardware involves:
    Workstation you will need to first install the 
    securedrop-admin package and prerequisites on it. Then you may copy the config directory ``~/.config/securedrop-admin`` and backup archive from the old Admin Workstation to the new workstation (using an encrypted USB flash drive), and proceed with the instructions below.
 
-#. If you have not already done so, :ref:`back up the existing installation <backing_up>`.
-   The instructions below assume that the backup has been created
-   and renamed ``sd-backup-old.tar.gz``.
+#. If you have not already done so, :ref:`back up the existing installation <backing_up>`. The instructions below assume that the backup has been created and renamed ``sd-backup-old.tar.gz``.
 
-#. Move the existing Admin Workstation SSH configuration out of the way via
-   the Terminal via **Apps ▸ System Tools ▸ Console**, using the commands:
+#. Move the existing Admin Workstation SSH configuration out of the way via the Terminal via **Apps ▸ System Tools ▸ Console**, using the commands:
 
    .. code:: sh
 
@@ -143,24 +140,15 @@ Moving a SecureDrop instance to new hardware involves:
       other Admin Workstation USB flash drives will have to be
       :ref:`provisioned with updated credentials <repair_admin_usbs>`.
 
-#. Ensure your Admin Workstation is connected to a LAN port on your
-   network firewall, and
-   :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
+#. Ensure your Admin Workstation is connected to a LAN port on your network firewall, and :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
 
-#. Install Ubuntu 24.04 on the Application and Monitor Servers, following
-   the :doc:`server setup instructions</admin/installation/prepare_servers>` to install
-   with the correct settings, test connectivity, and set up SSH keys to allow
-   for Admin Workstation access.
+#. Install Ubuntu 24.04 on the Application and Monitor Servers, following the :doc:`server setup instructions</admin/installation/prepare_servers>` to install with the correct settings, test connectivity, and set up SSH keys to allow for Admin Workstation access.
 
    .. note::
 
-      You may need to wait approximately 10-15 minutes after installing
-      Ubuntu 24.04 for the servers to become reachable via SSH.
+      You may need to wait approximately 10-15 minutes after installing Ubuntu 24.04 for the servers to become reachable via SSH.
 
-#. Reinstall SecureDrop on the servers, following the :doc:`installation
-   instructions <../installation/install>`. During the configuration stage
-   (``securedrop-admin sdconfig``), the values will be prepopulated based on
-   the old instance's configuration, which is still stored in ``~/.config/securedrop-admin``. Press **Enter** to accept each value.
+#. Reinstall SecureDrop on the servers, following the :doc:`installation instructions <../installation/install>`. During the configuration stage (``securedrop-admin sdconfig``), the values will be prepopulated based on the old instance's configuration, which is still stored in ``~/.config/securedrop-admin``. Press **Enter** to accept each value.
 
    Proceed through the installation by running
    ``securedrop-admin install`` then ``securedrop-admin localconfig``.
@@ -168,8 +156,7 @@ Moving a SecureDrop instance to new hardware involves:
    ``ssh app uptime`` and ``ssh mon uptime``  in the Terminal to verify SSH
    connectivity.
 
-#. Restore from the old instance's backup (e.g. ``sd-backup-old.tar.gz``) using
-   the Terminal command:
+#. Restore from the old instance's backup (e.g. ``sd-backup-old.tar.gz``) using the Terminal command:
 
    .. code:: sh
 
@@ -177,21 +164,16 @@ Moving a SecureDrop instance to new hardware involves:
 
    The restore task will proceed for some time.
 
-#. Synchronize the server and Admin Workstation's web interface config and
-   authentication keys using the Terminal commands:
+#. Synchronize the server and Admin Workstation's web interface config and authentication keys using the Terminal commands:
 
    .. code:: sh
 
       securedrop-admin install
       securedrop-admin localconfig
 
-#. :doc:`Test the new instance <../installation/test_the_installation>` to
-   verify that the web interfaces are available and the servers can be
-   reached via SSH.
+#. :doc:`Test the new instance <../installation/test_the_installation>` to verify that the web interfaces are available and the servers can be reached via SSH.
 
-#. If you have migrated to new hardware, ensure your old servers have been
-   decommissioned and/or destroyed by following the relevant sections of
-   :doc:`our decommissioning documentation <../maintenance/decommission>`.
+#. If you have migrated to new hardware, ensure your old servers have been decommissioned and/or destroyed by following the relevant sections of :doc:`our decommissioning documentation <../maintenance/decommission>`.
 
 .. _repair_admin_usbs:
 
@@ -200,13 +182,9 @@ Repair additional Admin Workstations
 
 If you have additional Admin Workstation USB flash drives, they will no longer have valid SSH credentials and will need to be repaired. In these steps, the "primary Admin Workstation" is the one which you used to complete the above migration process.
 
-#. Prepare a fresh
-   :doc:`LUKS-encrypted USB flash drive </admin/installation/provisioning_usb>`.
-   You may record the passphrase in your primary Admin Workstation
-   KeePassXC password manager.
+#. Prepare a fresh :doc:`LUKS-encrypted USB flash drive </admin/installation/provisioning_usb>`. You may record the passphrase in your primary Admin Workstation KeePassXC password manager.
 
-#. Copy the following files from your primary Admin Workstation onto the
-   LUKS-encrypted USB flash drive:
+#. Copy the following files from your primary Admin Workstation onto the LUKS-encrypted USB flash drive:
 
    - ``~/.config/securedrop-admin/tor_v3_keys.json``
    - ``~/.config/securedrop-admin/mon-ssh.auth_private``
@@ -218,35 +196,22 @@ If you have additional Admin Workstation USB flash drives, they will no longer h
       Admin Workstation, you may do so. In this case, copy only the first two
       files above to your additional Admin Workstations.
 
-      Generate per-machine SSH keys and use a clean LUKS-encrypted USB flash drive
-      to transfer the public portions of those keys to your primary
-      Admin Workstation, where you will then add them to the servers'
-      ``authorized_keys`` files, as described :ref:`here <ssh_add_pubkey>`.
-      You may also `contact Support`_ for assistance.
+      Generate per-machine SSH keys and use a clean LUKS-encrypted USB flash drive to transfer the public portions of those keys to your primary Admin Workstation, where you will then add them to the servers' ``authorized_keys`` files, as described :ref:`here <ssh_add_pubkey>`. You may also `contact Support`_ for assistance.
 
-#. Boot into each additional Admin Workstation. Set
-   `an administration password`_
-   and unlock the persistent volume on the Tails welcome screen.
-   Once logged in, attach the LUKS-encrypted USB flash drive
-   and unlock it.
+#. Boot into each additional Admin Workstation. Set `an administration password`_ and unlock the persistent volume on the Tails welcome screen. Once logged in, attach the LUKS-encrypted USB flash drive and unlock it.
 
-#. Ensure that this Admin Workstation is using an up-to-date version of Tails
-   and is running the latest SecureDrop application code, |version|.
+#. Ensure that this Admin Workstation is using an up-to-date version of Tails and is running the latest SecureDrop application code, |version|.
 
-#. As you did with the primary Admin Workstation, archive the existing
-   SSH configuration:
+#. As you did with the primary Admin Workstation, archive the existing SSH configuration:
 
    .. code:: sh
 
        ssh-add -D
        find ~/.ssh/ -type f -exec mv {} {}.bak \;
 
-#. From the LUKS-encrypted USB, copy ``~/.ssh/id_rsa`` and
-   ``~/.ssh/id_rsa.pub`` to the ``~/.ssh/`` directory.
+#. From the LUKS-encrypted USB, copy ``~/.ssh/id_rsa`` and ``~/.ssh/id_rsa.pub`` to the ``~/.ssh/`` directory.
 
-#. From the LUKS-encrypted USB, copy ``tor_v3_keys.json`` and
-   ``mon-ssh.auth_private`` to the
-   ``~/.config/securedrop-admin`` directory.
+#. From the LUKS-encrypted USB, copy ``tor_v3_keys.json`` and ``mon-ssh.auth_private`` to the ``~/.config/securedrop-admin`` directory.
 
 #. In the Terminal, type the following commands:
 
@@ -254,13 +219,9 @@ If you have additional Admin Workstation USB flash drives, they will no longer h
 
       securedrop-admin localconfig
 
-#. Test connectivity to each server by running ``ssh app uptime``
-   and ``ssh mon uptime``.
+#. Test connectivity to each server by running ``ssh app uptime`` and ``ssh mon uptime``.
 
-#. Once all Admin Workstations have been updated, securely wipe the files on
-   the LUKS-encrypted USB flash drive, by right-clicking them in the file manager and selecting
-   **Wipe**. Then, reformat the device using the
-   **Disks** utility.
+#. Once all Admin Workstations have been updated, securely wipe the files on the LUKS-encrypted USB flash drive, by right-clicking them in the file manager and selecting **Wipe**. Then, reformat the device using the **Disks** utility.
 
 .. _contact Support: https://support-docs.securedrop.org/
 .. _an administration password: https://tails.net/doc/first_steps/welcome_screen/administration_password

@@ -13,9 +13,7 @@ Additionally, there is also some level of :ref:`Community Support <community_sup
 
 .. note::
 
-   If your installation is up and running, we recommend that you
-   `submit your SecureDrop to the SecureDrop directory <https://securedrop.org/directory/submit/>`__.
-   This also serves as a first introduction to the SecureDrop team.
+   If your installation is up and running, we recommend that you `submit your SecureDrop to the SecureDrop directory <https://securedrop.org/directory/submit/>`__. This also serves as a first introduction to the SecureDrop team.
 
 While we will provide technical assistance within reason and at our discretion, we encourage you to consider a paid support agreement to receive priority support, staff training, or installation help. Visit the `Priority Support <https://securedrop.org/priority-support/>`_ and `Training <https://securedrop.org/training/>`_ pages on the SecureDrop website for more information.
 
@@ -57,5 +55,4 @@ You can connect directly with the SecureDrop development team and the larger Sec
 
 .. warning::
 
-   Remember that the Gitter channel is public.
-   **Do not post any sensitive information through public channels.**
+   Remember that the Gitter channel is public. **Do not post any sensitive information through public channels.**

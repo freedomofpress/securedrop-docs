@@ -74,8 +74,7 @@ SecureDrop will update and reboot once per day. However, once a SecureDrop updat
 
 .. important::
 
-   Except where otherwise indicated, make sure to update both your
-   Application Server and your Monitor Server.
+   Except where otherwise indicated, make sure to update both your Application Server and your Monitor Server.
 
 To update your servers immediately, you can SSH into each server (via ``ssh app`` and ``ssh mon``) and run the following commands:
 
@@ -86,9 +85,7 @@ To update your servers immediately, you can SSH into each server (via ``ssh app`
 
 .. note::
 
-   Depending on the nature of the update (e.g., if the ``tor`` package is
-   upgraded and you are using SSH-over-Tor), your SSH connection may be
-   interrupted, and you may have to reconnect to see the full output.
+   Depending on the nature of the update (e.g., if the ``tor`` package is upgraded and you are using SSH-over-Tor), your SSH connection may be interrupted, and you may have to reconnect to see the full output.
 
 .. _`is announced`:
   https://securedrop.org/news

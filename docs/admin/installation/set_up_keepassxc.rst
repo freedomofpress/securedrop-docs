@@ -15,10 +15,8 @@ To facilitate using KeePassXC to organize all the credentials needed for using a
 .. _keepasscx_template_database:
 
 -  Open the KeePassXC program |KeePassXC| in the ``vault`` qube
--  Select **Database ▸ Open database**, and navigate to the location of
-   **/path/to/Passwords.kdbx**, select it, and click **Open**
--  Leave the password blank and click **OK**. If you receive an "Unlock failed"
-   prompt, click **Retry with empty password**.
+-  Select **Database ▸ Open database**, and navigate to the location of **/path/to/Passwords.kdbx**, select it, and click **Open**
+-  Leave the password blank and click **OK**. If you receive an "Unlock failed" prompt, click **Retry with empty password**.
 -  Edit entries as required.
 -  Select **Database ▸ Save Database** to save your changes.
 

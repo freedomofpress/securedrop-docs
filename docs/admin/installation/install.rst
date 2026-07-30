@@ -202,17 +202,11 @@ Once the installation is complete, addresses and credentials for each Onion Serv
 V3 Onion Services
 -------------------
 
-- ``app-sourcev3-ths`` contains the v3 onion address of the Source
-  Interface.
-- ``app-journalist.auth_private`` contains the onion address and private key
-  providing access to the Admin Interface.
-- ``app-ssh.auth_private`` contains the onion address and private key
-  providing SSH access to the Application Server.
-- ``mon-ssh.auth_private`` contains the onion address and private key
-  providing SSH access to the Monitor Server.
-- ``tor_v3_keys.json`` contains the keypairs required for access to the
-  Admin Interface and SSH access to the servers - it is required for
-  future runs of ``securedrop-admin install``.
+- ``app-sourcev3-ths`` contains the v3 onion address of the Source Interface.
+- ``app-journalist.auth_private`` contains the onion address and private key providing access to the Admin Interface.
+- ``app-ssh.auth_private`` contains the onion address and private key providing SSH access to the Application Server.
+- ``mon-ssh.auth_private`` contains the onion address and private key providing SSH access to the Monitor Server.
+- ``tor_v3_keys.json`` contains the keypairs required for access to the Admin Interface and SSH access to the servers - it is required for future runs of ``securedrop-admin install``.
 
 .. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file
              contain secret keys that should not be shared with third parties,

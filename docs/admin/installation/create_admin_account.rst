@@ -4,8 +4,7 @@ Create an Administrator account on the Admin Interface
 In order for any Administrators to access the :ref:`Admin Interface<glossary_admin_interface>`, they need:
 
 1. The ``auth-cookie`` for the Admin Interface's ATHS
-2. An account on the Admin Interface, which requires the following
-   credentials to log in:
+2. An account on the Admin Interface, which requires the following credentials to log in:
 
    * Username
    * Passphrase

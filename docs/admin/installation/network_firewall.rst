@@ -11,16 +11,11 @@ Please note that we no longer recommend the use of pfSense Community Edition (CE
 
 We currently recommend three firewalls in our :ref:`Hardware Guide <hardware_guide>`:
 
-* The `Netgate SG-4100 <https://shop.netgate.com/products/4100-base-pfsense>`__,
-  a pfSense-based firewall with 6 network interfaces: 2 WAN ports and 4 LAN ports.
+* The `Netgate SG-4100 <https://shop.netgate.com/products/4100-base-pfsense>`__, a pfSense-based firewall with 6 network interfaces: 2 WAN ports and 4 LAN ports.
 
-* The `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__,
-  a pfSense-based firewall with 8 network interfaces: 4 WAN ports and 4 LAN ports.
+* The `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__, a pfSense-based firewall with 8 network interfaces: 4 WAN ports and 4 LAN ports.
 
-* The `Protectli Vault 4-Port <https://protectli.com/vault-4-port/>`__
-  (with `coreboot <https://www.coreboot.org/>`__),
-  an OPNSense-based open-source hardware firewall  with 4 configurable
-  network interfaces.
+* The `Protectli Vault 4-Port <https://protectli.com/vault-4-port/>`__ (with `coreboot <https://www.coreboot.org/>`__), an OPNSense-based open-source hardware firewall  with 4 configurable network interfaces.
 
 Configuration: pfSense
 ----------------------

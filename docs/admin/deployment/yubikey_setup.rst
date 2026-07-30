@@ -18,8 +18,7 @@ A YubiKey is a physical token used for two-factor authentication. They are made 
 Download and launch the YubiKey personalization tool
 ----------------------------------------------------
 
-#. Start Tails. At the log in-screen, choose the option to allow an
-   administrator passphrase.
+#. Start Tails. At the log in-screen, choose the option to allow an administrator passphrase.
 #. Open a terminal and enter
 
 .. code:: sh
@@ -27,9 +26,7 @@ Download and launch the YubiKey personalization tool
    sudo apt-get update;
    sudo apt-get install yubikey-personalization-gui
 
-#. Once you have downloaded and installed the personalization program,
-   open a **Root Console** by choosing **Apps ▸ System Tools
-   ▸ Root Console**.
+#. Once you have downloaded and installed the personalization program, open a **Root Console** by choosing **Apps ▸ System Tools ▸ Root Console**.
 
 #. Open the YubiKey personalization tool by entering
 

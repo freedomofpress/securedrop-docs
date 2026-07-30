@@ -159,10 +159,8 @@ Network firewall
 We recommend a 4 NIC network firewall and currently provide setup instructions for pfSense and OPNSense. Suitable models include:
 
 * the `Protectli Vault 4-Port <https://protectli.com/vault-4-port/>`__, running `OPNSense <https://opnsense.org/>`__ configured with `coreboot <https://www.coreboot.org/>`__.
-* the `Netgate SG-4100 <https://shop.netgate.com/products/4100-base-pfsense>`__
-  running `pfSense Plus <https://www.pfsense.org/>`__.
-* the `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__
-  running `pfSense Plus <https://www.pfsense.org/>`__. This device is overspecced for SecureDrop's purposes, but can be used if the other cheaper firewalls can't be procured.
+* the `Netgate SG-4100 <https://shop.netgate.com/products/4100-base-pfsense>`__ running `pfSense Plus <https://www.pfsense.org/>`__.
+* the `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__ running `pfSense Plus <https://www.pfsense.org/>`__. This device is overspecced for SecureDrop's purposes, but can be used if the other cheaper firewalls can't be procured.
 
 An acceptable alternative that requires more technical expertise is to :doc:`configure an existing hardware firewall <../admin/installation/network_firewall>`.
 

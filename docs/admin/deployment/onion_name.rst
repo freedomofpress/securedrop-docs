@@ -62,11 +62,8 @@ Revoking onion names
 
 Onion names are tied to inclusion in the SecureDrop Directory. We may remove SecureDrop instances from the directory at our discretion for reasons including but not limited to:
 
-* an instance is stuck on an old software version, and can no longer
-  be considered secure;
+* an instance is stuck on an old software version, and can no longer be considered secure;
 * an instance is unreachable for extended periods of time;
-* the configuration of an instance or the associated Landing Page
-  differs substantially from our security recommendations in a manner
-  that may put Sources at risk.
+* the configuration of an instance or the associated Landing Page differs substantially from our security recommendations in a manner that may put Sources at risk.
 
 Unless the removal is an emergency, we will attempt to offer a substantial grace period prior to the revocation of an onion name, to ensure you can inform your Sources about the change to your onion address.

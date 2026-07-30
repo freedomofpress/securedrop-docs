@@ -28,16 +28,12 @@ Updating the server configuration
 
 There are two primary reasons why you may want to update the system configuration:
 
-- to change SecureDrop server configuration options. **Example:** You want to change
-  the time of day at which the servers are automatically rebooted (default: 4:00 AM).
-- to restore a valid configuration state on your servers. **Example:** Another admin
-  has directly modified the iptables rules during troubleshooting, and you want
-  to reinstate the correct rules.
+- to change SecureDrop server configuration options. **Example:** You want to change the time of day at which the servers are automatically rebooted (default: 4:00 AM).
+- to restore a valid configuration state on your servers. **Example:** Another admin has directly modified the iptables rules during troubleshooting, and you want to reinstate the correct rules.
 
 In both cases, follow these steps:
 
-#.  Determine the current version of ``securedrop-admin`` you have installed.
-    On your Admin Workstation, run:
+#.  Determine the current version of ``securedrop-admin`` you have installed. On your Admin Workstation, run:
 
     .. code:: sh
 
@@ -47,10 +43,7 @@ In both cases, follow these steps:
 
     If the versions differ, **it is not safe to proceed**. Follow the upgrade instructions associated with the `release notes for the most recent release of SecureDrop <https://securedrop.org/news/release-announcement/>`__. Apply all available updates, including for the Tails operating system.
 
-#. Run ``securedrop-admin sdconfig``. This will display the current
-   configuration, one line at a time, and allow you to change it. At this point,
-   any changes you make are only saved on this Admin Workstation, to the
-   following file:
+#. Run ``securedrop-admin sdconfig``. This will display the current configuration, one line at a time, and allow you to change it. At this point, any changes you make are only saved on this Admin Workstation, to the following file:
 
    ``~/.config/securedrop-admin/site-specific``
 #. Run ``securedrop-admin install``. This will apply the configuration to your
@@ -94,11 +87,8 @@ The simplest approach to keeping workstations in sync is to inform other Adminis
 
 Configuration information is stored on the Admin Workstation under ``~/.config/securedrop-admin``:
 
-- ``~/.config/securedrop-admin/site-specific`` contains settings written by
-  ``securedrop-admin sdconfig`` - if it is changed other Administrators should be notified.
-- The Submission Public Key and OSSEC Alert Public Key should be present
-  under ``~/.config/securedrop-admin``. If these keys are rotated, the public keys
-  should be updated on other Admin Workstations.
+- ``~/.config/securedrop-admin/site-specific`` contains settings written by ``securedrop-admin sdconfig`` - if it is changed other Administrators should be notified.
+- The Submission Public Key and OSSEC Alert Public Key should be present under ``~/.config/securedrop-admin``. If these keys are rotated, the public keys should be updated on other Admin Workstations.
 - Onion Service information is stored in several files: ::
 
     ~/.config/securedrop-admin/app-ssh.auth_private

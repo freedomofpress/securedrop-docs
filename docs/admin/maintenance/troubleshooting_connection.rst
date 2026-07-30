@@ -38,8 +38,7 @@ If the network manager shows that you are connected to the Internet, you can ver
 |screenshot_q_widget_sysnet_run_terminal|
 
 1. Click the Qubes Domains menu |blue_qube| in the in the system tray (top right area).
-2. A list of running qubes should appear. Select ``sys-net`` from the list, and
-   click **Run Terminal**.
+2. A list of running qubes should appear. Select ``sys-net`` from the list, and click **Run Terminal**.
 3. In the terminal window, type the command ``ping -c 5 google.com``.
 
 You should see a sequence of lines starting with ``64 bytes from`` and ending with the number of milliseconds it took to complete the request. If you do not see similar output, your network access may be misconfigured, or the Internet may be wholly or partially unreachable. If using ``8.8.8.8`` instead of ``google.com`` works, it may suggest a problem at the DNS level in your network configuration.
@@ -55,8 +54,7 @@ Make sure that your username, passphrase, and two-factor code are correct.
 
 .. important::
 
-   After a failed login, wait for a new two-factor code from your app before
-   trying again.
+   After a failed login, wait for a new two-factor code from your app before trying again.
 
 You can reveal the passphrase by clicking the "eye" icon next to it in the login dialog (ensure you are in a fully private setting before doing so). Check for extra characters and end, or subtle differences like capitalization. Note that the spaces between words in SecureDrop passphrases are part of the passphrase.
 
@@ -129,8 +127,7 @@ Step 7: Restart ``sys-net`` and ``sys-firewall``
 
 .. note::
 
-   You will temporarily lose all Internet connectivity in Qubes OS during this
-   step.
+   You will temporarily lose all Internet connectivity in Qubes OS during this step.
 
 Using the same procedure as in the previous step, shut down ``sd-proxy``. Attempt to shut down ``sys-firewall``. You may see an error message telling you that other qubes still require access to ``sys-firewall``. Save your work in those qubes, shut them down, and attempt to shut down ``sys-firewall`` again.
 
@@ -154,16 +151,13 @@ I can't SSH into my servers over Tor. What do I do?
 
 At any point after the successful installation of SecureDrop, if you cannot SSH into your servers, you should first perform the following troubleshooting steps:
 
-#. **Ensure that you are connected to Tor.** 
+#. **Ensure that you are connected to Tor.**
 
-#. **Ensure your servers are online.** Visit the Admin Interface to check
-   your Application Server is online, and you can trigger a 
-   :ref:`test OSSEC alert <test-OSSEC-alert>` to verify your Monitor Server is online.
+#. **Ensure your servers are online.** Visit the Admin Interface to check your Application Server is online, and you can trigger a :ref:`test OSSEC alert <test-OSSEC-alert>` to verify your Monitor Server is online.
 
 #. **Ensure that SSH aliases and Onion Service authentication are configured:**
 
-   - First, ensure that the correct configuration files are present in
-     ``~/.config/securedrop-admin``:
+   - First, ensure that the correct configuration files are present in ``~/.config/securedrop-admin``:
 
      - ``app-ssh.auth_private``
      - ``mon-ssh.auth_private``
@@ -171,14 +165,9 @@ At any point after the successful installation of SecureDrop, if you cannot SSH 
      - ``app-sourcev3-ths``
      - ``tor_v3_keys.json``
 
-   - Then, run  ``securedrop-admin localconfig``.
-     This will ensure your local Tails environment is configured properly.
+   - Then, run  ``securedrop-admin localconfig``. This will ensure your local Tails environment is configured properly.
 
-#. **Confirm that your SSH key is available**: During the install, you
-   configured SSH public key authentication using ``ssh-copy-id``.
-   Ensure this key is available using ``ssh-add -L``. If you see the output
-   "This agent has no identities." then you need to add the key via ``ssh-add``
-   prior to SSHing into the servers.
+#. **Confirm that your SSH key is available**: During the install, you configured SSH public key authentication using ``ssh-copy-id``. Ensure this key is available using ``ssh-add -L``. If you see the output "This agent has no identities." then you need to add the key via ``ssh-add`` prior to SSHing into the servers.
 
 .. |screenshot_network_manager_wired_icon| image:: ../../images/screenshot_network_manager_wired_icon.png
 

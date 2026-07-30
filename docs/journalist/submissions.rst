@@ -36,11 +36,9 @@ The following filetypes are currently supported for viewing on the SecureDrop Wo
 * Microsoft Office files (.doc, .docx, .xls, .xlsx, .ppt, .pptx)
 * OpenDocument files (.odt, .ods, .odp)
 * Audio: .mp3, .mp4, .mpeg, .wav, .ogg (Ogg Vorbis)
-* Video: .mp4, .webm, .mov (Quicktime), .avi (Audio Video Interleave - Microsoft),
-  .wmv (Windows Media Video)
+* Video: .mp4, .webm, .mov (Quicktime), .avi (Audio Video Interleave - Microsoft), .wmv (Windows Media Video)
 * Image: .gif, .png, .jpeg, .tiff, .svg, .ico, .webp, .heic, .avif
-* Compressed archives: .zip, .tar.gz (although printer support for files inside
-  an archive is still to be implemented)
+* Compressed archives: .zip, .tar.gz (although printer support for files inside an archive is still to be implemented)
 
 A full list of supported filetypes can be found `here <https://github.com/freedomofpress/securedrop-client/blob/main/workstation-config/mimeapps.list.sd-viewer>`_.
 
@@ -62,11 +60,7 @@ Exporting submissions from the SecureDrop Workstation
 
 .. important::
 
-   SecureDrop does not scan for or remove malware. If the file
-   you received contains malware targeting the operating system and applications
-   running on your everyday workstation, copying it in its original form carries
-   the risk of spreading malware to that computer. Make sure you understand the
-   risks, and consider other methods to export the document (e.g., print).
+   SecureDrop does not scan for or remove malware. If the file you received contains malware targeting the operating system and applications running on your everyday workstation, copying it in its original form carries the risk of spreading malware to that computer. Make sure you understand the risks, and consider other methods to export the document (e.g., print).
 
 If you must copy a file from your SecureDrop Workstation to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that Journalists are provided with an Export Device, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__. These instructions assume that you are following the recommended workflow. If you are unsure, ask your Administrator.
 
@@ -93,39 +87,27 @@ Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for export
       |screenshot_veracrypt_sd_devices_files_unlock|
    d. Click **Connect**.
 
-3. Back in your Source's conversation, click **Export**.
-   |screenshot_export_dialog|
-4. If you have not already unlocked your USB flash drive, you will be prompted for the
-   password configured for this USB flash drive.
-   |screenshot_export_drive_passphrase|
+3. Back in your Source's conversation, click **Export**. |screenshot_export_dialog|
+4. If you have not already unlocked your USB flash drive, you will be prompted for the password configured for this USB flash drive. |screenshot_export_drive_passphrase|
 
-5. Once you see a message informing you that the export was successfully completed,
-   you can safely unplug the USB flash drive. Alternatively, you can leave the drive
-   plugged in and export additional files.
+5. Once you see a message informing you that the export was successfully completed, you can safely unplug the USB flash drive. Alternatively, you can leave the drive plugged in and export additional files.
 
 Decrypting and preparing to publish
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
 
-   To decrypt a VeraCrypt drive on a Windows or Mac workstation, you need
-   to have the VeraCrypt software installed. If you are unsure if you have the
-   software installed or how to use it, ask your Administrator, or see
-   the `Freedom of the Press Foundation guide <https://freedom.press/training/encryption-toolkit-media-makers/veracrypt-guide/>`__
-   for working with VeraCrypt.
+   To decrypt a VeraCrypt drive on a Windows or Mac workstation, you need to have the VeraCrypt software installed. If you are unsure if you have the software installed or how to use it, ask your Administrator, or see the `Freedom of the Press Foundation guide <https://freedom.press/training/encryption-toolkit-media-makers/veracrypt-guide/>`__ for working with VeraCrypt.
 
 To access the Export Device on your everyday workstation, follow these steps:
 
-1. If your Export Device has a physical write protection switch, make sure it
-   is in the *locked* position.
+1. If your Export Device has a physical write protection switch, make sure it is in the *locked* position.
 2. Plug the Export Device into your everyday workstation.
 3. Launch the VeraCrypt application.
 4. Click **Select Device** and select the Export Device, then click **OK**.
 5. Click **Mount**.
-6. Enter the passphrase for your Export Device. You should find this in your
-   own personal password manager.
-7. Open the Export Device in your operating system's file manager, and copy
-   the contents of interest to your everyday workstation.
+6. Enter the passphrase for your Export Device. You should find this in your own personal password manager.
+7. Open the Export Device in your operating system's file manager, and copy the contents of interest to your everyday workstation.
 
 When you are done, switch back to the VeraCrypt window, and click **Dismount**.
 
@@ -157,8 +139,7 @@ Risks from malware
 SecureDrop does not scan for or remove malware in submissions you receive. There are important steps you can take to protect yourself:
 
 1. **Keep your SecureDrop Workstation up-to-date.**
-2. **Print documents from the SecureDrop Workstation instead of exporting them
-   digitally, whenever possible.**
+2. **Print documents from the SecureDrop Workstation instead of exporting them digitally, whenever possible.**
 
    Printing documents prevents the proliferation of malware to your everyday
    workstation, and eliminates most categories of embedded metadata. Note that
@@ -204,10 +185,7 @@ Fully mitigating the risks of malware received via SecureDrop is beyond the scop
 
 .. tip::
 
-   This is only a very limited introduction. Freedom of the Press Foundation
-   publishes and maintains `digital security guides for journalists <https://freedom.press/training/>`__,
-   many of which relate to these topics, and offers `digital security training <https://freedom.press/training/request-training/>`__
-   for news organization staff.
+   This is only a very limited introduction. Freedom of the Press Foundation publishes and maintains `digital security guides for journalists <https://freedom.press/training/>`__, many of which relate to these topics, and offers `digital security training <https://freedom.press/training/request-training/>`__ for news organization staff.
 
 .. |screenshot_file_before_download| image:: ../images/screenshot_file_before_download.png
 

@@ -48,11 +48,9 @@ We will use the OPNSense Web GUI to do the initial configuration of the network 
 Connect to the OPNSense web GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. If you have not already done so, boot the Admin Workstation. 
+#. If you have not already done so, boot the Admin Workstation.
 
-#. Connect the Admin Workstation to the LAN interface. You should see
-   a popup notification in Tails that says "Connection Established". If you click
-   on the network icon in the upper right of the Tails Desktop, you should see that the "Wired Connection" is active:
+#. Connect the Admin Workstation to the LAN interface. You should see a popup notification in Tails that says "Connection Established". If you click on the network icon in the upper right of the Tails Desktop, you should see that the "Wired Connection" is active:
 
    |Wired Connected|
 
@@ -62,8 +60,7 @@ Connect to the OPNSense web GUI
       wireless network), you may encounter problems trying
       to connect the firewall's Web GUI.
 
-#. Launch the Unsafe Browser from the menu bar: **Apps ▸ Internet ▸
-   Unsafe Browser**.
+#. Launch the Unsafe Browser from the menu bar: **Apps ▸ Internet ▸ Unsafe Browser**.
 
    |Launching the Unsafe Browser|
 
@@ -72,21 +69,15 @@ Connect to the OPNSense web GUI
         the only option because Tails intentionally disables LAN
         access in the **Tor Browser**.
 
-#. You will see a pop-up notification that says "Starting the Unsafe
-   Browser..."
+#. You will see a pop-up notification that says "Starting the Unsafe Browser..."
 
    |Pop-up notification|
 
-#. After a few seconds, the Unsafe Browser should launch. The window
-   has a bright red border to remind you to be careful when using
-   it. You should close it once you're done configuring the firewall
-   and use Tor Browser for any other web browsing you might do on
-   the Admin Workstation.
+#. After a few seconds, the Unsafe Browser should launch. The window has a bright red border to remind you to be careful when using it. You should close it once you're done configuring the firewall and use Tor Browser for any other web browsing you might do on the Admin Workstation.
 
    |Unsafe Browser Homepage|
 
-#. Navigate to the OPNSense Web GUI in the Unsafe Browser:
-   ``https://192.168.1.1``
+#. Navigate to the OPNSense Web GUI in the Unsafe Browser: ``https://192.168.1.1``
 
    .. note:: If you have trouble connecting, go to your network settings and
       make sure that you have an IPv4 address in the ``192.168.1.1/24`` range.
@@ -95,15 +86,11 @@ Connect to the OPNSense web GUI
       However, make sure not to configure your Tails device to have the same IP
       as the firewall (``192.168.1.1``).
 
-#. The firewall uses a self-signed certificate, so you will see a "This
-   Connection Is Untrusted" warning when you connect. This is expected.
-   You can safely continue by clicking **Advanced** and **Accept the Risk and
-   Continue**.
+#. The firewall uses a self-signed certificate, so you will see a "This Connection Is Untrusted" warning when you connect. This is expected. You can safely continue by clicking **Advanced** and **Accept the Risk and Continue**.
 
    |OPNSense - Your Connection is Insecure|
 
-#. You should see the login page for the OPNSense GUI. Log in with the
-   default username and passphrase (``root`` / ``opnsense``).
+#. You should see the login page for the OPNSense GUI. Log in with the default username and passphrase (``root`` / ``opnsense``).
 
    |OPNSENSE - Default Login|
 
@@ -130,12 +117,7 @@ Configure interfaces via the Setup Wizard
 
 To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click **Next**.
 
-#. **General Information**: Leave your hostname as the default, ``OPNsense``.
-   There is no relevant domain for SecureDrop, so we
-   recommend setting this to ``securedrop.local`` or something similar. Use
-   your preferred DNS servers. If you don't know what DNS servers to use,
-   we recommend using Google's DNS servers: ``8.8.8.8`` and ``8.8.4.4``.
-   Uncheck the **Override DNS** checkbox.
+#. **General Information**: Leave your hostname as the default, ``OPNsense``. There is no relevant domain for SecureDrop, so we recommend setting this to ``securedrop.local`` or something similar. Use your preferred DNS servers. If you don't know what DNS servers to use, we recommend using Google's DNS servers: ``8.8.8.8`` and ``8.8.4.4``. Uncheck the **Override DNS** checkbox.
 
    In the **Unbound DNS** section, uncheck **Enable Resolver**.
 
@@ -145,26 +127,17 @@ To start the OPNSense Setup Wizard, navigate to **System ▸ Wizard** and click 
 
 #. **Time Server Information**: Leave the default settings unchanged and  click **Next**.
 
-#. **Configure WAN Interface**: Enter the appropriate configuration for
-   your network. Consult your local sysadmin if you are unsure what to
-   enter here. For many environments, the default of DHCP will work and the
-   rest of the fields can be left at their default values.
+#. **Configure WAN Interface**: Enter the appropriate configuration for your network. Consult your local sysadmin if you are unsure what to enter here. For many environments, the default of DHCP will work and the rest of the fields can be left at their default values.
 
    Click **Next** to proceed.
 
-#. **Configure LAN Interface**: Use the IP address of the *Admin Gateway*
-   (``10.20.1.1``) and the subnet mask (``/24``) of the *Admin Subnet*. Click
-   **Next**.
+#. **Configure LAN Interface**: Use the IP address of the *Admin Gateway* (``10.20.1.1``) and the subnet mask (``/24``) of the *Admin Subnet*. Click **Next**.
 
    |OPNSense: Configure LAN Interface|
 
-#. **Set Root Password**: If the password was already reset during the 2FA setup, you
-   don't need to set it again. If it was not, then set a strong password now and
-   store it in the Admin Workstation's KeePassXC database. Click **Next**
-   to continue.
+#. **Set Root Password**: If the password was already reset during the 2FA setup, you don't need to set it again. If it was not, then set a strong password now and store it in the Admin Workstation's KeePassXC database. Click **Next** to continue.
 
-#. **Reload Configuration**: Click **Reload** to apply the changes you made in the
-   Setup Wizard.
+#. **Reload Configuration**: Click **Reload** to apply the changes you made in the Setup Wizard.
 
 At this point, since the LAN subnet settings were changed from their defaults, you will no longer be able to connect after reloading the firewall and the reload will time out. This is not an error - the firewall has reloaded and is working correctly.
 
@@ -268,9 +241,7 @@ This will take you to the network settings. Change to the **IPv4** tab. Ensure t
 	  so you can continue to use the Unsafe Browser to access the
 	  WebGUI in future sessions.
 
-	  We recommend keeping it simple and using the same DNS
-	  servers that you used for the network firewall in the setup
-	  wizard.
+	  We recommend keeping it simple and using the same DNS servers that you used for the network firewall in the setup wizard.
 
 Fill in the static networking information for the Admin Workstation:
 
@@ -296,11 +267,8 @@ SecureDrop configuration
 
 SecureDrop uses the firewall to achieve two primary goals:
 
-#. Isolating SecureDrop from the existing network, which may be
-   compromised (especially if it is a venerable network in a large
-   organization like a newsroom).
-#. Isolating the Application Server and the Monitor Server from each other
-   as much as possible, to reduce attack surface.
+#. Isolating SecureDrop from the existing network, which may be compromised (especially if it is a venerable network in a large organization like a newsroom).
+#. Isolating the Application Server and the Monitor Server from each other as much as possible, to reduce attack surface.
 
 In order to use the firewall to isolate the Application Server and the Monitor Server from each other, we need to connect them to separate interfaces, and then set up firewall rules that allow them to communicate.
 
@@ -612,16 +580,10 @@ Troubleshooting tips
 Here are some general tips for setting up OPNSense firewall rules:
 
 #. Create aliases for the repeated values (IPs and ports).
-#. OPNSense is a stateful firewall, which means that you don't need
-   corresponding rules to allow incoming traffic in response to outgoing
-   traffic (like you would in, e.g. iptables with
-   ``--state ESTABLISHED,RELATED``).
-#. You should create the rules *on the interface where the traffic
-   originates*.
-#. Make sure you delete the default "allow all" rule on the LAN
-   interface.
-#. If you are troubleshooting connectivity, the firewall logs can be
-   very helpful. You can find them in the Web GUI in **Firewall ▸ Log Files**
+#. OPNSense is a stateful firewall, which means that you don't need corresponding rules to allow incoming traffic in response to outgoing traffic (like you would in, e.g. iptables with ``--state ESTABLISHED,RELATED``).
+#. You should create the rules *on the interface where the traffic originates*.
+#. Make sure you delete the default "allow all" rule on the LAN interface.
+#. If you are troubleshooting connectivity, the firewall logs can be very helpful. You can find them in the Web GUI in **Firewall ▸ Log Files**
 
 .. _Keeping OPNSense up to date:
 

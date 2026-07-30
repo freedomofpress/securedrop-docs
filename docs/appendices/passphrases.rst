@@ -12,8 +12,7 @@ The Administrator will be using an Admin Workstation configured to connect to th
 
 - The Qubes full disk encryption (FDE) password of the Admin Workstation, required to unlock system storage on boot.
 - The Qubes system user password for the Admin Workstation, required to log in.
--  Additional credentials, which we recommend adding to Tails' KeePassXC password
-   manager during the installation:
+-  Additional credentials, which we recommend adding to Tails' KeePassXC password manager during the installation:
 
    - The Application Server and Monitor Server admin username and password (required to be the same for both servers).
    - The network firewall username and password.
@@ -61,8 +60,7 @@ Passphrase best practices
 All SecureDrop users---Sources, Journalists, and Administrators---are required to memorize at least one passphrase. This section describes best practices for passphrase management in the context of SecureDrop.
 
 #. **Do** memorize your passphrase.
-#. If necessary, **do** write your passphrase down temporarily while you
-   memorize it.
+#. If necessary, **do** write your passphrase down temporarily while you memorize it.
 
    .. caution:: **Do** store your written passphrase in a safe place, such as a
                 safe at home or on a piece of paper in your wallet. **Do**

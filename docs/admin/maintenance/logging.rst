@@ -8,13 +8,9 @@ When troubleshooting issues with your SecureDrop instance, be sure to examine al
 Logs to examine on both servers
 -------------------------------
 
-- ``/var/log/kern.log``: Use this file to investigate kernel-related issues,
-  including warnings or errors specific to AppArmor or grsecurity (a set of
-  patches applied to the kernels for additional security hardening)  
+- ``/var/log/kern.log``: Use this file to investigate kernel-related issues, including warnings or errors specific to AppArmor or grsecurity (a set of patches applied to the kernels for additional security hardening)
 
-- ``/var/log/syslog``: Use this file to investigate most other system issues, 
-  including iptables configuration problems or Tor network issues. Use search
-  patterns, e.g., search for "app Tor" to find log entries specific to Tor.
+- ``/var/log/syslog``: Use this file to investigate most other system issues, including iptables configuration problems or Tor network issues. Use search patterns, e.g., search for "app Tor" to find log entries specific to Tor.
 
 :ref:`Application Server<glossary_application_server>` logs
 -----------------------------------------------------------
@@ -34,8 +30,7 @@ When investigating an application error on the :ref:`Source Interface<glossary_s
    # ErrorLog /dev/null
    # LogLevel critical
 
-4. Add the desired new logging configuration in the same location (inside the 
-   ``<VirtualHost>`` block), e.g.:
+4. Add the desired new logging configuration in the same location (inside the ``<VirtualHost>`` block), e.g.:
 
 .. code:: sh
 
@@ -45,8 +40,7 @@ When investigating an application error on the :ref:`Source Interface<glossary_s
 5. Save the file and reload the configuration with ``sudo systemctl reload apache2``
 6. Visit the Source Interface and reproduce the error
 7. Inspect the log file ``/var/log/apache2/source-error.log`` for any details
-8. Remember to set the configuration back to the default values once your
-   investigation is complete.
+8. Remember to set the configuration back to the default values once your investigation is complete.
 
 Note that the ``debug`` logging level is highly verbose; if you want to adjust it, see `the Apache documentation <https://httpd.apache.org/docs/2.4/mod/core.html#loglevel>`_ for more information about the different logging levels.
 

@@ -114,7 +114,7 @@ SecureDrop Workstation connects to your SecureDrop instance's API via the Admin 
 
 - In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the persistent volume passphrase to unlock and mount it. When prompted, select the option to **Forget password immediately**.
 
-- In the ``dom0`` terminal, proceed with the next import step of the ``sdw-admin`` command or re-run 
+- In the ``dom0`` terminal, proceed with the next import step of the ``sdw-admin`` command or re-run
 
   .. code-block:: sh 
 
@@ -200,7 +200,7 @@ If importing the Submission Private Key  using ``sdw-admin --configure`` fails, 
 
     sudo cp /tmp/sd-journalist.sec /usr/share/securedrop-workstation-dom0-config/
 
-- You can run ``sdw-admin --configure`` to now import the Admin Interface details and complete configuration. 
+- You can run ``sdw-admin --configure`` to now import the Admin Interface details and complete configuration.
 
   Alternatively, follow the steps below to do so manually. Once both Submission Private Key and Admin Interface details are imported, proceed with :ref:`configuring the workstation<manual_configure>`.
 
@@ -261,8 +261,7 @@ Once the Admin Interface details and Submission Private Key have been copied to 
 
 .. note::
 
-   You can find the values for the **hidserv.*** fields in the ``/tmp/journalist.txt`` file that you created in ``dom0`` earlier.
-   The file will be formatted as follows:
+   You can find the values for the **hidserv.*** fields in the ``/tmp/journalist.txt`` file that you created in ``dom0`` earlier. The file will be formatted as follows:
 
    .. code-block:: none
 

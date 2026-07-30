@@ -11,9 +11,7 @@ What NOT to do
 What to do
 ----------
 
-* **DO** carefully read the remaining instructions, that will carefully
-  step-through the reasons why we advise the above, and provide guidance
-  to minimize risk when using SecureDrop.
+* **DO** carefully read the remaining instructions, that will carefully step-through the reasons why we advise the above, and provide guidance to minimize risk when using SecureDrop.
 
 Suggested devices for using SecureDrop
 --------------------------------------
@@ -36,21 +34,14 @@ Each SecureDrop may **only** be reached through the Tor Browser. SecureDrop page
 
 Tor is an anonymizing network that makes it difficult for anybody observing the network to associate a user's identity (e.g., the computer's IP address) with their activity. Tor Browser can be downloaded from the `Tor Project's website`_. Tor Browser is a modified version of the Firefox web browser that also includes features protect your security and anonymity. If there is a chance that visiting the Tor Project's website to download Tor Browser might raise suspicion, you have a couple of alternatives:
 
-* If your mail provider is less likely to be monitored, you can send a mail to
-  gettor@torproject.org with the text "linux", "windows" or "osx" in the body
-  (for your preferred operating system) and a bot will answer with instructions.
-* You can request to receive the Tor Browser bundle via the
-  `@GetTor_bot on Telegram`_.
+* If your mail provider is less likely to be monitored, you can send a mail to gettor@torproject.org with the text "linux", "windows" or "osx" in the body (for your preferred operating system) and a bot will answer with instructions.
+* You can request to receive the Tor Browser bundle via the `@GetTor_bot on Telegram`_.
 
 While using Tor Browser on your personal computer helps hide your activity on the network, it will leave traces of its own installation on your local machine. Most operating systems keep logs, for example, any time an application is used. The sensitivity of the information you share and the capabilities of those who may not want you to share that information, should be considered when making these decisions.
 
 .. important::
 
-   Tor protects your anonymity, but third parties who can monitor your network
-   traffic can detect *that you are using Tor*. They may even be able to do so
-   long after your browser session, using network activity logs. This is why we
-   recommend using Tor Browser from a cafe you do not
-   visit regularly.
+   Tor protects your anonymity, but third parties who can monitor your network traffic can detect *that you are using Tor*. They may even be able to do so long after your browser session, using network activity logs. This is why we recommend using Tor Browser from a cafe you do not visit regularly.
 
 .. _`Tor Project's website`: https://www.torproject.org/
 .. _`Tails operating system`: https://tails.net/
@@ -65,9 +56,7 @@ All organizations operating SecureDrop have a Landing Page that provides their o
 
 .. note::
 
-   Each SecureDrop instance is operated and administered independently by
-   the organization you are submitting to. Only the Journalists associated
-   with that organization can see your submissions.
+   Each SecureDrop instance is operated and administered independently by the organization you are submitting to. Only the Journalists associated with that organization can see your submissions.
 
 Most organizations make their SecureDrop prominently accessible from their main website's homepage (for news organizations, typically under sections called "Tips" or "Contact us"). You can also find an incomplete list of organizations accepting submissions through SecureDrop in the `SecureDrop Directory`_ maintained by Freedom of the Press Foundation.
 
@@ -75,14 +64,9 @@ Using Tor Browser, find the ".onion" address for the SecureDrop for the organiza
 
 .. tip::
 
-   If the organization does have an entry in the SecureDrop Directory, we
-   recommend comparing the address of the entry with the one on the
-   organization's own SecureDrop Landing Page.
+   If the organization does have an entry in the SecureDrop Directory, we recommend comparing the address of the entry with the one on the organization's own SecureDrop Landing Page.
 
-   If the two addresses don't match, please do not submit to this organization
-   yet. Instead, please `contact us <https://securedrop.org/report-an-error>`__
-   through the SecureDrop website, using Tor Browser. For additional
-   security, you can use our onion address in Tor:
+   If the two addresses don't match, please do not submit to this organization yet. Instead, please `contact us <https://securedrop.org/report-an-error>`__ through the SecureDrop website, using Tor Browser. For additional security, you can use our onion address in Tor:
 
    ``sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion/report-an-error``
 

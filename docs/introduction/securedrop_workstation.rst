@@ -35,20 +35,16 @@ One key security feature of Qubes OS is that it enables users to configure the a
 
 SecureDrop Workstation tightly controls access to the network, in order to prevent the exfiltration of messages, replies, documents, or encryption keys by adversaries. Specifically, the following qubes have no network access:
 
-- ``sd-app``, which runs :ref:`SecureDrop Inbox<glossary_securedrop_inbox>`, and holds decrypted messages,
-  replies, and attachments.
+- ``sd-app``, which runs :ref:`SecureDrop Inbox<glossary_securedrop_inbox>`, and holds decrypted messages, replies, and attachments.
 - ``sd-viewer``, which is the template for disposable qubes used for opening and viewing attachments.
-- ``sd-gpg``, which holds the Submission Private Key required to decrypt
-  messages, replies, and documents.
-- ``sd-devices``, which passes exported documents through to USB devices like
-  printers and encrypted USB flash drives.
+- ``sd-gpg``, which holds the Submission Private Key required to decrypt messages, replies, and documents.
+- ``sd-devices``, which passes exported documents through to USB devices like printers and encrypted USB flash drives.
 
 By design, the Qubes OS host domain, ``dom0``, also does not have Internet access.
 
 .. note::
 
-   If you attempt to directly access the network in any of these qubes, it will
-   not work. That is the expected behavior.
+   If you attempt to directly access the network in any of these qubes, it will not work. That is the expected behavior.
 
 Because SecureDrop Inbox must connect to the SecureDrop :ref:`Application Server<glossary_application_server>` in order to send or retrieve messages, documents, and replies, it can communicate through Qubes-internal Remote Procedure Calls (RPCs) with another qube, ``sd-proxy``, which can only access the open Internet through the Tor network.
 
@@ -56,9 +52,7 @@ Like all networked qubes, ``sd-proxy`` uses the ``sys-firewall`` service to conn
 
 .. important::
 
-   The ``sd-proxy`` qube contains a sensitive authentication token required to
-   access the SecureDrop API via Tor, and should not be attached to qubes that are
-   unrelated to SecureDrop.
+   The ``sd-proxy`` qube contains a sensitive authentication token required to access the SecureDrop API via Tor, and should not be attached to qubes that are unrelated to SecureDrop.
 
 Installing additional software on the SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

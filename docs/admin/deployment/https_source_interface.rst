@@ -5,16 +5,9 @@ HTTPS on the Source Interface
 
 The SecureDrop :ref:`Source Interface<glossary_source_interface>` is served as an :ref:`Onion Service<glossary_onion_service>` with an onion address ending in ".onion", requiring Tor Browser to access it. While Onion Services provide end-to-end encryption by default, as well as strong anonymity, there are several reasons why you might want to consider deploying an additional layer of encryption and authentication via HTTPS:
 
-* Extended Validation (EV) certificates, which are currently the only type of
-  certificates that may be issued for onion addresses, are intended to
-  attest to the identity of the organization running a service. This provides
-  an additional measure of authenticity (in addition to the organization's
-  Landing Page and the `SecureDrop Directory`_) to help assure Sources that
-  they are communicating with the intended organization when they access a
-  given Source Interface.
+* Extended Validation (EV) certificates, which are currently the only type of certificates that may be issued for onion addresses, are intended to attest to the identity of the organization running a service. This provides an additional measure of authenticity (in addition to the organization's Landing Page and the `SecureDrop Directory`_) to help assure Sources that they are communicating with the intended organization when they access a given Source Interface.
 
-* Using HTTPS on the Source Interface will provide
-  an extra layer of encryption for data in transit.
+* Using HTTPS on the Source Interface will provide an extra layer of encryption for data in transit.
 
 .. _`SecureDrop Directory`: https://securedrop.org/directory/
 

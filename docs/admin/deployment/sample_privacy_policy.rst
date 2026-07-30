@@ -12,23 +12,15 @@ Please read this privacy policy carefully. It explains what information what typ
 Collection of information from sources
 --------------------------------------
 
-* We don't ask or require you to provide any personally identifying information
-  when you submit materials through SecureDrop.
+* We don't ask or require you to provide any personally identifying information when you submit materials through SecureDrop.
 
-* The system does not record your IP address, information about your browser,
-  computer, or operating system. Furthermore, the SecureDrop pages do not embed
-  third-party content or deliver persistent cookies to your browser.
+* The system does not record your IP address, information about your browser, computer, or operating system. Furthermore, the SecureDrop pages do not embed third-party content or deliver persistent cookies to your browser.
 
-* The server will only store the date and time of the newest message sent from
-  each source. Once you send a new message, the time and date of your previous
-  message is automatically deleted.
+* The server will only store the date and time of the newest message sent from each source. Once you send a new message, the time and date of your previous message is automatically deleted.
 
-* Journalists decrypt and read each message offline. They are encouraged to
-  delete messages from the server on a regular basis.
+* Journalists decrypt and read each message offline. They are encouraged to delete messages from the server on a regular basis.
 
-* Please keep in mind that the actual messages you send and receive through
-  SecureDrop may include personally identifying information. For this reason,
-  once you read a journalist's message, we recommend you delete it.
+* Please keep in mind that the actual messages you send and receive through SecureDrop may include personally identifying information. For this reason, once you read a journalist's message, we recommend you delete it.
 
 Also please note that when you submit certain types of files through SecureDrop, you may be sending us metadata associated with that file.
 
