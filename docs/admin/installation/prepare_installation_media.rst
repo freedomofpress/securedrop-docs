@@ -16,7 +16,7 @@ In order to verify the integrity of the downloaded installation media, you will 
 
 * **Linux:** ``gpg`` can be accessed via your favorite Terminal emulator, such as GNOME Console, Konsole, or Ptyxis. If ``gpg`` is not already installed, you can install it from your distribution's package manager tool.
 * **Mac:** ``gpg`` must be manually installed from the `GPG Suite <https://gpgtools.org/>`__. Use Terminal.app, or your favorite third-party terminal emulator, to enter commands.
-* **Windows:** ``gpg`` must be installed via `Gpg4win <https://gpg4win.org/download.html>`__. Use the Windows command line (``cmd.exe``) to enter commands.
+* **Windows:** ``gpg`` must be installed via `Gpg4win <https://gpg4win.org/download.html>`__. Use the Windows PowerShell to enter commands, which you can find by searching and selecting "Windows PowerShell" from the Start menu.
 
 Preparing the installation media
 --------------------------------
@@ -39,7 +39,7 @@ The installation media and the files required to verify it are available on the 
 * `SHA256SUMS`_
 * `SHA256SUMS.gpg`_
 
-Alternatively, you can use the command line:
+Alternatively, you can use the command line on Linux or Mac:
 
 .. code:: sh
 
@@ -50,6 +50,15 @@ Alternatively, you can use the command line:
 .. _ubuntu-24.04.3-live-server-amd64.iso: https://releases.ubuntu.com/24.04/ubuntu-24.04.3-live-server-amd64.iso
 .. _SHA256SUMS: https://releases.ubuntu.com/24.04/SHA256SUMS
 .. _SHA256SUMS.gpg: https://releases.ubuntu.com/24.04/SHA256SUMS.gpg
+
+or from a Windows PowerShell:
+
+.. code:: sh
+
+   cd ~\Downloads
+   curl.exe -O https://releases.ubuntu.com/24.04.3/ubuntu-24.04.3-live-server-amd64.iso
+   curl.exe -O https://releases.ubuntu.com/24.04.3/SHA256SUMS
+   curl.exe -O https://releases.ubuntu.com/24.04.3/SHA256SUMS.gpg
 
 You should verify the Ubuntu image you downloaded hasn't been modified by a malicious attacker or otherwise corrupted. To do so, check its integrity with cryptographic signatures and hashes.
 
