@@ -88,7 +88,7 @@ If the final verification step is successful, you should see the following outpu
     
 If it does not report a good signature, try deleting the ISO and downloading it again.
 
-.. caution:: If you do not see the line above it is not safe to proceed with the installation. If this happens, please contact us at securedrop@freedom.press.
+.. caution:: If you do not see "Good signature" above it is not safe to proceed with the installation. If this happens, please contact us at securedrop@freedom.press.
              
 Download and verify Qubes OS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
