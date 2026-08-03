@@ -1,5 +1,4 @@
 .. _hardware_guide:
-.. _hardware:
 
 Hardware
 ========

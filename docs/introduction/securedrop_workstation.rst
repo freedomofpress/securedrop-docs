@@ -151,9 +151,6 @@ reboot of that qube.
 For more about the security features of Qubes, see
 `the Qubes OS documentation`_.
 
-.. _`Xen hypervisor`: https://wiki.xen.org/wiki/Xen_Project_Software_Overview
-.. _`the Qubes OS documentation`: https://www.qubes-os.org/faq/#general--security
-
 How does the security of this system compare to using an air-gapped Secure Viewing Station?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
