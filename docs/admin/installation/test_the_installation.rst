@@ -21,11 +21,7 @@ The SSH aliases should have been configured automatically by running the ``secur
    ssh <username>@<app .onion>
    ssh <username>@<mon .onion>
 
-.. tip:: Check the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files
-         in the ``~/.config/securedrop-admin`` directory in the ``sd_admin`` qube to find the ssh onion
-         service addresses. The files contain one line with 4 colon-delimited
-         fields. The address is the first 56-character field, just add a
-         ``.onion`` at the end.
+.. tip:: Check the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files in the ``~/.config/securedrop-admin`` directory in the ``sd_admin`` qube to find the ssh onion service addresses. The files contain one line with 4 colon-delimited fields. The address is the first 56-character field, just add a ``.onion`` at the end.
 
 Log in to both servers via TTY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

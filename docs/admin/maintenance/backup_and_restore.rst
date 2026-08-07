@@ -3,9 +3,7 @@ Backing up and restoring servers
 
 Maintaining regular backups helps guard against data loss and hardware failure. Having a recent backup will allow you to redeploy SecureDrop without changing onion addresses, recreating journalist accounts, or losing previous submissions from Sources.
 
-.. note:: Only the Application Server is backed up and restored, including
-          historical submissions and both Source Interface and Admin Interface onion addresses. The Monitor Server needs to be configured from
-          scratch in the event of a hardware migration.
+.. note:: Only the Application Server is backed up and restored, including historical submissions and both Source Interface and Admin Interface onion addresses. The Monitor Server needs to be configured from scratch in the event of a hardware migration.
 
 Minimizing disk use
 -------------------
@@ -14,9 +12,7 @@ Since the backup and restore operations both involve transferring *all* of your 
 
 Encouraging Journalists to regularly delete older, unneeded submissions will save time and improve reliability when doing backups.
 
-.. tip:: Although it varies, the average throughput of an Onion Service is
-         about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and
-         restore accordingly.
+.. tip:: Although it varies, the average throughput of an Onion Service is about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and restore accordingly.
 
 On the :ref:`Admin Workstation<glossary_admin_workstation>`, open a Terminal and run:
 
@@ -28,15 +24,11 @@ Compare the output of this command (which approximates the size of a backup arch
 
 If you find you cannot perform a backup or restore due to this constraint, and have already deleted old submissions, contact us through the `SecureDrop Support Portal`_.
 
-.. note:: Submissions are deleted asynchronously and one at a time, so
-          if you delete a lot of submissions, it may take a while for all of the submissions
-          to actually be deleted. SecureDrop uses ``shred`` to
-          securely erase files, which takes significantly more time
-          than normal file deletion. You can monitor the progress of
-          queued deletion jobs by logging in to the Application
-          Server over SSH and running::
+.. note:: Submissions are deleted asynchronously and one at a time, so if you delete a lot of submissions, it may take a while for all of the submissions to actually be deleted. SecureDrop uses ``shred`` to securely erase files, which takes significantly more time than normal file deletion. You can monitor the progress of queued deletion jobs by logging in to the Application Server over SSH and running
 
-            sudo journalctl -u securedrop_rqworker
+    .. code:: sh
+    
+        sudo journalctl -u securedrop_rqworker
 
 .. _SecureDrop Support Portal: https://support-docs.securedrop.org/
 
@@ -69,9 +61,8 @@ The backup command will display updates on its progress as the backup is created
 
 When the backup action is complete, the backup will be stored as a compressed archive in ``~/.config/securedrop-admin``. The filename will begin ``sd-backup``, followed by a timestamp of when the backup was initiated, and ending with ``.tar.gz``. You can find the full path to the backup archive in the output of the backup command.
 
-.. warning:: The backup file contains sensitive information! It should only
-             be stored on the Admin Workstation, or on a
-             dedicated encrypted backup USB flash drive.
+.. warning:: The backup file contains sensitive information! It should only be stored on the Admin Workstation, or on a dedicated encrypted backup USB flash drive.
+
 .. include:: ../../includes/backup-warning.txt
 
 Restoring from a backup
@@ -116,15 +107,9 @@ Moving a SecureDrop instance to new hardware involves:
 - Installing SecureDrop on new hardware;
 - Restoring the backup to the new instance and repairing credentials.
 
-.. note:: If you need to restore from a backup from an instance configured to
-   use SSH-over-LAN onto an SSH-over-Tor instance, you must either first update
-   the target instance to use SSH-over-LAN or perform a data-only backup.
-   See :ref:`Data-only Restores <additional_restore_info>` for more information.
+.. note:: If you need to restore from a backup from an instance configured to use SSH-over-LAN onto an SSH-over-Tor instance, you must either first update the target instance to use SSH-over-LAN or perform a data-only backup. See :ref:`Data-only Restores <additional_restore_info>` for more information.
 
-.. note::  The instructions below assume that you are using the same Admin Workstation
-   that was used to manage your old instance. If you are using a new Admin
-   Workstation you will need to first install the 
-   securedrop-admin package and prerequisites on it. Then you may copy the config directory ``~/.config/securedrop-admin`` and backup archive from the old Admin Workstation to the new workstation (using an encrypted USB flash drive), and proceed with the instructions below.
+.. note::  The instructions below assume that you are using the same Admin Workstation that was used to manage your old instance. If you are using a new Admin Workstation you will need to first install the securedrop-admin package and prerequisites on it. Then you may copy the config directory ``~/.config/securedrop-admin`` and backup archive from the old Admin Workstation to the new workstation (using an encrypted USB flash drive), and proceed with the instructions below.
 
 #. If you have not already done so, :ref:`back up the existing installation <backing_up>`. The instructions below assume that the backup has been created and renamed ``sd-backup-old.tar.gz``.
 
@@ -136,9 +121,7 @@ Moving a SecureDrop instance to new hardware involves:
       find ~/.ssh/ -type f -exec mv {} {}.bak \;
 
    .. note::
-      You will be generating fresh SSH credentials for the servers, and any
-      other Admin Workstation USB flash drives will have to be
-      :ref:`provisioned with updated credentials <repair_admin_usbs>`.
+      You will be generating fresh SSH credentials for the servers, and any other Admin Workstation USB flash drives will have to be :ref:`provisioned with updated credentials <repair_admin_usbs>`.
 
 #. Ensure your Admin Workstation is connected to a LAN port on your network firewall, and :ref:`configure the Admin Workstation's IP address <assign_static_ip_to_workstation>`.
 
@@ -192,9 +175,7 @@ If you have additional Admin Workstation USB flash drives, they will no longer h
    - ``~/.ssh/id_rsa`` |br| |br|
 
    .. note::
-      Alternatively, if you wish to use different SSH credentials for each
-      Admin Workstation, you may do so. In this case, copy only the first two
-      files above to your additional Admin Workstations.
+      Alternatively, if you wish to use different SSH credentials for each Admin Workstation, you may do so. In this case, copy only the first two files above to your additional Admin Workstations.
 
       Generate per-machine SSH keys and use a clean LUKS-encrypted USB flash drive to transfer the public portions of those keys to your primary Admin Workstation, where you will then add them to the servers' ``authorized_keys`` files, as described :ref:`here <ssh_add_pubkey>`. You may also `contact Support`_ for assistance.
 

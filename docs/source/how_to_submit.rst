@@ -5,11 +5,7 @@ How to submit
 
    This guide provides an introduction to using SecureDrop as a Source. It is not exhaustive, it does not address ethical or legal dimensions of whistleblowing, and it does not speak to other methods for confidentially communicating with Journalists. Please proceed at your own risk. For additional background, also see the Freedom of the Press Foundation guide, `How to Share Sensitive Leaks With the Press <https://freedom.press/news/sharing-sensitive-leaks-press/>`__.
 
-.. warning:: Freedom of the Press Foundation has no access to any other
-   organization's SecureDrop instance, and cannot assist directly in your
-   communications with them. If you plan to use SecureDrop to maintain your
-   anonymity, you should not discuss your own use of it with others via unsafe
-   methods, including email to Freedom of the Press Foundation.
+.. warning:: Freedom of the Press Foundation has no access to any other organization's SecureDrop instance, and cannot assist directly in your communications with them. If you plan to use SecureDrop to maintain your anonymity, you should not discuss your own use of it with others via unsafe methods, including email to Freedom of the Press Foundation.
 
 Making your first submission
 ----------------------------

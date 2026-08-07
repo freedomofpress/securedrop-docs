@@ -17,9 +17,7 @@ The ``securedrop-admin`` command-line utility is used on an :ref:`Admin Workstat
 
 You can list all available ``securedrop-admin`` actions using the command ``securedrop-admin --help``
 
-.. note:: If your team has multiple Administrators, each with their own Admin Workstation, you
-  must take steps to manually synchronize any configuration changes made via ``securedrop-admin``
-  with each other. See `Managing Configuration Updates with Multiple Administrators`_
+.. note:: If your team has multiple Administrators, each with their own Admin Workstation, you must take steps to manually synchronize any configuration changes made via ``securedrop-admin`` with each other. See `Managing Configuration Updates with Multiple Administrators`_
 
 Updating the server configuration
 ---------------------------------
@@ -46,9 +44,7 @@ In both cases, follow these steps:
 #. Run ``securedrop-admin sdconfig``. This will display the current configuration, one line at a time, and allow you to change it. At this point, any changes you make are only saved on this Admin Workstation, to the following file:
 
    ``~/.config/securedrop-admin/site-specific``
-#. Run ``securedrop-admin install``. This will apply the configuration to your
-   Application and Monitor Server, and enforce the canonical state of the
-   server configuration.
+#. Run ``securedrop-admin install``. This will apply the configuration to your Application and Monitor Server, and enforce the canonical state of the server configuration.
 
 .. include:: ../../includes/rerun-install-is-safe.txt
 
@@ -61,10 +57,7 @@ https://github.com/freedomofpress/securedrop/blob/develop/securedrop/i18n.rst
 
 At any time during and after initial setup, you can choose from a list of supported languages to display using the codes shown in parentheses.
 
-.. note:: With a Source Interface displayed in French (for example), Sources
-          submitting documents are likely to expect a Journalist fluent in
-          French to be available to read the documents and follow up in that
-          language.
+.. note:: With a Source Interface displayed in French (for example), Sources submitting documents are likely to expect a Journalist fluent in French to be available to read the documents and follow up in that language.
 
 To add or remove locales from your instance, you'll need to :ref:`update your system configuration <update-system-configuration>` as outlined above.
 

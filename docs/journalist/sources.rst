@@ -31,9 +31,7 @@ Compose a reply to the selected source in the text box at the bottom of the conv
 
 |screenshot_send_reply|
 
-.. note:: If a reply fails to be sent successfully, it will still be visible in
-  subsequent sessions, including to any other users logging into the same
-  physical SecureDrop Workstation.
+.. note:: If a reply fails to be sent successfully, it will still be visible in subsequent sessions, including to any other users logging into the same physical SecureDrop Workstation.
 
 Deleting conversations and source accounts
 ------------------------------------------

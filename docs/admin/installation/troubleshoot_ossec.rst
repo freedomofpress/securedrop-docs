@@ -32,10 +32,7 @@ Authentication failure           | Edit ``/etc/postfix/sasl_passwd`` and make
 
 After making changes to the Postfix configuration, you should run ``systemctl reload postfix`` and test the new settings by restarting the OSSEC service.
 
-.. tip:: If you change the SMTP relay port after installation for any
-         reason, you must update the SMTP relay port using
-         ``securedrop-admin sdconfig`` and deploy using
-         ``securedrop-admin install``.
+.. tip:: If you change the SMTP relay port after installation for any reason, you must update the SMTP relay port using ``securedrop-admin sdconfig`` and deploy using ``securedrop-admin install``.
 
 Useful log files for OSSEC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,10 +51,7 @@ Other log files that may contain useful information:
 /var/ossec/logs/alerts/alerts.log
     Contains details of every recent OSSEC alert.
 
-.. tip:: Remember to encrypt any log files before sending via email,
-         for example to securedrop@freedom.press, in order to protect
-         security-related information about your organization's
-         SecureDrop instance.
+.. tip:: Remember to encrypt any log files before sending via email, for example to securedrop@freedom.press, in order to protect security-related information about your organization's SecureDrop instance.
 
 Not receiving emails
 ~~~~~~~~~~~~~~~~~~~~

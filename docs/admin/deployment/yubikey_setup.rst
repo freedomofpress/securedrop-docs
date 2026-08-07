@@ -3,8 +3,7 @@ Using a YubiKey with the Admin Interface
 
 This guide describes in detail how to set up a YubiKey for two-factor authentication on the :ref:`Admin Interface<glossary_admin_interface>`. This setup is performed once per Journalist to create a secure log-in method. The process requires some configuration steps using a separate software tool.
 
-.. note:: You will do all of these steps from within the Tails
-          operating system.
+.. note:: You will do all of these steps from within the Tails operating system.
 
 What is a YubiKey?
 ------------------
@@ -45,18 +44,13 @@ Click on the **Quick** button.
 
 Under **Configuration Slot**, click **Configuration Slot 1**.
 
-.. note:: If you are already using this YubiKey for something else,
-          you should choose **Configuration Slot 2**. You will have to
-          press and hold for several seconds to use the token from
-          **Slot 2** instead of the one in **Slot 1**. See the
-          `YubiKey manual`_ for more information.
+.. note:: If you are already using this YubiKey for something else, you should choose **Configuration Slot 2**. You will have to press and hold for several seconds to use the token from **Slot 2** instead of the one in **Slot 1**. See the `YubiKey manual`_ for more information.
 
 .. _`Yubikey manual`: https://docs.yubico.com/hardware/yubikey/yk-5/tech-manual/index.html
 
 In the section titled **OATH-HOTP parameters**, uncheck the box for **OATH Token Identifier (6 bytes)**. Leave the HOTP length at 6 digits. Next, uncheck the box for **Hide secret**. This will display the **Secret Key (20 bytes Hex)** field.
 
-.. important:: Make a note somewhere safe of the **Secret Key (20
-               bytes Hex)** value.
+.. important:: Make a note somewhere safe of the **Secret Key (20 bytes Hex)** value.
 
 |YubiKey Config|
 
@@ -76,9 +70,7 @@ Using your YubiKey
 
 When using a Yubikey to log-in to the Admin Interface, insert the Yubikey into the USB port and enter your username and passphrase. Then click the **Two-factor Code** field to focus the cursor there. Quickly press the lighted button on your YubiKey. This will insert the 6-digit code that you will need to log in.
 
-.. note:: When using **Configuration Slot 2**, be sure to press and hold
-          the YubiKey button for approximately 3 seconds. This can be somewhat
-          finicky.
+.. note:: When using **Configuration Slot 2**, be sure to press and hold the YubiKey button for approximately 3 seconds. This can be somewhat finicky.
 
 .. |YubiKey Overview| image:: ../../images/yubikey_overview.png
 .. |YubiKey Config| image:: ../../images/yubikey_oath_hotp_configuration.png

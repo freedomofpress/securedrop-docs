@@ -29,9 +29,7 @@ Configuring updates over Tor
 
 In case of censorship or blocking of the SecureDrop APT repository (``apt.freedom.press``), which provides automatic updates, Tor can be configured to provide unrestricted access.
 
-.. note:: This is only meant as a temporary measure. SecureDrop generally
-          expects an unfiltered internet connection. If you are facing long-term
-          censorship, :ref:`please contact us<Getting Support>` for other options.
+.. note:: This is only meant as a temporary measure. SecureDrop generally expects an unfiltered internet connection. If you are facing long-term censorship, :ref:`please contact us<Getting Support>` for other options.
 
 These steps will need to be applied to both the Application Server and the Monitor Server.
 
@@ -115,10 +113,7 @@ Once you are logged in, check to see if you have network access. If you do, then
 Roll back to the old kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. important:: It is of critical importance for the security of your instance
-  that we work together to resolve any compatibility issues. Rolling back to an 
-  older version is only a stopgap measure to avoid a prolonged outage of your
-  SecureDrop instance.
+.. important:: It is of critical importance for the security of your instance that we work together to resolve any compatibility issues. Rolling back to an older version is only a stopgap measure to avoid a prolonged outage of your SecureDrop instance.
 
 Inspect the file ``/boot/grub/grub.cfg``. You should find a ``menuentry`` line with the same text that you selected during boot, e.g.:
 
@@ -144,9 +139,7 @@ Once you have done so, set the ``GRUB_DEFAULT`` variable to point to the index o
 
 The "1" means the second entry of the main menu ("Advanced options"), the "2" means the third entry of the submenu. Again, update these numbers consistent with your configuration.
 
-.. caution:: Ensure that you have chosen the right index for the main menu
-  and the submenu, and double-check that you are beginning the count at 0, not
-  1; otherwise, you may boot into the wrong kernel.
+.. caution:: Ensure that you have chosen the right index for the main menu and the submenu, and double-check that you are beginning the count at 0, not 1; otherwise, you may boot into the wrong kernel.
 
 This change still has to be applied to take effect on the next boot:
 

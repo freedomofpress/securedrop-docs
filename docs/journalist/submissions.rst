@@ -72,11 +72,8 @@ Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for export
 1. Insert the USB flash drive and wait for the ``sd-devices`` qube to start.
 2. If your drive is using VeraCrypt, you will need to unlock it manually:
 
-   a. Open the file menu by clicking on the Qubes Application menu |qubes_menu| (in the top left),
-      select **sd-devices** and click **Files**.
-   b. In the left sidebar, there should be an entry labeled **# GB Possibly Encrypted**,
-      click it.
-      |screenshot_veracrypt_sd_devices_files|
+   a. Open the file menu by clicking on the Qubes Application menu |qubes_menu| (in the top left), select **sd-devices** and click **Files**.
+   b. In the left sidebar, there should be an entry labeled **# GB Possibly Encrypted**, click it. |screenshot_veracrypt_sd_devices_files|
    c. You will be prompted for the password configured for this USB flash drive:
 
       - Volume type: leave both unchecked
@@ -89,7 +86,6 @@ Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for export
 
 3. Back in your Source's conversation, click **Export**. |screenshot_export_dialog|
 4. If you have not already unlocked your USB flash drive, you will be prompted for the password configured for this USB flash drive. |screenshot_export_drive_passphrase|
-
 5. Once you see a message informing you that the export was successfully completed, you can safely unplug the USB flash drive. Alternatively, you can leave the drive plugged in and export additional files.
 
 Decrypting and preparing to publish
@@ -113,9 +109,7 @@ When you are done, switch back to the VeraCrypt window, and click **Dismount**.
 
 You are now ready to write articles and blog posts, edit video and audio, and begin publishing important, high-impact work!
 
-.. tip:: Check out our SecureDrop :doc:`Promotion Guide
-         </admin/deployment/getting_the_most_out_of_securedrop>` to read
-         about encouraging sources to use SecureDrop.
+.. tip:: Check out our SecureDrop :doc:`Promotion Guide </admin/deployment/getting_the_most_out_of_securedrop>` to read about encouraging sources to use SecureDrop.
 
 Securely erase an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -141,45 +135,24 @@ SecureDrop does not scan for or remove malware in submissions you receive. There
 1. **Keep your SecureDrop Workstation up-to-date.**
 2. **Print documents from the SecureDrop Workstation instead of exporting them digitally, whenever possible.**
 
-   Printing documents prevents the proliferation of malware to your everyday
-   workstation, and eliminates most categories of embedded metadata. Note that
-   printing a document may still preserve watermarks, printer codes,
-   steganographically encoded data, or other information not visible to the
-   naked eye.
-3. **Consult with your Administrator or your digital security staff before
-   copying files digitally.**
+   Printing documents prevents the proliferation of malware to your everyday workstation, and eliminates most categories of embedded metadata. Note that printing a document may still preserve watermarks, printer codes, steganographically encoded data, or other information not visible to the naked eye.
+3. **Consult with your Administrator or your digital security staff before copying files digitally.**
 
-   If you must copy a file in digital form (because of its format, the volume
-   of information, or for other reasons), we recommend taking the time to
-   consult with technical experts within the organization.
+   If you must copy a file in digital form (because of its format, the volume of information, or for other reasons), we recommend taking the time to consult with technical experts within the organization.
 
    .. tip::
 
-      Converting files to simpler formats (e.g., PDF to PNG) can help reduce the
-      risk of malware. Tails provides both graphical and command-line utilities
-      that can be used for this purpose.
-4. **Never scan QR codes embedded in documents using a network-connected
-   device.**
+      Converting files to simpler formats (e.g., PDF to PNG) can help reduce the risk of malware. Tails provides both graphical and command-line utilities that can be used for this purpose.
+4. **Never scan QR codes embedded in documents using a network-connected device.**
 
-   QR codes can contain malicious links that your device will automatically
-   visit. This can alert third-parties to your actions, reveal the identities
-   of your Sources, and breach the isolation benefits of using Qubes.
+   QR codes can contain malicious links that your device will automatically visit. This can alert third-parties to your actions, reveal the identities of your Sources, and breach the isolation benefits of using Qubes.
 
-   In general, be careful when opening any links provided in a SecureDrop
-   submission. If you are unsure if a link is safe to click, you should
-   consult internally, or contact Freedom of the Press Foundation for
-   assistance.
-5. **Don't photograph submissions using your smartphone, and be careful with all
-   digital photography**.
+   In general, be careful when opening any links provided in a SecureDrop submission. If you are unsure if a link is safe to click, you should consult internally, or contact Freedom of the Press Foundation for assistance.
+5. **Don't photograph submissions using your smartphone, and be careful with all digital photography**.
 
-   Many smartphones are configured to back up photographs to cloud services,
-   immediately or intermittently; newer digital cameras have similar
-   functionality. Not all backup settings may be visible to you.
+   Many smartphones are configured to back up photographs to cloud services, immediately or intermittently; newer digital cameras have similar functionality. Not all backup settings may be visible to you.
 
-   Any digital photograph will include certain metadata by default, which may
-   reveal sensitive information about your SecureDrop usage patterns
-   (potentially including GPS coordinates) to anyone who gains access
-   to the file.
+   Any digital photograph will include certain metadata by default, which may reveal sensitive information about your SecureDrop usage patterns (potentially including GPS coordinates) to anyone who gains access to the file.
 
 Fully mitigating the risks of malware received via SecureDrop is beyond the scope of this documentation. If you have questions, you can :doc:`contact us </introduction/getting_support>`. Please do **NOT** disclose details about the contents of any submission you have received.
 

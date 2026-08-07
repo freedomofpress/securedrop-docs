@@ -28,9 +28,7 @@ For passwordless access without warnings, you can protect the database using a k
 
 After configuring the password database, restart KeePassXC once to verify that you are able to access it as expected.
 
-.. warning:: You will not be able to access your passwords if you
-         forget the full disk encryption or the location of the key
-         file used to protect the database.
+.. warning:: You will not be able to access your passwords if you forget the full disk encryption or the location of the key file used to protect the database.
 
 .. |KeePassXC| image:: ../../images/keepassxc.png
 

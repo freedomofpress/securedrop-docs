@@ -18,8 +18,7 @@ Click "Start updates" if you are ready to start the process. (If you prefer to s
 
 |screenshot_apply_updates|
 
-.. important:: Allow the update process to complete fully, without closing or
-   interrupting it, or you risk breaking important system components.
+.. important:: Allow the update process to complete fully, without closing or interrupting it, or you risk breaking important system components.
 
 At the end of this process, you may be prompted you to reboot if core system components were updated. Once all steps in the update process have been completed, SecureDrop Inbox will launch automatically.
 
@@ -53,9 +52,7 @@ Because SecureDrop allows you to download and decrypt submissions on one machine
 
 |screenshot_offline_mode|
 
-.. important:: Protecting downloaded submissions is another reason why
-   The SecureDrop Workstation needs to be powered off completely when it is not in
-   use.
+.. important:: Protecting downloaded submissions is another reason why the SecureDrop Workstation needs to be powered off completely when it is not in use.
 
 .. |screenshot_desktop-shortcut| image:: ../images/screenshot_desktop-shortcut.png
 

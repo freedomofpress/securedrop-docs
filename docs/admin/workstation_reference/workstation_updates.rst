@@ -25,15 +25,9 @@ Troubleshooting updates
 If updates fail for any reason, SecureDrop Inbox will not launch until the underlying issue has been resolved. This is to ensure that the system is in a secure state before you interact with SecureDrop.
 
 .. figure:: images/preflight_update_failed.png
-   :alt: A screenshot of the preflight update window,
-         displaying a failed update error message. The
-         title reads "Security updates failed", and the
-         message instructs the user to contact the Administrator
-         to correct the error. SecureDrop Inbox cannot
-         be started until the error is corrected.
+   :alt: A screenshot of the preflight update window, displaying a failed update error message. The title reads "Security updates failed", and the message instructs the user to contact the Administrator to correct the error. SecureDrop Inbox cannot be started until the error is corrected.
 
-   The error displayed when the preflight updater
-   does not successfully complete the update.
+   The error displayed when the preflight updater does not successfully complete the update.
 
 Below are some troubleshooting steps for common update issues.
 
@@ -248,13 +242,8 @@ your system is trying to use an old copy of the SecureDrop Release Signing Key. 
       sudo apt update
       sudo apt upgrade
 
-   The SecureDrop and Whonix templates are based on Debian
-   GNU/Linux. The ``apt update`` comand will ensure the package
-   index is up-to-date, and the ``apt upgrade`` comand will
-   apply updates.
-3. Follow the prompts to resolve any issues. If you are
-   unsure on how to resolve an error, please contact us
-   for assistance.
+   The SecureDrop and Whonix templates are based on Debian GNU/Linux. The ``apt update`` comand will ensure the package index is up-to-date, and the ``apt upgrade`` command will apply updates.
+3. Follow the prompts to resolve any issues. If you are unsure on how to resolve an error, please contact us for assistance.
 
 ``fedora-42-xfce`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -275,15 +264,12 @@ If this does not resolve the issue:
 1. Locate the ``updater-detail.log`` file in the same directory as the ``updater.log`` file. This file contains more detailed information about the ``apply_dom0`` step.
 
    Like the ``updater.log`` file, this file is rotated hourly.
-2. Copy this file to a networked qube by using the ``qvm-copy-to-vm``
-   command. For example, to copy the file to the ``work`` qube:
+2. Copy this file to a networked qube by using the ``qvm-copy-to-vm`` command. For example, to copy the file to the ``work`` qube:
 
    ``qvm-copy-to-vm work ~/.securedrop_updater/logs/updater-detail.log``
-3. The file can now be found in ``~/QubesIncoming/dom0/`` in the
-   ``work`` qube.
+3. The file can now be found in ``~/QubesIncoming/dom0/`` in the ``work`` qube.
 
-   Send us the file through a secure channel, such as via Signal.
-   We will provide further instructions.
+   Send us the file through a secure channel, such as via Signal. We will provide further instructions.
 
 Step 4: Restart the updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

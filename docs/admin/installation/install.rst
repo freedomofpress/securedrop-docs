@@ -23,8 +23,7 @@ Open a terminal in ``sd-admin`` and verify that you can SSH into both servers, a
     $ ssh <username>@<Monitor IP address> hostname
     mon
 
-.. tip:: If you cannot connect, check the network firewall logs for
-         clues.
+.. tip:: If you cannot connect, check the network firewall logs for clues.
 
 Set up SSH keys
 ---------------
@@ -93,10 +92,7 @@ https://github.com/freedomofpress/securedrop/blob/develop/securedrop/i18n.rst
 
 During the installation you will be given the opportunity to choose from a list of supported languages to display using the codes shown in parentheses.
 
-.. note:: With a Source Interface displayed in French (for example), Sources
-          submitting documents are likely to expect a Journalist fluent in
-          French to be available to read the documents and follow up in that
-          language.
+.. note:: With a Source Interface displayed in French (for example), Sources submitting documents are likely to expect a Journalist fluent in French to be available to read the documents and follow up in that language.
 
 OSSEC alerts public key
 -----------------------
@@ -109,16 +105,11 @@ Download your key and import it into the local keyring: ::
 
     gpg --recv-key "<fingerprint>"
 
-.. note:: It is important you type this out correctly. If you are not
-          copy-pasting this command, we recommend you double-check you have
-          entered it correctly before pressing enter.
+.. note:: It is important you type this out correctly. If you are not copy-pasting this command, we recommend you double-check you have entered it correctly before pressing enter.
 
 Again, when passing the full public key fingerprint to the ``--recv-key`` command, GPG will implicitly verify that the fingerprint of the key received matches the argument passed.
 
-.. caution:: If GPG warns you that the fingerprint of the key received
-             does not match the one requested **do not** proceed with
-             the installation. If this happens, please email us at
-             securedrop@freedom.press.
+.. caution:: If GPG warns you that the fingerprint of the key received does not match the one requested **do not** proceed with the installation. If this happens, please email us at securedrop@freedom.press.
 
 Next we export the key to a local file. ::
 
@@ -190,9 +181,7 @@ If any errors occur while running the install, carefully inspect the error outpu
 
 If needed, make edits to the file located at ``~/.config/securedrop-admin/site-specific`` as described :ref:`above<ansible-site-specific>`. If you continue to have issues, please submit a detailed issue notice on `GitHub <https://github.com/freedomofpress/securedrop/issues/new>`__ or send an email to securedrop@freedom.press.
 
-.. note:: The SecureDrop install process configures a custom Linux
-          kernel hardened with the grsecurity patch set. Only binary
-          images are hosted in the apt repo. For source packages, see
+.. note:: The SecureDrop install process configures a custom Linux kernel hardened with the grsecurity patch set. Only binary images are hosted in the apt repo. For source packages, see
           the `Source Offer`_.
 
 .. _`Source Offer`: https://github.com/freedomofpress/securedrop/blob/develop/SOURCE_OFFER
@@ -208,9 +197,6 @@ V3 Onion Services
 - ``mon-ssh.auth_private`` contains the onion address and private key providing SSH access to the Monitor Server.
 - ``tor_v3_keys.json`` contains the keypairs required for access to the Admin Interface and SSH access to the servers - it is required for future runs of ``securedrop-admin install``.
 
-.. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file
-             contain secret keys that should not be shared with third parties,
-             or copied from the Admin Workstation for any purpose other than
-             tasks such as performing backups or onboarding new users.
+.. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file contain secret keys that should not be shared with third parties, or copied from the Admin Workstation for any purpose other than tasks such as performing backups or onboarding new users.
 
 The dynamic inventory file will automatically read the onion addresses from the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to connect to the servers over SSH during subsequent playbook runs.

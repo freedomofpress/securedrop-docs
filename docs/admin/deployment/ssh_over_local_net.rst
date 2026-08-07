@@ -19,21 +19,11 @@ That being said, the default setting of only allowing SSH over Tor is a good fit
 Configuring SSH for local access
 --------------------------------
 
-.. warning:: It is important that your firewall is configured adequately if you
-          decide you need SSH over the local network. The install process locks
-          down access as much as possible with net restrictions, SSH keys, and
-          two-factor authentication. However, you could still leave the interface
-          exposed to unintended users if you did not properly follow our network
-          firewall guide.
+.. warning:: It is important that your firewall is configured adequately if you decide you need SSH over the local network. The install process locks down access as much as possible with net restrictions, SSH keys, and two-factor authentication. However, you could still leave the interface exposed to unintended users if you did not properly follow our network firewall guide.
 
-.. warning:: This setting will lock you out of SSH access to your instance if your
-          Admin Workstation passes through a NAT in order to get to the
-          SecureDrop servers. If you are unsure whether this is the case, please
-          consult your firewall configuration or network administrator.
+.. warning:: This setting will lock you out of SSH access to your instance if your Admin Workstation passes through a NAT in order to get to the SecureDrop servers. If you are unsure whether this is the case, please consult your firewall configuration or network administrator.
 
-.. note:: Whichever network you install from will be the one that SSH is
-          restricted to post-install. This will come into play particularly if
-          you have multiple network interfaces.
+.. note:: Whichever network you install from will be the one that SSH is restricted to post-install. This will come into play particularly if you have multiple network interfaces.
 
 First, make sure your local SecureDrop environment is up-to-date and on the latest production release.
 
@@ -62,10 +52,7 @@ Then you'll have to run the installation script:
 
     securedrop-admin install
 
-.. note:: If you are migrating from a production install previously configured
-          with SSH over Tor, you will be prompted to re-run the ``install`` portion
-          twice. This is due to the behind the scenes configuration changes being
-          done to switch between Tor and the local network.
+.. note:: If you are migrating from a production install previously configured with SSH over Tor, you will be prompted to re-run the ``install`` portion twice. This is due to the behind the scenes configuration changes being done to switch between Tor and the local network.
 
 Finally, re-configure your Admin Workstation as follows:
 

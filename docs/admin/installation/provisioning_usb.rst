@@ -6,8 +6,7 @@ SecureDrop Workstation supports the export of submissions from the :ref:`SecureD
 Creating a LUKS-encrypted drive
 -------------------------------
 
-.. note:: LUKS-encrypted drives can only be used with Linux-based
-  systems such as Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
+.. note:: LUKS-encrypted drives can only be used with Linux-based systems such as Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
 
 In order to provision a LUKS-encrypted Export Device, you will need a fresh USB flash drive and a SecureDrop Workstation.
 
@@ -17,8 +16,7 @@ In order to provision a LUKS-encrypted Export Device, you will need a fresh USB 
 - Next, open the Disks utility: **Applications ▸ Utilities ▸ Disks**.
 - Connect the fresh USB flash drive and select it in the list in the left-hand panel.
 
-.. warning:: The formatting operation will wipe any data on an existing partition.
-  Make sure that you select the correct device!
+.. warning:: The formatting operation will wipe any data on an existing partition. Make sure that you select the correct device!
 
 - Click the interlocking gear icon under the drive volumes schematic in the right-hand panel and choose **Format Partition...**.
 - Select the following options in the Format Volume dialog:
@@ -50,8 +48,7 @@ Creating a VeraCrypt-encrypted drive
   - You may see a warning that says "We strongly recommend that inexperienced users create a VeraCrypt file container on the selected device/partition, instead of attempting to encrypt the entire device/partition." We disagree with this recommendation, so click **Yes**.
   - Click **Next** to advance.
 
-.. warning:: The formatting operation will wipe any data on an existing partition.
-  Make sure that you select the correct device!
+.. warning:: The formatting operation will wipe any data on an existing partition. Make sure that you select the correct device!
 
 - You will be prompted to set a password. This password should be strong - a 6-word `Diceware <https://en.wikipedia.org/wiki/Diceware>`_ passphrase is highly recommended.
 - You will be asked if you need to store large files, select **No** and click **Next**.

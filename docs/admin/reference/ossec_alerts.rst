@@ -12,7 +12,10 @@ OSSEC alerts will range from a severity level of 1 (lowest) to 14 (highest), and
 Common OSSEC alerts
 ~~~~~~~~~~~~~~~~~~~
 
-Package updates ^^^^^^^^^^^^^^^ The SecureDrop Application and Monitor Servers check for package updates every day. As updates are automatically installed, OSSEC will notice and send out alerts. You may see any number of these alerts in the email, as several alerts can be batched in a single email. You should also see them in an email named ``Daily Report: File Changes``. To verify this activity matches the package history, you can review the logs in ``/var/log/apt/history.log``. ::
+Package updates
+^^^^^^^^^^^^^^^
+
+The SecureDrop Application and Monitor Servers check for package updates every day. As updates are automatically installed, OSSEC will notice and send out alerts. You may see any number of these alerts in the email, as several alerts can be batched in a single email. You should also see them in an email named ``Daily Report: File Changes``. To verify this activity matches the package history, you can review the logs in ``/var/log/apt/history.log``. ::
 
     Received From: (app)
     Rule: 2902 fired (level 7) -> "New dpkg (Debian Package) installed."
@@ -50,7 +53,6 @@ This alert is common but if you see them for sustained periods of time (several 
 
 Daily reports
 ^^^^^^^^^^^^^
-
 On days where file integrity checksums have changed or users have logged into ``app`` or ``mon`` servers, you will receive emails entitled ``Daily report: File changes`` or ``Daily report: Successful logins``. These emails may be a more convenient format should you not have continuous access to the inbox or GPG key.
 
 **Action**: periodically review these daily reports to ensure file changes correspond to platform updates and logins correspond to authorized admin activity on the SecureDrop servers.
@@ -73,7 +75,9 @@ SecureDrop runs automatic checks for submission data integrity problems. For exa
 
 To resolve the issue, you can :ref:`clean them up <submission-cleanup>`.
 
-Instance misconfigurations ^^^^^^^^^^^^^^^^^^^^^^^^^^ In addition, SecureDrop performs a small set of daily configuration checks to ensure that the iptables rules configured on the Application and Monitor Server match the expected configuration. If they do not, you may receive a level 12 alert like the following: ::
+Instance misconfigurations
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+In addition, SecureDrop performs a small set of daily configuration checks to ensure that the iptables rules configured on the Application and Monitor Server match the expected configuration. If they do not, you may receive a level 12 alert like the following: ::
 
     Received From: (app) 10.20.2.2->/var/ossec/checksdconfig.py
     Rule: 400900 fired (level 12) ->
@@ -84,7 +88,10 @@ Instance misconfigurations ^^^^^^^^^^^^^^^^^^^^^^^^^^ In addition, SecureDrop pe
 
 Alternatively, the error text may say: ``The iptables rules have not been configured.`` To resolve the issue, you can reinstate the standard iptables rules by :ref:`updating the system configuration <update-system-configuration>`.
 
-``securedrop-admin`` commands ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ OSSEC will send an alert when the `securedrop-admin` tool is used to backup, restore, or change the system configuration: ::
+``securedrop-admin`` commands
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+OSSEC will send an alert when the `securedrop-admin` tool is used to backup, restore, or change the system configuration: ::
 
     Rule: 400001 fired (level 13) -> "Ansible playbook run on server (securedrop-admin install, backup, or restore)."
 

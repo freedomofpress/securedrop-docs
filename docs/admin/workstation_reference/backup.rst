@@ -39,8 +39,7 @@ Back up a SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
-  Backups contain sensitive data, and must be created and stored just as securely
-  as SecureDrop Workstation itself.
+  Backups contain sensitive data, and must be created and stored just as securely as SecureDrop Workstation itself.
 
   If performing this backup as part of a migration (from one machine to another or from one version of Qubes OS to another), we suggest you retain the backup only during the migration process, and destroy it after the migration is complete. The easiest way to do this is to create a LUKS-encrypted drive, follow this guide to create your backup, and then wipe (reformat) or destroy the drive after you have successfully restored it onto the new machine, which should ideally happen the same day. In all cases, follow your organization's internal policies on handling sensitive assets and information.
 
@@ -65,20 +64,14 @@ Click "Next", and in "Backup destination," specify the qube and directory corres
 Set a strong, unique backup passphrase (7-word diceware), and ensure this passphrase is stored securely outside SecureDrop Workstation.
 
 .. note::
- This passphrase protects sensitive components of your SecureDrop instance,
- including the Submission Private Key, and unencrypted submissions (if
- ``sd-app`` is backed up). Ensure it is a very strong password and is
- stored securely.
+ This passphrase protects sensitive components of your SecureDrop instance, including the Submission Private Key, and unencrypted submissions (if ``sd-app`` is backed up). Ensure it is a very strong password and is stored securely.
 
 Uncheck "save backup profile," then proceed with the backup.
 
 Qubes OS recommends verifying the integrity of the backup once the backup completes, and this should be done on the same machine where the backup was created. This can be done by using the Restore Backup GUI tool and selecting "Verify backup integrity, but do not restore the data." For details, see the `Qubes OS backup documentation <https://www.qubes-os.org/doc/backup-restore/>`_.
 
 .. warning::
-  Any files or data not mentioned above and not backed up elsewhere will be destroyed.
-  Ensure that any other data on your system (for example, using KeepassXC
-  in the ``vault`` qube, or data stored in other qubes) have been backed up and the
-  integrity of the backup has been verified before proceeding.
+  Any files or data not mentioned above and not backed up elsewhere will be destroyed. Ensure that any other data on your system (for example, using KeepassXC in the ``vault`` qube, or data stored in other qubes) have been backed up and the integrity of the backup has been verified before proceeding.
 
 Restore
 -------
@@ -93,9 +86,7 @@ Rename or delete redundant app qubes
 
 By default, Qubes OS will create the app qubes ``personal``, ``work``, ``untrusted`` and ``vault`` as part of the installation process. Rename or delete any of these newly created app qubes whose names conflict with the app qubes you intend to restore from a backup.
 
-Example: If you wish to restore the ``vault`` qube, rename or delete the existing
-``vault`` qube prior to restoring the backup. You can do so in
-|qubes_menu| **▸ Apps ▸ vault ▸ Settings** (the qube must not be running).
+Example: If you wish to restore the ``vault`` qube, rename or delete the existing ``vault`` qube prior to restoring the backup. You can do so in |qubes_menu| **▸ Apps ▸ vault ▸ Settings** (the qube must not be running).
 
 Restore backup (SecureDrop Workstation components)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -107,13 +98,7 @@ Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Restore
 We suggest restoring only those qubes, provisioning SecureDrop Workstation, and then restoring any customized qubes you may have had once that process is complete. This way SecureDrop Workstation is provisioned on a clean system and can implement the security measures it requires before any additional qubes are configured.
 
 .. note::
-  When migrating to a newer version of Qubes OS (for example, Qubes 4.1 to Qubes 4.2),
-  you may notice that the original templates for certain qubes are not present on your
-  new machine. For the purposes of this guide (optional ``sd-app`` backup),
-  this is not a problem. Allow the qube to be restored with the default template
-  suggested by the operating system (the current Fedora base template). **Do not start
-  the qube.** Continue through the reinstallation process. The correct template will be
-  configured as you follow the rest of these instructions.
+  When migrating to a newer version of Qubes OS (for example, Qubes 4.1 to Qubes 4.2), you may notice that the original templates for certain qubes are not present on your new machine. For the purposes of this guide (optional ``sd-app`` backup), this is not a problem. Allow the qube to be restored with the default template suggested by the operating system (the current Fedora base template). **Do not start the qube.** Continue through the reinstallation process. The correct template will be configured as you follow the rest of these instructions.
 
   If you are restoring your own customized qubes and templates, you will need to take additional steps. You may decide to create new templates for your custom qubes and provision them with the necessary applications/customizations (recommended), or you may upgrade your existing templates following the upstream documentation (`Fedora templates <https://www.qubes-os.org/doc/templates/fedora/#upgrading>`_, `Debian templates <https://www.qubes-os.org/doc/templates/debian/#upgrading>`_), then upgrade their package repositories to the Qubes 4.2 repositories using:
 

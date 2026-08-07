@@ -7,10 +7,7 @@ When a document or message is submitted to SecureDrop by a Source, it is automat
 
 We will now generate the Submission Key. If you aren't still logged into your Secure Viewing Station from the previous step, boot it using its Tails USB flash drive, with persistence enabled.
 
-.. important:: The private key you will generate in the following steps is one of the most
-  important secrets associated with your SecureDrop installation. This procedure
-  is intended to ensure that the private key is protected by the air-gap
-  throughout its lifetime.
+.. important:: The private key you will generate in the following steps is one of the most important secrets associated with your SecureDrop installation. This procedure is intended to ensure that the private key is protected by the air-gap throughout its lifetime.
 
 Create the key
 --------------
@@ -56,8 +53,7 @@ After exporting the public key, you will be returned back to the list of keys. Y
 
 |Fingerprint|
 
-.. note:: Your fingerprint will be different from the one in the example
-          screenshot.
+.. note:: Your fingerprint will be different from the one in the example screenshot.
 
 At this point, you are done with the Secure Viewing Station for now. You can shut down Tails, grab the Admin Workstation USB flash drive, and move over to your regular workstation.
 

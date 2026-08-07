@@ -16,29 +16,22 @@ SecureDrop and SecureDrop Workstation are open source projects of `Freedom of th
 Our work would not be possible without the larger open source community. Below are some of the key projects that make SecureDrop possible, and which we encourage you to support.
 
 `Tor <https://www.torproject.org/>`_
-   Provides the foundation for the anonymizing network that allows Sources,
-   Journalists, and Administrators to maintain their privacy while connecting
-   to SecureDrop.
+   Provides the foundation for the anonymizing network that allows Sources, Journalists, and Administrators to maintain their privacy while connecting to SecureDrop.
 
 `Qubes OS <https://www.qubes-os.org>`_
-   The backbone of SecureDrop Workstation. FPF has directly sponsored Qubes OS
-   development; consider `donating to Qubes OS <https://www.qubes-os.org/donate/>`_.
+   The backbone of SecureDrop Workstation. FPF has directly sponsored Qubes OS development; consider `donating to Qubes OS <https://www.qubes-os.org/donate/>`_.
 
 `Weblate <https://weblate.org/>`_
-   Enables our volunteer community to translate SecureDrop into many languages.
-   You can `donate to support Weblate development <https://weblate.org/en/donate/>`_.
+   Enables our volunteer community to translate SecureDrop into many languages. You can `donate to support Weblate development <https://weblate.org/en/donate/>`_.
 
 `Localization Lab <https://www.localizationlab.org/>`_
-   Supports the translation of SecureDrop into many languages. Consider
-   `donating to their work <https://www.localizationlab.org/donate>`_.
+   Supports the translation of SecureDrop into many languages. Consider `donating to their work <https://www.localizationlab.org/donate>`_.
 
 `Python <https://www.python.org/>`_
-   A significant amount of SecureDrop is written in the Python programming language. You can support it by
-   `donating to the Python Software Foundation <https://www.python.org/psf/donations/>`_.
+   A significant amount of SecureDrop is written in the Python programming language. You can support it by `donating to the Python Software Foundation <https://www.python.org/psf/donations/>`_.
 
 `Debian <https://www.debian.org/>`_ and `Fedora <https://fedoraproject.org/>`_
-   Power SecureDrop Workstation's virtual machines; both rely on volunteer contributions and
-   financial support.
+   Power SecureDrop Workstation's virtual machines; both rely on volunteer contributions and financial support.
 
 `GNOME <https://www.gnome.org/>`_
    Acts as an umbrella for many of the individual software components we rely on.

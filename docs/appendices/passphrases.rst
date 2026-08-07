@@ -62,22 +62,14 @@ All SecureDrop users---Sources, Journalists, and Administrators---are required t
 #. **Do** memorize your passphrase.
 #. If necessary, **do** write your passphrase down temporarily while you memorize it.
 
-   .. caution:: **Do** store your written passphrase in a safe place, such as a
-                safe at home or on a piece of paper in your wallet. **Do**
-                destroy the paper as soon as you feel comfortable that you have
-                the passphrase memorized. **Do not** store your passphrase on
-                any digital device, such as your computer or mobile phone.
-#. **Do** review your passphrase regularly. It's easy to forget a long or
-   complex passphrase if you only use it infrequently.
+   .. caution:: **Do** store your written passphrase in a safe place, such as a safe at home or on a piece of paper in your wallet. **Do** destroy the paper as soon as you feel comfortable that you have
+                the passphrase memorized. **Do not** store your passphrase on any digital device, such as your computer or mobile phone.
+#. **Do** review your passphrase regularly. It's easy to forget a long or complex passphrase if you only use it infrequently.
 
-   .. tip:: We recommend reviewing your passphrase (e.g. by ensuring that you
-            can log in to your SecureDrop account) on at least a monthly basis.
+   .. tip:: We recommend reviewing your passphrase (e.g. by ensuring that you can log in to your SecureDrop account) on at least a monthly basis.
 #. **Do not** use your passphrase anywhere else.
 
-   If you use your SecureDrop passphrase on another system, a compromise of that
-   system could theoretically be used to compromise SecureDrop. You should avoid
-   reusing passphrases in general, but it is especially important to avoid doing
-   so in the context of SecureDrop.
+   If you use your SecureDrop passphrase on another system, a compromise of that system could theoretically be used to compromise SecureDrop. You should avoid reusing passphrases in general, but it is especially important to avoid doing so in the context of SecureDrop.
 
 How to generate a strong, unique passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -89,7 +81,6 @@ Using KeePassXC to generate a passphrase
 
 To create a random passphrase using KeePassXC, launch the application, then click the **dice icon**. Then click the **Passphrase** tab and set the **Word Count** to 7. You can optionally set a **Word Separator**, for example a space or hyphen.
 
-|screenshot of KeePassXC passphrase generation feature, showing a
-randomly generated 7-word passphrase|
+|screenshot of KeePassXC passphrase generation feature, showing a randomly generated 7-word passphrase|
 
 .. |screenshot of KeePassXC passphrase generation feature, showing a randomly generated 7-word passphrase| image:: ../images/screenshots/keepassxc-diceware.png

@@ -63,10 +63,7 @@ NUCs typically come as kits, and some assembly is required. You will need to pur
 
 There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`__ to choose from. We currently recommend the 11th through 14th generation NUC models. See our :ref:`hardware recommendations list <hardware_recommendations_servers>` for details on specific models.
 
-.. note:: No matter what equipment you use, ensure you remove as much
-    extraneous hardware as physically possible from your servers. This
-    could include: speakers, cameras, microphones, fingerprint readers,
-    wireless, and Bluetooth cards.
+.. note:: No matter what equipment you use, ensure you remove as much extraneous hardware as physically possible from your servers. This could include: speakers, cameras, microphones, fingerprint readers, wireless, and Bluetooth cards.
 
 Workstations
 ^^^^^^^^^^^^

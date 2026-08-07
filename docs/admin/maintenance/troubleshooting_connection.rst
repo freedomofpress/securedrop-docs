@@ -28,10 +28,7 @@ Common causes for lost connections include fully or partly unplugged network cab
 
 .. important::
 
-   Not all qubes in Qubes OS have Internet access. For example, opening a terminal via
-   |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal** opens a ``dom0``
-   terminal without Internet access. See our :ref:`networking architecture <Networking Architecture>`
-   overview for additional background.
+   Not all qubes in Qubes OS have Internet access. For example, opening a terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal** opens a ``dom0`` terminal without Internet access. See our :ref:`networking architecture <Networking Architecture>` overview for additional background.
 
 If the network manager shows that you are connected to the Internet, you can verify whether your connection is working by opening a terminal in ``sys-net``:
 

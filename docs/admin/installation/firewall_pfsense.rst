@@ -59,20 +59,13 @@ Connect to the pfSense web GUI
 
    |Wired Connected|
 
-   .. warning:: Make sure your *only* active connection is the one you
-      just established with the network firewall. If you are
-      connected to another network at the same time (e.g. a
-      wireless network), you may encounter problems trying
-      to connect the pfSense WebGUI.
+   .. warning:: Make sure your *only* active connection is the one you just established with the network firewall. If you are connected to another network at the same time (e.g. a wireless network), you may encounter problems trying to connect the pfSense WebGUI.
 
 #. Launch the Unsafe Browser from the menu bar: **Apps ▸ Internet ▸ Unsafe Browser**.
 
    |Launching the Unsafe Browser|
 
-   .. note:: The Unsafe Browser is, as the name suggests, **unsafe**
-        (its traffic is not routed through Tor). However, it is
-        the only option because Tails `intentionally disables LAN
-        access`_ in the **Tor Browser**.
+   .. note:: The Unsafe Browser is, as the name suggests, **unsafe** (its traffic is not routed through Tor). However, it is the only option because Tails `intentionally disables LAN access`_ in the **Tor Browser**.
 
 #. You will see a pop-up notification that says "Starting the Unsafe Browser..."
 
@@ -84,12 +77,7 @@ Connect to the pfSense web GUI
 
 #. Navigate to the pfSense WebGUI in the Unsafe Browser: ``https://192.168.1.1``
 
-   .. note:: If you have trouble connecting, go to your network settings and
-      make sure that you have an IPv4 address in the ``192.168.1.1/24`` range.
-      You may need to turn on DHCP, else you can manually configure a static
-      IPv4 address of ``192.168.1.x`` with a subnet mask of ``255.255.255.0``.
-      However, make sure not to configure your Tails device to have the same IP
-      as the firewall (``192.168.1.1``).
+   .. note:: If you have trouble connecting, go to your network settings and make sure that you have an IPv4 address in the ``192.168.1.1/24`` range. You may need to turn on DHCP, else you can manually configure a static IPv4 address of ``192.168.1.x`` with a subnet mask of ``255.255.255.0``. However, make sure not to configure your Tails device to have the same IP as the firewall (``192.168.1.1``).
 
 #. The firewall uses a self-signed certificate, so you will see a "Potential Security Risk Ahead" warning when you connect. This is expected. You can safely continue by clicking **Advanced**, then **Accept the Risk and Continue**.
 
@@ -108,11 +96,7 @@ Before you can set up the hardware firewall, you will need to set the **Alternat
 
 |Alternate Hostnames|
 
-.. note:: If you are using a different IP for the Admin Gateway you should
- enter that IP in the Alternate Hostname field. Failure to do so will result in
- an error with the text "An HTTP_REFERER was detected other than what is
- defined in System -> Advanced". If you see this error you may have to do
- a factory reset of the firewall via the serial console.
+.. note:: If you are using a different IP for the Admin Gateway you should enter that IP in the Alternate Hostname field. Failure to do so will result in an error with the text "An HTTP_REFERER was detected other than what is defined in System -> Advanced". If you see this error you may have to do a factory reset of the firewall via the serial console.
 
 Setup Wizard
 ~~~~~~~~~~~~
@@ -179,14 +163,7 @@ From here you can click on the cog beside the wired network connection:
 
 This will take you to the network settings. Change to the **IPv4** tab. Ensure that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for **DNS** is in the "off" position, as highlighted in the screenshot below:
 
-.. note:: The Unsafe Browser will not launch when using a manual
-	  network configuration if it does not have DNS servers
-	  configured. This is technically unnecessary for our use case
-	  because we are only using it to access IP addresses on the
-	  LAN, and do not need to resolve anything with
-	  DNS. Nonetheless, you should configure some DNS servers here
-	  so you can continue to use the Unsafe Browser to access the
-	  WebGUI in future sessions.
+.. note:: The Unsafe Browser will not launch when using a manual network configuration if it does not have DNS servers configured. This is technically unnecessary for our use case because we are only using it to access IP addresses on the LAN, and do not need to resolve anything with DNS. Nonetheless, you should configure some DNS servers here so you can continue to use the Unsafe Browser to access the WebGUI in future sessions.
 
 	  We recommend keeping it simple and using the same DNS servers that you used for the network firewall in the setup wizard.
 
@@ -290,8 +267,7 @@ Your configuration should match this screenshot:
 
 Next we will configure firewall rules for each interface. Navigate to **Firewall ▸ Rules** to add firewall rules for the LAN1, LAN2, and LAN3 interfaces.
 
-.. warning:: Be sure not to delete the Anti-Lockout Rule on the LAN1 interface.
-    Deleting this rule will lock you out of the pfSense WebGUI.
+.. warning:: Be sure not to delete the Anti-Lockout Rule on the LAN1 interface. Deleting this rule will lock you out of the pfSense WebGUI.
 
 Add or remove rules until they match the following screenshots by clicking **Add** to add a rule.
 

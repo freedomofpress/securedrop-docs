@@ -15,9 +15,7 @@ By default, you will be logged in to the Admin Interface's source list page.
 In the course of normal administration operations you should not need to view messages from Sources, but if you do, you can find information on managing submissions in the :doc:`journalist guide <../../journalist/journalist>`.
 
 .. note::
-  If you have lost your login information or your two-factor authentication is no longer
-  valid, you can create another account with admin privileges via the command line
-  on the Application Server. See :ref:`here <Create Admin CLI>` for more information.
+  If you have lost your login information or your two-factor authentication is no longer valid, you can create another account with admin privileges via the command line on the Application Server. See :ref:`here <Create Admin CLI>` for more information.
 
 .. _User Management:
 
@@ -49,8 +47,7 @@ After logging in, you can add new user accounts for the Journalists at your orga
 #. Finally, set up two-factor authentication for the account, following one of the two procedures below for your chosen method.
 
 .. note::
-   The username **deleted** is reserved, as it is used to mark accounts which
-   have been deleted from the system.
+   The username **deleted** is reserved, as it is used to mark accounts which have been deleted from the system.
 
 .. |SecureDrop admin home| image:: ../../images/manual/screenshots/journalist-admin_interface_index.png
    :alt: The Admin Interface displays an 'Add User' button.
@@ -100,12 +97,7 @@ The Journalist will require their username, passphrase, and two-factor authentic
 Passphrases and two-factor authentication resets
 --------------------------------------------------
 
-.. warning:: Both of these operations will lock a user out of their
-   SecureDrop account. Users should be physically present when their passphrase
-   or two-factor authentication method is reset. If this is not possible, store
-   the passphrase and/or two-factor authentication secret in your own password
-   manager before securely transmitting them to the user in question, and delete
-   them once the user has confirmed they can successfully log in.
+.. warning:: Both of these operations will lock a user out of their SecureDrop account. Users should be physically present when their passphrase or two-factor authentication method is reset. If this is not possible, store the passphrase and/or two-factor authentication secret in your own password manager before securely transmitting them to the user in question, and delete them once the user has confirmed they can successfully log in.
 
 Even while following :ref:`passphrase best practices <passphrase_best_practices>`, your Journalists may occasionally lock themselves out of their accounts. This can happen if, for example, they lose their two-factor device or if they forget the passphrase to their password manager. When this happens, you can reset their account as follows:
 

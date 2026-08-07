@@ -129,8 +129,7 @@ Monitoring OSSEC alerts
 
 SecureDrop uses OSSEC to monitor the servers for unusual activity caused by system configuration issues or security breaches. The Administrator should decrypt and read all OSSEC alerts. Report any suspicious events to FPF through the `SecureDrop Support Portal`_. See the :doc:`OSSEC Guide </admin/reference/ossec_alerts>` for more information on common OSSEC alerts.
 
-.. warning:: Do not post logs or alerts to public forums without first carefully
-         examining and redacting any sensitive information.
+.. warning:: Do not post logs or alerts to public forums without first carefully examining and redacting any sensitive information.
 
 .. _`OSSEC`: https://www.ossec.net/
 .. _`SecureDrop Support Portal`: https://support-docs.securedrop.org/

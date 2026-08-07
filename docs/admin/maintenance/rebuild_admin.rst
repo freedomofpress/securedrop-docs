@@ -55,8 +55,6 @@ Once the root prompt appears, you'll need to reset the password for the SecureDr
 
  passwd sdadmin
 
-.. important::
- Make sure to select a strong password, and record it in the Admin Workstation's
 .. important:: Make sure to select a strong password, and record it in the Admin Workstation's KeePassXC database.
 
 Finally, reboot the Monitor Server and verify that you can log in at the console using the new password.
@@ -332,55 +330,16 @@ When the installation completes, run:
 
 Once this command completes:
 
- - verify that the Hostname references in ``~/.ssh/config`` have been updated to refer to onion addresses instead of direct IP addresses
- - verify that you can connect to the servers using ``ssh app`` and ``ssh mon``
- - verify that the *SecureDrop Menu* for the Source and Admin Interfaces works correctly, opening their respective homepages in Tor Browser.
+- verify that the Hostname references in ``~/.ssh/config`` have been updated to refer to onion addresses instead of direct IP addresses
+- verify that you can connect to the servers using ``ssh app`` and ``ssh mon``
+- verify that the *SecureDrop Menu* for the Source and Admin Interfaces works correctly, opening their respective homepages in Tor Browser.
 
 Step 8: Post-rebuild tasks
 ==========================
 
 .. important::
-   Rebuilding an Admin Workstation makes changes that will prevent
-   your other Tails workstations from connecting to your SecureDrop
-   servers.
-   If you rebuild your Admin Workstation, you must also provision
-   all other existing Tails workstation drives updated Tor
-.. important:: Rebuilding an Admin Workstation makes changes that will prevent your other Tails workstations from connecting to your SecureDrop servers.
-
-  If you rebuild your Admin Workstation, you must also provision all other existing Tails workstation drives updated Tor credentials (see below).
-
-We recommend completing the following tasks after the rebuild:
-
- - Set up a new administration account on the Admin Interface, by following :doc:`these instructions <../installation/create_admin_account>`
- - Verify that submissions can be decrypted, by going through the decryption workflow with a new submission.
- - Back up your Admin Workstation.
- - Delete invalid admin accounts in the Admin Interface.
- - Restrict SSH access to the Application and Monitor Servers to valid Admin Workstations. If your new Admin Workstation USB flash drive is the only one that should have SSH access to the servers, you can remove access for any previous Admin Workstations from the terminal, using the commands:
-
-   .. code:: sh
-
-     securedrop-admin reset_admin_access
-
-   You can also selectively remove invalid keys by logging on to the Application
-   and Monitor Servers and editing the file ``~/.ssh/authorized_keys``, making
-   sure not to remove the public key belonging to your new Admin Workstation.
- - :doc:`Back up the Application Server <backup_and_restore>` once SSH-over-Tor has
-   been restored. Ensure that server and workstation backups happen regularly.
- - Provision all other Tails workstation drives (Journalist and/or Admin Workstations)
-   with updated Tor credentials, so that they can access SecureDrop after this rebuild.
-
-   You will need to copy the following file(s) to all other Admin and
-   SecureDrop Workstations, replacing the existing files of the same name:
-
-   .. code:: sh
-
-    ~/.config/securedrop-admin/app-journalist.auth_private
-    ~/.config/securedrop-admin/tor-v3-keys.json # for Admin Workstations only
-
-   You may copy these files using a encrypted USB flash drive (which must be wiped afterwards),
-   or boot into each of your additional Tails workstations, plug in and unlock your
-   Admin Workstation's encrypted partition via the **Places** app, and manually copy
-   the file(s) from the Admin Workstation to the same directory on the target Tails
+   Rebuilding an Admin Workstation makes changes that will prevent your other Tails workstations from connecting to your SecureDrop servers. If you rebuild your Admin Workstation, you must also provision
+   all other existing Tails workstation drives updated Tor credentials (see below).
 
 We recommend completing the following tasks after the rebuild:
 

@@ -118,9 +118,6 @@ After enabling 2-Step Verification, you'll then need to generate a new app passw
 
 This will provide you with a 16-character password that you will need to use for the SMTP settings to enable OSSEC alerts.
 
-.. tip:: SMTP through Gmail will only work with a generated app password.
-         The password for the Gmail account itself is not sufficient, and will
-         not allow mail to be sent. In order to be able to create an app
-         password, you must have 2-Step Verification enabled on the Gmail account.
+.. tip:: SMTP through Gmail will only work with a generated app password. The password for the Gmail account itself is not sufficient, and will not allow mail to be sent. In order to be able to create an app password, you must have 2-Step Verification enabled on the Gmail account.
 
 Once the account is created you can log out and use the SASL username as your new Gmail username (without the domain), the SASL domain to be either gmail.com or your custom Google Apps domain, and then finally your SASL password when installing SecureDrop on the servers. Remember to use the app password generated from the 2-step config, as the primary account password won't work. The SMTP relay will be smtp.gmail.com and the SMTP relay port is 587.

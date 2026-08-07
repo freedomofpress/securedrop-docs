@@ -54,20 +54,13 @@ Connect to the OPNSense web GUI
 
    |Wired Connected|
 
-   .. warning:: Make sure your *only* active connection is the one you
-      just established with the network firewall. If you are
-      connected to another network at the same time (e.g. a
-      wireless network), you may encounter problems trying
-      to connect the firewall's Web GUI.
+   .. warning:: Make sure your *only* active connection is the one you just established with the network firewall. If you are connected to another network at the same time (e.g. a wireless network), you may encounter problems trying to connect the firewall's Web GUI.
 
 #. Launch the Unsafe Browser from the menu bar: **Apps ▸ Internet ▸ Unsafe Browser**.
 
    |Launching the Unsafe Browser|
 
-   .. note:: The Unsafe Browser is, as the name suggests, **unsafe**
-        (its traffic is not routed through Tor). However, it is
-        the only option because Tails intentionally disables LAN
-        access in the **Tor Browser**.
+   .. note:: The Unsafe Browser is, as the name suggests, **unsafe** (its traffic is not routed through Tor). However, it is the only option because Tails intentionally disables LAN access in the **Tor Browser**.
 
 #. You will see a pop-up notification that says "Starting the Unsafe Browser..."
 
@@ -79,12 +72,7 @@ Connect to the OPNSense web GUI
 
 #. Navigate to the OPNSense Web GUI in the Unsafe Browser: ``https://192.168.1.1``
 
-   .. note:: If you have trouble connecting, go to your network settings and
-      make sure that you have an IPv4 address in the ``192.168.1.1/24`` range.
-      You may need to turn on DHCP, else you can manually configure a static
-      IPv4 address of ``192.168.1.x`` with a subnet mask of ``255.255.255.0``.
-      However, make sure not to configure your Tails device to have the same IP
-      as the firewall (``192.168.1.1``).
+   .. note:: If you have trouble connecting, go to your network settings and make sure that you have an IPv4 address in the ``192.168.1.1/24`` range. You may need to turn on DHCP, else you can manually configure a static IPv4 address of ``192.168.1.x`` with a subnet mask of ``255.255.255.0``. However, make sure not to configure your Tails device to have the same IP as the firewall (``192.168.1.1``).
 
 #. The firewall uses a self-signed certificate, so you will see a "This Connection Is Untrusted" warning when you connect. This is expected. You can safely continue by clicking **Advanced** and **Accept the Risk and Continue**.
 
@@ -170,8 +158,7 @@ Next, in the OPNSense Web GUI, navigate to **System ▸ Access ▸ Servers** and
 
 |OPNSense - auth server|
 
-.. note:: The time on your firewall must be set correctly for 2FA to work properly.
-    This should happen automatically once the WAN connection is established.
+.. note:: The time on your firewall must be set correctly for 2FA to work properly. This should happen automatically once the WAN connection is established.
 
 On the next page, enter ``TOTP Local`` in the **Descriptive name** field and choose ``Local + Timebased One Time Password`` from the **Type** dropdown. Leave the other fields at their default values and click **Save**
 
@@ -194,12 +181,9 @@ To verify that your new password and OTP secret are working, navigate to **Syste
 
 If the test fails, make sure you have used the correct OTP code and password, and edit the ``root`` user record as necessary.
 
-.. note:: You must enter the OTP token and passphrase concatenated as a single
-    string like ``123456PASSWORD`` in the **Password** field.
+.. note:: You must enter the OTP token and passphrase concatenated as a single string like ``123456PASSWORD`` in the **Password** field.
 
-.. warning:: Do not skip this test, or proceed further until it passes, as you
-  will be locked out of the firewall Web GUI and console if the account is not
-  set up correctly!
+.. warning:: Do not skip this test, or proceed further until it passes, as you will be locked out of the firewall Web GUI and console if the account is not set up correctly!
 
 Finally,  navigate to **System ▸ Settings ▸ Administration** and scroll down to the **Authentication** section at the bottom of the page. In the **Server** dropdown, select ``TOTP Local`` and deselect ``Local Database.``. Click **Save**.
 
@@ -232,14 +216,7 @@ From here you can click on the cog beside the wired network connection:
 
 This will take you to the network settings. Change to the **IPv4** tab. Ensure that **IPv4 Method** is set to **Manual**, and that the **Automatic** switch for **DNS** is in the "off" position, as highlighted in the screenshot below:
 
-.. note:: The Unsafe Browser will not launch when using a manual
-	  network configuration if it does not have DNS servers
-	  configured. This is technically unnecessary for our use case
-	  because we are only using it to access IP addresses on the
-	  LAN, and do not need to resolve anything with
-	  DNS. Nonetheless, you should configure some DNS servers here
-	  so you can continue to use the Unsafe Browser to access the
-	  WebGUI in future sessions.
+.. note:: The Unsafe Browser will not launch when using a manual network configuration if it does not have DNS servers configured. This is technically unnecessary for our use case because we are only using it to access IP addresses on the LAN, and do not need to resolve anything with DNS. Nonetheless, you should configure some DNS servers here so you can continue to use the Unsafe Browser to access the WebGUI in future sessions.
 
 	  We recommend keeping it simple and using the same DNS servers that you used for the network firewall in the setup wizard.
 

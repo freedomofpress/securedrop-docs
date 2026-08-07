@@ -65,8 +65,7 @@ To assist in the installation process, we offer a `SecureDrop Installation Works
 
 It is **critical** that you destroy this worksheet when your installation is complete and all of your passphrases have been safely stored in a password manager.
 
-.. warning:: Remember to destroy the `SecureDrop Installation Worksheet`_ after the
-             installation is complete.
+.. warning:: Remember to destroy the `SecureDrop Installation Worksheet`_ after the installation is complete.
 
 .. _`SecureDrop Installation Worksheet`: https://docs.google.com/a/freedom.press/document/d/18RMAzhx1XCgpmw366I8tItBXQTzkFy_i_D0c605DTS8/edit?usp=sharing
 

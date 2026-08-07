@@ -3,12 +3,8 @@ Off-board Administrators and Journalists
 
 When Journalists and SecureDrop Administrators leave your organization, it is important to off-board them from SecureDrop.
 
-.. important:: Additional measures may need to be taken if the
-   user's departure is on unfriendly terms. These measures will vary
-   depending on the circumstances and your own internal incident response
-   procedures, and may include doing a full reinstall of SecureDrop.
-   If you are in such a situation, feel free to
-   :doc:`contact us </introduction/getting_support>` for further assistance.
+.. important:: Additional measures may need to be taken if the user's departure is on unfriendly terms. These measures will vary depending on the circumstances and your own internal incident response
+   procedures, and may include doing a full reinstall of SecureDrop. If you are in such a situation, feel free to :doc:`contact us </introduction/getting_support>` for further assistance.
 
 Off-boarding checklist
 ----------------------
@@ -39,9 +35,7 @@ If you are concerned that the user may have a copy of the SSH key, you should ro
 
       ssh-keygen -t rsa -b 4096
 
-    and make sure to change the key name. This is the only parameter you need
-    to change. For example, instead of ``/home/amnesia/.ssh/id_rsa``, call the
-    key ``/home/amnesia/.ssh/newkey``. You don't need a passphrase for the key.
+    and make sure to change the key name. This is the only parameter you need to change. For example, instead of ``/home/amnesia/.ssh/id_rsa``, call the key ``/home/amnesia/.ssh/newkey``. You don't need a passphrase for the key.
 
     .. _ssh_add_pubkey:
 
@@ -78,10 +72,7 @@ If you are concerned that the user may have a copy of the SSH key, you should ro
 
 #.  Restrict SSH access to the new key.
 
-    .. important:: If you have other users who also have SSH access to the
-        Application and Monitor Servers, the next step will revoke their
-        access. Their public keys will have to be re-appended to the
-        ``authorized_keys`` file on each server, as in step 3.
+    .. important:: If you have other users who also have SSH access to the Application and Monitor Servers, the next step will revoke their access. Their public keys will have to be re-appended to the ``authorized_keys`` file on each server, as in step 3.
 
     From an ``sd-admin`` qube, run
 
@@ -89,9 +80,7 @@ If you are concerned that the user may have a copy of the SSH key, you should ro
 
       securedrop-admin reset_admin_access
 
-    This removes all other SSH keys, except for the new key that you are
-    currently using, from the list of authorized keys on the Application and
-    Monitor Servers.
+    This removes all other SSH keys, except for the new key that you are currently using, from the list of authorized keys on the Application and Monitor Servers.
 
 .. _rotate_submission_key:
 
@@ -129,8 +118,7 @@ On the Secure Viewing Station
 
    |edit key name|
 
-   .. note:: This is a local-only change to stop you from mixing up
-          the old and new keys
+   .. note:: This is a local-only change to stop you from mixing up the old and new keys
 
 #. Return to the Terminal, then run:
 

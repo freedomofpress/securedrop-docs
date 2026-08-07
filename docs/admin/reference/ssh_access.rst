@@ -27,17 +27,12 @@ You can access your Application Server and Monitor Server via SSH from an Admin 
 
 In this section we cover basic commands you may find useful when you SSH into the Application Server and Monitor Server.
 
-.. tip:: When you SSH into either SecureDrop server, you will be dropped into a
-        ``tmux`` session. ``tmux`` is a screen multiplexer - it allows you to tile
-        panes, preserve sessions to keep your session alive if the network
-        connection fails, and more. Check out this `tmux tutorial`_ to learn how
-        to use ``tmux``.
+.. tip:: When you SSH into either SecureDrop server, you will be dropped into a ``tmux`` session. ``tmux`` is a screen multiplexer - it allows you to tile panes, preserve sessions to keep your session alive if the network connection fails, and more. Check out this `tmux tutorial`_ to learn how to use ``tmux``.
 
 .. _`tmux tutorial`:
   https://thoughtbot.com/blog/a-tmux-crash-course
 
-.. tip:: If you want a refresher of the Linux command line, we recommend
-  `this resource`_ to cover the fundamentals.
+.. tip:: If you want a refresher of the Linux command line, we recommend `this resource`_ to cover the fundamentals.
 
 .. _`this resource`:
   https://linuxcommand.org/lc3_learning_the_shell.php

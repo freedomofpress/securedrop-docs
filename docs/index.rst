@@ -1,7 +1,4 @@
-.. SecureDrop documentation master file, created by
-   sphinx-quickstart on Tue Oct 13 12:08:52 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. SecureDrop documentation master file, created by sphinx-quickstart on Tue Oct 13 12:08:52 2015. You can adapt this file completely to your liking, but it should at least contain the root `toctree` directive.
 
 Welcome to SecureDrop's documentation!
 ======================================
@@ -10,8 +7,7 @@ SecureDrop is an open-source whistleblower submission system that media organiza
 
 SecureDrop connects journalists and their sources directly, in a way that substantially limits recorded metadata. Without third party intermediaries, SecureDrop helps protect potential sources, and puts news organizations in a strong position to challenge legal orders for data.
 
-.. note:: This documentation is also available as a Tor Onion Service at
-          http://dftlffjdogaragaxkc6jqxpo77s7rrngimyoq7uuq3clowhmttblcoyd.onion/en/stable/.
+.. note:: This documentation is also available as a Tor Onion Service at http://dftlffjdogaragaxkc6jqxpo77s7rrngimyoq7uuq3clowhmttblcoyd.onion/en/stable/.
 
 How it works
 ------------
@@ -26,9 +22,7 @@ The following steps describe how a SecureDrop submission is submitted, received 
 
 2. A *Journalist* connects to SecureDrop using their *SecureDrop Workstation*, which provides separate isolated environments to decrypt and then view the document before processing it (e.g., to remove metadata or potential malware), printing it, or exporting it to a dedicated device.
 
-.. seealso:: Check out
-          :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>`
-          to read more about SecureDrop's approach to keeping *Sources* safe.
+.. seealso:: Check out :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>` to read more about SecureDrop's approach to keeping *Sources* safe.
 
 User roles
 ----------
@@ -36,24 +30,15 @@ User roles
 There are three main user roles that interact with a SecureDrop instance:
 
 :doc:`Sources </source/source>`
-   Submit documents and messages using Tor Browser (or Tails) to access the
-   *Source Interface*. Submissions are encrypted on the *Application Server*
-   as they are uploaded.
+   Submit documents and messages using Tor Browser (or Tails) to access the *Source Interface*. Submissions are encrypted on the *Application Server* as they are uploaded.
 
 :doc:`Journalists </journalist/journalist>`
-   Use a *SecureDrop Workstation* to connect to SecureDrop and communicate
-   with sources. Journalists download encrypted submissions and process
-   them in an air-gapped environment.
+   Use a *SecureDrop Workstation* to connect to SecureDrop and communicate with sources. Journalists download encrypted submissions and process them in an air-gapped environment.
 
 :doc:`Admins </admin/reference/securedrop_for_admins>`
-   Manage the *Application* and *Monitor Servers* over authenticated onion
-   services.
+   Manage the *Application* and *Monitor Servers* over authenticated onion services.
 
-.. note:: The :doc:`Glossary </appendices/glossary>` provides more-precise
-          definitions of terms and concepts particular to SecureDrop. SecureDrop is designed against
-          a comprehensive :doc:`/appendices/threat_model/threat_model`, and
-          has a specific notion of the :doc:`roles </appendices/glossary>`
-          that are involved in its operation.
+.. note:: The :doc:`Glossary </appendices/glossary>` provides more-precise definitions of terms and concepts particular to SecureDrop. SecureDrop is designed against a comprehensive :doc:`/appendices/threat_model/threat_model`, and has a specific notion of the :doc:`roles </appendices/glossary>` that are involved in its operation.
 
 Infrastructure overview
 -----------------------
