@@ -348,7 +348,7 @@ We recommend completing the following tasks after the rebuild:
 - Delete invalid admin accounts in the Admin Interface.
 - Restrict SSH access to the Application and Monitor Servers to valid Admin Workstations. If your new Admin Workstation USB flash drive is the only one that should have SSH access to the servers, you can remove access for any previous Admin Workstations from the terminal, using the commands:
 
-   .. code:: sh
+  .. code:: sh
 
      securedrop-admin reset_admin_access
 
@@ -358,7 +358,7 @@ We recommend completing the following tasks after the rebuild:
 
   You will need to copy the following file(s) to all other Admin and SecureDrop Workstations, replacing the existing files of the same name:
 
-   .. code:: sh
+  .. code:: sh
 
     ~/.config/securedrop-admin/app-journalist.auth_private
     ~/.config/securedrop-admin/tor-v3-keys.json # for Admin Workstations only
