@@ -338,8 +338,7 @@ Step 8: Post-rebuild tasks
 ==========================
 
 .. important::
-   Rebuilding an Admin Workstation makes changes that will prevent your other Tails workstations from connecting to your SecureDrop servers. If you rebuild your Admin Workstation, you must also provision
-   all other existing Tails workstation drives updated Tor credentials (see below).
+   Rebuilding an Admin Workstation makes changes that will prevent your other Tails workstations from connecting to your SecureDrop servers. If you rebuild your Admin Workstation, you must also provision all other existing Tails workstation drives updated Tor credentials (see below).
 
 We recommend completing the following tasks after the rebuild:
 
