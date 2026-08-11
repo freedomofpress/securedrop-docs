@@ -4,11 +4,9 @@ Getting an onion name for your SecureDrop
 What are onion names?
 ^^^^^^^^^^^^^^^^^^^^^
 
-Onion names are short, memorable addresses that visitors can use to access an 
-:ref:`Onion Service<glossary_onion_service>` (e.g., a news organization's SecureDrop) using Tor Browser. 
+Onion names are short, memorable addresses that visitors can use to access an :ref:`Onion Service<glossary_onion_service>` (e.g., a news organization's SecureDrop) using Tor Browser.
 
-Imagine a SecureDrop instance for a new organization called
-*The New York World* with an onion address like this:
+Imagine a SecureDrop instance for a new organization called *The New York World* with an onion address like this:
 
 `sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion`
 
@@ -23,85 +21,49 @@ The general format for a SecureDrop onion name is:
 How they work
 ^^^^^^^^^^^^^
 
-Onion names are supported in the desktop version of Tor Browser (introduced 
-in version 9.5). The mapping between onion names and the full-length onion 
-addresses is done using a custom, signed ruleset for SecureDrop instances
-maintained by Freedom of the Press Foundation. The ruleset is updated
-automatically by Tor Browser, and no information is sent to third party servers
-when contacting a SecureDrop using an onion name.
+Onion names are supported in the desktop version of Tor Browser (introduced in version 9.5). The mapping between onion names and the full-length onion addresses is done using a custom, signed ruleset for SecureDrop instances maintained by Freedom of the Press Foundation. The ruleset is updated automatically by Tor Browser, and no information is sent to third party servers when contacting a SecureDrop using an onion name.
 
-Onion names are currently not supported by the mobile version of Tor Browser,
-or by any other browser. (SecureDrop strongly recommends the use of the 
-desktop version of Tor browser.)
+Onion names are currently not supported by the mobile version of Tor Browser, or by any other browser. (SecureDrop strongly recommends the use of the desktop version of Tor browser.)
 
-The Tor project has committed to continued support of the onion name feature
-in some form. The underlying implementation and the address format may change
-in future iterations of this feature. To the extent that any changes are 
-required, we will reach out to coordinate them with you.
+The Tor project has committed to continued support of the onion name feature in some form. The underlying implementation and the address format may change in future iterations of this feature. To the extent that any changes are required, we will reach out to coordinate them with you.
 
 Getting an onion name
 ^^^^^^^^^^^^^^^^^^^^^
 
-Freedom of the Press Foundation maintains onion names for SecureDrop instances
-which:
+Freedom of the Press Foundation maintains onion names for SecureDrop instances which:
 
 * are using v3 Onion Services
 * are part of the SecureDrop Directory
 
-We will generally approve onion names that meaningfully correspond to your name
-or that of your organization. Please note that, to disambiguate organizations
-in different countries with the same name, we may request the addition of a 
-country code (e.g. ``<organization>.<country code>.securedrop.tor.onion``).
+We will generally approve onion names that meaningfully correspond to your name or that of your organization. Please note that, to disambiguate organizations in different countries with the same name, we may request the addition of a country code (e.g. ``<organization>.<country code>.securedrop.tor.onion``).
 
-If your SecureDrop instance is not part of the directory yet, you can 
-:ref:`begin the process here<The SecureDrop Directory>`. In order to be
-eligible for inclusion, your SecureDrop and its associated clearnet
-Landing Page must be set up consistent with the best practices recommended
-in our documentation.
+If your SecureDrop instance is not part of the directory yet, you can :ref:`begin the process here<The SecureDrop Directory>`. In order to be eligible for inclusion, your SecureDrop and its associated clearnet Landing Page must be set up consistent with the best practices recommended in our documentation.
 
-If you are already part of the SecureDrop directory and would like a short
-onion name, :ref:`please contact us.<Getting Support>`
+If you are already part of the SecureDrop directory and would like a short onion name, :ref:`please contact us.<Getting Support>`
 
 Does This Replace the original address?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-No, the onion name is only a human-friendly name for the full-length address.
-The original v3 address can continue to be used like normal, this just gives
-Sources an easier to remember option for accessing your SecureDrop.
+No, the onion name is only a human-friendly name for the full-length address. The original v3 address can continue to be used like normal, this just gives Sources an easier to remember option for accessing your SecureDrop.
 
-We recommend that you list both the onion name and the full v3 address on your
-Landing Page. This allows Sources to verify both addresses against the
-information included in our directory, and also provides a fallback should
-the onion name fail to load for any reason.
+We recommend that you list both the onion name and the full v3 address on your Landing Page. This allows Sources to verify both addresses against the information included in our directory, and also provides a fallback should the onion name fail to load for any reason.
 
-Please note that the desktop version of Tor Browser is needed to access onion
-names, which is also generally our security recommendation.
+Please note that the desktop version of Tor Browser is needed to access onion names, which is also generally our security recommendation.
 
 Updating an onion name
 ^^^^^^^^^^^^^^^^^^^^^^
 
-If you wish to change or retire your onion name, please reach out to the
-SecureDrop team. In the event that you wish to completely retire your
-SecureDrop instance, we recommend that you contact us ahead of time if
-possible, so we can schedule the onion name update on the same day.
+If you wish to change or retire your onion name, please reach out to the SecureDrop team. In the event that you wish to completely retire your SecureDrop instance, we recommend that you contact us ahead of time if possible, so we can schedule the onion name update on the same day.
 
-In any event, we will attempt to respond to any update request within 2
-business days.
+In any event, we will attempt to respond to any update request within 2 business days.
 
 Revoking onion names
 ^^^^^^^^^^^^^^^^^^^^
 
-Onion names are tied to inclusion in the SecureDrop Directory. We may
-remove SecureDrop instances from the directory at our discretion for
-reasons including but not limited to:
+Onion names are tied to inclusion in the SecureDrop Directory. We may remove SecureDrop instances from the directory at our discretion for reasons including but not limited to:
 
-* an instance is stuck on an old software version, and can no longer
-  be considered secure;
+* an instance is stuck on an old software version, and can no longer be considered secure;
 * an instance is unreachable for extended periods of time;
-* the configuration of an instance or the associated Landing Page
-  differs substantially from our security recommendations in a manner
-  that may put Sources at risk.
+* the configuration of an instance or the associated Landing Page differs substantially from our security recommendations in a manner that may put Sources at risk.
 
-Unless the removal is an emergency, we will attempt to offer a substantial
-grace period prior to the revocation of an onion name, to ensure you can inform
-your Sources about the change to your onion address.
+Unless the removal is an emergency, we will attempt to offer a substantial grace period prior to the revocation of an onion name, to ensure you can inform your Sources about the change to your onion address.

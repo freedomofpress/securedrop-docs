@@ -17,8 +17,15 @@ Prerequisites
 
 In order to install SecureDrop Workstation and configure it to use an existing SecureDrop instance, you will need the following:
 
-- A Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations. 
-- :ref:`Qubes installation media <prepare_installation_media>`
+- A Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations.
+- Qubes installation medium - this guide assumes the use of a USB 3.0 flash drive. Qubes may also be installed via optical media, which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_.
+
+  .. note:: A USB flash drive with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings detailed below are applied.
+
+- A working computer (Linux is recommended and assumed in this guide) to use for verification and creation of the Qubes installation medium.
+
+  .. note:: Tails can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB flash drive to transfer it to Tails for verification and creation of the installation medium.
+
 - A password manager or other system to generate and store strong passphrases for Qubes full disk encryption (FDE) and user accounts.
 
 A basic knowledge of the Qubes OS is helpful.
@@ -39,9 +46,7 @@ Once the BIOS is up-to-date, boot into the BIOS setup utility and update its set
 - Set a password to access the BIOS (and record the password in your password manager).
 - Disable BIOS downgrades.
 - Enable Data Execution Prevention.
-- Enable virtualization support (required for Qubes OS).
-  - for Intel-based devices, **Intel VT-d** and **Intel VT-x** should be enabled
-  - for AMD-based devices, **AMD-VI** and **AMD-V** should be enabled
+- Enable virtualization support (required for Qubes OS). - for Intel-based devices, **Intel VT-d** and **Intel VT-x** should be enabled - for AMD-based devices, **AMD-VI** and **AMD-V** should be enabled
 - Disable unnecessary I/O options such as Wireless WAN and  Bluetooth.
 - Disable unnecessary network options such as Wake-on-LAN and UEFI network stacks.
 - Disable Thunderbolt ports, or any other ports that allow Direct Memory Access (DMA).
@@ -56,26 +61,58 @@ If the Qubes hardware compatibility list entry for your computer recommends the 
 Disable SecureBoot
 ~~~~~~~~~~~~~~~~~~
 
-SecureBoot is a feature available on most systems that, when enabled,
-does not allow any operating system to boot that has not been signed by a
-trusted key. By only booting to operating systems that are properly signed,
-you can be sure that the OS itself has not been corrupted or tampered with,
-at least at the boot level.
+SecureBoot is a feature available on most systems that, when enabled, does not allow any operating system to boot that has not been signed by a trusted key. By only booting to operating systems that are properly signed, you can be sure that the OS itself has not been corrupted or tampered with, at least at the boot level.
 
-**SecureBoot must be disabled on the server and Workstation hardware.** SecureDrop
-installs a hardened, security-focused version of the Linux kernel 
-(grsec) that does not support SecureBoot. If SecureBoot is enabled on either of
-the servers during the install, you will receive a pre-install error reminding
-you that it must be turned off before the installation can proceed.
+**SecureBoot must be disabled on the server and Workstation hardware.** SecureDrop installs a hardened, security-focused version of the Linux kernel (grsec) that does not support SecureBoot. If SecureBoot is enabled on either of the servers during the install, you will receive a pre-install error reminding you that it must be turned off before the installation can proceed.
 
-Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with
-SecureDrop Workstations.
+Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with SecureDrop Workstations.
 
-For instructions on how to enable or disable the SecureBoot feature for your
-device, please consult the manufacturer's manual for BIOS settings, as they
-differ for each make and model.
+For instructions on how to enable or disable the SecureBoot feature for your device, please consult the manufacturer's manual for BIOS settings, as they differ for each make and model.
 
 
+
+Follow the linked instructions to `verify the ISO <https://www.qubes-os.org/security/verifying-signatures/#how-to-verify-detached-pgp-signatures-on-qubes-isos>`_. Ensure that the ISO and hash values are in the same directory, then run:
+
+.. code-block:: sh
+
+  gpg --keyserver-options no-self-sigs-only,no-import-clean --fetch-keys https://keys.qubes-os.org/keys/qubes-release-4.2-signing-key.asc
+  gpg -v --verify Qubes-R4.2.4-x86_64.iso.DIGESTS
+  sha256sum -c Qubes-R4.2.4-x86_64.iso.DIGESTS
+
+The output should look like this:
+
+.. code-block:: sh
+
+  gpg: requesting key from 'https://keys.qubes-os.org/keys/qubes-release-4.2-signing-key.asc'
+  gpg: key E022E58F8E34D89F: public key "Qubes OS Release 4.2 Signing Key" imported
+  gpg: Total number processed: 1
+  gpg:               imported: 1
+  gpg: no ultimately trusted keys found
+
+  gpg: armor header: Hash: SHA256
+  gpg: original file name=''
+  gpg: Signature made Mon 17 Feb 2025 12:00:00 AM EST
+  gpg:                using RSA key 9C884DF3F81064A569A4A9FAE022E58F8E34D89F
+  gpg: using pgp trust model
+  gpg: Good signature from "Qubes OS Release 4.2 Signing Key" [unknown]
+  gpg: WARNING: This key is not certified with a trusted signature!
+  gpg:          There is no indication that the signature belongs to the owner.
+  Primary key fingerprint: 9C88 4DF3 F810 64A5 69A4  A9FA E022 E58F 8E34 D89F
+  gpg: textmode signature, digest algorithm SHA256, key algorithm rsa4096
+  Qubes-R4.2.4-x86_64.iso: OK
+  sha256sum: WARNING: 20 lines are improperly formatted
+
+Specifically, you will want to make sure that you see "Good signature" listed in the text. If it does not report a good signature, try deleting the ISO and downloading it again.
+
+Once you've verified the ISO, copy it to your installation medium - for example, if using Linux and a USB flash drive, using the command:
+
+.. code-block:: sh
+
+  sudo dd if=Qubes-R4.2.4-x86_64.iso of=/dev/sdX bs=1048576 && sync
+
+where ``if`` is set to the path to your downloaded ISO file and ``of`` is set to the block device corresponding to your USB flash drive. Note that any data on the USB flash drive will be overwritten.
+
+.. caution:: Make sure to verify that you have the correct device name using, for example, the ``lsblk`` command. You should write to the full device (eg. ``/dev/sdc``) rather than to a partition (eg. ``/dev/sdc1``).
 
 Install Qubes OS (estimated wait time: 30-45 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -123,10 +160,7 @@ To create a USB qube, open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_m
 
 .. tip::
 
-  For quicker access, you can add the ``dom0`` terminal to the "Favorites" section of the
-  Qubes menu (identified by a bookmark symbol). Right-click the entry and select
-  **Add to favorites**. To remove it at a later time, right-click the entry in your
-  list of favorites and select **Remove from favorites**.
+  For quicker access, you can add the ``dom0`` terminal to the "Favorites" section of the Qubes menu (identified by a bookmark symbol). Right-click the entry and select **Add to favorites**. To remove it at a later time, right-click the entry in your list of favorites and select **Remove from favorites**.
 
 Run the following command:
 

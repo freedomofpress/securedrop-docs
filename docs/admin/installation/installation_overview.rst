@@ -24,8 +24,7 @@ Because the installation and operation are complex, and because SecureDrop can o
 
 If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us. We do ask news organizations that can afford to pay for installation support, training and maintenance to do so.
 
-As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train *Journalists* to use it. (For  pro-bono support, we request that our travel costs
-are covered.) 
+As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train *Journalists* to use it. (For  pro-bono support, we request that our travel costs are covered.)
 
 .. include:: ../../includes/provide-feedback.txt
 
@@ -34,23 +33,19 @@ Technical summary
 
 During this process, you'll set up at least four devices:
 
-- Admin Workstation:
-   A laptop running the Qubes OS operating system configured as an Admin Workstation, that you use to install and administer SecureDrop on the servers via SSH. If necessary (i.e. in a small newsroom), the same laptop may also serve as a :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` where Journalists decrypt, view, and export submitted documents. For a larger newsroom, you may set up additional SecureDrop Workstations as needed for Journalist use.
-- Application Server:
-   An Ubuntu server running two segmented Tor hidden services. The Source connects to the Source Interface, a public-facing Tor Onion Service, to send messages and documents to the Journalist. The Journalist connects to the Admin Interface, an `authenticated Tor Onion Service <https://community.torproject.org/onion-services/advanced/client-auth/>`__, using SecureDrop Inbox on a SecureDrop Workstation to download encrypted documents and respond to Sources.
-- Monitor Server:
-   An Ubuntu server that monitors the Application Server with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
-- Network Firewall
-   A hardware firewall dedicated to your SecureDrop installation. 
-   
-A summary of the major steps is as follow:  
+- Admin Workstation: A laptop running the Qubes OS operating system configured as an Admin Workstation, that you use to install and administer SecureDrop on the servers via SSH. If necessary (i.e. in a small newsroom), the same laptop may also serve as a :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` where Journalists decrypt, view, and export submitted documents. For a larger newsroom, you may set up additional SecureDrop Workstations as needed for Journalist use.
+- Application Server: An Ubuntu server running two segmented Tor hidden services. The Source connects to the Source Interface, a public-facing Tor Onion Service, to send messages and documents to the Journalist. The Journalist connects to the Admin Interface, an `authenticated Tor Onion Service <https://community.torproject.org/onion-services/advanced/client-auth/>`__, using SecureDrop Inbox on a SecureDrop Workstation to download encrypted documents and respond to Sources.
+- Monitor Server: An Ubuntu server that monitors the Application Server with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
+- Network Firewall A hardware firewall dedicated to your SecureDrop installation.
+
+A summary of the major steps is as follow:
 
 #. Acquire compatible hardware.
 #. Prepare email accounts and GPG keys for alert emails.
 #. Prepare an Admin Workstation laptop.
 #. Generate the Submission Key.
 #. Set up the KeePassXC password manager on the Admin Workstation.
-#. Install and configure the dedicated network firewall from the Admin Workstation. 
+#. Install and configure the dedicated network firewall from the Admin Workstation.
 #. Prepare the (Application and Monitor) servers.
 #. Install SecureDrop on the servers from the Admin Workstation.
 #. Complete local configuration of the Admin Workstation.
@@ -70,11 +65,9 @@ To assist in the installation process, we offer a `SecureDrop Installation Works
 
 It is **critical** that you destroy this worksheet when your installation is complete and all of your passphrases have been safely stored in a password manager.
 
-.. warning:: Remember to destroy the `SecureDrop Installation Worksheet`_ after the
-             installation is complete.
+.. warning:: Remember to destroy the `SecureDrop Installation Worksheet`_ after the installation is complete.
 
 .. _`SecureDrop Installation Worksheet`: https://docs.google.com/a/freedom.press/document/d/18RMAzhx1XCgpmw366I8tItBXQTzkFy_i_D0c605DTS8/edit?usp=sharing
-
 
 Minimum security requirements for a SecureDrop Workstation
 ------------------------------------------------------------
@@ -83,16 +76,9 @@ Minimum security requirements for a SecureDrop Workstation
 
 A SecureDrop Workstation contains both a copy of the :ref:`Submission Private Key<glossary_submission_key>`, and encrypted and decrypted messages and submissions. It's critical to ensure that appropriate security practices are applied to a SecureDrop Workstation.
 
-- SecureDrop Workstations should always be powered off when not in use, and
-  stored somewhere secure. Never leave them unattended.
-- A wired Internet connection that does not restrict Tor must be available for
-  the SecureDrop Workstation during installation. This connection should
-  either be dedicated to SecureDrop Workstation, or should be on a fully
-  segregated subnet from the rest of the corporate network.
-- Users should not bring other electronic devices into the room during installation,
-  with the exception of smartphones used for 2FA token generation. While in the room,
-  smartphones should be set to airplane mode, and should not be used for any
-  purpose other than 2FA.
+- SecureDrop Workstations should always be powered off when not in use, and stored somewhere secure. Never leave them unattended.
+- A wired Internet connection that does not restrict Tor must be available for the SecureDrop Workstation during installation. This connection should either be dedicated to SecureDrop Workstation, or should be on a fully segregated subnet from the rest of the corporate network.
+- Users should not bring other electronic devices into the room during installation, with the exception of smartphones used for 2FA token generation. While in the room, smartphones should be set to airplane mode, and should not be used for any purpose other than 2FA.
 
 Minimum security requirements for the SecureDrop servers
 ------------------------------------------------------------

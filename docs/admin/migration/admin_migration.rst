@@ -49,12 +49,11 @@ Import KeePassXC database
 
 If you have a KeePassXC database on your Tails-based Admin Workstation USB flash drive, you should copy it to the ``vault`` qube on the new Qubes-based Admin Workstation.
 
-Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` qube.  
+Qubes OS comes with the KeePassXC password manager preinstalled in the ``vault`` qube.
 
 .. include:: /admin/installation/set_up_keepassxc.rst
   :start-after: .. _keepasscx_template_database:
   :end-before: .. _keepassxc_manual_create_database:
-
 
 Configure SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,9 +63,7 @@ Now that your new Qubes-based Admin Workstation is prepared, you can proceed wit
 Import Submission Private Key
 -------------------------------
 
-In order to decrypt submissions, you will need a copy of the
-`Submission Private Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_
-from your SecureDrop instance's Secure Viewing Station.
+In order to decrypt submissions, you will need a copy of the `Submission Private Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_ from your SecureDrop instance's Secure Viewing Station.
 
 To protect this key and preserve the air gap, you will need to connect the Secure Viewing Station USB flash drive to a qube with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to the ``dom0`` qube from another qube - instead, follow the steps below:
 
@@ -117,7 +114,7 @@ SecureDrop Workstation connects to your SecureDrop instance's API via the Admin 
 
 - In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the persistent volume passphrase to unlock and mount it. When prompted, select the option to **Forget password immediately**.
 
-- In the ``dom0`` terminal, proceed with the next import step of the ``sdw-admin`` command or re-run 
+- In the ``dom0`` terminal, proceed with the next import step of the ``sdw-admin`` command or re-run
 
   .. code-block:: sh 
 
@@ -203,7 +200,7 @@ If importing the Submission Private Key  using ``sdw-admin --configure`` fails, 
 
     sudo cp /tmp/sd-journalist.sec /usr/share/securedrop-workstation-dom0-config/
 
-- You can run ``sdw-admin --configure`` to now import the Admin Interface details and complete configuration. 
+- You can run ``sdw-admin --configure`` to now import the Admin Interface details and complete configuration.
 
   Alternatively, follow the steps below to do so manually. Once both Submission Private Key and Admin Interface details are imported, proceed with :ref:`configuring the workstation<manual_configure>`.
 
@@ -233,7 +230,6 @@ If importing the Admin Interface details using ``sdw-admin --configure`` fails, 
 - Verify that the ``/tmp/journalist.txt`` file on ``dom0`` contains valid configuration information using the command ``cat /tmp/journalist.txt`` in the ``dom0`` terminal.
 
 - Proceed with :ref:`configuring the workstation<manual_configure>`
-
 
 If you encounter a validation error due to a password-protected GPG key, see :doc:`/admin/migration/removing_gpg_passphrase`.
 
@@ -265,8 +261,7 @@ Once the Admin Interface details and Submission Private Key have been copied to 
 
 .. note::
 
-   You can find the values for the **hidserv.*** fields in the ``/tmp/journalist.txt`` file that you created in ``dom0`` earlier.
-   The file will be formatted as follows:
+   You can find the values for the **hidserv.*** fields in the ``/tmp/journalist.txt`` file that you created in ``dom0`` earlier. The file will be formatted as follows:
 
    .. code-block:: none
 

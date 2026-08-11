@@ -1,7 +1,7 @@
 Passphrases
 ===========
 
-Each individual with a role (Administrator or Journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation. 
+Each individual with a role (Administrator or Journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation.
 
 Ideally, each Administrator and Journalist would only have to remember the passphrases to unlock the encrypted storage on their Admin or SecureDrop Workstation laptop.
 
@@ -12,8 +12,7 @@ The Administrator will be using an Admin Workstation configured to connect to th
 
 - The Qubes full disk encryption (FDE) password of the Admin Workstation, required to unlock system storage on boot.
 - The Qubes system user password for the Admin Workstation, required to log in.
--  Additional credentials, which we recommend adding to Tails' KeePassXC password
-   manager during the installation:
+-  Additional credentials, which we recommend adding to Tails' KeePassXC password manager during the installation:
 
    - The Application Server and Monitor Server admin username and password (required to be the same for both servers).
    - The network firewall username and password.
@@ -51,9 +50,7 @@ We recommend using encrypted USB flash drives for transferring files off of the 
 
 For every export operation, the user will need to enter the USB flash drive's encryption passphrase at least twice (on the computer they're copying from, and on the computer they're copying to). To make it easy for them to find the passphrase, we recommend storing it in the Journalist's own existing password manager, which should be accessible using their smartphone.
 
-If your organization is not using a password manager already, please see
-the `Freedom of the Press Foundation guide <https://freedom.press/training/blog/choosing-password-manager/>`__
-to choosing one.
+If your organization is not using a password manager already, please see the `Freedom of the Press Foundation guide <https://freedom.press/training/blog/choosing-password-manager/>`__ to choosing one.
 
 .. _passphrase_best_practices:
 
@@ -63,26 +60,16 @@ Passphrase best practices
 All SecureDrop users---Sources, Journalists, and Administrators---are required to memorize at least one passphrase. This section describes best practices for passphrase management in the context of SecureDrop.
 
 #. **Do** memorize your passphrase.
-#. If necessary, **do** write your passphrase down temporarily while you
-   memorize it.
+#. If necessary, **do** write your passphrase down temporarily while you memorize it.
 
-   .. caution:: **Do** store your written passphrase in a safe place, such as a
-                safe at home or on a piece of paper in your wallet. **Do**
-                destroy the paper as soon as you feel comfortable that you have
-                the passphrase memorized. **Do not** store your passphrase on
-                any digital device, such as your computer or mobile phone.
-#. **Do** review your passphrase regularly. It's easy to forget a long or
-   complex passphrase if you only use it infrequently.
+   .. caution:: **Do** store your written passphrase in a safe place, such as a safe at home or on a piece of paper in your wallet. **Do** destroy the paper as soon as you feel comfortable that you have
+                the passphrase memorized. **Do not** store your passphrase on any digital device, such as your computer or mobile phone.
+#. **Do** review your passphrase regularly. It's easy to forget a long or complex passphrase if you only use it infrequently.
 
-   .. tip:: We recommend reviewing your passphrase (e.g. by ensuring that you
-            can log in to your SecureDrop account) on at least a monthly basis.
+   .. tip:: We recommend reviewing your passphrase (e.g. by ensuring that you can log in to your SecureDrop account) on at least a monthly basis.
 #. **Do not** use your passphrase anywhere else.
 
-   If you use your SecureDrop passphrase on another system, a compromise of that
-   system could theoretically be used to compromise SecureDrop. You should avoid
-   reusing passphrases in general, but it is especially important to avoid doing
-   so in the context of SecureDrop.
-
+   If you use your SecureDrop passphrase on another system, a compromise of that system could theoretically be used to compromise SecureDrop. You should avoid reusing passphrases in general, but it is especially important to avoid doing so in the context of SecureDrop.
 
 How to generate a strong, unique passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,12 +79,8 @@ We recommend using a unique, 7-word passphrase for each case described above. We
 Using KeePassXC to generate a passphrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a random passphrase using KeePassXC, launch the application,
-then click the **dice icon**. Then click the **Passphrase** tab and set the
-**Word Count** to 7. You can optionally set a **Word Separator**, for example a
-space or hyphen.
+To create a random passphrase using KeePassXC, launch the application, then click the **dice icon**. Then click the **Passphrase** tab and set the **Word Count** to 7. You can optionally set a **Word Separator**, for example a space or hyphen.
 
-|screenshot of KeePassXC passphrase generation feature, showing a
-randomly generated 7-word passphrase|
+|screenshot of KeePassXC passphrase generation feature, showing a randomly generated 7-word passphrase|
 
 .. |screenshot of KeePassXC passphrase generation feature, showing a randomly generated 7-word passphrase| image:: ../images/screenshots/keepassxc-diceware.png

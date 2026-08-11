@@ -1,21 +1,14 @@
 Using a YubiKey with the Admin Interface
 ===============================================
 
-This guide describes in detail how to set up a YubiKey for two-factor
-authentication on the :ref:`Admin Interface<glossary_admin_interface>`. This setup is performed
-once per Journalist to create a secure log-in method. The process
-requires some configuration steps using a separate software tool.
+This guide describes in detail how to set up a YubiKey for two-factor authentication on the :ref:`Admin Interface<glossary_admin_interface>`. This setup is performed once per Journalist to create a secure log-in method. The process requires some configuration steps using a separate software tool.
 
-.. note:: You will do all of these steps from within the Tails
-          operating system.
+.. note:: You will do all of these steps from within the Tails operating system.
 
 What is a YubiKey?
 ------------------
 
-A YubiKey is a physical token used for two-factor authentication. They
-are made by a company called Yubico and are `commercially available`_. Note
-that not all physical tokens are compatible with the YubiKey Personalization
-Tool; for this, you require `a key that can support OATH-HOTP`_.
+A YubiKey is a physical token used for two-factor authentication. They are made by a company called Yubico and are `commercially available`_. Note that not all physical tokens are compatible with the YubiKey Personalization Tool; for this, you require `a key that can support OATH-HOTP`_.
 
 .. _`commercially available`: https://www.yubico.com/authentication-standards/fido-u2f/
 
@@ -24,8 +17,7 @@ Tool; for this, you require `a key that can support OATH-HOTP`_.
 Download and launch the YubiKey personalization tool
 ----------------------------------------------------
 
-#. Start Tails. At the log in-screen, choose the option to allow an
-   administrator passphrase.
+#. Start Tails. At the log in-screen, choose the option to allow an administrator passphrase.
 #. Open a terminal and enter
 
 .. code:: sh
@@ -33,9 +25,7 @@ Download and launch the YubiKey personalization tool
    sudo apt-get update;
    sudo apt-get install yubikey-personalization-gui
 
-#. Once you have downloaded and installed the personalization program,
-   open a **Root Console** by choosing **Apps ▸ System Tools
-   ▸ Root Console**.
+#. Once you have downloaded and installed the personalization program, open a **Root Console** by choosing **Apps ▸ System Tools ▸ Root Console**.
 
 #. Open the YubiKey personalization tool by entering
 
@@ -46,9 +36,7 @@ Download and launch the YubiKey personalization tool
 Setting up hardware-based codes
 -------------------------------
 
-After opening the personalization tool, click the heading
-**OATH-HOTP**. This will bring you to a window called **Program in
-OATH-HOTP mode**.
+After opening the personalization tool, click the heading **OATH-HOTP**. This will bring you to a window called **Program in OATH-HOTP mode**.
 
 Click on the **Quick** button.
 
@@ -56,55 +44,33 @@ Click on the **Quick** button.
 
 Under **Configuration Slot**, click **Configuration Slot 1**.
 
-.. note:: If you are already using this YubiKey for something else,
-          you should choose **Configuration Slot 2**. You will have to
-          press and hold for several seconds to use the token from
-          **Slot 2** instead of the one in **Slot 1**. See the
-          `YubiKey manual`_ for more information.
+.. note:: If you are already using this YubiKey for something else, you should choose **Configuration Slot 2**. You will have to press and hold for several seconds to use the token from **Slot 2** instead of the one in **Slot 1**. See the `YubiKey manual`_ for more information.
 
 .. _`Yubikey manual`: https://docs.yubico.com/hardware/yubikey/yk-5/tech-manual/index.html
 
-In the section titled **OATH-HOTP parameters**, uncheck the box for
-**OATH Token Identifier (6 bytes)**. Leave the HOTP length at 6 digits.
-Next, uncheck the box for **Hide secret**. This will display the **Secret Key
-(20 bytes Hex)** field.
+In the section titled **OATH-HOTP parameters**, uncheck the box for **OATH Token Identifier (6 bytes)**. Leave the HOTP length at 6 digits. Next, uncheck the box for **Hide secret**. This will display the **Secret Key (20 bytes Hex)** field.
 
-.. important:: Make a note somewhere safe of the **Secret Key (20
-               bytes Hex)** value.
+.. important:: Make a note somewhere safe of the **Secret Key (20 bytes Hex)** value.
 
 |YubiKey Config|
 
 When ready, click the **Write Configuration** button.
 
-Click through the warning about overwriting the configuration slot and
-choose a location to save the log file. When the configuration is
-done, you should see green text saying **YubiKey configured** at the
-top of the window.
+Click through the warning about overwriting the configuration slot and choose a location to save the log file. When the configuration is done, you should see green text saying **YubiKey configured** at the top of the window.
 
 |YubiKey Config Successful|
 
 Adding users
 ------------
 
-When adding new users, a SecureDrop Administrator will need the
-**Secret Key** value described above. She will enter it after
-selecting the **I'm Using a YubiKey** option while :ref:`adding users
-<Adding Users>`. The new user will then have to verify their YubiKey before
-being added to the system. This means that the new user and the Administrator should be
-physically present for this process.
+When adding new users, a SecureDrop Administrator will need the **Secret Key** value described above. She will enter it after selecting the **I'm Using a YubiKey** option while :ref:`adding users <Adding Users>`. The new user will then have to verify their YubiKey before being added to the system. This means that the new user and the Administrator should be physically present for this process.
 
 Using your YubiKey
 ------------------
 
-When using a Yubikey to log-in to the Admin Interface, insert
-the Yubikey into the USB port and enter your username and
-passphrase. Then click the **Two-factor Code** field to focus the
-cursor there. Quickly press the lighted button on your YubiKey. This
-will insert the 6-digit code that you will need to log in.
+When using a Yubikey to log-in to the Admin Interface, insert the Yubikey into the USB port and enter your username and passphrase. Then click the **Two-factor Code** field to focus the cursor there. Quickly press the lighted button on your YubiKey. This will insert the 6-digit code that you will need to log in.
 
-.. note:: When using **Configuration Slot 2**, be sure to press and hold
-          the YubiKey button for approximately 3 seconds. This can be somewhat
-          finicky.
+.. note:: When using **Configuration Slot 2**, be sure to press and hold the YubiKey button for approximately 3 seconds. This can be somewhat finicky.
 
 .. |YubiKey Overview| image:: ../../images/yubikey_overview.png
 .. |YubiKey Config| image:: ../../images/yubikey_oath_hotp_configuration.png

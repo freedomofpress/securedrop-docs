@@ -1,27 +1,19 @@
 Whole site changes
 ==================
 
-Ideally, some or all of the following changes are made to improve the
-overall security of the path to the :ref:`Landing Page<glossary_landing_page>` and obfuscate traffic
-analysis.
+Ideally, some or all of the following changes are made to improve the overall security of the path to the :ref:`Landing Page<glossary_landing_page>` and obfuscate traffic analysis.
 
 #. Make your entire site available through HTTPS.
 
-   - That way, visits to your Landing Page won't stand out as the only encrypted
-     traffic to your site.
+   - That way, visits to your Landing Page won't stand out as the only encrypted traffic to your site.
 
-#. Include an iframe for all (or a random subset of) visitors, loading
-   this particular URL (hidden).
+#. Include an iframe for all (or a random subset of) visitors, loading this particular URL (hidden).
 
-   - By artificially generating traffic to the endpoint it will be
-     harder to distinguish these from other, 'real' requests.
-   - Use a random delay for adding the iframe (otherwise the 'pairing'
-     with the initial HTTP request may distinguish this traffic).
+   - By artificially generating traffic to the endpoint it will be harder to distinguish these from other, 'real' requests.
+   - Use a random delay for adding the iframe (otherwise the 'pairing' with the initial HTTP request may distinguish this traffic).
 
-#. Print the link, URL and info block on the dead trees (the paper),
-   as others have suggested.
-#. Add `HSTS headers
-   <https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security>`__.
+#. Print the link, URL and info block on the dead trees (the paper), as others have suggested.
+#. Add `HSTS headers <https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security>`__.
 
 Suggested
 ---------

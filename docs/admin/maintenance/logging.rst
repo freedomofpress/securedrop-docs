@@ -1,50 +1,36 @@
 Investigating logs
 ==================
 
-When troubleshooting issues with your SecureDrop instance, be sure to examine
-all relevant log files on both servers. To work with logs, it is helpful to be
-familiar with commands like ``less``, ``tail`` and ``grep``; to inspect older,
-archived logs (names end with ``.gz``) you can use commands like ``zless`` and
-``zgrep`` to avoid manually decompressing each file.
+When troubleshooting issues with your SecureDrop instance, be sure to examine all relevant log files on both servers. To work with logs, it is helpful to be familiar with commands like ``less``, ``tail`` and ``grep``; to inspect older, archived logs (names end with ``.gz``) you can use commands like ``zless`` and ``zgrep`` to avoid manually decompressing each file.
 
 .. include:: ../../includes/get-logs.txt
 
 Logs to examine on both servers
 -------------------------------
 
-- ``/var/log/kern.log``: Use this file to investigate kernel-related issues,
-  including warnings or errors specific to AppArmor or grsecurity (a set of
-  patches applied to the kernels for additional security hardening)  
+- ``/var/log/kern.log``: Use this file to investigate kernel-related issues, including warnings or errors specific to AppArmor or grsecurity (a set of patches applied to the kernels for additional security hardening)
 
-- ``/var/log/syslog``: Use this file to investigate most other system issues, 
-  including iptables configuration problems or Tor network issues. Use search
-  patterns, e.g., search for "app Tor" to find log entries specific to Tor.
+- ``/var/log/syslog``: Use this file to investigate most other system issues, including iptables configuration problems or Tor network issues. Use search patterns, e.g., search for "app Tor" to find log entries specific to Tor.
 
 :ref:`Application Server<glossary_application_server>` logs
 -----------------------------------------------------------
 
-See the directory ``/var/log/apache2/*`` for web server access and error logs.
-In production systems, logging is only enabled for the :ref:`Admin Interface<glossary_admin_interface>`
-to the files ``journalist-access.log`` and ``journalist-error.log``, and the 
-logs do not contain IP address information. 
+See the directory ``/var/log/apache2/*`` for web server access and error logs. In production systems, logging is only enabled for the :ref:`Admin Interface<glossary_admin_interface>` to the files ``journalist-access.log`` and ``journalist-error.log``, and the logs do not contain IP address information.
 
-When investigating an application error on the :ref:`Source Interface<glossary_source_interface>` (e.g.,
-if you see an "Internal Server Error" when submitting a document), it can make
-sense to temporarily enable error logging. To do so:
+When investigating an application error on the :ref:`Source Interface<glossary_source_interface>` (e.g., if you see an "Internal Server Error" when submitting a document), it can make sense to temporarily enable error logging. To do so:
 
 1. Log into your Application Server from your Admin Workstation via ``ssh app``
 2. Edit the file ``/etc/apache2/sites-enabled/source.conf`` (requires ``sudo``)
 3. Comment out the old ``ErrorLog`` and ``LogLevel`` directives, e.g., like so:
 
 .. code:: sh
-   
+
    # Enabling logging for error investigation, 2020-04-18, ~admin
    #
    # ErrorLog /dev/null
    # LogLevel critical
- 
-4. Add the desired new logging configuration in the same location (inside the 
-   ``<VirtualHost>`` block), e.g.:
+
+4. Add the desired new logging configuration in the same location (inside the ``<VirtualHost>`` block), e.g.:
 
 .. code:: sh
 
@@ -54,16 +40,11 @@ sense to temporarily enable error logging. To do so:
 5. Save the file and reload the configuration with ``sudo systemctl reload apache2``
 6. Visit the Source Interface and reproduce the error
 7. Inspect the log file ``/var/log/apache2/source-error.log`` for any details
-8. Remember to set the configuration back to the default values once your
-   investigation is complete.
+8. Remember to set the configuration back to the default values once your investigation is complete.
 
-Note that the ``debug`` logging level is highly verbose; if you want to adjust
-it, see `the Apache documentation <https://httpd.apache.org/docs/2.4/mod/core.html#loglevel>`_
-for more information about the different logging levels.
-   
-If you encounter an application error, and you have not modified the application
-code, please be sure to `file an issue <https://github.com/freedomofpress/securedrop/issues/new/>`_
-or contact us via securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
+Note that the ``debug`` logging level is highly verbose; if you want to adjust it, see `the Apache documentation <https://httpd.apache.org/docs/2.4/mod/core.html#loglevel>`_ for more information about the different logging levels.
+
+If you encounter an application error, and you have not modified the application code, please be sure to `file an issue <https://github.com/freedomofpress/securedrop/issues/new/>`_ or contact us via securedrop@freedom.press (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__).
 
 :ref:`Monitor Server<glossary_monitor_server>` logs
 ---------------------------------------------------
@@ -71,5 +52,5 @@ or contact us via securedrop@freedom.press (`GPG encrypted <https://securedrop.o
 - ``/var/ossec/logs/ossec.log``: Examine this file to investigate problems with OSSEC itself not functioning as expected (e.g., you are not seeing alerts when you would expect them to).
 
 - ``/var/ossec/logs/alerts/alerts.log``: This file contains the most recent alerts  generated by OSSEC. If you have correctly configured OSSEC emails, the  text of these alerts should correspond to the text of the emails.
-   
+
 - ``/var/log/mail.log`` and ``/var/log/procmail.log``: These files contain information about email delivery and email processing (for encrypting the alerts). Investigate these files if you believe OSSEC is correctly configured, but you are not receiving emails.

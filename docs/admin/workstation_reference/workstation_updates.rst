@@ -4,8 +4,7 @@ Updating SecureDrop Workstation
 Preflight updates
 -----------------
 
-After you unlock your SecureDrop Workstation, the preflight updater will prompt you to check for available
-updates at least once per day.
+After you unlock your SecureDrop Workstation, the preflight updater will prompt you to check for available updates at least once per day.
 
 The preflight updater delivers new SecureDrop Inbox releases, SecureDrop Workstation updates, and updates to the underlying Qubes operating system.
 
@@ -17,39 +16,25 @@ Verifying version numbers
 You can find the version number of the SecureDrop Inbox running on your workstation on the login screen when you open the Inbox.
 
 The version number for the SecureDrop Workstation itself can be found by running the following command in a ``dom0`` Terminal: ::
-  
+
   sudo dnf list securedrop-workstation-dom0-config
 
 Troubleshooting updates
 -----------------------
 
-If updates fail for any reason, SecureDrop Inbox will not launch until the
-underlying issue has been resolved. This is to ensure
-that the system is in a secure state before you
-interact with SecureDrop.
+If updates fail for any reason, SecureDrop Inbox will not launch until the underlying issue has been resolved. This is to ensure that the system is in a secure state before you interact with SecureDrop.
 
 .. figure:: images/preflight_update_failed.png
-   :alt: A screenshot of the preflight update window,
-         displaying a failed update error message. The
-         title reads "Security updates failed", and the
-         message instructs the user to contact the Administrator
-         to correct the error. SecureDrop Inbox cannot
-         be started until the error is corrected.
+   :alt: A screenshot of the preflight update window, displaying a failed update error message. The title reads "Security updates failed", and the message instructs the user to contact the Administrator to correct the error. SecureDrop Inbox cannot be started until the error is corrected.
 
-   The error displayed when the preflight updater
-   does not successfully complete the update.
+   The error displayed when the preflight updater does not successfully complete the update.
 
-Below are some troubleshooting steps for common
-update issues.
+Below are some troubleshooting steps for common update issues.
 
 Step 1: Locate the updater log
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The preflight updater runs in the ``dom0`` domain. It
-writes its log to ``~/.securedrop_updater/logs/updater.log``.
-Log files are rotated hourly; if you have started the updater
-again since the error occurred, you may need to check the
-previous log file.
+The preflight updater runs in the ``dom0`` domain. It writes its log to ``~/.securedrop_updater/logs/updater.log``. Log files are rotated hourly; if you have started the updater again since the error occurred, you may need to check the previous log file.
 
 In order to examine the most recent log file:
 
@@ -76,8 +61,7 @@ In order to locate a previous log file in the same directory:
 Step 2: Identify the cause(s) of the error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If the updater has run to completion, you should see a result
-line in the log file that looks similar to the following:
+If the updater has run to completion, you should see a result line in the log file that looks similar to the following:
 
 .. code-block:: none
 
@@ -90,57 +74,39 @@ line in the log file that looks similar to the following:
   'sd-small-bookworm-template': <UpdateStatus.UPDATES_OK: '0'>,
   'recommended_action': <UpdateStatus.UPDATES_FAILED: '3'>}
 
-In this example, the ``fedora-42-xfce`` qube has failed to update.
-This is indicated by the text ``<UpdateStatus.UPDATES_FAILED: '3'>``.
+In this example, the ``fedora-42-xfce`` qube has failed to update. This is indicated by the text ``<UpdateStatus.UPDATES_FAILED: '3'>``.
 
-It is possible that multiple steps have failed. Make note of any
-of the individual steps that have failed, other than ``recommended_action``.
+It is possible that multiple steps have failed. Make note of any of the individual steps that have failed, other than ``recommended_action``.
 
 Step 3: Resolve the issue(s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The resolution path will depend on which step(s) failed.
-Note that ``dom0`` and ``apply_dom0`` are separate steps.
-
+The resolution path will depend on which step(s) failed. Note that ``dom0`` and ``apply_dom0`` are separate steps.
 
 ``dom0`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Open a terminal in ``dom0`` via |qubes_menu| **▸ Gear Icon (left-hand side) ▸ Other Tools ▸ Xfce Terminal**.
 
-2. Perform an interactive ``dom0`` update by running the
-   following command:
+2. Perform an interactive ``dom0`` update by running the following command:
 
    ``sudo qubes-dom0-update``
 
-3. Follow the prompts to resolve any issues. If you are
-   unsure on how to resolve an error, please contact us
-   for assistance.
+3. Follow the prompts to resolve any issues. If you are unsure on how to resolve an error, please contact us for assistance.
 
-4. Reboot the system. ``dom0`` updates are often
-   security-sensitive, and may require a reboot to take
-   effect.
+4. Reboot the system. ``dom0`` updates are often security-sensitive, and may require a reboot to take effect.
 
 Expired SecureDrop signing key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If the update fails after running ``sudo qubes-dom0-update`` as described
-above, and the terminal console displays the following message:
+If the update fails after running ``sudo qubes-dom0-update`` as described above, and the terminal console displays the following message:
 
 .. code-block:: sh
 
-   1. Certificiate 188EDD3B7B22E6A3 invalid: certificate is not alive
-       because: The primary key is not live
-       because: Expired on 2023-07-04T10:52:20Z
-   2. Key 188EDD3B7B22E6A3 invalid: key is not alive
-       because: The primary key is not live
-       because: Expired on 2023-07-04T10:52:20Z
-   [...]
-   Error: GPG check FAILED
+   1. Certificiate 188EDD3B7B22E6A3 invalid: certificate is not alive because: The primary key is not live because: Expired on 2023-07-04T10:52:20Z
+   2. Key 188EDD3B7B22E6A3 invalid: key is not alive because: The primary key is not live because: Expired on 2023-07-04T10:52:20Z [...] Error: GPG check FAILED
 
-your system is trying to use an old copy of the SecureDrop Release
-Signing Key. You can perform the following steps to fetch the updated
-key and remove the expired one:
+your system is trying to use an old copy of the SecureDrop Release Signing Key. You can perform the following steps to fetch the updated key and remove the expired one:
 
 #. **Start a terminal** in the ``work`` qube via the menu: |qubes_menu| **▸ Apps ▸ work ▸ Xfce Terminal**
 #. **Download the key:**
@@ -265,14 +231,10 @@ key and remove the expired one:
       uid           [ unknown] SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>
       sub   rsa4096 2021-05-10 [E] [expires: 2027-05-24]
 
-
 ``sd-*-template`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Click the Qubes menu and open a terminal in the impacted
-   template. For example, if ``sd-small-bookworm-template`` failed to
-   update, select its entry in the Qubes menu and click
-   **Terminal**.
+1. Click the Qubes menu and open a terminal in the impacted template. For example, if ``sd-small-bookworm-template`` failed to update, select its entry in the Qubes menu and click **Terminal**.
 2. Perform an interactive template update by running the the following commands:
 
    .. code-block::
@@ -280,61 +242,39 @@ key and remove the expired one:
       sudo apt update
       sudo apt upgrade
 
-   The SecureDrop and Whonix templates are based on Debian
-   GNU/Linux. The ``apt update`` comand will ensure the package
-   index is up-to-date, and the ``apt upgrade`` comand will
-   apply updates.
-3. Follow the prompts to resolve any issues. If you are
-   unsure on how to resolve an error, please contact us
-   for assistance.
+   The SecureDrop and Whonix templates are based on Debian GNU/Linux. The ``apt update`` comand will ensure the package index is up-to-date, and the ``apt upgrade`` command will apply updates.
+3. Follow the prompts to resolve any issues. If you are unsure on how to resolve an error, please contact us for assistance.
 
 ``fedora-42-xfce`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Launch the Qubes GUI Updater from the top righthand
-   tray icon. Ensure the ``fedora-42-xfce`` template is
-   selected.
-2. Run the updater, observing the output in the
-   updater dialog.
-3. If the update is not successful, contact Support
-   and provide the output you see in the dialog.
+1. Launch the Qubes GUI Updater from the top righthand tray icon. Ensure the ``fedora-42-xfce`` template is selected.
+2. Run the updater, observing the output in the updater dialog.
+3. If the update is not successful, contact Support and provide the output you see in the dialog.
 
 ``apply_dom0`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``apply_dom0`` step applies any necessary configuration
-changes to the SecureDrop Workstation. If this step fails,
-this may indicate a misconfiguration, or it could be a result
-of download failures during the operation.
+The ``apply_dom0`` step applies any necessary configuration changes to the SecureDrop Workstation. If this step fails, this may indicate a misconfiguration, or it could be a result of download failures during the operation.
 
-We recommend first re-running the updater by double-clicking
-the SecureDrop desktop icon. This may resolve transient network
-issues.
+We recommend first re-running the updater by double-clicking the SecureDrop desktop icon. This may resolve transient network issues.
 
 If this does not resolve the issue:
 
-1. Locate the ``updater-detail.log`` file in the same directory
-   as the ``updater.log`` file. This file contains more detailed
-   information about the ``apply_dom0`` step.
+1. Locate the ``updater-detail.log`` file in the same directory as the ``updater.log`` file. This file contains more detailed information about the ``apply_dom0`` step.
 
    Like the ``updater.log`` file, this file is rotated hourly.
-2. Copy this file to a networked qube by using the ``qvm-copy-to-vm``
-   command. For example, to copy the file to the ``work`` qube:
+2. Copy this file to a networked qube by using the ``qvm-copy-to-vm`` command. For example, to copy the file to the ``work`` qube:
 
    ``qvm-copy-to-vm work ~/.securedrop_updater/logs/updater-detail.log``
-3. The file can now be found in ``~/QubesIncoming/dom0/`` in the
-   ``work`` qube.
+3. The file can now be found in ``~/QubesIncoming/dom0/`` in the ``work`` qube.
 
-   Send us the file through a secure channel, such as via Signal.
-   We will provide further instructions.
+   Send us the file through a secure channel, such as via Signal. We will provide further instructions.
 
 Step 4: Restart the updater
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Click the SecureDrop Inbox desktop icon to restart the updater.
-If all issues have been resolved, the updater should run to
-completion and display a success message. If the issue
-persists, please contact us for assistance.
+Click the SecureDrop Inbox desktop icon to restart the updater. If all issues have been resolved, the updater should run to completion and display a success message. If the issue persists, please contact us for assistance.
 
 .. |blue_qube| image:: ../../images/blue_qube.png
    :alt: Qubes Domains menu

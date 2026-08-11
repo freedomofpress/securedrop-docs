@@ -3,7 +3,6 @@ BIOS update instructions
 
 .. _general_BIOS_update:
 
-
 Automatic BIOS updates
 ----------------------
 

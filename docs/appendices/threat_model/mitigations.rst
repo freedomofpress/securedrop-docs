@@ -3,19 +3,9 @@
 Attacks and countermeasures on the SecureDrop environment
 =========================================================
 
-SecureDrop is a complex ecosystem comprised of various pieces of hardware, a
-diverse codebase, multiple user roles, and varied software dependencies. As
-such, an adversary can compromise any one of these components through a variety
-of attacks, as detailed below. We've categorized attacks and countermeasures by
-SecureDrop architecture area for clarity.
+SecureDrop is a complex ecosystem comprised of various pieces of hardware, a diverse codebase, multiple user roles, and varied software dependencies. As such, an adversary can compromise any one of these components through a variety of attacks, as detailed below. We've categorized attacks and countermeasures by SecureDrop architecture area for clarity.
 
-There are certain attacks that cannot be mitigated by any of the technical or
-operational countermeasures built into SecureDrop. Attacks of a political nature
-— for example, if a Source, Journalist, or organization is threatened with legal
-action — are context-dependent, and determined by an ever-shifting climate
-around press freedoms. While these attack vectors are out of the scope of this
-document, they should be factored in to any organization's threat model with
-regional and political specificity.
+There are certain attacks that cannot be mitigated by any of the technical or operational countermeasures built into SecureDrop. Attacks of a political nature — for example, if a Source, Journalist, or organization is threatened with legal action — are context-dependent, and determined by an ever-shifting climate around press freedoms. While these attack vectors are out of the scope of this document, they should be factored in to any organization's threat model with regional and political specificity.
 
 Application code — SecureDrop repository/release
 ------------------------------------------------
