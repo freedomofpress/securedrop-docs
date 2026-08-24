@@ -1,5 +1,5 @@
-Working with submissions
-========================
+Working with submitted files
+============================
 
 When a Source submits files, you will see a Download button in the conversation flow, a file size, and light-gray text that says "Encrypted File."
 
@@ -18,10 +18,10 @@ Once the file has been downloaded and decrypted, the filename will be visible, a
 
 |screenshot_file_download_successful|
 
-Viewing submissions on the SecureDrop Workstation
----------------------------------------------------
+Viewing submitted files on the SecureDrop Workstation
+-----------------------------------------------------
 
-To view a downloaded submission, click its filename. This will open the file in a temporary environment, called a "disposable" qube. The file you clicked on will open in a new window with a different colored border and a window title prefixed with "disp" (meaning disposable).
+To view a downloaded file, click its filename. This will open the file in a temporary environment, called a "disposable" qube. The file you clicked on will open in a new window with a different colored border and a window title prefixed with "disp" (meaning disposable).
 
 |screenshot_dispvm|
 
@@ -46,16 +46,16 @@ A full list of supported filetypes can be found `here <https://github.com/freedo
 
 .. _`the Qubes OS documentation`: https://www.qubes-os.org
 
-Printing submissions from the SecureDrop Workstation
-------------------------------------------------------
+Printing documents from SecureDrop Inbox
+------------------------------------
 
 To print a document, a :doc:`compatible printer <../admin/installation/hardware>`  must be plugged into the computer's USB port.
 
 1. Click "Print" button and wait for ``sd-devices`` qube to start.
 2. You will prompted to attach your printer.
-3. A Print Document dialog will appear, from which you can configure different print options before printing the document.
+3. A **Print Document** dialog will appear, from which you can configure different print options before printing the document.
 
-Exporting submissions from the SecureDrop Workstation
+Exporting files from the SecureDrop Workstation
 -------------------------------------------------------
 
 .. important::
@@ -67,7 +67,7 @@ If you must copy a file from your SecureDrop Workstation to another computer or 
 Exporting to an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for exporting submissions.
+Currently, a LUKS- or VeraCrypt-encrypted USB flash drive is required for exporting files.
 
 1. Insert the USB flash drive and wait for the ``sd-devices`` qube to start.
 2. If your drive is using VeraCrypt, you will need to unlock it manually:
@@ -122,15 +122,15 @@ Securely erasing an Export Device can only be done by re-formatting and re-encry
 
 You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
 
-Safely working with submissions outside the SecureDrop Workstation
---------------------------------------------------------------------
+Safely working with submitted files outside the SecureDrop Workstation
+----------------------------------------------------------------------
 
 .. _malware_risks:
 
 Risks from malware
 ~~~~~~~~~~~~~~~~~~
 
-SecureDrop does not scan for or remove malware in submissions you receive. There are important steps you can take to protect yourself:
+SecureDrop does not scan for or remove malware in files you receive. There are important steps you can take to protect yourself:
 
 1. **Keep your SecureDrop Workstation up-to-date.**
 2. **Print documents from the SecureDrop Workstation instead of exporting them digitally, whenever possible.**
@@ -147,14 +147,14 @@ SecureDrop does not scan for or remove malware in submissions you receive. There
 
    QR codes can contain malicious links that your device will automatically visit. This can alert third-parties to your actions, reveal the identities of your Sources, and breach the isolation benefits of using Qubes.
 
-   In general, be careful when opening any links provided in a SecureDrop submission. If you are unsure if a link is safe to click, you should consult internally, or contact Freedom of the Press Foundation for assistance.
-5. **Don't photograph submissions using your smartphone, and be careful with all digital photography**.
+   In general, be careful when opening any links provided to you by a Source. If you are unsure if a link is safe to click, you should consult internally, or contact Freedom of the Press Foundation for assistance.
+5. **Don't photograph your computer screen using your smartphone, and be careful with all digital photography**.
 
    Many smartphones are configured to back up photographs to cloud services, immediately or intermittently; newer digital cameras have similar functionality. Not all backup settings may be visible to you.
 
    Any digital photograph will include certain metadata by default, which may reveal sensitive information about your SecureDrop usage patterns (potentially including GPS coordinates) to anyone who gains access to the file.
 
-Fully mitigating the risks of malware received via SecureDrop is beyond the scope of this documentation. If you have questions, you can :doc:`contact us </introduction/getting_support>`. Please do **NOT** disclose details about the contents of any submission you have received.
+Fully mitigating the risks of malware received via SecureDrop is beyond the scope of this documentation. If you have questions, you can :doc:`contact us </introduction/getting_support>`. Please do **NOT** disclose details about the contents of any communication you have had with Sources.
 
 .. tip::
 
