@@ -39,7 +39,7 @@ Once you return to the SecureDrop page, it should stop displaying the warning. I
 
 |Source Interface with JavaScript Disabled|
 
-You should now see a screen that shows the unique codename that SecureDrop has generated for you. Note that your codename will not be the same as the codename shown in the image below. It is extremely important that you both remember this code and keep it secret. After submitting documents, you will need to provide this code to log back in and check for responses.
+You should now see a screen that shows the unique codename that SecureDrop has generated for you. Note that your codename will not be the same as the codename shown in the image below. It is extremely important that you both remember this code and keep it secret. You will need to provide this code to log back in and check for responses from Journalists or send additional messages and files in the future.
 
 |Memorizing your codename|
 
@@ -47,19 +47,19 @@ The best way to protect your codename is to memorize it. If you cannot memorize 
 
 Your codename is associated with your pseudonymous account and all of your activity on the SecureDrop server. In order to preserve your anonymity, you should avoid creating physical or digital associations between yourself and your codename as much as possible.
 
-Once you have generated a codename and put it somewhere safe, click **Submit Documents**.
+Once you have been assigned a codename and put it somewhere safe, click **Continue*.
 
-You will next be brought to the submission page, where you may upload a document, enter a message to send to Journalists, or both. You can only submit one document at a time, so you may want to combine several files into a ZIP archive if necessary. The maximum submission size is currently 500MB. If the files you wish to upload are over that limit, we recommend that you send a message to the Journalist explaining this, so that they can set up another method for transferring the documents.
+You will next be brought to the submission page, where you may upload a file, enter a message to send to Journalists, or both. You can only submit one file at a time, so you may want to combine several files into a ZIP archive if necessary. The maximum file size is currently 500MB. If the files you wish to upload are over that limit, we recommend that you send a message to the Journalist explaining this, so that they can set up another method for transferring the files.
 
 |Submit a document|
 
-When your submission is ready, click **Submit**.
+When you are finished composing your message and/or upload your files, click **Submit**.
 
-After clicking **Submit**, a confirmation page should appear, showing that your message and/or documents have been sent successfully. On this page you can make another submission or view responses to your previous messages.
+After clicking **Submit**, a confirmation page should appear, showing that your message and/or files have been sent successfully. On this page you can send another message or file, or view responses to your previous messages.
 
 |Confirmation page|
 
-Once you are finished submitting documents, be certain you have saved your secret codename and then click the **Log out** button.
+Once you are finished, be certain you have saved your secret codename and then click the **Log out** button.
 
 The final step to clearing your session is to restart Tor Browser for optimal security. After logging out, you should see a new page recommending you to click the **New Identity** button in the Tor Browser toolbar.
 
