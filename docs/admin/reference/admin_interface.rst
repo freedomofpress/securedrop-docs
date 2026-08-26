@@ -12,7 +12,7 @@ By default, you will be logged in to the Admin Interface's source list page.
 
 |SecureDrop main page|
 
-In the course of normal administration operations you should not need to view messages from Sources, but if you do, you can find information on managing submissions in the :doc:`journalist guide <../../journalist/journalist>`.
+In the course of normal administration operations you should not need to view messages or interact with messages from Sources. If needed, you can consult the :doc:`journalist guide <../../journalist/journalist>`.
 
 .. note::
   If you have lost your login information or your two-factor authentication is no longer valid, you can create another account with admin privileges via the command line on the Application Server. See :ref:`here <Create Admin CLI>` for more information.
@@ -29,7 +29,7 @@ You can use the Admin Interface to add and remove users, and to reset their cred
 Adding users
 ------------
 
-After logging in, you can add new user accounts for the Journalists at your organization who will be checking the system for submissions. Make sure the Journalist is physically in the same room as you when you do this, as they will have to be present to enable two-factor authentication. SecureDrop supports the use of either a smartphone authenticator app or a Yubikey for two-factor authentication. If an app is to be used, the Journalist should install it before proceeding with the account setup.
+After logging in, you can add new user accounts for the Journalists at your organization who will be checking the SecureDrop Inbox. Make sure the Journalist is physically in the same room as you when you do this, as they will have to be present to enable two-factor authentication. SecureDrop supports the use of either a smartphone authenticator app or a Yubikey for two-factor authentication. If an app is to be used, the Journalist should install it before proceeding with the account setup.
 
 .. include:: ../../includes/otp-app.txt
 
@@ -176,12 +176,12 @@ You should receive an OSSEC alert email at the address specified during the inst
 Submission preferences
 ----------------------
 
-The Submission Preferences subsection allows you to restrict the types of submissions accepted by your instance.
+The Submission Preferences subsection allows you to restrict what Sources can send to your instance.
 
 Disabling document uploads
 --------------------------
 
-By default, SecureDrop supports both text submissions and document uploads. If you only want to receive text messages, you can disable uploads as follows:
+By default, SecureDrop supports both text messages and file uploads. If you only want to receive text messages, you can disable uploads as follows:
 
 #. Check the **Prevent sources from uploading documents** checkbox
 #. Click **Update Submission Preferences**

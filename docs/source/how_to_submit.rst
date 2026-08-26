@@ -47,7 +47,7 @@ The best way to protect your codename is to memorize it. If you cannot memorize 
 
 Your codename is associated with your pseudonymous account and all of your activity on the SecureDrop server. In order to preserve your anonymity, you should avoid creating physical or digital associations between yourself and your codename as much as possible.
 
-Once you have been assigned a codename and put it somewhere safe, click **Continue*.
+Once you have been assigned a codename and put it somewhere safe, click **Continue**.
 
 You will next be brought to the submission page, where you may upload a file, enter a message to send to Journalists, or both. You can only submit one file at a time, so you may want to combine several files into a ZIP archive if necessary. The maximum file size is currently 500MB. If the files you wish to upload are over that limit, we recommend that you send a message to the Journalist explaining this, so that they can set up another method for transferring the files.
 

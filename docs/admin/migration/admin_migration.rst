@@ -63,7 +63,7 @@ Now that your new Qubes-based Admin Workstation is prepared, you can proceed wit
 Import Submission Private Key
 -------------------------------
 
-In order to decrypt submissions, you will need a copy of the `Submission Private Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_ from your SecureDrop instance's Secure Viewing Station.
+In order to decrypt messages and files sent to your SecureDrop, you will need a copy of the `Submission Private Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_ from your SecureDrop instance's Secure Viewing Station.
 
 To protect this key and preserve the air gap, you will need to connect the Secure Viewing Station USB flash drive to a qube with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to the ``dom0`` qube from another qube - instead, follow the steps below:
 

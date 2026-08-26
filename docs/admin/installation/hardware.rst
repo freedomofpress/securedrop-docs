@@ -99,7 +99,7 @@ Two-factor authentication is used when connecting to different parts of the Secu
 USB flash drives
 ^^^^^^^^^^^^^^^^
 
-Journalists need physical media (known as the Export Device) to copy submissions to their everyday workstation.
+Journalists need physical media (known as the Export Device) to export files or conversation transcripts to their everyday workstation.
 
 Our recommendation is to use USB flash drives, in combination with volume-level encryption and careful data hygiene. We also urge the use of a secure printer or similar analog conversions to export documents from the SecureDrop Workstation, whenever possible.
 

@@ -51,7 +51,7 @@ A file contains valuable `metadata <https://ssd.eff.org/en/module/why-metadata-m
 
 Your online behavior can be extremely revealing. Regularly monitoring our publication's social media or website can potentially flag you as a source. Take great care to think about what your online behavior might reveal, and consider using Tor Browser to mitigate such monitoring.
 
-Our organization retains strict access control over our SecureDrop project. A select few journalists within our organization will have access to SecureDrop submissions. We control the servers that store your submissions, so no third party has direct access to the metadata or content of what you send us.
+Our organization retains strict access control over our SecureDrop project. A select few journalists within our organization will have access to the messages and files you have sent via SecureDrop. We control the servers that store this data, so no third party has direct access to the metadata or content of what you send us.
 
 Do not discuss leaking or whistleblowing, even with trusted contacts.
 

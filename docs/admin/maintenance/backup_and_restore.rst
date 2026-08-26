@@ -1,16 +1,16 @@
 Backing up and restoring servers
 ================================
 
-Maintaining regular backups helps guard against data loss and hardware failure. Having a recent backup will allow you to redeploy SecureDrop without changing onion addresses, recreating journalist accounts, or losing previous submissions from Sources.
+Maintaining regular backups helps guard against data loss and hardware failure. Having a recent backup will allow you to redeploy SecureDrop without changing onion addresses, recreating journalist accounts, or losing stored submitted files and conversation histories with Sources.
 
-.. note:: Only the Application Server is backed up and restored, including historical submissions and both Source Interface and Admin Interface onion addresses. The Monitor Server needs to be configured from scratch in the event of a hardware migration.
+.. note:: Only the Application Server is backed up and restored, including files received from Sources and messages exchanged between Sources and Journalists, as well as both Source Interface and Admin Interface onion addresses. The Monitor Server needs to be configured from scratch in the event of a hardware migration.
 
 Minimizing disk use
 -------------------
 
-Since the backup and restore operations both involve transferring *all* of your SecureDrop's stored submissions over Tor, the process can take a long time.
+Since the backup and restore operations both involve transferring *all* of your SecureDrop's stored data over Tor, the process can take a long time.
 
-Encouraging Journalists to regularly delete older, unneeded submissions will save time and improve reliability when doing backups.
+Encouraging Journalists to regularly delete older, unneeded conversations will save time and improve reliability when doing backups.
 
 .. tip:: Although it varies, the average throughput of an Onion Service is about 3 Mbps, or roughly 90 minutes for 2GB. Plan your backup and restore accordingly.
 
@@ -22,9 +22,9 @@ On the :ref:`Admin Workstation<glossary_admin_workstation>`, open a Terminal and
 
 Compare the output of this command (which approximates the size of a backup archive) to the amount of free space on your Tails persistent volume via Tails' **Disks** utility to ensure you have sufficient space to perform a backup.
 
-If you find you cannot perform a backup or restore due to this constraint, and have already deleted old submissions, contact us through the `SecureDrop Support Portal`_.
+If you find you cannot perform a backup or restore due to this constraint, and have already deleted older data, contact us through the `SecureDrop Support Portal`_.
 
-.. note:: Submissions are deleted asynchronously and one at a time, so if you delete a lot of submissions, it may take a while for all of the submissions to actually be deleted. SecureDrop uses ``shred`` to securely erase files, which takes significantly more time than normal file deletion. You can monitor the progress of queued deletion jobs by logging in to the Application Server over SSH and running
+.. note:: Messages and files are deleted asynchronously and one at a time, so if you delete a lot at once, it may take a while for all of the deletions to complete. SecureDrop uses ``shred`` to securely erase files, which takes significantly more time than normal file deletion. You can monitor the progress of queued deletion jobs by logging in to the Application Server over SSH and running
 
     .. code:: sh
     
@@ -57,7 +57,7 @@ When you are ready to begin the backup, run
 
    securedrop-admin backup
 
-The backup command will display updates on its progress as the backup is created. Run time will vary depending on connectivity and the number of submissions saved on the Application Server.
+The backup command will display updates on its progress as the backup is created. Run time will vary depending on connectivity and the number of messages and files saved on the Application Server.
 
 When the backup action is complete, the backup will be stored as a compressed archive in ``~/.config/securedrop-admin``. The filename will begin ``sd-backup``, followed by a timestamp of when the backup was initiated, and ending with ``.tar.gz``. You can find the full path to the backup archive in the output of the backup command.
 
@@ -94,7 +94,7 @@ To restore an existing instance to a previous state, run the command:
 
 Make sure to replace ``sd-backup-2020-07-22--01-06-25.tar.gz`` with the filename for your backup archive.
 
-This command attempts to restore submissions, source and journalist accounts, and configuration details for the Onion Services used by the web interfaces and SSH (if configured).
+This command attempts to restore message history, submitted files, source and journalist accounts, and configuration details for the Onion Services used by the web interfaces and SSH (if configured).
 
 .. _migrating:
 
@@ -219,7 +219,7 @@ Data-only restores
 
 The ``restore`` command normally restores both the data and the Tor configuration of an instance, including the onion addresses for your instance.
 
-You may, however, restore data, such as submissions and journalist and source accounts, without altering an instance's Tor configuration, with the following command:
+You may, however, restore data, such as submitted files, message history, and journalist and source accounts, without altering an instance's Tor configuration, with the following command:
 
 .. code:: sh
 

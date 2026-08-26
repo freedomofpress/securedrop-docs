@@ -74,7 +74,7 @@ Minimum security requirements for a SecureDrop Workstation
 
 .. TODO Clarify differences between Journalist and Admin Workstations
 
-A SecureDrop Workstation contains both a copy of the :ref:`Submission Private Key<glossary_submission_key>`, and encrypted and decrypted messages and submissions. It's critical to ensure that appropriate security practices are applied to a SecureDrop Workstation.
+A SecureDrop Workstation contains both a copy of the :ref:`Submission Private Key<glossary_submission_key>`, and encrypted and decrypted messages and files received from Sources. It's critical to ensure that appropriate security practices are applied to a SecureDrop Workstation.
 
 - SecureDrop Workstations should always be powered off when not in use, and stored somewhere secure. Never leave them unattended.
 - A wired Internet connection that does not restrict Tor must be available for the SecureDrop Workstation during installation. This connection should either be dedicated to SecureDrop Workstation, or should be on a fully segregated subnet from the rest of the corporate network.

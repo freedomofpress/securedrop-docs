@@ -47,7 +47,7 @@ A full list of supported filetypes can be found `here <https://github.com/freedo
 .. _`the Qubes OS documentation`: https://www.qubes-os.org
 
 Printing documents from SecureDrop Inbox
-------------------------------------
+----------------------------------------
 
 To print a document, a :doc:`compatible printer <../admin/installation/hardware>`  must be plugged into the computer's USB port.
 

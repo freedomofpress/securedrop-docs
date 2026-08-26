@@ -31,7 +31,7 @@ The Admin Workstation is a laptop running Qubes OS, initially configured as a Se
 Application Server
 ------------------
 
-The Application Server is a physical computer housed on-premises running the SecureDrop server application. Based on our :doc:`recommendations</admin/installation/hardware>`, this is typically a NUC or similar Mini PC. The Application hosts the website that Sources access (the Source Interface), the Admin Interface, and the API endpoint that SecureDrop Inbox connects to so Journalists may download and reply to submissions.
+The Application Server is a physical computer housed on-premises running the SecureDrop server application. Based on our :doc:`recommendations</admin/installation/hardware>`, this is typically a NUC or similar Mini PC. The Application hosts the website that Sources access (the Source Interface), the Admin Interface, and the API endpoint that SecureDrop Inbox connects to so Journalists may download and reply to messages and files sent by Sources.
 
 Instructions and tips for accessing the Application Server over SSH are on the :ref:`SSH access page<server SSH access>`.
 
@@ -118,7 +118,7 @@ Instructions for using SecureDrop Inbox appear in our :doc:`Journalist Guide </j
 SecureDrop Workstation
 ----------------------
 
-The SecureDrop Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling submissions. Each Journalist may have their own SecureDrop Workstation, or one may be shared among several Journalists.
+The SecureDrop Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling untrusted files submitted by Sources. Each Journalist may have their own SecureDrop Workstation, or one may be shared among several Journalists.
 
 Read more about :doc:`SecureDrop Workstation and Qubes OS</introduction/securedrop_workstation>`.
 
@@ -145,8 +145,8 @@ Instructions for using the Source Interface are available in our :doc:`Source Gu
 Submission Key
 --------------
 
-The Submission Key is the GPG keypair used to encrypt and decrypt messages and attachments sent to your SecureDrop. Because the public key and private key must be treated very differently, we sometimes refer to them explicitly as the Submission Public Key and the Submission Private Key.
+The Submission Key is the GPG keypair used to encrypt and decrypt messages and files sent to your SecureDrop. Because the public key and private key must be treated very differently, we sometimes refer to them explicitly as the Submission Public Key and the Submission Private Key.
 
 The Submission Public Key is uploaded to your SecureDrop servers as part of the installation process. Once your SecureDrop is online, anyone will be able to download it.
 
-The Submission Private Key is used to decrypt all submissions to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a SecureDrop Workstation or on offline backup storage.
+The Submission Private Key is used to decrypt all messages and files sent to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a SecureDrop Workstation or on offline backup storage.
