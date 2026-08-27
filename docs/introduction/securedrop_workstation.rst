@@ -33,7 +33,7 @@ SecureDrop Workstation networking architecture
 
 One key security feature of Qubes OS is that it enables users to configure the appropriate level of network access for each qube. For example, you could have a qube for password storage that has no network access, a work qube that is firewalled to only connect to work servers, and a personal qube that always uses Tor.
 
-SecureDrop Workstation tightly controls access to the network, in order to prevent the exfiltration of messages and files sent by Sources, replies, or encryption keys by adversaries. Specifically, the following qubes have no network access:
+SecureDrop Workstation tightly controls access to the network, in order to prevent adversaries from exfiltration of messages and files sent by Sources, replies, or encryption keys. Specifically, the following qubes have no network access:
 
 - ``sd-app``, which runs :ref:`SecureDrop Inbox<glossary_securedrop_inbox>`, and holds decrypted messages, replies, and attachments.
 - ``sd-viewer``, which is the template for disposable qubes used for opening and viewing attachments.

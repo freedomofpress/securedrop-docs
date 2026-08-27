@@ -12,7 +12,7 @@ By default, you will be logged in to the Admin Interface's source list page.
 
 |SecureDrop main page|
 
-In the course of normal administration operations you should not need to view messages or interact with messages from Sources. If needed, you can consult the :doc:`journalist guide <../../journalist/journalist>`.
+In the course of normal administration operations you should not need to view messages or interact with messages from Sources. Should you need to, you can consult the :doc:`journalist guide <../../journalist/journalist>`.
 
 .. note::
   If you have lost your login information or your two-factor authentication is no longer valid, you can create another account with admin privileges via the command line on the Application Server. See :ref:`here <Create Admin CLI>` for more information.
