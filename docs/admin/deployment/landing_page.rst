@@ -22,7 +22,7 @@ The content below presents sample text for the SecureDrop component of a news or
 
 **What is SecureDrop?**
 
-SecureDrop is an anonymity tool for journalists and whistleblowers. As a source, you can use our SecureDrop installation to anonymously submit documents to our organization. Our journalists use SecureDrop to receive source materials and securely communicate with anonymous contacts.
+SecureDrop is an anonymity tool for journalists and whistleblowers. As a source, you can use our SecureDrop installation to anonymously submit documents and other files to our organization. Our journalists use SecureDrop to receive source materials and securely communicate with anonymous contacts.
 
 **What should I know before submitting material through SecureDrop?**
 

@@ -178,15 +178,15 @@ Submission preferences
 
 The Submission Preferences subsection allows you to restrict what Sources can send to your instance.
 
-Disabling document uploads
---------------------------
+Disabling files uploads
+-----------------------
 
 By default, SecureDrop supports both text messages and file uploads. If you only want to receive text messages, you can disable uploads as follows:
 
 #. Check the **Prevent sources from uploading documents** checkbox
 #. Click **Update Submission Preferences**
 
-This change will be applied immediately on the Source Interface. Documents that were previously uploaded will still be available via the Admin Interface.
+This change will be applied immediately on the Source Interface. Files that were previously uploaded will still be available via the Admin Interface.
 
 Preventing short initial messages
 ---------------------------------
@@ -197,7 +197,7 @@ By default, SecureDrop does not apply a minimum length requirement to messages. 
 #. Enter the desired minimum length in the field below the checkbox
 #. Click **Update Submission Preferences**
 
-This change will be applied immediately on the Source Interface. Initial messages that are too short will be rejected, with an error message informing Sources of the requirement. This requirement will not be applied to initial messages that also include a document, or to subsequent messages in the conversation.
+This change will be applied immediately on the Source Interface. Initial messages that are too short will be rejected, with an error message informing Sources of the requirement. This requirement will not be applied to initial messages that also include an uploaded file, or to subsequent messages in the conversation.
 
 To remove the requirement, uncheck the checkbox and click **Update Submission Preferences**.
 

@@ -40,7 +40,7 @@ Instructions and tips for accessing the Application Server over SSH are on the :
 Export Device
 -------------
 
-The Export Device is a physical USB flash drive used to transfer decrypted documents from a SecureDrop Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
+The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a SecureDrop Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
 
 Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/installation/provisioning_usb>`.
 
@@ -49,9 +49,9 @@ Please see the detailed security recommendations for the choice, configuration a
 Journalist
 ----------
 
-The Journalist uses SecureDrop to communicate with and download documents submitted by the Source. Journalists do this by using SecureDrop Inbox on a SecureDrop Workstation laptop to connect to the Application Server.
+The Journalist uses SecureDrop to communicate with Sources and review files they submit. Journalists do this by using SecureDrop Inbox on a SecureDrop Workstation laptop to connect to the Application Server.
 
-If a Journalist chooses to release any of these documents, they can be prepared for publication on the SecureDrop Workstation before being transferred to another computer.
+If a Journalist chooses to release any submitted files, they can be prepared for publication on the SecureDrop Workstation before being transferred to another computer.
 
 Instructions for using SecureDrop as a Journalist are available in our :doc:`Journalist Guide </journalist/journalist>`.
 
@@ -127,7 +127,7 @@ Read more about :doc:`SecureDrop Workstation and Qubes OS</introduction/securedr
 Source
 ------
 
-The Source is the person who submits documents to an organization's SecureDrop and may use SecureDrop to communicate with a Journalist. A Source will always access SecureDrop through the Source Interface and must do so using Tor.
+The Source is the person who sends messages and uploads files to an organization's SecureDrop and may use SecureDrop to communicate with a Journalist. A Source will always access SecureDrop through the Source Interface and must do so using Tor.
 
 Instructions for using SecureDrop as a Source are available in our :doc:`Source Guide </source/source>`.
 
@@ -136,7 +136,7 @@ Instructions for using SecureDrop as a Source are available in our :doc:`Source 
 Source Interface
 ----------------
 
-The Source Interface is the website that Sources will access to submit documents and communicate with Journalists. This site is and Onion Service hosted on the Application Server and can only be accessed through Tor.
+The Source Interface is the website that Sources will access to communicate with Journalists and submit documents or other files. This site is an Onion Service hosted on the Application Server and can only be accessed through Tor.
 
 Instructions for using the Source Interface are available in our :doc:`Source Guide </source/source>`.
 

@@ -60,7 +60,7 @@ Exporting files from the SecureDrop Workstation
 
 .. important::
 
-   SecureDrop does not scan for or remove malware. If the file you received contains malware targeting the operating system and applications running on your everyday workstation, copying it in its original form carries the risk of spreading malware to that computer. Make sure you understand the risks, and consider other methods to export the document (e.g., print).
+   SecureDrop does not scan for or remove malware. If the file you received contains malware targeting the operating system and applications running on your everyday workstation, copying it in its original form carries the risk of spreading malware to that computer. Make sure you understand the risks, and consider other methods to export the file (e.g., printings documents).
 
 If you must copy a file from your SecureDrop Workstation to another computer or device in digital form, our :doc:`recommendation </admin/installation/provisioning_usb>` is that Journalists are provided with an Export Device, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__. These instructions assume that you are following the recommended workflow. If you are unsure, ask your Administrator.
 
