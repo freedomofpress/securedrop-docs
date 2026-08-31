@@ -140,7 +140,7 @@ To clean up the affected records you would run (again, preferably after a backup
 
    ./manage.py delete-disconnected-db-submissions
 
-Even when messages and files are completely removed from the application server, they may still exist in backups in an encrypted form. We recommend that you delete old backup files with ``shred``, which is available on Tails.
+Even when messages and files are completely removed from the Application Server, they may still exist in :doc:`backups </admin/maintenance/backup_and_restore>` in an encrypted form.
 
 Monitor Server
 ----------------
