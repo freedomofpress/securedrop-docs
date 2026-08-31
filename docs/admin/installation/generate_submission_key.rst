@@ -3,7 +3,7 @@ Generate the Submission Key
 
 .. These instructions will be replaced with whatever mechanism the all-on-Qubes SecureDrop Workstation uses to generate the submission key.
 
-When Source sends a message or file via SecureDrop, it is automatically encrypted with the instance's :ref:`Submission Key<glossary_submission_key>`. The private part of this key is only stored in an isolated qube on the SecureDrop Workstation which is never connected to the Internet. Messages and files sent through SecureDrop can only be decrypted on a SecureDrop Workstation using this key.
+When a Source sends a message or file via SecureDrop, it is automatically encrypted with the instance's :ref:`Submission Key<glossary_submission_key>`. The private part of this key is only stored in an isolated qube on the SecureDrop Workstation which is never connected to the Internet. Messages and files sent through SecureDrop can only be decrypted on a SecureDrop Workstation using this key.
 
 We will now generate the Submission Key. If you aren't still logged into your Secure Viewing Station from the previous step, boot it using its Tails USB flash drive, with persistence enabled.
 
