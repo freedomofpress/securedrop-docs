@@ -106,8 +106,8 @@ If you make changes to your Apache configuration, you may want to restart the we
 
 .. _submission-cleanup:
 
-Cleaning up orphan files
-^^^^^^^^^^^^^^^^^^^^^^^^
+Removing files that should have been deleted
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When submitted messages or files are deleted, their database records are deleted and the encrypted files are securely wiped. For large files, secure removal can take some time, and it's possible, though unlikely, that it can be interrupted, for example by a server reboot. In older versions of SecureDrop this could leave a files present without a database record.
 
