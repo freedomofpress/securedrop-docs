@@ -178,7 +178,7 @@ Submission preferences
 
 The Submission Preferences subsection allows you to restrict what Sources can send to your instance.
 
-Disabling files uploads
+Disabling file uploads
 -----------------------
 
 By default, SecureDrop supports both text messages and file uploads. If you only want to receive text messages, you can disable uploads as follows:
