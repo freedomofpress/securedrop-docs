@@ -53,7 +53,7 @@ You will next be brought to the submission page, where you may upload a file, en
 
 |Submit a document|
 
-When you are finished composing your message and/or upload your files, click **Submit**.
+When you are finished composing your message and/or uploading your files, click **Submit**.
 
 After clicking **Submit**, a confirmation page should appear, showing that your message and/or files have been sent successfully. On this page you can send another message or file, or view responses to your previous messages.
 
