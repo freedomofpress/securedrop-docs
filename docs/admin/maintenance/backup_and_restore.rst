@@ -3,7 +3,7 @@ Backing up and restoring servers
 
 Maintaining regular backups helps guard against data loss and hardware failure. Having a recent backup will allow you to redeploy SecureDrop without changing onion addresses, recreating journalist accounts, or losing stored submitted files and conversation histories with Sources.
 
-.. note:: Only the Application Server is backed up and restored, as it contains encrypted messages and files and the Source Interface and Admin Interface onion addresses. The Monitor Server needs to be configured from scratch in the event of a hardware migration.
+.. note:: Only the Application Server is backed up and restored, as it contains encrypted messages and files, and the Source Interface and Admin Interface onion addresses. The Monitor Server needs to be configured from scratch in the event of a hardware migration.
 
 Minimizing disk use
 -------------------
