@@ -106,10 +106,10 @@ If you make changes to your Apache configuration, you may want to restart the we
 
 .. _submission-cleanup:
 
-Cleaning up deleted submissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Removing files that should have been deleted
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When submissions are deleted through the web interface, their database records are deleted and their encrypted files are securely wiped. For large files, secure removal can take some time, and it's possible, though unlikely, that it can be interrupted, for example by a server reboot. In older versions of SecureDrop this could leave a submission file present without a database record.
+When submitted messages or files are deleted, their database records are deleted and the encrypted files are securely wiped. For large files, secure removal can take some time, and it's possible, though unlikely, that it can be interrupted, for example by a server reboot. In older versions of SecureDrop this could leave a files present without a database record.
 
 As of SecureDrop 1.0.0, automated checks send OSSEC alerts when this situation is detected, recommending you run ``manage.py list-disconnected-fs-submissions`` to see the files affected. As with any ``manage.py`` usage, you would run the following:
 
@@ -128,7 +128,7 @@ You then have the option of running:
 
 to clean them up. As with any potentially destructive operation, it's recommended that you :doc:`back the system up <../maintenance/backup_and_restore>` before doing so.
 
-There is also the inverse scenario, where a database record could point to a file that no longer exists. This would usually only have happened as a result of disaster recovery, where perhaps the database was recovered from a failed hard drive, but some submissions could not be. The OSSEC alert in this case would recommend running:
+There is also the inverse scenario, where a database record could point to a file that no longer exists. This would usually only have happened as a result of disaster recovery, where perhaps the database was recovered from a failed hard drive, but some messages and files were not. The OSSEC alert in this case would recommend running:
 
 .. code:: sh
 
@@ -140,7 +140,7 @@ To clean up the affected records you would run (again, preferably after a backup
 
    ./manage.py delete-disconnected-db-submissions
 
-Even when submissions are completely removed from the application server, their encrypted files may still exist in backups. We recommend that you delete old backup files with ``shred``, which is available on Tails.
+Even when messages and files are completely removed from the Application Server, they may still exist in :doc:`backups </admin/maintenance/backup_and_restore>` in an encrypted form.
 
 Monitor Server
 ----------------

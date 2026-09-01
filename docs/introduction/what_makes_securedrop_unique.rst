@@ -21,16 +21,16 @@ Even if a government serves a court order directly to a news organization to com
 
 The source can only log into SecureDrop through Tor Browser, which masks the source's IP address to begin with, so there is no indication who the source is (unless they disclose it) and where they are sending information from. The Tor IP address, the computer, and the browser type that the source is using is not logged either.
 
-For each source, only the time and date of each submission is logged on the server. When a source sends a new message, the time and date of the last message is overwritten. This means that there won't be a trail of metadata showing exactly when the source and journalist were talking.
+For each source, only the time and date of each message is logged on the server. When a source sends a new message, the time and date of the last message is overwritten. This means that there won't be a trail of metadata showing exactly when the source and journalist were talking.
 
 In addition, sources cannot create a custom username that could reveal information about them. Instead, SecureDrop automatically generates two random codenames, one to show to the source and another to the journalists using the system.
 
 Encrypted and air-gapped
 ------------------------
 
-Communications through SecureDrop are both encrypted in transit, so messages cannot be easily intercepted and read while they are traversing the Internet and are also encrypted on the server so if any attacker manages to break into the server, they would not be able to read past messages.
+Communications through SecureDrop are both encrypted in transit, so messages and files cannot be easily intercepted and read while they are traversing the Internet and are also encrypted on the server so if any attacker manages to break into the server, they would not be able to view past communications.
 
-In addition, the decryption key for SecureDrop submissions sits in an isolated virtual machine inside a hardened operating system that opens submissions in a temporary, non-networked environment.
+In addition, the decryption key for SecureDrop submissions sits in an isolated virtual machine inside a hardened operating system (:doc:`Qubes OS</introduction/securedrop_workstation>`). Submitted files are opened in a disposable, isolated, non-networked environment.
 
 Protects against hackers
 ------------------------

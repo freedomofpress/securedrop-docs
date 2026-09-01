@@ -12,7 +12,7 @@ Off-boarding checklist
 - :doc:`Inform the SecureDrop Support </introduction/getting_support>` team that the user should be removed from any support Signal groups, and indicate if any new staff members should be added.
 - Delete the user's account on the Admin Interface.
 - Retrieve :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` laptops, *Backup* drive(s), and any other SecureDrop hardware or materials.
-- If the user receives email alerts (OSSEC alerts or daily submission notifications), either directly or as a member of an email alias, remove them from those alerts and :ref:`set up someone new <ossec_guide>` to receive those alerts.
+- If the user receives email alerts (OSSEC alerts or Daily Journalist Alerts), either directly or as a member of an email alias, remove them from those alerts and :ref:`set up someone new <ossec_guide>` to receive those alerts.
 - (Circumstance-dependent) If you have specific concerns that the Submission Private Key has been compromised, you should consider a full reinstall of SecureDrop. At minimum, you should :ref:`rotate the Submission Key <rotate_submission_key>`.
 
 Additional steps for off-boarding Administrators

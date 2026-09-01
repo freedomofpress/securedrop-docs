@@ -9,7 +9,7 @@ If the location hosting your SecureDrop servers is going to be empty for extende
 1. Ensure that the room where the servers are installed is locked by default, and that only authorized personnel have access. If possible, have access logged.
 2. If the server room is covered by CCTV, verify that the footage will be monitored or reviewed periodically.
 3. Ask to have adjacent corridors included in any regular security patrols.
-4. Ask Journalists to purge old submissions, to reduce the impact if the servers are compromised (this is good general practice in any case).
+4. Ask Journalists to delete unneeded Source accounts and conversations, to reduce the impact if the servers are compromised (this is good general practice in any case).
 5. If your SecureDrop instance is set up to allow SSH-over-LAN admin access, consider switching it to SSH-over-Tor access instead. To do so, you will need to update the server configuration using the ``sd-admin`` qube.
 
 In some cases, if you are not able to ensure the security of your instance during periods of prolonged absence, it may be better to relocate it, or in extreme circumstances, temporarily take it down. If you decide to take down your SecureDrop instance, we recommend the following steps:
@@ -19,7 +19,7 @@ In some cases, if you are not able to ensure the security of your instance durin
 3. :doc:`Back up your servers <../maintenance/backup_and_restore>`.
 4. Power down the servers, and remove them and the network firewall from the server room. Store the equipment securely offsite.
 
-.. warning:: By default the SecureDrop servers are not set up with full disk encryption enabled, to allow for hands-off reboots. This means that it is crucial that they be kept secure. If the servers are lost or stolen, an adversary would gain access to all encrypted submissions and messages. While they would not be able to decrypt them, this would still provide valuable metadata about source conversations.
+.. warning:: By default the SecureDrop servers are not set up with full disk encryption enabled, to allow for hands-off reboots. This means that it is crucial that they be kept secure. If the servers are lost or stolen, an adversary would gain access to all encrypted files and messages sent by Sources that have not been deleted. While they would not be able to decrypt them, this would still provide valuable metadata about source conversations.
 
 In most cases, restoring the instance, whether in their original hosting location or elsewhere, is a matter of reconnecting the servers to the firewall, attaching a WAN connection that allows unfiltered access to Tor to the firewall WAN port, and powering everything on.
 
@@ -35,9 +35,9 @@ The following steps will guide you through the decommissioning of your SecureDro
 
 #. **Optional: Save a backup.** If you want to save a backup of the Application Server (for example, to reinstall SecureDrop in the future using the same onion address), follow our :doc:`backup guidelines <backup_and_restore>`. Once the backup has been created, you can move it onto an encrypted drive, such as a LUKS-encrypted USB flash drive. You will also require a backup of the Submission Private Key found on the SecureDrop Workstation.
 
-   If you do not require a server backup, you may choose to download specific submissions, and store them in a secure manner (such as on an encrypted USB flash drive). 
-#. **Optional: Delete submissions on the server.**
-   Log into the SecureDrop Inbox and delete all sources to take advantage of SecureDrop's secure deletion properties. Note that depending on the number of sources on your server, it may take anywhere from several minutes to an hour or more for the submissions to be completely deleted from the server.
+   If you do not require a server backup, you may choose to export specific submitted files or conversation transcripts, and store them in a secure manner (such as on an encrypted USB flash drive). 
+#. **Optional: Delete data on the server.**
+   Log into the SecureDrop Inbox and delete all sources to take advantage of SecureDrop's secure deletion properties. Note that depending on the number of sources on your server, it may take anywhere from several minutes to an hour or more for everything to be completely deleted from the server.
 
    You can either leave the server ample time to complete this operation, or monitor the progress by SSHing to the Application Server and running
 
@@ -60,9 +60,9 @@ The following steps will guide you through the decommissioning of your SecureDro
 
    You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
 #. **Wipe and destroy the storage drives on the servers.**
-   SecureDrop submissions are stored GPG-encrypted on the Application Server. Unless your SecureDrop Submission Key is compromised (or a significant vulnerability in GPG is discovered), access to the servers does not guarantee access to the submissions and messages you have received.
+   Messages and files sent via SecureDrop are stored GPG-encrypted on the Application Server. Unless your SecureDrop Submission Key is compromised (or a significant vulnerability in GPG is discovered), access to the servers does not guarantee access to the files and messages you have received.
 
-   That said, there may still be some sensitive information on the servers, including system logs and the SecureDrop database, which would yield information on the number of submissions and replies stored on the server. This risk is partially mitigated by securely deleting submissions from the server, as described in a previous step; however, physically destroying or encrypting the storage drives on the servers are the best ways to ensure that data on the drives cannot be recovered.
+   That said, there may still be some sensitive information on the servers, including system logs and the SecureDrop database, which would yield information on the number of messages and replies stored on the server. This risk is partially mitigated by securely deleting data from the server, as described in a previous step; however, physically destroying or encrypting the storage drives on the servers are the best ways to ensure that data on the drives cannot be recovered.
 
    Physically destroying SSD drives is not as straightforward as destroying older hard drives, but drives can be pulverized, shredded, or incinerated, as long as the flash chips are destroyed. 
 

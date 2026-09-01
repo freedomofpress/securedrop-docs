@@ -57,7 +57,7 @@ https://github.com/freedomofpress/securedrop/blob/develop/securedrop/i18n.rst
 
 At any time during and after initial setup, you can choose from a list of supported languages to display using the codes shown in parentheses.
 
-.. note:: With a Source Interface displayed in French (for example), Sources submitting documents are likely to expect a Journalist fluent in French to be available to read the documents and follow up in that language.
+.. note:: With a Source Interface displayed in French (for example), Sources are likely to expect a Journalist fluent in French to be available to read their messages and submissions and follow up in that language.
 
 To add or remove locales from your instance, you'll need to :ref:`update your system configuration <update-system-configuration>` as outlined above.
 

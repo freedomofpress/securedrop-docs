@@ -64,7 +64,7 @@ If you are certain that your credentials are correct but you are unable to log i
 Step 3: Verify that all required qubes are running
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following qubes must be running for all actions requiring network connectivity to work (e.g., logging in, checking for messages, downloading documents, replying to sources, starring sources, deleting sources):
+The following qubes must be running for all actions requiring network connectivity to work (e.g., logging in, checking for messages, downloading files, replying to sources, starring sources, deleting sources):
 
 - ``sd-app``
 - ``sd-gpg``

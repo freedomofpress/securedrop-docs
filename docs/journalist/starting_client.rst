@@ -34,25 +34,16 @@ Troubleshooting tips
 
 If you have trouble running the updater or logging in, please contact your Administrator. Our :doc:`network troubleshooting guide <../admin/maintenance/troubleshooting_connection>` for administrators gives detailed steps for investigating connectivity issues.
 
-Seen and unseen submissions
----------------------------
-
-Sources with submissions (messages or files) that have not been seen by any Journalist will be displayed in bold text in the source list.
-
-As soon as any Journalist clicks on a source with unseen submissions, it will be marked as seen (no longer displayed in bold text) for all users.
-
 Working offline
 ---------------
 
-Offline mode is available for circumstances where you wish to work offline or are unable to connect to the SecureDrop servers. In offline mode, any content that you have previously downloaded will be available. You will not be able to send or delete messages, and your actions will not impact the seen/unseen state of submissions.
+Offline mode is available for circumstances where you wish to work offline or are unable to connect to the SecureDrop servers. In offline mode, any messages and files that you have previously downloaded will be available. You will not be able to send or delete messages, and your actions will not impact the seen/unseen state of Source conversations.
 
 |screenshot_use_offline|
 
-Because SecureDrop allows you to download and decrypt submissions on one machine, submissions that you have downloaded are still available in offline mode and can be accessed even when you are not logged in.
-
 |screenshot_offline_mode|
 
-.. important:: Protecting downloaded submissions is another reason why the SecureDrop Workstation needs to be powered off completely when it is not in use.
+.. important:: Protecting downloaded and decrypted files and messages is another reason why the SecureDrop Workstation needs to be powered off completely when it is not in use.
 
 .. |screenshot_desktop-shortcut| image:: ../images/screenshot_desktop-shortcut.png
 

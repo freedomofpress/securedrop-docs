@@ -39,7 +39,7 @@ As a SecureDrop Administrator, it is your responsibility to:
 * ensure that SecureDrop Workstations are kept up to date
 * investigate and respond to security incidents
 * schedule and perform required maintenance tasks, such as operating system upgrades
-* ensure that Journalists adhere to the documented processes for checking SecureDrop, communicating with Sources, and reviewing documents
+* ensure that Journalists adhere to the documented processes for checking SecureDrop, communicating with Sources, and reviewing submitted files
 * verify the integrity of SecureDrop code
 * avoid the installation of unsupported code or patches
 * :doc:`decommission SecureDrop after it is no longer in use </admin//maintenance/decommission>`

@@ -17,7 +17,7 @@ Logs to examine on both servers
 
 See the directory ``/var/log/apache2/*`` for web server access and error logs. In production systems, logging is only enabled for the :ref:`Admin Interface<glossary_admin_interface>` to the files ``journalist-access.log`` and ``journalist-error.log``, and the logs do not contain IP address information.
 
-When investigating an application error on the :ref:`Source Interface<glossary_source_interface>` (e.g., if you see an "Internal Server Error" when submitting a document), it can make sense to temporarily enable error logging. To do so:
+When investigating an application error on the :ref:`Source Interface<glossary_source_interface>` (e.g., if you see an "Internal Server Error" when sending a message or file), it can make sense to temporarily enable error logging. To do so:
 
 1. Log into your Application Server from your Admin Workstation via ``ssh app``
 2. Edit the file ``/etc/apache2/sites-enabled/source.conf`` (requires ``sudo``)
