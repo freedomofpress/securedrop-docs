@@ -15,7 +15,7 @@ For developer documentation, please see https://developers.securedrop.org/ and t
 1. [Install poetry](https://python-poetry.org/docs/#installation)
 2. Install the dependencies using `poetry install`
 3. Run `make docs` to start a live build of the documentation at http://localhost:8000
-4. Edit [RST](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) files under the docs directory - your changes will be reflected in the live build
+4. Edit [Markdown](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html) files under the docs directory - your changes will be reflected in the live build
 
 ## License
 

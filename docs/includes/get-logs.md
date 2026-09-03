@@ -1,0 +1,9 @@
+:::{note}
+You can use the `securedrop-admin` tool to extract logs to send to Freedom of the Press Foundation for analysis. Run the following command:
+
+```sh
+securedrop-admin logs
+```
+
+This command will produce encrypted tarballs containing logs from each server. See the command output for more information.
+:::

@@ -18,7 +18,7 @@ if grep -R -I -n -P \
    --exclude-dir='docs/diagrams' \
    --exclude='*.svg' \
    --exclude='conf.py' \
-   --exclude='rebuild_admin.rst' \
+   --exclude='rebuild_admin.md' \
    docs/; then
   echo "HTTP links found"
   exit 1

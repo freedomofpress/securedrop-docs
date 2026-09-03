@@ -1,0 +1,229 @@
+% SecureDrop documentation master file, created by sphinx-quickstart on Tue Oct 13 12:08:52 2015. You can adapt this file completely to your liking, but it should at least contain the root `toctree` directive.
+
+# Welcome to SecureDrop's documentation!
+
+SecureDrop is an open-source whistleblower submission system that media organizations can use to securely communicate with and accept files from anonymous sources. It is a free and open source source project of the [Freedom of the Press Foundation (FPF)](https://freedom.press/), a US-based nonprofit organization.
+
+SecureDrop connects journalists and their sources directly, in a way that substantially limits recorded metadata. Without third party intermediaries, SecureDrop helps protect potential sources, and puts news organizations in a strong position to challenge legal orders for data.
+
+:::{note}
+This documentation is also available as a Tor Onion Service at <http://dftlffjdogaragaxkc6jqxpo77s7rrngimyoq7uuq3clowhmttblcoyd.onion/en/stable/>.
+:::
+
+## How it works
+
+:::{figure} /diagrams/securedrop_overview_highlevel.png
+:::
+
+*Sources* and *Journalists* connect to SecureDrop using the Tor network. The SecureDrop software runs on-premises on dedicated infrastructure (two physical servers and a firewall).
+
+The following steps describe how tips are submitted, received and reviewed using SecureDrop:
+
+1. A *Source* sends a message or uploads a file to the news organization using [Tor Browser](https://www.torproject.org/).
+2. A *Journalist* connects to SecureDrop using their *SecureDrop Workstation*, which provides separate isolated environments to view messages and download files before processing (e.g., to remove metadata or potential malware), printing, or exporting to a dedicated device.
+
+:::{seealso}
+Check out [What makes SecureDrop Unique](/introduction/what_makes_securedrop_unique.md) to read more about SecureDrop's approach to keeping *Sources* safe.
+:::
+
+## User roles
+
+There are three main user roles that interact with a SecureDrop instance:
+
+[Sources](/source/source.md)
+
+: Submit files and messages using Tor Browser (or Tails) to access the *Source Interface*. Files and messages are encrypted on the *Application Server* as they are uploaded.
+
+[Journalists](/journalist/journalist.md)
+
+: Use a *SecureDrop Workstation* to connect to SecureDrop and communicate with sources. Journalists download encrypted files and process them in an air-gapped environment.
+
+[Admins](/admin/reference/securedrop_for_admins.md)
+
+: Manage the *Application* and *Monitor Servers* over authenticated onion services.
+
+:::{note}
+The [Glossary](/appendices/glossary.md) provides more-precise definitions of terms and concepts particular to SecureDrop. SecureDrop is designed against a comprehensive [](/appendices/threat_model/threat_model.md), and has a specific notion of the [roles](/appendices/glossary.md) that are involved in its operation.
+:::
+
+## Infrastructure overview
+
+SecureDrop runs on two dedicated servers: the *Application Server* that hosts the *Source* and *Journalist Interfaces*, and the *Monitor Server* that runs an intrusion detection service and sends email alerts.
+
+The servers operate on a segmented network connected directly to a dedicated hardware firewall.
+
+A specially configured laptop, called a *SecureDrop Workstation*, is used by journalists to communicate with sources and safely handle submitted files. The same laptop, or one similarly configured, is also used by administrators to perform server maintenance.
+
+SecureDrop is free to install, but requires hardware costing roughly \$2,200–\$2,400. See the [hardware guide](/admin/installation/hardware.md) for supported and recommended equipment.
+
+In addition to the hardware, you should make sure that you have the expertise necessary to operate and maintain SecureDrop. You'll need a systems administrator or IT professional familiar with using a command-line interface within Linux.
+
+The journalists in your organization will need to be trained in the operation of SecureDrop, and you'll need to publish and promote your new SecureDrop instance afterwards using your existing websites, mailing lists, and social media.
+
+It is recommended that you have all of this planned out before you get started. If you need help, contact the [Freedom of the Press Foundation](https://securedrop.org/help) who will be glad to help walk you through the process and make sure that you're ready to proceed.
+
+## Privacy and security
+
+While no system can guarantee 100% security, SecureDrop provides a number of [safeguards and countermeasures](#mitigations) to create a significantly safer environment for sources than standard channels.
+
+Major architectural releases undergo third-party security audits; a full [list of audits](https://securedrop.org/research/#audits) is available, along with a [bug bounty program](https://bugcrowd.com/freedomofpress) hosted by Bugcrowd.
+
+SecureDrop routes all traffic to and from the server via the encrypted Tor network. Each SecureDrop server is completely owned by, and sits inside of, the news organization that operates it. SecureDrop minimizes metadata by not recording IP addresses, browser details, or computer information. It forces security best practices for journalists and can be used in high-risk environments.
+
+## Get involved
+
+SecureDrop is an open source project. You can support the work by [contributing to SecureDrop](https://developers.securedrop.org/en/latest/contributing.html) or making [a donation](https://freedom.press/donate).
+
+```{toctree}
+:caption: Introduction
+:hidden: true
+:maxdepth: 1
+:name: introtoc
+
+introduction/what_makes_securedrop_unique
+introduction/securedrop_workstation
+introduction/getting_support
+introduction/history
+```
+
+```{toctree}
+:caption: Source Guide
+:hidden: true
+:maxdepth: 2
+:name: sourceguidetoc
+
+source/source
+source/before_you_submit
+source/how_to_submit
+source/after_you_submit
+```
+
+```{toctree}
+:caption: Journalist Guide
+:hidden: true
+:maxdepth: 2
+:name: journalistguidetoc
+
+journalist/journalist
+journalist/starting_qubes
+journalist/starting_client
+journalist/sources
+journalist/submissions
+journalist/ending_session
+```
+
+```{toctree}
+:caption: Admin Guide
+:hidden: true
+:maxdepth: 2
+:name: adminguidetoc
+
+admin/reference/securedrop_for_admins
+```
+
+```{toctree}
+:caption: 'Admin Guide: Installation'
+:hidden: true
+:maxdepth: 2
+:name: installtoc
+
+admin/installation/installation_overview
+admin/installation/hardware
+admin/installation/prepare_installation_media
+admin/installation/email_alerts
+admin/installation/prepare_sdw
+admin/installation/generate_submission_key
+admin/installation/set_up_keepassxc
+admin/installation/network_firewall
+admin/installation/firewall_pfsense
+admin/installation/firewall_opnsense
+admin/installation/prepare_servers
+admin/installation/install
+admin/installation/apply_sdw
+admin/installation/create_admin_account
+admin/installation/test_the_installation
+admin/installation/provisioning_usb
+admin/installation/troubleshoot_qubes
+admin/installation/troubleshoot_ossec
+```
+
+```{toctree}
+:caption: 'Admin Guide: Migration'
+:hidden: true
+:maxdepth: 2
+:name: migrationguide
+
+admin/migration/migration_overview
+admin/migration/admin_migration
+admin/migration/journalist_migration
+admin/migration/removing_gpg_passphrase
+```
+
+```{toctree}
+:caption: 'Admin Guide: Deployment'
+:hidden: true
+:maxdepth: 2
+:name: deploymentguide
+
+admin/deployment/onboard_journalists
+admin/deployment/deployment_practices
+admin/deployment/landing_page
+admin/deployment/onion_name
+admin/deployment/whole_site_changes
+admin/deployment/sample_privacy_policy
+admin/deployment/getting_the_most_out_of_securedrop
+admin/deployment/yubikey_setup
+admin/deployment/tor_pow
+admin/deployment/https_source_interface
+admin/deployment/ssh_over_local_net
+admin/deployment/configuring_ossec_fingerprint
+```
+
+```{toctree}
+:caption: 'Admin Guide: Reference'
+:hidden: true
+:maxdepth: 2
+:name: adminguidereferencetoc
+
+admin/reference/admin_interface
+admin/reference/ossec_alerts
+admin/reference/ssh_access
+admin/reference/offboarding
+admin/reference/securedrop_admin
+```
+
+```{toctree}
+:caption: 'Admin Guide: Maintenance'
+:hidden: true
+:maxdepth: 2
+:name: maintenance
+
+admin/maintenance/server_updates
+admin/workstation_reference/workstation_updates
+admin/maintenance/logging
+admin/maintenance/troubleshooting_connection
+admin/maintenance/backup_and_restore
+admin/maintenance/rebuild_admin
+admin/maintenance/bios_server
+admin/maintenance/decommission
+admin/workstation_reference/backup
+admin/workstation_reference/bios_workstation
+admin/workstation_reference/reviewing_logs
+
+admin/workstation_reference/managing_clipboard
+```
+
+```{toctree}
+:caption: Appendices
+:hidden: true
+:maxdepth: 2
+:name: appendicestoc
+
+appendices/glossary
+appendices/faq
+appendices/passphrases
+appendices/hardware_recommendations
+appendices/threat_model/threat_model
+appendices/threat_model/dataflow
+appendices/threat_model/mitigations
+```

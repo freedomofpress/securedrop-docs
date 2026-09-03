@@ -1,0 +1,3 @@
+:::{note}
+SecureDrop wants your feedback! Confused by something in our documentation? Let us know by opening [an issue on GitHub](https://github.com/freedomofpress/securedrop-docs/issues/new) or in our [Gitter channel](https://gitter.im/freedomofpress/securedrop).
+:::

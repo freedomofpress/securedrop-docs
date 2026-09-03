@@ -1,0 +1,50 @@
+# Reviewing and exporting logs
+
+SecureDrop Inbox aggregates system logs from all its qubes in the `sd-log` qube, in the folder `~/QubesIncomingLogs`, with one subfolder for each qube. You can inspect these logs directly in the `sd-log` qube, or you can copy them to another qube, e.g., for purposes of sharing logs with the SecureDrop development team.
+
+Please note that while the logs do not include original filenames or message contents, they do contain sensitive information, e.g.:
+
+- timing and usage information related to SecureDrop access
+- the two-word designation for a given Source
+- metadata about submissions and replies
+- error messages that disclose further details
+
+For this reason, the `sd-log` qube is networkless, and you cannot copy files from `sd-log` to other qubes by default.
+
+If you want to selectively enable copying logs to a single qube, you can use tags, similar to the method used for [managing clipboard access](/admin/workstation_reference/managing_clipboard.md). You can add and remove the permission just before each copying operation; the change will take effect immediately.
+
+:::{important}
+Before copying logs to a networked qube, inspect them for sensitive information, and redact them as warranted.
+:::
+
+To enable copying logs to a target qube, you can use a command like the following in `dom0`, substituting `<qube name>` with the name of the target qube (e.g., `work`):
+
+```sh
+qvm-tags <qube name> add sd-receive-logs
+```
+
+Verify that the tag was successfully applied using the `ls` subcommand:
+
+```sh
+qvm-tags <qube name> ls
+```
+
+To remove the permission, use this command in `dom0`:
+
+```sh
+qvm-tags <qube name> del sd-receive-logs
+```
+
+With the permission in effect, you can use the command `qvm-copy` in a terminal in `sd-log` to copy individual files to the target qube. For example, to copy a file `syslog-redacted.log`, you would use this command:
+
+```sh
+qvm-copy syslog-redacted.log
+```
+
+A graphical prompt will permit you to select any target qube that has the `sd-receive-logs` tag. Once successfully copied, the file can be found in the directory `~/QubesIncoming/sd-log` in the target qube. See the [Qubes OS documentation on copying files](https://www.qubes-os.org/doc/copying-files/) for more information.
+
+To review current copy permissions, you can use `qvm-ls` to print out a list of qubes that can receive files from `sd-log`:
+
+```sh
+qvm-ls --tags sd-receive-logs
+```

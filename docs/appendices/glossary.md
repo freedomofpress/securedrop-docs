@@ -1,0 +1,135 @@
+# Glossary
+
+A number of terms used in this guide, and in the `SecureDrop workflow diagram <what_is_securedrop>`, are specific to SecureDrop. The list below attempts to enumerate and define these terms.
+
+(glossary_administrator)=
+
+## Administrator
+
+The Administrator installs, deploys, and maintains a SecureDrop instance. They have physical access to the Application and Monitor servers, as well as the dedicated hardware firewall. Typically, they use an Admin Workstation to connect to the Application and Monitor servers (using SSH) and to the Admin Interface (using Tor Browser).
+
+(glossary_admin_interface)=
+
+## Admin Interface
+
+The Admin Interface is the web-based interface Administrators use to add and manage SecureDrop users. It is hosted by the Application Server as an authenticated Onion Service. The Admin Interface is only accessed by an Administrator using Tor Browser on an Admin Workstation.
+
+Please see the [relevant page](/admin/reference/admin_interface.md) for complete instructions on accessing and using the Admin Interface.
+
+(glossary_admin_workstation)=
+
+## Admin Workstation
+
+The Admin Workstation is a laptop running Qubes OS, initially configured as a SecureDrop Workstation but with additional tools and credentials added to allow an Administrator to install and maintain a SecureDrop instance, in particular the [securedrop-admin](/admin/reference/securedrop_admin.md) utility. An Admin Workstation is capable of connection to the web-based Admin Interface, and to the Application and Monitor servers using SSH.
+
+(glossary_application_server)=
+
+## Application Server
+
+The Application Server is a physical computer housed on-premises running the SecureDrop server application. Based on our [recommendations](/admin/installation/hardware.md), this is typically a NUC or similar Mini PC. The Application hosts the website that Sources access (the Source Interface), the Admin Interface, and the API endpoint that SecureDrop Inbox connects to so Journalists may download and reply to messages and files sent by Sources.
+
+Instructions and tips for accessing the Application Server over SSH are on the [SSH access page](#server-ssh-access).
+
+(glossary_export_device)=
+
+## Export Device
+
+The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a SecureDrop Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
+
+Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the [journalist](/journalist/journalist.md) guide and in the [setup guide](/admin/installation/provisioning_usb.md).
+
+(glossary_journalist)=
+
+## Journalist
+
+The Journalist uses SecureDrop to communicate with Sources and review files they submit. Journalists do this by using SecureDrop Inbox on a SecureDrop Workstation laptop to connect to the Application Server.
+
+If a Journalist chooses to release any submitted files, they can be prepared for publication on the SecureDrop Workstation before being transferred to another computer.
+
+Instructions for using SecureDrop as a Journalist are available in our [Journalist Guide](/journalist/journalist.md).
+
+(glossary_journalist_alert_key)=
+
+## Journalist Alert Key
+
+The Journalist Alert Public Key is used for encrypting the daily alert email that notifies Journalists about whether or not there has been submission activity in the past 24 hours. The Journalist uses an associated Journalist Alert Private Key to decrypt the alerts.
+
+This Journalist Alert Key pair is created when [preparing email accounts for alerts](/admin/installation/email_alerts.md).
+
+(glossary_landing_page)=
+
+## Landing Page
+
+The Landing Page is the public-facing webpage for a SecureDrop instance. This page is hosted as a standard (i.e. non-Tor) webpage on the news organization's website. It provides instructions for potential Sources and includes the the onion address for the instance's [Source Interface](#glossary_source_interface).
+
+(glossary_monitor_server)=
+
+## Monitor Server
+
+The Monitor Server is physical computer housed on-premises running the [OSSEC](https://www.ossec.net/) intrusion detection software to monitor the Application Server. It sends OSSEC email alerts to the Administrator when changes are detected on the Application Server which could indicate a potential compromise. Like the Application server, it is typically a NUC or similar Mini PC. Only Administrators connect to this server.
+
+Instructions and tips for accessing the Monitor Server over SSH are on the [SSH access page](#server-ssh-access).
+
+Instructions on how to interpret OSSEC email alerts are on the [Analyzing OSSEC alerts page](/admin/reference/ossec_alerts.md).
+
+(glossary_onion_service)=
+
+## Onion Service
+
+Tor Onion Services provide anonymous inbound connections to websites and other servers exclusively over the Tor network. SecureDrop uses Onion Services for the Admin Interface and Source Interface websites, as well as for SSH access to the servers in SSH-over-Tor mode.
+
+Onion Services can be only be accessed using Tor Browser. Rather than a traditional internet address, Onion Services are reached using a special onion address. For example, `sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion` is the onion address for the Onion Service version of the SecureDrop website.
+
+Authenticated Onion Services require an additional authentication token be provided when connecting to the server. The Admin Interface, the API endpoint connected to by SecureDrop Inbox, and SSH access to the servers (in SSH-over-Tor mode) are all authenticated Onion Services.
+
+Read more about [Onion Services in Tor's glossary](https://support.torproject.org/onionservices/).
+
+(glossary_ossec_alert_key)=
+
+## OSSEC Alert Key
+
+The OSSEC Alert Public Key is the GPG key that the Monitor Server uses to encrypt e-mail alerts send to the Administrator. The Administrator uses an associated OSSEC Alert Private Key to decrypt the e-mails.
+
+This OSSEC Alert Key pair is created when [preparing email accounts for alerts](/admin/installation/email_alerts.md).
+
+(glossary_securedrop_inbox)=
+
+## SecureDrop Inbox
+
+SecureDrop Inbox is the central application on a SecureDrop Workstation. It allows Journalists to connect to their SecureDrop instance, download and decrypt messages from Sources, and compose and send replies. SecureDrop Inbox can only run on a SecureDrop Workstation.
+
+Instructions for using SecureDrop Inbox appear in our [Journalist Guide](/journalist/journalist.md).
+
+(glossary_securedrop_workstation)=
+
+## SecureDrop Workstation
+
+The SecureDrop Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling untrusted files submitted by Sources. Each Journalist may have their own SecureDrop Workstation, or one may be shared among several Journalists.
+
+Read more about [SecureDrop Workstation and Qubes OS](/introduction/securedrop_workstation.md).
+
+(glossary_source)=
+
+## Source
+
+The Source is the person who sends messages and uploads files to an organization's SecureDrop and may use SecureDrop to communicate with a Journalist. A Source will always access SecureDrop through the Source Interface and must do so using Tor.
+
+Instructions for using SecureDrop as a Source are available in our [Source Guide](/source/source.md).
+
+(glossary_source_interface)=
+
+## Source Interface
+
+The Source Interface is the website that Sources will access to communicate with Journalists and submit documents or other files. This site is an Onion Service hosted on the Application Server and can only be accessed through Tor.
+
+Instructions for using the Source Interface are available in our [Source Guide](/source/source.md).
+
+(glossary_submission_key)=
+
+## Submission Key
+
+The Submission Key is the GPG keypair used to encrypt and decrypt messages and files sent to your SecureDrop. Because the public key and private key must be treated very differently, we sometimes refer to them explicitly as the Submission Public Key and the Submission Private Key.
+
+The Submission Public Key is uploaded to your SecureDrop servers as part of the installation process. Once your SecureDrop is online, anyone will be able to download it.
+
+The Submission Private Key is used to decrypt all messages and files sent to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a SecureDrop Workstation or on offline backup storage.

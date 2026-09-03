@@ -1,0 +1,2 @@
+- If you are already in touch with us for support via Signal, please contact us there.
+- If you would like to request support, please contact us by email at <securedrop@freedom.press> ([PGP encrypted](https://securedrop.org/sites/default/files/fpf-email.asc)), or by using the ([Get Help with SecureDrop](https://securedrop.org/help/)) contact form. - The Freedom of the Press Foundation offers training and priority support services. See <https://securedrop.org/priority-support/> for more information.

@@ -1,0 +1,21 @@
+# Whole site changes
+
+Ideally, some or all of the following changes are made to improve the overall security of the path to the [Landing Page](#glossary_landing_page) and obfuscate traffic analysis.
+
+1. Make your entire site available through HTTPS.
+
+   - That way, visits to your Landing Page won't stand out as the only encrypted traffic to your site.
+
+2. Include an iframe for all (or a random subset of) visitors, loading this particular URL (hidden).
+
+   - By artificially generating traffic to the endpoint it will be harder to distinguish these from other, 'real' requests.
+   - Use a random delay for adding the iframe (otherwise the 'pairing' with the initial HTTP request may distinguish this traffic).
+
+3. Print the link, URL and info block on the dead trees (the paper), as others have suggested.
+
+4. Add [HSTS headers](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security).
+
+## Suggested
+
+- For publicly advertised SecureDrop instances display the [Source Interface](#glossary_source_interface)'s [Onion Service](#glossary_onion_service) onion address on all of the organization public pages.
+- Mirror Tor Browser and Tails so Sources do not have to visit [torproject.org](https://www.torproject.org) to download it.
