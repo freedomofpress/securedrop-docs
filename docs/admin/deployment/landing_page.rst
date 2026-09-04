@@ -64,15 +64,24 @@ The SecureDrop directory
 
 SecureDrop `maintains a directory of instances that meet our strict guidelines. <https://securedrop.org/directory/>`__ If you would like to be considered for inclusion in this directory, make sure your Landing Page features the necessary items from the sample above, and is in compliance with the technical requirements below, then `send us a request using this form. <https://securedrop.org/directory/submit/>`__
 
-There are several benefits to being included in the SecureDrop directory. The most significant benefit is that it will be easier for potential Sources to find your SecureDrop instance. Additionally, being included in the directory makes you eligible for :doc:`an onion name. <onion_name>` This improves the experience by turning a lengthy, non-descriptive address into one that is short and memorable. For example, a long onion address might look like: ::
+There are several benefits to being included in the SecureDrop directory. The most significant benefit is that it will be easier for potential Sources to find your SecureDrop instance. Additionally, being included in the directory makes you eligible for :doc:`an onion name. <onion_name>` This improves the experience by turning a lengthy, non-descriptive address into one that is short and memorable. For example, a long onion address might look like:
 
-    sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion
+.. code-block:: text
+   :class: no-copybutton
 
-whereas the shorter onion name might look like: ::
+   sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion
+
+whereas the shorter onion name might look like: 
+
+.. code-block:: text
+   :class: no-copybutton
 
     nyworld.securedrop.tor.onion
 
-If you wish to receive an onion name, one can be provided during the instance verification process. The format for short onion addresses is: ::
+If you wish to receive an onion name, one can be provided during the instance verification process. The format for short onion addresses is:
+
+.. code-block:: text
+   :class: no-copybutton
 
     organization.securedrop.tor.onion
 

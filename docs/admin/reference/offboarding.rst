@@ -130,6 +130,7 @@ On the Secure Viewing Station
    look similar to this:
 
    .. code:: text
+      :class: no-copybutton
 
       pub   rsa4096/0x1CB396626CA370AB 2022-08-16 [SC]
             Key fingerprint = 6A7F 116B 3C22 4F36 7275 236A 1CB3 9662 6CA3 70AB
@@ -150,6 +151,7 @@ On the Secure Viewing Station
    values:
 
    .. code:: text
+      :class: no-copybutton
 
       Create a revocation certificate for this key? (y/N) y
       Please select the reason for the revocation:

@@ -48,6 +48,7 @@ The following steps will guide you through the decommissioning of your SecureDro
    You will see repeated log lines that contain the following:
 
    .. code:: sh
+      :class: no-copybutton
 
       [Timestamp] app python [...] INFO Clearing shredder
       [Timestamp] app python [...] INFO Files to delete: <number>
