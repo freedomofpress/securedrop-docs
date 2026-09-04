@@ -3,7 +3,7 @@
 Welcome to SecureDrop's documentation!
 ======================================
 
-SecureDrop is an open-source whistleblower submission system that media organizations can use to securely accept documents from and communicate with anonymous sources. It is a free and open source source project of the `Freedom of the Press Foundation (FPF) <https://freedom.press/>`_, a US-based nonprofit organization.
+SecureDrop is an open-source whistleblower submission system that media organizations can use to securely communicate with and accept files from anonymous sources. It is a free and open source source project of the `Freedom of the Press Foundation (FPF) <https://freedom.press/>`_, a US-based nonprofit organization.
 
 SecureDrop connects journalists and their sources directly, in a way that substantially limits recorded metadata. Without third party intermediaries, SecureDrop helps protect potential sources, and puts news organizations in a strong position to challenge legal orders for data.
 
@@ -16,11 +16,11 @@ How it works
 
 *Sources* and *Journalists* connect to SecureDrop using the Tor network. The SecureDrop software runs on-premises on dedicated infrastructure (two physical servers and a firewall).
 
-The following steps describe how a SecureDrop submission is submitted, received and reviewed:
+The following steps describe how tips are submitted, received and reviewed using SecureDrop:
 
-1. A *Source* uploads a submission to the news organization using `Tor Browser <https://www.torproject.org/>`__.
+1. A *Source* sends a message or uploads a file to the news organization using `Tor Browser <https://www.torproject.org/>`__.
 
-2. A *Journalist* connects to SecureDrop using their *SecureDrop Workstation*, which provides separate isolated environments to decrypt and then view the document before processing it (e.g., to remove metadata or potential malware), printing it, or exporting it to a dedicated device.
+2. A *Journalist* connects to SecureDrop using their *SecureDrop Workstation*, which provides separate isolated environments to view messages and download files before processing (e.g., to remove metadata or potential malware), printing, or exporting to a dedicated device.
 
 .. seealso:: Check out :doc:`What makes SecureDrop Unique </introduction/what_makes_securedrop_unique>` to read more about SecureDrop's approach to keeping *Sources* safe.
 
@@ -30,10 +30,10 @@ User roles
 There are three main user roles that interact with a SecureDrop instance:
 
 :doc:`Sources </source/source>`
-   Submit documents and messages using Tor Browser (or Tails) to access the *Source Interface*. Submissions are encrypted on the *Application Server* as they are uploaded.
+   Submit files and messages using Tor Browser (or Tails) to access the *Source Interface*. Files and messages are encrypted on the *Application Server* as they are uploaded.
 
 :doc:`Journalists </journalist/journalist>`
-   Use a *SecureDrop Workstation* to connect to SecureDrop and communicate with sources. Journalists download encrypted submissions and process them in an air-gapped environment.
+   Use a *SecureDrop Workstation* to connect to SecureDrop and communicate with sources. Journalists download encrypted files and process them in an air-gapped environment.
 
 :doc:`Admins </admin/reference/securedrop_for_admins>`
    Manage the *Application* and *Monitor Servers* over authenticated onion services.
@@ -47,7 +47,7 @@ SecureDrop runs on two dedicated servers: the *Application Server* that hosts th
 
 The servers operate on a segmented network connected directly to a dedicated hardware firewall.
 
-A specially configured laptop, called a *SecureDrop Workstation*, is then used by journalists to download encrypted submissions and by admins to perform server maintenance.
+A specially configured laptop, called a *SecureDrop Workstation*, is used by journalists to communicate with sources and safely handle submitted files. The same laptop, or one similarly configured, is also used by administrators to perform server maintenance.
 
 SecureDrop is free to install, but requires hardware costing roughly $2,200–$2,400. See the :doc:`hardware guide </admin/installation/hardware>` for supported and recommended equipment.
 
@@ -64,7 +64,7 @@ While no system can guarantee 100% security, SecureDrop provides a number of :re
 
 Major architectural releases undergo third-party security audits; a full `list of audits <https://securedrop.org/research/#audits>`__ is available, along with a `bug bounty program <https://bugcrowd.com/freedomofpress>`__ hosted by Bugcrowd.
 
-SecureDrop routes all traffic to and from the server via the encrypted Tor network. Each SecureDrop server is completely owned by, and sits inside of, the news organization that operates it. SecureDrop minimizes metadata by not recording IP addresses, browser details, or computer information. It forces security best pactices for journalists and can be used in high-risk environments.
+SecureDrop routes all traffic to and from the server via the encrypted Tor network. Each SecureDrop server is completely owned by, and sits inside of, the news organization that operates it. SecureDrop minimizes metadata by not recording IP addresses, browser details, or computer information. It forces security best practices for journalists and can be used in high-risk environments.
 
 Get involved
 ------------

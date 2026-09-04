@@ -344,7 +344,7 @@ Step 8: Post-rebuild tasks
 We recommend completing the following tasks after the rebuild:
 
 - Set up a new administration account on the Admin Interface, by following :doc:`these instructions <../installation/create_admin_account>`
-- Verify that submissions can be decrypted, by going through the decryption workflow with a new submission.
+- Verify that incoming messages and files can be decrypted in SecureDrop Inbox.
 - Back up your Admin Workstation.
 - Delete invalid admin accounts in the Admin Interface.
 - Restrict SSH access to the Application and Monitor Servers to valid Admin Workstations. If your new Admin Workstation USB flash drive is the only one that should have SSH access to the servers, you can remove access for any previous Admin Workstations from the terminal, using the commands:

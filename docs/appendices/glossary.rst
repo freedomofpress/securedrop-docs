@@ -31,7 +31,7 @@ The Admin Workstation is a laptop running Qubes OS, initially configured as a Se
 Application Server
 ------------------
 
-The Application Server is a physical computer housed on-premises running the SecureDrop server application. Based on our :doc:`recommendations</admin/installation/hardware>`, this is typically a NUC or similar Mini PC. The Application hosts the website that Sources access (the Source Interface), the Admin Interface, and the API endpoint that SecureDrop Inbox connects to so Journalists may download and reply to submissions.
+The Application Server is a physical computer housed on-premises running the SecureDrop server application. Based on our :doc:`recommendations</admin/installation/hardware>`, this is typically a NUC or similar Mini PC. The Application hosts the website that Sources access (the Source Interface), the Admin Interface, and the API endpoint that SecureDrop Inbox connects to so Journalists may download and reply to messages and files sent by Sources.
 
 Instructions and tips for accessing the Application Server over SSH are on the :ref:`SSH access page<server SSH access>`.
 
@@ -40,7 +40,7 @@ Instructions and tips for accessing the Application Server over SSH are on the :
 Export Device
 -------------
 
-The Export Device is a physical USB flash drive used to transfer decrypted documents from a SecureDrop Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
+The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a SecureDrop Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
 
 Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/installation/provisioning_usb>`.
 
@@ -49,9 +49,9 @@ Please see the detailed security recommendations for the choice, configuration a
 Journalist
 ----------
 
-The Journalist uses SecureDrop to communicate with and download documents submitted by the Source. Journalists do this by using SecureDrop Inbox on a SecureDrop Workstation laptop to connect to the Application Server.
+The Journalist uses SecureDrop to communicate with Sources and review files they submit. Journalists do this by using SecureDrop Inbox on a SecureDrop Workstation laptop to connect to the Application Server.
 
-If a Journalist chooses to release any of these documents, they can be prepared for publication on the SecureDrop Workstation before being transferred to another computer.
+If a Journalist chooses to release any submitted files, they can be prepared for publication on the SecureDrop Workstation before being transferred to another computer.
 
 Instructions for using SecureDrop as a Journalist are available in our :doc:`Journalist Guide </journalist/journalist>`.
 
@@ -118,7 +118,7 @@ Instructions for using SecureDrop Inbox appear in our :doc:`Journalist Guide </j
 SecureDrop Workstation
 ----------------------
 
-The SecureDrop Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling submissions. Each Journalist may have their own SecureDrop Workstation, or one may be shared among several Journalists.
+The SecureDrop Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling untrusted files submitted by Sources. Each Journalist may have their own SecureDrop Workstation, or one may be shared among several Journalists.
 
 Read more about :doc:`SecureDrop Workstation and Qubes OS</introduction/securedrop_workstation>`.
 
@@ -127,7 +127,7 @@ Read more about :doc:`SecureDrop Workstation and Qubes OS</introduction/securedr
 Source
 ------
 
-The Source is the person who submits documents to an organization's SecureDrop and may use SecureDrop to communicate with a Journalist. A Source will always access SecureDrop through the Source Interface and must do so using Tor.
+The Source is the person who sends messages and uploads files to an organization's SecureDrop and may use SecureDrop to communicate with a Journalist. A Source will always access SecureDrop through the Source Interface and must do so using Tor.
 
 Instructions for using SecureDrop as a Source are available in our :doc:`Source Guide </source/source>`.
 
@@ -136,7 +136,7 @@ Instructions for using SecureDrop as a Source are available in our :doc:`Source 
 Source Interface
 ----------------
 
-The Source Interface is the website that Sources will access to submit documents and communicate with Journalists. This site is and Onion Service hosted on the Application Server and can only be accessed through Tor.
+The Source Interface is the website that Sources will access to communicate with Journalists and submit documents or other files. This site is an Onion Service hosted on the Application Server and can only be accessed through Tor.
 
 Instructions for using the Source Interface are available in our :doc:`Source Guide </source/source>`.
 
@@ -145,8 +145,8 @@ Instructions for using the Source Interface are available in our :doc:`Source Gu
 Submission Key
 --------------
 
-The Submission Key is the GPG keypair used to encrypt and decrypt messages and attachments sent to your SecureDrop. Because the public key and private key must be treated very differently, we sometimes refer to them explicitly as the Submission Public Key and the Submission Private Key.
+The Submission Key is the GPG keypair used to encrypt and decrypt messages and files sent to your SecureDrop. Because the public key and private key must be treated very differently, we sometimes refer to them explicitly as the Submission Public Key and the Submission Private Key.
 
 The Submission Public Key is uploaded to your SecureDrop servers as part of the installation process. Once your SecureDrop is online, anyone will be able to download it.
 
-The Submission Private Key is used to decrypt all submissions to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a SecureDrop Workstation or on offline backup storage.
+The Submission Private Key is used to decrypt all messages and files sent to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a SecureDrop Workstation or on offline backup storage.
