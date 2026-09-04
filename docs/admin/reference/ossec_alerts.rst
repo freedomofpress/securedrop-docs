@@ -65,7 +65,7 @@ Uncommon OSSEC alerts
 Data integrity
 ^^^^^^^^^^^^^^
 
-SecureDrop runs automatic checks for submission data integrity problems. For example, secure deletion of large submissions could potentially be interrupted: ::
+SecureDrop runs automatic checks for data integrity problems. For example, secure deletion of large submitted files could potentially be interrupted: ::
 
     Received From: (app) 10.20.2.2->/opt/venvs/securedrop-app-code/bin/python3 /var/www/securedrop/manage.py check-disconnected-fs-submissions
     Rule: 400801 fired (level 1) -> "Indicates that there are files in the submission area without corresponding submissions in the database."

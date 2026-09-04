@@ -56,7 +56,7 @@ All organizations operating SecureDrop have a Landing Page that provides their o
 
 .. note::
 
-   Each SecureDrop instance is operated and administered independently by the organization you are submitting to. Only the Journalists associated with that organization can see your submissions.
+   Each SecureDrop instance is operated and administered independently by the organization you are submitting to. Only the Journalists associated with that organization can see the messages and files you have sent.
 
 Most organizations make their SecureDrop prominently accessible from their main website's homepage (for news organizations, typically under sections called "Tips" or "Contact us"). You can also find an incomplete list of organizations accepting submissions through SecureDrop in the `SecureDrop Directory`_ maintained by Freedom of the Press Foundation.
 

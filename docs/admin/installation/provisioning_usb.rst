@@ -1,7 +1,7 @@
 Provisioning USB Export Devices
 =================================
 
-SecureDrop Workstation supports the export of submissions from the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an :ref:`Export Device<glossary_export_device>`.
+SecureDrop Workstation supports the export of submitted files and conversation transcripts from the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an :ref:`Export Device<glossary_export_device>`.
 
 Creating a LUKS-encrypted drive
 -------------------------------
@@ -26,7 +26,7 @@ In order to provision a LUKS-encrypted Export Device, you will need a fresh USB 
 
 - Then, click **Next**. You will be prompted to set a password. This password should be strong - a 6-word `Diceware <https://en.wikipedia.org/wiki/Diceware>`_ passphrase is highly recommended.
 - Once the password is set, click **Format**, then when prompted, click **Format** again. The formatting process should take only a few seconds.
-- Once formatting is complete, you will need to provide the Export Device and its decryption password to the Journalists who will be using it. Make sure that they store it and its password securely, as it will contain decrypted submissions.
+- Once formatting is complete, you will need to provide the Export Device and its decryption password to the Journalists who will be using it. Make sure that they store it and its password securely, as it will contain decrypted files and transcripts.
 
 Creating a VeraCrypt-encrypted drive
 ------------------------------------
@@ -63,7 +63,7 @@ Creating a VeraCrypt-encrypted drive
 
 - Wait until VeraCrypt says "The VeraCrypt volume has been successfully created." Until this pops up, it may look like the program is frozen, but it's running in the background.
 - Click **OK** and then **Exit** to finish formatting process.
-- Once formatting is complete, you will need to provide the Export Device and its decryption password to the Journalists who will be using it. Make sure that they store it and its password securely, as it will contain decrypted submissions.
+- Once formatting is complete, you will need to provide the Export Device and its decryption password to the Journalists who will be using it. Make sure that they store it and its password securely, as it will contain decrypted files and transcripts.
 
 Securely erase Export Devices
 -----------------------------

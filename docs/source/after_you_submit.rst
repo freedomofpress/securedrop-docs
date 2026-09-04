@@ -4,7 +4,7 @@ After you submit
 Continuing the conversation
 ---------------------------
 
-If you have already submitted a document and would like to check for responses, click the **Log in** button on the media organization's SecureDrop page.
+If you have previously submitted a message or file to an organization's SecureDrop and would like to check for responses, click the **Log in** button on the media organization's SecureDrop page.
 
 |Source Interface with JavaScript Disabled|
 

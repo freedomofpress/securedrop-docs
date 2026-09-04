@@ -45,7 +45,7 @@ Back up a SecureDrop Workstation
 
   If you are looking to back up your own customized components of SecureDrop Workstation for long-term storage, we suggest taking that backup separately from the backup of SecureDrop Workstation components so that you can avoid proliferating copies of sensitive assets.
 
-Before starting your backup, decide whether you want to back up your data from ``sd-app``. If you skip this step, the first time you log in, your submissions will re-download from your SecureDrop server.
+Before starting your backup, decide whether you want to back up your data from ``sd-app``. If you skip this step, the first time you log in, all previous messages exchanged between Sources and Journalists, as well as any submitted files, will re-download from your SecureDrop server.
 
 Ensure your storage medium is plugged in, attached to ``sd-devices``, and unlocked.
 
