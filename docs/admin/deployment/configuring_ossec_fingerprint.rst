@@ -7,9 +7,12 @@ You can retrieve the fingerprint of your SMTP relay by running the command below
 
     openssl s_client -connect smtp.gmail.com:587 -starttls smtp < /dev/null 2>/dev/null | openssl x509 -fingerprint -noout -in /dev/stdin | cut -d'=' -f2
 
-If you are using Tails, you will not be able to connect directly with ``openssl s_client`` due to the default firewall rules. To get around this, proxy the requests over Tor by adding ``torify`` at the beginning of the command. The output of the command above should look like the following:::
+If you are using Tails, you will not be able to connect directly with ``openssl s_client`` due to the default firewall rules. To get around this, proxy the requests over Tor by adding ``torify`` at the beginning of the command. The output of the command above should look like the following:
 
-    6D:87:EE:CB:D0:37:2F:88:B8:29:06:FB:35:F4:65:00:7F:FD:84:29
+.. code-block:: text
+   :class: no-copybutton
+
+   6D:87:EE:CB:D0:37:2F:88:B8:29:06:FB:35:F4:65:00:7F:FD:84:29
 
 Finally, add a new variable to ``~/.config/securedrop-admin/site-specific`` as ``smtp_relay_fingerprint``, like so: ::
 

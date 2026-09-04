@@ -104,7 +104,10 @@ Make note of the Source Interface onion address. Now from a Terminal on your Adm
 
   securedrop-admin sdconfig
 
-This command will prompt you for the following information::
+This command will prompt you for the following information:
+
+.. code-block:: text
+   :class: no-copybutton
 
     Whether HTTPS should be enabled on Source Interface (requires EV cert): yes
     Local filepath to HTTPS certificate (optional, only if using HTTPS on Source Interface): sd.crt
