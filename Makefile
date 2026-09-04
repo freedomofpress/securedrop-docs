@@ -1,7 +1,7 @@
 .PHONY: docs
 docs:  ## Build project documentation with live reload for editing.
 	@echo "███ Building docs and watching for changes..."
-	@make clean && poetry run sphinx-autobuild docs/ docs/_build/html
+	@make clean && poetry run sphinx-autobuild docs/ docs/_build/html --post-build 'poetry run python -m pagefind --site "docs/_build/html/" --exclude-selectors ".headerlink"'
 	@echo
 
 .PHONY: docs-lint

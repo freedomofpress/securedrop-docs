@@ -127,9 +127,8 @@ html_theme_options = {
 }
 
 html_sidebars = {
-    "**": ["navbar-logo.html", "search-button-field.html", "sbt-sidebar-nav.html", "download.html"]
+    "**": ["navbar-logo.html", "searchbox.html", "sbt-sidebar-nav.html", "download.html"]
 }
-
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []

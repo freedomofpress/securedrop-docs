@@ -431,6 +431,22 @@ files = [
 ]
 
 [[package]]
+name = "pagefind"
+version = "1.5.2"
+description = "Python API for Pagefind"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "pagefind-1.5.2-py3-none-any.whl", hash = "sha256:6c4086ad9eaa7e8f863085652f6b1093549b1737848d946daa0706ee57f778d1"},
+    {file = "pagefind-1.5.2.tar.gz", hash = "sha256:fffddd6e2016b06bdca83b83d4ac4bef379cf0559f05ecdb6908a8729a27dbf3"},
+]
+
+[package.extras]
+bin = ["pagefind-bin (>=1,<2)"]
+extended = ["pagefind-bin-extended (>=1,<2)"]
+
+[[package]]
 name = "pydata-sphinx-theme"
 version = "0.16.1"
 description = "Bootstrap-based Sphinx theme from the PyData community"
@@ -1022,4 +1038,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "aa9cc1da6a75d12bbd5ee8fca0f7284a65b61695ba8c3a47328ddec9f7cd1fcf"
+content-hash = "0d6b5e7654dab342982dc3ef1126ac3eee7b6f1225199555ce77ee44bd4a2da9"
