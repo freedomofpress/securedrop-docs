@@ -49,7 +49,7 @@ You can use a separate computer you've designated specifically to handle the sub
 
 A file contains valuable `metadata <https://ssd.eff.org/en/module/why-metadata-matters>`_ about its source — when it was created and downloaded, what machine was involved, the machine's owner, etc. You can scrub metadata from some files prior to submission using the Metadata Anonymization Toolkit featured in Tails.
 
-Your online behavior can be extremely revealing. Regularly monitoring our publication's social media or website can potentially flag you as a source. Take great care to think about what your online behavior might reveal, and consider using Tor Browser to mitigate such monitoring.
+Your online behavior can be extremely revealing. Regularly monitoring our publication's social media or website can potentially flag you as a source. Your activity on other websites or apps may also be used to identify you. Avoid using any service linked to your identity while preparing to contact us or while whistleblowing, such as LLM (AI) chatbots or search engines when logged in, as your prompt and search histories may be used against you. Take great care to think about what your online behavior might reveal. If possible, use Tor Browser for all whistleblowing-related activity to protect your anonymity.
 
 Our organization retains strict access control over our SecureDrop project. A select few journalists within our organization will have access to the messages and files you have sent via SecureDrop. We control the servers that store this data, so no third party has direct access to the metadata or content of what you send us.
 
