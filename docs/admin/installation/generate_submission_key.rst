@@ -1,20 +1,26 @@
 Generate the Submission Key
 =============================
 
-.. These instructions will be replaced with whatever mechanism the all-on-Qubes SecureDrop Workstation uses to generate the submission key.
+When a Source sends a message or file via SecureDrop, it is automatically encrypted with the instance's :ref:`Submission Key<glossary_submission_key>`. The private part of this key is only stored in an isolated `sd-gpg` qube on the SecureDrop Workstation used by Journalists. Messages and files sent through SecureDrop can only be decrypted on a SecureDrop Workstation using this key.
 
-When a Source sends a message or file via SecureDrop, it is automatically encrypted with the instance's :ref:`Submission Key<glossary_submission_key>`. The private part of this key is only stored in an isolated qube on the SecureDrop Workstation which is never connected to the Internet. Messages and files sent through SecureDrop can only be decrypted on a SecureDrop Workstation using this key.
+You only need to generate the Submission Key once. If you set up additional SecureDrop Workstations, you will securely copy the Submission Private Key from an existing Workstation to the new one. 
 
-We will now generate the Submission Key. If you aren't still logged into your Secure Viewing Station from the previous step, boot it using its Tails USB flash drive, with persistence enabled.
+.. TODO new screenshots for all steps, showing dom0 Xfce terminal
 
-.. important:: The private key you will generate in the following steps is one of the most important secrets associated with your SecureDrop installation. This procedure is intended to ensure that the private key is protected by the air-gap throughout its lifetime.
+Create the Submission Key
+-------------------------
 
-Create the key
---------------
+If you have installed Qubes OS on a number of laptops, select the one destined to become the first SecureDrop Workstation for Journalists to use. Create the Submission Key on this laptop with the steps below.
 
-#. Navigate to **Apps ▸ System Tools ▸ Console** to open a terminal |Terminal|.
-#. In the terminal, run ``gpg --full-generate-key``:
+#. If not already, boot and log into Qubes OS.
+#. Open a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**).
+#. Run the following command:
 
+   .. code-block:: sh
+   
+      gpg --full-generate-key
+
+   
    |GPG generate key|
 
 #. When it says **Please select what kind of key you want**, choose "*(1) RSA and RSA (default)*".
@@ -30,38 +36,60 @@ Create the key
 
    |OK to generate|
 
-#. A box will pop up (twice) asking you to type a passphrase. Since the key is protected by the encryption on the Tails persistent volume, it is safe to simply click **OK** without entering a passphrase.
+#. A box will pop up asking you to type a passphrase. Since the key is protected by the Qubes's full disk encryption, it is safe to simply click **OK** without entering a passphrase.
 #. The software will ask you if you are sure. Click **Yes, protection is not needed**.
+#. The prompt for a passphrase will appear again. Repeat the last two steps, cliecking **OK** and then **Yes, protection is not needed**.
 #. Wait for the key to finish generating.
 
-Export the Submission Public Key
-----------------------------------
+Move the Submission Keypair
+----------------------------
 
-Navigate to **Apps ▸ Accessories ▸ Kleopatra** to open a graphical interface to manage GPG keys. Once Kleopatra opens you will find a list of keys, including the SecureDrop Submission Key you just created.
+The two private and public parts of your Submission Key should be moved to a specific location in ``dom0`` where they be needed later in the installation process. 
 
-Click to select the key, then click the "Export…" button in the toolbar above.
+#. Enter the follow commands in the same ``dom0`` terminal.
+#. To list to list the details of the key you just generated, including its fingerprint run:
 
-|My Keys|
+   .. code-block:: sh
+   
+      gpg -K --fingerprint
+   
+#. The key fingerprint is the series of letters and number in 10 batches of 4. Enter this fingerprint *without spaces* as the ``<KeyFingerprint>`` in the next command to export the Submission Private Key to a temporary file:
 
-Save the key to the *Transfer Device* by changing the location to ``/media/amnesia/Transfer Device``, then set the filename to ``SecureDrop.asc``. Once that is set, click the *Save* button to finish exporting the key to the transfer device.
+   .. code-block:: sh
+      
+      gpg --export-secret-keys --armor <KeyFingerprint> > /tmp/sd-journalist.sec
 
-.. note:: This is the public key only.
+#. Verify that the files starts with ``-----BEGIN PGP PRIVATE KEY BLOCK-----`` using the command:
 
-|Export Key|
+   .. code-block:: sh
 
-After exporting the public key, you will be returned back to the list of keys. You'll need to provide the fingerprint of the Submission Key during the installation. Go ahead and double-click on the Submission Key, then write down the 40 hexadecimal digits under *Fingerprint*.
+      head -n 1 /tmp/sd-journalist.sec
 
-|Fingerprint|
+#. If you don't see ``-----BEGIN PGP PRIVATE KEY BLOCK-----`` as the output of the previous command, go back and make sure you've entered the ``<KeyFingerprint>`` correctly.
 
-.. note:: Your fingerprint will be different from the one in the example screenshot.
+#. Run the following command using the same ``<KeyFingerprint>`` to export the Submission Public Key to a temporary file:
 
-At this point, you are done with the Secure Viewing Station for now. You can shut down Tails, grab the Admin Workstation USB flash drive, and move over to your regular workstation.
+   .. note:: Use the ``--export`` flag this time instead of ``export-secret-keys``, as you did before.
+
+   .. code-block:: sh
+      
+      gpg --export --armor <KeyFingerprint> > /tmp/sd-public.sec
+
+#. Verify that the files starts with ``-----BEGIN PGP PUBLIC KEY BLOCK-----`` using the command:
+
+   .. code-block:: sh
+
+      head -n 1 /tmp/sd-public.sec
+
+#. If you don't see ``-----BEGIN PGP PUBLIC KEY BLOCK-----`` as the output of the previous command, go back and make sure you've entered the ``<KeyFingerprint>`` correctly.
+
+#. Run the following command to move both parts of your Submission key to their final destination:
+
+   .. code-block:: sh
+
+      sudo mv /tmp/sd-journalist.sec /tmp/sd-public.sec /usr/share/securedrop-workstation-dom0-config/
 
 .. |GPG generate key| image:: ../../images/install/run_gpg_gen_key.png
 .. |GPG key options| image:: ../../images/install/key_options.png
 .. |OK to generate| image:: ../../images/install/ok_to_generate.png
-.. |gpgApplet| image:: ../../images/gpgapplet.png
-.. |My Keys| image:: ../../images/install/keyring.png
-.. |Export Key| image:: ../../images/install/exportkey.png
-.. |Fingerprint| image:: ../../images/install/fingerprint.png
-.. |Terminal| image:: ../../images/terminal.png
+
