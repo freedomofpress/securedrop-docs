@@ -141,6 +141,8 @@ Specifically, you will want to make sure that you see "Good signature" listed in
 Create the installation media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Follow the steps in this guide to create bootable USB drives <https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/>`__
+`Follow the steps in this guide to create bootable USB flash drives <https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/>`__
+
+If you plan on setting up multiple Admin or SecureDrop Workstations at once, you may want to create multiple installation media so you can install on multiple laptops at the same time.
 
 .. note:: The guide above is written for Ubuntu, but the same steps and procedures can be used for the Qubes installation image as well.

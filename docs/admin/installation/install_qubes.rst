@@ -1,0 +1,164 @@
+Install Qubes OS
+================
+
+Overview
+--------
+
+:ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, and :ref:`Admin Workstations<glossary_admin_workstations>` are both based on Qubes OS. Thus, the first step in creating a SecureDrop Workstation or Admin Workstation is installing Qubes OS on the target laptop. If you are not using a single laptop as both the Admin and SecureDrop Workstation, or if you intend to create multiple SecureDrop Workstations, you can repeat the steps on this page for each laptop.
+
+You may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may install Qubes OS on every laptop in parallel. 
+
+You may also create additional Admin or SecureDrop Workstations at a later time. 
+
+.. TODO add links
+
+The installation and configuration process for each laptop should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
+
+.. _qubes_prerequisites:
+
+Prerequisites
+-------------
+
+In order to install Qubes OS, you will need the following:
+
+- Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations.
+- Qubes installation medium - this guide assumes the use of a USB 3.0 flash drive. Qubes may also be installed via optical media, which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_.
+
+  .. note:: A USB flash drive with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings detailed below are applied.
+
+- A working computer (Linux is recommended and assumed in this guide) to use for verification and creation of the Qubes installation medium.
+
+  .. note:: Tails can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB flash drive to transfer it to Tails for verification and creation of the installation medium.
+
+- A password manager or other system to generate and store strong passphrases for Qubes full disk encryption (FDE) and user accounts.
+
+A basic knowledge of the Qubes OS is helpful.
+
+.. _securedrop_workstation_preinstall_tasks:
+
+Pre-install tasks
+-----------------
+
+Apply BIOS updates and check settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before beginning the Qubes installation, make sure that your Qubes-compatible computer's BIOS is updated to the latest available version. For more details about this process, see the section on :ref:`general_BIOS_update`.
+
+Once the BIOS is up-to-date, boot into the BIOS setup utility and update its settings. Note that not all BIOS versions will support the items listed, but if available following changes are recommended:
+
+- Ensure the internal clock is correct.
+- Set a password to access the BIOS (and record the password in your password manager).
+- Disable BIOS downgrades.
+- Enable Data Execution Prevention.
+- Enable virtualization support (required for Qubes OS). - for Intel-based devices, **Intel VT-d** and **Intel VT-x** should be enabled - for AMD-based devices, **AMD-VI** and **AMD-V** should be enabled
+- Disable unnecessary I/O options such as Wireless WAN and  Bluetooth.
+- Disable unnecessary network options such as Wake-on-LAN and UEFI network stacks.
+- Disable Thunderbolt ports, or any other ports that allow Direct Memory Access (DMA).
+- Enable any physical tamper detection options.
+- Disable Computrace.
+- Disable SecureBoot.
+
+If the Qubes hardware compatibility list entry for your computer recommends the use of Legacy Mode for boot, change that setting in the BIOS as well.
+
+.. _SecureBoot:
+
+Disable SecureBoot
+~~~~~~~~~~~~~~~~~~
+
+SecureBoot is a feature available on most systems that, when enabled, does not allow any operating system to boot that has not been signed by a trusted key. By only booting to operating systems that are properly signed, you can be sure that the OS itself has not been corrupted or tampered with, at least at the boot level.
+
+**SecureBoot must be disabled on the server and Workstation hardware.** SecureDrop installs a hardened, security-focused version of the Linux kernel (grsec) that does not support SecureBoot. If SecureBoot is enabled on either of the servers during the install, you will receive a pre-install error reminding you that it must be turned off before the installation can proceed.
+
+Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with SecureDrop Workstations.
+
+For instructions on how to enable or disable the SecureBoot feature for your device, please consult the manufacturer's manual for BIOS settings, as they differ for each make and model.
+
+Install Qubes OS (estimated wait time: 30-45 minutes)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before starting the installation, please ensure that:
+
+- the computer is charging
+- all USB devices like YubiKeys, mice and keyboards are disconnected
+
+To begin the Qubes installation, connect the Qubes installation drive you just created to your target computer and boot from it. You may need to bring up a boot menu at startup to do so - on Lenovo laptops, for example, you can do so by pressing **F12** on boot.
+
+Follow the `installation documentation <https://www.qubes-os.org/doc/installation-guide/>`_ to install Qubes on your computer, ensuring that you:
+
+- Use English - United States as the setup language. (This requirement will be dropped in a future version).
+- Use all available storage space for the installation (as the computer should be dedicated to SecureDrop Workstation).
+- Set a strong full disk encryption (FDE) passphrase - a 6-word Diceware passphrase is recommended.
+- Create an administrative account named ``user`` with a strong password.
+
+.. note:: Qubes is not intended to have multiple user accounts, so your account name and password will be shared by all users of the laptop. The password will be required to log in and unlock the screen during sessions - choosing something strong but memorable and easily typed is recommended!
+
+Once the installation is complete, you will be prompted to reboot into Qubes. Reboot, removing the install USB flash drive when the computer restarts.
+
+You will be prompted to enter the FDE passphrase set during installation.
+
+After the disk is unlocked and Qubes starts, you will be prompted to complete the initial setup. Click the Qubes OS icon.
+
+On the configuration screen, ensure that the following options are checked:
+
+- Default Template should be set to **Fedora 43 Xfce**
+- **Create default system qubes (sys-net, sys-firewall, default DispVM)**
+- **Make sys-firewall and sys-usb disposable**
+
+If there is a grayed out option "USB qube configuration disabled", make a note of this. An additional setup step will be required (see next section).
+
+Finally, click **Finish Configuration** to set up the default system templates and app qubes.
+
+Once the initial setup is complete, the login dialog will be displayed. Log in using the username and password set during installation.
+
+(Hardware-dependent) Apply USB fixes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If, during the installation, you encountered the grayed out option "USB qube configuration disabled", you must now create a qube to access your USB devices. If you did not encounter this issue, you can skip this section.
+
+To create a USB qube, open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
+
+.. tip::
+
+  For quicker access, you can add the ``dom0`` terminal to the "Favorites" section of the Qubes menu (identified by a bookmark symbol). Right-click the entry and select **Add to favorites**. To remove it at a later time, right-click the entry in your list of favorites and select **Remove from favorites**.
+
+Run the following command:
+
+.. code-block:: sh
+
+  sudo qubesctl state.sls qvm.sys-usb
+
+After the command exits, confirm that you see an entry "Service: sys-usb" in the Qubes menu. If ``sys-usb`` is not running, you can start it with the command ``qvm-start sys-usb`` in ``dom0``. Once ``sys-usb`` is running, click the devices widget in the upper right panel to expand a listing of all devices detected by Qubes OS.
+
+Now, insert a safe USB device you intend to use with the SecureDrop Workstation. Click the devices widget again. Does the newly attached USB device appear in the list? If so, USB support is working and you can proceed with the installation. If you do encounter the error message "Denied qubes.InputKeyboard from sys-usb to dom0", you need to additionally enable USB keyboard support:
+
+.. code-block:: sh
+
+  sudo qubesctl state.sls qvm.usb-keyboard
+
+While we recommend against the use of a USB keyboard for security reasons, this error can also occur in combination with other USB devices on some hardware.
+
+.. _apply_dom0_updates:
+
+Apply ``dom0`` updates (estimated wait time: 15-30 minutes)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``dom0`` is the most trusted domain on Qubes OS, and has privileged access to all other qubes. As such, it is important to ensure that all available security updates have been applied to ``dom0`` as the first step after the installation.
+
+After logging in, use the network manager widget in the upper-right panel to configure your network connection.
+
+Open a ``dom0`` terminal from the Qubes Application menu (the |qubes_menu| icon in the upper left corner) by selecting |qubes_menu| **▸** |qubes_menu_gear| **(left-hand side) ▸ Other Tools ▸ Xfce Terminal**. Run the following command:
+
+.. code-block:: sh
+
+  sudo qubes-dom0-update -y
+
+Wait for all updates to complete. If you encounter an error during this stage, please contact us for assistance, as it may not be safe to proceed with the installation.
+
+After updating ``dom0``, reboot the workstation to ensure that all updates have taken effect for your active session.
+
+Apply updates to system templates (estimated wait time: 45-60 minutes)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+After logging in again, confirm that the network manager successfully connects you to the configured network. If necessary, verify the network settings using the network manager widget.
+
+Once your network connection is working, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system templates. In the ``[Dom0] Qubes Update`` window, check all entries in the list except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system templates will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
