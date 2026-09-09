@@ -20,7 +20,6 @@ If you have installed Qubes OS on a number of laptops, select the one destined t
    
       gpg --full-generate-key
 
-   
    |GPG generate key|
 
 #. When it says **Please select what kind of key you want**, choose "*(1) RSA and RSA (default)*".
@@ -51,9 +50,9 @@ The two private and public parts of your Submission Key should be moved to a spe
 
    .. code-block:: sh
    
-      gpg -K --fingerprint
+      gpg -K --show-colons --fingerprint
    
-#. The key fingerprint is the series of letters and number in 10 batches of 4. Enter this fingerprint *without spaces* as the ``<KeyFingerprint>`` in the next command to export the Submission Private Key to a temporary file:
+#. The key fingerprint is the series of letters and number on the line starting with ``frp::``. Copy this fingerprint (without the colons) and paste it where ``<KeyFingerprint>`` appears in the next command. This will export the Submission Private Key to a temporary file:
 
    .. code-block:: sh
       
@@ -67,7 +66,7 @@ The two private and public parts of your Submission Key should be moved to a spe
 
 #. If you don't see ``-----BEGIN PGP PRIVATE KEY BLOCK-----`` as the output of the previous command, go back and make sure you've entered the ``<KeyFingerprint>`` correctly.
 
-#. Run the following command using the same ``<KeyFingerprint>`` to export the Submission Public Key to a temporary file:
+#. Run the following command using the same ``<KeyFingerprint>`` from earlier to export the Submission Public Key to a temporary file:
 
    .. note:: Use the ``--export`` flag this time instead of ``export-secret-keys``, as you did before.
 
@@ -99,3 +98,7 @@ The two private and public parts of your Submission Key should be moved to a spe
 .. |GPG key options| image:: ../../images/install/key_options.png
 .. |OK to generate| image:: ../../images/install/ok_to_generate.png
 
+.. |qubes_menu| image:: ../../images/qubes_menu.png
+  :alt: Qubes Application menu
+.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
+  :alt: System Tools 
