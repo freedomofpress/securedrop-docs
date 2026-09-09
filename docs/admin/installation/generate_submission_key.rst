@@ -89,6 +89,12 @@ The two private and public parts of your Submission Key should be moved to a spe
 
       sudo mv /tmp/sd-journalist.sec /tmp/sd-public.sec /usr/share/securedrop-workstation-dom0-config/
 
+#. Now that we have moved the Submission Public and Private keys we can remove the ``gpg`` keyring by running:
+
+   .. code-block:: sh
+
+      rm -rf ~/.gnupg
+
 .. |GPG generate key| image:: ../../images/install/run_gpg_gen_key.png
 .. |GPG key options| image:: ../../images/install/key_options.png
 .. |OK to generate| image:: ../../images/install/ok_to_generate.png
