@@ -4,7 +4,7 @@ Install Qubes OS
 Overview
 --------
 
-:ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, and :ref:`Admin Workstations<glossary_admin_workstations>` are both based on Qubes OS. Thus, the first step in creating a SecureDrop Workstation or Admin Workstation is installing Qubes OS on the target laptop. If you are not using a single laptop as both the Admin and SecureDrop Workstation, or if you intend to create multiple SecureDrop Workstations, you can repeat the steps on this page for each laptop.
+:ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, and :ref:`Admin Workstations<glossary_admin_workstations>` are both based on Qubes OS. Thus, the first step in creating a SecureDrop Workstation or Admin Workstation is installing Qubes OS on the target laptop. If you are not using a shared laptop as both the Admin and SecureDrop Workstation, or if you intend to create multiple SecureDrop Workstations, you can repeat the steps on this page for each laptop.
 
 You may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may install Qubes OS on every laptop in parallel. 
 

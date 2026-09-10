@@ -9,8 +9,8 @@ Configure ``sd-admin``
 Import Submission Key
 ---------------------
 
-Moving the Submission Public Key to ``sd-admin``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Moving the Submission Public Key to ``sd-admin`` for a shared laptop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are using the same laptop as your Admin and SecureDrop Workstations, the Submission Public Key you created earlier is now in ``dom0`` at ``/usr/share/securedrop-workstation-dom0-config/sd-public.sec``. To copy it to the ``sd-admin`` qube, open a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**) and run the following command:
 
@@ -57,6 +57,7 @@ Export Submission Public Key from a SecureDrop Workstation
 
 .. TODO Screenshot
 
+.. _import_to_admin_workstation:
 
 Import Submission Public Key onto the Admin Workstation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -81,11 +82,6 @@ Import Submission Public Key onto the Admin Workstation
 .. code-block:: sh
 
     mv ~/sd-public.sec ~/.config/securedrop-admin/
-
-Import email alert keys onto the Admin Workstation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You will also need to import the public keys for the :doc:`email addresses that will receive OSSEC alerts and, optionally, daily journalist alerts</admin/installation/email_alerts>`. Repeat the steps above to import these keys onto the Admin Workstation and copy the files to the same ``~/.confid/securedrop-admin/`` directory in the ``sd-admin`` qube. These will be needed when you :doc:`install SecureDrop on the servers</admin/installation/install_servers>`. 
 
 .. |qubes_menu| image:: ../../images/qubes_menu.png
   :alt: Qubes Application menu
