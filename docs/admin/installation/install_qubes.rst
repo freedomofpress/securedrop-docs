@@ -1,23 +1,27 @@
-Prepare a SecureDrop Workstation
-======================================
-
-.. _prepare_primary_securedrop_workstation:
+Install Qubes OS and SecureDrop packages
+========================================
 
 Overview
 --------
 
-.. TODO add explanation of the different Workstations/Laptops to be configured. Admin vs Journalist
+:ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, and :ref:`Admin Workstations<glossary_admin_workstations>` are both based on Qubes OS. Thus, the first step in creating a SecureDrop Workstation or Admin Workstation is installing Qubes OS on the target laptop. If you are not using a shared laptop as both the Admin and SecureDrop Workstation, or if you intend to create multiple SecureDrop Workstations, you can repeat the steps on this page for each laptop.
 
-SecureDrop Workstation must be installed on a system running Qubes OS. The installation and configuration process should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
+You may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may install Qubes OS on every laptop in parallel. 
 
-.. _securedrop_workstation_prerequisites:
+You may also create additional Admin or SecureDrop Workstations at a later time. 
+
+.. TODO add links
+
+The installation and configuration process for each laptop should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
+
+.. _qubes_prerequisites:
 
 Prerequisites
 -------------
 
-In order to install SecureDrop Workstation and configure it to use an existing SecureDrop instance, you will need the following:
+In order to install Qubes OS, you will need the following:
 
-- A Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations.
+- Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations.
 - Qubes installation medium - this guide assumes the use of a USB 3.0 flash drive. Qubes may also be installed via optical media, which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_.
 
   .. note:: A USB flash drive with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings detailed below are applied.
@@ -69,51 +73,6 @@ Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with
 
 For instructions on how to enable or disable the SecureBoot feature for your device, please consult the manufacturer's manual for BIOS settings, as they differ for each make and model.
 
-
-
-Follow the linked instructions to `verify the ISO <https://www.qubes-os.org/security/verifying-signatures/#how-to-verify-detached-pgp-signatures-on-qubes-isos>`_. Ensure that the ISO and hash values are in the same directory, then run:
-
-.. code-block:: sh
-
-  gpg --keyserver-options no-self-sigs-only,no-import-clean --fetch-keys https://keys.qubes-os.org/keys/qubes-release-4.2-signing-key.asc
-  gpg -v --verify Qubes-R4.2.4-x86_64.iso.DIGESTS
-  sha256sum -c Qubes-R4.2.4-x86_64.iso.DIGESTS
-
-The output should look like this:
-
-.. code-block:: sh
-
-  gpg: requesting key from 'https://keys.qubes-os.org/keys/qubes-release-4.2-signing-key.asc'
-  gpg: key E022E58F8E34D89F: public key "Qubes OS Release 4.2 Signing Key" imported
-  gpg: Total number processed: 1
-  gpg:               imported: 1
-  gpg: no ultimately trusted keys found
-
-  gpg: armor header: Hash: SHA256
-  gpg: original file name=''
-  gpg: Signature made Mon 17 Feb 2025 12:00:00 AM EST
-  gpg:                using RSA key 9C884DF3F81064A569A4A9FAE022E58F8E34D89F
-  gpg: using pgp trust model
-  gpg: Good signature from "Qubes OS Release 4.2 Signing Key" [unknown]
-  gpg: WARNING: This key is not certified with a trusted signature!
-  gpg:          There is no indication that the signature belongs to the owner.
-  Primary key fingerprint: 9C88 4DF3 F810 64A5 69A4  A9FA E022 E58F 8E34 D89F
-  gpg: textmode signature, digest algorithm SHA256, key algorithm rsa4096
-  Qubes-R4.2.4-x86_64.iso: OK
-  sha256sum: WARNING: 20 lines are improperly formatted
-
-Specifically, you will want to make sure that you see "Good signature" listed in the text. If it does not report a good signature, try deleting the ISO and downloading it again.
-
-Once you've verified the ISO, copy it to your installation medium - for example, if using Linux and a USB flash drive, using the command:
-
-.. code-block:: sh
-
-  sudo dd if=Qubes-R4.2.4-x86_64.iso of=/dev/sdX bs=1048576 && sync
-
-where ``if`` is set to the path to your downloaded ISO file and ``of`` is set to the block device corresponding to your USB flash drive. Note that any data on the USB flash drive will be overwritten.
-
-.. caution:: Make sure to verify that you have the correct device name using, for example, the ``lsblk`` command. You should write to the full device (eg. ``/dev/sdc``) rather than to a partition (eg. ``/dev/sdc1``).
-
 Install Qubes OS (estimated wait time: 30-45 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -131,7 +90,7 @@ Follow the `installation documentation <https://www.qubes-os.org/doc/installatio
 - Set a strong full disk encryption (FDE) passphrase - a 6-word Diceware passphrase is recommended.
 - Create an administrative account named ``user`` with a strong password.
 
-.. note:: Qubes is not intended to have multiple user accounts, so your account name and password will be shared by all SecureDrop Workstation users. The password will be required to log in and unlock the screen during sessions - choosing something strong but memorable and easily typed is recommended!
+.. note:: Qubes is not intended to have multiple user accounts, so your account name and password will be shared by all users of the laptop. The password will be required to log in and unlock the screen during sessions - choosing something strong but memorable and easily typed is recommended!
 
 Once the installation is complete, you will be prompted to reboot into Qubes. Reboot, removing the install USB flash drive when the computer restarts.
 
@@ -202,53 +161,35 @@ Apply updates to system templates (estimated wait time: 45-60 minutes)
 
 After logging in again, confirm that the network manager successfully connects you to the configured network. If necessary, verify the network settings using the network manager widget.
 
-- Next, configure Tor via |qubes_menu| **▸ Service ▸ sys-whonix ▸ Anon Connection Wizard**. In most cases, choosing the default **Connect** option is best. Click **Next**, then **Next** again. Then, if Tor connects successfully, click **Finish**. If Tor fails to connect, make sure your network conection is up and does not filter Tor connections, then try again.
+Once your network connection is working, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system templates. In the ``[Dom0] Qubes Update`` window, check all entries in the list except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system templates will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
 
-  .. note:: If Tor connections are blocked on your network, you may need to configure Tor to use bridges in order to get a connection. For more information, see the `Anon Connection Wizard <https://www.whonix.org/wiki/Anon_Connection_Wizard>`_ documentation.
+Install SecureDrop management packages
+--------------------------------------
 
-- Once Tor has connected, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system qubes. in the ``[Dom0] Qubes Update`` window, check all entries in the list above except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system qubes will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
+SecureDrop Workstations and Admin Workstations are both provisioned using the ``securedrop-manange`` utility which is run from ``dom0``. After installing Qubes OS, follow the steps below on each laptop, whether it will become a dedicated SecureDrop Workstation, Admin Workstation, or a shared laptop serving both roles. 
 
-.. _securedrop_workstation_install:
+.. _install_securedrop_manage:
 
-Installing SecureDrop Workstation
----------------------------------
+Install ``securedrop-manage``
+-----------------------------
 
-.. _download_rpm:
+First, you must configure the Qubes-Contrib repo:
 
-Download SecureDrop Workstation packages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. Make sure that network connection is enabled using the network manager widget in the upper right panel.
 
-First, you must configure the Qubes-Contrib repo, then download the SecureDrop Workstation packages.
-
-- Make sure that network connection is enabled using the network manager widget in the upper right panel.
-
-- Next, in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**):
+#. Next, in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**):
 
   .. code-block:: sh
 
     sudo qubes-dom0-update -y qubes-repo-contrib
     sudo qubes-dom0-update --clean -y securedrop-workstation-keyring
 
-- The SecureDrop Relase keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then:
+The SecureDrop Release keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then then install the necessary SecureDrop Workstation packages and remove the Qubes-Contrib repo:
 
   .. code-block:: sh
 
     sudo qubes-dom0-update --clean -y securedrop-workstation-dom0-config
     sudo dnf -y remove qubes-repo-contrib
-
-.. _securedrop_workstation_install_securedrop-admin:
-
-Install `securedrop-admin` tooling
-----------------------------------
-
-.. TODO
-
-.. _securedrop_workstation_generate_private_key:
-
-Generate Submission Private Key
----------------------------------
-
-.. TODO
 
 .. |qubes_menu| image:: ../../images/qubes_menu.png
   :alt: Qubes Application menu

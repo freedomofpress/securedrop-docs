@@ -124,20 +124,23 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/installation/hardware
    admin/installation/prepare_installation_media
    admin/installation/email_alerts
-   admin/installation/prepare_sdw
+   admin/installation/install_qubes
    admin/installation/generate_submission_key
+   admin/installation/prepare_admin_workstation
    admin/installation/set_up_keepassxc
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
    admin/installation/firewall_opnsense
    admin/installation/prepare_servers
-   admin/installation/install
-   admin/installation/apply_sdw
-   admin/installation/create_admin_account
-   admin/installation/test_the_installation
+   admin/installation/install_servers
    admin/installation/provisioning_usb
+   admin/installation/create_admin_account
+   admin/installation/install_sdw
+   admin/installation/test_the_installation
+   admin/installation/post_install
    admin/installation/troubleshoot_qubes
    admin/installation/troubleshoot_ossec
+   admin/installation/troubleshoot_sd_manage
 
 .. toctree::
    :caption: Admin Guide: Migration

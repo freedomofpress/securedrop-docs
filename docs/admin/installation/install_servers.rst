@@ -1,5 +1,5 @@
-Install SecureDrop on the servers
-=================================
+Install SecureDrop on the servers and apply Admin Workstation configuration
+==============================================================================
 
 Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` qube on the :ref:`Admin Workstation<glossary_admin_workstation>` you prepared earlier.
 
@@ -14,7 +14,7 @@ If you are using a setup where there is a switch on the LAN port, plug the Appli
 
 You should make sure you can connect from the Admin Workstation to both of the servers before continuing with the installation.
 
-Open a terminal in ``sd-admin`` and verify that you can SSH into both servers, authenticating with your server administrator username (e.g. ``sdadmin``) and password:
+Open a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Xfce Terminal**) and verify that you can SSH into both servers, authenticating with your server administrator username (e.g. ``sdadmin``) and password:
 
 .. code:: sh
 
@@ -69,7 +69,7 @@ Make sure you have the following information and files ready before continuing:
 
 - the Application Server local IP address
 - the Monitor Server local IP address
-- the Submission Public Key (*generated earlier*)
+- the Submission Public Key
 - the Submission Key fingerprint
 - the email address that will receive alerts from OSSEC
 - the GPG public key and fingerprint for the email address that will receive the alerts
@@ -98,6 +98,8 @@ OSSEC alerts public key
 -----------------------
 
 Before proceeding, you will need to copy the OSSEC Alert Public Key public key to ``~/.config/securedrop-admin`` in the ``sd-admin`` qube.
+
+If you have your GPG public key on another computer, you can follow the :ref:`same steps to import the Submission Public Key<import_to_admin_workstation>` to transfer your OSSEC alerts public key to the Admin Workstation.
 
 If you don't have your GPG key ready, you can run GnuPG on the command line in order to find, import, and export your public key. It's best to copy the key from a trusted and verified source, but you can also request it from keyservers using the known fingerprint. Looking it up by email address or a shorter key ID format could cause you to obtain a wrong, malicious, or expired key. Instead, we recommend you type out your fingerprint in groups of four (just like GPG prints it) enclosed by double quotes.  The reason we suggest this formatting for the fingerprint is simply because it's easiest to type and verify correctly. In the code below simply replace ``<fingerprint>`` with your full, space-separated fingerprint:
 
@@ -130,6 +132,11 @@ If you need to provide a custom CA to perform the validation, copy the cert file
     smtp_relay_cert_override_file: MyOrg.crt
 
 where ``MyOrg.crt`` is the filename. The file will be copied to the server in ``/etc/ssl/certs_local`` and the system CAs will be ignored when validating the SMTP relay TLS certificate. Be sure to save ``~/.config/securedrop-admin/site-specific`` when you are finished.
+
+Journalist Alert public key
+---------------------------------
+
+If you are configuring daily Journalist Alerts, you will also need the GPG public key that wil be used to encrypt those e-mail alerts. You can use the same steps you followed step for the OSSEC public key to place the Journalist Alerts public key in ``~/.config/securedrop-admin/``
 
 .. _ansible-site-specific:
 
@@ -200,3 +207,27 @@ V3 Onion Services
 .. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file contain secret keys that should not be shared with third parties, or copied from the Admin Workstation for any purpose other than tasks such as performing backups or onboarding new users.
 
 The dynamic inventory file will automatically read the onion addresses from the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to connect to the servers over SSH during subsequent playbook runs.
+
+Apply Admin Workstation configuration
+=====================================
+
+The SecureDrop installation process adds authenticated :ref:`onion services<glossary_onion_service>` as an additional layers of protection, guarding access to the most sensitive assets in the SecureDrop system:
+
+#. The *Admin Interface*, because it provides access to submissions (although
+   they are encrypted to the Submission Private Key), and some metadata about sources and
+   submissions.
+
+And, unless SSH-over-Tor is :doc:`disabled</admin/deployment/ssh_over_local_net>`:
+
+#. SSH on the *Application Server*
+#. SSH on the *Monitor Server*
+
+In order to access an authenticated onion service, you require its secret authentication token. 
+
+The ``securedrop-admin`` utility will configure Tor Browser and SSH in ``sd-admin`` to provide this authentication token automatically, and to set up Qubes Menu shortcuts to access the Admin Interface and open SSH connections to the Application and Monitor Servers.
+
+To perform this configuration, run:
+
+.. code:: sh
+
+    securedrop-admin localconfig
