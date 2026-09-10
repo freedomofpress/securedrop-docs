@@ -1,15 +1,10 @@
 Prepare a SecureDrop Workstation
 ================================
 
-.. _securedrop_workstation_install:
-
-Installing SecureDrop Workstation
----------------------------------
-
 .. _download_rpm:
 
-Download SecureDrop Workstation packages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Install SecureDrop Workstation packages
+---------------------------------------
 
 First, you must configure the Qubes-Contrib repo, then download the SecureDrop Workstation packages.
 
@@ -22,7 +17,7 @@ First, you must configure the Qubes-Contrib repo, then download the SecureDrop W
     sudo qubes-dom0-update -y qubes-repo-contrib
     sudo qubes-dom0-update --clean -y securedrop-workstation-keyring
 
-- The SecureDrop Relase keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then:
+- The SecureDrop Release keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then:
 
   .. code-block:: sh
 
