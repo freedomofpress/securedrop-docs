@@ -1,5 +1,5 @@
-Install Qubes OS
-================
+Install Qubes OS and SecureDrop packages
+========================================
 
 Overview
 --------
@@ -162,3 +162,36 @@ Apply updates to system templates (estimated wait time: 45-60 minutes)
 After logging in again, confirm that the network manager successfully connects you to the configured network. If necessary, verify the network settings using the network manager widget.
 
 Once your network connection is working, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system templates. In the ``[Dom0] Qubes Update`` window, check all entries in the list except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system templates will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
+
+Install SecureDrop management packages
+--------------------------------------
+
+SecureDrop Workstations and Admin Workstations are both provisioned using the ``securedrop-manange`` utility which is run from ``dom0``. After installing Qubes OS, follow the steps below on each laptop, whether it will become a dedicated SecureDrop Workstation, Admin Workstation, or a shared laptop serving both roles. 
+
+.. _install_securedrop_manage:
+
+Install ``securedrop-manage``
+-----------------------------
+
+First, you must configure the Qubes-Contrib repo:
+
+#. Make sure that network connection is enabled using the network manager widget in the upper right panel.
+
+#. Next, in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**):
+
+  .. code-block:: sh
+
+    sudo qubes-dom0-update -y qubes-repo-contrib
+    sudo qubes-dom0-update --clean -y securedrop-workstation-keyring
+
+The SecureDrop Release keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then then install the necessary SecureDrop Workstation packages and remove the Qubes-Contrib repo:
+
+  .. code-block:: sh
+
+    sudo qubes-dom0-update --clean -y securedrop-workstation-dom0-config
+    sudo dnf -y remove qubes-repo-contrib
+
+.. |qubes_menu| image:: ../../images/qubes_menu.png
+  :alt: Qubes Application menu
+.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
+  :alt: System Tools 

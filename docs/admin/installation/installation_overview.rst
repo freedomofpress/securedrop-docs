@@ -42,21 +42,24 @@ A summary of the major steps is as follow:
 
 #. Acquire compatible hardware.
 #. Prepare email accounts and GPG keys for alert emails.
-#. Prepare an Admin Workstation laptop.
+#. Install Qubes OS
+#. Install the ``securedrop-manage`` utility in dom0.
 #. Generate the Submission Key.
+#. Prepare the Admin Workstation.
 #. Set up the KeePassXC password manager on the Admin Workstation.
 #. Install and configure the dedicated network firewall from the Admin Workstation.
 #. Prepare the (Application and Monitor) servers.
 #. Install SecureDrop on the servers from the Admin Workstation.
-#. Complete local configuration of the Admin Workstation.
+#. Apply the Admin Workstation configuration.
 #. Create the first Administrator user.
+#. Create an Export Device.
+#. Install SecureDrop Workstation.
 #. Test the installation.
+#. Troubleshoot any issues that occurred during installation.
 
 Optionally:
 
 #. Prepare additional Journalist Workstations for use by Journalists.
-#. Prepare encrypted Export Devices.
-#. Troubleshoot any issues that occurred during installation.
 
 Tracking your progress
 ----------------------

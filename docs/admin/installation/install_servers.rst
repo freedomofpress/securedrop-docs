@@ -1,5 +1,5 @@
-Install SecureDrop on the servers
-=================================
+Install SecureDrop on the servers and apply Admin Workstation configuration
+==============================================================================
 
 Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` qube on the :ref:`Admin Workstation<glossary_admin_workstation>` you prepared earlier.
 
@@ -207,3 +207,27 @@ V3 Onion Services
 .. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file contain secret keys that should not be shared with third parties, or copied from the Admin Workstation for any purpose other than tasks such as performing backups or onboarding new users.
 
 The dynamic inventory file will automatically read the onion addresses from the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to connect to the servers over SSH during subsequent playbook runs.
+
+Apply Admin Workstation configuration
+=====================================
+
+The SecureDrop installation process adds authenticated :ref:`onion services<glossary_onion_service>` as an additional layers of protection, guarding access to the most sensitive assets in the SecureDrop system:
+
+#. The *Admin Interface*, because it provides access to submissions (although
+   they are encrypted to the Submission Private Key), and some metadata about sources and
+   submissions.
+
+And, unless SSH-over-Tor is :doc:`disabled</admin/deployment/ssh_over_local_net>`:
+
+#. SSH on the *Application Server*
+#. SSH on the *Monitor Server*
+
+In order to access an authenticated onion service, you require its secret authentication token. 
+
+The ``securedrop-admin`` utility will configure Tor Browser and SSH in ``sd-admin`` to provide this authentication token automatically, and to set up Qubes Menu shortcuts to access the Admin Interface and open SSH connections to the Application and Monitor Servers.
+
+To perform this configuration, run:
+
+.. code:: sh
+
+    securedrop-admin localconfig
