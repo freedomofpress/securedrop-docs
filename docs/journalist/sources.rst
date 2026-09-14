@@ -40,6 +40,64 @@ Compose a reply to the selected Source in the text box at the bottom of the conv
 
 .. note:: If a reply fails to be sent successfully, it will still be visible in subsequent sessions, including to any other users logging into the same physical SecureDrop Workstation.
 
+Downloading and viewing submitted files
+---------------------------------------
+
+When a Source submits files, you will see a Download button in the conversation flow, a file size, and light-gray text that says "Encrypted File."
+
+|screenshot_file_before_download|
+
+.. _downloading_documents:
+
+Downloading
+~~~~~~~~~~~
+
+To download a file, click anywhere on the **Encrypted File** message box. An animated spinner will indicate that the file is downloading, and a progress bar will indicate the download's progress:
+
+|screenshot_file_downloading|
+
+If necessary, you can pause the download by clicking "Pause," and resume the download later with "Resume."
+
+Once the file has been downloaded and decrypted, the filename and file size will be visible. A three dots menu will also be visible to the right of the filename, where you can **View**, **Export** or **Print** a file. The displayed file size may increase after the download is complete, because the SecureDrop Client automatically decompresses the downloaded file.
+
+|screenshot_file_download_successful|
+
+Viewing submitted files on the SecureDrop Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To view a downloaded file, click its filename. This will open the file in a temporary environment, called a "disposable" qube. The file you clicked on will open in a new window with a different colored border and a window title prefixed with "disp" (meaning disposable).
+
+|screenshot_dispvm|
+
+This disposable qube is a special isolated environment; it does not have internet access, and isolates the files that you are viewing from other sensitive files and applications on the SecureDrop Workstation.
+
+Supported filetypes
+^^^^^^^^^^^^^^^^^^^
+
+The following filetypes are currently supported for viewing on the SecureDrop Workstation:
+
+* .txt, .csv, .pdf
+* Microsoft Office files (.doc, .docx, .xls, .xlsx, .ppt, .pptx)
+* OpenDocument files (.odt, .ods, .odp)
+* Audio: .mp3, .mp4, .mpeg, .wav, .ogg (Ogg Vorbis)
+* Video: .mp4, .webm, .mov (Quicktime), .avi (Audio Video Interleave - Microsoft), .wmv (Windows Media Video)
+* Image: .gif, .png, .jpeg, .tiff, .svg, .ico, .webp, .heic, .avif
+* Compressed archives: .zip, .tar.gz (although printer support for files inside an archive is still to be implemented)
+
+A full list of supported filetypes can be found `here <https://github.com/freedomofpress/securedrop-client/blob/main/workstation-config/mimeapps.list.sd-viewer>`_.
+
+.. tip:: In Qubes, window border colors are used to signify different qubes.
+
+.. _`the Qubes OS documentation`: https://www.qubes-os.org
+
+.. |screenshot_file_before_download| image:: ../images/screenshot_file_before_download.png
+
+.. |screenshot_file_downloading| image:: ../images/screenshot_file_downloading.png
+
+.. |screenshot_file_download_successful| image:: ../images/screenshot_file_download_successful.png
+
+.. |screenshot_dispvm| image:: ../images/screenshot_dispvm.png
+
 Deleting conversations and Source accounts
 ------------------------------------------
 
@@ -54,7 +112,7 @@ If you delete the entire conversation for a Source, that Source will continue to
 If you delete the entire Source account, the Source will not be able to log in again using their codename, and all information about them will be destroyed. Consider using this option if it is clear that all communication with the Source has concluded, or if the Source has requested that all information about them and their messages and files should be deleted.
 
 Deleting one-by-one
-'''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~
 
 You can delete a single Source conversation checking the box beside the Source name in the list, then clicking the delete button (as indicated by a trash icon) in the action area at the top.
 
@@ -77,6 +135,6 @@ Click **Delete Account** to also remove the Source from the Source list, and to 
 .. |screenshot_delete_sources_select|  image:: ../images/screenshot_delete_sources_select.png
 
 Bulk deletion
-'''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~
 
 To delete multiple conversations or Source accounts, select more than one Source conversation from the list, then click the delete button. You will be presented with the same options to **Delete Conversations** and **Delete Accounts** as you would with a single Source conversation.
