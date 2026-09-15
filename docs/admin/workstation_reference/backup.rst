@@ -20,7 +20,7 @@ Back up a Journalist Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
-   Before starting your backup, decide whether you want to back up your data from ``sd-app``. If you skip this step, the first time you log in, all previous messages exchanged between Sources and Journalists, as well as any submitted files, will re-download from your SecureDrop server.
+   Before starting your backup, decide whether you want to back up your data from ``sd-app``. If you skip this step, all previous messages exchanged between Sources and Journalists, as well as any submitted files you have downloaded will not be included in the backup. The first time you log in on a restored SecureDrop Workstation, everything will need to be re-downloaded from your SecureDrop server.
 
 Preserve files from ``dom0`` and ``sd-gpg``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -48,12 +48,12 @@ Select qubes to back up
 
 Ensure your storage medium is plugged in, attached to ``sd-devices``, and unlocked.
 
-Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup Qubes**, and move all qubes from "Selected" to "Available" by pressing the ``<<`` button.
+Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup Qubes**, and move all qubes from **Selected** to **Available** by pressing the ``<<`` button.
 
 .. warning::
    If you are looking to back up your own customized components of SecureDrop Workstation for long-term storage, we suggest taking that backup separately from the backup of SecureDrop Workstation components so that you can avoid proliferating copies of sensitive assets.
 
-To target a qube for backup, highlight it and move it into the "Selected" column by pressing the ``>`` button. Select:
+To target a qube for backup, highlight it and move it into the **Selected** column by pressing the ``>`` button. Select:
 
 - ``dom0``
 - the ``sd-app`` qube (optional), noting the warning above
@@ -66,12 +66,12 @@ If your Journalist Workstation also functions as an Admin Workstation, make sure
 
 You do not need to back up the other ``sd-`` qubes.
 
-Click "Next", and in "Backup destination," specify the ``sd-devices`` qube and directory corresponding to your storage medium's current mount point.
+Click **Next**, and in **Backup destination,** specify the ``sd-devices`` qube and directory corresponding to your storage medium's current mount point.
 
 Perform the backup
 ^^^^^^^^^^^^^^^^^^
 
-Set a strong, unique backup passphrase (7-word diceware), and ensure this passphrase is stored securely outside SecureDrop Workstation.
+Set a strong, unique backup encryption passphrase (7-word diceware), and ensure this passphrase is stored securely outside SecureDrop Workstation.
 
 .. note::
    This passphrase protects sensitive components of your SecureDrop instance, including the Submission Private Key, and unencrypted submissions (if ``sd-app`` is backed up). Ensure it is a very strong password and is stored securely.
@@ -91,16 +91,16 @@ Back up the ``sd-admin`` qube
 
 Ensure your storage medium is plugged in, attached to ``sd-devices``, and unlocked.
 
-Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup Qubes**, and move all qubes from "Selected" to "Available" by pressing the ``<<`` button.
+Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup Qubes**, and move all qubes from **Selected** to **Available** by pressing the ``<<`` button.
 
-Highlight the ``sd-admin`` and ``sd-vault`` qubes, then move them into the "Selected" column by pressing the ``>`` button. You do not need to back up the other ``sd-`` qubes.
+Highlight the ``sd-admin`` and ``sd-vault`` qubes, then move them into the **Selected** column by pressing the ``>`` button. You do not need to back up the other ``sd-`` qubes.
 
-Click "Next", and in "Backup destination," specify the ``sd-devices`` qube and directory corresponding to your storage medium's current mount point.
+Click **Next**, and in **Backup destination,** specify the ``sd-devices`` qube and directory corresponding to your storage medium's current mount point.
 
 Verify the backup
 ~~~~~~~~~~~~~~~~~
 
-Qubes OS recommends verifying the integrity of the backup once the backup completes, and this should be done on the same machine where the backup was created. This can be done by using the Restore Backup GUI tool and selecting "Verify backup integrity, but do not restore the data." For details, see the `Qubes OS backup documentation <https://www.qubes-os.org/doc/backup-restore/>`_.
+Qubes OS recommends verifying the integrity of the backup once the backup completes, and this should be done on the same machine where the backup was created. This can be done by using the Restore Backup GUI tool and selecting **Verify backup integrity, but do not restore the data.** For details, see the `Qubes OS backup documentation <https://www.qubes-os.org/doc/backup-restore/>`_.
 
 .. warning::
   Any files or data not mentioned above and not backed up elsewhere are at risk of being lost or destroyed. Ensure that any other data on your system (for example, using KeepassXC in the ``vault`` qube, or data stored in other qubes) have been backed up and the integrity of the backup has been verified.
