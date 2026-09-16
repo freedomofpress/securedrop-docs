@@ -1,9 +1,7 @@
-Backup and restore
-==================
+Backing up and restoring Workstations
+=====================================
 
 Qubes OS has a `backup utility <https://www.qubes-os.org/doc/backup-restore/>`_ that allows for backup and restoration of user-specified qubes and templates.
-
-SecureDrop Workstation requires only that you back up instance-specific secrets and configuration files, although you can optionally back up some additional local data.
 
 .. warning::
    Backups contain sensitive data, and must be created and stored just as securely as SecureDrop Workstation laptops.
@@ -13,6 +11,24 @@ To perform backups, you will need:
 - a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/reference/provisioning_usb.html>`_ USB flash or external hard drive (of sufficient size, if backing up additional local data)
 - a secure place to store backup credentials (such as a password manager on your primary laptop)
 
+SecureDrop Workstation requires only that you back up instance-specific secrets and configuration files, although you can optionally back up some additional local data.
+
+When backing up SecureDrop Workstation, there are three distinct sets of data you can back up:
+
+#. The Submission Private Key and SecureDrop Workstation config in dom0 (required)
+#. The messages and files from SecureDrop Inbox stored in ``sd-app`` (optional)
+
+   If you skip this step, all previous messages exchanged between Sources and Journalists, as well as any submitted files you have downloaded, will not be included in the backup. The first time you log in on a restored SecureDrop Workstation, everything will need to be re-downloaded from your SecureDrop server.
+   
+   This option is only recommended when performing a migration to a new SecureDrop Workstation installation (not for long-term storage).
+
+#. Other customizations beyond the standard SecureDrop Workstation configuration provided by Freedom of the Press Foundation (optional)
+
+   These may include additional qubes and their templates, custom RPC policies, etc.
+   
+   If you have additional customizations you wish to back up, we suggest capturing that as a separate backup without the Submission Private Key, SecureDrop Workstation config file, or any messages and files from SecureDrop Inbox so that you can avoid proliferating copies of sensitive assets.
+
+
 Backup
 ------  
 
@@ -20,7 +36,7 @@ Back up a Journalist Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
-   Before starting your backup, decide whether you want to back up your data from ``sd-app``. If you skip this step, all previous messages exchanged between Sources and Journalists, as well as any submitted files you have downloaded will not be included in the backup. The first time you log in on a restored SecureDrop Workstation, everything will need to be re-downloaded from your SecureDrop server.
+   Before starting your backup, decide whether you want to back up your data from ``sd-app``, noting the caveats listed above. 
 
 Preserve files from ``dom0`` and ``sd-gpg``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -50,14 +66,11 @@ Ensure your storage medium is plugged in, attached to ``sd-devices``, and unlock
 
 Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup Qubes**, and move all qubes from **Selected** to **Available** by pressing the ``<<`` button.
 
-.. warning::
-   If you are looking to back up your own customized components of SecureDrop Workstation for long-term storage, we suggest taking that backup separately from the backup of SecureDrop Workstation components so that you can avoid proliferating copies of sensitive assets.
-
 To target a qube for backup, highlight it and move it into the **Selected** column by pressing the ``>`` button. Select:
 
 - ``dom0``
-- the ``sd-app`` qube (optional), noting the warning above
-- any customized qubes (and their templates) that you may wish to preserve, noting the warning above.
+- the ``sd-app`` qube (optional)
+- any customized qubes that you may wish to preserve, and their templates (optional)
 
 If your Journalist Workstation also functions as an Admin Workstation, make sure to also select:
 
