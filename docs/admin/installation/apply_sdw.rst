@@ -63,6 +63,7 @@ Troubleshooting ``sdw-admin``
 An error similar to the following may be displayed during an installation or update:
 
 .. code-block:: none
+  :class: no-copybutton
 
   sd-log:
         ----------

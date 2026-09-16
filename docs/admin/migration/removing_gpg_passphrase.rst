@@ -19,7 +19,8 @@ Next, check the key id:
 The output should list the key with a line similar to:
 
 .. code-block:: sh
-
+  :class: no-copybutton
+  
   sec   rsa4096/XXXXXXXXXX <creation date>
 
 The ``XXXXXXXXXX`` value is the key id, which you can use to open the key in edit mode with the following command:

@@ -18,7 +18,10 @@ To enable it on an existing SecureDrop instance, from a terminal in the ``sd-adm
 
   securedrop-admin sdconfig
 
-The prompts will include::
+The prompts will include:
+
+.. code-block:: text
+   :class: no-copybutton
 
     Enable Tor's proof-of-work defense against denial-of-service attacks for the Source Interface?: yes
 
@@ -33,6 +36,9 @@ The Tor configuration will be updated to enable the proof-of-work defense.  When
 Disabling the proof-of-work-defense
 -----------------------------------
 
-Follow the instructions above for :ref:`enabling the proof-of-work defense <enable_tor_pow>`, but answer ``no`` at the prompt::
+Follow the instructions above for :ref:`enabling the proof-of-work defense <enable_tor_pow>`, but answer ``no`` at the prompt:
 
-    Enable Tor's proof-of-work defense against denial-of-service attacks for the Source Interface?: no
+.. code-block:: text
+  :class: no-copybutton
+
+  Enable Tor's proof-of-work defense against denial-of-service attacks for the Source Interface?: no

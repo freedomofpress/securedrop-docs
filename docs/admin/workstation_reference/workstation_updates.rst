@@ -64,15 +64,17 @@ Step 2: Identify the cause(s) of the error
 If the updater has run to completion, you should see a result line in the log file that looks similar to the following:
 
 .. code-block:: none
+   :class: no-copybutton
 
-  2025-02-24 20:12:11,821 - sd.sdw_updater_gui.UpdaterApp:71(upgrade_status)
-  INFO: Signal: upgrade_status {
-  'dom0': <UpdateStatus.UPDATES_OK: '0'>,
-  'apply_dom0': <UpdateStatus.UPDATES_OK: '0'>,
-  'fedora-42-xfce': <UpdateStatus.UPDATES_FAILED: '3'>,
-  'sd-large-bookworm-template': <UpdateStatus.UPDATES_OK: '0'>,
-  'sd-small-bookworm-template': <UpdateStatus.UPDATES_OK: '0'>,
-  'recommended_action': <UpdateStatus.UPDATES_FAILED: '3'>}
+
+   2025-02-24 20:12:11,821 - sd.sdw_updater_gui.UpdaterApp:71(upgrade_status)
+   INFO: Signal: upgrade_status {
+   'dom0': <UpdateStatus.UPDATES_OK: '0'>,
+   'apply_dom0': <UpdateStatus.UPDATES_OK: '0'>,
+   'fedora-42-xfce': <UpdateStatus.UPDATES_FAILED: '3'>,
+   'sd-large-bookworm-template': <UpdateStatus.UPDATES_OK: '0'>,
+   'sd-small-bookworm-template': <UpdateStatus.UPDATES_OK: '0'>,
+   'recommended_action': <UpdateStatus.UPDATES_FAILED: '3'>}
 
 In this example, the ``fedora-42-xfce`` qube has failed to update. This is indicated by the text ``<UpdateStatus.UPDATES_FAILED: '3'>``.
 
@@ -102,6 +104,7 @@ Expired SecureDrop signing key
 If the update fails after running ``sudo qubes-dom0-update`` as described above, and the terminal console displays the following message:
 
 .. code-block:: sh
+   :class: no-copybutton
 
    1. Certificiate 188EDD3B7B22E6A3 invalid: certificate is not alive because: The primary key is not live because: Expired on 2023-07-04T10:52:20Z
    2. Key 188EDD3B7B22E6A3 invalid: key is not alive because: The primary key is not live because: Expired on 2023-07-04T10:52:20Z [...] Error: GPG check FAILED
@@ -119,7 +122,8 @@ your system is trying to use an old copy of the SecureDrop Release Signing Key. 
 
    *Expected output:*
 
-   .. code-block::
+   .. code-block::.
+      :class: no-copybutton
 
       gpg: key 188EDD3B7B22E6A3: public key "SecureDrop Release Signing Key <securedrop-release-key-2021@freedom.press>" imported
       gpg: Total number processed: 1
@@ -135,6 +139,7 @@ your system is trying to use an old copy of the SecureDrop Release Signing Key. 
    *Expected output:*
 
    .. code-block::
+      :class: no-copybutton
 
       pub   rsa4096 2021-05-10 [SC] [expires: 2027-05-24]
          2359E6538C0613E652955E6C188EDD3B7B22E6A3
@@ -160,8 +165,10 @@ your system is trying to use an old copy of the SecureDrop Release Signing Key. 
    *Expected output:*
 
    .. code-block::
+      :class: no-copybutton
 
       fedef93de425668541545373952b5f92bac4ac1f1253fe5b64c2be2fc941073b securedrop-release-key.pub
+      
 #. **Start a dom0 terminal** via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**.
 
    The remaining commands will all be executed in this dom0 terminal.
@@ -225,6 +232,7 @@ your system is trying to use an old copy of the SecureDrop Release Signing Key. 
    *Expected output:*
 
    .. code-block::
+      :class: no-copybutton
 
       pub   rsa4096 2021-05-10 [SC] [expires: 2027-05-24]
          2359E6538C0613E652955E6C188EDD3B7B22E6A3

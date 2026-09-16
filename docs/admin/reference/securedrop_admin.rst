@@ -61,9 +61,12 @@ At any time during and after initial setup, you can choose from a list of suppor
 
 To add or remove locales from your instance, you'll need to :ref:`update your system configuration <update-system-configuration>` as outlined above.
 
-When you reach the prompt starting with "Space separated list of additional locales to support", you will see a list of languages currently supported. Refer to the list above to see which languages correspond to which language codes. For example: ::
+When you reach the prompt starting with "Space separated list of additional locales to support", you will see a list of languages currently supported. Refer to the list above to see which languages correspond to which language codes. For example:
 
-    Space separated list of additional locales to support (ru nl pt_BR fr_FR tr it_IT zh_Hant sv hi ar en_US de_DE es_ES nb_NO): nl fr_FR es_ES
+.. code-block:: text
+   :class: no-copybutton
+
+   Space separated list of additional locales to support (ru nl pt_BR fr_FR tr it_IT zh_Hant sv hi ar en_US de_DE es_ES nb_NO): nl fr_FR es_ES
 
 You'll need to list all languages you now want to support, adding or removing languages as needed. Locale changes will be applied after the next reboot.
 
