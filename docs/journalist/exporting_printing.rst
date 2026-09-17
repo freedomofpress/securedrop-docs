@@ -42,7 +42,7 @@ Exporting using an Export Device
 
 If you must copy a file from your SecureDrop Workstation to another computer or device in digital form, our recommendation is that Journalists are provided with an :ref:`Export Device<glossary_export_device>`, a USB flash drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__. These instructions assume that you are following the recommended workflow. If you are unsure, ask your Administrator.
 
-.. note:: YFiles submitted by a Source must first be :ref:`downloaded<downloading_documents>` before they can be exported.
+.. note:: Files submitted by a Source must first be :ref:`downloaded<downloading_documents>` before they can be exported.
 
 Attach an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~
