@@ -15,7 +15,7 @@ SecureDrop Workstation requires only that you back up instance-specific secrets 
 
 When backing up SecureDrop Workstation, there are three distinct sets of data you can back up:
 
-#. The Submission Private Key and SecureDrop Workstation config in dom0 (required)
+#. The Submission Private Key and SecureDrop Workstation config in ``dom0`` (required)
 #. The messages and files from SecureDrop Inbox stored in ``sd-app`` (optional)
 
    If you skip this step, all previous messages exchanged between Sources and Journalists, as well as any submitted files you have downloaded, will not be included in the backup. The first time you log in on a restored SecureDrop Workstation, everything will need to be re-downloaded from your SecureDrop server.
