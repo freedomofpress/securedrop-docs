@@ -76,7 +76,7 @@ Exporting individual files
 Exporting conversation transcript
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SecureDrop Inbox will generated a `.txt` file transcript of your entire conversation with a Source. Previously deleted messages will not appear in this transcript.
+SecureDrop Inbox will generate a `.txt` file transcript of your entire conversation with a Source. Previously deleted messages will not appear in this transcript.
 
 .. TODO screenshot for step 1
 
