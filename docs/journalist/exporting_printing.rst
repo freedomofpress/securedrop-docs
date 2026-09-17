@@ -1,34 +1,41 @@
 Exporting and printing
 ======================
 
-In addition to providing a secure environment to view messages and files, SecureDrop Inbox has several ways to print or export files and conversations:
+In addition to providing a secure environment to view messages and files, SecureDrop Inbox presents several options to print or export:
 
-- Print submitted documents with an attached USB printer
-- Print conversation transcripts with an attached USB printer
-- Export submitted files to an Export Device
-- Export conversation transcripts with a source to an Export Device
+- :ref:`Print a conversation transcript<printing_transcripts>`
+- :ref:`Print a submitted document<printing_documents>`
+- :ref:`Export an individual file<exporting_files>`
+- :ref:`Export a conversation transcript with a source<exporting_transcripts>`
+- :ref:`Export a conversation transcript with a source and all associated downloaded file<exporting_transcripts_files>`
 
 Printing
 --------
 
 To print from SecureDrop Inbox, a :ref:`compatible printer <print_requirements>`  must be plugged into the computer's USB port.
 
+.. _printing_documents:
+
 Printing documents
 ~~~~~~~~~~~~~~~~~~
 
-.. TODO screenshot for step 1
+#. After :ref:`downloading<downloading_documents>` the document in the conversation view, click the three dots menu and select **Print**. 
 
-#. After :ref:`downloading<downloading_documents>` the document in the conversation view, click the three dots menu and select **Print**.
+   |screenshot_print_file|
+
 #. Wait for ``sd-devices`` qube to start.
 #. You will prompted to attach your printer.
 #. A **Print Document** dialog will appear, from which you can configure different print options before printing the document.
 
+.. _printing_transcripts:
+
 Printing conversation transcripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO screenshot for step 1
+#. From the three dots conversation menu, select **Print Transcript**. 
 
-#. From the three dots conversation menu, select **Print Transcript**.
+   |screenshot_print_transcript|
+
 #. Wait for ``sd-devices`` qube to start.
 #. You will prompted to attach your printer.
 #. A **Print Document** dialog will appear, from which you can configure different print options before printing the document.
@@ -64,35 +71,44 @@ Before exporting any files or transcripts, you should first attach and unlock yo
       |screenshot_veracrypt_sd_devices_files_unlock|
    d. Click **Connect**.
 
+.. _exporting_files:
+
 Exporting individual files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO new screenshot for step 1
+#. Open the three dots menu of the file you which to export and click **Export to USB**. 
 
-#. Open the three dots menu of the file you which to export and click **Export**. |screenshot_export_dialog| 
-#. If you have not already unlocked your Export Device, you will be prompted for the password configured for this Export Device. |screenshot_export_drive_passphrase|
+   |screenshot_export_file| 
+
+#. If you have not already unlocked your Export Device, you will be prompted for the password configured for this Export Device. 
 #. Once you see a message informing you that the export was successfully completed, you can safely unplug the Export Device. Alternatively, you can leave the drive plugged in and export additional files.
+
+.. _exporting_transcripts:
 
 Exporting conversation transcript
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SecureDrop Inbox will generate a `.txt` file transcript of your entire conversation with a Source. Previously deleted messages will not appear in this transcript.
 
-.. TODO screenshot for step 1
+#. From the three dots conversation menu, select **Export Transcript**. 
 
-#. From the three dots conversation menu, select **Export Transcript**.
-#. If you have not already unlocked your Export Device, you will be prompted for the password configured for this Export Device. |screenshot_export_drive_passphrase|
+   |screenshot_export_transcript|
+
+#. If you have not already unlocked your Export Device, you will be prompted for the password configured for this Export Device. 
 #. Once you see a message informing you that the export was successfully completed, you can safely unplug the Export Device. Alternatively, you can leave the drive plugged in and export additional files.
+
+.. _exporting_transcripts_files:
 
 Exporting transcript and files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You may also export the transcript and all downloaded files for a Source in one action.
 
-.. TODO screenshot for step 1
+#. From the three dots conversation menu, select **Export Transcript and Files**. 
 
-#. From the three dots conversation menu, select **Export Transcript and Files**.
-#. If you have not already unlocked your Export Device, you will be prompted for the password configured for this Export Device. |screenshot_export_drive_passphrase|
+   |screenshot_export_transcript_files|
+
+#. If you have not already unlocked your Export Device, you will be prompted for the password configured for this Export Device. 
 #. Once you see a message informing you that the export was successfully completed, you can safely unplug the Export Device. Alternatively, you can leave the drive plugged in and export additional files.
 
 Decrypting and preparing to publish
@@ -129,7 +145,15 @@ Securely erasing an Export Device can only be done by re-formatting and re-encry
 
 You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
 
-.. |screenshot_export_dialog| image:: ../images/screenshot_export_dialog.png
+.. |screenshot_export_file| image:: ../images/screenshot_export_file.png
+
+.. |screenshot_export_transcript_files| image:: ../images/screenshot_export_transcript_files.png
+   
+.. |screenshot_export_transcript| image:: ../images/screenshot_export_transcript.png
+
+.. |screenshot_print_file| image:: ../images/screenshot_print_file.png
+
+.. |screenshot_print_transcript| image:: ../images/screenshot_print_transcript.png
 
 .. |screenshot_export_drive_passphrase| image:: ../images/screenshot_export_drive_passphrase.png
 
