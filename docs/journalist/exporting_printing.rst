@@ -81,7 +81,7 @@ Exporting individual files
    |screenshot_export_file| 
 
 #. If you have not already unlocked your Export Device, you will be prompted for the password configured for this Export Device. 
-#. Once you see a message informing you that the export was successfully completed, you can safely unplug the Export Device. Alternatively, you can leave the drive plugged in and export additional files.
+#. Once you see a message informing you that the export was successfully completed, you can safely unplug the Export Device. Alternatively, you can leave the drive plugged in and export additional files or transcripts.
 
 .. _exporting_transcripts:
 
@@ -95,7 +95,7 @@ SecureDrop Inbox will generate a `.txt` file transcript of your entire conversat
    |screenshot_export_transcript|
 
 #. If you have not already unlocked your Export Device, you will be prompted for the password configured for this Export Device. 
-#. Once you see a message informing you that the export was successfully completed, you can safely unplug the Export Device. Alternatively, you can leave the drive plugged in and export additional files.
+#. Once you see a message informing you that the export was successfully completed, you can safely unplug the Export Device. Alternatively, you can leave the drive plugged in and export additional files or transcripts.
 
 .. _exporting_transcripts_files:
 
@@ -109,7 +109,7 @@ You may also export the transcript and all downloaded files for a Source in one 
    |screenshot_export_transcript_files|
 
 #. If you have not already unlocked your Export Device, you will be prompted for the password configured for this Export Device. 
-#. Once you see a message informing you that the export was successfully completed, you can safely unplug the Export Device. Alternatively, you can leave the drive plugged in and export additional files.
+#. Once you see a message informing you that the export was successfully completed, you can safely unplug the Export Device. Alternatively, you can leave the drive plugged in and export additional files or transcripts.
 
 Decrypting and preparing to publish
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
