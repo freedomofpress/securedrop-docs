@@ -148,7 +148,7 @@ Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Restore
 If you are restoring a Journalist Workstation, you should ensure you restore:
 
 - ``dom0``
-- (optional) ``sd-app``
+- ``sd-app`` (optional)
 
 If you are restoring an Admin Workstation, you should ensure you restore:
 
