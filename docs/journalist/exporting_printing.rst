@@ -53,7 +53,7 @@ Before exporting any files or transcripts, you should first attach and unlock yo
 2. If your Export Device is using VeraCrypt, you will need to unlock it manually:
 
    a. Open the file menu by clicking on the Qubes Application menu |qubes_menu| (in the top left), select **sd-devices** and click **Files**.
-   b. In the left sidebar, there should be an entry labeled **# GB Possibly Encrypted**, click it. |screenshot_veracrypt_sd_devices_files|
+   b. In the left sidebar, click the entry labeled **# GB Possibly Encrypted**. |screenshot_veracrypt_sd_devices_files|
    c. You will be prompted for the password configured for this Export Device:
 
       - Volume type: leave both unchecked
