@@ -126,7 +126,8 @@ Restore
 Reinstall Qubes OS
 ~~~~~~~~~~~~~~~~~~
 
-To restore SecureDrop Workstation, follow our :doc:`pre-install tasks </admin/installation/prepare_sdw>` to provision a Qubes OS system complete with updated base templates.
+To restore SecureDrop Workstation, follow our :doc:`pre-install tasks </admin/installation/prepare_sdw>` to provision a Qubes OS system complete with updated base templates, and
+download the SecureDrop Workstation packages.
 
 Rename or delete redundant app qubes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,38 +167,24 @@ We suggest restoring only those qubes, provisioning SecureDrop Workstation, and 
 
   .. code-block:: sh
 
-    sudo qubes-dom0-update -y qubes-dist-upgrade qubes-dist-upgrade --template-standalone --upgrade
+     sudo qubes-dom0-update -y qubes-dist-upgrade qubes-dist-upgrade --template-standalone --upgrade
 
   More information can be found in the `upstream documentation <https://www.qubes-os.org/doc/upgrade/4.2/#clean-installation>`_. Contact Support with any questions.
 
 Reinstall SecureDrop Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do not already have a ``work`` qube, create it with default networking settings:
-
-.. code-block:: sh
-
-  qvm-create -l blue work
-
-Then, :ref:`download and verify <download_rpm>` the SecureDrop Workstation .rpm to the ``work`` qube and copy it to ``dom0``.
-
-Once you have a valid .rpm file in ``dom0``, install the .rpm by running:
-
-.. code-block:: sh
-
-  sudo dnf install securedrop-workstation.rpm
-
 Retrieve the previous SecureDrop Workstation configuration from the backup folder on ``dom0``. From the ``dom0`` home directory:
 
 .. code-block:: sh
 
-  ls -d */*/* | grep home-restore
+   ls -d */*/* | grep home-restore
 
 You should see a directory called ``home-restore-$YYYY-MM-DD-HHMMSS/dom0-home/$USERNAME``. We will call this ``$RESTORE_DIR`` in the instructions below.
 
 .. code-block:: sh
 
-  sudo cp ~/$RESTORE_DIR/securedrop-workstation-dom0-config/{sd-journalist.sec,config.json,sd-keys.asc} /usr/share/securedrop-workstation-dom0-config/
+   sudo cp ~/$RESTORE_DIR/securedrop-workstation-dom0-config/{sd-journalist.sec,config.json,sd-keys.asc} /usr/share/securedrop-workstation-dom0-config/
 
 Optionally, inspect each file before proceeding. The first file should be an ASCII-armored GPG private key file. The second file should follow the format of the `example configuration file <https://raw.githubusercontent.com/freedomofpress/securedrop-workstation/main/files/config.json.example>`_, with values for its fields (e.g., ``hostname``, ``submission_key_fpr``) specific to your configuration. The file may be formatted in a single line without whitespace. The third file is a backup of key material from ``sd-gpg`` and will be moved into that qube when you have reprovisioned the system.
 
@@ -205,7 +192,7 @@ Verify that the configuration is valid:
 
 .. code-block:: sh
 
-  sdw-admin --validate
+   sdw-admin --validate
 
 If the above command prints ``OK``, the configuration is valid.
 
@@ -213,7 +200,7 @@ Reinstall SecureDrop Workstation:
 
 .. code-block:: sh
 
-  sdw-admin --apply
+   sdw-admin --apply
 
 Restore additional keys to ``sd-gpg``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -222,8 +209,8 @@ If you are using a Journalist Workstation and have multiple Submission Keys, per
 
 .. code-block:: sh
 
-  qvm-copy-to-vm sd-gpg $RESTORE_DIR/securedrop-workstation-dom0-config/sd-keys.asc
-  qvm-run sd-gpg 'gpg --import /home/user/QubesIncoming/dom0/sd-keys.asc'
+   qvm-copy-to-vm sd-gpg $RESTORE_DIR/securedrop-workstation-dom0-config/sd-keys.asc
+   qvm-run sd-gpg 'gpg --import /home/user/QubesIncoming/dom0/sd-keys.asc'
 
 Restore customized qubes, RPC policies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
