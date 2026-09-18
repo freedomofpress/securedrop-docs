@@ -126,8 +126,7 @@ Restore
 Reinstall Qubes OS
 ~~~~~~~~~~~~~~~~~~
 
-To restore SecureDrop Workstation, follow our :doc:`pre-install tasks </admin/installation/prepare_sdw>` to provision a Qubes OS system complete with updated base templates, and
-download the SecureDrop Workstation packages.
+To restore SecureDrop Workstation, follow our :doc:`pre-install tasks </admin/installation/prepare_sdw>` to provision a Qubes OS system complete with updated base templates, and download the SecureDrop Workstation packages.
 
 Rename or delete redundant app qubes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
