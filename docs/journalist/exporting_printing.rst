@@ -47,7 +47,7 @@ Exporting using an Export Device
 
    SecureDrop does not scan for or remove malware. If the file you received contains malware targeting the operating system and applications running on your everyday workstation, copying it in its original form carries the risk of spreading malware to that computer. Make sure you :doc:`understand the risks</journalist/working_with_exported_files>`, and consider other methods to export the file (e.g., printing documents).
 
-If you must copy a file from your SecureDrop Workstation to another computer or device in digital form, our recommendation is that Journalists are provided with an :ref:`Export Device<glossary_export_device>`, a USB flash drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__. These instructions assume that you are following the recommended workflow. If you are unsure, ask your Administrator.
+If you must copy a file from your SecureDrop Workstation to another computer or device in digital form, we recommend using an :ref:`Export Device<glossary_export_device>`, a USB flash drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__. These instructions assume that you are following the recommended workflow. If you are unsure, ask your Administrator.
 
 .. note:: Files submitted by a Source must first be :ref:`downloaded<downloading_documents>` before they can be exported.
 
