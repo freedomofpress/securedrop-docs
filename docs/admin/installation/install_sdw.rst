@@ -40,6 +40,8 @@ Install SecureDrop Workstation
 
 This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple qubes and installs supporting packages. When the command finishes, reboot the machine to complete the installation of SecureDrop Inbox and it's associated qubes and configuration.
 
+.. _end_install_securedrop_workstation:
+
 .. |qubes_menu| image:: ../../images/qubes_menu.png
   :alt: Qubes Application menu
 .. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
