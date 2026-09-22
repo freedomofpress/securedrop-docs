@@ -25,8 +25,8 @@ In a ``dom0`` terminal opened via |qubes_menu| **▸** |qubes_menu_gear| **▸ O
 .. code-block:: sh
 
   qvm-run --pass-io sd-gpg 'gpg -a --export-secret-keys' > sd-keys.asc
-  sudo mv sd-keys.asc /usr/share/securedrop-workstation-dom0-config/
-  cp -r /usr/share/securedrop-workstation-dom0-config ~
+  sudo mv sd-keys.asc ~/.config/securedrop-manage/
+  cp -r ~/.config/securedrop-manage ~
 
 If you have made customizations to ``dom0`` (for example, custom RPC policy files):
 
@@ -135,7 +135,7 @@ You should see a directory called ``home-restore-$YYYY-MM-DD-HHMMSS/dom0-home/$U
 
 .. code-block:: sh
 
-  sudo cp ~/$RESTORE_DIR/securedrop-workstation-dom0-config/{sd-journalist.sec,config.json,sd-keys.asc} /usr/share/securedrop-workstation-dom0-config/
+  sudo cp ~/$RESTORE_DIR/securedrop-workstation-dom0-config/{sd-journalist.sec,config.json,sd-keys.asc} ~/.config/securedrop-manage/
 
 Optionally, inspect each file before proceeding. The first file should be an ASCII-armored GPG private key file. The second file should follow the format of the `example configuration file <https://raw.githubusercontent.com/freedomofpress/securedrop-workstation/main/files/config.json.example>`_, with values for its fields (e.g., ``hostname``, ``submission_key_fpr``) specific to your configuration. The file may be formatted in a single line without whitespace. The third file is a backup of key material from ``sd-gpg`` and will be moved into that qube when you have reprovisioned the system.
 

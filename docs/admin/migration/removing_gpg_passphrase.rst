@@ -41,7 +41,7 @@ Verify that the new keyfile ``/tmp/nopassphrase.sec`` starts with the ``-----BEG
 
 .. code-block:: sh
 
-  sudo cp /tmp/nopassphrase.sec /usr/share/securedrop-workstation-dom0-config/sd-journalist.sec
+  sudo cp /tmp/nopassphrase.sec ~/.config/securedrop-manage/sd-journalist.sec
 
 If you are provisioning SecureDrop Workstation for the first time, continue with the installation instructions. Or, to re-check an existing configuration:
 

@@ -198,7 +198,7 @@ If importing the Submission Private Key  using ``sdw-admin --configure`` fails, 
 
   .. code-block:: sh
 
-    sudo cp /tmp/sd-journalist.sec /usr/share/securedrop-workstation-dom0-config/
+    sudo cp /tmp/sd-journalist.sec ~/.config/securedrop-manage/
 
 - You can run ``sdw-admin --configure`` to now import the Admin Interface details and complete configuration.
 
@@ -249,7 +249,7 @@ Once the Admin Interface details and Submission Private Key have been copied to 
 
   .. code-block:: sh
 
-    cd /usr/share/securedrop-workstation-dom0-config
+    cd ~/.config/securedrop-manage
     sudo cp config.json.example config.json
 
 - The ``config.json`` file must be updated with the correct values for your instance. Open it with root privileges in a text editor such as ``vi`` or ``nano`` and update the following fields' values:
