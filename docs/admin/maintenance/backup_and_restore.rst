@@ -131,7 +131,7 @@ Moving a SecureDrop instance to new hardware involves:
 
       You may need to wait approximately 10-15 minutes after installing Ubuntu 24.04 for the servers to become reachable via SSH.
 
-#. Reinstall SecureDrop on the servers, following the :doc:`installation instructions <../installation/install>`. During the configuration stage (``securedrop-admin sdconfig``), the values will be prepopulated based on the old instance's configuration, which is still stored in ``~/.config/securedrop-admin``. Press **Enter** to accept each value.
+#. Reinstall SecureDrop on the servers, following the :doc:`installation instructions </admin/installation/installation_overview>`. During the configuration stage (``securedrop-admin sdconfig``), the values will be prepopulated based on the old instance's configuration, which is still stored in ``~/.config/securedrop-admin``. Press **Enter** to accept each value.
 
    Proceed through the installation by running
    ``securedrop-admin install`` then ``securedrop-admin localconfig``.

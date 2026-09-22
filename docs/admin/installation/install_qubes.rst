@@ -4,7 +4,7 @@ Install Qubes OS and SecureDrop packages
 Overview
 --------
 
-:ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, and :ref:`Admin Workstations<glossary_admin_workstations>` are both based on Qubes OS. Thus, the first step in creating a SecureDrop Workstation or Admin Workstation is installing Qubes OS on the target laptop. If you are not using a shared laptop as both the Admin and SecureDrop Workstation, or if you intend to create multiple SecureDrop Workstations, you can repeat the steps on this page for each laptop.
+:ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, and :ref:`Admin Workstations<glossary_admin_workstation>` are both based on Qubes OS. Thus, the first step in creating a SecureDrop Workstation or Admin Workstation is installing Qubes OS on the target laptop. If you are not using a shared laptop as both the Admin and SecureDrop Workstation, or if you intend to create multiple SecureDrop Workstations, you can repeat the steps on this page for each laptop.
 
 You may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may install Qubes OS on every laptop in parallel. 
 
@@ -34,8 +34,6 @@ In order to install Qubes OS, you will need the following:
 
 A basic knowledge of the Qubes OS is helpful.
 
-.. _securedrop_workstation_preinstall_tasks:
-
 Pre-install tasks
 -----------------
 
@@ -59,8 +57,6 @@ Once the BIOS is up-to-date, boot into the BIOS setup utility and update its set
 - Disable SecureBoot.
 
 If the Qubes hardware compatibility list entry for your computer recommends the use of Legacy Mode for boot, change that setting in the BIOS as well.
-
-.. _SecureBoot:
 
 Disable SecureBoot
 ~~~~~~~~~~~~~~~~~~
@@ -137,8 +133,6 @@ Now, insert a safe USB device you intend to use with the SecureDrop Workstation.
 
 While we recommend against the use of a USB keyboard for security reasons, this error can also occur in combination with other USB devices on some hardware.
 
-.. _apply_dom0_updates:
-
 Apply ``dom0`` updates (estimated wait time: 15-30 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -168,28 +162,26 @@ Install SecureDrop management packages
 
 SecureDrop Workstations and Admin Workstations are both provisioned using the ``securedrop-manange`` utility which is run from ``dom0``. After installing Qubes OS, follow the steps below on each laptop, whether it will become a dedicated SecureDrop Workstation, Admin Workstation, or a shared laptop serving both roles. 
 
-.. _install_securedrop_manage:
-
 Install ``securedrop-manage``
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First, you must configure the Qubes-Contrib repo:
 
-#. Make sure that network connection is enabled using the network manager widget in the upper right panel.
+1. Make sure that network connection is enabled using the network manager widget in the upper right panel.
 
-#. Next, in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**):
+2. Next, in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**): 
 
-  .. code-block:: sh
+.. code-block:: sh
 
-    sudo qubes-dom0-update -y qubes-repo-contrib
-    sudo qubes-dom0-update --clean -y securedrop-workstation-keyring
+  sudo qubes-dom0-update -y qubes-repo-contrib
+  sudo qubes-dom0-update --clean -y securedrop-workstation-keyring
 
-The SecureDrop Release keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then then install the necessary SecureDrop Workstation packages and remove the Qubes-Contrib repo:
+3. The SecureDrop Release keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then then install the necessary SecureDrop Workstation packages and remove the Qubes-Contrib repo:
 
-  .. code-block:: sh
+.. code-block:: sh
 
-    sudo qubes-dom0-update --clean -y securedrop-workstation-dom0-config
-    sudo dnf -y remove qubes-repo-contrib
+  sudo qubes-dom0-update --clean -y securedrop-workstation-dom0-config
+  sudo dnf -y remove qubes-repo-contrib
 
 .. |qubes_menu| image:: ../../images/qubes_menu.png
   :alt: Qubes Application menu

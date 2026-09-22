@@ -13,7 +13,7 @@ SecureDrop is a technical tool. It is designed to protect Journalists and Source
 
 Setting up SecureDrop is a multi-step process, where each step builds on the steps that come before it. It's important that you treat the installation as a complete process, making sure not to skip any portions of the install guide or jump ahead to later content.
 
-Once you have all the necessary hardware, :doc:`setting up SecureDrop <install>` will take at least a day's work. After installation, you will need at least one more day to :ref:`complete and test <Deployment>` your setup.
+Once you have all the necessary hardware, setting up SecureDrop will take at least a day's work. After installation, you will need at least one more day to :ref:`complete and test <Deployment>` your setup.
 
 Installation support
 --------------------

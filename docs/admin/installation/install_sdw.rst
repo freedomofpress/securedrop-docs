@@ -22,6 +22,8 @@ Export onion service file from an Admin Workstation
 Import onion service file onto the SecureDrop Workstation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _install_securedrop_workstation:
+
 Install SecureDrop Workstation
 ------------------------------
 

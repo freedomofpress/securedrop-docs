@@ -10,7 +10,7 @@ Tor now includes a `proof-of-work (PoW) defense <https://onionservices.torprojec
 Enabling the proof-of-work defense
 ----------------------------------
 
-If you're :doc:`installing SecureDrop for the first time <../installation/install>`, the proof-of-work defense will be enabled by default, unless you :ref:`explicitly disable it <disable_tor_pow>`.
+If you're :doc:`installing SecureDrop for the first time </admin/installation/installation_overview>`, the proof-of-work defense will be enabled by default, unless you :ref:`explicitly disable it <disable_tor_pow>`.
 
 To enable it on an existing SecureDrop instance, from a terminal in the ``sd-admin`` qube:
 

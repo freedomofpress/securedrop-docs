@@ -231,3 +231,8 @@ To perform this configuration, run:
 .. code:: sh
 
     securedrop-admin localconfig
+
+.. |qubes_menu| image:: ../../images/qubes_menu.png
+  :alt: Qubes Application menu
+.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
+  :alt: System Tools 

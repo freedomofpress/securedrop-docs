@@ -79,7 +79,7 @@ Restore
 Reinstall Qubes OS
 ~~~~~~~~~~~~~~~~~~
 
-To restore SecureDrop Workstation, follow our :doc:`pre-install tasks </admin/installation/prepare_sdw>` to provision a Qubes OS system complete with updated base templates.
+To restore SecureDrop Workstation, follow our :doc:`pre-install tasks </admin/installation/install_qubes>` to provision a Qubes OS system complete with updated base templates.
 
 Rename or delete redundant app qubes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -117,7 +117,7 @@ If you do not already have a ``work`` qube, create it with default networking se
 
   qvm-create -l blue work
 
-Then, :ref:`download and verify <download_rpm>` the SecureDrop Workstation .rpm to the ``work`` qube and copy it to ``dom0``.
+Then, download and verify the SecureDrop Workstation .rpm to the ``work`` qube and copy it to ``dom0``.
 
 Once you have a valid .rpm file in ``dom0``, install the .rpm by running:
 

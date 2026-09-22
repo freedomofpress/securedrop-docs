@@ -5,7 +5,7 @@ Perform the next steps on the laptop you want to become an Admin Workstation. So
 
 If you are going to use a dedicated laptop as the Admin Workstation, make sure that you have already :doc:`installed Qubes OS and the SecureDrop packages</admin/installation/install_qubes>` on the laptop before proceeding. 
 
-.. _install_configure_securedrop_app:
+.. _install_admin_workstation:
 
 Install Admin Workstation
 ---------------------------
@@ -22,6 +22,8 @@ Install Admin Workstation
 .. TODO update command for Admin Workstation
 
 This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple qubes and installs supporting packages. When the command finishes, reboot the machine to complete the installation and set up of the qubes and utilities needed for the role of an Admin Workstation. 
+
+.. _import_submission_key:
 
 Import Submission Key
 ---------------------

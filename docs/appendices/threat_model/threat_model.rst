@@ -122,7 +122,7 @@ Assumptions about the person installing SecureDrop
 
 -  This person (usually the admin) acts reasonably and in good faith, e.g. if they were to give the attacker system-level access that would be unreasonable.
 -  The person obtains an authentic copy of SecureDrop and its dependencies.
--  The person follows our guidelines for :ref:`deploying the system <deployment>`, setting up the :ref:`landing page <Landing Page>` for the organization, and for :doc:`installing SecureDrop </admin/installation/install>`.
+-  The person follows our guidelines for :ref:`deploying the system <deployment>`, setting up the :ref:`landing page <Landing Page>` for the organization, and for :doc:`installing SecureDrop </admin/installation/installation_overview>`.
 
 Assumptions about the Source's computer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
