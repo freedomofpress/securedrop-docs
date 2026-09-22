@@ -23,7 +23,7 @@ Printing documents
 
    |screenshot_print_file|
 
-#. Wait for ``sd-devices`` qube to start.
+#. Wait for ``sd-devices`` to start.
 #. You will prompted to attach your printer.
 #. A **Print Document** dialog will appear, from which you can configure different print options before printing the document.
 
@@ -36,7 +36,7 @@ Printing conversation transcripts
 
    |screenshot_print_transcript|
 
-#. Wait for ``sd-devices`` qube to start.
+#. Wait for ``sd-devices`` to start.
 #. You will prompted to attach your printer.
 #. A **Print Document** dialog will appear, from which you can configure different print options before printing the document.
 
@@ -56,7 +56,7 @@ Attach an Export Device
 
 Before exporting any files or transcripts, you should first attach and unlock your Export Device.
 
-1. Insert the Export Device and wait for the ``sd-devices`` qube to start.
+1. Insert the Export Device and wait for ``sd-devices`` to start.
 2. If your Export Device is using VeraCrypt, you will need to unlock it manually:
 
    a. Open the file menu by clicking on the Qubes Application menu |qubes_menu| (in the top left), select **sd-devices** and click **Files**.
