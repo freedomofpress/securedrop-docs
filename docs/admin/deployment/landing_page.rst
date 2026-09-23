@@ -84,10 +84,7 @@ and downloaded, what machine was involved, the machine’s owner, etc.
 You can scrub metadata from some files prior to submission using the Metadata
 Anonymization Toolkit featured in Tails.
 
-Your online behavior can be extremely revealing.
-Regularly monitoring our publication’s social media or website can potentially
-flag you as a source. Take great care to think about what your online behavior
-might reveal, and consider using Tor Browser to mitigate such monitoring.
+Your online behavior can be extremely revealing. Regularly monitoring our publication's social media or website can potentially flag you as a source. Your activity on other websites or apps may also be used to identify you. Avoid using any service linked to your identity while preparing to contact us or while whistleblowing, such as AI chatbots or search engines when logged in, as your prompt and search histories may be used against you. Take great care to think about what your online behavior might reveal. If possible, use Tor Browser for all whistleblowing-related activity to protect your anonymity.
 
 Our organization retains strict access control over our SecureDrop project.
 A select few journalists within our organization will have access to
