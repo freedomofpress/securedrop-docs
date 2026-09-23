@@ -84,11 +84,9 @@ making these decisions.
 
 Choose Who to Submit To
 -----------------------
-We recommend conducting all research related to your submission in Tor Browser.
-If you are unsure whether you are using Tor, you can visit the address
-https://check.torproject.org.
 
 We recommend conducting all research related to your submission in Tor Browser. If you are unsure whether you are using Tor, you can visit the address https://check.torproject.org. Tor Browser provides strong anonymity protection, but you should also take care to ensure your research is not linked to your identity. Avoid the use of services that require you to provide persononally identifying information to use them, such as AI chatbots, or search engines while logged in.
+
 All organizations operating SecureDrop have a *landing page* that provides their
 own organization-specific recommendations for using SecureDrop. We encourage
 you to consider an organization’s *landing page* before submitting to them.
