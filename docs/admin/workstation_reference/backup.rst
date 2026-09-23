@@ -113,7 +113,7 @@ Click **Next**, and in **Backup destination,** specify the ``sd-devices`` qube a
 Verify the backup
 ~~~~~~~~~~~~~~~~~
 
-Qubes OS recommends verifying the integrity of the backup once the backup completes, and this should be done on the same machine where the backup was created. This can be done by using the Restore Backup GUI tool and selecting **Verify backup integrity, but do not restore the data.** For details, see the `Qubes OS backup documentation <https://www.qubes-os.org/doc/backup-restore/>`_.
+Qubes OS recommends verifying the integrity of the backup once the backup completes, and this should be done on the same machine where the backup was created. This can be done by using the Restore Backup GUI tool and selecting **Test restore to verify backup integrity (no data actually restored)**. For details, see the `Qubes OS backup documentation <https://www.qubes-os.org/doc/backup-restore/>`_.
 
 .. warning::
   Any files or data not mentioned above and not backed up elsewhere are at risk of being lost or destroyed. Ensure that any other data on your system (for example, using KeepassXC in the ``vault`` qube, or data stored in other qubes) have been backed up and the integrity of the backup has been verified.
