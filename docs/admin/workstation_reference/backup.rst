@@ -89,7 +89,7 @@ Set a strong, unique backup encryption passphrase (7-word diceware), and ensure 
 .. note::
    This passphrase protects sensitive components of your SecureDrop instance, including the Submission Private Key, and unencrypted submissions (if ``sd-app`` is backed up). Ensure it is a very strong password and is stored securely.
 
-Uncheck "save backup profile," then proceed with the backup.
+Uncheck **save backup profile**, then proceed with the backup.
 
 
 Back up an Admin Workstation
