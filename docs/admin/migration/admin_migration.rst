@@ -198,7 +198,7 @@ If importing the Submission Private Key  using ``sdw-admin --configure`` fails, 
 
   .. code-block:: sh
 
-    sudo cp /tmp/sd-journalist.sec ~/.config/securedrop-manage/
+    cp /tmp/sd-journalist.sec ~/.config/securedrop-manage/
 
 - You can run ``sdw-admin --configure`` to now import the Admin Interface details and complete configuration.
 
@@ -245,12 +245,13 @@ Once the Admin Interface details and Submission Private Key have been copied to 
 
   The fingerprint will be on a line that starts with ``fpr``. For example, if the output included the line ``fpr:::::::::65A1B5FF195B56353CC63DFFCC40EF1228271441:``, the fingerprint would be the character sequence ``65A1B5FF195B56353CC63DFFCC40EF1228271441``.
 
+.. TODO: Revisit this after automation for setting up config.json is in place
+
 - Next, create the SecureDrop Workstation configuration file:
 
   .. code-block:: sh
 
-    cd ~/.config/securedrop-manage
-    sudo cp config.json.example config.json
+    cp /usr/share/securedrop-workstation-dom0-config/config.json.example ~/.config/securedrop-manage/config.json
 
 - The ``config.json`` file must be updated with the correct values for your instance. Open it with root privileges in a text editor such as ``vi`` or ``nano`` and update the following fields' values:
 
