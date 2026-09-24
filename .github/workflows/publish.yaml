@@ -3,7 +3,7 @@ name: Publish
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "legacy-stable"]
     tags: ["**"]  # run for all tags
 
 env:
