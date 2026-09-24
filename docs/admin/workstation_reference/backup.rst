@@ -79,10 +79,12 @@ If your Journalist Workstation also functions as an Admin Workstation, make sure
 
 You do not need to back up the other ``sd-`` qubes.
 
-Click **Next**, and in **Backup destination,** specify the ``sd-devices`` qube and directory corresponding to your storage medium's current mount point.
+.. _perform_backup_sdw:
 
 Perform the backup
 ^^^^^^^^^^^^^^^^^^
+
+Click **Next**, and in **Backup destination,** specify the ``sd-devices`` qube and directory corresponding to your storage medium's current mount point.
 
 Set a strong, unique backup encryption passphrase (7-word diceware), and ensure this passphrase is stored securely outside SecureDrop Workstation.
 
@@ -108,7 +110,7 @@ Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup 
 
 Highlight the ``sd-admin`` and ``sd-vault`` qubes, then move them into the **Selected** column by pressing the ``>`` button. You do not need to back up the other ``sd-`` qubes.
 
-Click **Next**, and in **Backup destination,** specify the ``sd-devices`` qube and directory corresponding to your storage medium's current mount point.
+Click **Next**, then select the backup destination, set the encryption passphrase, and uncheck **save backup profile** as described previously in :ref:`Perform the backup <perform_backup_sdw>`, then proceed with the backup.
 
 Verify the backup
 ~~~~~~~~~~~~~~~~~
@@ -141,7 +143,7 @@ Restore backup (SecureDrop Workstation components)
 .. note::
    If you are migrating from one machine to another or from one version of Qubes OS to another, we suggest you wipe (reformat) or destroy the drive after you have successfully restored it onto the new machine (which should ideally happen the same day). In all cases, follow your organization's internal policies on handling sensitive assets and information.
 
-Plug in your backup medium and unlock it as during the backup. By default on a new system, your peripheral devices will be managed by a qube called ``sys-usb``.
+Plug in your backup medium, attach it to the ``sys-usb`` qube, and unlock it using the same process as during the backup.
 
 Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Restore Backup**, and enter the location of the backup file. You do not need to adjust the default Restore options, unless you have made customizations to the backup. Enter the decryption/verification passphrase, and proceed to restoring the available qubes.
 
@@ -228,4 +230,4 @@ Wipe (reformat) the LUKS-encrypted storage device that you used to store SecureD
 .. |qubes_menu| image:: ../../images/qubes_menu.png
   :alt: Qubes Application menu
 .. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 
+  :alt: System Tools
