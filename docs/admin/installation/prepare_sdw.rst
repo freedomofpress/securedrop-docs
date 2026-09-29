@@ -82,6 +82,7 @@ Follow the linked instructions to `verify the ISO <https://www.qubes-os.org/secu
 The output should look like this:
 
 .. code-block:: sh
+  :class: no-copybutton
 
   gpg: requesting key from 'https://keys.qubes-os.org/keys/qubes-release-4.2-signing-key.asc'
   gpg: key E022E58F8E34D89F: public key "Qubes OS Release 4.2 Signing Key" imported

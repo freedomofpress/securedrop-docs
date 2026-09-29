@@ -78,14 +78,17 @@ Next, verify the ``SHA256SUMS`` file. ::
 
     gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
 
-Move on to the next step if you see "Good Signature" in the output, as below. Note that any other message (such as "Can't check signature: no public key") means that you are not ready to proceed. ::
+Move on to the next step if you see "Good Signature" in the output, as below. Note that any other message (such as "Can't check signature: no public key") means that you are not ready to proceed.
 
-    gpg: Signature made Thu 11 Feb 2021 02:07:58 PM EST
-    gpg:                using RSA key 843938DF228D22F7B3742BC0D94AA3F0EFE21092
-    gpg: Good signature from "Ubuntu CD Image Automatic Signing Key (2012) <cdimage@ubuntu.com>" [unknown]
-    gpg: WARNING: This key is not certified with a trusted signature!
-    gpg:          There is no indication that the signature belongs to the owner.
-    Primary key fingerprint: 8439 38DF 228D 22F7 B374  2BC0 D94A A3F0 EFE2 1092
+.. code-block:: sh
+   :class: no-copybutton
+  
+   gpg: Signature made Thu 11 Feb 2021 02:07:58 PM EST
+   gpg:                using RSA key 843938DF228D22F7B3742BC0D94AA3F0EFE21092
+   gpg: Good signature from "Ubuntu CD Image Automatic Signing Key (2012) <cdimage@ubuntu.com>" [unknown]
+   gpg: WARNING: This key is not certified with a trusted signature!
+   gpg:          There is no indication that the signature belongs to the owner.
+   Primary key fingerprint: 8439 38DF 228D 22F7 B374  2BC0 D94A A3F0 EFE2 1092
 
 The next and final step is to verify the Ubuntu image. ::
 
@@ -114,6 +117,7 @@ Follow the linked instructions to `verify the ISO <https://doc.qubes-os.org/en/l
 The output should look like this:
 
 .. code-block:: sh
+  :class: no-copybutton
 
   gpg: requesting key from 'https://keys.qubes-os.org/keys/qubes-release-4.3-signing-key.asc'
   gpg: key 1C3D9B627F3FADA4: 1 signature not checked due to a missing key

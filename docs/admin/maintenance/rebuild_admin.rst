@@ -237,8 +237,9 @@ To retrieve these values, use the following command in the terminal:
 This will return a line like:
 
 .. code:: sh
+   :class: no-copybutton
 
- [smtp.gmail.com]:587 testossec@gmail.com:AwfulPassword
+   [smtp.gmail.com]:587 testossec@gmail.com:AwfulPassword
 
 In this example, ``smtp.gmail.com`` is the SMTP server, ``587`` is the SMTP port, ``testossec`` is the SASL username, ``gmail.com`` is the SASL domain, and ``AwfulPassword`` is the SASL password.
 

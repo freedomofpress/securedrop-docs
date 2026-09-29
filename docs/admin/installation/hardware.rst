@@ -128,6 +128,8 @@ Optional hardware
 
 This hardware is not *required* to run a SecureDrop instance, but most of it is still recommended.
 
+.. _print_requirements:
+
 Printers
 ^^^^^^^^
 

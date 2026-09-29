@@ -103,7 +103,8 @@ SecureDrop is an open source project. You can support the work by `contributing 
    journalist/starting_qubes
    journalist/starting_client
    journalist/sources
-   journalist/submissions
+   journalist/exporting_printing
+   journalist/working_with_exported_files
    journalist/ending_session
 
 .. toctree::

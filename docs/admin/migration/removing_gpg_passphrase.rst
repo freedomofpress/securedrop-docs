@@ -19,7 +19,8 @@ Next, check the key id:
 The output should list the key with a line similar to:
 
 .. code-block:: sh
-
+  :class: no-copybutton
+  
   sec   rsa4096/XXXXXXXXXX <creation date>
 
 The ``XXXXXXXXXX`` value is the key id, which you can use to open the key in edit mode with the following command:
@@ -40,7 +41,7 @@ Verify that the new keyfile ``/tmp/nopassphrase.sec`` starts with the ``-----BEG
 
 .. code-block:: sh
 
-  sudo cp /tmp/nopassphrase.sec /usr/share/securedrop-workstation-dom0-config/sd-journalist.sec
+  cp /tmp/nopassphrase.sec ~/.config/securedrop-manage/sd-journalist.sec
 
 If you are provisioning SecureDrop Workstation for the first time, continue with the installation instructions. Or, to re-check an existing configuration:
 

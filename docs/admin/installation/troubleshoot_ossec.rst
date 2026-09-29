@@ -98,7 +98,10 @@ If you are *not* using the default verification setup, and intentionally do not 
 
     openssl s_client -CAfile /path/to/smtp_relay_cert_override_file -showcerts -starttls smtp -connect smtp_relay:smtp_relay_port < /dev/null 2> /dev/null
 
-Finally, if you have a specific server in mind but are not sure what certificate you need to verify the connection, you can use the output of ``openssl s_client`` to figure it out. Since we have ``-showcerts`` turned on, ``openssl`` prints the entire certificate chain it receives from the server. A properly configured server will provide all of the certificates in the chain up to the root cert, which needs to be identified as "trusted" for the verification to succeed. To see the chain, find the part of the output that start with ``Certificate chain``. It will look something like this (example from ``smtp.gmail.com``, with certificate contents snipped for brevity): ::
+Finally, if you have a specific server in mind but are not sure what certificate you need to verify the connection, you can use the output of ``openssl s_client`` to figure it out. Since we have ``-showcerts`` turned on, ``openssl`` prints the entire certificate chain it receives from the server. A properly configured server will provide all of the certificates in the chain up to the root cert, which needs to be identified as "trusted" for the verification to succeed. To see the chain, find the part of the output that start with ``Certificate chain``. It will look something like this (example from ``smtp.gmail.com``, with certificate contents snipped for brevity):
+
+.. code-block:: text
+  :class: no-copybutton
 
     ---
     Certificate chain
