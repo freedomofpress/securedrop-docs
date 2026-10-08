@@ -24,7 +24,7 @@ Please see the :doc:`relevant page</admin/reference/admin_interface>` for comple
 Admin Workstation
 -----------------
 
-The Admin Workstation is a laptop running Qubes OS, initially configured as a SecureDrop Workstation but with additional tools and credentials added to allow an Administrator to install and maintain a SecureDrop instance, in particular the :doc:`securedrop-admin</admin/reference/securedrop_admin>` utility. An Admin Workstation is capable of connection to the web-based Admin Interface, and to the Application and Monitor servers using SSH.
+The Admin Workstation is a laptop running Qubes OS, configured with the administration tools and credentials needed for an Administrator to install and maintain a SecureDrop instance, in particular the :doc:`securedrop-admin</admin/reference/securedrop_admin>` utility. An Admin Workstation is capable of connection to the web-based Admin Interface, and to the Application and Monitor servers using SSH.
 
 .. _glossary_application_server:
 

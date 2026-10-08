@@ -4,13 +4,11 @@ Install Qubes OS and SecureDrop packages
 Overview
 --------
 
-:ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, and :ref:`Admin Workstations<glossary_admin_workstation>` are both based on Qubes OS. Thus, the first step in creating a SecureDrop Workstation or Admin Workstation is installing Qubes OS on the target laptop. If you are not using a shared laptop as both the Admin and SecureDrop Workstation, or if you intend to create multiple SecureDrop Workstations, you can repeat the steps on this page for each laptop.
+The initial steps for creating a :ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, or :ref:`Admin Workstations<glossary_admin_workstation>` are the same. First, you install Qubes OS on the laptop, then you install the SecureDrop Workstation packages. 
 
-You may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may install Qubes OS on every laptop in parallel. 
+You will repeat the steps on this page for each laptop, regardless of whether it will become an Admin Workstation, a SecureDrop Workstation, or a combined workstation fulfilling both roles.
 
-You may also create additional Admin or SecureDrop Workstations at a later time. 
-
-.. TODO add links
+You may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on every laptop. You may also create additional Admin or SecureDrop Workstations at a later time. 
 
 The installation and configuration process for each laptop should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
 
@@ -28,7 +26,7 @@ In order to install Qubes OS, you will need the following:
 
 - A working computer (Linux is recommended and assumed in this guide) to use for verification and creation of the Qubes installation medium.
 
-  .. note:: Tails can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB flash drive to transfer it to Tails for verification and creation of the installation medium.
+  .. note:: `Tails<https://tails.net>` can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB flash drive to transfer it to Tails for verification and creation of the installation medium.
 
 - A password manager or other system to generate and store strong passphrases for Qubes full disk encryption (FDE) and user accounts.
 
@@ -157,13 +155,12 @@ After logging in again, confirm that the network manager successfully connects y
 
 Once your network connection is working, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system templates. In the ``[Dom0] Qubes Update`` window, check all entries in the list except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system templates will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
 
-Install SecureDrop management packages
+Congratualtions! You have installed Qubes OS.
+
+Install SecureDrop Workstation packages
 --------------------------------------
 
-SecureDrop Workstations and Admin Workstations are both provisioned using the ``securedrop-manange`` utility which is run from ``dom0``. After installing Qubes OS, follow the steps below on each laptop, whether it will become a dedicated SecureDrop Workstation, Admin Workstation, or a shared laptop serving both roles. 
-
-Install ``securedrop-manage``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Next, you will install the SecureDrop-specific packages that will install and configure the software to transform the laptop into a SecureDrop Workstation and/or Admin Workstation.
 
 First, you must configure the Qubes-Contrib repo:
 
