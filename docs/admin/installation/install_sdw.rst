@@ -5,21 +5,21 @@ Perform the next steps on the laptop you want to become a SecureDrop Workstation
 
 If you are going to use a dedicated laptop as the SecureDrop Workstation, make sure that you have already :doc:`installed Qubes OS and the SecureDrop packages</admin/installation/install_qubes>` on the laptop before proceeding. 
 
-Import onion service file from Admin Workstation
+Import Onion Service file from Admin Workstation
 -------------------------------------------------
 
-When installing the SecureDrop servers from an Admin Workstation, the onion addresses of your SecureDrop and the associated :ref:`onion service<glossary_onion_service>` authentication token were created. You need to import the file containing these credentials onto the SecureDrop Workstation.
+When installing the SecureDrop servers from an Admin Workstation, the onion addresses of your SecureDrop and the associated :ref:`Onion Service<glossary_onion_service>` authentication token were created. You need to import the file containing these credentials onto the SecureDrop Workstation.
 
-Moving onion service file to ``dom0`` within a shared laptop
+Moving Onion Service file to ``dom0`` within a shared laptop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Importing onion services file from an Admin Workstation
+Importing Onion Services file from an Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Export onion service file from an Admin Workstation
+Export Onion Service file from an Admin Workstation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Import onion service file onto the SecureDrop Workstation
+Import Onion Service file onto the SecureDrop Workstation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _install_securedrop_workstation:

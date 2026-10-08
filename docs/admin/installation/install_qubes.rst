@@ -12,26 +12,6 @@ You may reuse the same Qubes OS installation USB Flash Drive created earlier for
 
 The installation and configuration process for each laptop should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
 
-.. _qubes_prerequisites:
-
-Prerequisites
--------------
-
-In order to install Qubes OS, you will need the following:
-
-- Qubes-compatible laptop based on the :ref:`hardware<hardware_guide>` recommendations.
-- Qubes installation medium - this guide assumes the use of a USB 3.0 flash drive. Qubes may also be installed via optical media, which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_.
-
-  .. note:: A USB flash drive with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings detailed below are applied.
-
-- A working computer (Linux is recommended and assumed in this guide) to use for verification and creation of the Qubes installation medium.
-
-  .. note:: `Tails<https://tails.net>` can be used to perform the tasks below, but due to the size of the Qubes installation ISO, it may make sense to download it on another computer rather than via Tor, and then to use a USB flash drive to transfer it to Tails for verification and creation of the installation medium.
-
-- A password manager or other system to generate and store strong passphrases for Qubes full disk encryption (FDE) and user accounts.
-
-A basic knowledge of the Qubes OS is helpful.
-
 Pre-install tasks
 -----------------
 
