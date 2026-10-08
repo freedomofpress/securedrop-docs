@@ -126,8 +126,8 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/installation/email_alerts
    admin/installation/install_qubes
    admin/installation/generate_submission_key
-   admin/installation/prepare_admin_workstation
-   admin/installation/set_up_keepassxc
+   admin/installation/install_admin_workstation
+   admin/installation/keepassxc_for_admins
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
    admin/installation/firewall_opnsense

@@ -211,9 +211,9 @@ The dynamic inventory file will automatically read the onion addresses from the 
 Apply Admin Workstation configuration
 =====================================
 
-The SecureDrop installation process adds authenticated :ref:`onion services<glossary_onion_service>` as an additional layers of protection, guarding access to the most sensitive assets in the SecureDrop system:
+The SecureDrop installation process uses authenticated :ref:`onion services<glossary_onion_service>` as an additional layer of protection for access to the SecureDrop servers:
 
-#. The *Admin Interface*, because it provides access to submissions (although
+#. The Admin Interface, because it provides access to submissions (although
    they are encrypted to the Submission Private Key), and some metadata about sources and
    submissions.
 

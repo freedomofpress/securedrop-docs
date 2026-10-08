@@ -1,7 +1,7 @@
 .. _keepassxc_setup:
 
-Using the KeePassXC password manager
-====================================
+KeePassXC password manager for Administrators
+=============================================
 
 Qubes OS comes with the KeePassXC password manager preinstalled. As outlined in our :ref:`passphrase best practices<passphrase_best_practices>`, we recommend all SecureDrop users, including Administrators, use the KeePassXC password manager to generate and retain strong and unique passphrases.
 
@@ -14,13 +14,13 @@ To facilitate using KeePassXC to organize all the credentials needed for using a
 
 .. _keepasscx_template_database:
 
--  Open the KeePassXC program |KeePassXC| in the ``vault`` qube
+-  Open the KeePassXC program |KeePassXC| in the ``sd-admin-vault`` qube
 -  Select **Database ▸ Open database**, and navigate to the location of **/path/to/Passwords.kdbx**, select it, and click **Open**
 -  Leave the password blank and click **OK**. If you receive an "Unlock failed" prompt, click **Retry with empty password**.
 -  Edit entries as required.
 -  Select **Database ▸ Save Database** to save your changes.
 
-The next time you use KeepassXC in ``vault``, the database at ``/path/to/Passwords.kdbx`` will be selected by default.
+The next time you use KeepassXC in ``sd-admin-vault``, the database at ``/path/to/Passwords.kdbx`` will be selected by default.
 
 KeePassXC will show a warning every time you attempt to open a database without entering a password. Because your persistent volume is encrypted, setting up this additional password is not strictly required. It provides some additional protection, e.g., if a computer is left running, at the cost of convenience.
 
