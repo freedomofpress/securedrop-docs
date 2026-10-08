@@ -14,7 +14,7 @@ For an installation of SecureDrop, you must acquire:
 
 * 2 computers (with storage drives) to use as the SecureDrop servers.
 * A mouse, keyboard, and monitor (along with any necessary dongles or adapters) for installing the servers.
-* At least 1 dedicated physical laptop for the SecureDrop Workstation.
+* At least 1 dedicated physical laptop to use an Admin + SecureDrop Workstation.
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
 * At least 1 USB flash drive for OS installation media, and at least 1 more USB flash drive if needed as an Export Device.
@@ -50,10 +50,6 @@ Required hardware
 Servers
 ^^^^^^^
 
-* :ref:`Application Server<glossary_application_server>`: 1 physical server to run the SecureDrop web services.
-
-* :ref:`Monitor Server<glossary_monitor_server>`: 1 physical server which monitors activity on the Application Server and sends email notifications to an Administrator.
-
 We recommend using NUCs for the servers and routinely test new models for compatibility. NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet, and low-power devices, which makes them suitable for deployment in a wide range of environments. Originally produced by Intel, ASUS has taken over production beginning with the 14th generation.
 
 NUCs typically come as kits, and some assembly is required. You will need to purchase the RAM and solid state drive separately for each NUC and insert both into the NUC before it can be used. We recommend:
@@ -68,13 +64,13 @@ There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`_
 Workstations
 ^^^^^^^^^^^^
 
-In order to install and use SecureDrop Workstation, you will need a Qubes-compatible computer with the following specifications:
+Each Admin or SecureDrop Workstation requires a Qubes-compatible computer with the following specifications:
 
 - 64-bit Intel processor with virtualization support
 - a minimum of 32GB RAM
 - sufficient disk space for the Qubes OS base install and SecureDrop Workstation (a 128GB or greater SSD is recommended)
 
-We recommend against a device that requires an external USB keyboard or other externally-connected devices, for security reasons. In practice this usually means that you should run SecureDrop Workstation on a Qubes-compatible laptop. Not all laptops support Qubes, and some may require additional customization. We recommend (in order) either a Qubes-certified laptop, one of the laptop models we use for development and testing, or a computer from the community-maintained Qubes Hardware compatibility list. See our :ref:`specific laptop recommendations <hardware_recommendations_workstations>` for more detail on each of these options.
+We recommend against a device that requires an external USB keyboard or other externally-connected devices, for security reasons. In practice this usually means that you should use a Qubes-compatible laptop. Not all laptops support Qubes, and some may require additional customization. We recommend (in order) either a Qubes-certified laptop, one of the laptop models we use for development and testing, or a computer from the community-maintained Qubes Hardware compatibility list. See our :ref:`specific laptop recommendations <hardware_recommendations_workstations>` for more detail on each of these options.
 
 Network firewall
 ^^^^^^^^^^^^^^^^
