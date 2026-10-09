@@ -4,13 +4,17 @@ Install Qubes OS and SecureDrop packages
 Overview
 --------
 
-The initial steps for creating a :ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, or :ref:`Admin Workstations<glossary_admin_workstation>` are the same. First, you install Qubes OS on the laptop, then you install the SecureDrop Workstation packages. 
+The initial steps for creating a :ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, :ref:`Admin Workstations<glossary_admin_workstation>` are the same. First, you install Qubes OS on the laptop, then you install the SecureDrop Workstation packages. 
 
-You will repeat the steps on this page for each laptop, regardless of whether it will become an Admin Workstation, a SecureDrop Workstation, or a combined workstation fulfilling both roles.
+For the initial installation, you will be performing these steps on either one laptop (to become a combined Admin + SecureDrop Workstation), or two laptops (to become distinct Admin and SecureDrop Workstations).
 
-You may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on every laptop. You may also create additional Admin or SecureDrop Workstations at a later time. 
+If installing on two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptop. Before beginning, it may be helpful to label each laptop with its desired end state (either Admin Workstation or SecureDrop Workstation).
 
-The installation and configuration process for each laptop should take between 4 and 6 hours, including time spent waiting for downloads and updates. At a high level, the tasks to be performed are as follows:
+If you plan to create additional Admin or SecureDrop Workstations, you will do so at a later time. 
+
+The installation and configuration process for each laptop should take between 4 and 6 hours, including time spent waiting for downloads and updates.
+
+.. _qubes_prerequisites:
 
 Pre-install tasks
 -----------------
@@ -84,7 +88,7 @@ Finally, click **Finish Configuration** to set up the default system templates a
 
 Once the initial setup is complete, the login dialog will be displayed. Log in using the username and password set during installation.
 
-(Hardware-dependent) Apply USB fixes
+Apply USB fixes (Hardware-dependent) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If, during the installation, you encountered the grayed out option "USB qube configuration disabled", you must now create a qube to access your USB devices. If you did not encounter this issue, you can skip this section.
@@ -135,12 +139,12 @@ After logging in again, confirm that the network manager successfully connects y
 
 Once your network connection is working, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system templates. In the ``[Dom0] Qubes Update`` window, check all entries in the list except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system templates will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
 
-Congratualtions! You have installed Qubes OS.
+Congratulations! You have installed Qubes OS.
 
 Install SecureDrop Workstation packages
---------------------------------------
+---------------------------------------
 
-Next, you will install the SecureDrop-specific packages that will install and configure the software to transform the laptop into a SecureDrop Workstation and/or Admin Workstation.
+Next, you will install the SecureDrop Workstations packages necessary to configure the laptop into a SecureDrop Workstation and/or Admin Workstation.
 
 First, you must configure the Qubes-Contrib repo:
 

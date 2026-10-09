@@ -34,7 +34,7 @@ Generate a SecureDrop Submission Key on a SecureDrop Workstation using the steps
 
 #. A box will pop up asking you to type a passphrase. Since the key is protected by the Qubes's full disk encryption, it is safe to simply click **OK** without entering a passphrase.
 #. The software will ask you if you are sure. Click **Yes, protection is not needed**.
-#. The prompt for a passphrase will appear again. Repeat the last two steps, cliecking **OK** and then **Yes, protection is not needed**.
+#. The prompt for a passphrase will appear again. Repeat the last two steps, clicking **OK** and then **Yes, protection is not needed**.
 #. Wait for the key to finish generating.
 
 Move the Submission Keypair
@@ -67,7 +67,7 @@ The Submission Private Key should be moved to a specific location in ``dom0`` wh
 
    .. code-block:: sh
 
-      sudo mv /tmp/sd-journalist.sec /usr/share/securedrop-workstation-dom0-config/
+      sudo mv /tmp/sd-journalist.sec ~/.config/securedrop-manage/
 
 #. Now that we have moved the Submission Private key we can remove the ``gpg`` keyring by running:
 

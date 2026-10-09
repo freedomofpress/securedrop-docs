@@ -26,15 +26,11 @@ The :ref:`Admin Workstation<glossary_admin_workstation>` is used by Administrato
 
 The :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` is used by Journalists. It has :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` installed and configured to connect to your SecureDrop server.
 
-Note that a single laptop can serve as a *combined* SecureDrop Workstation and Admin Workstation. This configuration accommodates small or cash-strapped newsrooms, where only a single laptop is shared between Administrators and Journalists, or where a single individual fills both roles. 
+Typically, the Admin Workstation and SecureDrop Workstation will be different laptops used by different people (Administrations and Journalists, respectively). However, a single laptop can serve as a *combined* SecureDrop Workstation and Admin Workstation. This configuration accommodates small or cash-strapped newsrooms, where only a single laptop is shared between Administrators and Journalists, or where a single individual fills both roles. 
 
-You may also segregate these roles onto two different laptops: one Admin Workstation for the Administrator and one SecureDrop Workstation for Journalists.
+For an initial installation of SecureDrop, you will set up either one Admin Workstation and one SecureDrop Workstation, or a single combined Admin + SecureDrop Workstation.
 
-Alternatively, you may set up multiple SecureDrop Workstations to be used in different locations, or by different Journalists. It is even possible to have multiple Admin Workstations for different Administrators, although this requires :ref:`some coordination<multiple_admins>`. 
-
-Before proceeding, you should decide how many laptops you will be use in your initial installation, and if one of them will be a combined Admin + SecureDrop Workstation as this will change how some of the following installation steps are performed.
-
-You can always add additional workstations of any type later.
+After the initial installation is complete, you may add additional laptops of any type as needed for your organization.
 
 Servers
 ~~~~~~~

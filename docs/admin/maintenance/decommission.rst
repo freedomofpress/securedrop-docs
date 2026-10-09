@@ -56,7 +56,7 @@ The following steps will guide you through the decommissioning of your SecureDro
 #. **Disconnect the firewall and the servers from the internet.**
    Be sure to inform your network administrator of any changes to devices on your network.
 #. **Wipe and destroy the USB flash drives.**
-   The USB flash drives used for SecureDrop are all encrypted, either with LUKS or Veracrypt. To securely wipe this kind of storage media, it is necessary to re-format *and re-encrypt* the drive, following the :doc:`same steps used in their initial creation</admin/installation/provisioning_usb>`. This will destroy the encryption headers, making any data on the drives unrecoverable. 
+   The USB flash drives used for SecureDrop are all encrypted, either with LUKS or Veracrypt. To securely wipe this kind of storage media, it is necessary to re-format *and re-encrypt* the drive, following the :doc:`same steps used in their initial creation</admin/deployment/provisioning_usb>`. This will destroy the encryption headers, making any data on the drives unrecoverable. 
 
    You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
 #. **Wipe and destroy the storage drives on the servers.**

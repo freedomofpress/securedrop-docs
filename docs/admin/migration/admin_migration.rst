@@ -109,7 +109,7 @@ If you have a KeePassXC database on your Tails-based Admin Workstation USB flash
 
 Qubes OS comes with the KeePassXC password manager preinstalled in the ``sd-vault`` qube.
 
-.. include:: /admin/installation/set_up_keepassxc.rst
+.. include:: /admin/installation/keepassxc_for_admins.rst
   :start-after: .. _keepasscx_template_database:
   :end-before: .. _keepassxc_manual_create_database:
 

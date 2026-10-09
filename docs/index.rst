@@ -117,7 +117,7 @@ SecureDrop is an open source project. You can support the work by `contributing 
 .. toctree::
    :caption: Admin Guide: Installation
    :name: installtoc
-   :maxdepth: 2
+   :maxdepth: 3
    :hidden:
 
    admin/installation/installation_overview
@@ -126,14 +126,13 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/installation/email_alerts
    admin/installation/install_qubes
    admin/installation/generate_submission_key
-   admin/installation/install_admin_workstation
+   admin/installation/prepare_admin_workstation
    admin/installation/keepassxc_for_admins
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
    admin/installation/firewall_opnsense
    admin/installation/prepare_servers
    admin/installation/install_servers
-   admin/installation/provisioning_usb
    admin/installation/create_admin_account
    admin/installation/install_sdw
    admin/installation/test_the_installation
@@ -159,6 +158,7 @@ SecureDrop is an open source project. You can support the work by `contributing 
    :maxdepth: 2
    :hidden:
 
+   admin/deployment/provisioning_usb
    admin/deployment/onboard_journalists
    admin/deployment/deployment_practices
    admin/deployment/landing_page.rst
@@ -183,6 +183,7 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/reference/ssh_access
    admin/reference/offboarding
    admin/reference/securedrop_admin
+   admin/reference/manually_generate_submission_key
 
 .. toctree::
    :caption: Admin Guide: Maintenance

@@ -165,7 +165,7 @@ Repair additional Admin Workstations
 
 If you have additional Admin Workstation USB flash drives, they will no longer have valid SSH credentials and will need to be repaired. In these steps, the "primary Admin Workstation" is the one which you used to complete the above migration process.
 
-#. Prepare a fresh :doc:`LUKS-encrypted USB flash drive </admin/installation/provisioning_usb>`. You may record the passphrase in your primary Admin Workstation KeePassXC password manager.
+#. Prepare a fresh :doc:`LUKS-encrypted USB flash drive </admin/deployment/provisioning_usb>`. You may record the passphrase in your primary Admin Workstation KeePassXC password manager.
 
 #. Copy the following files from your primary Admin Workstation onto the LUKS-encrypted USB flash drive:
 

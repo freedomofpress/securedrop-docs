@@ -30,7 +30,7 @@ Import Submission Public Key
 
 .. TODO waiting for commands
 
-Earlier, you generated the Submission Key for your SecureDrop Instance. The *public* half of this key needs to be imported to the correct location on the Admin Workstation before.
+Earlier, you generated the Submission Key. The *public* half of this key needs to be imported to the correct location on the Admin Workstation.
 
 Moving the Submission Public Key to ``sd-admin`` for a combined laptop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
