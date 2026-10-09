@@ -3,8 +3,6 @@ Managing clipboard access
 
 Every qube in Qubes has its own clipboard, similar to the clipboard of a Mac, Windows or Linux computer. For example, you can copy and paste text between different conversations in SecureDrop Inbox using the ``Ctrl+C`` and ``Ctrl+V`` keyboard shortcuts. This type of typical clipboard usage -- copy and paste in the same qube -- works *within* all qubes that are part of a SecureDrop Workstation.
 
-However, copying *between* qubes is blocked by default on a SecureDrop Workstation
-
 In addition, Qubes supports copying information *between* qubes. This is done by using `special keyboard shortcuts <https://www.qubes-os.org/doc/copy-paste/>`_, ``Ctrl+Shift+C`` and ``Ctrl+Shift+V``, in a four-step process. By default, this is disabled for all qubes that are part of a SecureDrop Workstation, consistent with the `principle of least privilege <https://en.wikipedia.org/wiki/Principle_of_least_privilege>`__.
 
 As an Administrator, you should be aware of the following risks related to clipboard access before changing the default configuration:
@@ -69,26 +67,3 @@ To review current clipboard permissions, you can use ``qvm-ls`` to print out a l
 
    qvm-ls --tags sd-receive-app-clipboard
    qvm-ls --tags sd-send-app-clipboard
-
-Enable password copy and paste
-------------------------------
-
-If you use KeePassXC in the ``vault`` qube to manage login credentials, you can enable the user to copy passwords to SecureDrop Inbox using inter-qube copy and paste. While this is relatively safe, we recommend reviewing the section :doc:`Managing Clipboard Access </admin/workstation_reference/managing_clipboard>` of this guide, which goes into further detail on the security considerations for inter-qube copy and paste.
-
-The password manager runs in the networkless ``vault`` qube, and the SecureDrop Inbox application runs in the ``sd-app`` qube. To permit this one-directional clipboard use, issue the following command in ``dom0``:
-
-.. code-block:: sh
-
-   qvm-tags vault add sd-send-app-clipboard
-
-Confirm that the tag was correctly applied using the ``ls`` subcommand:
-
-.. code-block:: sh
-
-   qvm-tags vault ls
-
-To revoke this configuration change later or correct a typo, you can use the ``del`` subcommand, e.g.:
-
-.. code-block:: sh
-
-   qvm-tags vault del sd-send-app-clipboard
