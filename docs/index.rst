@@ -136,7 +136,6 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/installation/create_admin_account
    admin/installation/install_sdw
    admin/installation/test_the_installation
-   admin/installation/post_install
    admin/installation/troubleshoot_qubes
    admin/installation/troubleshoot_ossec
    admin/installation/troubleshoot_sd_manage
@@ -160,6 +159,7 @@ SecureDrop is an open source project. You can support the work by `contributing 
 
    admin/deployment/provisioning_usb
    admin/deployment/onboard_journalists
+   admin/deployment/managing_clipboard
    admin/deployment/deployment_practices
    admin/deployment/landing_page.rst
    admin/deployment/onion_name.rst
@@ -202,8 +202,6 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/workstation_reference/backup
    admin/workstation_reference/bios_workstation
    admin/workstation_reference/reviewing_logs
-
-   admin/workstation_reference/managing_clipboard
 
 .. toctree::
    :caption: Appendices
