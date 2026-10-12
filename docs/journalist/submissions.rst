@@ -175,6 +175,3 @@ Fully mitigating the risks of malware received via SecureDrop is beyond the scop
 .. |screenshot_veracrypt_sd_devices_files| image:: ../images/screenshot_veracrypt_sd_devices_files.png
 
 .. |screenshot_veracrypt_sd_devices_files_unlock| image:: ../images/screenshot_veracrypt_sd_devices_files_unlock.png
-
-.. |qubes_menu| image:: ../images/qubes_menu.png
-  :alt: Qubes Application menu

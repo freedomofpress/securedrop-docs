@@ -1,7 +1,7 @@
 Installation overview
 =====================
 
-This section will walk you though all the steps involved in planning and executing a new SecureDrop installation.
+This section will walk you though all the steps involved in planning and executing a new SecureDrop installation using SecureDrop Workstation.
 
 .. note:: If you are migrating from an older SecureDrop, using the separate Tails-based "Secure Viewing Station", "Journalist workstation" and "Admin Workstation" USB flash drives, then skip to the :ref:`Migration Overview<migration_overview>`.
 
@@ -18,9 +18,11 @@ Planning your installation
 SecureDrop requires several different pieces of hardware, outlined below. 
 
 Workstations
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
-The workstations are laptops running the Qubes operating system, with additional software and configurations depending on which roles they will fill.
+.. _install_overview_workstations:
+
+In the new SecureDrop, every workstation is a laptop running the `Qubes <https://www.qubes-os.org>`__ operating system with additional software and configurations depending on which roles they will fill.
 
 The :ref:`Admin Workstation<glossary_admin_workstation>` is used by Administrators. It is configured with the tools and credentials needed to administer and install SecureDrop servers. 
 
@@ -31,6 +33,8 @@ Typically, the Admin Workstation and SecureDrop Workstation will be different la
 For an initial installation of SecureDrop, you will set up either one Admin Workstation and one SecureDrop Workstation, or a single combined Admin + SecureDrop Workstation.
 
 After the initial installation is complete, you may add additional laptops of any type as needed for your organization.
+
+.. _install_overview_servers:
 
 Servers
 ~~~~~~~

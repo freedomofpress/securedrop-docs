@@ -64,6 +64,8 @@ There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`_
 Workstations
 ^^^^^^^^^^^^
 
+.. _hardware_workstations_overview:
+
 Each Admin or SecureDrop Workstation requires a Qubes-compatible computer with the following specifications:
 
 - 64-bit Intel processor with virtualization support
@@ -71,6 +73,8 @@ Each Admin or SecureDrop Workstation requires a Qubes-compatible computer with t
 - sufficient disk space for the Qubes OS base install and SecureDrop Workstation (a 128GB or greater SSD is recommended)
 
 We recommend against a device that requires an external USB keyboard or other externally-connected devices, for security reasons. In practice this usually means that you should use a Qubes-compatible laptop. Not all laptops support Qubes, and some may require additional customization. We recommend (in order) either a Qubes-certified laptop, one of the laptop models we use for development and testing, or a computer from the community-maintained Qubes Hardware compatibility list. See our :ref:`specific laptop recommendations <hardware_recommendations_workstations>` for more detail on each of these options.
+
+.. _hardware_workstations_overview_end:
 
 Network firewall
 ^^^^^^^^^^^^^^^^
@@ -127,6 +131,8 @@ This hardware is not *required* to run a SecureDrop instance, but most of it is 
 Printers
 ^^^^^^^^
 
+.. _hardware_printers_overview:
+
 There are several requirements for a printer to be compatible with SecureDrop Workstation. Your printer should:
 
 1. Support **driverless printing** standards
@@ -162,6 +168,8 @@ To maintain the isolation of SecureDrop Workstation, it is essential that your p
 * Select a compatible printer with **no WiFi**. A printer that connects with USB only is best if you can find one, but compatible USB printers lacking *both* Ethernet and WiFi are rare.
 * In the case of a printer with Ethernet and/or WiFi, **keep the printer offline** and **disabling WiFi** (if present).
 * Use this printer exclusively with SecureDrop Workstation and do not connect it directly to other computers.
+
+.. _hardware_printers_overview_end:
 
 Backup storage
 ^^^^^^^^^^^^^^

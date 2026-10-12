@@ -149,6 +149,7 @@ SecureDrop is an open source project. You can support the work by `contributing 
 
    admin/migration/migration_overview
    admin/migration/admin_migration
+   admin/installation/migrate_install_qubes
    admin/migration/journalist_migration
    admin/migration/removing_gpg_passphrase
 

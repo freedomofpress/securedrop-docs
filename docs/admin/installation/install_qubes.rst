@@ -6,9 +6,9 @@ Overview
 
 The initial steps for creating a :ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, :ref:`Admin Workstations<glossary_admin_workstation>` are the same. First, you install Qubes OS on the laptop, then you install the SecureDrop Workstation packages. 
 
-For the initial installation, you will be performing these steps on either one laptop (to become a combined Admin + SecureDrop Workstation), or two laptops (to become distinct Admin and SecureDrop Workstations).
+During installation of or migration to SecureDrop Workstation, you will be performing these steps on either one laptop (to become a combined Admin + SecureDrop Workstation), or two laptops (to become distinct Admin and SecureDrop Workstations).
 
-If installing on two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptop. Before beginning, it may be helpful to label each laptop with its desired end state (either Admin Workstation or SecureDrop Workstation).
+If your target is two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptop. Before beginning, it may be helpful to label each laptop with its desired end state (either Admin Workstation or SecureDrop Workstation).
 
 If you plan to create additional Admin or SecureDrop Workstations, you will do so at a later time. 
 
@@ -140,6 +140,8 @@ After logging in again, confirm that the network manager successfully connects y
 Once your network connection is working, launch the Qubes Update tool via |qubes_menu| **▸ Qubes Tools ▸ Qubes Update** to update the system templates. In the ``[Dom0] Qubes Update`` window, check all entries in the list except for ``dom0`` (which you have already updated in the previous step). Then, click **Update**. The system templates will be updated sequentially - this may take some time. When the updates are complete, click **Next**. You will then be prompted to **Finish and restart/shutdown 4 qubes.** Go ahead and do so, and allow time for them to restart.
 
 Congratulations! You have installed Qubes OS.
+
+.. _intall_securedrop_packages:
 
 Install SecureDrop Workstation packages
 ---------------------------------------
