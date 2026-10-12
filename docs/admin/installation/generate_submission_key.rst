@@ -14,8 +14,3 @@ Generate the Submission Key with the steps below.
 #. Run the following command:
 
 .. TODO
-
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 

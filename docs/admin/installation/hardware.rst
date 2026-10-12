@@ -108,7 +108,7 @@ You may want to consider enforcing write protection on USB flash drives when onl
 
 It is especially advisable to enable write protection before attaching an Export Device to an everyday workstation that lacks the security protections of the Tails operating system.
 
-Please review our :doc:`setup guide <provisioning_usb>` for additional background on setting up Export Devices.
+Please review our :doc:`setup guide </admin/deployment/provisioning_usb>` for additional background on setting up Export Devices.
 
 We also recommend buying an additional USB flash drive for making regular backups of your SecureDrop Workstations.
 

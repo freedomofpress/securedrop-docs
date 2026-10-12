@@ -177,7 +177,4 @@ Once you are finished with the ``$RESTORE_DIR`` and have verified that your syst
 
 Wipe (reformat) the LUKS-encrypted storage device that you used to store SecureDrop Workstation configuration material, overwriting the LUKS header and all data with a new encrypted partition, or physically destroy the backup medium, to ensure you are not proliferating copies of sensitive data.
 
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 
+

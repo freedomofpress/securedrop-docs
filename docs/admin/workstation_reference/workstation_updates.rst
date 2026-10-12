@@ -278,7 +278,3 @@ Click the SecureDrop Inbox desktop icon to restart the updater. If all issues ha
 
 .. |blue_qube| image:: ../../images/blue_qube.png
    :alt: Qubes Domains menu
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 

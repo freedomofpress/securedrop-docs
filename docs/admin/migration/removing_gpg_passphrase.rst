@@ -48,7 +48,4 @@ If you are provisioning SecureDrop Workstation for the first time, continue with
 
   sdw-admin --validate
 
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 
+

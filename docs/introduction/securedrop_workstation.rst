@@ -79,7 +79,7 @@ You should be able to copy and paste *within* any qube on the system, e.g., from
 
 Copy and paste between and to SecureDrop Workstation qubes is disabled for security reasons. The goal of this restriction is to minimize the risk of accidental pastes of sensitive content, and to reduce the attack surface for attempts to exfiltrate information.
 
-Administrators can configure limited exceptions to this policy; please see the section :doc:`Managing Clipboard Access </admin/workstation_reference/managing_clipboard>` of the admin guide for more information.
+Administrators can configure limited exceptions to this policy; please see the section :doc:`Managing Clipboard Access </admin/deployment/managing_clipboard>` of the admin guide for more information.
 
 How is using Qubes different from using virtual machines?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

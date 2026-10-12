@@ -164,7 +164,4 @@ First, you must configure the Qubes-Contrib repo:
   sudo qubes-dom0-update --clean -y securedrop-workstation-dom0-config
   sudo dnf -y remove qubes-repo-contrib
 
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 
+

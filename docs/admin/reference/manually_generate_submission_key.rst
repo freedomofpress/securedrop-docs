@@ -96,7 +96,3 @@ Install key on Admin Workstation, servers, and other SecureDrop Workstations
 .. |GPG key options| image:: ../../images/install/key_options.png
 .. |OK to generate| image:: ../../images/install/ok_to_generate.png
 
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 

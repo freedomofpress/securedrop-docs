@@ -73,7 +73,7 @@ Make sure you have the following information and files ready before continuing:
 - the Submission Key fingerprint
 - the email address that will receive alerts from OSSEC
 - the GPG public key and fingerprint for the email address that will receive the alerts
-- connection information for the SMTP relay that handles OSSEC alerts (see the :doc:`OSSEC Alerts Guide </admin/installation/email_alerts>`)
+- connection information for the SMTP relay that handles OSSEC Alerts (see the :doc:`OSSEC Alerts Guide </admin/installation/email_alerts>`)
 - the username of a journalist who will be using SecureDrop (you can add more later)
 - the username of the system admin
 
@@ -82,6 +82,12 @@ If configuring Daily Journalist Alert emails (this is optional and can be config
 -  the Journalist Alert Public Key
 -  the Journalist Alert Public Key fingerprint
 -  the email address that will receive the Daily Journalist Alerts
+
+:doc:`Earlier</admin/installation/transfer_public_keys>`, you transferred your Submission Public Key, as well as the public keys for OSSEC Alerts and Daily Journalist Alerts (if applicable). If you need to determine the fingerprints for these public keys, you can do so by running the following command in a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Xfce Terminal**):
+
+.. code-block:: sh
+
+   gpg --with-colons --show-keys <path/to/public_key_file> | grep "^fpr" | cut -d: -f10 
 
 Localization of the Source Interface and Admin Interface
 -----------------------------------------------------------------
@@ -93,50 +99,6 @@ https://github.com/freedomofpress/securedrop/blob/develop/securedrop/i18n.rst
 During the installation you will be given the opportunity to choose from a list of supported languages to display using the codes shown in parentheses.
 
 .. note:: With a Source Interface displayed in French (for example), Sources are likely to expect a Journalist fluent in French to be available to read their messages and submissions and follow up in that language.
-
-OSSEC alerts public key
------------------------
-
-Before proceeding, you will need to copy the OSSEC Alert Public Key public key to ``~/.config/securedrop-admin`` in the ``sd-admin`` qube.
-
-If you have your GPG public key on another computer, you can follow the :ref:`same steps to import the Submission Public Key<import_to_admin_workstation>` to transfer your OSSEC alerts public key to the Admin Workstation.
-
-If you don't have your GPG key ready, you can run GnuPG on the command line in order to find, import, and export your public key. It's best to copy the key from a trusted and verified source, but you can also request it from keyservers using the known fingerprint. Looking it up by email address or a shorter key ID format could cause you to obtain a wrong, malicious, or expired key. Instead, we recommend you type out your fingerprint in groups of four (just like GPG prints it) enclosed by double quotes.  The reason we suggest this formatting for the fingerprint is simply because it's easiest to type and verify correctly. In the code below simply replace ``<fingerprint>`` with your full, space-separated fingerprint:
-
-Download your key and import it into the local keyring: ::
-
-    gpg --recv-key "<fingerprint>"
-
-.. note:: It is important you type this out correctly. If you are not copy-pasting this command, we recommend you double-check you have entered it correctly before pressing enter.
-
-Again, when passing the full public key fingerprint to the ``--recv-key`` command, GPG will implicitly verify that the fingerprint of the key received matches the argument passed.
-
-.. caution:: If GPG warns you that the fingerprint of the key received does not match the one requested **do not** proceed with the installation. If this happens, please email us at securedrop@freedom.press.
-
-Next we export the key to a local file. ::
-
-    gpg --export -a "<fingerprint>" > ossec.pub
-
-Copy the key to a directory where it's accessible by the SecureDrop installation: ::
-
-    cp ossec.pub ~/.config/securedrop-admin/
-
-The fingerprint is a unique identifier for an encryption (public) key.  The short and long key ids correspond to the last 8 and 16 hexadecimal digits of the fingerprint, respectively, and are thus a subset of the fingerprint. The full fingerprint must be the entire 40 hexadecimal digit GPG fingerprint for this same key, with all capital letters and no spaces. The following command will retrieve and format the fingerprint per our requirements: ::
-
-    gpg --with-colons --fingerprint "<fingerprint>" | grep "^fpr" | cut -d: -f10
-
-The Postfix configuration enforces certificate verification, and requires both a valid certificate and STARTTLS support on the SMTP relay. By default the system CAs will be used for validating the relay certificate.
-
-If you need to provide a custom CA to perform the validation, copy the cert file to ``~/.config/securedrop-admin`` add a new variable to ``~/.config/securedrop-admin/site-specific``: ::
-
-    smtp_relay_cert_override_file: MyOrg.crt
-
-where ``MyOrg.crt`` is the filename. The file will be copied to the server in ``/etc/ssl/certs_local`` and the system CAs will be ignored when validating the SMTP relay TLS certificate. Be sure to save ``~/.config/securedrop-admin/site-specific`` when you are finished.
-
-Journalist Alert public key
----------------------------------
-
-If you are configuring daily Journalist Alerts, you will also need the GPG public key that wil be used to encrypt those e-mail alerts. You can use the same steps you followed step for the OSSEC public key to place the Journalist Alerts public key in ``~/.config/securedrop-admin/``
 
 .. _ansible-site-specific:
 
@@ -232,7 +194,3 @@ To perform this configuration, run:
 
     securedrop-admin localconfig
 
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 

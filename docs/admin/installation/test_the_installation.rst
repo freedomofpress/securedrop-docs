@@ -58,7 +58,7 @@ Test the web interfaces
 #. Test replying to the test submission.
 
    - While logged in as an administrator, you can send a reply to the test source submission you made earlier.
-   - Usage of the Admin Interface is covered by our :doc:`Admin Interface</admin/reference/admin_interface> page`.
+   - Usage of the Admin Interface is covered by our :doc:`Admin Interface</admin/reference/admin_interface>` page.
 
 #. Verify that the test source account received the reply.
 

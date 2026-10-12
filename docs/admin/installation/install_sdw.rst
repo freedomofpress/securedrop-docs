@@ -54,7 +54,7 @@ Export from an Admin Workstation to encrypted USB drive
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Attach your newly created encrypted transfer drive to ``sd-admin-vault`` using the Devices Widget.
-#. Open the File Manager in ``sd-admin``: (|qubes_menu| **▸ sd-admin ▸ Disks**), and mount and unlock the drive.
+#. Open the File Manager in ``sd-admin``: (|qubes_menu| **▸ sd-admin ▸ File Manager**), and mount and unlock the drive.
 #. Enter the path ``~/.config/securedrop-admin/`` into the location bar of the file manager to open the ``securdrop-admin`` config directory.
 
 .. TODO screenshot
@@ -112,7 +112,3 @@ This command will take a considerable amount of time and approximately 4GB of ba
 
 .. _end_install_securedrop_workstation:
 
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 

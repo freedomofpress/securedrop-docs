@@ -113,6 +113,8 @@ Qubes OS comes with the KeePassXC password manager preinstalled in the ``sd-vaul
   :start-after: .. _keepasscx_template_database:
   :end-before: .. _keepassxc_manual_create_database:
 
-.. include:: /admin/installation/prepare_admin_workstation.rst
-  :start-after: .. _install_admin_workstation:
-  :end-before: .. _import_submission_key:
+Install Admin Workstation
+-------------------------
+
+.. include:: /admin/installation/install_admin_workstation.rst
+

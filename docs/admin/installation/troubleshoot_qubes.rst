@@ -65,7 +65,4 @@ Press :kbd:`Ctrl-x`, then :kbd:`y`, and then :kbd:`Enter` to save the file.
 
 Finally, in the terminal run :kbd:`sudo grub2-mkconfig -o /boot/grub2/grub.cfg`. The workaround will now automatically be applied going forwards.
 
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 
+
