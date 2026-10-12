@@ -64,7 +64,7 @@ If you are starting with only the Tail-based Workstation:
     - Two laptops to create separate Admin and SecureDrop Workstations
 
 2. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
-3. Perform Journalist migration to create new SecureDrop Workstation
+3. Perform :doc:`Journalist migration</admin/migration/journalist_migration>` to create new SecureDrop Workstation
 
 If you already have a Qubes-based SecureDrop Workstation and simply want to install the administrative tools on it, turning it into a combined Admin + SecureDrop Workstation:
 
