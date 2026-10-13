@@ -2,7 +2,6 @@ Manually Rotate a Submission Key
 ==================================
 
 It may be necessary to manually generate and a new :ref:`Submission Key<glossary_submission_key>` and install it on your SecureDrop Workstation and Admin Workstation.
-.. TODO new screenshots for all steps, showing dom0 Xfce terminal
 
 Create the Submission Key
 -------------------------

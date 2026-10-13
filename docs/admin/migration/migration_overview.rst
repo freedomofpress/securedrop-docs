@@ -76,3 +76,7 @@ If you already have a Qubes-based SecureDrop Workstation and want to migrate you
 #. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
 
 .. TODO To create additional SecureDrop or Admin Workstations, follow the standard instructions in /deployment (need to be written!)
+
+.. TODO destroy Tails USB keys
+
+.. TODO test migration
