@@ -15,7 +15,7 @@ SecureDrop Workstation has been available as an open beta `since 2024 <https://s
 
 As of SecureDrop Workstation 2.0.0, administrative tasks can be performed using a Qubes-based Admin Workstation. The Tails-based components are no longer needed, and will soon be depreciated.
 
-.. note:: Everywhere else in this documentation, the older *Tails-based Admin Workstation* (a USB flash drive) will be named as such. Take care not to confuse it with the new :ref:`Admin Workstation<glossary_admin_workstation>` (a laptop running Qubes OS with the SecureDrop administrative tools installed).
+.. note:: Everywhere else in this documentation, the older *Tails Admin Workstation* (a USB flash drive) will be named as such. Take care not to confuse it with the new :ref:`Admin Workstation<glossary_admin_workstation>` (a laptop running Qubes OS with the SecureDrop administrative tools installed).
 
 Hardware overview
 ---------------------
@@ -57,7 +57,7 @@ However, if you have been using SecureDrop for awhile, you may take this opportu
 Migration scenarios
 -------------------
 
-If you are starting with only the Tail-based Workstation:
+If you are starting with only the Tail-based workstations:
 
 1. :doc:`Install Qubes OS and SecureDrop packages</admin/migration/migrate_install_qubes>` on the desired number of laptops
     - One laptop to create a combined Admin + SecureDrop Workstation
@@ -70,7 +70,7 @@ If you already have a Qubes-based SecureDrop Workstation and simply want to inst
 
 #. Perform the :doc:`Journalist migration</admin/migration/journalist_migration>` steps on the current SecureDrop Workstation 
 
-If you already have a Qubes-based SecureDrop Workstation and want to migrate your Tails-based Admin Workstation to a separate Qubes-based Admin Workstation laptop:
+If you already have a Qubes-based SecureDrop Workstation and want to migrate your Tails Admin Workstation to a separate Qubes-based Admin Workstation laptop:
 
 #. :doc:`Install Qubes OS and SecureDrop packages</admin/migration/migrate_install_qubes>` on the new laptop
 #. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
