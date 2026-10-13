@@ -1,0 +1,3 @@
+   The USB flash drives used for SecureDrop are all encrypted, either with LUKS or Veracrypt. To securely wipe this kind of storage media, it is necessary to re-format *and re-encrypt* the drive, following the :doc:`same steps used in their initial creation</admin/deployment/provisioning_usb>`. This will destroy the encryption headers, making any data on the drives unrecoverable. 
+
+   You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.

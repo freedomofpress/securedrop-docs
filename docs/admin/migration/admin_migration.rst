@@ -63,4 +63,6 @@ Test new Admin Workstation
 Decommission Tails Admin Workstation
 ------------------------------------
 
+.. include:: /includes/destroy_usb.rst
+
 .. TODO

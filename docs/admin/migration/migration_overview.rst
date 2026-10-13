@@ -75,6 +75,14 @@ If you already have a Qubes-based SecureDrop Workstation and want to migrate you
 #. :doc:`Install Qubes OS and SecureDrop packages</admin/migration/migrate_install_qubes>` on the new laptop
 #. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
 
+
+Decommissioning Tails Workstations
+----------------------------------
+
+After completing your migration and testing your new Qubes-based Admin and/or SecureDrop Workstations, securely decommission your Tails USB Workstations.
+
+.. include:: /includes/destroy_usb.rst
+
 .. TODO To create additional SecureDrop or Admin Workstations, follow the standard instructions in /deployment (need to be written!)
 
 .. TODO destroy Tails USB keys

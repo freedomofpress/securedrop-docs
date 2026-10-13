@@ -88,7 +88,9 @@ Import onto the SecureDrop Workstation from encrypted USB drive
 Securely erase transfer drive
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The encrypted USB flash drive you used to transfer between the SecureDrop and Admin Workstations now contains sensitive credentials related to your SecureDrop. You must ensure it is securely erased. The most effective way to do so is to either physically completely destroy the drive, or (more practically), reencrypt it as an :doc:`Export Device</admin/deployment/provisioning_usb>`. Either erase the drive by turning it into a VeraCrypt Export Device, or reencrypt it with a new password to use as a LUKS Export Device. 
+The encrypted USB flash drive you used to transfer between the SecureDrop and Admin Workstations now contains sensitive credentials related to your SecureDrop. You must ensure it is securely erased. 
+
+.. include:: /includes/destroy_usb.rst
 
 .. _install_securedrop_workstation:
 
