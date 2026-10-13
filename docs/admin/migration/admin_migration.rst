@@ -55,3 +55,12 @@ Install Admin Workstation
 .. include:: /admin/installation/install_admin_workstation.rst
   :start-after: .. _install_admin_workstation:
 
+Test new Admin Workstation
+--------------------------
+
+.. TODO
+
+Decommission Tails Admin Workstation
+------------------------------------
+
+.. TODO

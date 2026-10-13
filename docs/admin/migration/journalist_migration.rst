@@ -107,6 +107,15 @@ In order to set up KeePassXC for easy use:
   :start-after: .. _install_securedrop_workstation:
   :end-before: .. _end_install_securedrop_workstation:
 
+Test new SecureDrop Workstation
+--------------------------------
+
+.. TODO
+
+Decommission Tails Journalist Workstation
+-----------------------------------------
+
+.. TODO
 
 .. |Attach TailsData| image:: images/attach_usb.png
   :width: 100%
