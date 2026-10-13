@@ -90,7 +90,7 @@ Securely erase transfer drive
 
 The encrypted USB flash drive you used to transfer between the SecureDrop and Admin Workstations now contains sensitive credentials related to your SecureDrop. You must ensure it is securely erased. 
 
-.. include:: /includes/destroy_usb.rst
+.. include:: /includes/destroy_usb.txt
 
 .. _install_securedrop_workstation:
 

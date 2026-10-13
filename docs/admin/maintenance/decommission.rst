@@ -57,7 +57,7 @@ The following steps will guide you through the decommissioning of your SecureDro
    Be sure to inform your network administrator of any changes to devices on your network.
 #. **Wipe and destroy the USB flash drives.**
 
-.. include:: /includes/destroy_usb.rst
+.. include:: /includes/destroy_usb.txt
 
 #. **Wipe and destroy the storage drives on the servers.**
    Messages and files sent via SecureDrop are stored GPG-encrypted on the Application Server. Unless your SecureDrop Submission Key is compromised (or a significant vulnerability in GPG is discovered), access to the servers does not guarantee access to the files and messages you have received.

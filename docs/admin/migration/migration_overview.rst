@@ -81,7 +81,7 @@ Decommissioning Tails Workstations
 
 After completing your migration and testing your new Qubes-based Admin and/or SecureDrop Workstations, securely decommission your Tails USB Workstations.
 
-.. include:: /includes/destroy_usb.rst
+.. include:: /includes/destroy_usb.txt
 
 .. TODO To create additional SecureDrop or Admin Workstations, follow the standard instructions in /deployment (need to be written!)
 

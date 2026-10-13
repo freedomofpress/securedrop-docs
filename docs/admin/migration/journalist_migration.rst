@@ -117,7 +117,7 @@ Decommission Tails Journalist Workstation
 
 .. TODO
 
-.. include:: /includes/destroy_usb.rst
+.. include:: /includes/destroy_usb.txt
 
 .. |Attach TailsData| image:: images/attach_usb.png
   :width: 100%
