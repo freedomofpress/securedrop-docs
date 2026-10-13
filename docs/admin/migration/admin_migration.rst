@@ -1,14 +1,11 @@
-Migrating Admin Workstation from Tails
-=======================================
+Migrate Admin Workstation from Tails
+=========================================
 
-Configure Admin Workstation
----------------------------
-
-These steps will create an Admin Workstation from your existing Tails Admin Workstation UBS flash drive. 
+These steps will create a new Admin Workstation from your existing Tails Admin Workstation USB flash drive. 
 
 Perform these steps on a laptop where you have freshly :doc:`installed Qubes OS and the SecureDrop packages</admin/migration/migrate_install_qubes>` to create a new standalone Admin Workstation.
 
-Perform these steps on an :doc:`existing SecureDrop Workstation laptop` to turn it into a combined Admin + SecureDrop Workstation.
+Perform these steps on an existing SecureDrop Workstation laptop to turn it into a combined Admin + SecureDrop Workstation.
 
 Import from Tails Admin Workstation
 -------------------------------------
@@ -25,13 +22,32 @@ Import from Tails Admin Workstation
 
   securedrop-manage --configure --target admin
   
-The command will print out the imported Admin Interface details to confirm before proceeding.
+The command will print out the imported details to confirm before proceeding.
 
-5. Use the ``vault`` file manager to copy your KeePassXC database from the USB drive to the ``sd-admin-vault`` qube. 
-
-6. If you don't intend to Safely disconnect the USB flash drive now. In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the USB flash drive.
+5. In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and shut down the ``sd-admin-vault`` qube (using the Qube widget in the upper right panel). 
 
 .. TODO add manual steps
+
+Copy Administrator KeePassXC database
+-------------------------------------
+
+1. Use the Devices Widget in the upper right panel to attach the Tails Admin Workstation USB drive to the ``sd-admin-vault`` qube. As before, there will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled ``Tails``), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
+
+3. Launch KeePassXC in ``sd-admin-vault`` (|qubes_menu| **▸ Apps ▸ sd-admin-vault ▸ KeePassXC**). Select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the persistent volume passphrase to unlock and mount it. When prompted, select the option to **Forget password immediately**.
+
+4. Locate the KeePassXC password database. It should be in the ``Persistent`` directory, and will typically be named ``keepassx.kdbx`` or similar.
+
+5. Drag and drop the password database to copy it to the Home directory of ``sd-admin-vault``.
+
+8. In the ``sd-admin-vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the Tails Admin Workstation USB.
+
+9. In the file manager window that displays the home directory, open the copy you made of the password database by double-clicking it.
+
+10. If the database is passwordless, KeePassXC may display a security warning when opening it. To preserve convenient passwordless access, you can protect the database using a key file, via **Database ▸ Database settings ▸ Security ▸ Add additional protection ▸ Add Key File ▸ Generate**. This key file has to be selected when you open the database, but KeePassXC will remember the last selection.
+
+11. Inspect each section of the password database to ensure that it contains only the information required by the Administrator to manage your SecureDrop servers.
+
+12. Close the application window and shut down the ``sd-admin-vault`` qube. 
 
 Install Admin Workstation
 -------------------------

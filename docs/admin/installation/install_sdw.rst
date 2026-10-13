@@ -101,9 +101,9 @@ Configure infinite scrollback for your terminal via **Edit ▸ Preferences ▸ G
 
 When ready run the following command in the ``dom0`` terminal:
 
-  .. code-block:: sh
+.. code-block:: sh
 
-    securedrop-manage --apply target admin
+  securedrop-manage --apply target admin
 
 
 .. TODO update command for SecureDrop Workstation
