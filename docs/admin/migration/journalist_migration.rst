@@ -34,7 +34,7 @@ To protect this key and preserve the air gap, you will need to connect the SVS U
 
 .. code-block:: sh 
 
-    sdw-admin --configure
+    securedrop-manage --configure --target journalist
 
 Follow the command prompts to complete submission key import. 
 

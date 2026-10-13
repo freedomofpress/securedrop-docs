@@ -7,6 +7,12 @@ Perform these steps on a laptop where you have freshly :doc:`installed Qubes OS 
 
 Perform these steps on an existing SecureDrop Workstation laptop to turn it into a combined Admin + SecureDrop Workstation.
 
+Install Admin Workstation
+-------------------------
+
+.. include:: /admin/installation/install_admin_workstation.rst
+  :start-after: .. _install_admin_workstation:
+
 Import from Tails Admin Workstation
 -------------------------------------
 
@@ -28,8 +34,8 @@ The command will print out the imported details to confirm before proceeding.
 
 .. TODO add manual steps
 
-Copy Administrator KeePassXC database
--------------------------------------
+Import Administrator KeePassXC database
+---------------------------------------
 
 1. Use the Devices Widget in the upper right panel to attach the Tails Admin Workstation USB drive to the ``sd-admin-vault`` qube. As before, there will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled ``Tails``), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
 
@@ -49,11 +55,6 @@ Copy Administrator KeePassXC database
 
 12. Close the application window and shut down the ``sd-admin-vault`` qube. 
 
-Install Admin Workstation
--------------------------
-
-.. include:: /admin/installation/install_admin_workstation.rst
-  :start-after: .. _install_admin_workstation:
 
 Test new Admin Workstation
 --------------------------
