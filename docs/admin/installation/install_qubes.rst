@@ -68,7 +68,7 @@ Follow the `installation documentation <https://www.qubes-os.org/doc/installatio
 - Set a strong full disk encryption (FDE) passphrase - a 6-word Diceware passphrase is recommended.
 - Create an administrative account named ``user`` with a strong password.
 
-.. note:: Qubes is not intended to have multiple user accounts, so your account name and password will be shared by all users of the laptop. The password will be required to log in and unlock the screen during sessions - choosing something strong but memorable and easily typed is recommended!
+.. note:: Qubes is not intended to have multiple user accounts, so your account name and password will be shared by all users of the laptop. The password will be required to log in and unlock the screen during sessions - choosing something strong but memorable and easily typed is recommended! We recommend setting the account name to "user", which matches the examples used throughout this documentation.
 
 Once the installation is complete, you will be prompted to reboot into Qubes. Reboot, removing the install USB flash drive when the computer restarts.
 
