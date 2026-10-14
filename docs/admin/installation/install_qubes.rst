@@ -8,7 +8,7 @@ The initial steps for creating a :ref:`SecureDrop Workstations<glossary_securedr
 
 During installation of or migration to SecureDrop Workstation, you will be performing these steps on either one laptop (to become a combined Admin + SecureDrop Workstation), or two laptops (to become distinct Admin and SecureDrop Workstations).
 
-If your target is two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptop. Before beginning, it may be helpful to label each laptop with its desired end state (either Admin Workstation or SecureDrop Workstation).
+If your target is two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptop. Before beginning, you should label each laptop with its desired end state (either Admin Workstation or SecureDrop Workstation) to eliminate the liklihood of a mix-up.
 
 If you plan to create additional Admin or SecureDrop Workstations, you will do so at a later time. 
 
