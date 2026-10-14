@@ -1,7 +1,7 @@
 Troubleshooting connection problems
 ===================================
 
-Before troubleshooting connection problems, we recommend reading about the :ref:`networking architecture <Networking Architecture>` of SecureDrop Workstation. If you are in a hurry, this guide offers quick diagnostic and remedial steps.
+Before troubleshooting connection problems, we recommend reading about the :ref:`networking architecture <Networking Architecture>` of SecureDrop. If you are in a hurry, this guide offers quick diagnostic and remedial steps.
 
 Step 1: Verify you are connected to the Internet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

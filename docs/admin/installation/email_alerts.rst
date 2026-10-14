@@ -45,7 +45,7 @@ Proton Mail is a privacy-focused e-mail provider that implements PGP encryption 
 Optional: Daily Journalist Alerts
 ---------------------------------
 
-When a SecureDrop has little activity, checking daily only to find there is nothing new is a burden. Daily Journalist Alerts can notify Journalists via encrypted emails about whether or not there has been new messages or file submissions from Sources in the past 24 hours. If the email shows new Source activity, the Journalist can check their SecureDrop Workstation.
+When a SecureDrop has little activity, checking daily only to find there is nothing new is a burden. Daily Journalist Alerts can notify Journalists via encrypted emails about whether or not there has been new messages or file submissions from Sources in the past 24 hours. If the email shows new Source activity, the Journalist can check their Journalist Workstation.
 
 Daily Journalist Alerts are optional, and can be configured during or after installation.
 

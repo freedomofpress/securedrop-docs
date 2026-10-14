@@ -40,7 +40,7 @@ Instructions and tips for accessing the Application Server over SSH are on the :
 Export Device
 -------------
 
-The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a SecureDrop Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
+The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a Journalist Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
 
 Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/deployment/provisioning_usb>`.
 
@@ -49,9 +49,9 @@ Please see the detailed security recommendations for the choice, configuration a
 Journalist
 ----------
 
-The Journalist uses SecureDrop to communicate with Sources and review files they submit. Journalists do this by using SecureDrop Inbox on a SecureDrop Workstation laptop to connect to the Application Server.
+The Journalist uses SecureDrop to communicate with Sources and review files they submit. Journalists do this by using SecureDrop Inbox on a Journalist Workstation laptop to connect to the Application Server.
 
-If a Journalist chooses to release any submitted files, they can be prepared for publication on the SecureDrop Workstation before being transferred to another computer.
+If a Journalist chooses to release any submitted files, they can be prepared for publication on the Journalist Workstation before being transferred to another computer.
 
 Instructions for using SecureDrop as a Journalist are available in our :doc:`Journalist Guide </journalist/journalist>`.
 
@@ -109,18 +109,16 @@ This OSSEC Alert Key pair is created when :doc:`preparing email accounts for ale
 SecureDrop Inbox
 ----------------
 
-SecureDrop Inbox is the central application on a SecureDrop Workstation. It allows Journalists to connect to their SecureDrop instance, download and decrypt messages from Sources, and compose and send replies. SecureDrop Inbox can only run on a SecureDrop Workstation.
+SecureDrop Inbox is the central application on a Journalist Workstation. It allows Journalists to connect to their SecureDrop instance, download and decrypt messages from Sources, and compose and send replies. SecureDrop Inbox can only run on a Journalist Workstation.
 
 Instructions for using SecureDrop Inbox appear in our :doc:`Journalist Guide </journalist/journalist>`.
 
 .. _glossary_securedrop_workstation:
 
-SecureDrop Workstation
+Journalist Workstation
 ----------------------
 
-The SecureDrop Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling untrusted files submitted by Sources. Each Journalist may have their own SecureDrop Workstation, or one may be shared among several Journalists.
-
-Read more about :doc:`SecureDrop Workstation and Qubes OS</introduction/securedrop_workstation>`.
+The Journalist Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling untrusted files submitted by Sources. Each Journalist may have their own Journalist Workstation, or one may be shared among several Journalists.
 
 .. _glossary_source:
 
@@ -149,4 +147,4 @@ The Submission Key is the GPG keypair used to encrypt and decrypt messages and f
 
 The Submission Public Key is uploaded to your SecureDrop servers as part of the installation process. Once your SecureDrop is online, anyone will be able to download it.
 
-The Submission Private Key is used to decrypt all messages and files sent to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a SecureDrop Workstation or on offline backup storage.
+The Submission Private Key is used to decrypt all messages and files sent to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a Journalist Workstation or on offline backup storage.

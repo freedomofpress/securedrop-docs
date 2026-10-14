@@ -29,11 +29,11 @@ Permanently decommissioning SecureDrop
 The following steps will guide you through the decommissioning of your SecureDrop instance.
 
 #. **Put a notice in advance on your Landing Page to inform sources that your instance will soon be retired.** You may want to direct them to other secure methods of contacting you.
-#. **Locate and create an inventory of all your hardware.** - SecureDrop Workstation laptops - Export Devices (USB flash drives, optical drives, or external drives) - Backup USB flash drives/other storage media - Servers - Firewall
+#. **Locate and create an inventory of all your hardware.** - All Admin and Journalist Workstations - Export Devices (USB flash drives, optical drives, or external drives) - Backup USB flash drives/other storage media - Servers - Firewall
 
    You may also want to inventory credentials, such as the email address or alias and PGP key used for receiving OSSEC alerts, in order to retire them.
 
-#. **Optional: Save a backup.** If you want to save a backup of the Application Server (for example, to reinstall SecureDrop in the future using the same onion address), follow our :doc:`backup guidelines <backup_and_restore>`. Once the backup has been created, you can move it onto an encrypted drive, such as a LUKS-encrypted USB flash drive. You will also require a backup of the Submission Private Key found on the SecureDrop Workstation.
+#. **Optional: Save a backup.** If you want to save a backup of the Application Server (for example, to reinstall SecureDrop in the future using the same onion address), follow our :doc:`backup guidelines <backup_and_restore>`. Once the backup has been created, you can move it onto an encrypted drive, such as a LUKS-encrypted USB flash drive. You will also require a backup of the Submission Private Key found on the Journalist Workstation.
 
    If you do not require a server backup, you may choose to export specific submitted files or conversation transcripts, and store them in a secure manner (such as on an encrypted USB flash drive). 
 #. **Optional: Delete data on the server.**

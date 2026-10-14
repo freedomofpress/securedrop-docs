@@ -1,12 +1,12 @@
 Manually Rotate a Submission Key
 ==================================
 
-It may be necessary to manually generate and a new :ref:`Submission Key<glossary_submission_key>` and install it on your SecureDrop Workstation and Admin Workstation.
+It may be necessary to manually generate and a new :ref:`Submission Key<glossary_submission_key>` and install it on your Journalist and Admin Workstations.
 
 Create the Submission Key
 -------------------------
 
-Generate a SecureDrop Submission Key on a SecureDrop Workstation using the steps below.
+Generate a SecureDrop Submission Key on a Journalist Workstation using the steps below.
 
 #. If not already, boot and log into Qubes OS.
 #. Open a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**).
@@ -77,7 +77,7 @@ The Submission Private Key should be moved to a specific location in ``dom0`` wh
 Apply configuration with the new key
 ------------------------------------
 
-To apply the changes to your SecureDrop Workstation, you will need to run:
+To apply the changes to your Journalist Workstation, you will need to run:
 
 .. code-block:: sh
 
@@ -85,7 +85,7 @@ To apply the changes to your SecureDrop Workstation, you will need to run:
 
 .. TODO confirm this command
 
-Install key on Admin Workstation, servers, and other SecureDrop Workstations
+Install key on Admin Workstation, servers, and other Journalist Workstations
 ----------------------------------------------------------------------------
 
 .. TODO 

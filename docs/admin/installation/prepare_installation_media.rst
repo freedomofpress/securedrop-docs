@@ -5,7 +5,7 @@ Prepare installation media
 
 SecureDrop Application and Monitor Servers run **Ubuntu Server 24.04.3 LTS (Noble Numbat)**. 
 
-Admin and SecureDrop Workstation laptops run **Qubes 4.3**.
+Admin and Journalist Workstation laptops run **Qubes 4.3**.
 
 Preparing your everyday computer
 --------------------------------
@@ -147,6 +147,6 @@ Create the installation media
 
 `Follow the steps in this guide to create bootable USB flash drives <https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/>`__
 
-If you plan on setting up multiple Admin or SecureDrop Workstations at once, you may want to create multiple installation media so you can install Qubes OS on multiple laptops at the same time.
+If you plan on setting up multiple Admin or Journalist Workstations at once, you may want to create multiple installation media so you can install Qubes OS on multiple laptops at the same time.
 
 .. note:: The guide above is written for Ubuntu, but the same steps and procedures can be used for the Qubes installation image as well.

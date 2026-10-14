@@ -1,7 +1,7 @@
 Installation overview
 =====================
 
-This section will walk you though all the steps involved in planning and executing a new SecureDrop installation using SecureDrop Workstation.
+This section will walk you though all the steps involved in planning executing a new SecureDrop installation.
 
 .. note:: If you are migrating from an older SecureDrop, using the separate Tails-based "Secure Viewing Station", "Journalist workstation" and "Admin Workstation" USB flash drives, then skip to the :ref:`Migration Overview<migration_overview>`.
 
@@ -26,11 +26,11 @@ In the new SecureDrop, every workstation is a laptop running the `Qubes <https:/
 
 The :ref:`Admin Workstation<glossary_admin_workstation>` is used by Administrators. It is configured with the tools and credentials needed to administer and install SecureDrop servers. 
 
-The :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` is used by Journalists. It has :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` installed and configured to connect to your SecureDrop server.
+The :ref:`Journalist Workstation<glossary_securedrop_workstation>` is used by Journalists. It has :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` installed and configured to connect to your SecureDrop server.
 
-Typically, the Admin Workstation and SecureDrop Workstation will be different laptops used by different people (Administrations and Journalists, respectively). However, a single laptop can serve as a *combined* SecureDrop Workstation and Admin Workstation. This configuration accommodates small or cash-strapped newsrooms, where only a single laptop is shared between Administrators and Journalists, or where a single individual fills both roles. 
+Typically, the Admin Workstation and Journalist Workstation will be different laptops used by different people (Administrations and Journalists, respectively). However, a single laptop can serve as a *combined* Admin + Journalist Workstation. This configuration accommodates small or cash-strapped newsrooms, where only a single laptop is shared between Administrators and Journalists, or where a single individual fills both roles. 
 
-For an initial installation of SecureDrop, you will set up either one Admin Workstation and one SecureDrop Workstation, or a single combined Admin + SecureDrop Workstation.
+For an initial installation of SecureDrop, you will set up either one Admin Workstation and one Journalist Workstation, or a single combined Admin + Journalist Workstation.
 
 After the initial installation is complete, you may add additional laptops of any type as needed for your organization.
 
@@ -67,9 +67,9 @@ The SecureDrop servers handle all messages and files exchanged between Journalis
 Minimum security requirements for workstations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Every Admin and SecureDrop Workstation contains sensitive credentials and information related to your SecureDrop, such as SSH keys, the :ref:`Private Submission Key<glossary_submission_key>`, and copies of messages and files exchanged between Journalists and Sources. Therefore, it's critical to ensure that appropriate security practices are applied to every Admin and SecureDrop Workstation.
+Every Admin and Journalist Workstation contains sensitive credentials and information related to your SecureDrop, such as SSH keys, the :ref:`Private Submission Key<glossary_submission_key>`, and copies of messages and files exchanged between Journalists and Sources. Therefore, it's critical to ensure that appropriate security practices are applied to every Admin and Journalist Workstation.
 
-- SecureDrop Workstations should always be powered off and stored securely when not in use.
+- Journalist Workstations should always be powered off and stored securely when not in use.
 - During installation, a wired internet connection that is either dedicated for this purpose, or on a fully segregated subnet should be used. 
 - Users should not bring other electronic devices into the room during installation, with the exception of smartphones used for 2FA token generation. While in the room, smartphones should be set to airplane mode, and should not be used for any purpose other than 2FA.
 
@@ -88,7 +88,7 @@ Summary of installation tasks
 #. Apply the Admin Workstation configuration.
 #. Create the first Administrator user.
 #. Create an Export Device.
-#. Install SecureDrop Workstation.
+#. Install Journalist Workstation.
 #. Test the installation.
 #. Troubleshoot any issues that occurred during installation.
 

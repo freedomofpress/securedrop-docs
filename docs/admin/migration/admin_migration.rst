@@ -3,9 +3,9 @@ Migrate Admin Workstation from Tails
 
 These steps will create a new Admin Workstation from your existing Tails Admin Workstation USB flash drive. 
 
-Perform these steps on a laptop where you have freshly :doc:`installed Qubes OS and the SecureDrop packages</admin/migration/migrate_install_qubes>` to create a new standalone Admin Workstation.
+Typically you will perform these steps on a laptop where you have freshly :doc:`installed Qubes OS and the SecureDrop packages</admin/migration/migrate_install_qubes>` to create a new standalone Admin Workstation.
 
-Perform these steps on an existing SecureDrop Workstation laptop to turn it into a combined Admin + SecureDrop Workstation.
+Alternatively, you may perform these steps on an :deoc:`existing Journalist Workstation</admin/migration/journalist_migration>` laptop to turn it into a combined Admin + Journalist Workstation.
 
 Install Admin Workstation
 -------------------------

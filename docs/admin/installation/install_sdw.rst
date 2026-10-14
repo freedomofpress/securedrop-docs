@@ -1,19 +1,19 @@
-Install SecureDrop Workstation
+Install Journalist Workstation
 ==============================
 
-You have created the Admin Workstation and used it to install the SecureDrop servers. Now, you may set up the SecureDrop Workstation. 
+You have created the Admin Workstation and used it to install the SecureDrop servers. Now, you may set up the Journalist Workstation. 
 
-If you have opted to perform your initial installation with *two* laptops (distinct Admin and SecureDrop Workstations, rather than a combined laptop for both), then make sure that you are performing these steps on the same laptop where you :doc:`generated</admin/installation/generate_submission_key>` your :ref:`Submission Key<glossary_submission_key>` earlier.
+If you have opted to perform your initial installation with *two* laptops (distinct Admin and Journalist Workstations, rather than a combined laptop for both), then make sure that you are performing these steps on the same laptop where you :doc:`generated</admin/installation/generate_submission_key>` your :ref:`Submission Key<glossary_submission_key>` earlier.
 
 Import Onion Service addresses and auth token
 ---------------------------------------------
 
-When you installed the SecureDrop servers from your Admin Workstation, the onion addresses of your SecureDrop Source and Admin Interfaces and the associated :ref:`Onion Service<glossary_onion_service>` authentication token were created. You need to import the ``config.json`` file containing these addresses and token onto the SecureDrop Workstation.
+When you installed the SecureDrop servers from your Admin Workstation, the onion addresses of your SecureDrop Source and Admin Interfaces and the associated :ref:`Onion Service<glossary_onion_service>` authentication token were created. You need to import the ``config.json`` file containing these addresses and token onto the Journalist Workstation.
 
 Importing to ``dom0`` on a combined laptop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have a combined Admin + SecureDrop Workstation on the same laptop, you simply need to copy the ``config.json`` file containing the onion addresses and authentication token from ``sd-admin`` to the correct location in ``dom0``.
+If you have a combined Admin + Journalist Workstation on the same laptop, you simply need to copy the ``config.json`` file containing the onion addresses and authentication token from ``sd-admin`` to the correct location in ``dom0``.
 
 In a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**), run the following command:
 
@@ -62,12 +62,12 @@ Export from an Admin Workstation to encrypted USB drive
 #. Drag the ``config.json`` file to the transfer drive to copy it.
 #. Eject the USB flash drive and shut down the Admin Workstation.
 
-Import onto the SecureDrop Workstation from encrypted USB drive
+Import onto the Journalist Workstation from encrypted USB drive
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Switch to the SecureDrop Workstation, boot it, and log in to Qubes.
+#. Switch to the Journalist Workstation, boot it, and log in to Qubes.
 #. Open the File Manager in ``vault``: (|qubes_menu| **▸ vault ▸ Thunar File Manager**)
-#. Insert the transfer drive into the SecureDrop Workstation.
+#. Insert the transfer drive into the Journalist Workstation.
 #. Open the Qubes Devices Widget and attach your transfer drive to the ``vault`` qube.
 #. In the ``vault`` File Manager, mount and unlock the drive using the password you set earlier:
 
@@ -94,7 +94,7 @@ The encrypted USB flash drive you used to transfer between the SecureDrop and Ad
 
 .. _install_securedrop_workstation:
 
-Install SecureDrop Workstation
+Install Journalist Workstation
 ------------------------------
 
 These steps should be performed from a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**). 
@@ -108,7 +108,7 @@ When ready run the following command in the ``dom0`` terminal:
   securedrop-manage --apply target admin
 
 
-.. TODO update command for SecureDrop Workstation
+.. TODO update command for Journalist Workstation
 
 This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple qubes and installs supporting packages. When the command finishes, reboot the machine to complete the installation of SecureDrop Inbox and it's associated qubes and configuration.
 

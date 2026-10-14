@@ -1,9 +1,9 @@
 Managing clipboard access
 =========================
 
-Every qube in Qubes has its own clipboard, similar to the clipboard of a Mac, Windows or Linux computer. For example, you can copy and paste text between different conversations in SecureDrop Inbox using the ``Ctrl+C`` and ``Ctrl+V`` keyboard shortcuts. This type of typical clipboard usage -- copy and paste in the same qube -- works *within* all qubes that are part of a SecureDrop Workstation.
+Every qube has its own clipboard, similar to the clipboard of a Mac, Windows or Linux computer. For example, you can copy and paste text between different conversations in SecureDrop Inbox using the ``Ctrl+C`` and ``Ctrl+V`` keyboard shortcuts. This type of typical clipboard usage -- copy and paste in the same qube -- works *within* all qubes.
 
-In addition, Qubes supports copying information *between* qubes. This is done by using `special keyboard shortcuts <https://www.qubes-os.org/doc/copy-paste/>`_, ``Ctrl+Shift+C`` and ``Ctrl+Shift+V``, in a four-step process. By default, this is disabled for all qubes that are part of a SecureDrop Workstation, consistent with the `principle of least privilege <https://en.wikipedia.org/wiki/Principle_of_least_privilege>`__.
+In addition, Qubes supports copying information *between* qubes. This is done by using `special keyboard shortcuts <https://www.qubes-os.org/doc/copy-paste/>`_, ``Ctrl+Shift+C`` and ``Ctrl+Shift+V``, in a four-step process. In SecureDrop, this is disabled by default for all qubes, consistent with the `principle of least privilege <https://en.wikipedia.org/wiki/Principle_of_least_privilege>`__.
 
 As an Administrator, you should be aware of the following risks related to clipboard access before changing the default configuration:
 
@@ -11,7 +11,7 @@ As an Administrator, you should be aware of the following risks related to clipb
 2. The four-step process described above can be difficult to follow, and it is easy to make an operational mistake, such as pasting a password into a message to a Source, or into a window belonging to a qube with network access.
 3. Like any other part of the operating system, the implementation of Qubes clipboard itself may contain undiscovered security vulnerabilities that an adversary could exploit in an attempt to exfiltrate information.
 
-With these considerations in mind, there are use cases where clipboard access may be an important part of your regular use of SecureDrop Workstation. For example:
+With these considerations in mind, there are use cases where clipboard access may be an important part of your regular use of SecureDrop. For example:
 
 - You may want to copy passwords from a password manager to log into SecureDrop Inbox;
 - You may want to copy a message you received via SecureDrop into a secure messaging app like Signal, to share it with another Journalist.
@@ -21,7 +21,7 @@ To support these use cases, Qubes OS allows you to grant granular access to the 
 Configuring clipboard access to ``sd-app``
 ------------------------------------------
 
-The process for permitting the one-directional copying of passwords from a password manager in ``vault`` to SecureDrop Inbox is :ref:`outlined in the installation docs <Password Management Section>`. In general, clipboard access to SecureDrop Workstation qubes is governed by *tags* that can be applied in ``dom0`` to selected qubes:
+The process for permitting the one-directional copying of passwords from a password manager in ``vault`` to SecureDrop Inbox is :ref:`outlined in the installation docs <Password Management Section>`. In general, clipboard access to qubes is governed by *tags* that can be applied in ``dom0`` to selected qubes:
 
 - the tag ``sd-send-app-clipboard`` can be used to tag a qube that should be able to send its clipboard contents *to* ``sd-app`` via the inter-qube clipboard;
 - the tag ``sd-receive-app-clipboard`` can be used to tag a qube that should be able to receive its clipboard contents *from* ``sd-app`` via the inter-qube clipboard.

@@ -11,11 +11,17 @@ The previous version of SecureDrop was based three workstations:
 
 Each of these workstations was actually an individual USB flash drive with the `Tails <https://tails.net>`__ operating system installed, used to boot a laptops for each role (in the case of the SVS, this was always a physically air-gapped laptop).
 
-SecureDrop Workstation has been available as an open beta `since 2024 <https://securedrop.org/news/securedrop-workstation-1_0_0-released/>`__, but the Tails-based Admin Workstation was still needed for administration tasks. Some organizations already have a mix of the older Tails-based workstations and newer Qubes based SecureDrop Workstations.
+The initial effort to base SecureDrop's journalist workflow on Qubes OS instead of Tails resulted in SecureDrop Workstation, which has been available as an open beta `since 2024 <https://securedrop.org/news/securedrop-workstation-1_0_0-released/>`__. In that open beta, the Tails-based Admin Workstation was still needed for administration tasks. Some organizations already have a mix of the older Tails-based workstations and newer Qubes based SecureDrop Workstations.
 
-As of SecureDrop Workstation 2.0.0, administrative tasks can be performed using a Qubes-based Admin Workstation. The Tails-based components are no longer needed, and will soon be depreciated.
+Now, administrative tasks can be performed on a Qubes-based Admin Workstation, and so SecureDrop has transitioned completely to using Qubes-based laptops instead of the previous Tails-based USB flash drives.
 
-.. note:: Everywhere else in this documentation, the older *Tails Admin Workstation* (a USB flash drive) will be named as such. Take care not to confuse it with the new :ref:`Admin Workstation<glossary_admin_workstation>` (a laptop running Qubes OS with the SecureDrop administrative tools installed).
+.. TODO link to Tails docs. 
+
+The Tails-based components are no longer needed, and SecureDrop based on Tails will be completely depreciated by the end of 2027. 
+
+This guide will help you migrated your Tails-based Admin and Journalist Workstations to the new Qubes-based laptops. 
+
+.. note:: Everywhere else in this documentation, the older Tails Admin or Journalist Workstation (USB flash drives) will be named as such. Take care not to confuse them with the new :ref:`Journalist Workstation<glossary_journalist_workstation>` and :ref:`Admin Workstation<glossary_admin_workstation>`  (Qubes OS laptops with SecureDrop's Journalist or Admin tools installed on them).
 
 Hardware overview
 ---------------------
@@ -23,14 +29,12 @@ Hardware overview
 Workstations
 ^^^^^^^^^^^^
 
-SecureDrop Workstation has different hardware requirements for the physical laptops used. 
-
 .. include:: /admin/installation/installation_overview.rst
     :start-after: .. _install_overview_workstations:
     :end-before: .. _install_overview_servers:
 
-Hardware requirements for new SecureDrop Workstations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Hardware requirements for new SecureDrop laptops
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Qubes OS has different hardware requirements compared to Tails. You may have to procure new Qubes-compatible laptops that meet SecureDrop's requirements in lieu of re-using the laptops you have been using with Tails. 
 
@@ -41,7 +45,7 @@ Qubes OS has different hardware requirements compared to Tails. You may have to 
 Printers
 ^^^^^^^^
 
-SecureDrop Workstation supports printing directly from the workstation where Source messages and files are decrypted and viewed.
+SecureDrop now supports printing directly from the workstation where Source messages and files are decrypted and viewed.
 
 .. include:: /admin/installation/hardware.rst
     :start-after: .. _hardware_printers_overview:
@@ -60,17 +64,17 @@ Migration scenarios
 If you are starting with only the Tail-based workstations:
 
 1. :doc:`Install Qubes OS and SecureDrop packages</admin/migration/migrate_install_qubes>` on the desired number of laptops
-    - One laptop to create a combined Admin + SecureDrop Workstation
-    - Two laptops to create separate Admin and SecureDrop Workstations
+    - One laptop to create a combined Admin + Journalist Workstation
+    - Two laptops to create separate Admin and Journalist Workstations
 
 2. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
-3. Perform :doc:`Journalist migration</admin/migration/journalist_migration>` to create new SecureDrop Workstation
+3. Perform :doc:`Journalist migration</admin/migration/journalist_migration>` to create new Journalist Workstation
 
-If you already have a Qubes-based SecureDrop Workstation and simply want to install the administrative tools on it, turning it into a combined Admin + SecureDrop Workstation:
+If you already have a Qubes Journalist Workstation (previously called a "SecureDrop Workstation") and simply want to install the administrative tools on it, turning it into a combined Admin + Journalist Workstation:
 
-#. Perform the :doc:`Journalist migration</admin/migration/journalist_migration>` steps on the current SecureDrop Workstation 
+#. Perform the :doc:`Journalist migration</admin/migration/journalist_migration>` steps on the current Journalist Workstation 
 
-If you already have a Qubes-based SecureDrop Workstation and want to migrate your Tails Admin Workstation to a separate Qubes-based Admin Workstation laptop:
+If you already have a Qubes-based Journalist Workstation and want to migrate your Tails Admin Workstation to a separate Qubes-based Admin Workstation laptop:
 
 #. :doc:`Install Qubes OS and SecureDrop packages</admin/migration/migrate_install_qubes>` on the new laptop
 #. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
@@ -79,7 +83,7 @@ If you already have a Qubes-based SecureDrop Workstation and want to migrate you
 Decommissioning Tails Workstations
 ----------------------------------
 
-After completing your migration and testing your new Qubes-based Admin and/or SecureDrop Workstations, securely decommission your Tails USB Workstations.
+After completing your migration and testing your new Qubes-based Admin and/or Journalist Workstations, securely decommission your Tails USB Workstations.
 
 .. include:: /includes/destroy_usb.txt
 

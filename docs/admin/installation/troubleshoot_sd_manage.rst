@@ -18,7 +18,7 @@ An error similar to the following may be displayed during an installation or upd
         stdout:
             deploy
 
-This is a transient error that may affect any of the SecureDrop Workstation qubes. To clear it, run the installation command or update again.
+This is a transient error that may affect any of the SecureDrop qubes. To clear it, run the installation command or update again.
 
 "Temporary failure resolving"
 -----------------------------

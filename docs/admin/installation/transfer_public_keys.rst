@@ -21,7 +21,7 @@ In the ``dom0`` terminal, run the command:
 
   securedrop-manage --configure --target admin
 
-Importing the Submission Public Key to ``sd-admin`` from another SecureDrop Workstation
+Importing the Submission Public Key to ``sd-admin`` from another Journalist Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO

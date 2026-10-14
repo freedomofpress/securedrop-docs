@@ -356,7 +356,7 @@ We recommend completing the following tasks after the rebuild:
 - :doc:`Back up the Application Server <backup_and_restore>` once SSH-over-Tor has been restored. Ensure that server and workstation backups happen regularly.
 - Provision all other Tails workstation drives (Journalist and/or Admin Workstations) with updated Tor credentials, so that they can access SecureDrop after this rebuild.
 
-  You will need to copy the following file(s) to all other Admin and SecureDrop Workstations, replacing the existing files of the same name:
+  You will need to copy the following file(s) to all other Admin and Journalist Workstations, replacing the existing files of the same name:
 
   .. code:: sh
 

@@ -1,17 +1,17 @@
-Updating SecureDrop Workstation
-===============================
+Updating Workstations
+=====================
 
 Preflight updates
 -----------------
 
-After you unlock your SecureDrop Workstation, the preflight updater will prompt you to check for available updates at least once per day.
+After you unlock your Workstation, the preflight updater will prompt you to check for available updates at least once per day.
 
-The preflight updater delivers new SecureDrop Inbox releases, SecureDrop Workstation updates, and updates to the underlying Qubes operating system.
+The preflight updater delivers new SecureDrop Inbox releases, updates to the SecureDrop Workstation configuration of Qubes, and standard Qubes updates.
 
 Verifying version numbers
 -------------------------
 
-`The latest SecureDrop Inbox and Workstation version numbers are available at securedrop.org. <https://securedrop.org/>`__
+`The latest SecureDrop Inbox and SecureDrop version numbers are available at securedrop.org. <https://securedrop.org/>`__
 
 You can find the version number of the SecureDrop Inbox running on your workstation on the login screen when you open the Inbox.
 
@@ -255,7 +255,7 @@ your system is trying to use an old copy of the SecureDrop Release Signing Key. 
 ``apply_dom0`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``apply_dom0`` step applies any necessary configuration changes to the SecureDrop Workstation. If this step fails, this may indicate a misconfiguration, or it could be a result of download failures during the operation.
+The ``apply_dom0`` step applies any necessary configuration changes to the Workstation. If this step fails, this may indicate a misconfiguration, or it could be a result of download failures during the operation.
 
 We recommend first re-running the updater by double-clicking the SecureDrop desktop icon. This may resolve transient network issues.
 

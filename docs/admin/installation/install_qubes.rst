@@ -4,13 +4,13 @@ Install Qubes OS and SecureDrop packages
 Overview
 --------
 
-The initial steps for creating a :ref:`SecureDrop Workstations<glossary_securedrop_workstation>`, :ref:`Admin Workstations<glossary_admin_workstation>` are the same. First, you install Qubes OS on the laptop, then you install the SecureDrop Workstation packages. 
+The initial steps for creating the first :ref:`Journalist Workstation<glossary_securedrop_workstation>` and :ref:`Admin Workstation<glossary_admin_workstation>` are the same. First, you install Qubes OS on the laptop, then you install the SecureDrop packages. 
 
-During installation of or migration to SecureDrop Workstation, you will be performing these steps on either one laptop (to become a combined Admin + SecureDrop Workstation), or two laptops (to become distinct Admin and SecureDrop Workstations).
+During installation of SecureDrop, you will be performing these steps on either one laptop (to become a combined Admin + Journalist Workstation), or two laptops (to become distinct Admin and Journalist Workstations).
 
-If your target is two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptop. Before beginning, you should label each laptop with its desired end state (either Admin Workstation or SecureDrop Workstation) to eliminate the liklihood of a mix-up.
+If your target is two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptop. Before beginning, you should label each laptop with its desired end state (either Admin Workstation or Journalist Workstation) to eliminate the liklihood of a mix-up.
 
-If you plan to create additional Admin or SecureDrop Workstations, you will do so at a later time. 
+If you plan to create additional Admin or Journalist Workstations beyond the initial ones, you will do so using a different method at a later time. 
 
 The installation and configuration process for each laptop should take between 4 and 6 hours, including time spent waiting for downloads and updates.
 
@@ -47,7 +47,7 @@ SecureBoot is a feature available on most systems that, when enabled, does not a
 
 **SecureBoot must be disabled on the server and Workstation hardware.** SecureDrop installs a hardened, security-focused version of the Linux kernel (grsec) that does not support SecureBoot. If SecureBoot is enabled on either of the servers during the install, you will receive a pre-install error reminding you that it must be turned off before the installation can proceed.
 
-Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with SecureDrop Workstations.
+Likewise, SecureBoot is not fully supported by Qubes OS, and cannot be used with SecureDrop.
 
 For instructions on how to enable or disable the SecureBoot feature for your device, please consult the manufacturer's manual for BIOS settings, as they differ for each make and model.
 
@@ -64,7 +64,7 @@ To begin the Qubes installation, connect the Qubes installation drive you just c
 Follow the `installation documentation <https://www.qubes-os.org/doc/installation-guide/>`_ to install Qubes on your computer, ensuring that you:
 
 - Use English - United States as the setup language. (This requirement will be dropped in a future version).
-- Use all available storage space for the installation (as the computer should be dedicated to SecureDrop Workstation).
+- Use all available storage space for the installation (as the computer should be dedicated to SecureDrop).
 - Set a strong full disk encryption (FDE) passphrase - a 6-word Diceware passphrase is recommended.
 - Create an administrative account named ``user`` with a strong password.
 
@@ -107,7 +107,7 @@ Run the following command:
 
 After the command exits, confirm that you see an entry "Service: sys-usb" in the Qubes menu. If ``sys-usb`` is not running, you can start it with the command ``qvm-start sys-usb`` in ``dom0``. Once ``sys-usb`` is running, click the devices widget in the upper right panel to expand a listing of all devices detected by Qubes OS.
 
-Now, insert a safe USB device you intend to use with the SecureDrop Workstation. Click the devices widget again. Does the newly attached USB device appear in the list? If so, USB support is working and you can proceed with the installation. If you do encounter the error message "Denied qubes.InputKeyboard from sys-usb to dom0", you need to additionally enable USB keyboard support:
+Now, insert a safe USB device you intend to use with the laptop. Click the devices widget again. Does the newly attached USB device appear in the list? If so, USB support is working and you can proceed with the installation. If you do encounter the error message "Denied qubes.InputKeyboard from sys-usb to dom0", you need to additionally enable USB keyboard support:
 
 .. code-block:: sh
 
@@ -143,10 +143,10 @@ Congratulations! You have installed Qubes OS.
 
 .. _intall_securedrop_packages:
 
-Install SecureDrop Workstation packages
+Install SecureDrop packages
 ---------------------------------------
 
-Next, you will install the SecureDrop Workstations packages necessary to configure the laptop into a SecureDrop Workstation and/or Admin Workstation.
+Next, you will install the SecureDrop packages necessary to configure the laptop into a Journalist and/or Admin Workstation.
 
 First, you must configure the Qubes-Contrib repo:
 
@@ -159,7 +159,7 @@ First, you must configure the Qubes-Contrib repo:
   sudo qubes-dom0-update -y qubes-repo-contrib
   sudo qubes-dom0-update --clean -y securedrop-workstation-keyring
 
-3. The SecureDrop Release keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then then install the necessary SecureDrop Workstation packages and remove the Qubes-Contrib repo:
+3. The SecureDrop Release keyring will be installed on your machine. Wait 15 seconds for the key to be imported into the ``rpm`` database. Then then install the necessary SecureDrop packages and remove the Qubes-Contrib repo:
 
 .. code-block:: sh
 

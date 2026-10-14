@@ -5,7 +5,7 @@ SecureDrop for Journalists
 
 This guide presents an overview of the SecureDrop system for a Journalist. It covers the core functions necessary to start working with the platform: logging in securely, viewing messages, downloading and safely handling files, and interacting with Sources.
 
-Journalists will use a Qubes-based :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` running the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` application to read, print, and otherwise prepare files for publication. Apart from those deliberately published, decrypted files are never opened in an environment with direct access to the Internet
+Journalists will use a Qubes-based :ref:`Journalist Workstation<glossary_securedrop_workstation>` running the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` application to read, print, and otherwise prepare files for publication. Apart from those deliberately published, decrypted files are never opened in an environment with direct access to the Internet
 
 SecureDrop provides a number of benefits intended to protect Journalists. Communications through SecureDrop are encrypted in transit, so messages cannot be easily intercepted and read while they are moving across the Internet, and are also encrypted on the server so if any attacker manages to break into the server, they would not be able to read past messages.
 

@@ -1,9 +1,9 @@
-Backup and restore
-==================
+Backup and restore Workstations
+===============================
 
 Qubes OS has a `backup utility <https://www.qubes-os.org/doc/backup-restore/>`_ that allows for backup and restoration of user-specified qubes and templates.
 
-SecureDrop Workstation requires only that you back up instance-specific secrets and configuration files, although you can optionally back up some additional local data.
+SecureDrop requires only that you back up instance-specific secrets and configuration files, although you can optionally back up some additional local data.
 
 To perform backups, you will need:
 
@@ -33,15 +33,15 @@ If you have made customizations to ``dom0`` (for example, custom RPC policy file
   mkdir ~/etc-qubes && cp -r /etc/qubes ~/etc-qubes
   mkdir ~/etc-qubes-rpc && cp -r /etc/qubes-rpc ~/etc-qubes-rpc
 
-Back up a SecureDrop Workstation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Back up a Journalist or Admin Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
-  Backups contain sensitive data, and must be created and stored just as securely as SecureDrop Workstation itself.
+  Backups contain sensitive data, and must be created and stored just as securely as the laptops themselves.
 
   If performing this backup as part of a migration (from one machine to another or from one version of Qubes OS to another), we suggest you retain the backup only during the migration process, and destroy it after the migration is complete. The easiest way to do this is to create a LUKS-encrypted drive, follow this guide to create your backup, and then wipe (reformat) or destroy the drive after you have successfully restored it onto the new machine, which should ideally happen the same day. In all cases, follow your organization's internal policies on handling sensitive assets and information.
 
-  If you are looking to back up your own customized components of SecureDrop Workstation for long-term storage, we suggest taking that backup separately from the backup of SecureDrop Workstation components so that you can avoid proliferating copies of sensitive assets.
+  If you are looking to back up your own customized components of a Workstation for long-term storage, we suggest taking that backup of those custom components separately so that you can avoid proliferating copies of sensitive assets.
 
 Before starting your backup, decide whether you want to back up your data from ``sd-app``. If you skip this step, the first time you log in, all previous messages exchanged between Sources and Journalists, as well as any submitted files, will re-download from your SecureDrop server.
 
@@ -59,7 +59,7 @@ You do not need to back up the other ``sd-`` qubes.
 
 Click "Next", and in "Backup destination," specify the qube and directory corresponding to your storage medium's current mount point.
 
-Set a strong, unique backup passphrase (7-word diceware), and ensure this passphrase is stored securely outside SecureDrop Workstation.
+Set a strong, unique backup passphrase (7-word diceware), and ensure this passphrase is stored securely.
 
 .. note::
  This passphrase protects sensitive components of your SecureDrop instance, including the Submission Private Key, and unencrypted submissions (if ``sd-app`` is backed up). Ensure it is a very strong password and is stored securely.
@@ -77,7 +77,7 @@ Restore
 Reinstall Qubes OS
 ~~~~~~~~~~~~~~~~~~
 
-To restore SecureDrop Workstation, follow our :doc:`pre-install tasks </admin/installation/install_qubes>` to provision a Qubes OS system complete with updated base templates.
+To restore a Journalist or Admin Workstation, follow our :doc:`pre-install tasks </admin/installation/install_qubes>` to provision a Qubes OS system complete with updated base templates.
 
 Rename or delete redundant app qubes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,14 +86,14 @@ By default, Qubes OS will create the app qubes ``personal``, ``work``, ``untrust
 
 Example: If you wish to restore the ``vault`` qube, rename or delete the existing ``vault`` qube prior to restoring the backup. You can do so in |qubes_menu| **▸ Apps ▸ vault ▸ Settings** (the qube must not be running).
 
-Restore backup (SecureDrop Workstation components)
+Restore backup (SecureDrop components)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Plug in your backup medium and unlock it as during the backup. By default on a new system, your peripheral devices will be managed by a qube called ``sys-usb``.
 
 Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Restore Backup**, and enter the location of the backup file. You do not need to adjust the default Restore options, unless you have made customizations to the backup. Enter the decryption/verification passphrase, and proceed to restoring the available qubes (which should include ``dom0`` and possibly ``sd-app``).
 
-We suggest restoring only those qubes, provisioning SecureDrop Workstation, and then restoring any customized qubes you may have had once that process is complete. This way SecureDrop Workstation is provisioned on a clean system and can implement the security measures it requires before any additional qubes are configured.
+We suggest restoring only those qubes, provisioning SecureDrop, and then restoring any customized qubes you may have had once that process is complete. This way SecureDrop is provisioned on a clean system and can implement the security measures it requires before any additional qubes are configured.
 
 .. note::
   When migrating to a newer version of Qubes OS (for example, Qubes 4.1 to Qubes 4.2), you may notice that the original templates for certain qubes are not present on your new machine. For the purposes of this guide (optional ``sd-app`` backup), this is not a problem. Allow the qube to be restored with the default template suggested by the operating system (the current Fedora base template). **Do not start the qube.** Continue through the reinstallation process. The correct template will be configured as you follow the rest of these instructions.
@@ -106,8 +106,8 @@ We suggest restoring only those qubes, provisioning SecureDrop Workstation, and 
 
   More information can be found in the `upstream documentation <https://www.qubes-os.org/doc/upgrade/4.2/#clean-installation>`_. Contact Support with any questions.
 
-Reinstall SecureDrop Workstation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Reinstall SecureDrop
+~~~~~~~~~~~~~~~~~~~~
 
 If you do not already have a ``work`` qube, create it with default networking settings:
 
@@ -115,7 +115,7 @@ If you do not already have a ``work`` qube, create it with default networking se
 
   qvm-create -l blue work
 
-Then, download and verify the SecureDrop Workstation .rpm to the ``work`` qube and copy it to ``dom0``.
+Then, download and verify the SecureDrop .rpm to the ``work`` qube and copy it to ``dom0``.
 
 Once you have a valid .rpm file in ``dom0``, install the .rpm by running:
 
@@ -123,7 +123,7 @@ Once you have a valid .rpm file in ``dom0``, install the .rpm by running:
 
   sudo dnf install securedrop-workstation.rpm
 
-Retrieve the previous SecureDrop Workstation configuration from the backup folder on ``dom0``. From the ``dom0`` home directory:
+Retrieve the previous SecureDrop configuration from the backup folder on ``dom0``. From the ``dom0`` home directory:
 
 .. code-block:: sh
 
@@ -145,11 +145,13 @@ Verify that the configuration is valid:
 
 If the above command prints ``OK``, the configuration is valid.
 
-Reinstall SecureDrop Workstation:
+Reinstall SecureDrop:
 
 .. code-block:: sh
 
   sdw-admin --apply
+
+.. TODO for Admin / Journalist Workstation and securedrop-manage
 
 Restore additional keys to ``sd-gpg``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -164,7 +166,7 @@ In a ``dom0`` terminal:
 Restore customized qubes, RPC policies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-At this stage, you should have a functional SecureDrop Workstation. You may restore any additional customizations or additional qubes, being mindful that you are responsible for the security implications of customizing this system.
+At this stage, you should have a functional Workstation of the desired type. You may restore any additional customizations or additional qubes, being mindful that you are responsible for the security implications of customizing this system.
 
 Customizations in ``dom0`` must be restored manually, meaning that any RPC policies you have added will need to be moved into place from the ``$RESTORE_DIR``.
 
@@ -173,6 +175,8 @@ Once you are finished with the ``$RESTORE_DIR`` and have verified that your syst
 (Post-migration instructions) Destroy backup medium
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wipe (reformat) the LUKS-encrypted storage device that you used to store SecureDrop Workstation configuration material, overwriting the LUKS header and all data with a new encrypted partition, or physically destroy the backup medium, to ensure you are not proliferating copies of sensitive data.
+Wipe (reformat) the LUKS-encrypted storage device that you used to store the SecureDrop configuration material.
+
+.. include:: /includes/destroy_usb.txt
 
 

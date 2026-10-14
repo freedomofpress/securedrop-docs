@@ -14,7 +14,7 @@ For an installation of SecureDrop, you must acquire:
 
 * 2 computers (with storage drives) to use as the SecureDrop servers.
 * A mouse, keyboard, and monitor (along with any necessary dongles or adapters) for installing the servers.
-* At least 1 dedicated physical laptop to use an Admin + SecureDrop Workstation.
+* At least 1 dedicated physical laptop, for a combined Admin + Journalist Workstation.
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
 * At least 1 USB flash drive for OS installation media, and at least 1 more USB flash drive if needed as an Export Device.
@@ -23,11 +23,11 @@ For an installation of SecureDrop, you must acquire:
 
 Additionally, you may want to consider the following purchases:
 
-* a printer without wireless network support, to use in combination with the SecureDrop Workstation.
+* a printer without wireless network support, to use in combination with the Journalist.
 * an external hard drive for server backups.
-* a USB flash drive to store backups of your SecureDrop Workstation.
+* a USB flash drive to store backups of your laptops.
 * a security key for HOTP authentication, such as a YubiKey, if you want to use hardware-based two-factor authentication instead of a mobile app.
-* a USB flash drive with a physical write protection switch, or a USB write blocker, if you want to mitigate the risk of introducing malware from your network to your SecureDrop Workstation during repeated use of an Export Device.
+* a USB flash drive with a physical write protection switch, or a USB write blocker, if you want to mitigate the risk of introducing malware from your network to your Journalist Workstation during repeated use of an Export Device.
 
 .. tip::
 
@@ -66,11 +66,11 @@ Workstations
 
 .. _hardware_workstations_overview:
 
-Each Admin or SecureDrop Workstation requires a Qubes-compatible computer with the following specifications:
+Each Admin or Journalist Workstation requires a Qubes-compatible computer with the following specifications:
 
 - 64-bit Intel processor with virtualization support
 - a minimum of 32GB RAM
-- sufficient disk space for the Qubes OS base install and SecureDrop Workstation (a 128GB or greater SSD is recommended)
+- sufficient disk space for the Qubes OS base install and SecureDrop software (a 128GB or greater SSD is recommended)
 
 We recommend against a device that requires an external USB keyboard or other externally-connected devices, for security reasons. In practice this usually means that you should use a Qubes-compatible laptop. Not all laptops support Qubes, and some may require additional customization. We recommend (in order) either a Qubes-certified laptop, one of the laptop models we use for development and testing, or a computer from the community-maintained Qubes Hardware compatibility list. See our :ref:`specific laptop recommendations <hardware_recommendations_workstations>` for more detail on each of these options.
 
@@ -101,7 +101,7 @@ USB flash drives
 
 Journalists need physical media (known as the Export Device) to export files or conversation transcripts to their everyday workstation.
 
-Our recommendation is to use USB flash drives, in combination with volume-level encryption and careful data hygiene. We also urge the use of a secure printer or similar analog conversions to export documents from the SecureDrop Workstation, whenever possible.
+Our recommendation is to use USB flash drives, in combination with volume-level encryption and careful data hygiene. We also urge the use of a secure printer or similar analog conversions to export documents from the Journalist Workstation, whenever possible.
 
 You may want to consider enforcing write protection on USB flash drives when only read access is needed. The two main options to achieve write protection of USB flash drives are:
 
@@ -114,7 +114,7 @@ It is especially advisable to enable write protection before attaching an Export
 
 Please review our :doc:`setup guide </admin/deployment/provisioning_usb>` for additional background on setting up Export Devices.
 
-We also recommend buying an additional USB flash drive for making regular backups of your SecureDrop Workstations.
+We also recommend buying an additional USB flash drive for making regular backups of your SecureDrop laptops.
 
 One thing to consider is that you are going to have *a lot* of USB flash drives to keep track of, so you should consider how you will label or identify them and buy drives accordingly. Drives that are physically larger are often easier to label (e.g. with tape, printed sticker or a label from a labelmaker).
 
@@ -133,7 +133,7 @@ Printers
 
 .. _hardware_printers_overview:
 
-There are several requirements for a printer to be compatible with SecureDrop Workstation. Your printer should:
+There are several requirements for a printer to be compatible with SecureDrop. Your printer should:
 
 1. Support **driverless printing** standards
 2. Have a **USB port**
@@ -144,7 +144,7 @@ These requirements are expanded below.
 Driverless
 ~~~~~~~~~~
 
-SecureDrop Workstation implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
+SecureDrop implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
 
 .. figure:: ../workstation_reference/images/airprint.jpg
 
@@ -155,7 +155,7 @@ You may consult Apple's `list of printers that support AirPrint <https://support
 USB ports
 ~~~~~~~~~
 
-SecureDrop Workstation only supports printing over USB, so ensure the printer you select has a **USB port**.
+SecureDrop only supports printing over USB, so ensure the printer you select has a **USB port**.
 
 .. note::
   In rare cases, an AirPrint or Moipra-compatible printer with a USB port may not actually support IPP-over-USB, which is required for SecureDrop to use the printer. Check with the manufacturer if in doubt. 
@@ -163,11 +163,11 @@ SecureDrop Workstation only supports printing over USB, so ensure the printer yo
 Offline
 ~~~~~~~
 
-To maintain the isolation of SecureDrop Workstation, it is essential that your printer not be shared with other computers and networks.
+To maintain the isolation of SecureDrop, it is essential that your printer not be shared with other computers and networks.
 
 * Select a compatible printer with **no WiFi**. A printer that connects with USB only is best if you can find one, but compatible USB printers lacking *both* Ethernet and WiFi are rare.
 * In the case of a printer with Ethernet and/or WiFi, **keep the printer offline** and **disabling WiFi** (if present).
-* Use this printer exclusively with SecureDrop Workstation and do not connect it directly to other computers.
+* Use this printer exclusively with SecureDrop and do not connect it directly to other computers.
 
 .. _hardware_printers_overview_end:
 
