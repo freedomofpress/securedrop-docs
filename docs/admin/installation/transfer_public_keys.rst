@@ -29,7 +29,7 @@ Importing the Submission Public Key to ``sd-admin`` from another SecureDrop Work
 Copy email alert public keys
 ----------------------------
 
-SecureDrop sends different email alerts which are encrypted to a private key associated with specific recipient email addresses, as outline :doc:`here<email_alerts>`.
+SecureDrop sends different email alerts which are encrypted to a private key associated with specific recipient email addresses, as outlined :doc:`here<email_alerts>`.
 
 Before proceeding, you will need to transfer the public keys for the email addresses which will receive the OSSEC and optional Daily Journalist Alerts to ``~/.config/securedrop-admin`` in the ``sd-admin`` qube on the Admin Workstation.
 
