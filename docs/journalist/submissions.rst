@@ -18,19 +18,19 @@ Once the file has been downloaded and decrypted, the filename will be visible, a
 
 |screenshot_file_download_successful|
 
-Viewing submitted files on the SecureDrop Workstation
+Viewing submitted files on the Journalist Workstation
 -----------------------------------------------------
 
 To view a downloaded file, click its filename. This will open the file in a temporary environment, called a "disposable" qube. The file you clicked on will open in a new window with a different colored border and a window title prefixed with "disp" (meaning disposable).
 
 |screenshot_dispvm|
 
-This disposable qube is a special isolated environment; it does not have internet access, and isolates the files that you are viewing from other sensitive files and applications on the SecureDrop Workstation.
+This disposable qube is a special isolated environment; it does not have internet access, and isolates the files that you are viewing from other sensitive files and applications on the Journalist Workstation.
 
 Supported filetypes
 ~~~~~~~~~~~~~~~~~~~
 
-The following filetypes are currently supported for viewing on the SecureDrop Workstation:
+The following filetypes are currently supported for viewing on the Journalist Workstation:
 
 * .txt, .csv, .pdf
 * Microsoft Office files (.doc, .docx, .xls, .xlsx, .ppt, .pptx)
@@ -55,14 +55,14 @@ To print a document, a :doc:`compatible printer <../admin/installation/hardware>
 2. You will prompted to attach your printer.
 3. A **Print Document** dialog will appear, from which you can configure different print options before printing the document.
 
-Exporting files from the SecureDrop Workstation
+Exporting files from the Journalist Workstation
 -------------------------------------------------------
 
 .. important::
 
    SecureDrop does not scan for or remove malware. If the file you received contains malware targeting the operating system and applications running on your everyday workstation, copying it in its original form carries the risk of spreading malware to that computer. Make sure you understand the risks, and consider other methods to export the file (e.g., printings documents).
 
-If you must copy a file from your SecureDrop Workstation to another computer or device in digital form, our :doc:`recommendation </admin/deployment/provisioning_usb>` is that Journalists are provided with an Export Device, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__. These instructions assume that you are following the recommended workflow. If you are unsure, ask your Administrator.
+If you must copy a file from your Journalist Workstation to another computer or device in digital form, our :doc:`recommendation </admin/deployment/provisioning_usb>` is that Journalists are provided with an Export Device, drive which is encrypted using LUKS or `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__. These instructions assume that you are following the recommended workflow. If you are unsure, ask your Administrator.
 
 Exporting to an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -122,7 +122,7 @@ Securely erasing an Export Device can only be done by re-formatting and re-encry
 
 You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
 
-Safely working with submitted files outside the SecureDrop Workstation
+Safely working with submitted files outside the Journalist Workstation
 ----------------------------------------------------------------------
 
 .. _malware_risks:
@@ -132,8 +132,8 @@ Risks from malware
 
 SecureDrop does not scan for or remove malware in files you receive. There are important steps you can take to protect yourself:
 
-1. **Keep your SecureDrop Workstation up-to-date.**
-2. **Print documents from the SecureDrop Workstation instead of exporting them digitally, whenever possible.**
+1. **Keep your Journalist Workstation up-to-date.**
+2. **Print documents from the Journalist Workstation instead of exporting them digitally, whenever possible.**
 
    Printing documents prevents the proliferation of malware to your everyday workstation, and eliminates most categories of embedded metadata. Note that printing a document may still preserve watermarks, printer codes, steganographically encoded data, or other information not visible to the naked eye.
 3. **Consult with your Administrator or your digital security staff before copying files digitally.**
