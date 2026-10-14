@@ -110,12 +110,12 @@ It is **critical** that you destroy this worksheet when your installation is com
 Installation support
 --------------------
 
-Any organization can install SecureDrop for free and also make modifications because the project is open source.
+SecureDrop is open-source software. Therefore, any organization and install it for free.
 
-Because the installation and operation are complex, and because SecureDrop can only be as secure as the  operational security practices followed by its users, Freedom of the Press Foundation will also help  organizations install SecureDrop and train *Journalists* and administrators.
+Because the installation and operation are complex, and because SecureDrop can only be as secure as the  operational security practices followed by its users, Freedom of the Press Foundation will also help  organizations install SecureDrop and train Journalists and Administrators.
 
-If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us. We do ask news organizations that can afford to pay for installation support, training and maintenance to do so.
+If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us. We ask news organizations that can afford to pay for installation support, training, and maintenance to do so.
 
-As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train *Journalists* to use it. (For  pro-bono support, we request that our travel costs are covered.)
+As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train Journalists to use it. (For  pro-bono support, we request that our travel costs are covered.)
 
 .. include:: ../../includes/provide-feedback.txt

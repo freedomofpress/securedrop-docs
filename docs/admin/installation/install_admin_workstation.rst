@@ -1,7 +1,7 @@
 Install Admin Workstation
 =========================
 
-This step will configure a Qubes OS laptop to serve as a Admin Workstation. In the last step, you :doc:`generated your Submission Key</admin/installation/generate_submission_key>` on a laptop that will become a SecureDrop Workstation. You should perform this step on the same laptop *only* if you intend to create a combined Admin + SecureDrop Workstation that will be shared by Administrators and Journalists. Otherwise, you should use a second laptop upon which you have only installed :doc:`Qubes OS and the SecureDrop packages</admin/installation/install_qubes>`.
+This step will configure a Qubes OS laptop to serve as an Admin Workstation. In the last step, you :doc:`generated your Submission Key</admin/installation/generate_submission_key>` on a laptop that will become a SecureDrop Workstation. You should perform this step on the same laptop *only* if you intend to create a combined Admin + SecureDrop Workstation that will be shared by Administrators and Journalists. Otherwise, you should use a second laptop upon which you have only installed :doc:`Qubes OS and the SecureDrop packages</admin/installation/install_qubes>`.
 
 .. _install_admin_workstation:
 

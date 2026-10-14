@@ -134,6 +134,7 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/installation/firewall_opnsense
    admin/installation/prepare_servers
    admin/installation/install_servers
+   admin/installation/apply_admin_workstation
    admin/installation/create_admin_account
    admin/installation/install_sdw
    admin/installation/test_the_installation

@@ -3,9 +3,9 @@ Migrate Journalist Workstation from Tails
 
 These steps will create a new SecureDrop Workstation from your existing Tails Journalist Workstation USB flash drive. 
 
-Perform these steps on a laptop where you have freshly :doc:`installed Qubes OS and the SecureDrop packages</admin/migration/migrate_install_qubes>` to create a new standalone SecureDrop Workstation.
+Typically you will perform these steps on a laptop where you have freshly :doc:`installed Qubes OS and the SecureDrop packages</admin/migration/migrate_install_qubes>` to create a new standalone SecureDrop Workstation.
 
-Perform these steps on an existing Admin Workstation laptop to turn it into a combined Admin + SecureDrop Workstation.
+Alternatively, you may perform these steps on an :doc:`existing Admin Workstation</admin/migration/admin_migration>` laptop to turn it into a combined Admin + SecureDrop Workstation.
 
 Import Submission Private Key
 -----------------------------
