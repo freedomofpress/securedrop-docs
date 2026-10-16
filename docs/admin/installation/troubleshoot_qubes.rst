@@ -19,6 +19,7 @@ Open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other 
 This will return the two devices (Ethernet and WiFi) that are connected to ``sys-net``:
 
 .. code-block:: sh
+  :class: no-copybutton
 
   BACKEND:DEVID  DESCRIPTION                                                            USED BY
   dom0:00_14.3   Network controller: Intel Corporation                                  sys-net
@@ -46,6 +47,7 @@ A `known issue <https://github.com/QubesOS/qubes-issues/issues/8825>`_ with some
 When you boot up, you will see a black-and-white menu with the following options:
 
 .. code-block:: text
+  :class: no-copybutton
 
   Qubes, with Xen hypervisor
   Advanced options for Qubes (with Xen hypervisor)

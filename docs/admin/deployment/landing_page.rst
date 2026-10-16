@@ -49,7 +49,7 @@ You can use a separate computer you've designated specifically to handle the sub
 
 A file contains valuable `metadata <https://ssd.eff.org/en/module/why-metadata-matters>`_ about its source — when it was created and downloaded, what machine was involved, the machine's owner, etc. You can scrub metadata from some files prior to submission using the Metadata Anonymization Toolkit featured in Tails.
 
-Your online behavior can be extremely revealing. Regularly monitoring our publication's social media or website can potentially flag you as a source. Take great care to think about what your online behavior might reveal, and consider using Tor Browser to mitigate such monitoring.
+Your online behavior can be extremely revealing. Regularly monitoring our publication's social media or website can potentially flag you as a source. Your activity on other websites or apps may also be used to identify you. Avoid using any service linked to your identity, such as AI chatbots or search engines when logged in, while preparing to contact us or while whistleblowing, as your prompt and search histories may be used against you. Take great care to think about what your online behavior might reveal. If possible, use Tor Browser for all whistleblowing-related activity to protect your anonymity.
 
 Our organization retains strict access control over our SecureDrop project. A select few journalists within our organization will have access to the messages and files you have sent via SecureDrop. We control the servers that store this data, so no third party has direct access to the metadata or content of what you send us.
 
@@ -64,15 +64,24 @@ The SecureDrop directory
 
 SecureDrop `maintains a directory of instances that meet our strict guidelines. <https://securedrop.org/directory/>`__ If you would like to be considered for inclusion in this directory, make sure your Landing Page features the necessary items from the sample above, and is in compliance with the technical requirements below, then `send us a request using this form. <https://securedrop.org/directory/submit/>`__
 
-There are several benefits to being included in the SecureDrop directory. The most significant benefit is that it will be easier for potential Sources to find your SecureDrop instance. Additionally, being included in the directory makes you eligible for :doc:`an onion name. <onion_name>` This improves the experience by turning a lengthy, non-descriptive address into one that is short and memorable. For example, a long onion address might look like: ::
+There are several benefits to being included in the SecureDrop directory. The most significant benefit is that it will be easier for potential Sources to find your SecureDrop instance. Additionally, being included in the directory makes you eligible for :doc:`an onion name. <onion_name>` This improves the experience by turning a lengthy, non-descriptive address into one that is short and memorable. For example, a long onion address might look like:
 
-    sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion
+.. code-block:: text
+   :class: no-copybutton
 
-whereas the shorter onion name might look like: ::
+   sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion
+
+whereas the shorter onion name might look like: 
+
+.. code-block:: text
+   :class: no-copybutton
 
     nyworld.securedrop.tor.onion
 
-If you wish to receive an onion name, one can be provided during the instance verification process. The format for short onion addresses is: ::
+If you wish to receive an onion name, one can be provided during the instance verification process. The format for short onion addresses is:
+
+.. code-block:: text
+   :class: no-copybutton
 
     organization.securedrop.tor.onion
 
