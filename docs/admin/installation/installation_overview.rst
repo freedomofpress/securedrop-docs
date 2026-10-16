@@ -105,7 +105,7 @@ It is **critical** that you destroy this worksheet when your installation is com
 Installation support
 --------------------
 
-SecureDrop is open-source software. Therefore, any organization and install it for free.
+SecureDrop is open-source software. Therefore, any organization can install it for free.
 
 Because the installation and operation are complex, and because SecureDrop can only be as secure as the  operational security practices followed by its users, Freedom of the Press Foundation will also help  organizations install SecureDrop and train Journalists and Administrators.
 
