@@ -11,9 +11,15 @@ To perform backups, you will need:
 - a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/reference/provisioning_usb.html>`_ USB flash or external hard drive (of sufficient size, if backing up additional local data)
 - a secure place to store backup credentials (such as a password manager on your primary laptop)
 
-SecureDrop Workstation requires only that you back up instance-specific secrets and configuration files, although you can optionally back up some additional local data.
+Backup
+------
 
-When backing up SecureDrop Workstation, there are three distinct sets of data you can back up:
+.. _backup_journalist_workstation:
+
+Back up a Journalist Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When backing up Journalist Workstation, there are four distinct sets of data you can back up:
 
 #. The Submission Private Key and SecureDrop Workstation config in ``dom0`` (required)
 #. The messages and files from SecureDrop Inbox stored in ``sd-app`` (optional)
@@ -22,18 +28,13 @@ When backing up SecureDrop Workstation, there are three distinct sets of data yo
    
    This option is only recommended when performing a migration to a new SecureDrop Workstation installation (not for long-term storage).
 
+#. The KeePassXC database containing Journalist credentials for accessing SecureDrop stored in ``sd-journalist-vault``
+
 #. Other customizations beyond the standard SecureDrop Workstation configuration provided by Freedom of the Press Foundation (optional)
 
    These may include additional qubes and their templates, custom RPC policies, etc.
    
    If you have additional customizations you wish to back up, we suggest capturing that as a separate backup without the Submission Private Key, SecureDrop Workstation config file, or any messages and files from SecureDrop Inbox so that you can avoid proliferating copies of sensitive assets.
-
-
-Backup
-------  
-
-Back up a Journalist Workstation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
    Before starting your backup, decide whether you want to back up your data from ``sd-app``, noting the caveats listed above. 
@@ -68,13 +69,14 @@ Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup 
 To target a qube for backup, highlight it and move it into the **Selected** column by pressing the ``>`` button. Select:
 
 - ``dom0``
+- ``sd-journalist-vault``
 - the ``sd-app`` qube (optional)
 - any customized qubes that you may wish to preserve, and their templates (optional)
 
 If your Journalist Workstation also functions as an Admin Workstation, make sure to also select:
 
 - the ``sd-admin`` qube
-- the ``sd-vault`` qube
+- the ``sd-admin-vault`` qube
 
 You do not need to back up the other ``sd-`` qubes.
 
@@ -107,9 +109,14 @@ Ensure your storage medium is plugged in, attached to ``sd-devices``, and unlock
 
 Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup Qubes**, and move all qubes from **Selected** to **Available** by pressing the ``<<`` button.
 
-Highlight the ``sd-admin`` and ``sd-vault`` qubes, then move them into the **Selected** column by pressing the ``>`` button. You do not need to back up the other ``sd-`` qubes.
+Highlight the ``sd-admin`` and ``sd-admin-vault`` qubes, then move them into the **Selected** column by pressing the ``>`` button. You do not need to back up the other ``sd-`` qubes.
 
 Click **Next**, then select the backup destination, set the encryption passphrase, and uncheck **save backup profile** as described previously in :ref:`Perform the backup <perform_backup_sdw>`, then proceed with the backup.
+
+Backing up a combined Admin + Journalist Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To backup a combined Admin + Journalist Workstation, follow the :ref:`steps to back up a Journalist Workstation<backup_journalist_workstation>`, and include the ``sd-admin`` and ``sd-admin-vault`` qubes when selecting which qubes to back up. 
 
 Verify the backup
 ~~~~~~~~~~~~~~~~~
@@ -119,8 +126,6 @@ Qubes OS recommends verifying the integrity of the backup once the backup comple
 .. warning::
   Any files or data not mentioned above and not backed up elsewhere are at risk of being lost or destroyed. Ensure that any other data on your system (for example, using KeepassXC in the ``vault`` qube, or data stored in other qubes) have been backed up and the integrity of the backup has been verified.
  
-  
-
 Restore
 -------
 
@@ -137,7 +142,7 @@ By default, Qubes OS will create the app qubes ``personal``, ``work``, ``untrust
 Example: If you wish to restore the ``vault`` qube, rename or delete the existing ``vault`` qube prior to restoring the backup. You can do so in |qubes_menu| **▸ Apps ▸ vault ▸ Settings** (the qube must not be running).
 
 Restore backup (SecureDrop components)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
    If you are migrating from one machine to another or from one version of Qubes OS to another, we suggest you wipe (reformat) or destroy the drive after you have successfully restored it onto the new machine (which should ideally happen the same day). In all cases, follow your organization's internal policies on handling sensitive assets and information.
@@ -149,12 +154,13 @@ Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Restore
 If you are restoring a Journalist Workstation, you should ensure you restore:
 
 - ``dom0``
+- ``sd-journalist-vault``
 - ``sd-app`` (optional)
 
 If you are restoring an Admin Workstation, you should ensure you restore:
 
 - ``sd-admin``
-- ``sd-vault``
+- ``sd--admin-vault``
 
 If you are using a combination Journalist and Admin Workstation, restore all items listed above.
 
@@ -171,8 +177,10 @@ We suggest restoring only those qubes, provisioning SecureDrop, and then restori
 
   More information can be found in the `upstream documentation <https://www.qubes-os.org/doc/upgrade/4.2/#clean-installation>`_. Contact Support with any questions.
 
-Reinstall SecureDrop
-~~~~~~~~~~~~~~~~~~~~
+Re-apply Journalist Workstation installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you are restoring a Journalist Workstation, or a combined Admin + Journalist Workstation, you need to reinstall the additional Journalist Workstation components.
 
 Retrieve the previous SecureDrop Workstation configuration from the backup folder on ``dom0``. From the ``dom0`` home directory:
 
@@ -192,7 +200,7 @@ Verify that the configuration is valid:
 
 .. code-block:: sh
 
-   sdw-admin --validate
+   securedrop-manage --validate --target journalist
 
 If the above command prints ``OK``, the configuration is valid.
 
@@ -200,9 +208,7 @@ Reinstall SecureDrop:
 
 .. code-block:: sh
 
-   sdw-admin --apply
-
-.. TODO for Admin / Journalist Workstation and securedrop-manage
+   securedrop-manage --apply target journalist
 
 Restore additional keys to ``sd-gpg``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -213,6 +219,15 @@ If you are using a Journalist Workstation and have multiple Submission Keys, per
 
    qvm-copy-to-vm sd-gpg $RESTORE_DIR/securedrop-workstation-dom0-config/sd-keys.asc
    qvm-run sd-gpg 'gpg --import /home/user/QubesIncoming/dom0/sd-keys.asc'
+
+Re-apply Admin Workstation installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you are restoring an Admin Workstation, or a combined Admin + Journalist Workstation, you need to reinstall the additional Admin Workstation components.
+
+.. code-block:: sh
+
+   securedrop-manage --apply --target admin
 
 Restore customized qubes, RPC policies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

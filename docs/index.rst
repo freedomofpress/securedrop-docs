@@ -199,8 +199,8 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/workstation_reference/workstation_updates
    admin/maintenance/logging
    admin/maintenance/troubleshooting_connection
-   admin/maintenance/backup_and_restore
-   admin/workstation_reference/backup
+   admin/maintenance/backup_servers
+   admin/maintenance/backup_workstations
    admin/maintenance/rebuild_admin
    admin/maintenance/bios_server
    admin/maintenance/decommission

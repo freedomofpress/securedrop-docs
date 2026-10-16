@@ -11,7 +11,7 @@ Using ``securedrop-admin``
 The ``securedrop-admin`` command-line utility is used on an :ref:`Admin Workstation<glossary_admin_workstation>` to perform common server administration tasks, including:
 
 * configuring and installing SecureDrop
-* backing up and restoring the Servers (see :doc:`../maintenance/backup_and_restore`)
+* backing up and restoring the Servers (see :doc:`/admin/maintenance/backup_servers`)
 * retrieving server logs for troubleshooting (see :doc:`../maintenance/logging`)
 * updating your SecureDrop Servers' configuration post-install.
 
