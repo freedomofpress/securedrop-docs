@@ -26,7 +26,7 @@ In the new SecureDrop, every workstation is a laptop running the `Qubes <https:/
 
 The :ref:`Admin Workstation<glossary_admin_workstation>` is used by Administrators. It is configured with the tools and credentials needed to administer and install SecureDrop servers. 
 
-The :ref:`Journalist Workstation<glossary_securedrop_workstation>` is used by Journalists. It has :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` installed and configured to connect to your SecureDrop server.
+The :ref:`Journalist Workstation<glossary_journalist_workstation>` is used by Journalists. It has :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` installed and configured to connect to your SecureDrop server.
 
 Typically, the Admin Workstation and Journalist Workstation will be different laptops used by different people (Administrations and Journalists, respectively). However, a single laptop can serve as a *combined* Admin + Journalist Workstation. This configuration accommodates small or cash-strapped newsrooms, where only a single laptop is shared between Administrators and Journalists, or where a single individual fills both roles. 
 

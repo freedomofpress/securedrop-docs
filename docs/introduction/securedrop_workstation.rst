@@ -4,7 +4,7 @@ SecureDrop Workstation and Qubes OS
 What is SecureDrop Workstation?
 -------------------------------
 
-A :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` is a laptop used by a :ref:`Journalist<glossary_journalist>` to connect to a SecureDrop instance and securely view and reply to messages files submitted by :ref:`Sources<glossary_source>`. The SecureDrop Workstation is based on Qubes OS and it consists of several different isolated virtual machines (called "qubes"), so that everything a Journalist needs to use SecureDrop resides on one computer.
+A :ref:`SecureDrop Workstation<glossary_journalist_workstation>` is a laptop used by a :ref:`Journalist<glossary_journalist>` to connect to a SecureDrop instance and securely view and reply to messages files submitted by :ref:`Sources<glossary_source>`. The SecureDrop Workstation is based on Qubes OS and it consists of several different isolated virtual machines (called "qubes"), so that everything a Journalist needs to use SecureDrop resides on one computer.
 
 Encryption and decryption happen seamlessly using a network-isolated qube that holds the SecureDrop :ref:`Submission Private Key<glossary_submission_key>`. Files submitted by Sources can be viewed securely on the same machine thanks to a `feature of Qubes`_ that creates temporary "disposable" qubes in which to view untrusted content without exposing the rest of the system to that content.
 

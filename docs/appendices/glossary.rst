@@ -113,7 +113,7 @@ SecureDrop Inbox is the central application on a Journalist Workstation. It allo
 
 Instructions for using SecureDrop Inbox appear in our :doc:`Journalist Guide </journalist/journalist>`.
 
-.. _glossary_securedrop_workstation:
+.. _glossary_journalist_workstation:
 
 Journalist Workstation
 ----------------------

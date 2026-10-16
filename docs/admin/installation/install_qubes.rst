@@ -4,7 +4,7 @@ Install Qubes OS and SecureDrop packages
 Overview
 --------
 
-The initial steps for creating the first :ref:`Journalist Workstation<glossary_securedrop_workstation>` and :ref:`Admin Workstation<glossary_admin_workstation>` are the same. First, you install Qubes OS on the laptop, then you install the SecureDrop packages. 
+The initial steps for creating the first :ref:`Journalist Workstation<glossary_journalist_workstation>` and :ref:`Admin Workstation<glossary_admin_workstation>` are the same. First, you install Qubes OS on the laptop, then you install the SecureDrop packages. 
 
 During installation of SecureDrop, you will be performing these steps on either one laptop (to become a combined Admin + Journalist Workstation), or two laptops (to become distinct Admin and Journalist Workstations).
 
