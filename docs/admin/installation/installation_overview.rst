@@ -18,19 +18,19 @@ Planning your installation
 SecureDrop requires several different pieces of hardware, outlined below. 
 
 Workstations
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 .. _install_overview_workstations:
 
 In the new SecureDrop, every workstation is a laptop running the `Qubes <https://www.qubes-os.org>`__ operating system with additional software and configurations depending on which roles they will fill.
 
-The :ref:`Admin Workstation<glossary_admin_workstation>` is used by Administrators. It is configured with the tools and credentials needed to administer and install SecureDrop servers. 
+The :ref:`Admin Workstation<glossary_admin_workstation>` is used by Administrators. It is configured with the tools and credentials needed to administer and install SecureDrop Servers. 
 
-The :ref:`Journalist Workstation<glossary_journalist_workstation>` is used by Journalists. It has :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` installed and configured to connect to your SecureDrop server.
+The :ref:`Journalist Workstation<glossary_journalist_workstation>` is used by Journalists. It has :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` installed and configured to connect to your SecureDrop Server.
 
 Typically, the Admin Workstation and Journalist Workstation will be different laptops used by different people (Administrations and Journalists, respectively). However, a single laptop can serve as a *combined* Admin + Journalist Workstation. This configuration accommodates small or cash-strapped newsrooms, where only a single laptop is shared between Administrators and Journalists, or where a single individual fills both roles. 
 
-For an initial installation of SecureDrop, you will set up either one Admin Workstation and one Journalist Workstation, or a single combined Admin + Journalist Workstation.
+For the initial installation of SecureDrop, you will set up either one Admin Workstation and one Journalist Workstation, or a single combined Admin + Journalist Workstation.
 
 After the initial installation is complete, you may add additional laptops of any type as needed for your organization.
 
@@ -41,9 +41,9 @@ Servers
 
 SecureDrop requires two paired physical servers that are installed at a premise controlled by your organization. These servers run the Ubuntu operating system.
 
-The :ref:`Application Server<glossary_application_server>` runs the SecureDrop server application, providing the :ref:`Source Interface<glossary_source_interface>`, :ref:`Admin Interface<glossary_admin_interface>`, and the API endpoint used by SecureDrop Inbox to sync messages between Sources and Journalists.
+The :ref:`Application Server<glossary_application_server>` runs the SecureDrop Server application, providing the :ref:`Source Interface<glossary_source_interface>`, :ref:`Admin Interface<glossary_admin_interface>`, and the API endpoint used by SecureDrop Inbox to sync messages between Sources and Journalists.
 
-The :ref:`Monitor Server <glossary_monitor_server>` monitors the Application server with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
+The :ref:`Monitor Server <glossary_monitor_server>` monitors the Application Server with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
 
 Finally, a physical hardware Network Firewall is required to securely manage the connection between the Application and Monitor Servers and their connection to the internet. 
 
@@ -52,19 +52,19 @@ Minimum security requirements
 
 SecureDrop is a technical tool. It is designed to protect Journalists and Sources, but no tool can guarantee safety. There are a number of security requirements for the usage of SecureDrop's components, which should be considered when planning your installation.
 
-Minimum security requirements for servers
+Minimum security requirements for Servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The SecureDrop servers handle all messages and files exchanged between Journalists and Sources. It is of the utmost importance that the SecureDrop servers are housed somewhere physically secure to prevent tampering and access by unauthorized parties.
+The SecureDrop Servers handle all messages and files exchanged between Journalists and Sources. It is of the utmost importance that the SecureDrop Servers are housed somewhere physically secure to prevent tampering and access by unauthorized parties.
 
 - The Application and Monitor Servers should be dedicated physical machines, not virtual machines, :ref:`nor hosted on cloud servers<faq_physically_hosted>`.
-- A trusted location to host the servers. The servers should be hosted in a location that is owned or occupied by the organization to ensure that their legal department can not be bypassed with gag orders.
-- The SecureDrop servers should be on a separate internet connection or completely segmented from the corporate network, such as a dedicated subnet with DENY rules for all traffic to and from the corporate LAN.
+- A trusted location to host the Servers. The Servers should be hosted in a location that is owned or occupied by the organization to ensure that their legal department can not be bypassed with gag orders.
+- The SecureDrop Servers should be on a separate internet connection or completely segmented from the corporate network, such as a dedicated subnet with DENY rules for all traffic to and from the corporate LAN.
 - All traffic from the corporate network should be blocked at the SecureDrop's point of demarcation.
 - Video monitoring should be recorded of the server area and the organization's safe.
 - An established monitoring plan and incident response plan. Who will receive the OSSEC alerts and what will their response plan be? These should cover technical outages and a compromised environment plan.
 
-Minimum security requirements for workstations
+Minimum security requirements for Workstations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Every Admin and Journalist Workstation contains sensitive credentials and information related to your SecureDrop, such as SSH keys, the :ref:`Private Submission Key<glossary_submission_key>`, and copies of messages and files exchanged between Journalists and Sources. Therefore, it's critical to ensure that appropriate security practices are applied to every Admin and Journalist Workstation.
@@ -78,23 +78,18 @@ Summary of installation tasks
 
 #. Acquire compatible hardware.
 #. Prepare email accounts and GPG keys for alert emails.
-#. Install Qubes OS and SecureDrop packages on workstations.
+#. Install Qubes OS and SecureDrop packages on Workstations.
 #. Generate the Submission Key.
 #. Prepare the Admin Workstation.
 #. Set up the KeePassXC password manager on the Admin Workstation.
 #. Install and configure the dedicated network firewall from the Admin Workstation.
-#. Prepare the (Application and Monitor) servers.
-#. Install SecureDrop on the servers from the Admin Workstation.
+#. Prepare the (Application and Monitor) Servers.
+#. Install SecureDrop on the Servers from the Admin Workstation.
 #. Apply the Admin Workstation configuration.
 #. Create the first Administrator user.
-#. Create an Export Device.
 #. Install Journalist Workstation.
 #. Test the installation.
 #. Troubleshoot any issues that occurred during installation.
-
-Optionally:
-
-#. Prepare additional Journalist Workstations for use by Journalists.
 
 Tracking your progress
 ----------------------

@@ -1,19 +1,19 @@
 Transfer public keys to Admin Workstation
 =========================================
 
-To configure the SecureDrop servers, the Admin Workstation requires copies of the public keys associated with your SecureDrop. Now is a good time to copy these keys onto the Admin Workstation so they will be available when you install the servers at a later step.
+To configure the SecureDrop Servers, the Admin Workstation requires copies of the public keys associated with your SecureDrop. Now is a good time to copy these keys onto the Admin Workstation so they will be available when you install the servers at a later step.
 
 .. _import_submission_key:
 
 Import Submission Public Key
 ----------------------------
 
-.. TODO waiting for commands
-
 Earlier, you generated the Submission Key. The *public* half of this key needs to be imported to the correct location on the Admin Workstation.
 
-Moving the Submission Public Key to ``sd-admin`` for a combined laptop
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Moving the Submission Public Key to ``sd-admin`` for a combined Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have opted to create a combined Admin + Journalist Workstation, then you should hav generated the Submission Key on the same laptop. The Submission Public Key simply needs to be copied from ``dom0`` to the ``sd-admin`` qube.
 
 In the ``dom0`` terminal, run the command:
 
@@ -21,15 +21,17 @@ In the ``dom0`` terminal, run the command:
 
   securedrop-manage --configure --target admin
 
-Importing the Submission Public Key to ``sd-admin`` from another Journalist Workstation
+Importing the Submission Public Key to ``sd-admin`` from separate Journalist Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO
+If you have opted to create distinct Admin and Journalist Workstations, then your Submission Key needs to be copied from the Journalist Workstation onto the Admin Workstation and placed in the ``sd-admin`` qube.
+
+.. TODO waiting for commands
 
 Copy email alert public keys
 ----------------------------
 
-SecureDrop sends different email alerts which are encrypted to a private key associated with specific recipient email addresses, as outlined :doc:`here<email_alerts>`.
+SecureDrop sends different email alerts which are encrypted to a PGP private key associated with specific recipient email addresses, as outlined :doc:`here<email_alerts>`.
 
 Before proceeding, you will need to transfer the public keys for the email addresses which will receive the OSSEC and optional Daily Journalist Alerts to ``~/.config/securedrop-admin`` in the ``sd-admin`` qube on the Admin Workstation.
 

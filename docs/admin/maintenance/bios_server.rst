@@ -1,4 +1,4 @@
-BIOS updates on the servers
+BIOS updates on the Servers
 ===========================
 
 Below are the steps for updating the BIOS on the Application and Monitor Servers. We provide instructions for Intel and ASUS NUC devices, in accordance with :ref:`our hardware recommendations <Hardware Recommendations>`. You should also update the BIOS on other computers such as the Admin Workstation, but those instructions will vary depending on the manufacturer and model of your device.
@@ -27,7 +27,7 @@ Download and verify appropriate BIOS files
 For Intel and ASUS NUC devices
 ``````````````````````````````
 
-Check the make and model of your servers, and follow the F7 BIOS update method in the documentation. The exact instructions vary by model:
+Check the make and model of your Servers, and follow the F7 BIOS update method in the documentation. The exact instructions vary by model:
 
 - `BIOS update instructions for Intel NUC with Intel Visual BIOS <https://www.intel.com/content/dam/support/us/en/documents/mini-pcs/Visual-BIOS-Update-NUC.pdf>`__
 - `BIOS update instructions for Intel NUC with Aptio V UEFI Firmware Core <https://www.intel.com/content/dam/support/us/en/documents/mini-pcs/AptioV-BIOS-Update-NUC.pdf>`__
@@ -35,7 +35,7 @@ Check the make and model of your servers, and follow the F7 BIOS update method i
 
 Each make and model of NUC will offer different file types; proceed to either the Intel or ASUS Download Center and download the file indicated in the documentation for the F7 method (e.g.,  ``.bio`` or ``.cap``).
 
-.. warning:: Do not download BIOS updates from anywhere other than the manufacturer's website. Be sure that you are `on the correct website`_ and that it has a valid SSL Certificate. Intel's SSL Certificate is issued to \*.intel.com and signed by DigiCert. ASUS' SSL Certificate is issued to \*.asus.com and signed by Amazon. Be sure you download the files specific to the model of your servers.
+.. warning:: Do not download BIOS updates from anywhere other than the manufacturer's website. Be sure that you are `on the correct website`_ and that it has a valid SSL Certificate. Intel's SSL Certificate is issued to \*.intel.com and signed by DigiCert. ASUS' SSL Certificate is issued to \*.asus.com and signed by Amazon. Be sure you download the files specific to the model of your Servers.
 
 Intel provides an SHA1 checksum on the download page, while ASUS offers a SHA-256 checksum. Once you have downloaded the file, using the **Files** application, browse to the file, right click and select **Properties ▸ Digests**, select either SHA1 or SHA256 depending on which is available to you, and click Hash. Compare the result in the Digest column to the checksum listed on the manufacturer's website. If these two values do not match, do not proceed, and contact support@freedom.press. Tails `provides a detailed explanation of this process`_. (Note that the hash in the screenshot below is an example only, and will not match your specific file.)
 
@@ -52,8 +52,8 @@ Once you have verified the hash, copy the file to your USB flash drive.
 Update the BIOS
 ~~~~~~~~~~~~~~~
 
-Power off the Monitor Server. We recommend plugging it into an uninterrupted power supply (UPS). Plug in the keyboard, monitor, and USB flash drive, and power on the server, then press F7 when prompted to enter the BIOS Update tool.
+Power off the Monitor Server. We recommend plugging it into an uninterrupted power supply (UPS). Plug in the keyboard, monitor, and USB flash drive, and power on the Server, then press F7 when prompted to enter the BIOS Update tool.
 
-Select the USB flash drive and navigate to the file you have downloaded, then hit **Enter**. The update will take several minutes--do not interrupt the update or unplug the server during this time.
+Select the USB flash drive and navigate to the file you have downloaded, then hit **Enter**. The update will take several minutes--do not interrupt the update or unplug the Server during this time.
 
 Repeat these steps on the Application Server.

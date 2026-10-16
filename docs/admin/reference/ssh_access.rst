@@ -1,6 +1,8 @@
 Logging in via SSH
 ==================
 
+.. _ssh_over_tor:
+
 SSH over Tor
 ------------
 

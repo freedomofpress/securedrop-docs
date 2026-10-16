@@ -11,9 +11,9 @@ Using ``securedrop-admin``
 The ``securedrop-admin`` command-line utility is used on an :ref:`Admin Workstation<glossary_admin_workstation>` to perform common server administration tasks, including:
 
 * configuring and installing SecureDrop
-* backing up and restoring the servers (see :doc:`../maintenance/backup_and_restore`)
+* backing up and restoring the Servers (see :doc:`../maintenance/backup_and_restore`)
 * retrieving server logs for troubleshooting (see :doc:`../maintenance/logging`)
-* updating your SecureDrop servers' configuration post-install.
+* updating your SecureDrop Servers' configuration post-install.
 
 You can list all available ``securedrop-admin`` actions using the command ``securedrop-admin --help``
 
@@ -37,16 +37,34 @@ In both cases, follow these steps:
 
       apt-cache policy securedrop-admin
 
-    If the version is the same as the version number displayed in the footer of your Source Interface, you are running the applicable version of the SecureDrop code on your workstation, and can proceed to the next step. 
+    If the version is the same as the version number displayed in the footer of your Source Interface, you are running the applicable version of the SecureDrop Workstation code, and can proceed to the next step. 
 
-    If the versions differ, **it is not safe to proceed**. Follow the upgrade instructions associated with the `release notes for the most recent release of SecureDrop <https://securedrop.org/news/release-announcement/>`__. Apply all available updates, including for the Tails operating system.
+    If the versions differ, **it is not safe to proceed**. Follow the upgrade instructions associated with the `release notes for the most recent release of SecureDrop <https://securedrop.org/news/release-announcement/>`__.
 
 #. Run ``securedrop-admin sdconfig``. This will display the current configuration, one line at a time, and allow you to change it. At this point, any changes you make are only saved on this Admin Workstation, to the following file:
 
    ``~/.config/securedrop-admin/site-specific``
+
 #. Run ``securedrop-admin install``. This will apply the configuration to your Application and Monitor Server, and enforce the canonical state of the server configuration.
 
 .. include:: ../../includes/rerun-install-is-safe.txt
+
+Onion Services files
+~~~~~~~~~~~~~~~~~~~~
+
+Following the initial run of ``securedrop-admin install`` during installation of the SecureDrop Servers, addresses and credentials for each Onion Service hosted on your Application Server are stored in the following files under ``~/.config/securedrop-admin``:
+
+- ``app-sourcev3-ths`` contains the onion address of the Source Interface.
+- ``app-journalist.auth_private`` contains the onion address and private key providing access to the Admin Interface.
+- ``app-ssh.auth_private`` contains the onion address and private key providing SSH access to the Application Server.
+- ``mon-ssh.auth_private`` contains the onion address and private key providing SSH access to the Monitor Server.
+- ``tor_v3_keys.json`` contains the keypairs required for access to the Admin Interface and SSH access to the servers - it is required for future runs of ``securedrop-admin install``.
+
+.. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file contain secret keys that should not be shared with third parties, or copied from the Admin Workstation for any purpose other than tasks such as performing backups or onboarding new users.
+
+The dynamic inventory file automatically reads the onion addresses from the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to connect to the servers over SSH when ``securedrop-admin`` is run. 
+
+For manual SSH access when :ref:`SSH-over-Tor is enabled<ssh_over_tor>`, ``securedrop-admin localconfig`` configures the SSH shortcuts ``app`` and ``mon`` in ``sd-admin``'s ``~/.ssh/config`` file with the Onion Service addresses and keys.
 
 Updating localization for the Source Interface and the Admin Interface
 -------------------------------------------------------------------------------

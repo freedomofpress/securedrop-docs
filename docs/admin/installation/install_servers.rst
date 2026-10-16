@@ -1,20 +1,20 @@
-Install SecureDrop on the servers and apply Admin Workstation configuration
-==============================================================================
+Install SecureDrop on the Servers
+=================================
 
-Now that the servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` qube on the :ref:`Admin Workstation<glossary_admin_workstation>` you prepared earlier.
+Now that the Application and Monitor Servers are prepared, you are ready to install and configure the SecureDrop server on them. Like all future administrative tasks, this is performed from the ``sd-admin`` qube on the :ref:`Admin Workstation<glossary_admin_workstation>` you prepared earlier.
 
-.. _test_connectivity:
+.. _test_admin_connectivity:
 
-Test connectivity to servers
+Test connectivity to Servers
 ----------------------------
 
 Having set up the firewall, you can plug the :ref:`Application Server<glossary_application_server>` and the :ref:`Monitor Server<glossary_monitor_server>` into the firewall. Your Admin Workstation should also be connected to the firewall.
 
 If you are using a setup where there is a switch on the LAN port, plug the Application Server into the switch and plug the Monitor Server into the OPT1 port.
 
-You should make sure you can connect from the Admin Workstation to both of the servers before continuing with the installation.
+You should make sure you can connect from the Admin Workstation to both of the Servers before continuing with the installation.
 
-Open a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Xfce Terminal**) and verify that you can SSH into both servers, authenticating with your server administrator username (e.g. ``sdadmin``) and password:
+Open a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Xfce Terminal**) and verify that you can SSH into both Servers, authenticating with your server administrator username (e.g. ``sdadmin``) and password:
 
 .. code:: sh
 
@@ -28,7 +28,7 @@ Open a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Xfce 
 Set up SSH keys
 ---------------
 
-Ubuntu's default SSH configuration authenticates users with their passphrases; however, public key authentication is more secure, and once it's set up it is also easier to use. In this section, you will create a new SSH key for authenticating to both servers. Since the Admin Workstation was set up with `SSH Client Persistence`_, this key will be saved on the Admin Workstation and can be used in the future to authenticate to the servers in order to perform administrative tasks.
+Ubuntu's default SSH configuration authenticates users with their passphrases; however, public key authentication is more secure, and once it's set up it is also easier to use. In this section, you will create a new SSH key for authenticating to both Servers. Since the Admin Workstation was set up with `SSH Client Persistence`_, this key will be saved on the Admin Workstation and can be used in the future to authenticate to the Servers in order to perform administrative tasks.
 
 .. _SSH Client Persistence: https://tails.net/doc/persistent_storage/configure/index.en.html#index11h2
 
@@ -40,16 +40,16 @@ First, generate the new SSH keypair:
 
 You'll be asked to "Enter file in which to save the key" Type **Enter** to use the default location.
 
-Given that this key is on the encrypted persistence of a Tails USB flash drive, you do not need to add an additional passphrase to protect the key. If you do elect to use a passphrase, note that you will need to manually type it (Tails' pinentry will not allow you to copy and paste a passphrase).
+Given that this key is stored on an Admin Workstation with full disk encryption, you do not need to add an additional passphrase to protect the key.
 
-Once the key has finished generating, you need to copy the public key to both servers. Use ``ssh-copy-id`` to copy the public key to each server, authenticating with your passphrase:
+Once the key has finished generating, you need to copy the public key to both Servers. Use ``ssh-copy-id`` to copy the public key to each Server, authenticating with your passphrase:
 
 .. code:: sh
 
     ssh-copy-id <username>@<App IP address>
     ssh-copy-id <username>@<Mon IP address>
 
-Verify that you are able to authenticate to both servers by running the below commands. You should not be prompted for a passphrase (unless you chose to passphrase-protect the key you just created).
+Verify that you are able to authenticate to both Servers by running the below commands. You should not be prompted for a passphrase (unless you chose to passphrase-protect the key you just created).
 
 .. code:: sh
 
@@ -58,9 +58,9 @@ Verify that you are able to authenticate to both servers by running the below co
     $ ssh <username>@<Monitor IP address> hostname
     mon
 
-If you have successfully connected to the server via SSH, the terminal output will be name of the server to which you have connected ('app' or 'mon') as shown above.
+If you have successfully connected to the Server via SSH, the terminal output will be name of the Server to which you have connected ('app' or 'mon') as shown above.
 
-.. _configure_securedrop:
+.. _configure_securedrop_servers:
 
 Prepare configuration files
 ---------------------------
@@ -102,10 +102,12 @@ During the installation you will be given the opportunity to choose from a list 
 
 .. _ansible-site-specific:
 
-Prepare SecureDrop server configuration
+Prepare SecureDrop Server configuration
 ---------------------------------------
 
-Open a terminal in ``sd-admin`` and run the following command, answering the prompts the the values that match your environment and SecureDrop installation: ::
+Open a terminal in ``sd-admin`` and run the following command, answering the prompts the the values that match your environment and SecureDrop installation: 
+
+.. code-block:: sh
 
     securedrop-admin sdconfig
 
@@ -133,14 +135,14 @@ Specifying the fingerprint will configure Postfix to use it for verification on 
 
 .. _Install SecureDrop Servers:
 
-Install SecureDrop servers
+Install SecureDrop Servers
 --------------------------
 
-Now you are ready to install! This process will configure the servers and install SecureDrop and all of its dependencies on the remote servers. In a terminal in ``sd-admin`` run the following command: ::
+Now you are ready to install SecureDrop! This process will configure the Servers and install SecureDrop and all of its dependencies. In a terminal in ``sd-admin`` run the following command: ::
 
     securedrop-admin install
 
-You will be prompted to enter the sudo passphrase for the Application Server and Monitor Server (which should be the same).
+You will be prompted to enter the sudo passphrase for the Application Server and Monitor Server (which must be the same).
 
 The installation process will take some time. It will return you to the terminal prompt when complete.
 
@@ -148,26 +150,18 @@ If any errors occur while running the install, carefully inspect the error outpu
 
 .. include:: ../../includes/rerun-install-is-safe.txt
 
-If needed, make edits to the file located at ``~/.config/securedrop-admin/site-specific`` as described :ref:`above<ansible-site-specific>`. If you continue to have issues, please submit a detailed issue notice on `GitHub <https://github.com/freedomofpress/securedrop/issues/new>`__ or send an email to securedrop@freedom.press.
+If needed, make edits to the file located at ``~/.config/securedrop-admin/site-specific`` as described :ref:`above<ansible-site-specific>`.
 
-.. note:: The SecureDrop install process configures a custom Linux kernel hardened with the grsecurity patch set. Only binary images are hosted in the apt repo. For source packages, see
-          the `Source Offer`_.
+.. note:: The SecureDrop install process configures a custom Linux kernel hardened with the grsecurity patch set. Only binary images are hosted in the apt repo. For source packages, see the `Source Offer`_.
 
 .. _`Source Offer`: https://github.com/freedomofpress/securedrop/blob/develop/SOURCE_OFFER
 
-Once the installation is complete, addresses and credentials for each Onion Service will be available in the following files under ``~/.config/securedrop-admin``:
+Onion Service addresses
+-----------------------
 
-V3 Onion Services
--------------------
+Once the installation is complete, the Onion Service addresses for your Source and Admin Interfaces will be available in the following files under ``~/.config/securedrop-admin``:
 
-- ``app-sourcev3-ths`` contains the v3 onion address of the Source Interface.
+- ``app-sourcev3-ths`` contains the onion address of the Source Interface.
 - ``app-journalist.auth_private`` contains the onion address and private key providing access to the Admin Interface.
-- ``app-ssh.auth_private`` contains the onion address and private key providing SSH access to the Application Server.
-- ``mon-ssh.auth_private`` contains the onion address and private key providing SSH access to the Monitor Server.
-- ``tor_v3_keys.json`` contains the keypairs required for access to the Admin Interface and SSH access to the servers - it is required for future runs of ``securedrop-admin install``.
-
-.. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file contain secret keys that should not be shared with third parties, or copied from the Admin Workstation for any purpose other than tasks such as performing backups or onboarding new users.
-
-The dynamic inventory file will automatically read the onion addresses from the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to connect to the servers over SSH during subsequent playbook runs.
 
 

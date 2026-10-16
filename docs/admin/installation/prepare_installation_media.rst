@@ -147,6 +147,8 @@ Create the installation media
 
 `Follow the steps in this guide to create bootable USB flash drives <https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/>`__
 
-If you plan on setting up multiple Admin or Journalist Workstations at once, you may want to create multiple installation media so you can install Qubes OS on multiple laptops at the same time.
-
 .. note:: The guide above is written for Ubuntu, but the same steps and procedures can be used for the Qubes installation image as well.
+
+If you plan on setting up the Admin and Journalist Workstations at the same time, you may want to create two Qubes OS installation media.
+
+

@@ -1,17 +1,6 @@
 Create an Administrator account on the Admin Interface
 ======================================================
 
-In order for any Administrators to access the :ref:`Admin Interface<glossary_admin_interface>`, they need:
-
-1. The ``auth-cookie`` for the Admin Interface's ATHS
-2. An account on the Admin Interface, which requires the following credentials to log in:
-
-   * Username
-   * Passphrase
-   * Two-factor authentication code
-
-You should create a separate account on the Admin Interface for each user who needs access. This makes it easy to enable or disable access to the Admin Interface on an individual basis, so you can grant access to new users or revoke access for users who have left the organization.
-
 There are two types of accounts on the Admin Interface: admin accounts and normal accounts. Admin accounts are like normal accounts, but they are additionally allowed to manage (add, change, delete) other user accounts through the web interface.
 
 You must create the first admin account on the Admin Interface by running a command on the :ref:`Application Server<glossary_application_server>`. After that, the Administrator can create additional accounts through the web-based Admin Interface.
@@ -42,6 +31,8 @@ Passphrases include the spaces between the words, but not leading or trailing wh
 .. TODO probably change this for menu shortcut?
 
 Once that's done, you should open Tor Browser |TorBrowser| in ``sd-admin`` and navigate to the Admin Interface's onion address. Verify that you can log in to the Admin Interface with the admin account you just created.
+
+You should create a separate account on the Admin Interface for each user who needs access. This makes it easy to enable or disable access to the Admin Interface on an individual basis, so you can grant access to new users or revoke access for users who have left the organization.
 
 For adding more user accounts, please refer now to our :doc:`Admin Interface Guide </admin/reference/admin_interface>`.
 

@@ -3,8 +3,8 @@ Prepare email accounts for alerts
 
 SecureDrop sends two different types of alerts by OpenPGP-encrypted email:
 
-1. OSSEC Alerts sent from the Monitor Server to the Administrator, which must be configured
-2. Daily Journalist Alerts sent from the Application Server to a Journalist, which is optional to configure
+1. OSSEC Alerts sent from the Monitor Server to the Administrator, which *must* be configured
+2. Daily Journalist Alerts sent from the Application Server to a Journalist, which are optional to configure
 
 Before installing SecureDrop, you must have appropriate email addresses configured with OpenPGP encryption to receive these alerts. You may use pre-existing email addresses, or you may set up new ones dedicated to your SecureDrop.
 
@@ -15,12 +15,12 @@ In the case of OSSEC Alerts, configuring an SMTP relay is also required.
 Setting up an email addresses and PGP keys
 ------------------------------------------
 
-OpenPGP-encrypted email requires the recipient to generate a PGP key pair, which consists of a private key and public key, and then distribute the public key. For the purposes of SecureDrop's OSSEC or Daily Journalist Alert emails, the public keys must be installed on the servers by an Administrator and the respective recipients must have an email client configured with the corresponding private key.
+OpenPGP-encrypted email requires the recipient to generate a PGP key pair, which consists of a private key and public key, and then distribute the public key. For the purposes of SecureDrop's OSSEC or Daily Journalist Alert emails, the public keys must be installed on the Servers by an Administrator and the respective recipients must have an email client configured with the corresponding private key.
 
-If you are not familiar with configuring OpenPGP-encrypted email yourself, listed below are a few options we recommend. Each of these options provide the ability to export the public key and view the key fingerprint, which are the two things you need to have on-hand for each alert type when installing or configuring the SecureDrop servers.
+If you are not familiar with configuring OpenPGP-encrypted email yourself, listed below are a few options we recommend. Each of these options provide the ability to export the public key and view the key fingerprint, which are the two things you need to have on-hand for each alert type when installing or configuring the SecureDrop Servers.
 
 .. warning::
-  When exporting your *public key* for use during SecureDrop installation, it is important to ensure you do not accidentally export your *private key*. 
+  When exporting your *public key*, it is important to ensure you do not accidentally export your *private key*. 
 
 Mailvelope
 ~~~~~~~~~~
@@ -68,7 +68,7 @@ If you wish to enable this, you will need:
 OSSEC Alerts
 ------------
 
-OSSEC is an open source host-based intrusion detection system (IDS) that SecureDrop uses to perform log analysis, file integrity checking, policy monitoring, rootkit detection, and real-time alerting. It is installed on the Monitor Server and constitutes that machine's main function. OSSEC works in a server-agent scheme; that is, the OSSEC server extends its existing functions to the Application Server through an agent installed on that server, covering monitoring for both machines.
+OSSEC is an open source host-based intrusion detection system (IDS) that SecureDrop uses to perform log analysis, file integrity checking, policy monitoring, rootkit detection, and real-time alerting. It is installed on the Monitor Server and constitutes that machine's main function. OSSEC works in a server-agent scheme; that is, the OSSEC server extends its existing functions to the Application Server through an agent installed on that Server, covering monitoring for both machines.
 
 The SecureDrop installation process requires that you configure OSSEC Alerts. You must supply several settings during installation:
 
@@ -91,7 +91,7 @@ SMTP relay
 
 Receiving email alerts from OSSEC requires that you have an SMTP relay to route the emails. You can use an SMTP relay hosted internally, if one is available to you, or you can use a :ref:`third-party SMTP relay such as Gmail<ossec_gmail>`. The SMTP relay does not have to be on the same domain as the destination email address, i.e. smtp.gmail.com can be the SMTP relay and the destination address can be securedrop@freedom.press.
 
-While there are risks involved with receiving these alerts, such as information leakage through metadata, we feel the benefit of knowing how the SecureDrop servers are functioning is worth it. If a third-party SMTP relay is used, that relay will be able to learn information such as the IP address the alerts were sent from, the subject of the alerts, and the destination email address the alerts were sent to. Only the body of an alert email is encrypted with the recipient's PGP key. A third-party SMTP relay could also prevent you from receiving any or specific alerts.
+While there are risks involved with receiving these alerts, such as information leakage through metadata, we feel the benefit of knowing how the SecureDrop Servers are functioning is worth it. If a third-party SMTP relay is used, that relay will be able to learn information such as the IP address the alerts were sent from, the subject of the alerts, and the destination email address the alerts were sent to. Only the body of an alert email is encrypted with the recipient's PGP key. A third-party SMTP relay could also prevent you from receiving any or specific alerts.
 
 The SMTP relay that you use should support SASL authentication and SMTP TLS protocols TLSv1.2, TLSv1.1, and TLSv1. Most enterprise email solutions should be able to meet those requirements.
 
@@ -120,4 +120,4 @@ This will provide you with a 16-character password that you will need to use for
 
 .. tip:: SMTP through Gmail will only work with a generated app password. The password for the Gmail account itself is not sufficient, and will not allow mail to be sent. In order to be able to create an app password, you must have 2-Step Verification enabled on the Gmail account.
 
-Once the account is created you can log out and use the SASL username as your new Gmail username (without the domain), the SASL domain to be either gmail.com or your custom Google Apps domain, and then finally your SASL password when installing SecureDrop on the servers. Remember to use the app password generated from the 2-step config, as the primary account password won't work. The SMTP relay will be smtp.gmail.com and the SMTP relay port is 587.
+Once the account is created you can log out and use the SASL username as your new Gmail username (without the domain), the SASL domain to be either gmail.com or your custom Google Apps domain, and then finally your SASL password when installing SecureDrop on the Servers. Remember to use the app password generated from the 2-step config, as the primary account password won't work. The SMTP relay will be smtp.gmail.com and the SMTP relay port is 587.

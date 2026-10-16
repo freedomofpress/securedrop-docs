@@ -164,6 +164,8 @@ We recommend a 4 NIC network firewall and currently provide setup instructions f
 
 An acceptable alternative that requires more technical expertise is to :doc:`configure an existing hardware firewall <../admin/installation/network_firewall>`.
 
+.. _hardware_recommendations_usb:
+
 USB drives
 ^^^^^^^^^^
 

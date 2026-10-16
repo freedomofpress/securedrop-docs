@@ -32,8 +32,6 @@ The command will print out the imported details to confirm before proceeding.
 
 5. In the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and shut down the ``sd-admin-vault`` qube (using the Qube widget in the upper right panel). 
 
-.. TODO add manual steps
-
 Import Administrator KeePassXC database
 ---------------------------------------
 

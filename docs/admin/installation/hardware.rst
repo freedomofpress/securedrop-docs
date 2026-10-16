@@ -12,8 +12,8 @@ Hardware overview
 
 For an installation of SecureDrop, you must acquire:
 
-* 2 computers (with storage drives) to use as the SecureDrop servers.
-* A mouse, keyboard, and monitor (along with any necessary dongles or adapters) for installing the servers.
+* 2 computers (with storage drives) to use as the SecureDrop Servers.
+* A mouse, keyboard, and monitor (along with any necessary dongles or adapters) for installing the Servers.
 * At least 1 dedicated physical laptop, for a combined Admin + Journalist Workstation.
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
@@ -36,7 +36,7 @@ Additionally, you may want to consider the following purchases:
 Advice for users on a tight budget
 ----------------------------------
 
-If you cannot afford to purchase new hardware for your SecureDrop instance, we encourage you to consider re-purposing existing hardware to use with SecureDrop. Since SecureDrop's throughput is significantly limited by the use of Tor for all connections, there is no need to use top of the line hardware for any of the servers or the firewall.
+If you cannot afford to purchase new hardware for your SecureDrop instance, we encourage you to consider re-purposing existing hardware to use with SecureDrop. Since SecureDrop's throughput is significantly limited by the use of Tor for all connections, there is no need to use top of the line hardware for any of the Servers or the firewall.
 
 If you choose to use recycled hardware, you should of course consider whether or not it is trustworthy; making that determination is outside the scope of this document.
 
@@ -50,36 +50,36 @@ Required hardware
 Servers
 ^^^^^^^
 
-We recommend using NUCs for the servers and routinely test new models for compatibility. NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet, and low-power devices, which makes them suitable for deployment in a wide range of environments. Originally produced by Intel, ASUS has taken over production beginning with the 14th generation.
+We recommend using NUCs for the Servers and routinely test new models for compatibility. NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet, and low-power devices, which makes them suitable for deployment in a wide range of environments. Originally produced by Intel, ASUS has taken over production beginning with the 14th generation.
 
 NUCs typically come as kits, and some assembly is required. You will need to purchase the RAM and solid state drive separately for each NUC and insert both into the NUC before it can be used. We recommend:
 
 -  2x 240GB SSDs (2.5" or M.2, depending on your choice of kit)
--  1x memory kit of compatible 2x8GB sticks -  You can put one 8GB memory stick in each of the servers.
+-  1x memory kit of compatible 2x8GB sticks -  You can put one 8GB memory stick in each of the Servers.
 
 There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`__ to choose from. We currently recommend the 11th through 14th generation NUC models. See our :ref:`hardware recommendations list <hardware_recommendations_servers>` for details on specific models.
 
-.. note:: No matter what equipment you use, ensure you remove as much extraneous hardware as physically possible from your servers. This could include: speakers, cameras, microphones, fingerprint readers, wireless, and Bluetooth cards.
+.. note:: No matter what equipment you use, ensure you remove as much extraneous hardware as physically possible from your Servers. This could include: speakers, cameras, microphones, fingerprint readers, wireless, and Bluetooth cards.
 
 Workstations
 ^^^^^^^^^^^^
 
 .. _hardware_workstations_overview:
 
-Each Admin or Journalist Workstation requires a Qubes-compatible computer with the following specifications:
+Each Admin or Journalist Workstation requires a Qubes-compatible laptop with the following specifications:
 
 - 64-bit Intel processor with virtualization support
 - a minimum of 32GB RAM
 - sufficient disk space for the Qubes OS base install and SecureDrop software (a 128GB or greater SSD is recommended)
 
-We recommend against a device that requires an external USB keyboard or other externally-connected devices, for security reasons. In practice this usually means that you should use a Qubes-compatible laptop. Not all laptops support Qubes, and some may require additional customization. We recommend (in order) either a Qubes-certified laptop, one of the laptop models we use for development and testing, or a computer from the community-maintained Qubes Hardware compatibility list. See our :ref:`specific laptop recommendations <hardware_recommendations_workstations>` for more detail on each of these options.
+We recommend against a device that requires an external USB keyboard or other externally-connected devices, for security reasons. In practice this usually means that you should use a Qubes-compatible laptop. Not all laptops support Qubes, and some may require additional customization. We recommend (in order) either a Qubes-certified laptop, one of the laptop models we use for development and testing, or a laptop from the community-maintained Qubes Hardware compatibility list. See our :ref:`specific laptop recommendations <hardware_recommendations_workstations>` for more detail on each of these options.
 
 .. _hardware_workstations_overview_end:
 
 Network firewall
 ^^^^^^^^^^^^^^^^
 
-You will need one physical computer that is used as a dedicated firewall for the SecureDrop servers.
+You will need one physical computer that is used as a dedicated firewall for the SecureDrop Servers.
 
 We recommend a 4 NIC network firewall and currently provide setup instructions for pfSense and OPNSense. You can :ref:`find our list of recommended hardware firewalls here.<hardware_recommendations_firewall>`
 
@@ -99,7 +99,7 @@ Two-factor authentication is used when connecting to different parts of the Secu
 USB flash drives
 ^^^^^^^^^^^^^^^^
 
-Journalists need physical media (known as the Export Device) to export files or conversation transcripts to their everyday workstation.
+Journalists need physical media (known as an Export Device) to export files or conversation transcripts to their everyday workstation.
 
 Our recommendation is to use USB flash drives, in combination with volume-level encryption and careful data hygiene. We also urge the use of a secure printer or similar analog conversions to export documents from the Journalist Workstation, whenever possible.
 
@@ -108,7 +108,7 @@ You may want to consider enforcing write protection on USB flash drives when onl
 - drives with a built-in physical write protection switch
 - a separate USB write blocker device as used in forensic applications.
 
-:ref:`USB drives that we have tested with physical write protection can be found here.<hardware_recommendations_firewall>`
+:ref:`USB drives that we have tested with physical write protection can be found here.<hardware_recommendations_usb>`
 
 It is especially advisable to enable write protection before attaching an Export Device to an everyday workstation that lacks the security protections of the Tails operating system.
 
@@ -174,9 +174,11 @@ To maintain the isolation of SecureDrop, it is essential that your printer not b
 Backup storage
 ^^^^^^^^^^^^^^
 
-It's useful to run periodic backups of the servers in case of failure. We recommend buying an external hard drive to store server backups.
+It's useful to run periodic backups of the Servers in case of failure. We recommend buying an external hard drive to store server backups.
 
-.. include:: ../../includes/encrypting-drives.txt
+.. important::
+
+   Like all storage media associated with SecureDrop, this drive should be encrypted and protected with a secure passphrase. We recommend encrypting the drive using LUKS. You can follow the same instructions used for :ref:`creating a LUKS-based Export Device<luks_encrypted_drive>`.
 
 Hardware end-of-life
 --------------------

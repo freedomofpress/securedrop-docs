@@ -91,7 +91,7 @@ Tor Onion Services provide anonymous inbound connections to websites and other s
 
 Onion Services can be only be accessed using Tor Browser. Rather than a traditional internet address, Onion Services are reached using a special onion address. For example, ``sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion`` is the onion address for the Onion Service version of the SecureDrop website.
 
-Authenticated Onion Services require an additional authentication token be provided when connecting to the server. The Admin Interface, the API endpoint connected to by SecureDrop Inbox, and SSH access to the servers (in SSH-over-Tor mode) are all authenticated Onion Services.
+Authenticated Onion Services require an additional private key be provided when connecting to the server. The Admin Interface, the API endpoint connected to by SecureDrop Inbox, and SSH access to the servers (in SSH-over-Tor mode) are all authenticated Onion Services.
 
 Read more about `Onion Services in Tor's glossary <https://support.torproject.org/onionservices/>`__.
 

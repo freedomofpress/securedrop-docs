@@ -1,16 +1,14 @@
-Install Qubes OS and SecureDrop packages
-========================================
+Install Qubes OS and SecureDrop Workstation packages
+====================================================
 
 Overview
 --------
 
-The initial steps for creating the first :ref:`Journalist Workstation<glossary_journalist_workstation>` and :ref:`Admin Workstation<glossary_admin_workstation>` are the same. First, you install Qubes OS on the laptop, then you install the SecureDrop packages. 
+During installation of SecureDrop, you will be performing the following steps on either one laptop (to become a combined Admin + Journalist Workstation), or two laptops (to become distinct Admin and Journalist Workstations).
 
-During installation of SecureDrop, you will be performing these steps on either one laptop (to become a combined Admin + Journalist Workstation), or two laptops (to become distinct Admin and Journalist Workstations).
+If you plan to create additional Admin, Journalist, or combined Workstations, you will do so using a different method at a later time. 
 
-If your target is two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptop. Before beginning, you should label each laptop with its desired end state (either Admin Workstation or Journalist Workstation) to eliminate the liklihood of a mix-up.
-
-If you plan to create additional Admin or Journalist Workstations beyond the initial ones, you will do so using a different method at a later time. 
+If your target is two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptops. Before beginning, you should label each laptop with its desired end state (either Admin Workstation or Journalist Workstation) to eliminate the likelihood of a mix-up.
 
 The installation and configuration process for each laptop should take between 4 and 6 hours, including time spent waiting for downloads and updates.
 
@@ -22,7 +20,7 @@ Pre-install tasks
 Apply BIOS updates and check settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before beginning the Qubes installation, make sure that your Qubes-compatible computer's BIOS is updated to the latest available version. For more details about this process, see the section on :ref:`general_BIOS_update`.
+Before beginning the Qubes installation, make sure that your Qubes-compatible laptop's BIOS is updated to the latest available version. For more details about this process, see the section on :ref:`general_BIOS_update`.
 
 Once the BIOS is up-to-date, boot into the BIOS setup utility and update its settings. Note that not all BIOS versions will support the items listed, but if available following changes are recommended:
 
@@ -38,7 +36,7 @@ Once the BIOS is up-to-date, boot into the BIOS setup utility and update its set
 - Disable Computrace.
 - Disable SecureBoot.
 
-If the Qubes hardware compatibility list entry for your computer recommends the use of Legacy Mode for boot, change that setting in the BIOS as well.
+If the Qubes hardware compatibility list entry for your laptop recommends the use of Legacy Mode for boot, change that setting in the BIOS as well.
 
 Disable SecureBoot
 ~~~~~~~~~~~~~~~~~~
@@ -56,21 +54,21 @@ Install Qubes OS (estimated wait time: 30-45 minutes)
 
 Before starting the installation, please ensure that:
 
-- the computer is charging
+- the laptop is charging
 - all USB devices like YubiKeys, mice and keyboards are disconnected
 
-To begin the Qubes installation, connect the Qubes installation drive you just created to your target computer and boot from it. You may need to bring up a boot menu at startup to do so - on Lenovo laptops, for example, you can do so by pressing **F12** on boot.
+To begin the Qubes installation, connect the Qubes installation drive you just created to your target laptop and boot from it. You may need to bring up a boot menu at startup to do so - on Lenovo laptops, for example, you can do so by pressing **F12** on boot.
 
-Follow the `installation documentation <https://www.qubes-os.org/doc/installation-guide/>`_ to install Qubes on your computer, ensuring that you:
+Follow the `installation documentation <https://www.qubes-os.org/doc/installation-guide/>`_ to install Qubes on your laptop, ensuring that you:
 
 - Use English - United States as the setup language. (This requirement will be dropped in a future version).
-- Use all available storage space for the installation (as the computer should be dedicated to SecureDrop).
+- Use all available storage space for the installation (as the laptop should be dedicated to SecureDrop).
 - Set a strong full disk encryption (FDE) passphrase - a 6-word Diceware passphrase is recommended.
 - Create an administrative account named ``user`` with a strong password.
 
 .. note:: Qubes is not intended to have multiple user accounts, so your account name and password will be shared by all users of the laptop. The password will be required to log in and unlock the screen during sessions - choosing something strong but memorable and easily typed is recommended! We recommend setting the account name to "user", which matches the examples used throughout this documentation.
 
-Once the installation is complete, you will be prompted to reboot into Qubes. Reboot, removing the install USB flash drive when the computer restarts.
+Once the installation is complete, you will be prompted to reboot into Qubes. Reboot, removing the install USB flash drive when the laptop restarts.
 
 You will be prompted to enter the FDE passphrase set during installation.
 
@@ -143,7 +141,7 @@ Congratulations! You have installed Qubes OS.
 
 .. _intall_securedrop_packages:
 
-Install SecureDrop packages
+Install SecureDrop Workstation packages
 ---------------------------------------
 
 Next, you will install the SecureDrop packages necessary to configure the laptop into a Journalist and/or Admin Workstation.

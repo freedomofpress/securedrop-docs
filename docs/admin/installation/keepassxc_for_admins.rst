@@ -10,17 +10,15 @@ Template password database
 
 To facilitate using KeePassXC to organize all the credentials needed for using and administering the system, SecureDrop comes with a template database with organized entries ready to be filled in.
 
-.. TODO fix path/to references below
-
 .. _keepasscx_template_database:
 
 -  Open the KeePassXC program |KeePassXC| in the ``sd-admin-vault`` qube
--  Select **Database ▸ Open database**, and navigate to the location of **/path/to/Passwords.kdbx**, select it, and click **Open**
+-  Select **Database ▸ Open database**, and navigate to the location of **~/securedrop-keepassx.kdbx**, select it, and click **Open**
 -  Leave the password blank and click **OK**. If you receive an "Unlock failed" prompt, click **Retry with empty password**.
 -  Edit entries as required.
 -  Select **Database ▸ Save Database** to save your changes.
 
-The next time you use KeepassXC in ``sd-admin-vault``, the database at ``/path/to/Passwords.kdbx`` will be selected by default.
+The next time you use KeepassXC in ``sd-admin-vault``, the database at ``~/securedrop-keepassx.kdbx`` will be selected by default.
 
 KeePassXC will show a warning every time you attempt to open a database without entering a password. Because your persistent volume is encrypted, setting up this additional password is not strictly required. It provides some additional protection, e.g., if a computer is left running, at the cost of convenience.
 
