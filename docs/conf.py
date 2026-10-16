@@ -10,6 +10,16 @@ from datetime import date
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 # sys.path.insert(0, os.path.abspath('.'))
 
+
+# Common elements used in many places.
+rst_prolog = """
+.. |qubes_menu| image:: /images/qubes_menu.png
+  :alt: Qubes Application menu
+.. |qubes_menu_gear| image:: /images/qubes_menu_gear.png
+  :alt: System Tools 
+
+"""
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.

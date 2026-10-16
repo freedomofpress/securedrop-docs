@@ -5,14 +5,18 @@ Prepare installation media
 
 SecureDrop Application and Monitor Servers run **Ubuntu Server 24.04.3 LTS (Noble Numbat)**. 
 
-SecureDrop Workstation laptops run **Qubes 4.3**.
+Admin and Journalist Workstation laptops run **Qubes 4.3**.
 
 Preparing your everyday computer
 --------------------------------
 
 Before you can install and configure SecureDrop, you must first download and verify the operating system installation media using a normal, everyday computer. This computer can be running macOS, Windows, or Linux.
 
-In order to verify the integrity of the downloaded installation media, you will need to run commands from a terminal or command line. You’ll also need GnuPG (``gpg``) installed. Consult the list below to learn how to prepare your everyday computer:
+.. note:: For added security, `Tails`_ can be used to perform the steps below. Due to the size of the Qubes and Ubuntu installation ISOs, it may make sense to download them onto another computer rather than via Tor, and then to use a USB flash drive to transfer them to Tails for verification and creation of the installation medium.
+
+.. _`Tails`: https://tails.net
+
+In order to verify the integrity of the downloaded installation media, you will need to run commands from a terminal or command line. You'll also need GnuPG (``gpg``) installed. Consult the list below to learn how to prepare your everyday computer:
 
 * **Linux:** ``gpg`` can be accessed via your favorite Terminal emulator, such as GNOME Console, Konsole, or Ptyxis. If ``gpg`` is not already installed, you can install it from your distribution's package manager tool.
 * **Mac:** ``gpg`` must be manually installed from the `GPG Suite <https://gpgtools.org/>`__. Use Terminal.app, or your favorite third-party terminal emulator, to enter commands.
@@ -145,6 +149,10 @@ Specifically, you will want to make sure that you see "Good signature" listed in
 Create the installation media
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Follow the steps in this guide to create bootable USB drives <https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/>`__
+`Follow the steps in this guide to create bootable USB flash drives <https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/>`__
 
 .. note:: The guide above is written for Ubuntu, but the same steps and procedures can be used for the Qubes installation image as well.
+
+If you plan on setting up the Admin and Journalist Workstations at the same time, you may want to create two Qubes OS installation media.
+
+

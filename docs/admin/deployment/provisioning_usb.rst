@@ -1,18 +1,20 @@
 Provisioning USB Export Devices
 =================================
 
-SecureDrop Workstation supports the export of submitted files and conversation transcripts from the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an :ref:`Export Device<glossary_export_device>`.
+SecureDrop supports the export of submitted files and conversation transcripts from the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an :ref:`Export Device<glossary_export_device>`.
+
+.. _luks_encrypted_drive:
 
 Creating a LUKS-encrypted drive
 -------------------------------
 
-.. note:: LUKS-encrypted drives can only be used with Linux-based systems such as Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
+.. note:: LUKS-encrypted drives can only be used with Linux-based systems such as Ubuntu or Tails. For compatibility with macOS and Windows systems, use VeraCrypt.
 
-In order to provision a LUKS-encrypted Export Device, you will need a fresh USB flash drive and a SecureDrop Workstation.
+In order to provision a LUKS-encrypted Export Device, you will need a fresh USB flash drive and either an Admin or Journalist Workstation.
 
 .. TODO update these instructions for provisioning Export Devices on Qubes
 
-- First, boot the SecureDrop Workstation.
+- First, boot the workstation and log in to Qubes. 
 - Next, open the Disks utility: **Applications ▸ Utilities ▸ Disks**.
 - Connect the fresh USB flash drive and select it in the list in the left-hand panel.
 

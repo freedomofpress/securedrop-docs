@@ -58,7 +58,7 @@ Test the web interfaces
 #. Test replying to the test submission.
 
    - While logged in as an administrator, you can send a reply to the test source submission you made earlier.
-   - Usage of the Admin Interface is covered by our :doc:`Journalist User Manual <../../journalist/journalist>`.
+   - Usage of the Admin Interface is covered by our :doc:`Admin Interface</admin/reference/admin_interface>` page.
 
 #. Verify that the test source account received the reply.
 
@@ -66,4 +66,19 @@ Test the web interfaces
 
 #. Remove the test submissions you made prior to putting SecureDrop to real use. On the main Admin Interface page, select all Sources and click **Delete selected**.
 
-Once you've tested the installation and verified that everything is working, see :doc:`How to Use SecureDrop <../../journalist/journalist>`.
+Once you've tested the installation and verified that everything is working, see the :doc:`Journalist Guide<../../journalist/journalist>`.
+
+
+Test the SecureDrop Inbox
+-------------------------------
+
+The preflight updater will start automatically after logging into the system. Please follow the preflight updater's instructions.
+
+.. note::
+
+  If you close SecureDrop Inbox during your session, you can launch it again using the SecureDrop icon on the desktop.
+
+Once the update check is complete, :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` will launch. Log in using an existing journalist account and verify that Sources are listed and new messages and files can be downloaded, decrypted, and viewed.
+
+.. _Password Management Section:
+

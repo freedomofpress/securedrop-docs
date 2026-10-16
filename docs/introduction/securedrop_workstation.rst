@@ -3,8 +3,8 @@ SecureDrop Workstation and Qubes OS
 
 What is SecureDrop Workstation?
 -------------------------------
-ns
-A :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` is a laptop used by a :ref:`Journalist<glossary_journalist>` to connect to a SecureDrop instance and securely view and reply to messages files submitted by :ref:`Sources<glossary_source>`. The SecureDrop Workstation is based on Qubes OS and it consists of several different isolated virtual machines (called "qubes"), so that everything a Journalist needs to use SecureDrop resides on one computer.
+
+A :ref:`SecureDrop Workstation<glossary_journalist_workstation>` is a laptop used by a :ref:`Journalist<glossary_journalist>` to connect to a SecureDrop instance and securely view and reply to messages files submitted by :ref:`Sources<glossary_source>`. The SecureDrop Workstation is based on Qubes OS and it consists of several different isolated virtual machines (called "qubes"), so that everything a Journalist needs to use SecureDrop resides on one computer.
 
 Encryption and decryption happen seamlessly using a network-isolated qube that holds the SecureDrop :ref:`Submission Private Key<glossary_submission_key>`. Files submitted by Sources can be viewed securely on the same machine thanks to a `feature of Qubes`_ that creates temporary "disposable" qubes in which to view untrusted content without exposing the rest of the system to that content.
 
@@ -79,7 +79,7 @@ You should be able to copy and paste *within* any qube on the system, e.g., from
 
 Copy and paste between and to SecureDrop Workstation qubes is disabled for security reasons. The goal of this restriction is to minimize the risk of accidental pastes of sensitive content, and to reduce the attack surface for attempts to exfiltrate information.
 
-Administrators can configure limited exceptions to this policy; please see the section :doc:`Managing Clipboard Access </admin/workstation_reference/managing_clipboard>` of the admin guide for more information.
+Administrators can configure limited exceptions to this policy; please see the section :doc:`Managing Clipboard Access </admin/deployment/managing_clipboard>` of the admin guide for more information.
 
 How is using Qubes different from using virtual machines?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

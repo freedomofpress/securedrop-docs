@@ -118,27 +118,30 @@ SecureDrop is an open source project. You can support the work by `contributing 
 .. toctree::
    :caption: Admin Guide: Installation
    :name: installtoc
-   :maxdepth: 2
+   :maxdepth: 3
    :hidden:
 
    admin/installation/installation_overview
    admin/installation/hardware
    admin/installation/prepare_installation_media
    admin/installation/email_alerts
-   admin/installation/prepare_sdw
+   admin/installation/install_qubes
    admin/installation/generate_submission_key
-   admin/installation/set_up_keepassxc
+   admin/installation/install_admin_workstation
+   admin/installation/keepassxc_for_admins
+   admin/installation/transfer_public_keys
    admin/installation/network_firewall
    admin/installation/firewall_pfsense
    admin/installation/firewall_opnsense
    admin/installation/prepare_servers
-   admin/installation/install
-   admin/installation/apply_sdw
+   admin/installation/install_servers
+   admin/installation/apply_admin_workstation
    admin/installation/create_admin_account
+   admin/installation/install_journalist
    admin/installation/test_the_installation
-   admin/installation/provisioning_usb
    admin/installation/troubleshoot_qubes
    admin/installation/troubleshoot_ossec
+   admin/installation/troubleshoot_sd_manage
 
 .. toctree::
    :caption: Admin Guide: Migration
@@ -147,8 +150,9 @@ SecureDrop is an open source project. You can support the work by `contributing 
    :hidden:
 
    admin/migration/migration_overview
-   admin/migration/admin_migration
+   admin/migration/migrate_install_qubes
    admin/migration/journalist_migration
+   admin/migration/admin_migration
    admin/migration/removing_gpg_passphrase
 
 .. toctree::
@@ -157,7 +161,9 @@ SecureDrop is an open source project. You can support the work by `contributing 
    :maxdepth: 2
    :hidden:
 
+   admin/deployment/provisioning_usb
    admin/deployment/onboard_journalists
+   admin/deployment/managing_clipboard
    admin/deployment/deployment_practices
    admin/deployment/landing_page.rst
    admin/deployment/onion_name.rst
@@ -181,6 +187,7 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/reference/ssh_access
    admin/reference/offboarding
    admin/reference/securedrop_admin
+   admin/reference/manually_generate_submission_key
 
 .. toctree::
    :caption: Admin Guide: Maintenance
@@ -192,15 +199,13 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/workstation_reference/workstation_updates
    admin/maintenance/logging
    admin/maintenance/troubleshooting_connection
-   admin/maintenance/backup_and_restore
-   admin/workstation_reference/backup
+   admin/maintenance/backup_servers
+   admin/maintenance/backup_workstations
    admin/maintenance/rebuild_admin
    admin/maintenance/bios_server
    admin/maintenance/decommission
    admin/workstation_reference/bios_workstation
    admin/workstation_reference/reviewing_logs
-
-   admin/workstation_reference/managing_clipboard
 
 .. toctree::
    :caption: Appendices

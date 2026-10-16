@@ -12,7 +12,7 @@ Please note that while the logs do not include original filenames or message con
 
 For this reason, the ``sd-log`` qube is networkless, and you cannot copy files from ``sd-log`` to other qubes by default.
 
-If you want to selectively enable copying logs to a single qube, you can use tags, similar to the method used for :doc:`managing clipboard access </admin/workstation_reference/managing_clipboard>`. You can add and remove the permission just before each copying operation; the change will take effect immediately.
+If you want to selectively enable copying logs to a single qube, you can use tags, similar to the method used for :doc:`managing clipboard access </admin/deployment/managing_clipboard>`. You can add and remove the permission just before each copying operation; the change will take effect immediately.
 
 .. important::
 

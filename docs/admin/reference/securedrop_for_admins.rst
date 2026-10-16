@@ -36,7 +36,7 @@ As a SecureDrop Administrator, it is your responsibility to:
 * :ref:`monitor the SecureDrop team's release and security-related communications <monitoring_comms>`
 * apply available firmware updates to all SecureDrop hardware
 * ensure that the SecureDrop environment is physically secure and monitored
-* ensure that SecureDrop Workstations are kept up to date
+* ensure that Journalist and Admin Workstations are kept up to date
 * investigate and respond to security incidents
 * schedule and perform required maintenance tasks, such as operating system upgrades
 * ensure that Journalists adhere to the documented processes for checking SecureDrop, communicating with Sources, and reviewing submitted files
@@ -120,7 +120,7 @@ No matter which vendor you go with, you should make it a priority to stay inform
 Updates: workstations
 ^^^^^^^^^^^^^^^^^^^^^
 
-SecureDrop Workstation includes an updater application that runs automatically on startup, checks for Qubes and SecureDrop updates, and prompts the user to apply them if found. Given the sensitive nature of the system, it is critical that updates are applied when available. Administrators should ensure that users are aware of this requirement, and should periodically check to ensure that the system is up to date.
+SecureDrop includes an updater application that runs automatically on startup, checks for Qubes and SecureDrop updates, and prompts the user to apply them if found. Given the sensitive nature of the system, it is critical that updates are applied when available. Administrators should ensure that users are aware of this requirement, and should periodically check to ensure that the system is up to date.
 
 .. _monitoring_ossec:
 
