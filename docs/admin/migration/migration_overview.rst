@@ -19,7 +19,7 @@ As of late 2026, administrative tasks can be performed on a Qubes-based Admin Wo
 
 .. TODO link to Tails docs. 
 
-The Tails-based components are no longer needed, and the Tails version of SecureDrop will be completely depreciated by the end of 2027. 
+The Tails-based components are no longer needed, and the Tails version of SecureDrop will no longer be supported by the end of 2027.
 
 This guide will help you migrate your Tails-based Admin and Journalist Workstations to the new Qubes-based Workstations.
 
