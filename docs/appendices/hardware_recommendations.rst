@@ -105,7 +105,7 @@ You will want to ensure you are using the latest BIOS version available. Instruc
 Framework 13 (13th-generation)
 ------------------------------
 
-The Framework 13 laptop with a 13th generation Intel processor is a recommended option for the SecureDrop  beginning with Qubes 4.2.
+The Framework 13 laptop with a 13th generation Intel processor is a recommended option.
 
 You can either order a preassmbled system, or you can customize your build and assemble the laptop yourself once it is delivered, which is useful as either a cost-saving measure or in the event that you wish to customize the ports or internal components.
 
