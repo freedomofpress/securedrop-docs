@@ -11,7 +11,7 @@ The preflight updater delivers new SecureDrop Inbox releases, updates to the Sec
 Verifying version numbers
 -------------------------
 
-`The latest SecureDrop Inbox and SecureDrop version numbers are available at securedrop.org. <https://securedrop.org/>`__
+`The latest SecureDrop version numbers are available at securedrop.org. <https://securedrop.org/>`__
 
 You can find the version number of the SecureDrop Inbox running on your workstation on the login screen when you open the Inbox.
 
