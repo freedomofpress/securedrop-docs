@@ -3,7 +3,7 @@ Migration overview
 
 .. _migration_overview:
 
-The previous version of SecureDrop was based three "workstations": 
+The previous version of SecureDrop was based on three "workstations": 
 
 - The Journalist Workstation, where Journalists downloaded new submissions or replied to Sources.
 - The Secure Viewing Station (or SVS), where journalists decrypted and viewed submissions.
