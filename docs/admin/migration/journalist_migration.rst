@@ -34,12 +34,12 @@ To protect this key and preserve the air gap, you will need to connect the SVS U
 
 .. code-block:: sh 
 
-    securedrop-manage --configure --target journalist
+    securedrop-manage configure --target journalist
 
 Follow the command prompts to complete submission key import. 
 
 .. note::
-  If there are multiple keys present on the device, ``sdw-admin --configure`` will print the fingerprints of those keys for you to select which to use as the submission private key. You can open ``<source interface address>.onion/metadata`` in Tor Browser on another network-connected computer to check the correct key fingerprint used by your SecureDrop instance.
+  If there are multiple keys present on the device, ``securedrop-manage configure --target journalist`` will print the fingerprints of those keys for you to select which to use as the submission private key. You can open ``<source interface address>.onion/metadata`` in Tor Browser on another network-connected computer to check the correct key fingerprint used by your SecureDrop instance.
 
 6. Once the submission key import is complete, in the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the SVS USB.
 
@@ -62,7 +62,7 @@ SecureDrop Inbox connects to your SecureDrop's authenticated :ref:`Onion Service
 
 .. code-block:: sh 
 
-    securedrop-manage --configure --target journalist
+    securedrop-manage configure --target journalist
 
 The command will print out the imported details to confirm before proceeding.
 

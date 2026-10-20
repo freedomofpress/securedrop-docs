@@ -200,7 +200,7 @@ Verify that the configuration is valid:
 
 .. code-block:: sh
 
-   securedrop-manage --validate --target journalist
+   securedrop-manage validate --target journalist
 
 If the above command prints ``OK``, the configuration is valid.
 
@@ -208,7 +208,7 @@ Reinstall SecureDrop:
 
 .. code-block:: sh
 
-   securedrop-manage --apply target journalist
+   securedrop-manage apply target journalist
 
 Restore additional keys to ``sd-gpg``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -227,7 +227,7 @@ If you are restoring an Admin Workstation, or a combined Admin + Journalist Work
 
 .. code-block:: sh
 
-   securedrop-manage --apply --target admin
+   securedrop-manage apply --target admin
 
 Restore customized qubes, RPC policies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

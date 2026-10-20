@@ -26,7 +26,7 @@ Import from Tails Admin Workstation
 
 .. code-block:: sh 
 
-  securedrop-manage --configure --target admin
+  securedrop-manage configure --target admin
   
 The command will print out the imported details to confirm before proceeding.
 

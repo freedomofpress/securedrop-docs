@@ -47,6 +47,4 @@ If you are provisioning SecureDrop for the first time, continue with the install
 
 .. code-block:: sh
 
-  sdw-admin --validate
-
-.. TODO securedrop-manage
+securedrop-manage validate

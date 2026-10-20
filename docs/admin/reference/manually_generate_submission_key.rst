@@ -81,7 +81,7 @@ To apply the changes to your Journalist Workstation, you will need to run:
 
 .. code-block:: sh
 
-   securedrop-manage --configure --target journalist
+   securedrop-manage configure --target journalist
 
 .. TODO confirm this command
 

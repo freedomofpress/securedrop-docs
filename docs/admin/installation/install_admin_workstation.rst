@@ -15,7 +15,7 @@ When ready run the following command in the ``dom0`` terminal:
 
 .. code-block:: sh
 
-  securedrop-manage --apply --target admin
+  securedrop-manage apply --target admin
 
 
 This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple qubes and installs supporting packages. When the command finishes, reboot the machine to complete the installation and set up. 

@@ -82,7 +82,7 @@ Import onto the new Journalist Workstation from encrypted USB drive
 
 .. code-block:: sh
   
-  securedrop-manage --validate --target journalist
+  securedrop-manage validate --target journalist
 
 Securely erase transfer drive
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,7 +106,7 @@ When ready run the following command in the ``dom0`` terminal:
 
 .. code-block:: sh
 
-  securedrop-manage --apply target admin
+  securedrop-manage apply target admin
 
 
 .. TODO update command for Journalist Workstation
