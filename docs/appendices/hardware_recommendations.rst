@@ -118,7 +118,7 @@ You will want to ensure you are using the latest BIOS version available. Instruc
 Lenovo ThinkPad X1 Carbon (10th-generation)
 -------------------------------------------
 
-The 10th-generation ThinkPad X1 Carbon **with a 12th-generation Intel Core processor** is a recommended option for the SecureDrop beginning with Qubes 4.1. If you plan to use it, you will want to ensure the BIOS is up-to date by following these instructions: :ref:`general_BIOS_update`.
+The 10th-generation ThinkPad X1 Carbon **with a 12th-generation Intel Core processor** is a recommended option. If you plan to use it, you will want to ensure the BIOS is up-to date by following these instructions: :ref:`general_BIOS_update`.
 
 You'll need to have a USB-to-Ethernet adapter on hand in order to apply Qubes updates :doc:`during installation</admin/installation/install_qubes>`, which will enable Wi-Fi and fix glitchy video rendering and cursor performance.
 
