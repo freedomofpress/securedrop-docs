@@ -208,7 +208,7 @@ Reinstall SecureDrop:
 
 .. code-block:: sh
 
-   securedrop-manage apply target journalist
+   securedrop-manage apply --target journalist
 
 Restore additional keys to ``sd-gpg``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
