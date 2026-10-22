@@ -31,7 +31,7 @@ Adding users
 
 After logging in, you can add new user accounts for the Journalists at your organization who will be checking the SecureDrop Inbox. Make sure the Journalist is physically in the same room as you when you do this, as they will have to be present to enable two-factor authentication. SecureDrop supports the use of either a smartphone authenticator app or a Yubikey for two-factor authentication. If an app is to be used, the Journalist should install it before proceeding with the account setup.
 
-.. include:: ../../includes/otp-app.txt
+.. include:: /includes/otp-app.txt
 
 #. Click **Admin** in the top right corner of the page to load the Admin Interface.
 
@@ -49,9 +49,9 @@ After logging in, you can add new user accounts for the Journalists at your orga
 .. note::
    The username **deleted** is reserved, as it is used to mark accounts which have been deleted from the system.
 
-.. |SecureDrop admin home| image:: ../../images/manual/screenshots/journalist-admin_interface_index.png
+.. |SecureDrop admin home| image:: /images/manual/screenshots/journalist-admin_interface_index.png
    :alt: The Admin Interface displays an 'Add User' button.
-.. |Add a new user| image:: ../../images/manual/screenshots/journalist-admin_add_user_totp.png
+.. |Add a new user| image:: /images/manual/screenshots/journalist-admin_add_user_totp.png
    :alt: The form used to create new users displays a pre-generated Diceware passphrase.
 
 FreeOTP
@@ -67,15 +67,15 @@ FreeOTP
 
 If two-factor authentication was set up successfully, you will be redirected back to the Admin Interface and will see a confirmation that the two-factor code was verified.
 
-.. include:: ../../includes/tor-security-setting.txt
+.. include:: /includes/tor-security-setting.txt
 
-.. |Enable FreeOTP| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
+.. |Enable FreeOTP| image:: /images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
    :alt: The form used to enable FreeOTP displays a barcode and a two-factor secret.
 
 YubiKey
 ~~~~~~~
 
-#. If the Journalist wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide <../deployment/yubikey_setup>`.
+#. If the Journalist wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide </admin/deployment/onboarding/yubikey_setup>`.
 
    |Enable YubiKey|
 
@@ -87,9 +87,9 @@ YubiKey
 
 The Journalist will require their username, passphrase, and two-factor authentication method whenever they check SecureDrop. Make sure that they have memorised their username and passphrase, or stored them in their password manager, and that they can keep their two-factor authentication device secure.
 
-.. |Enable YubiKey| image:: ../../images/manual/screenshots/journalist-admin_add_user_hotp.png
+.. |Enable YubiKey| image:: /images/manual/screenshots/journalist-admin_add_user_hotp.png
    :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
-.. |Verify YubiKey| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
+.. |Verify YubiKey| image:: /images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
    :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
 
 .. _Passphrases_and_two-factor_resets:
@@ -169,7 +169,7 @@ To verify that the OSSEC monitoring system's functionality, you can send a test 
 
 |Test Alert|
 
-You should receive an OSSEC alert email at the address specified during the installation of SecureDrop. The email may take several minutes to arrive. If you don't receive it, refer to the :doc:`OSSEC Guide</admin/installation/troubleshoot_ossec>` for information on troubleshooting steps.
+You should receive an OSSEC alert email at the address specified during the installation of SecureDrop. The email may take several minutes to arrive. If you don't receive it, refer to the :doc:`OSSEC Guide</admin/installation/install_troubleshooting/troubleshoot_ossec>` for information on troubleshooting steps.
 
 .. _submission prefs:
 
@@ -211,11 +211,11 @@ Sources should never need to share their seven-word codename with Journalists. I
 
 This change will be applied immediately on the Source Interface. Initial messages that contain the Source's codename will be rejected, with an error message reminding Sources to protect their codename and keep it secret. To remove this restriction, uncheck the checkbox and click **Update Submission Preferences**.
 
-.. |Reset Passphrase| image:: ../../images/manual/screenshots/journalist-edit_account_user.png
+.. |Reset Passphrase| image:: /images/manual/screenshots/journalist-edit_account_user.png
    :alt: The account editing form allows admins to change name, reset passphrase, and reset two-factor authentication.
-.. |Test Alert| image:: ../../images/manual/screenshots/journalist-admin_ossec_alert_button.png
+.. |Test Alert| image:: /images/manual/screenshots/journalist-admin_ossec_alert_button.png
    :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
-.. |SecureDrop main page| image:: ../../images/manual/screenshots/journalist-admin_index_no_documents.png
+.. |SecureDrop main page| image:: /images/manual/screenshots/journalist-admin_index_no_documents.png
    :alt: The top navigation of the Journalist Interface says 'Logged on as Journalist' and displays an 'Admin' link.
-.. |Logo Update| image:: ../../images/manual/screenshots/journalist-admin_changes_logo_image.png
+.. |Logo Update| image:: /images/manual/screenshots/journalist-admin_changes_logo_image.png
    :alt: The Instance Configuration form displays 'Image updated' after the logo was updated successfully.

@@ -549,7 +549,7 @@ Next, navigate to **Firewall ▸ Rules ▸ OPT2**. Similarly to OPT1, there shou
 
 Finally, click **Apply Changes**.
 
-The *Network Firewall* configuration is now complete, allowing you to move to the next step: :doc:`setting up the servers. <prepare_servers>`
+The *Network Firewall* configuration is now complete, allowing you to move to the next step: :doc:`setting up the servers. </admin/installation/prepare_servers>`
 
 Troubleshooting tips
 --------------------
@@ -571,28 +571,28 @@ Periodically, the OPNSense project maintainers release an update to the OPNSense
 
 If you see that an update is available, we recommend installing it. Most of these updates are for minor bugfixes, but occasionally they can contain important security fixes. You should keep apprised of updates yourself by checking the `OPNSense Blog <https://opnsense.org/blog/>`__ or subscribing to the `OPNSense Blog RSS feed <https://opnsense.org/blog/rss>`__.
 
-.. |Wired Connected| image:: ../../images/firewall/wired_connected.png
-.. |OPNSense - Your Connection is Insecure| image:: ../../images/opnsense/opnsense-insecure.png
-.. |OPNSENSE - Default Login| image:: ../../images/opnsense/opnsense-login.png
-.. |OPNSense - auth server| image:: ../../images/opnsense/opnsense-authservers.png
-.. |OPNSense - otpcheck| image:: ../../images/opnsense/opnsense-otpcheck.png
-.. |OPNSense - qrscan| image:: ../../images/opnsense/opnsense-qrcode.png
-.. |OPNSense - testuserhappy| image:: ../../images/opnsense/opnsense-testuserhappy.png
-.. |OPNSense - totp server| image:: ../../images/opnsense/opnsense-totpserver.png
-.. |OPNSense - alternate hostnames| image:: ../../images/opnsense/opnsense-alternate-hostname.png
-.. |OPNSense General Info| image:: ../../images/opnsense/opnsense-wizard-general.png
-.. |OPNSense: Configure LAN Interface| image:: ../../images/opnsense/opnsense-configure-lan.png
-.. |OPNSense - No Updates| image:: ../../images/opnsense/opnsense-no-updates.png
-.. |OPNSense - Disable DHCP| image:: ../../images/opnsense/opnsense-disable-dhcp.png
-.. |OPNSense - assign interfaces| image:: ../../images/opnsense/opnsense-assign-interfaces.png
-.. |OPNSense - Alias Start| image:: ../../images/opnsense/opnsense-alias-start.png
-.. |OPNSense - aliases end| image:: ../../images/opnsense/opnsense-alias-end.png
-.. |OPNSense - Firewall LAN Rules| image:: ../../images/opnsense/opnsense-lan-rules.png
-.. |OPNSense - Disable Antilockout| image:: ../../images/opnsense/opnsense-antilockout.png
-.. |OPNSense Firewall OPT1 Rules| image:: ../../images/opnsense/opnsense-firewall-opt1.png
-.. |OPNSense Firewall OPT2 Rules| image:: ../../images/opnsense/opnsense-firewall-opt2.png
-.. |Launching the Unsafe Browser| image:: ../../images/firewall/launching_unsafe_browser.png
-.. |Pop-up notification| image:: ../../images/firewall/starting_the_unsafe_browser.png
-.. |Unsafe Browser Homepage| image:: ../../images/firewall/unsafe_browser.png
-.. |Wired Settings| image:: ../../images/firewall/wired_settings.png
-.. |4 NIC Admin Workstation Static IP Configuration| image:: ../../images/firewall/four_nic_admin_workstation_static_ip_configuration.png
+.. |Wired Connected| image:: /images/firewall/wired_connected.png
+.. |OPNSense - Your Connection is Insecure| image:: /images/opnsense/opnsense-insecure.png
+.. |OPNSENSE - Default Login| image:: /images/opnsense/opnsense-login.png
+.. |OPNSense - auth server| image:: /images/opnsense/opnsense-authservers.png
+.. |OPNSense - otpcheck| image:: /images/opnsense/opnsense-otpcheck.png
+.. |OPNSense - qrscan| image:: /images/opnsense/opnsense-qrcode.png
+.. |OPNSense - testuserhappy| image:: /images/opnsense/opnsense-testuserhappy.png
+.. |OPNSense - totp server| image:: /images/opnsense/opnsense-totpserver.png
+.. |OPNSense - alternate hostnames| image:: /images/opnsense/opnsense-alternate-hostname.png
+.. |OPNSense General Info| image:: /images/opnsense/opnsense-wizard-general.png
+.. |OPNSense: Configure LAN Interface| image:: /images/opnsense/opnsense-configure-lan.png
+.. |OPNSense - No Updates| image:: /images/opnsense/opnsense-no-updates.png
+.. |OPNSense - Disable DHCP| image:: /images/opnsense/opnsense-disable-dhcp.png
+.. |OPNSense - assign interfaces| image:: /images/opnsense/opnsense-assign-interfaces.png
+.. |OPNSense - Alias Start| image:: /images/opnsense/opnsense-alias-start.png
+.. |OPNSense - aliases end| image:: /images/opnsense/opnsense-alias-end.png
+.. |OPNSense - Firewall LAN Rules| image:: /images/opnsense/opnsense-lan-rules.png
+.. |OPNSense - Disable Antilockout| image:: /images/opnsense/opnsense-antilockout.png
+.. |OPNSense Firewall OPT1 Rules| image:: /images/opnsense/opnsense-firewall-opt1.png
+.. |OPNSense Firewall OPT2 Rules| image:: /images/opnsense/opnsense-firewall-opt2.png
+.. |Launching the Unsafe Browser| image:: /images/firewall/launching_unsafe_browser.png
+.. |Pop-up notification| image:: /images/firewall/starting_the_unsafe_browser.png
+.. |Unsafe Browser Homepage| image:: /images/firewall/unsafe_browser.png
+.. |Wired Settings| image:: /images/firewall/wired_settings.png
+.. |4 NIC Admin Workstation Static IP Configuration| image:: /images/firewall/four_nic_admin_workstation_static_ip_configuration.png

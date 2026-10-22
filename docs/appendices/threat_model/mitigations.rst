@@ -222,7 +222,7 @@ Countermeasures in user behavior recommendations
 - :doc:`Source Guide </source/source>` gives instructions on best practices for the entire submission workflow
 - Source Interface banner suggests that user disables JS (high security settings in Tor Browser)
 - :doc:`Journalist Guide </journalist/journalist>` informs users of malware risks, the importance of strict compartmentalization of SecureDrop-related activities
-- :doc:`SecureDrop Deployment Guide </admin/deployment/deployment_practices>` gives best practices for proper administration of the SecureDrop system, and its public-facing properties like the Landing Page
+- :doc:`SecureDrop Deployment Guide </admin/deployment/index>` gives best practices for proper administration of the SecureDrop system, and its public-facing properties like the Landing Page
 - :doc:`Admin Guide </admin/reference/securedrop_for_admins>` gives instructions for long-term maintenance of the technical properties of the SecureDrop system, as well as operations to support Journalists
 - All Administrator tasks are completed over Tor/Tor authenticated Onion Services after installation
 - Any journalist/admin password/2FA credentials resets can only be done by an Administrator with password-protected SSH capability or authenticated Onion Service credentials.

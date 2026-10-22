@@ -110,38 +110,11 @@ SecureDrop is an open source project. You can support the work by `contributing 
 .. toctree::
    :caption: Admin Guide
    :name: adminguidetoc
-   :maxdepth: 2
-   :hidden:
+   :maxdepth: 4
 
    admin/reference/securedrop_for_admins
-
-.. toctree::
-   :caption: Admin Guide: Installation
-   :name: installtoc
-   :maxdepth: 3
-   :hidden:
-
-   admin/installation/installation_overview
-   admin/installation/hardware
-   admin/installation/prepare_installation_media
-   admin/installation/email_alerts
-   admin/installation/install_qubes
-   admin/installation/generate_submission_key
-   admin/installation/install_admin_workstation
-   admin/installation/keepassxc_for_admins
-   admin/installation/transfer_public_keys
-   admin/installation/network_firewall
-   admin/installation/firewall_pfsense
-   admin/installation/firewall_opnsense
-   admin/installation/prepare_servers
-   admin/installation/install_servers
-   admin/installation/apply_admin_workstation
-   admin/installation/create_admin_account
-   admin/installation/install_journalist
-   admin/installation/test_the_installation
-   admin/installation/troubleshoot_qubes
-   admin/installation/troubleshoot_ossec
-   admin/installation/troubleshoot_sd_manage
+   Installation <admin/installation/index>
+   Deployment <admin/deployment/index>
 
 .. toctree::
    :caption: Admin Guide: Migration
@@ -154,27 +127,6 @@ SecureDrop is an open source project. You can support the work by `contributing 
    admin/migration/journalist_migration
    admin/migration/admin_migration
    admin/migration/removing_gpg_passphrase
-
-.. toctree::
-   :caption: Admin Guide: Deployment
-   :name: deploymentguide
-   :maxdepth: 2
-   :hidden:
-
-   admin/deployment/provisioning_usb
-   admin/deployment/onboard_journalists
-   admin/deployment/managing_clipboard
-   admin/deployment/deployment_practices
-   admin/deployment/landing_page.rst
-   admin/deployment/onion_name.rst
-   admin/deployment/whole_site_changes.rst
-   admin/deployment/sample_privacy_policy.rst
-   admin/deployment/getting_the_most_out_of_securedrop
-   admin/deployment/yubikey_setup
-   admin/deployment/tor_pow
-   admin/deployment/https_source_interface
-   admin/deployment/ssh_over_local_net
-   admin/deployment/configuring_ossec_fingerprint
 
 .. toctree::
    :caption: Admin Guide: Reference

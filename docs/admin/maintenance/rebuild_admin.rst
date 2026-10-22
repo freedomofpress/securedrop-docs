@@ -307,7 +307,7 @@ Step 7: Set up SSH-over Tor
 
 .. note::
 
-   Without performing this step, you will not be able to access your SecureDrop servers from outside the local network. See :doc:`../deployment/ssh_over_local_net` for more information.
+   Without performing this step, you will not be able to access your SecureDrop servers from outside the local network. See :doc:`/admin/deployment/additional_server_config/ssh_over_local_net` for more information.
 
 Rerun the command:
 

@@ -96,7 +96,7 @@ The Greek CA `Harica`_ is now providing Domain Validation (DV) certificates for 
 Activating HTTPS in SecureDrop
 ------------------------------
 
-Make sure you have :doc:`installed SecureDrop already </admin/installation/installation_overview>`.
+Make sure you have :doc:`installed SecureDrop already </admin/installation/index>`.
 
 Make note of the Source Interface onion address. Now from a Terminal on your Admin Workstation:
 

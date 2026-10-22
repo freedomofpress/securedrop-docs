@@ -1,5 +1,6 @@
+#############################
 SecureDrop for Administrators
-=============================
+#############################
 
 SecureDrop servers are managed by a :ref:`Administrator<glossary_administrator>`.
 
@@ -28,7 +29,7 @@ The SecureDrop architecture contains multiple machines and hardened servers. Whi
 
 As a SecureDrop Administrator, it is your responsibility to:
 
-* :doc:`install SecureDrop </admin/installation/installation_overview>`
+* :doc:`install SecureDrop </admin/installation/index>`
 * :ref:`manage users <manage_users>`
 * :ref:`manage the system configuration <manage_config>`
 * :ref:`ensure that servers, firewall and workstations are kept up-to-date <manage_updates>`

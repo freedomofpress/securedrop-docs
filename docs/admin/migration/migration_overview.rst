@@ -29,7 +29,7 @@ Hardware overview
 Workstations
 ^^^^^^^^^^^^
 
-.. include:: /admin/installation/installation_overview.rst
+.. include:: /admin/installation/index.rst
     :start-after: .. _install_overview_workstations:
     :end-before: .. _install_overview_servers:
 
