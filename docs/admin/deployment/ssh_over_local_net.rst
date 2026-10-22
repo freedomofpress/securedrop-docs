@@ -4,7 +4,7 @@ SSH over local network
 Under a production installation post-install, the default way to gain SSH administrative access is over the Tor network. This provides a number of benefits:
 
 * Allows remote administration outside of the local network.
-* Provides anonymity to an administrator while logging into the SecureDrop servers.
+* Provides anonymity to an administrator while logging into the SecureDrop Servers.
 * Can mitigate against an attacker on your local network attempting to exploit vulnerabilities against the SSH daemon.
 
 Most Administrators will need SSH access during the course of running a SecureDrop instance and a few times a year for maintenance. So the potential shortfalls of having SSH over Tor are not usually a major issue. The cons of having SSH over Tor can include:
@@ -21,7 +21,7 @@ Configuring SSH for local access
 
 .. warning:: It is important that your firewall is configured adequately if you decide you need SSH over the local network. The install process locks down access as much as possible with net restrictions, SSH keys, and two-factor authentication. However, you could still leave the interface exposed to unintended users if you did not properly follow our network firewall guide.
 
-.. warning:: This setting will lock you out of SSH access to your instance if your Admin Workstation passes through a NAT in order to get to the SecureDrop servers. If you are unsure whether this is the case, please consult your firewall configuration or network administrator.
+.. warning:: This setting will lock you out of SSH access to your instance if your Admin Workstation passes through a NAT in order to get to the SecureDrop Servers. If you are unsure whether this is the case, please consult your firewall configuration or network administrator.
 
 .. note:: Whichever network you install from will be the one that SSH is restricted to post-install. This will come into play particularly if you have multiple network interfaces.
 

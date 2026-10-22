@@ -76,21 +76,21 @@ Workstations
 Qubes-certified laptops
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Qubes-certified laptops are certified and tested against Qubes major releases. They must support additional security features beyond the minimal requirements above, such as the use of `coreboot <https://www.coreboot.org/>`_ in place of proprietary firmware. Where possible, we recommend that you use a Qubes-certified laptop with ``coreboot`` for SecureDrop Workstation. A full list of certified computers can be found on the `Qubes OS Certified Hardware <https://www.qubes-os.org/doc/certified-hardware/>`_ page.
+Qubes-certified laptops are certified and tested against Qubes major releases. They must support additional security features beyond the minimal requirements above, such as the use of `coreboot <https://www.coreboot.org/>`_ in place of proprietary firmware. Where possible, we recommend that you use a Qubes-certified laptop with ``coreboot`` for SecureDrop. A full list of certified computers can be found on the `Qubes OS Certified Hardware <https://www.qubes-os.org/doc/certified-hardware/>`_ page.
 
 .. note:: Some certified computers also support the use of `Heads <https://osresearch.net>`_ with ``coreboot``, for additional protection against advanced attacks during the boot process. Heads adds a layer of complexity to the overall user experience, but may make sense for you as an option if you have an expectation of those kinds of threats. If you have questions about Heads, or other hardware choices, contact us via Signal`_.
 
 FPF-tested laptops
 ~~~~~~~~~~~~~~~~~~
 
-In addition to Qubes-certified devices, we develop and test using Qubes-compatible laptops from other vendors. The following models may be used for SecureDrop Workstation, though some level of additional configuration may be required.
+In addition to Qubes-certified devices, we develop and test using Qubes-compatible laptops from other vendors. The following models may be used for SecureDrop, though some level of additional configuration may be required.
 
 .. _framework_13_series:
 
 Framework 13 (Intel Core Ultra Series 1)
 ----------------------------------------
 
-The Framework 13 laptop with an Intel Core Ultra Series 1 processor is a recommended option for the SecureDrop Workstation beginning with Qubes 4.2.
+The Framework 13 laptop with an Intel Core Ultra Series 1 processor is a recommended option.
 
 You can either order a preassmbled system, or you can customize your build and assemble the laptop yourself once it is delivered, which is useful as either a cost-saving measure or in the event that you wish to customize the ports or internal components.
 
@@ -105,7 +105,7 @@ You will want to ensure you are using the latest BIOS version available. Instruc
 Framework 13 (13th-generation)
 ------------------------------
 
-The Framework 13 laptop with a 13th generation Intel processor is a recommended option for the SecureDrop Workstation beginning with Qubes 4.2.
+The Framework 13 laptop with a 13th generation Intel processor is a recommended option.
 
 You can either order a preassmbled system, or you can customize your build and assemble the laptop yourself once it is delivered, which is useful as either a cost-saving measure or in the event that you wish to customize the ports or internal components.
 
@@ -118,16 +118,16 @@ You will want to ensure you are using the latest BIOS version available. Instruc
 Lenovo ThinkPad X1 Carbon (10th-generation)
 -------------------------------------------
 
-The 10th-generation ThinkPad X1 Carbon **with a 12th-generation Intel Core processor** is a recommended option for the SecureDrop Workstation beginning with Qubes 4.1. If you plan to use it, you will want to ensure the BIOS is up-to date by following these instructions: :ref:`general_BIOS_update`.
+The 10th-generation ThinkPad X1 Carbon **with a 12th-generation Intel Core processor** is a recommended option. If you plan to use it, you will want to ensure the BIOS is up-to date by following these instructions: :ref:`general_BIOS_update`.
 
-You'll need to have a USB-to-Ethernet adapter on hand in order to :ref:`apply Qubes updates <apply_dom0_updates>`, which will enable Wi-Fi and fix glitchy video rendering and cursor performance.
+You'll need to have a USB-to-Ethernet adapter on hand in order to apply Qubes updates :doc:`during installation</admin/installation/install_qubes>`, which will enable Wi-Fi and fix glitchy video rendering and cursor performance.
 
 .. _thinkpad_t_series:
 
 Lenovo ThinkPad T14 (2nd-generation)
 ------------------------------------
 
-The 2nd-generation ThinkPad T14 **with an 11th-generation Intel Core processor** is a recommended option for the SecureDrop Workstation beginning with Qubes 4.1. If you plan to use it, you will want to ensure the BIOS is up-to date by following these instructions: :ref:`general_BIOS_update`.
+The 2nd-generation ThinkPad T14 **with an 11th-generation Intel Core processor** is a recommended option for the SecureDrop beginning with Qubes 4.1. If you plan to use it, you will want to ensure the BIOS is up-to date by following these instructions: :ref:`general_BIOS_update`.
 
 The Ethernet and Wi-Fi controllers may not work without one-time manual configuration, as documented here.
 
@@ -147,7 +147,7 @@ However, there are some things to consider:
 
 * Reports are not verified for their accuracy by either the Qubes team or Freedom of the Press Foundation
 * Reports correspond to a specific Qubes OS version, and may not reflect breaking changes or expanded hardware support in the most recent Qubes OS version
-* It's important that you update the BIOS of your laptop prior to installing SecureDrop Workstation: for more details see :ref:`general_BIOS_update`
+* It's important that you update the BIOS of your laptop prior to installing SecureDrop: for more details see :ref:`general_BIOS_update`
 
 For the best experience, we recommend choosing a Qubes-certified laptop, or a laptop that we have directly tested (in that order); however, if none of those suit your needs, or if you want to see if your existing hardware might be Qubes compatible, the HCL is a good choice.
 
@@ -163,6 +163,8 @@ We recommend a 4 NIC network firewall and currently provide setup instructions f
 * the `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__ running `pfSense Plus <https://www.pfsense.org/>`__. This device is overspecced for SecureDrop's purposes, but can be used if the other cheaper firewalls can't be procured.
 
 An acceptable alternative that requires more technical expertise is to :doc:`configure an existing hardware firewall <../admin/installation/network_firewall>`.
+
+.. _hardware_recommendations_usb:
 
 USB drives
 ^^^^^^^^^^

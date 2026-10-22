@@ -12,9 +12,10 @@ Hardware overview
 
 For an installation of SecureDrop, you must acquire:
 
-* 2 computers (with storage drives) to use as the SecureDrop servers.
-* A mouse, keyboard, and monitor (along with any necessary dongles or adapters) for installing the servers.
-* At least 1 dedicated physical laptop for the SecureDrop Workstation.
+* 2 computers (with storage drives) to use as the SecureDrop Servers.
+* A mouse, keyboard, and monitor (along with any necessary dongles or adapters) for installing the Servers.
+* At least 2 Qubes-compatible laptops for dedicated Journalist and Admin Workstations (recommended).
+   * A single Qubes-compatible laptop for combined Admin + Journalist Workstation.
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
 * At least 1 USB flash drive for OS installation media, and at least 1 more USB flash drive if needed as an Export Device.
@@ -23,11 +24,11 @@ For an installation of SecureDrop, you must acquire:
 
 Additionally, you may want to consider the following purchases:
 
-* a printer without wireless network support, to use in combination with the SecureDrop Workstation.
+* a printer without wireless network support, to use in combination with the Journalist.
 * an external hard drive for server backups.
-* a USB flash drive to store backups of your SecureDrop Workstation.
+* a USB flash drive to store backups of your laptops.
 * a security key for HOTP authentication, such as a YubiKey, if you want to use hardware-based two-factor authentication instead of a mobile app.
-* a USB flash drive with a physical write protection switch, or a USB write blocker, if you want to mitigate the risk of introducing malware from your network to your SecureDrop Workstation during repeated use of an Export Device.
+* a USB flash drive with a physical write protection switch, or a USB write blocker, if you want to mitigate the risk of introducing malware from your network to your Journalist Workstation during repeated use of an Export Device.
 
 .. tip::
 
@@ -36,7 +37,9 @@ Additionally, you may want to consider the following purchases:
 Advice for users on a tight budget
 ----------------------------------
 
-If you cannot afford to purchase new hardware for your SecureDrop instance, we encourage you to consider re-purposing existing hardware to use with SecureDrop. Since SecureDrop's throughput is significantly limited by the use of Tor for all connections, there is no need to use top of the line hardware for any of the servers or the firewall.
+Although we recommend dedicated physical laptops for the Journalist and Admin Workstations, a single laptop can server as a combined Admin + Journalist Workstation. This is a cheaper option for smaller newsrooms, where it's possible for Journalists and Administrators to share the same Workstation, or where a single person fulfills both roles. 
+
+If you cannot afford to purchase new hardware for your SecureDrop instance, we encourage you to consider re-purposing existing hardware to use with SecureDrop. Since SecureDrop's throughput is significantly limited by the use of Tor for all connections, there is no need to use top of the line hardware for any of the Servers or the firewall.
 
 If you choose to use recycled hardware, you should of course consider whether or not it is trustworthy; making that determination is outside the scope of this document.
 
@@ -50,36 +53,36 @@ Required hardware
 Servers
 ^^^^^^^
 
-* :ref:`Application Server<glossary_application_server>`: 1 physical server to run the SecureDrop web services.
-
-* :ref:`Monitor Server<glossary_monitor_server>`: 1 physical server which monitors activity on the Application Server and sends email notifications to an Administrator.
-
-We recommend using NUCs for the servers and routinely test new models for compatibility. NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet, and low-power devices, which makes them suitable for deployment in a wide range of environments. Originally produced by Intel, ASUS has taken over production beginning with the 14th generation.
+We recommend using NUCs for the Servers and routinely test new models for compatibility. NUCs ("Next Unit of Computing") are comparatively inexpensive, compact, quiet, and low-power devices, which makes them suitable for deployment in a wide range of environments. Originally produced by Intel, ASUS has taken over production beginning with the 14th generation.
 
 NUCs typically come as kits, and some assembly is required. You will need to purchase the RAM and solid state drive separately for each NUC and insert both into the NUC before it can be used. We recommend:
 
 -  2x 240GB SSDs (2.5" or M.2, depending on your choice of kit)
--  1x memory kit of compatible 2x8GB sticks -  You can put one 8GB memory stick in each of the servers.
+-  1x memory kit of compatible 2x8GB sticks -  You can put one 8GB memory stick in each of the Servers.
 
 There are a `variety of models <https://www.asus.com/us/content/nuc-overview/>`__ to choose from. We currently recommend the 11th through 14th generation NUC models. See our :ref:`hardware recommendations list <hardware_recommendations_servers>` for details on specific models.
 
-.. note:: No matter what equipment you use, ensure you remove as much extraneous hardware as physically possible from your servers. This could include: speakers, cameras, microphones, fingerprint readers, wireless, and Bluetooth cards.
+.. note:: No matter what equipment you use, ensure you remove as much extraneous hardware as physically possible from your Servers. This could include: speakers, cameras, microphones, fingerprint readers, wireless, and Bluetooth cards.
 
 Workstations
 ^^^^^^^^^^^^
 
-In order to install and use SecureDrop Workstation, you will need a Qubes-compatible computer with the following specifications:
+.. _hardware_workstations_overview:
+
+Each Admin or Journalist Workstation requires a Qubes-compatible laptop with the following specifications:
 
 - 64-bit Intel processor with virtualization support
 - a minimum of 32GB RAM
-- sufficient disk space for the Qubes OS base install and SecureDrop Workstation (a 128GB or greater SSD is recommended)
+- sufficient disk space for the Qubes OS base install and SecureDrop software (a 128GB or greater SSD is recommended)
 
-We recommend against a device that requires an external USB keyboard or other externally-connected devices, for security reasons. In practice this usually means that you should run SecureDrop Workstation on a Qubes-compatible laptop. Not all laptops support Qubes, and some may require additional customization. We recommend (in order) either a Qubes-certified laptop, one of the laptop models we use for development and testing, or a computer from the community-maintained Qubes Hardware compatibility list. See our :ref:`specific laptop recommendations <hardware_recommendations_workstations>` for more detail on each of these options.
+We recommend against a device that requires an external USB keyboard or other externally-connected devices, for security reasons. In practice this usually means that you should use a Qubes-compatible laptop. Not all laptops support Qubes, and some may require additional customization. We recommend (in order) either a Qubes-certified laptop, one of the laptop models we use for development and testing, or a laptop from the community-maintained Qubes Hardware compatibility list. See our :ref:`specific laptop recommendations <hardware_recommendations_workstations>` for more detail on each of these options.
+
+.. _hardware_workstations_overview_end:
 
 Network firewall
 ^^^^^^^^^^^^^^^^
 
-You will need one physical computer that is used as a dedicated firewall for the SecureDrop servers.
+You will need one physical computer that is used as a dedicated firewall for the SecureDrop Servers.
 
 We recommend a 4 NIC network firewall and currently provide setup instructions for pfSense and OPNSense. You can :ref:`find our list of recommended hardware firewalls here.<hardware_recommendations_firewall>`
 
@@ -99,22 +102,22 @@ Two-factor authentication is used when connecting to different parts of the Secu
 USB flash drives
 ^^^^^^^^^^^^^^^^
 
-Journalists need physical media (known as the Export Device) to export files or conversation transcripts to their everyday workstation.
+Journalists need physical media (known as an Export Device) to export files or conversation transcripts to their everyday workstation.
 
-Our recommendation is to use USB flash drives, in combination with volume-level encryption and careful data hygiene. We also urge the use of a secure printer or similar analog conversions to export documents from the SecureDrop Workstation, whenever possible.
+Our recommendation is to use USB flash drives, in combination with volume-level encryption and careful data hygiene. We also urge the use of a secure printer or similar analog conversions to export documents from the Journalist Workstation, whenever possible.
 
 You may want to consider enforcing write protection on USB flash drives when only read access is needed. The two main options to achieve write protection of USB flash drives are:
 
 - drives with a built-in physical write protection switch
 - a separate USB write blocker device as used in forensic applications.
 
-:ref:`USB drives that we have tested with physical write protection can be found here.<hardware_recommendations_firewall>`
+:ref:`USB drives that we have tested with physical write protection can be found here.<hardware_recommendations_usb>`
 
 It is especially advisable to enable write protection before attaching an Export Device to an everyday workstation that lacks the security protections of the Tails operating system.
 
-Please review our :doc:`setup guide <provisioning_usb>` for additional background on setting up Export Devices.
+Please review our :doc:`setup guide </admin/deployment/provisioning_usb>` for additional background on setting up Export Devices.
 
-We also recommend buying an additional USB flash drive for making regular backups of your SecureDrop Workstations.
+We also recommend buying an additional USB flash drive for making regular backups of your SecureDrop laptops.
 
 One thing to consider is that you are going to have *a lot* of USB flash drives to keep track of, so you should consider how you will label or identify them and buy drives accordingly. Drives that are physically larger are often easier to label (e.g. with tape, printed sticker or a label from a labelmaker).
 
@@ -133,7 +136,9 @@ This hardware is not *required* to run a SecureDrop instance, but most of it is 
 Printers
 ^^^^^^^^
 
-There are several requirements for a printer to be compatible with SecureDrop Workstation. Your printer should:
+.. _hardware_printers_overview:
+
+There are several requirements for a printer to be compatible with SecureDrop. Your printer should:
 
 1. Support **driverless printing** standards
 2. Have a **USB port**
@@ -144,7 +149,7 @@ These requirements are expanded below.
 Driverless
 ~~~~~~~~~~
 
-SecureDrop Workstation implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
+SecureDrop implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
 
 .. figure:: ../workstation_reference/images/airprint.jpg
 
@@ -155,7 +160,7 @@ You may consult Apple's `list of printers that support AirPrint <https://support
 USB ports
 ~~~~~~~~~
 
-SecureDrop Workstation only supports printing over USB, so ensure the printer you select has a **USB port**.
+SecureDrop only supports printing over USB, so ensure the printer you select has a **USB port**.
 
 .. note::
   In rare cases, an AirPrint or Moipra-compatible printer with a USB port may not actually support IPP-over-USB, which is required for SecureDrop to use the printer. Check with the manufacturer if in doubt. 
@@ -163,18 +168,22 @@ SecureDrop Workstation only supports printing over USB, so ensure the printer yo
 Offline
 ~~~~~~~
 
-To maintain the isolation of SecureDrop Workstation, it is essential that your printer not be shared with other computers and networks.
+To maintain the isolation of SecureDrop, it is essential that your printer not be shared with other computers and networks.
 
 * Select a compatible printer with **no WiFi**. A printer that connects with USB only is best if you can find one, but compatible USB printers lacking *both* Ethernet and WiFi are rare.
 * In the case of a printer with Ethernet and/or WiFi, **keep the printer offline** and **disabling WiFi** (if present).
-* Use this printer exclusively with SecureDrop Workstation and do not connect it directly to other computers.
+* Use this printer exclusively with SecureDrop and do not connect it directly to other computers.
+
+.. _hardware_printers_overview_end:
 
 Backup storage
 ^^^^^^^^^^^^^^
 
-It's useful to run periodic backups of the servers in case of failure. We recommend buying an external hard drive to store server backups.
+It's useful to run periodic backups of the Servers in case of failure. We recommend buying an external hard drive to store server backups.
 
-.. include:: ../../includes/encrypting-drives.txt
+.. important::
+
+   Like all storage media associated with SecureDrop, this drive should be encrypted and protected with a secure passphrase. We recommend encrypting the drive using LUKS. You can follow the same instructions used for :ref:`creating a LUKS-based Export Device<luks_encrypted_drive>`.
 
 Hardware end-of-life
 --------------------

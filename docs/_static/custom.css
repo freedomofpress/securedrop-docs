@@ -3,3 +3,7 @@ html[data-theme=dark] {
     --pst-color-info-bg: #0e52d3;
     --pst-color-success-bg: #008a44;
 }
+
+dt {
+    font-weight: normal;
+}

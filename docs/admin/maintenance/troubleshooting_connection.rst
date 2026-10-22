@@ -1,7 +1,7 @@
 Troubleshooting connection problems
 ===================================
 
-Before troubleshooting connection problems, we recommend reading about the :ref:`networking architecture <Networking Architecture>` of SecureDrop Workstation. If you are in a hurry, this guide offers quick diagnostic and remedial steps.
+Before troubleshooting connection problems, we recommend reading about the :ref:`networking architecture <Networking Architecture>` of SecureDrop. If you are in a hurry, this guide offers quick diagnostic and remedial steps.
 
 Step 1: Verify you are connected to the Internet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -184,7 +184,4 @@ At any point after the successful installation of SecureDrop, if you cannot SSH 
 
 .. |blue_qube| image:: ../../images/blue_qube.png
   :alt: Qubes Domains menu
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 
+

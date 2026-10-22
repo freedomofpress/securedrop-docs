@@ -1,7 +1,7 @@
 Set up the network firewall
 ===========================
 
-Now that you've set up your password manager, you can move on to setting up the network firewall. You should stay be logged into the :ref:`Admin Workstation<glossary_admin_workstation>` to access the network firewall's web interface for configuration.
+Now that you've set up your password manager, you can move on to setting up the network firewall. You should stay logged into the :ref:`Admin Workstation<glossary_admin_workstation>` to access the network firewall's web interface for configuration.
 
 Unfortunately, due to the wide variety of firewalls that may be used, we do not provide specific instructions to cover every type or variation in software or hardware. However, if you have the necessary expertise, we provide `abstract firewall rules`_ that can be implemented with iptables, Cisco IOS etc. We recommend that you use a firewall with at least four physical interfaces.
 

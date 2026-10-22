@@ -3,7 +3,7 @@ Onboard Journalists
 
 At this point, the only person who has access to the system is the Administrator. In order to grant access to Journalists, you will need to do some additional setup for each individual Journalist.
 
-Provision SecureDrop Workstation
+Provision Journalist Workstation
 -------------------------------------------
 
 .. TODO

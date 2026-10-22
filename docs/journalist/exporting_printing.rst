@@ -141,7 +141,7 @@ Due to the underlying technology of USB flash drives, Export Devices are likely 
 
 To protect against the possibility that a compromised encryption password will yield access to traces of previously exported files, you should securely erase your Export Devices on a regular basis. You may also wish to do this on a case-by-case basis after handling particularly sensitive files or if you believe a decryption password may be compromised.
 
-Securely erasing an Export Device can only be done by re-formatting and re-encrypting the USB flash drive with a new encryption password. You can follow the :doc:`same steps</admin/installation/provisioning_usb>` used to initially create the Export Device, or contact your Administrator.
+Securely erasing an Export Device can only be done by re-formatting and re-encrypting the USB flash drive with a new encryption password. You can follow the :doc:`same steps</admin/deployment/provisioning_usb>` used to initially create the Export Device, or contact your Administrator.
 
 You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
 
@@ -160,6 +160,3 @@ You may also choose to destroy the drives by physical means, such as using a ham
 .. |screenshot_veracrypt_sd_devices_files| image:: ../images/screenshot_veracrypt_sd_devices_files.png
 
 .. |screenshot_veracrypt_sd_devices_files_unlock| image:: ../images/screenshot_veracrypt_sd_devices_files_unlock.png
-
-.. |qubes_menu| image:: ../images/qubes_menu.png
-  :alt: Qubes Application menu

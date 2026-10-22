@@ -11,9 +11,9 @@ Off-boarding checklist
 
 - :doc:`Inform the SecureDrop Support </introduction/getting_support>` team that the user should be removed from any support Signal groups, and indicate if any new staff members should be added.
 - Delete the user's account on the Admin Interface.
-- Retrieve :ref:`SecureDrop Workstation<glossary_securedrop_workstation>` laptops, *Backup* drive(s), and any other SecureDrop hardware or materials.
+- Retrieve SecureDrop laptops, *Backup* drive(s), and any other SecureDrop hardware or materials.
 - If the user receives email alerts (OSSEC alerts or Daily Journalist Alerts), either directly or as a member of an email alias, remove them from those alerts and :ref:`set up someone new <ossec_guide>` to receive those alerts.
-- (Circumstance-dependent) If you have specific concerns that the Submission Private Key has been compromised, you should consider a full reinstall of SecureDrop. At minimum, you should :ref:`rotate the Submission Key <rotate_submission_key>`.
+- (Circumstance-dependent) If you have specific concerns that the Submission Secret Key has been compromised, you should consider a full reinstall of SecureDrop. At minimum, you should :ref:`rotate the Submission Key <rotate_submission_key>`.
 
 Additional steps for off-boarding Administrators
 ------------------------------------------------
@@ -89,11 +89,11 @@ Rotate the Submission Key
 
 .. TODO Update instructions for Qubes
 
-The Submission Private Key is held on the airgapped Secure Viewing Station, and is not normally accessed by SecureDrop users anywhere but on the Secure Viewing Station. Therefore, we recommend rotating the Submission Key under the following circumstances:
+The Submission Secret Key is held on the airgapped Secure Viewing Station, and is not normally accessed by SecureDrop users anywhere but on the Secure Viewing Station. Therefore, we recommend rotating the Submission Key under the following circumstances:
 
 - If the user's departure was not amicable
 - If the user is still holding on to any Secure Viewing Station USB flash drive or backup
-- If you have any other reason to believe the Submission Private Key or the entire Secure Viewing Station USB flash drive may have been copied or compromised.
+- If you have any other reason to believe the Submission Secret Key or the entire Secure Viewing Station USB flash drive may have been copied or compromised.
 
 You should still keep the old key on the Secure Viewing Station, or else you will not be able to decrypt submissions that were sent to you while that key was in effect.
 

@@ -122,7 +122,7 @@ Assumptions about the person installing SecureDrop
 
 -  This person (usually the admin) acts reasonably and in good faith, e.g. if they were to give the attacker system-level access that would be unreasonable.
 -  The person obtains an authentic copy of SecureDrop and its dependencies.
--  The person follows our guidelines for :ref:`deploying the system <deployment>`, setting up the :ref:`landing page <Landing Page>` for the organization, and for :doc:`installing SecureDrop </admin/installation/install>`.
+-  The person follows our guidelines for :ref:`deploying the system <deployment>`, setting up the :ref:`landing page <Landing Page>` for the organization, and for :doc:`installing SecureDrop </admin/installation/installation_overview>`.
 
 Assumptions about the Source's computer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -411,7 +411,7 @@ What a physical seizure of the Monitor Server can achieve
 What a compromise of the Secure Viewing Station can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  The Secure Viewing Station is only useful to an attacker while powered on and with the Tails persistent volume mounted. The attacker may learn more if the *Transfer Device* or the Export Device are in use at the time of compromise or seizure. A physical seizure of this machine, its Tails device, the *Transfer Device* or the Export Device will also achieve nothing, assuming that the Tails and VeraCrypt implementations of full-disk encryption work as expected.
+-  The Secure Viewing Station is only useful to an attacker while powered on and with the Tails persistent volume mounted. The attacker may learn more if the *Transfer Device* or the Export Device are in use at the time of compromise or seizure. A physical seizure of this machine, its Tails device, the *Transfer Device* or the Export Device will also achieve nothing, assuming that the Tails and VeraCrypt implementations of full disk encryption work as expected.
 
 -  A compromise of the Secure Viewing Station allows the attacker to:
 
@@ -424,7 +424,7 @@ What a compromise of the Secure Viewing Station can achieve
 What a physical seizure of the Secure Viewing Station can achieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  The Secure Viewing Station is only useful to an attacker while powered on and with the Tails persistent volume mounted. The attacker may learn more if the *Transfer Device* or the Export Device are in use at the time of compromise or seizure. A physical seizure of this machine, its Tails device, the *Transfer Device* or the Export Device will also achieve nothing, assuming that the Tails and VeraCrypt implementations of full-disk encryption work as expected.
+-  The Secure Viewing Station is only useful to an attacker while powered on and with the Tails persistent volume mounted. The attacker may learn more if the *Transfer Device* or the Export Device are in use at the time of compromise or seizure. A physical seizure of this machine, its Tails device, the *Transfer Device* or the Export Device will also achieve nothing, assuming that the Tails and VeraCrypt implementations of full disk encryption work as expected.
 -  A physical seizure of the Secure Viewing Station, while on and with the persistent volume decrypted and mounted, allows the attacker to:
 
    -  Tamper with the hardware.
