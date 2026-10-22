@@ -9,9 +9,9 @@ If you have opted to perform your initial installation with *two* laptops (disti
 
 Generate the Submission Key
 ---------------------------
-Generate the Submission Key by running the following command in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**):
+Generate the Submission Key by running the following command in a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**), replacing ``<Org Name>`` with your organization's name:
 
 .. code-block:: sh
 
-    securedrop-generate-submission-key
+    securedrop-generate-submission-key "<Org Name>"
 

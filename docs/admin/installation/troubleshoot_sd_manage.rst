@@ -1,5 +1,5 @@
 Troubleshooting ``securedrop-manage``
-=============================
+=====================================
 
 "Failed to return clean data"
 -----------------------------

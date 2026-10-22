@@ -12,10 +12,6 @@ Preparing your everyday computer
 
 Before you can install and configure SecureDrop, you must first download and verify the operating system installation media using a normal, everyday computer. This computer can be running macOS, Windows, or Linux.
 
-.. note:: For added security, `Tails`_ can be used to perform the steps below. Due to the size of the Qubes and Ubuntu installation ISOs, it may make sense to download them onto another computer rather than via Tor, and then to use a USB flash drive to transfer them to Tails for verification and creation of the installation medium.
-
-.. _`Tails`: https://tails.net
-
 In order to verify the integrity of the downloaded installation media, you will need to run commands from a terminal or command line. You'll also need GnuPG (``gpg``) installed. Consult the list below to learn how to prepare your everyday computer:
 
 * **Linux:** ``gpg`` can be accessed via your favorite Terminal emulator, such as GNOME Console, Konsole, or Ptyxis. If ``gpg`` is not already installed, you can install it from your distribution's package manager tool.
