@@ -242,7 +242,7 @@ your system is trying to use an old copy of the SecureDrop Release Signing Key. 
 ``sd-*-template`` update failures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Click the Qubes menu and open a terminal in the impacted template. For example, if ``sd-small-bookworm-template`` failed to update, select its entry in the Qubes menu and click **Terminal**.
+1. Click the Qubes menu and open a terminal in the impacted template. For example, if ``sd-inbox-debian-13`` failed to update, select its entry in the Qubes menu and click **Terminal**.
 2. Perform an interactive template update by running the the following commands:
 
    .. code-block::
