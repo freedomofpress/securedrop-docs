@@ -19,7 +19,7 @@ In the ``dom0`` terminal, run the command:
 
 .. code-block:: sh
 
-  securedrop-manage configure --target admin
+  securedrop-submission-key export --target admin
 
 Importing the Submission Public Key to ``sd-admin`` from separate Journalist Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
