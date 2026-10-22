@@ -60,7 +60,7 @@ Instructions for using SecureDrop as a Journalist are available in our :doc:`Jou
 Journalist Alert Key
 --------------------
 
-The Journalist Alert Public Key is used for encrypting the daily alert email that notifies Journalists about whether or not there has been submission activity in the past 24 hours. The Journalist uses an associated Journalist Alert Private Key to decrypt the alerts.
+The Journalist Alert Public Key is used for encrypting the daily alert email that notifies Journalists about whether or not there has been submission activity in the past 24 hours. The Journalist uses an associated Journalist Alert Secret Key to decrypt the alerts.
 
 This Journalist Alert Key pair is created when :doc:`preparing email accounts for alerts</admin/installation/email_alerts>`.
 
@@ -143,8 +143,8 @@ Instructions for using the Source Interface are available in our :doc:`Source Gu
 Submission Key
 --------------
 
-The Submission Key is the GPG keypair used to encrypt and decrypt messages and files sent to your SecureDrop. Because the public key and private key must be treated very differently, we sometimes refer to them explicitly as the Submission Public Key and the Submission Private Key.
+The Submission Key is the GPG keypair used to encrypt and decrypt messages and files sent to your SecureDrop. Because the public key and secret key must be treated very differently, we sometimes refer to them explicitly as the Submission Public Key and the Submission Secret Key.
 
 The Submission Public Key is uploaded to your SecureDrop servers as part of the installation process. Once your SecureDrop is online, anyone will be able to download it.
 
-The Submission Private Key is used to decrypt all messages and files sent to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a Journalist Workstation or on offline backup storage.
+The Submission Secret Key is used to decrypt all messages and files sent to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a Journalist Workstation or on offline backup storage.

@@ -67,7 +67,7 @@ The SecureDrop Servers handle all messages and files exchanged between Journalis
 Minimum security requirements for Workstations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Every Admin and Journalist Workstation contains sensitive credentials and information related to your SecureDrop, such as SSH keys, the :ref:`Private Submission Key<glossary_submission_key>`, and copies of messages and files exchanged between Journalists and Sources. Therefore, it's critical to ensure that appropriate security practices are applied to every Admin and Journalist Workstation.
+Every Admin and Journalist Workstation contains sensitive credentials and information related to your SecureDrop, such as SSH keys, the :ref:`Secret Submission Key<glossary_submission_key>`, and copies of messages and files exchanged between Journalists and Sources. Therefore, it's critical to ensure that appropriate security practices are applied to every Admin and Journalist Workstation.
 
 - Journalist Workstations should always be powered off and stored securely when not in use.
 - During installation, a wired internet connection that is either dedicated for this purpose, or on a fully segregated subnet should be used. 

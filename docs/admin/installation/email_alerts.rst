@@ -15,12 +15,12 @@ In the case of OSSEC Alerts, configuring an SMTP relay is also required.
 Setting up an email addresses and PGP keys
 ------------------------------------------
 
-OpenPGP-encrypted email requires the recipient to generate a PGP key pair, which consists of a private key and public key, and then distribute the public key. For the purposes of SecureDrop's OSSEC or Daily Journalist Alert emails, the public keys must be installed on the Servers by an Administrator and the respective recipients must have an email client configured with the corresponding private key.
+OpenPGP-encrypted email requires the recipient to generate a PGP key pair, which consists of a secret key and public key, and then distribute the public key. For the purposes of SecureDrop's OSSEC or Daily Journalist Alert emails, the public keys must be installed on the Servers by an Administrator and the respective recipients must have an email client configured with the corresponding secret key.
 
 If you are not familiar with configuring OpenPGP-encrypted email yourself, listed below are a few options we recommend. Each of these options provide the ability to export the public key and view the key fingerprint, which are the two things you need to have on-hand for each alert type when installing or configuring the SecureDrop Servers.
 
 .. warning::
-  When exporting your *public key*, it is important to ensure you do not accidentally export your *private key*. 
+  When exporting your *public key*, it is important to ensure you do not accidentally export your *secret key*. 
 
 Mailvelope
 ~~~~~~~~~~
@@ -55,7 +55,7 @@ Daily Journalist Alerts are optional, and can be configured during or after inst
 
 In the simplest case a Journalist will provide their email and Journalist Alert public key to you, the Administrator. If a team of Journalist wants to receive these daily alerts, they should share a Journalist Alert Public Key and ask the admin to setup a mail alias (SecureDrop does not provide that service) so they all receive the alerts and are able to decrypt them.
 
-It is not possible to specify multiple email addresses for email notifications. If there are multiple intended recipients, use an alias or mailing list. However, all subscribers must share the Journalist Alert Private Key, as it is not possible to specify multiple keys.
+It is not possible to specify multiple email addresses for email notifications. If there are multiple intended recipients, use an alias or mailing list. However, all subscribers must share the Journalist Alert Secret Key, as it is not possible to specify multiple keys.
 
 If you wish to enable this, you will need:
 

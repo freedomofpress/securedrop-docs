@@ -1,9 +1,9 @@
 Generate the Submission Key
 =============================
 
-When a Source sends a message or file via SecureDrop, the :ref:`Application Server<glossary_application_server>` encrypts it with your instance's :ref:`Submission Key<glossary_submission_key>`. The private part of this key is stored in an isolated `sd-gpg` qube on the Journalist Workstation. Messages and files sent through SecureDrop can only be decrypted on a Journalist Workstation using this private key.
+When a Source sends a message or file via SecureDrop, the :ref:`Application Server<glossary_application_server>` encrypts it with your instance's :ref:`Submission Key<glossary_submission_key>`. The secret part of this key is stored in an isolated `sd-gpg` qube on the Journalist Workstation. Messages and files sent through SecureDrop can only be decrypted on a Journalist Workstation using this secret key.
 
-The Submission Key for your SecureDrop is only generated once. Then the public and private parts of this key will be copied to their respective locations. 
+The Submission Key for your SecureDrop is only generated once. Then the public and secret parts of this key will be copied to their respective locations. 
 
 If you have opted to perform your initial installation with *two* laptops (distinct Admin and Journalist Workstations, rather than a combined laptop for both) then perform these steps on the laptop that will become the *Journalist Workstation*.
 

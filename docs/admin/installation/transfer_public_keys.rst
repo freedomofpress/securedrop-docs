@@ -77,13 +77,13 @@ Import Submission Public Key onto the Admin Workstation
 #. Open a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Xfce Terminal**) and run the following command to move the Submission Public Key:
 
 	.. code-block:: sh
-        
+
 		mv ~/sd-public.sec ~/.config/securedrop-admin/.
 
 Copy email alert public keys
 ----------------------------
 
-SecureDrop sends different email alerts which are encrypted to a PGP private key associated with specific recipient email addresses, as outlined :doc:`here<email_alerts>`.
+SecureDrop sends different email alerts which are encrypted to a PGP secret key associated with specific recipient email addresses, as outlined :doc:`here<email_alerts>`.
 
 Before proceeding, you will need to transfer the public keys for the email addresses which will receive the OSSEC and optional Daily Journalist Alerts to ``~/.config/securedrop-admin`` in the ``sd-admin`` qube on the Admin Workstation.
 
