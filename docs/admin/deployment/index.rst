@@ -11,9 +11,7 @@ The deployment section here covers a variety of tasks an Administrator might nee
 
 Certain topics, such as creating a :ref:`Landing Page<glossary_landing_page>` and onboarding :ref:`Journalists<glossary_journalist>`, are universal to all SecureDrop instances. Other topics are optional, and are only needed if they fit in with the organization's security policies and newsroom workflows.
 
-The deployment tasks generally only need to be performed once. For tasks related to the upkeep and troubleshooting of your SecureDrop instance, we recommend reviewing :doc:`the maintenance documentation. <../maintenance/logging>`
-
-.. TODO fix the above link
+The deployment tasks generally only need to be performed once. For tasks related to the upkeep and troubleshooting of your SecureDrop instance, we recommend reviewing :doc:`the maintenance documentation. </admin/maintenance/index>`
 
 Protecting the security of the system
 =====================================

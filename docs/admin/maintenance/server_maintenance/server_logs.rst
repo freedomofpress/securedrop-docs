@@ -3,7 +3,7 @@ Investigating logs
 
 When troubleshooting issues with your SecureDrop instance, be sure to examine all relevant log files on both servers. To work with logs, it is helpful to be familiar with commands like ``less``, ``tail`` and ``grep``; to inspect older, archived logs (names end with ``.gz``) you can use commands like ``zless`` and ``zgrep`` to avoid manually decompressing each file.
 
-.. include:: ../../includes/get-logs.txt
+.. include:: /includes/get-logs.txt
 
 Logs to examine on both servers
 -------------------------------

@@ -9,7 +9,7 @@ In cases where an Admin Workstation USB flash drive has been lost or destroyed, 
   - Tails Template drive
   - 1 replacement Admin Workstation USB flash drive (USB3 and 16GB or better recommended)
 
-The process requires experience with the Linux command line and Tails, and can take up to 3 hours. If a backup of the SecureDrop Application Server is available, :doc:`reinstalling the instance and restoring the backup </admin/maintenance/backup_servers>` may be simpler. An outline of the steps involved in rebuilding an Admin Workstation is as follows:
+The process requires experience with the Linux command line and Tails, and can take up to 3 hours. If a backup of the SecureDrop Application Server is available, :doc:`reinstalling the instance and restoring the backup </admin/maintenance/server_maintenance/backup_servers>` may be simpler. An outline of the steps involved in rebuilding an Admin Workstation is as follows:
 
 #. Prepare the USB flash drives.
 #. (Optional) Boot the Application and Monitor Server in single user mode and reset the shell admin account password.
@@ -343,7 +343,7 @@ Step 8: Post-rebuild tasks
 
 We recommend completing the following tasks after the rebuild:
 
-- Set up a new administration account on the Admin Interface, by following :doc:`these instructions <../installation/create_admin_account>`
+- Set up a new administration account on the Admin Interface, by following :doc:`these instructions </admin/installation/create_admin_account>`
 - Verify that incoming messages and files can be decrypted in SecureDrop Inbox.
 - Back up your Admin Workstation.
 - Delete invalid admin accounts in the Admin Interface.
@@ -354,7 +354,7 @@ We recommend completing the following tasks after the rebuild:
      securedrop-admin reset_admin_access
 
   You can also selectively remove invalid keys by logging on to the Application and Monitor Servers and editing the file ``~/.ssh/authorized_keys``, making sure not to remove the public key belonging to your new Admin Workstation.
-- :doc:`Back up the Application Server </admin/maintenance/backup_servers>` once SSH-over-Tor has been restored. Ensure that server and workstation backups happen regularly.
+- :doc:`Back up the Application Server </admin/maintenance/server_maintenance/backup_servers>` once SSH-over-Tor has been restored. Ensure that server and workstation backups happen regularly.
 - Provision all other Tails workstation drives (Journalist and/or Admin Workstations) with updated Tor credentials, so that they can access SecureDrop after this rebuild.
 
   You will need to copy the following file(s) to all other Admin and Journalist Workstations, replacing the existing files of the same name:

@@ -64,8 +64,8 @@ If you have access to the password for your admin user, you can use it to log in
 Boot into single user mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. |GRUB in default state| image:: ../../images/0.5.x_to_0.6/grub-in-default-state.png
-.. |GRUB in edit mode| image:: ../../images/edit-grub-0.8.0.png
+.. |GRUB in default state| image:: /images/0.5.x_to_0.6/grub-in-default-state.png
+.. |GRUB in edit mode| image:: /images/edit-grub-0.8.0.png
 
 To access single user mode, you will have to edit the boot options for the new kernel. You can do so using the GRUB bootloader, pictured below:
 
@@ -93,8 +93,8 @@ If you are experiencing network issues or other kernel problems, we recommend th
 Compare the behavior of the old kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. |GRUB with advanced options selected| image:: ../../images/0.5.x_to_0.6/grub-with-advanced-options-selected.png
-.. |Selecting a specific kernel in GRUB| image:: ../../images/grubmenu-0.8.0.png
+.. |GRUB with advanced options selected| image:: /images/0.5.x_to_0.6/grub-with-advanced-options-selected.png
+.. |Selecting a specific kernel in GRUB| image:: /images/grubmenu-0.8.0.png
 
 Reboot the server in a safe way with ``sudo reboot``. After the BIOS screen, you can select a different kernel from the GRUB boot menu by selecting **Advanced options for Ubuntu**, pictured below.
 
@@ -227,4 +227,4 @@ Getting Support
 
 Should you require further support with your SecureDrop installation, we are happy to help!
 
-.. include:: ../../includes/getting-support.txt
+.. include:: /includes/getting-support.txt

@@ -148,9 +148,9 @@ Driverless
 
 SecureDrop implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
 
-.. figure:: ../workstation_reference/images/airprint.jpg
+.. figure:: /images/airprint.jpg
 
-.. figure:: ../workstation_reference/images/moipra.jpg
+.. figure:: /images/moipra.jpg
 
 You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
 

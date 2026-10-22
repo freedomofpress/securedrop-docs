@@ -1,5 +1,15 @@
-Migration overview
-==================
+Migration from Tails
+====================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Migration from Tails
+   :hidden:
+
+   migrate_install_qubes
+   journalist_migration
+   admin_migration
+   removing_gpg_passphrase
 
 .. _migration_overview:
 

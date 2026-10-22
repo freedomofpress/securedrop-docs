@@ -6,7 +6,7 @@ BIOS update instructions
 Automatic BIOS updates
 ----------------------
 
-These instructions should work for many recent laptops, including the two ThinkPad models specifically included in our :doc:`../installation/hardware`.
+These instructions should work for many recent laptops, including the two ThinkPad models specifically included in our :doc:`/admin/installation/hardware`.
 
 If your laptop has Ubuntu preinstalled, run its **Software Updater** twice as follows:
 

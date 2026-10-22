@@ -16,7 +16,7 @@ In some cases, if you are not able to ensure the security of your instance durin
 
 1. Consult with Journalists using the system, to ensure that any active Sources are aware of the situation, and that source conversations can either be paused or continued via other means.
 2. Update your SecureDrop Landing Page (typically a “send us tips” page, or a page linked from there) to let prospective Sources know that the outage is coming, and optionally to redirect them to other contact methods, such as a shared Signal tipline.
-3. :doc:`Back up your Servers </admin/maintenance/backup_servers>`.
+3. :doc:`Back up your Servers </admin/maintenance/server_maintenance/backup_servers>`.
 4. Power down the Servers, and remove them and the network firewall from the server room. Store the equipment securely offsite.
 
 .. warning:: By default the SecureDrop Servers are not set up with full disk encryption enabled, to allow for hands-off reboots. This means that it is crucial that they be kept secure. If the Servers are lost or stolen, an adversary would gain access to all encrypted files and messages sent by Sources that have not been deleted. While they would not be able to decrypt them, this would still provide valuable metadata about source conversations.
@@ -41,7 +41,7 @@ The following steps will guide you through the decommissioning of your SecureDro
 
 #. Optional: Save a backup. 
    
-   If you want to save a backup of the Application Server (for example, to reinstall SecureDrop in the future using the same onion address), follow our :doc:`backup guidelines </admin/maintenance/backup_servers>`. Once the backup has been created, you can move it onto an encrypted drive, such as a LUKS-encrypted USB flash drive. You will also require a backup of the Submission Private Key found on the Journalist Workstation.
+   If you want to save a backup of the Application Server (for example, to reinstall SecureDrop in the future using the same onion address), follow our :doc:`backup guidelines </admin/maintenance/server_maintenance/backup_servers>`. Once the backup has been created, you can move it onto an encrypted drive, such as a LUKS-encrypted USB flash drive. You will also require a backup of the Submission Private Key found on the Journalist Workstation.
 
    If you do not require a server backup, you may choose to export specific submitted files or conversation transcripts, and store them in a secure manner (such as on an encrypted USB flash drive). 
 #. Optional: Delete data on the Server.

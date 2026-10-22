@@ -127,7 +127,7 @@ To reset two-factor authentication:
 Off-boarding users
 ------------------
 
-See :doc:`our guide to off-boarding users from SecureDrop </admin/reference/offboarding>`.
+See :doc:`our guide to off-boarding users from SecureDrop </admin/deployment/onboarding/offboarding>`.
 
 Instance configuration
 ^^^^^^^^^^^^^^^^^^^^^^

@@ -12,5 +12,6 @@ Onboarding
    provisioning_usb
    yubikey_setup
    managing_clipboard
+   offboarding
    
    

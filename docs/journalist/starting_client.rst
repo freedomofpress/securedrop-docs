@@ -32,7 +32,7 @@ To sign in, enter the username and passphrase provided to you by your SecureDrop
 Troubleshooting tips
 ~~~~~~~~~~~~~~~~~~~~
 
-If you have trouble running the updater or logging in, please contact your Administrator. Our :doc:`network troubleshooting guide <../admin/maintenance/troubleshooting_connection>` for administrators gives detailed steps for investigating connectivity issues.
+If you have trouble running the updater or logging in, please contact your Administrator. Our :doc:`network troubleshooting guide </admin/maintenance/workstation_maintenance/troubleshooting_connection>` for administrators gives detailed steps for investigating connectivity issues.
 
 Working offline
 ---------------

@@ -63,7 +63,7 @@ When the backup action is complete, the backup will be stored as a compressed ar
 
 .. warning:: The backup file contains sensitive information! It should only be stored on the Admin Workstation, or on a dedicated encrypted backup USB flash drive.
 
-.. include:: ../../includes/backup-warning.txt
+.. include:: /includes/backup-warning.txt
 
 Restoring from a backup
 -----------------------
@@ -154,9 +154,9 @@ Moving a SecureDrop instance to new hardware involves:
       securedrop-admin install
       securedrop-admin localconfig
 
-#. :doc:`Test the new instance <../installation/test_the_installation>` to verify that the web interfaces are available and the Servers can be reached via SSH.
+#. :doc:`Test the new instance </admin/installation/test_the_installation>` to verify that the web interfaces are available and the Servers can be reached via SSH.
 
-#. If you have migrated to new hardware, ensure your old Servers have been decommissioned and/or destroyed by following the relevant sections of :doc:`our decommissioning documentation <../maintenance/decommission>`.
+#. If you have migrated to new hardware, ensure your old Servers have been decommissioned and/or destroyed by following the relevant sections of :doc:`our decommissioning documentation </admin/maintenance/decommission>`.
 
 .. _repair_admin_usbs:
 
