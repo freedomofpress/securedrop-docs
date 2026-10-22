@@ -1,7 +1,7 @@
 Apply Admin Workstation configuration
 =====================================
 
-The SecureDrop installation process uses authenticated :ref:`Onion Services<glossary_onion_service>` as an additional layer of protection for access to the SecureDrop Servers:
+SecureDrop uses authenticated :ref:`Onion Services<glossary_onion_service>` as an additional layer of protection for access to the SecureDrop Servers:
 
 #. The Admin Interface, because it provides access to submissions (although they are encrypted to the Submission Private Key), and some metadata about sources and submissions.
 

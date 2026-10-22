@@ -111,7 +111,7 @@ When ready run the following command in the ``dom0`` terminal:
 
 .. TODO update command for Journalist Workstation
 
-This command will take a considerable amount of time and approximately 4GB of bandwidth, as it sets up multiple qubes and installs supporting packages. When the command finishes, reboot the machine to complete the installation of SecureDrop Inbox and it's associated qubes and configuration.
+This command will take approximately 30-60 minutes and 4GB of bandwidth, as it sets up multiple qubes and installs supporting packages. When the command finishes, reboot the machine to complete the installation of SecureDrop Inbox and it's associated qubes and configuration.
 
 .. _end_install_securedrop_workstation:
 
