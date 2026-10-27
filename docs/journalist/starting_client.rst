@@ -43,7 +43,7 @@ Offline mode is available for circumstances where you wish to work offline or ar
 
 |screenshot_offline_mode|
 
-.. important:: Protecting downloaded and decrypted files and messages is another reason why the SecureDrop Workstation needs to be powered off completely when it is not in use.
+.. important:: Protecting downloaded and decrypted files and messages is another reason why the Journalist Workstation needs to be powered off completely when it is not in use.
 
 .. |screenshot_desktop-shortcut| image:: ../images/screenshot_desktop-shortcut.png
 

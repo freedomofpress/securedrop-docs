@@ -1,7 +1,7 @@
 Removing the passphrase from a GPG key
 ======================================
 
-GPG key files should not be passphrase-protected for use with SecureDrop Workstation.
+GPG key files should not be passphrase-protected for use with SecureDrop.
 
 In a ``dom0`` terminal on your Qubes workstation (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**), assuming a passphrase-protected secret key file ``/tmp/sd-journalist.sec``, import the key into a new temporary GnuPG directory, entering the passphrase when prompted:
 
@@ -43,13 +43,8 @@ Verify that the new keyfile ``/tmp/nopassphrase.sec`` starts with the ``-----BEG
 
   cp /tmp/nopassphrase.sec ~/.config/securedrop-manage/sd-journalist.sec
 
-If you are provisioning SecureDrop Workstation for the first time, continue with the installation instructions. Or, to re-check an existing configuration:
+If you are provisioning SecureDrop for the first time, continue with the installation instructions. Or, to re-check an existing configuration:
 
 .. code-block:: sh
 
-  sdw-admin --validate
-
-.. |qubes_menu| image:: ../../images/qubes_menu.png
-  :alt: Qubes Application menu
-.. |qubes_menu_gear| image:: ../../images/qubes_menu_gear.png
-  :alt: System Tools 
+    securedrop-manage validate

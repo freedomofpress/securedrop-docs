@@ -3,7 +3,7 @@ Passphrases
 
 Each individual with a role (Administrator or Journalist) at a given SecureDrop instance must generate and retain a number of strong, unique passphrases. The section is an overview of the passphrases, keys, two-factor secrets, and other credentials that are required for each role in a SecureDrop installation.
 
-Ideally, each Administrator and Journalist would only have to remember the passphrases to unlock the encrypted storage on their Admin or SecureDrop Workstation laptop.
+Ideally, each Administrator and Journalist would only have to remember the passphrases to unlock the encrypted storage on their Admin or Journalist Workstation laptop.
 
 Administrator
 -------------
@@ -16,7 +16,7 @@ The Administrator will be using an Admin Workstation configured to connect to th
 
    - The Application Server and Monitor Server admin username and password (required to be the same for both servers).
    - The network firewall username and password.
-   - The SSH private key and, if set, the key's passphrase.
+   - The SSH key and, if set, the key's passphrase.
    - The OSSEC Alert Public Key.
    - The Administrator's personal GPG public key, if you want to potentially encrypt sensitive files to it for further analysis.
    - The account details for the destination email address for OSSEC alerts.
@@ -34,10 +34,10 @@ And the Administrator will also have the following two credentials:
 Journalist
 ------------
 
-The Journalist will be using a SecureDrop Workstation to view messages and files sent to their SecureDrop instance. The tasks performed by the Journalist will require the following set of passphrases:
+The Journalist will be using a Journalist Workstation to view messages and files sent to their SecureDrop instance. The tasks performed by the Journalist will require the following set of passphrases:
 
-- The Qubes full disk encryption (FDE) password of the SecureDrop Workstation they use, required to unlock system storage on boot.
-- The Qubes system user password for the SecureDrop Workstation they use, required to log in.
+- The Qubes full disk encryption (FDE) password of the Journalist Workstation they use, required to unlock system storage on boot.
+- The Qubes system user password for the Journalist Workstation they use, required to log in.
 
 The Journalist will also need to have a two-factor authenticator, such as an Android or iOS device with FreeOTP installed, or a YubiKey. This means the Journalist will also have the following credential:
 
@@ -46,7 +46,7 @@ The Journalist will also need to have a two-factor authenticator, such as an And
 Export Device
 ~~~~~~~~~~~~~~~
 
-We recommend using encrypted USB flash drives for transferring files off of the SecureDrop Workstation.
+We recommend using encrypted USB flash drives for transferring files off of the Journalist Workstation.
 
 For every export operation, the user will need to enter the USB flash drive's encryption passphrase at least twice (on the computer they're copying from, and on the computer they're copying to). To make it easy for them to find the passphrase, we recommend storing it in the Journalist's own existing password manager, which should be accessible using their smartphone.
 

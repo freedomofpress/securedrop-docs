@@ -24,7 +24,7 @@ Please see the :doc:`relevant page</admin/reference/admin_interface>` for comple
 Admin Workstation
 -----------------
 
-The Admin Workstation is a laptop running Qubes OS, initially configured as a SecureDrop Workstation but with additional tools and credentials added to allow an Administrator to install and maintain a SecureDrop instance, in particular the :doc:`securedrop-admin</admin/reference/securedrop_admin>` utility. An Admin Workstation is capable of connection to the web-based Admin Interface, and to the Application and Monitor servers using SSH.
+The Admin Workstation is a laptop running Qubes OS, configured with the administration tools and credentials needed for an Administrator to install and maintain a SecureDrop instance, in particular the :doc:`securedrop-admin</admin/reference/securedrop_admin>` utility. An Admin Workstation is capable of connection to the web-based Admin Interface, and to the Application and Monitor servers using SSH.
 
 .. _glossary_application_server:
 
@@ -40,18 +40,18 @@ Instructions and tips for accessing the Application Server over SSH are on the :
 Export Device
 -------------
 
-The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a SecureDrop Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
+The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a Journalist Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
 
-Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/installation/provisioning_usb>`.
+Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/deployment/provisioning_usb>`.
 
 .. _glossary_journalist:
 
 Journalist
 ----------
 
-The Journalist uses SecureDrop to communicate with Sources and review files they submit. Journalists do this by using SecureDrop Inbox on a SecureDrop Workstation laptop to connect to the Application Server.
+The Journalist uses SecureDrop to communicate with Sources and review files they submit. Journalists do this by using SecureDrop Inbox on a Journalist Workstation laptop to connect to the Application Server.
 
-If a Journalist chooses to release any submitted files, they can be prepared for publication on the SecureDrop Workstation before being transferred to another computer.
+If a Journalist chooses to release any submitted files, they can be prepared for publication on the Journalist Workstation before being transferred to another computer.
 
 Instructions for using SecureDrop as a Journalist are available in our :doc:`Journalist Guide </journalist/journalist>`.
 
@@ -60,7 +60,7 @@ Instructions for using SecureDrop as a Journalist are available in our :doc:`Jou
 Journalist Alert Key
 --------------------
 
-The Journalist Alert Public Key is used for encrypting the daily alert email that notifies Journalists about whether or not there has been submission activity in the past 24 hours. The Journalist uses an associated Journalist Alert Private Key to decrypt the alerts.
+The Journalist Alert Public Key is used for encrypting the daily alert email that notifies Journalists about whether or not there has been submission activity in the past 24 hours. The Journalist uses an associated Journalist Alert Secret Key to decrypt the alerts.
 
 This Journalist Alert Key pair is created when :doc:`preparing email accounts for alerts</admin/installation/email_alerts>`.
 
@@ -91,7 +91,7 @@ Tor Onion Services provide anonymous inbound connections to websites and other s
 
 Onion Services can be only be accessed using Tor Browser. Rather than a traditional internet address, Onion Services are reached using a special onion address. For example, ``sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion`` is the onion address for the Onion Service version of the SecureDrop website.
 
-Authenticated Onion Services require an additional authentication token be provided when connecting to the server. The Admin Interface, the API endpoint connected to by SecureDrop Inbox, and SSH access to the servers (in SSH-over-Tor mode) are all authenticated Onion Services.
+Authenticated Onion Services require an additional private key be provided when connecting to the server. The Admin Interface, the API endpoint connected to by SecureDrop Inbox, and SSH access to the servers (in SSH-over-Tor mode) are all authenticated Onion Services.
 
 Read more about `Onion Services in Tor's glossary <https://support.torproject.org/onionservices/>`__.
 
@@ -109,18 +109,16 @@ This OSSEC Alert Key pair is created when :doc:`preparing email accounts for ale
 SecureDrop Inbox
 ----------------
 
-SecureDrop Inbox is the central application on a SecureDrop Workstation. It allows Journalists to connect to their SecureDrop instance, download and decrypt messages from Sources, and compose and send replies. SecureDrop Inbox can only run on a SecureDrop Workstation.
+SecureDrop Inbox is the central application on a Journalist Workstation. It allows Journalists to connect to their SecureDrop instance, download and decrypt messages from Sources, and compose and send replies. SecureDrop Inbox can only run on a Journalist Workstation.
 
 Instructions for using SecureDrop Inbox appear in our :doc:`Journalist Guide </journalist/journalist>`.
 
-.. _glossary_securedrop_workstation:
+.. _glossary_journalist_workstation:
 
-SecureDrop Workstation
+Journalist Workstation
 ----------------------
 
-The SecureDrop Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling untrusted files submitted by Sources. Each Journalist may have their own SecureDrop Workstation, or one may be shared among several Journalists.
-
-Read more about :doc:`SecureDrop Workstation and Qubes OS</introduction/securedrop_workstation>`.
+The Journalist Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling untrusted files submitted by Sources. Each Journalist may have their own Journalist Workstation, or one may be shared among several Journalists.
 
 .. _glossary_source:
 
@@ -145,8 +143,8 @@ Instructions for using the Source Interface are available in our :doc:`Source Gu
 Submission Key
 --------------
 
-The Submission Key is the GPG keypair used to encrypt and decrypt messages and files sent to your SecureDrop. Because the public key and private key must be treated very differently, we sometimes refer to them explicitly as the Submission Public Key and the Submission Private Key.
+The Submission Key is the GPG keypair used to encrypt and decrypt messages and files sent to your SecureDrop. Because the public key and secret key must be treated very differently, we sometimes refer to them explicitly as the Submission Public Key and the Submission Secret Key.
 
 The Submission Public Key is uploaded to your SecureDrop servers as part of the installation process. Once your SecureDrop is online, anyone will be able to download it.
 
-The Submission Private Key is used to decrypt all messages and files sent to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a SecureDrop Workstation or on offline backup storage.
+The Submission Secret Key is used to decrypt all messages and files sent to your SecureDrop and *must be kept offline and safe*. It should only be kept in an offline virtual machine on a Journalist Workstation or on offline backup storage.
