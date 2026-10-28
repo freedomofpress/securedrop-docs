@@ -21,7 +21,7 @@ Back up a Journalist Workstation
 
 When backing up Journalist Workstation, there are four distinct sets of data you can back up:
 
-#. The Submission Private Key and SecureDrop Workstation config in ``dom0`` (required)
+#. The Submission Secret Key and SecureDrop Workstation config in ``dom0`` (required)
 #. The messages and files from SecureDrop Inbox stored in ``sd-app`` (optional)
 
    If you skip this step, all previous messages exchanged between Sources and Journalists, as well as any submitted files you have downloaded, will not be included in the backup. The first time you log in on a restored SecureDrop Workstation, everything will need to be re-downloaded from your SecureDrop server.
@@ -34,7 +34,7 @@ When backing up Journalist Workstation, there are four distinct sets of data you
 
    These may include additional qubes and their templates, custom RPC policies, etc.
    
-   If you have additional customizations you wish to back up, we suggest capturing that as a separate backup without the Submission Private Key, SecureDrop Workstation config file, or any messages and files from SecureDrop Inbox so that you can avoid proliferating copies of sensitive assets.
+   If you have additional customizations you wish to back up, we suggest capturing that as a separate backup without the Submission Secret Key, SecureDrop Workstation config file, or any messages and files from SecureDrop Inbox so that you can avoid proliferating copies of sensitive assets.
 
 .. note::
    Before starting your backup, decide whether you want to back up your data from ``sd-app``, noting the caveats listed above. 
@@ -42,7 +42,7 @@ When backing up Journalist Workstation, there are four distinct sets of data you
 Preserve files from ``dom0`` and ``sd-gpg``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Preserve configuration files and private key material by copying them into ``dom0``.
+Preserve configuration files and secret key material by copying them into ``dom0``.
 
 In a ``dom0`` terminal opened via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal**:
 
@@ -90,7 +90,7 @@ Click **Next**, and in **Backup destination,** specify the ``sd-devices`` qube a
 Set a strong, unique backup encryption passphrase (7-word diceware), and ensure this passphrase is stored securely outside SecureDrop Workstation.
 
 .. note::
-   This passphrase protects sensitive components of your SecureDrop instance, including the Submission Private Key, and unencrypted submissions (if ``sd-app`` is backed up). Ensure it is a very strong password and is stored securely.
+   This passphrase protects sensitive components of your SecureDrop instance, including the Submission Secret Key, and unencrypted submissions (if ``sd-app`` is backed up). Ensure it is a very strong password and is stored securely.
 
 Uncheck **save backup profile**, then proceed with the backup.
 
@@ -194,7 +194,7 @@ You should see a directory called ``home-restore-$YYYY-MM-DD-HHMMSS/dom0-home/$U
 
    cp ~/$RESTORE_DIR/securedrop-workstation-dom0-config/{sd-journalist.sec,config.json,sd-keys.asc} ~/.config/securedrop-manage/
 
-Optionally, inspect each file before proceeding. The first file should be an ASCII-armored GPG private key file. The second file should follow the format of the `example configuration file <https://raw.githubusercontent.com/freedomofpress/securedrop-workstation/main/files/config.json.example>`_, with values for its fields (e.g., ``hostname``, ``submission_key_fpr``) specific to your configuration. The file may be formatted in a single line without whitespace. The third file is a backup of key material from ``sd-gpg`` and will be moved into that qube when you have reprovisioned the system.
+Optionally, inspect each file before proceeding. The first file should be an ASCII-armored GPG secret key file. The second file should follow the format of the `example configuration file <https://raw.githubusercontent.com/freedomofpress/securedrop-workstation/main/files/config.json.example>`_, with values for its fields (e.g., ``hostname``, ``submission_key_fpr``) specific to your configuration. The file may be formatted in a single line without whitespace. The third file is a backup of key material from ``sd-gpg`` and will be moved into that qube when you have reprovisioned the system.
 
 Verify that the configuration is valid:
 
@@ -208,7 +208,7 @@ Reinstall SecureDrop:
 
 .. code-block:: sh
 
-   securedrop-manage apply target journalist
+   securedrop-manage apply --target journalist
 
 Restore additional keys to ``sd-gpg``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

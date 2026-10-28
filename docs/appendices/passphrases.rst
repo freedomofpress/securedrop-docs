@@ -16,7 +16,7 @@ The Administrator will be using an Admin Workstation configured to connect to th
 
    - The Application Server and Monitor Server admin username and password (required to be the same for both servers).
    - The network firewall username and password.
-   - The SSH private key and, if set, the key's passphrase.
+   - The SSH key and, if set, the key's passphrase.
    - The OSSEC Alert Public Key.
    - The Administrator's personal GPG public key, if you want to potentially encrypt sensitive files to it for further analysis.
    - The account details for the destination email address for OSSEC alerts.

@@ -14,7 +14,8 @@ For an installation of SecureDrop, you must acquire:
 
 * 2 computers (with storage drives) to use as the SecureDrop Servers.
 * A mouse, keyboard, and monitor (along with any necessary dongles or adapters) for installing the Servers.
-* At least 1 dedicated physical laptop, for a combined Admin + Journalist Workstation.
+* At least 2 Qubes-compatible laptops for dedicated Journalist and Admin Workstations (recommended).
+   * A single Qubes-compatible laptop for combined Admin + Journalist Workstation.
 * A dedicated network firewall with at least 4 NICs.
 * At least 3 ethernet cables.
 * At least 1 USB flash drive for OS installation media, and at least 1 more USB flash drive if needed as an Export Device.
@@ -35,6 +36,8 @@ Additionally, you may want to consider the following purchases:
 
 Advice for users on a tight budget
 ----------------------------------
+
+Although we recommend dedicated physical laptops for the Journalist and Admin Workstations, a single laptop can server as a combined Admin + Journalist Workstation. This is a cheaper option for smaller newsrooms, where it's possible for Journalists and Administrators to share the same Workstation, or where a single person fulfills both roles. 
 
 If you cannot afford to purchase new hardware for your SecureDrop instance, we encourage you to consider re-purposing existing hardware to use with SecureDrop. Since SecureDrop's throughput is significantly limited by the use of Tor for all connections, there is no need to use top of the line hardware for any of the Servers or the firewall.
 

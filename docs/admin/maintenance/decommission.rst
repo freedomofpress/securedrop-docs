@@ -41,7 +41,7 @@ The following steps will guide you through the decommissioning of your SecureDro
 
 #. Optional: Save a backup. 
    
-   If you want to save a backup of the Application Server (for example, to reinstall SecureDrop in the future using the same onion address), follow our :doc:`backup guidelines </admin/maintenance/server_maintenance/backup_servers>`. Once the backup has been created, you can move it onto an encrypted drive, such as a LUKS-encrypted USB flash drive. You will also require a backup of the Submission Private Key found on the Journalist Workstation.
+   If you want to save a backup of the Application Server (for example, to reinstall SecureDrop in the future using the same onion address), follow our :doc:`backup guidelines </admin/maintenance/server_maintenance/backup_servers>`. Once the backup has been created, you can move it onto an encrypted drive, such as a LUKS-encrypted USB flash drive. You will also require a backup of the Submission Secret Key found on the Journalist Workstation.
 
    If you do not require a server backup, you may choose to export specific submitted files or conversation transcripts, and store them in a secure manner (such as on an encrypted USB flash drive). 
 #. Optional: Delete data on the Server.

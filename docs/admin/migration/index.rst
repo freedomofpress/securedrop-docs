@@ -21,7 +21,7 @@ The previous version of SecureDrop was based on three "workstations":
 
 Each of these workstations was actually an individual USB flash drive with the `Tails <https://tails.net>`__ operating system installed, used to boot a laptop for each role (in the case of the SVS, this was always a physically air-gapped laptop).
 
-Development on the successor to this Tails-based version of SecureDrop, dubbed *SecureDrop Workstation*, began in 2017. This new version of SecureDrop sought to replace a handful of Tails USB drives and air-gapped laptops with a single Workstation based on `Qubes OS <https://qubes-os.org>`__. In the `pilot <https://securedrop.org/news/piloting-securedrop-workstation-qubes-os/>`__ and `open beta <https://securedrop.org/news/securedrop-workstation-1_0_0-released/>`__, a Tails-based Admin Workstation was still needed for administration tasks. 
+Development on the successor to this Tails-based version of SecureDrop, dubbed *SecureDrop Workstation*, began in 2017. This new version of SecureDrop replaces the system of Tails USB drives and air-gapped laptops with a single Workstation based on `Qubes OS <https://qubes-os.org>`__. In the `pilot <https://securedrop.org/news/piloting-securedrop-workstation-qubes-os/>`__ and `open beta <https://securedrop.org/news/securedrop-workstation-1_0_0-released/>`__, a Tails-based Admin Workstation was still needed for administration tasks. 
 
 .. TODO link to SDW 2.0.0 blogpost
 

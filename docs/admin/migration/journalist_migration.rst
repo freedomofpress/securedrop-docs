@@ -7,10 +7,10 @@ These steps will create a new Journalist Workstation from your existing Tails Jo
 
 - Alternatively, you may perform these steps on an :doc:`existing Admin Workstation</admin/migration/admin_migration>` laptop to turn it into a combined Admin + Journalist Workstation.
 
-Import Submission Private Key
+Import Submission Secret Key
 -----------------------------
 
-In order to decrypt submissions, you will need a copy of the `Submission Private Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_ from your SecureDrop instance's Secure Viewing Station (SVS).
+In order to decrypt submissions, you will need a copy of the `Submission Secret Key <https://docs.securedrop.org/en/stable/glossary.html#submission-key>`_ from your SecureDrop instance's Secure Viewing Station (SVS).
 
 To protect this key and preserve the air gap, you will need to connect the SVS USB to a qube with no network access, and copy it from there to ``dom0``. You cannot directly copy and paste to ``dom0`` - instead, follow the steps below:
 
@@ -39,7 +39,7 @@ To protect this key and preserve the air gap, you will need to connect the SVS U
 Follow the command prompts to complete submission key import. 
 
 .. note::
-  If there are multiple keys present on the device, ``securedrop-manage configure --target journalist`` will print the fingerprints of those keys for you to select which to use as the submission private key. You can open ``<source interface address>.onion/metadata`` in Tor Browser on another network-connected computer to check the correct key fingerprint used by your SecureDrop instance.
+  If there are multiple keys present on the device, ``securedrop-manage configure --target journalist`` will print the fingerprints of those keys for you to select which to use as the Submission Secret Key. You can open ``<source interface address>.onion/metadata`` in Tor Browser on another network-connected computer to check the correct key fingerprint used by your SecureDrop instance.
 
 6. Once the submission key import is complete, in the ``vault`` file manager, right-click on the **TailsData** sidebar entry, then select **Unmount** and disconnect the SVS USB.
 

@@ -47,4 +47,4 @@ If you are provisioning SecureDrop for the first time, continue with the install
 
 .. code-block:: sh
 
-securedrop-manage validate
+    securedrop-manage validate

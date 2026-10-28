@@ -6,7 +6,7 @@ What is SecureDrop Workstation?
 
 A :ref:`SecureDrop Workstation<glossary_journalist_workstation>` is a laptop used by a :ref:`Journalist<glossary_journalist>` to connect to a SecureDrop instance and securely view and reply to messages files submitted by :ref:`Sources<glossary_source>`. The SecureDrop Workstation is based on Qubes OS and it consists of several different isolated virtual machines (called "qubes"), so that everything a Journalist needs to use SecureDrop resides on one computer.
 
-Encryption and decryption happen seamlessly using a network-isolated qube that holds the SecureDrop :ref:`Submission Private Key<glossary_submission_key>`. Files submitted by Sources can be viewed securely on the same machine thanks to a `feature of Qubes`_ that creates temporary "disposable" qubes in which to view untrusted content without exposing the rest of the system to that content.
+Encryption and decryption happen seamlessly using a network-isolated qube that holds the SecureDrop :ref:`Submission Secret Key<glossary_submission_key>`. Files submitted by Sources can be viewed securely on the same machine thanks to a `feature of Qubes`_ that creates temporary "disposable" qubes in which to view untrusted content without exposing the rest of the system to that content.
 
 A key feature of SecureDrop is that Journalists can receive messages and files from unknown Sources without risking the security of their own machines and networks. Previously, SecureDrop accomplished this by using a physical airgap; to view any submission, Journalists would have to download them using a "Journalist Workstation", transfer them to an encrypted USB flash drive, and physically take that drive to a separate, non-networked computer (the "Secure Viewing Station") for decryption and viewing. The SecureDrop Workstation combines all of those steps into one workflow on one machine: a Qubes computer that combines the previous Journalist Workstation and the Secure Viewing Station.
 
@@ -37,7 +37,7 @@ SecureDrop Workstation tightly controls access to the network, in order to preve
 
 - ``sd-app``, which runs :ref:`SecureDrop Inbox<glossary_securedrop_inbox>`, and holds decrypted messages, replies, and attachments.
 - ``sd-viewer``, which is the template for disposable qubes used for opening and viewing attachments.
-- ``sd-gpg``, which holds the Submission Private Key required to decrypt messages, replies, and submitted files.
+- ``sd-gpg``, which holds the Submission Secret Key required to decrypt messages, replies, and submitted files.
 - ``sd-devices``, which passes exported files and conversation transcripts through to USB devices like printers and encrypted USB flash drives.
 
 By design, the Qubes OS host domain, ``dom0``, also does not have Internet access.
@@ -99,7 +99,7 @@ How does the security of this system compare to using an air-gapped Secure Viewi
 
 The air-gapped Secure Viewing Station that was previously part of a SecureDrop setup offers strong protections against exfiltration of submission contents or encryption keys by adversaries. It lacks important protections that SecureDrop Workstation provides. On the other hand, vulnerabilities in Qubes OS or Xen Hypervisor may have a greater security impact than vulnerabilities in Tails, the operating system used on a Secure Viewing Station.
 
-A typical Secure Viewing Station USB flash drive may contain messages and files from multiple Sources and always contains the highly sensitive private key needed to decrypt them. An adversary who does manage to achieve a security compromise (e.g., through a vulnerability in a file viewer application) can access these other files, and may be able to exfiltrate them.
+A typical Secure Viewing Station USB flash drive may contain messages and files from multiple Sources and always contains the highly sensitive Submission Secret Key needed to decrypt them. An adversary who does manage to achieve a security compromise (e.g., through a vulnerability in a file viewer application) can access these other files, and may be able to exfiltrate them.
 
 In spite of the air-gap, this may be possible through physical channels used to transfer files off the Secure Viewing Station (e.g., USB flash drives), or by motivating the Journalist to perform an unsafe action (e.g., `scanning a QR code <https://securedrop.org/news/security-advisory-do-not-scan-qr-codes-submitted-through-securedrop-connected-devices/>`__).
 

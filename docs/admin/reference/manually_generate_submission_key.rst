@@ -39,7 +39,7 @@ Generate a SecureDrop Submission Key on a Journalist Workstation using the steps
 Move the Submission Keypair
 ----------------------------
 
-The Submission Private Key should be moved to a specific location in ``dom0`` where it will be used by SecureDrop. 
+The Submission Secret Key should be moved to a specific location in ``dom0`` where it will be used by SecureDrop. 
 
 #. Enter the follow commands in the same ``dom0`` terminal.
 #. To list to list the details of the key you just generated, including its fingerprint run:
@@ -48,7 +48,7 @@ The Submission Private Key should be moved to a specific location in ``dom0`` wh
    
       gpg -K --show-colons --fingerprint
    
-#. The key fingerprint is the series of letters and number on the line starting with ``frp::``. Copy this fingerprint (without the colons) and paste it where ``<KeyFingerprint>`` appears in the next command. This will export the Submission Private Key to a temporary file:
+#. The key fingerprint is the series of letters and number on the line starting with ``frp::``. Copy this fingerprint (without the colons) and paste it where ``<KeyFingerprint>`` appears in the next command. This will export the Submission Secret Key to a temporary file:
 
    .. code-block:: sh
       
@@ -62,13 +62,13 @@ The Submission Private Key should be moved to a specific location in ``dom0`` wh
 
 #. If you don't see ``-----BEGIN PGP PRIVATE KEY BLOCK-----`` as the output of the previous command, go back and make sure you've entered the ``<KeyFingerprint>`` correctly.
 
-#. Run the following command to move your new Submission Private Key to its final destination:
+#. Run the following command to move your new Submission Secret Key to its final destination:
 
    .. code-block:: sh
 
       sudo mv /tmp/sd-journalist.sec ~/.config/securedrop-manage/
 
-#. Now that we have moved the Submission Private key we can remove the ``gpg`` keyring by running:
+#. Now that we have moved the Submission Secret key we can remove the ``gpg`` keyring by running:
 
    .. code-block:: sh
 

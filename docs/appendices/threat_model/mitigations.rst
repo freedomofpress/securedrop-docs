@@ -183,7 +183,7 @@ Attacks on network infrastructure
 - SecureDrop apt servers are compromised, or apt server man-in-the middle attack injects malicious packages
 - News Organization network is compromised
 - OSSEC and/or Daily Journalist Alert SMTP account credentials compromised
-- OSSEC and/or Daily Journalist Alert private key compromised
+- OSSEC and/or Daily Journalist Alert Secret Key compromised
 - SMTP relay compromised
 - Admin's network is monitored
 
