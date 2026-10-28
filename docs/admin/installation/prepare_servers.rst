@@ -7,7 +7,7 @@ Pre-install steps
 Upgrade the server BIOS
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Before beginning the installation process, you should upgrade your Servers' BIOS to the most recent stable version available. This process will differ for each server make/model - if you are using one of the recommended NUC models, you can find instructions in :doc:`../maintenance/bios_server`.
+Before beginning the installation process, you should upgrade your Servers' BIOS to the most recent stable version available. This process will differ for each server make/model - if you are using one of the recommended NUC models, you can find instructions in :doc:`/admin/maintenance/server_maintenance/bios_server`.
 
 Update BIOS settings
 ~~~~~~~~~~~~~~~~~~~~

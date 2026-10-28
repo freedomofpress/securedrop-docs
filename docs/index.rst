@@ -35,7 +35,7 @@ There are three main user roles that interact with a SecureDrop instance:
 :doc:`Journalists </journalist/journalist>`
    Use a *SecureDrop Workstation* to connect to SecureDrop and communicate with sources. Journalists download encrypted files and process them in an air-gapped environment.
 
-:doc:`Admins </admin/reference/securedrop_for_admins>`
+:doc:`Admins </admin/securedrop_for_admins>`
    Manage the *Application* and *Monitor Servers* over authenticated onion services.
 
 .. note:: The :doc:`Glossary </appendices/glossary>` provides more-precise definitions of terms and concepts particular to SecureDrop. SecureDrop is designed against a comprehensive :doc:`/appendices/threat_model/threat_model`, and has a specific notion of the :doc:`roles </appendices/glossary>` that are involved in its operation.
@@ -110,102 +110,14 @@ SecureDrop is an open source project. You can support the work by `contributing 
 .. toctree::
    :caption: Admin Guide
    :name: adminguidetoc
-   :maxdepth: 2
-   :hidden:
+   :maxdepth: 4
 
-   admin/reference/securedrop_for_admins
-
-.. toctree::
-   :caption: Admin Guide: Installation
-   :name: installtoc
-   :maxdepth: 3
-   :hidden:
-
-   admin/installation/installation_overview
-   admin/installation/hardware
-   admin/installation/prepare_installation_media
-   admin/installation/email_alerts
-   admin/installation/install_qubes
-   admin/installation/generate_submission_key
-   admin/installation/install_admin_workstation
-   admin/installation/keepassxc_for_admins
-   admin/installation/transfer_public_keys
-   admin/installation/network_firewall
-   admin/installation/firewall_pfsense
-   admin/installation/firewall_opnsense
-   admin/installation/prepare_servers
-   admin/installation/install_servers
-   admin/installation/apply_admin_workstation
-   admin/installation/create_admin_account
-   admin/installation/install_journalist
-   admin/installation/test_the_installation
-   admin/installation/troubleshoot_qubes
-   admin/installation/troubleshoot_ossec
-   admin/installation/troubleshoot_sd_manage
-
-.. toctree::
-   :caption: Admin Guide: Migration
-   :name: migrationguide
-   :maxdepth: 2
-   :hidden:
-
-   admin/migration/migration_overview
-   admin/migration/migrate_install_qubes
-   admin/migration/journalist_migration
-   admin/migration/admin_migration
-   admin/migration/removing_gpg_passphrase
-
-.. toctree::
-   :caption: Admin Guide: Deployment
-   :name: deploymentguide
-   :maxdepth: 2
-   :hidden:
-
-   admin/deployment/provisioning_usb
-   admin/deployment/onboard_journalists
-   admin/deployment/managing_clipboard
-   admin/deployment/deployment_practices
-   admin/deployment/landing_page.rst
-   admin/deployment/onion_name.rst
-   admin/deployment/whole_site_changes.rst
-   admin/deployment/sample_privacy_policy.rst
-   admin/deployment/getting_the_most_out_of_securedrop
-   admin/deployment/yubikey_setup
-   admin/deployment/tor_pow
-   admin/deployment/https_source_interface
-   admin/deployment/ssh_over_local_net
-   admin/deployment/configuring_ossec_fingerprint
-
-.. toctree::
-   :caption: Admin Guide: Reference
-   :name: adminguidereferencetoc
-   :maxdepth: 2
-   :hidden:
-
-   admin/reference/admin_interface
-   admin/reference/ossec_alerts
-   admin/reference/ssh_access
-   admin/reference/offboarding
-   admin/reference/securedrop_admin
-   admin/reference/manually_generate_submission_key
-
-.. toctree::
-   :caption: Admin Guide: Maintenance
-   :name: maintenance
-   :maxdepth: 2
-   :hidden:
-
-   admin/maintenance/server_updates
-   admin/workstation_reference/workstation_updates
-   admin/maintenance/logging
-   admin/maintenance/troubleshooting_connection
-   admin/maintenance/backup_servers
-   admin/maintenance/backup_workstations
-   admin/maintenance/rebuild_admin
-   admin/maintenance/bios_server
-   admin/maintenance/decommission
-   admin/workstation_reference/bios_workstation
-   admin/workstation_reference/reviewing_logs
+   admin/securedrop_for_admins
+   Installation <admin/installation/index>
+   Migration <admin/migration/index>
+   Deployment <admin/deployment/index>
+   Maintenance <admin/maintenance/index>
+   Reference <admin/reference/index>
 
 .. toctree::
    :caption: Appendices

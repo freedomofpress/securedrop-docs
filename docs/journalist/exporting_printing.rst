@@ -132,7 +132,7 @@ When you are done, switch back to the VeraCrypt window, and click **Dismount**.
 
 You are now ready to write articles and blog posts, edit video and audio, and begin publishing important, high-impact work!
 
-.. tip:: Check out our SecureDrop :doc:`Promotion Guide </admin/deployment/getting_the_most_out_of_securedrop>` to read about encouraging sources to use SecureDrop.
+.. tip:: Check out our SecureDrop :doc:`Promotion Guide </admin/deployment/getting_online/getting_the_most_out_of_securedrop>` to read about encouraging sources to use SecureDrop.
 
 Securely erase an Export Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -141,7 +141,7 @@ Due to the underlying technology of USB flash drives, Export Devices are likely 
 
 To protect against the possibility that a compromised encryption password will yield access to traces of previously exported files, you should securely erase your Export Devices on a regular basis. You may also wish to do this on a case-by-case basis after handling particularly sensitive files or if you believe a decryption password may be compromised.
 
-Securely erasing an Export Device can only be done by re-formatting and re-encrypting the USB flash drive with a new encryption password. You can follow the :doc:`same steps</admin/deployment/provisioning_usb>` used to initially create the Export Device, or contact your Administrator.
+Securely erasing an Export Device can only be done by re-formatting and re-encrypting the USB flash drive with a new encryption password. You can follow the :doc:`same steps</admin/deployment/onboarding/provisioning_usb>` used to initially create the Export Device, or contact your Administrator.
 
 You may also choose to destroy the drives by physical means, such as using a hammer or purpose-built shredder to pulverize the drive.
 

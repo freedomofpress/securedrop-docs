@@ -1,7 +1,7 @@
 Using a YubiKey with the Admin Interface
 ===============================================
 
-This guide describes in detail how to set up a YubiKey for two-factor authentication on the :ref:`Admin Interface<glossary_admin_interface>`. This setup is performed once per Journalist to create a secure log-in method. The process requires some configuration steps using a separate software tool.
+This guide describes in detail how to set up a YubiKey for two-factor authentication on the :ref:`Admin Interface<glossary_admin_interface>`. This setup is performed once per Administrator to create a secure log-in method. The process requires some configuration steps using a separate software tool.
 
 .. note:: You will do all of these steps from within the Tails operating system.
 
@@ -72,6 +72,6 @@ When using a Yubikey to log-in to the Admin Interface, insert the Yubikey into t
 
 .. note:: When using **Configuration Slot 2**, be sure to press and hold the YubiKey button for approximately 3 seconds. This can be somewhat finicky.
 
-.. |YubiKey Overview| image:: ../../images/yubikey_overview.png
-.. |YubiKey Config| image:: ../../images/yubikey_oath_hotp_configuration.png
-.. |YubiKey Config Successful| image:: ../../images/yubikey_configuration_successful.png
+.. |YubiKey Overview| image:: /images/yubikey_overview.png
+.. |YubiKey Config| image:: /images/yubikey_oath_hotp_configuration.png
+.. |YubiKey Config Successful| image:: /images/yubikey_configuration_successful.png

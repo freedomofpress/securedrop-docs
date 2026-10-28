@@ -75,9 +75,9 @@ And the Toronto Globe and Mail regularly puts a note in their physical paper rem
 
 |Globe and Mail Tweet|
 
-.. |The Intercept Become A Source| image:: ../../images/promotion/become_a_source.png
-.. |How to Share a Tip Securely| image:: ../../images/promotion/how_to_share_a_tip_securely.png
-.. |Gizmodo Article Footer| image:: ../../images/promotion/gizmodo_article_footer.png
-.. |New Yorker Tweet| image:: ../../images/promotion/newyorker_tweet.png
-.. |New York Times Tweet| image:: ../../images/promotion/nytimes_tweet.png
-.. |Globe and Mail Tweet| image:: ../../images/promotion/globeandmail_tweet.png
+.. |The Intercept Become A Source| image:: /images/promotion/become_a_source.png
+.. |How to Share a Tip Securely| image:: /images/promotion/how_to_share_a_tip_securely.png
+.. |Gizmodo Article Footer| image:: /images/promotion/gizmodo_article_footer.png
+.. |New Yorker Tweet| image:: /images/promotion/newyorker_tweet.png
+.. |New York Times Tweet| image:: /images/promotion/nytimes_tweet.png
+.. |Globe and Mail Tweet| image:: /images/promotion/globeandmail_tweet.png

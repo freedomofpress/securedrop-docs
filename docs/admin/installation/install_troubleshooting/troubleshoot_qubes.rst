@@ -37,7 +37,7 @@ For both device IDs (e.g. ``dom0:00_1f.6`` and ``dom0:00_14.3``), you will need 
 
 ``sys-net`` should now start, and network devices will be functional. This change is only required once on first install.  See the `Qubes documentation of this issue <https://www.qubes-os.org/doc/pci-troubleshooting/#unable-to-reset-pci-device-errors>`_ for more information.
 
-.. |screenshot_sys_net_pci_reset| image:: ../../images/screenshot_sys_net_pci_reset.png
+.. |screenshot_sys_net_pci_reset| image:: /images/screenshot_sys_net_pci_reset.png
 
 Full system freezes
 -------------------

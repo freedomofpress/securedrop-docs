@@ -63,7 +63,7 @@ When the backup action is complete, the backup will be stored as a compressed ar
 
 .. warning:: The backup file contains sensitive information! It should only be stored on the Admin Workstation, or on a dedicated encrypted backup USB flash drive.
 
-.. include:: ../../includes/backup-warning.txt
+.. include:: /includes/backup-warning.txt
 
 Restoring from a backup
 -----------------------
@@ -131,7 +131,7 @@ Moving a SecureDrop instance to new hardware involves:
 
       You may need to wait approximately 10-15 minutes after installing Ubuntu 24.04 for the servers to become reachable via SSH.
 
-#. Reinstall SecureDrop on the Servers, following the :doc:`installation instructions </admin/installation/installation_overview>`. During the configuration stage (``securedrop-admin sdconfig``), the values will be prepopulated based on the old instance's configuration, which is still stored in ``~/.config/securedrop-admin``. Press **Enter** to accept each value.
+#. Reinstall SecureDrop on the Servers, following the :doc:`installation instructions </admin/installation/index>`. During the configuration stage (``securedrop-admin sdconfig``), the values will be prepopulated based on the old instance's configuration, which is still stored in ``~/.config/securedrop-admin``. Press **Enter** to accept each value.
 
    Proceed through the installation by running
    ``securedrop-admin install`` then ``securedrop-admin localconfig``.
@@ -154,9 +154,9 @@ Moving a SecureDrop instance to new hardware involves:
       securedrop-admin install
       securedrop-admin localconfig
 
-#. :doc:`Test the new instance <../installation/test_the_installation>` to verify that the web interfaces are available and the Servers can be reached via SSH.
+#. :doc:`Test the new instance </admin/installation/test_the_installation>` to verify that the web interfaces are available and the Servers can be reached via SSH.
 
-#. If you have migrated to new hardware, ensure your old Servers have been decommissioned and/or destroyed by following the relevant sections of :doc:`our decommissioning documentation <../maintenance/decommission>`.
+#. If you have migrated to new hardware, ensure your old Servers have been decommissioned and/or destroyed by following the relevant sections of :doc:`our decommissioning documentation </admin/maintenance/decommission>`.
 
 .. _repair_admin_usbs:
 
@@ -165,7 +165,7 @@ Repair additional Admin Workstations
 
 If you have additional Admin Workstation USB flash drives, they will no longer have valid SSH credentials and will need to be repaired. In these steps, the "primary Admin Workstation" is the one which you used to complete the above migration process.
 
-#. Prepare a fresh :doc:`LUKS-encrypted USB flash drive </admin/deployment/provisioning_usb>`. You may record the passphrase in your primary Admin Workstation KeePassXC password manager.
+#. Prepare a fresh :doc:`LUKS-encrypted USB flash drive </admin/deployment/onboarding/provisioning_usb>`. You may record the passphrase in your primary Admin Workstation KeePassXC password manager.
 
 #. Copy the following files from your primary Admin Workstation onto the LUKS-encrypted USB flash drive:
 

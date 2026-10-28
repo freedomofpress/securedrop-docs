@@ -1,5 +1,6 @@
+#############################
 SecureDrop for Administrators
-=============================
+#############################
 
 SecureDrop servers are managed by a :ref:`Administrator<glossary_administrator>`.
 
@@ -28,7 +29,7 @@ The SecureDrop architecture contains multiple machines and hardened servers. Whi
 
 As a SecureDrop Administrator, it is your responsibility to:
 
-* :doc:`install SecureDrop </admin/installation/installation_overview>`
+* :doc:`install SecureDrop </admin/installation/index>`
 * :ref:`manage users <manage_users>`
 * :ref:`manage the system configuration <manage_config>`
 * :ref:`ensure that servers, firewall and workstations are kept up-to-date <manage_updates>`
@@ -145,21 +146,21 @@ Release announcements and security advisories are posted to the `SecureDrop blog
 
 We strongly recommend :doc:`joining the SecureDrop support portal </introduction/getting_support>`. As a member of the support portal, you will receive email notifications related to all major announcements, and you can open tickets in case of technical issues. Membership is free of charge.
 
-.. |Reset Passphrase| image:: ../../images/manual/screenshots/journalist-edit_account_user.png
+.. |Reset Passphrase| image:: /images/manual/screenshots/journalist-edit_account_user.png
    :alt: The account editing form allows admins to change name, reset passphrase, and reset two-factor authentication.
-.. |Test Alert| image:: ../../images/manual/screenshots/journalist-admin_ossec_alert_button.png
+.. |Test Alert| image:: /images/manual/screenshots/journalist-admin_ossec_alert_button.png
    :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
-.. |SecureDrop main page| image:: ../../images/manual/screenshots/journalist-admin_index_no_documents.png
+.. |SecureDrop main page| image:: /images/manual/screenshots/journalist-admin_index_no_documents.png
    :alt: The top navigation of the Journalist Interface says 'Logged on as Journalist' and displays an 'Admin' link.
-.. |SecureDrop admin home| image:: ../../images/manual/screenshots/journalist-admin_interface_index.png
+.. |SecureDrop admin home| image:: /images/manual/screenshots/journalist-admin_interface_index.png
    :alt: The Admin Interface displays an 'Add User' button.
-.. |Add a new user| image:: ../../images/manual/screenshots/journalist-admin_add_user_totp.png
+.. |Add a new user| image:: /images/manual/screenshots/journalist-admin_add_user_totp.png
    :alt: The form used to create new users displays a pre-generated Diceware passphrase.
-.. |Enable FreeOTP| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
+.. |Enable FreeOTP| image:: /images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
    :alt: The form used to enable FreeOTP displays a barcode and a two-factor secret.
-.. |Enable YubiKey| image:: ../../images/manual/screenshots/journalist-admin_add_user_hotp.png
+.. |Enable YubiKey| image:: /images/manual/screenshots/journalist-admin_add_user_hotp.png
    :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
-.. |Verify YubiKey| image:: ../../images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
+.. |Verify YubiKey| image:: /images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
    :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
-.. |Logo Update| image:: ../../images/manual/screenshots/journalist-admin_changes_logo_image.png
+.. |Logo Update| image:: /images/manual/screenshots/journalist-admin_changes_logo_image.png
    :alt: The Instance Configuration form displays 'Image updated' after the logo was updated successfully.

@@ -166,22 +166,22 @@ At any point after the successful installation of SecureDrop, if you cannot SSH 
 
 #. **Confirm that your SSH key is available**: During the install, you configured SSH public key authentication using ``ssh-copy-id``. Ensure this key is available using ``ssh-add -L``. If you see the output "This agent has no identities." then you need to add the key via ``ssh-add`` prior to SSHing into the servers.
 
-.. |screenshot_network_manager_wired_icon| image:: ../../images/screenshot_network_manager_wired_icon.png
+.. |screenshot_network_manager_wired_icon| image:: /images/screenshot_network_manager_wired_icon.png
 
-.. |screenshot_network_manager_wireless_icon| image:: ../../images/screenshot_network_manager_wireless_icon.png
+.. |screenshot_network_manager_wireless_icon| image:: /images/screenshot_network_manager_wireless_icon.png
 
-.. |screenshot_network_manager_no_internet_connection| image:: ../../images/screenshot_network_manager_no_internet_connection.png
+.. |screenshot_network_manager_no_internet_connection| image:: /images/screenshot_network_manager_no_internet_connection.png
 
-.. |screenshot_network_manager_lost_connection_notification| image:: ../../images/screenshot_network_manager_lost_connection_notification.png
+.. |screenshot_network_manager_lost_connection_notification| image:: /images/screenshot_network_manager_lost_connection_notification.png
 
-.. |screenshot_q_widget_sysnet_run_terminal| image:: ../../images/screenshot_q_widget_sysnet_run_terminal.png
+.. |screenshot_q_widget_sysnet_run_terminal| image:: /images/screenshot_q_widget_sysnet_run_terminal.png
 
-.. |screenshot_q_widget_vm_list| image:: ../../images/screenshot_q_widget_vm_list.png
+.. |screenshot_q_widget_vm_list| image:: /images/screenshot_q_widget_vm_list.png
 
-.. |screenshot_qube_manager| image:: ../../images/screenshot_qube_manager.png
+.. |screenshot_qube_manager| image:: /images/screenshot_qube_manager.png
 
-.. |screenshot_start_resume_qube| image:: ../../images/screenshot_start_resume_qube.png
+.. |screenshot_start_resume_qube| image:: /images/screenshot_start_resume_qube.png
 
-.. |blue_qube| image:: ../../images/blue_qube.png
+.. |blue_qube| image:: /images/blue_qube.png
   :alt: Qubes Domains menu
 

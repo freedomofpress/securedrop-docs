@@ -1,5 +1,15 @@
-Migration overview
-==================
+Migration from Tails
+====================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Migration from Tails
+   :hidden:
+
+   migrate_install_qubes
+   journalist_migration
+   admin_migration
+   removing_gpg_passphrase
 
 .. _migration_overview:
 
@@ -29,7 +39,7 @@ Hardware overview
 Workstations
 ^^^^^^^^^^^^
 
-.. include:: /admin/installation/installation_overview.rst
+.. include:: /admin/installation/index.rst
     :start-after: .. _install_overview_workstations:
     :end-before: .. _install_overview_servers:
 

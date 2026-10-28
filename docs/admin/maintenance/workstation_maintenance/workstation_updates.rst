@@ -284,5 +284,5 @@ Step 4: Restart the updater
 
 Click the SecureDrop Inbox desktop icon to restart the updater. If all issues have been resolved, the updater should run to completion and display a success message. If the issue persists, please contact us for assistance.
 
-.. |blue_qube| image:: ../../images/blue_qube.png
+.. |blue_qube| image:: /images/blue_qube.png
    :alt: Qubes Domains menu

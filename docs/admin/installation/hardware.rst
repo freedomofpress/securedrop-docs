@@ -86,7 +86,7 @@ You will need one physical computer that is used as a dedicated firewall for the
 
 We recommend a 4 NIC network firewall and currently provide setup instructions for pfSense and OPNSense. You can :ref:`find our list of recommended hardware firewalls here.<hardware_recommendations_firewall>`
 
-An acceptable alternative that requires more technical expertise is to :doc:`configure an existing hardware firewall <network_firewall>`.
+An acceptable alternative that requires more technical expertise is to :doc:`configure an existing hardware firewall </admin/installation/firewall_setup/network_firewall>`.
 
 Two-factor device
 ^^^^^^^^^^^^^^^^^
@@ -115,7 +115,7 @@ You may want to consider enforcing write protection on USB flash drives when onl
 
 It is especially advisable to enable write protection before attaching an Export Device to an everyday workstation that lacks the security protections of the Tails operating system.
 
-Please review our :doc:`setup guide </admin/deployment/provisioning_usb>` for additional background on setting up Export Devices.
+Please review our :doc:`setup guide </admin/deployment/onboarding/provisioning_usb>` for additional background on setting up Export Devices.
 
 We also recommend buying an additional USB flash drive for making regular backups of your SecureDrop laptops.
 
@@ -151,9 +151,9 @@ Driverless
 
 SecureDrop implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
 
-.. figure:: ../workstation_reference/images/airprint.jpg
+.. figure:: /images/airprint.jpg
 
-.. figure:: ../workstation_reference/images/moipra.jpg
+.. figure:: /images/moipra.jpg
 
 You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
 

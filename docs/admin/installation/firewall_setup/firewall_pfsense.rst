@@ -325,35 +325,35 @@ Once it is complete, you will see a notification of successful upgrade:
 
 |Firewall Update Complete|
 
-The *Network Firewall* configuration is now complete, allowing you to move to the next step: :doc:`setting up the servers. <prepare_servers>`
+The *Network Firewall* configuration is now complete, allowing you to move to the next step: :doc:`setting up the servers. </admin/installation/prepare_servers>`
 
-.. |Wired Connected| image:: ../../images/firewall/wired_connected.png
-.. |Your Connection is Insecure| image:: ../../images/firewall/your_connection_is_insecure.png
-.. |Launching the Unsafe Browser| image:: ../../images/firewall/launching_unsafe_browser.png
-.. |Pop-up notification| image:: ../../images/firewall/starting_the_unsafe_browser.png
-.. |Unsafe Browser Homepage| image:: ../../images/firewall/unsafe_browser.png
-.. |Default pfSense| image:: ../../images/firewall/default_pfsense.png
-.. |Alternate Hostnames| image:: ../../images/firewall/alternate_hostnames.png
-.. |Configure LAN Interface| image:: ../../images/firewall/configure_lan_interface.png
-.. |pfSense General Info| image:: ../../images/firewall/pfsense_general_information.png
-.. |Ping| image:: ../../images/firewall/pfsense_diagnostics_ping.png
-.. |4 NIC Admin Workstation Static IP Configuration| image:: ../../images/firewall/four_nic_admin_workstation_static_ip_configuration.png
-.. |Firewall Port Aliases| image:: ../../images/firewall/port_aliases.png
-.. |Firewall IP Aliases| image:: ../../images/firewall/ip_aliases_with_opt2.png
-.. |Firewall LAN Rules| image:: ../../images/firewall/lan_rules.png
-.. |Firewall LAN2 Rules| image:: ../../images/firewall/lan2_firewall_rules.png
-.. |Firewall LAN3 Rules| image:: ../../images/firewall/lan3_firewall_rules.png
-.. |Disable Anti-Lockout Rule| image:: ../../images/firewall/disable_anti_lockout.png
-.. |Update available| image:: ../../images/firewall/pfsense_update_available.png
-.. |Wired Settings| image:: ../../images/firewall/wired_settings.png
-.. |Disable DHCP| image:: ../../images/firewall/disable_DHCP.png
-.. |LAN2| image:: ../../images/firewall/lan2.png
-.. |LAN3| image:: ../../images/firewall/lan3.png
-.. |Blank IP Aliases| image:: ../../images/firewall/pfsense_blank_ip_aliases.png
-.. |Add Firewall Alias| image:: ../../images/firewall/add_firewall_alias.png
-.. |Firewall IP Aliases Pre Save| image:: ../../images/firewall/ip_aliases_pre_save.png
-.. |Firewall IP Aliases Post Save| image:: ../../images/firewall/ip_aliases_post_save.png
-.. |Port Aliases| image:: ../../images/firewall/port_aliases.png
-.. |Firewall Update Confirmation| image:: ../../images/firewall/system_update.png
-.. |Firewall Update Progress| image:: ../../images/firewall/system_is_updating.png
-.. |Firewall Update Complete| image:: ../../images/firewall/system_update_complete.png
+.. |Wired Connected| image:: /images/firewall/wired_connected.png
+.. |Your Connection is Insecure| image:: /images/firewall/your_connection_is_insecure.png
+.. |Launching the Unsafe Browser| image:: /images/firewall/launching_unsafe_browser.png
+.. |Pop-up notification| image:: /images/firewall/starting_the_unsafe_browser.png
+.. |Unsafe Browser Homepage| image:: /images/firewall/unsafe_browser.png
+.. |Default pfSense| image:: /images/firewall/default_pfsense.png
+.. |Alternate Hostnames| image:: /images/firewall/alternate_hostnames.png
+.. |Configure LAN Interface| image:: /images/firewall/configure_lan_interface.png
+.. |pfSense General Info| image:: /images/firewall/pfsense_general_information.png
+.. |Ping| image:: /images/firewall/pfsense_diagnostics_ping.png
+.. |4 NIC Admin Workstation Static IP Configuration| image:: /images/firewall/four_nic_admin_workstation_static_ip_configuration.png
+.. |Firewall Port Aliases| image:: /images/firewall/port_aliases.png
+.. |Firewall IP Aliases| image:: /images/firewall/ip_aliases_with_opt2.png
+.. |Firewall LAN Rules| image:: /images/firewall/lan_rules.png
+.. |Firewall LAN2 Rules| image:: /images/firewall/lan2_firewall_rules.png
+.. |Firewall LAN3 Rules| image:: /images/firewall/lan3_firewall_rules.png
+.. |Disable Anti-Lockout Rule| image:: /images/firewall/disable_anti_lockout.png
+.. |Update available| image:: /images/firewall/pfsense_update_available.png
+.. |Wired Settings| image:: /images/firewall/wired_settings.png
+.. |Disable DHCP| image:: /images/firewall/disable_DHCP.png
+.. |LAN2| image:: /images/firewall/lan2.png
+.. |LAN3| image:: /images/firewall/lan3.png
+.. |Blank IP Aliases| image:: /images/firewall/pfsense_blank_ip_aliases.png
+.. |Add Firewall Alias| image:: /images/firewall/add_firewall_alias.png
+.. |Firewall IP Aliases Pre Save| image:: /images/firewall/ip_aliases_pre_save.png
+.. |Firewall IP Aliases Post Save| image:: /images/firewall/ip_aliases_post_save.png
+.. |Port Aliases| image:: /images/firewall/port_aliases.png
+.. |Firewall Update Confirmation| image:: /images/firewall/system_update.png
+.. |Firewall Update Progress| image:: /images/firewall/system_is_updating.png
+.. |Firewall Update Complete| image:: /images/firewall/system_update_complete.png

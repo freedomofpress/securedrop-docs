@@ -1,7 +1,9 @@
+*******************
+Deployment Overview
+*******************
+
 .. _Deployment:
 
-Deployment overview
-===================
 
 Once SecureDrop is installed on a news organization's servers, it's important for the Administrator to configure it in a way that provides the greatest protection for Sources and Journalists, given the unique needs and constraints of the organization.
 
@@ -9,7 +11,7 @@ The deployment section here covers a variety of tasks an Administrator might nee
 
 Certain topics, such as creating a :ref:`Landing Page<glossary_landing_page>` and onboarding :ref:`Journalists<glossary_journalist>`, are universal to all SecureDrop instances. Other topics are optional, and are only needed if they fit in with the organization's security policies and newsroom workflows.
 
-The deployment tasks generally only need to be performed once. For tasks related to the upkeep and troubleshooting of your SecureDrop instance, we recommend reviewing :doc:`the maintenance documentation. <../maintenance/logging>`
+The deployment tasks generally only need to be performed once. For tasks related to the upkeep and troubleshooting of your SecureDrop instance, we recommend reviewing :doc:`the maintenance documentation. </admin/maintenance/index>`
 
 Protecting the security of the system
 =====================================
@@ -19,3 +21,12 @@ SecureDrop is only as secure as the environment that surrounds it. To keep Sourc
 Freedom of the Press Foundation eventually plans to `list all of those SecureDrop onion addresses <https://securedrop.org/directory>`__ that meet the minimum requirements for deployment best practices as "verified" on its website. If your organization cannot follow the minimum guidelines, we cannot recommend your SecureDrop instance as safe to use.
 
 In addition to implementing the following best practices, we strongly recommend that you have a reputable security firm perform a review of your organization's public website prior to launching an instance of SecureDrop. Upon request, we can help put you in touch with a few security firms if you need more assistance.
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Deployment
+
+   onboarding/index
+   getting_online/index
+   additional_server_config/index

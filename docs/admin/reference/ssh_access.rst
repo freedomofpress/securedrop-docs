@@ -58,9 +58,9 @@ Rebooting the servers
 Investigating logs
 ------------------
 
-Consult our :doc:`Investigating Logs <../maintenance/logging>` topic guide for locations of the most relevant log files you may want to examine as part of troubleshooting, and for how to enable error logging for the Source Interface.
+Consult our :doc:`Investigating Logs </admin/maintenance/server_maintenance/server_logs>` topic guide for locations of the most relevant log files you may want to examine as part of troubleshooting, and for how to enable error logging for the Source Interface.
 
-.. include:: ../../includes/get-logs.txt
+.. include:: /includes/get-logs.txt
 
 .. _immediate_update:
 
@@ -128,7 +128,7 @@ You then have the option of running:
 
    ./manage.py delete-disconnected-fs-submissions
 
-to clean them up. As with any potentially destructive operation, it's recommended that you :doc:`back the system up </admin/maintenance/backup_servers>` before doing so.
+to clean them up. As with any potentially destructive operation, it's recommended that you :doc:`back the system up </admin/maintenance/server_maintenance/backup_servers>` before doing so.
 
 There is also the inverse scenario, where a database record could point to a file that no longer exists. This would usually only have happened as a result of disaster recovery, where perhaps the database was recovered from a failed hard drive, but some messages and files were not. The OSSEC alert in this case would recommend running:
 
@@ -142,7 +142,7 @@ To clean up the affected records you would run (again, preferably after a backup
 
    ./manage.py delete-disconnected-db-submissions
 
-Even when messages and files are completely removed from the Application Server, they may still exist in :doc:`backups </admin/maintenance/backup_servers>` in an encrypted form.
+Even when messages and files are completely removed from the Application Server, they may still exist in :doc:`backups </admin/maintenance/server_maintenance/backup_servers>` in an encrypted form.
 
 Monitor Server
 ----------------

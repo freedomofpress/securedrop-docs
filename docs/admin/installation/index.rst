@@ -91,6 +91,28 @@ Summary of installation tasks
 #. Test the installation.
 #. Troubleshoot any issues that occurred during installation.
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Installation
+   :hidden:
+
+   hardware
+   prepare_installation_media
+   email_alerts
+   install_qubes
+   generate_submission_key
+   install_admin_workstation
+   keepassxc_for_admins
+   transfer_public_keys
+   firewall_setup/network_firewall
+   prepare_servers
+   install_servers
+   apply_admin_workstation
+   create_admin_account
+   install_journalist
+   test_the_installation
+   install_troubleshooting/index
+
 Tracking your progress
 ----------------------
 
@@ -114,3 +136,4 @@ If you would like to work with Freedom of the Press Foundation on your SecureDro
 As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train Journalists to use it. (For  pro-bono support, we request that our travel costs are covered.)
 
 .. include:: ../../includes/provide-feedback.txt
+

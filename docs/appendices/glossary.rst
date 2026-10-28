@@ -42,7 +42,7 @@ Export Device
 
 The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a Journalist Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
 
-Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/deployment/provisioning_usb>`.
+Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/deployment/onboarding/provisioning_usb>`.
 
 .. _glossary_journalist:
 

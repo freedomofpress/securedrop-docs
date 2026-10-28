@@ -14,7 +14,7 @@ What you need
 Perform backups
 ~~~~~~~~~~~~~~~
 
-If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the Application Server </admin/maintenance/backup_servers>` before proceeding.
+If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the Application Server </admin/maintenance/server_maintenance/backup_servers>` before proceeding.
 
 Prepare the USB flash drive
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,7 +47,7 @@ Once you have verified the hash, copy the file to your USB flash drive.
 
 .. _`on the correct website`: https://downloadcenter.intel.com/
 
-.. |gtkhash tails| image:: ../../images/gtkhash_bios.png
+.. |gtkhash tails| image:: /images/gtkhash_bios.png
 
 Update the BIOS
 ~~~~~~~~~~~~~~~

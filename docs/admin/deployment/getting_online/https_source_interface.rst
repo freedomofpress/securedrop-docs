@@ -89,14 +89,14 @@ The Greek CA `Harica`_ is now providing Domain Validation (DV) certificates for 
     ./onion-csr.rb -n <nonce> -d ./hsdir
 
 .. _`DigiCert's documentation`: https://www.digicert.com/blog/ordering-a-onion-certificate-from-digicert
-.. |HTTPS Onion cert| image:: ../../images/screenshots/onion-url-certificate.png
+.. |HTTPS Onion cert| image:: /images/screenshots/onion-url-certificate.png
 .. _`contact DigiCert directly`: https://www.digicert.com/blog/ordering-a-onion-certificate-from-digicert
 .. _`Harica`: https://www.harica.gr/
 
 Activating HTTPS in SecureDrop
 ------------------------------
 
-Make sure you have :doc:`installed SecureDrop already </admin/installation/installation_overview>`.
+Make sure you have :doc:`installed SecureDrop already </admin/installation/index>`.
 
 Make note of the Source Interface onion address. Now from a Terminal on your Admin Workstation:
 

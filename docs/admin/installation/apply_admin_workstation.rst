@@ -5,7 +5,7 @@ SecureDrop uses authenticated :ref:`Onion Services<glossary_onion_service>` as a
 
 #. The Admin Interface, because it provides access to submissions (although they are encrypted to the Submission Secret Key), and some metadata about sources and submissions.
 
-And, unless SSH-over-Tor is :doc:`disabled</admin/deployment/ssh_over_local_net>`:
+And, unless SSH-over-Tor is :doc:`disabled</admin/deployment/additional_server_config/ssh_over_local_net>`:
 
 #. SSH on the Application Server
 #. SSH on the Monitor Server
