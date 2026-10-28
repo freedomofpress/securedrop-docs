@@ -128,7 +128,6 @@ SecureDrop is an open source project. You can support the work by `contributing 
    appendices/glossary
    appendices/faq
    appendices/passphrases
-   appendices/hardware_recommendations.rst
    appendices/threat_model/threat_model.rst
    appendices/threat_model/dataflow.rst
    appendices/threat_model/mitigations.rst

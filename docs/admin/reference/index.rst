@@ -8,6 +8,7 @@ Admin reference
    :caption: Admin reference
    :hidden:
 
+   hardware_recommendations
    admin_interface
    securedrop_admin
    ssh_access

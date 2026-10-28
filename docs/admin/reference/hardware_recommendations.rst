@@ -19,7 +19,7 @@ We have tested and can recommend the `ASUS NUC14RVH <https://www.asus.com/us/dis
 
 The NUC14's AX211 wireless hardware is not removable. Before installation of the RAM and storage, we recommend that you disconnect the wireless antennae leads from the AX211 component. They're the wires highlighted in the red box in the picture. Cover the free ends with electrical tape after disconnecting them.
 
-.. figure:: ../images/hardware/nuc14_leads.jpg
+.. figure:: /images/hardware/nuc14_leads.jpg
 
   The location of the wireless card within the NUC14
 
@@ -34,7 +34,7 @@ We have tested and can recommend the `ASUS NUC13ANHi5 <https://www.asus.com/us/d
 
 The NUC13's AX211 wireless hardware is removable. Doing so requires the use of a 5mm nut driver. Before installation of the RAM and storage, we recommend that you remove the wireless card and disconnect the wireless antennae leads from the AX211 component. Be sure to cover the free ends with electrical tape after disconnecting them.
 
-.. figure:: ../images/hardware/nuc13_leads.jpg
+.. figure:: /images/hardware/nuc13_leads.jpg
 
   The location of the wireless card within the NUC13
 
@@ -49,7 +49,7 @@ We have tested and can recommend the `NUC12WSKi5 <https://www.asus.com/us/displa
 
 The NUC12's AX211 wireless hardware is removable. Doing so requires the use of a 5mm nut driver. Before installation of the RAM and storage, we recommend that you remove the wireless card and disconnect the wireless antennae leads from the AX211 component. Be sure to cover the free ends with electrical tape after disconnecting them.
 
-.. figure:: ../images/hardware/nuc12_leads.jpg
+.. figure:: /images/hardware/nuc12_leads.jpg
 
   The location of the wireless card within the NUC12
 
@@ -66,7 +66,7 @@ The NUC11's AX201 wireless hardware is not removable. Before installation of the
 
 Before the initial OS installation, boot into the BIOS by pressing **F2** at startup and adjust the system configuration:
 
-.. |NUC11 leads| image:: ../images/hardware/nuc11_leads.jpg
+.. |NUC11 leads| image:: /images/hardware/nuc11_leads.jpg
 
 .. _hardware_recommendations_workstations:
 
@@ -162,7 +162,7 @@ We recommend a 4 NIC network firewall and currently provide setup instructions f
 * the `Netgate SG-4100 <https://shop.netgate.com/products/4100-base-pfsense>`__ running `pfSense Plus <https://www.pfsense.org/>`__.
 * the `Netgate SG-6100 <https://shop.netgate.com/products/6100-base-pfsense>`__ running `pfSense Plus <https://www.pfsense.org/>`__. This device is overspecced for SecureDrop's purposes, but can be used if the other cheaper firewalls can't be procured.
 
-An acceptable alternative that requires more technical expertise is to :doc:`configure an existing hardware firewall <../admin/installation/firewall_setup/network_firewall>`.
+An acceptable alternative that requires more technical expertise is to :doc:`configure an existing hardware firewall </admin/installation/firewall_setup/network_firewall>`.
 
 .. _hardware_recommendations_usb:
 
