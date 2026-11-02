@@ -1,5 +1,5 @@
-Onboarding
-==========
+Onboard users
+================
 
 SecureDrop allows an organization to have multiple Journalists and multiple Administrators, using individual or shared laptops. 
 

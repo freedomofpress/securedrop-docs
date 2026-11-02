@@ -180,7 +180,7 @@ On the Secure Viewing Station
 
    |revoked|
 
-#. Now :doc:`follow the instructions </admin/reference/manually_generate_submission_key>` to create a new Submission Key. Copy the fingerprint and new Submission Public Key to the encrypted USB flash drive.
+#. Now :doc:`follow the instructions </admin/maintenance/rotate_submission_key>` to create a new Submission Key. Copy the fingerprint and new Submission Public Key to the encrypted USB flash drive.
 
 .. |select securedrop key| image:: /images/offboard/key_list.png
 .. |key details| image:: /images/offboard/key_details.png

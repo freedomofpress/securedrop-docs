@@ -569,7 +569,7 @@ Keeping OPNSense up to date
 
 Periodically, the OPNSense project maintainers release an update to the OPNSense software running on your firewall. You can check for updates using the link on the OPNSense dashboard.
 
-If you see that an update is available, we recommend installing it. Most of these updates are for minor bugfixes, but occasionally they can contain important security fixes. You should keep apprised of updates yourself by checking the `OPNSense Blog <https://opnsense.org/blog/>`__ or subscribing to the `OPNSense Blog RSS feed <https://opnsense.org/blog/rss>`__.
+If you see that an update is available, we recommend installing it. Most of these updates are for minor bugfixes, but occasionally they can contain important security fixes. You should keep apprised of updates yourself by checking the `OPNSense Blog <https://opnsense.org/blog/>`__ or subscribing to the `OPNSense Blog RSS feed <https://opnsense.org/blog/rss>`__. You can also consult the `official OPNsense update docs <https://docs.opnsense.org/manual/updates.html>`__
 
 .. |Wired Connected| image:: /images/firewall/wired_connected.png
 .. |OPNSense - Your Connection is Insecure| image:: /images/opnsense/opnsense-insecure.png

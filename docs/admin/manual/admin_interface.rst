@@ -173,7 +173,7 @@ To verify that the OSSEC monitoring system's functionality, you can send a test 
 
 |Test Alert|
 
-You should receive an OSSEC alert email at the address specified during the installation of SecureDrop. The email may take several minutes to arrive. If you don't receive it, refer to the :doc:`OSSEC Guide</admin/installation/install_troubleshooting/troubleshoot_ossec>` for information on troubleshooting steps.
+You should receive an OSSEC alert email at the address specified during the installation of SecureDrop. The email may take several minutes to arrive. If you don't receive it, refer to the :doc:`OSSEC Guide</admin/maintenance/server/troubleshoot_ossec>` for information on troubleshooting steps.
 
 .. _admin_interface_ubmission_prefs:
 

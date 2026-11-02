@@ -35,7 +35,7 @@ Once that's done, you should open Tor Browser |TorBrowser| in ``sd-admin`` and n
 
 You should create a separate account on the Admin Interface for each user who needs access. This makes it easy to enable or disable access to the Admin Interface on an individual basis, so you can grant access to new users or revoke access for users who have left the organization.
 
-For adding more user accounts, please refer now to our :doc:`Admin Interface Guide </admin/reference/admin_interface>`.
+For adding more user accounts, please refer now to our :doc:`Admin Interface Guide </admin/manual/admin_interface>`.
 
 .. note:: You can now set a custom logo image on your web interfaces by following the :ref:`Updating Logo Image<admin_interface_updating_logo>` documentation.
 

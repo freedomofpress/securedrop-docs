@@ -307,7 +307,7 @@ Periodically, the pfSense project maintainers release an update to the pfSense s
 
 |Update available|
 
-If you see that an update is available, we recommend installing it. Most of these updates are for minor bugfixes, but occasionally they can contain important security fixes. You should keep apprised of updates yourself by checking the `pfSense Blog posts with the "releases" tag <https://www.netgate.com/blog/tag/releases>`__.
+If you see that an update is available, we recommend installing it. Most of these updates are for minor bugfixes, but occasionally they can contain important security fixes. You should keep apprised of updates yourself by checking the `pfSense Blog posts with the "releases" tag <https://www.netgate.com/blog/tag/releases>`__. You can also consult the official `pfSense Upgrade Docs`_ for further details.
 
 .. note:: You can subscribe to email updates on https://www.netgate.com.
 
@@ -326,6 +326,8 @@ Once it is complete, you will see a notification of successful upgrade:
 |Firewall Update Complete|
 
 The *Network Firewall* configuration is now complete, allowing you to move to the next step: :doc:`setting up the servers. </admin/installation/prepare_servers>`
+
+.. _`pfSense Upgrade Docs`: https://docs.netgate.com/pfsense/en/latest/install/upgrade-guide.html
 
 .. |Wired Connected| image:: /images/firewall/wired_connected.png
 .. |Your Connection is Insecure| image:: /images/firewall/your_connection_is_insecure.png

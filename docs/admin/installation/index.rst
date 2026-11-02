@@ -47,6 +47,8 @@ The :ref:`Monitor Server <glossary_monitor_server>` monitors the Application Ser
 
 Finally, a physical hardware Network Firewall is required to securely manage the connection between the Application and Monitor Servers and their connection to the internet. 
 
+.. _security_requirements:
+
 Minimum security requirements
 -----------------------------
 
@@ -76,27 +78,11 @@ Every Admin and Journalist Workstation contains sensitive credentials and inform
 Summary of installation tasks
 ------------------------------
 
-#. Acquire compatible hardware.
-#. Prepare email accounts and GPG keys for alert emails.
-#. Install Qubes OS and SecureDrop packages on Workstations.
-#. Generate the Submission Key.
-#. Prepare the Admin Workstation.
-#. Set up the KeePassXC password manager on the Admin Workstation.
-#. Install and configure the dedicated network firewall from the Admin Workstation.
-#. Prepare the (Application and Monitor) Servers.
-#. Install SecureDrop on the Servers from the Admin Workstation.
-#. Apply the Admin Workstation configuration.
-#. Create the first Administrator user.
-#. Install Journalist Workstation.
-#. Test the installation.
-#. Troubleshoot any issues that occurred during installation.
-
 .. toctree::
-   :maxdepth: 2
-   :caption: Installation
-   :hidden:
+   :maxdepth: 1
+   :numbered: 2
 
-   hardware
+   Acquire compatible hardware <hardware>
    prepare_installation_media
    email_alerts
    install_qubes
@@ -111,7 +97,6 @@ Summary of installation tasks
    create_admin_account
    install_journalist
    test_the_installation
-   install_troubleshooting/index
 
 Tracking your progress
 ----------------------

@@ -1,4 +1,4 @@
-Manually Rotate a Submission Key
+Rotate the Submission Key
 ==================================
 
 It may be necessary to manually generate and a new :ref:`Submission Key<glossary_submission_key>` and install it on your Journalist and Admin Workstations.

@@ -1,29 +1,16 @@
 Logging in via SSH
 ==================
 
-.. _ssh_over_tor:
-
-SSH over Tor
-------------
-
-By default, SSH access to SecureDrop servers is routed through the Tor network, allowing you to access the servers from anywhere in the world where you have a stable internet connection and are able to access the Tor network.
-
-To do so, simply open a Terminal and run either the ``ssh app`` or ``ssh mon`` command, depending on which server you are intending to access.
-
-This is useful for routine maintenance and log investigation tasks, although direct physical access will still be necessary for network-related issues, in situations where SSH access is not available.
-
-For more details about the types of tasks that can be completed via SSH, you can :ref:`review the SSH portion of our Admin Guide <server SSH access>`.
-
-If you'd like to make adjustments to the SSH configuration, or disable SSH access over Tor, you can do so by following the steps here.
-
-In addition to remote SSH access, the web-based Admin Interface is also from any location with a network connection and access to the Tor network.
-
 .. _server SSH access:
 
 Server SSH access
 ------------------
 
 Generally, you should avoid directly SSHing into the servers in favor of using the Admin Interface or ``securedrop-admin``. However, in some cases, you may need to SSH in order to troubleshoot and fix a problem that cannot be resolved via these tools.
+
+.. _ssh_over_tor:
+
+By default, SSH access to SecureDrop servers is routed through the Tor network, allowing you to access the servers from anywhere in the world where you have a stable internet connection and are able to access the Tor network. You can opt to disable SSH access over Tor by :ref:`enabling it only over a local connection<ssh_over_local>` via your Network Firewall instead. 
 
 You can access your Application Server and Monitor Server via SSH from an Admin Workstation by using either the ``ssh app`` or ``ssh mon`` commands (respectively).
 
@@ -58,34 +45,9 @@ Rebooting the servers
 Investigating logs
 ------------------
 
-Consult our :doc:`Investigating Logs </admin/maintenance/server_maintenance/server_logs>` topic guide for locations of the most relevant log files you may want to examine as part of troubleshooting, and for how to enable error logging for the Source Interface.
+Consult our :doc:`Investigating Logs </admin/maintenance/server/server_logs>` topic guide for locations of the most relevant log files you may want to examine as part of troubleshooting, and for how to enable error logging for the Source Interface.
 
 .. include:: /includes/get-logs.txt
-
-.. _immediate_update:
-
-Immediately apply a SecureDrop update
--------------------------------------
-
-SecureDrop will update and reboot once per day. However, once a SecureDrop update `is announced`_, you can opt to fetch the update immediately.
-
-.. important::
-
-   Except where otherwise indicated, make sure to update both your Application Server and your Monitor Server.
-
-To update your servers immediately, you can SSH into each server (via ``ssh app`` and ``ssh mon``) and run the following commands:
-
-.. code:: sh
-
-  sudo apt update
-  sudo unattended-upgrades
-
-.. note::
-
-   Depending on the nature of the update (e.g., if the ``tor`` package is upgraded and you are using SSH-over-Tor), your SSH connection may be interrupted, and you may have to reconnect to see the full output.
-
-.. _`is announced`:
-  https://securedrop.org/news
 
 Application Server
 --------------------
@@ -128,7 +90,7 @@ You then have the option of running:
 
    ./manage.py delete-disconnected-fs-submissions
 
-to clean them up. As with any potentially destructive operation, it's recommended that you :doc:`back the system up </admin/maintenance/server_maintenance/backup_servers>` before doing so.
+to clean them up. As with any potentially destructive operation, it's recommended that you :doc:`back the system up </admin/maintenance/server/backup_servers>` before doing so.
 
 There is also the inverse scenario, where a database record could point to a file that no longer exists. This would usually only have happened as a result of disaster recovery, where perhaps the database was recovered from a failed hard drive, but some messages and files were not. The OSSEC alert in this case would recommend running:
 
@@ -142,7 +104,7 @@ To clean up the affected records you would run (again, preferably after a backup
 
    ./manage.py delete-disconnected-db-submissions
 
-Even when messages and files are completely removed from the Application Server, they may still exist in :doc:`backups </admin/maintenance/server_maintenance/backup_servers>` in an encrypted form.
+Even when messages and files are completely removed from the Application Server, they may still exist in :doc:`backups </admin/maintenance/server/backup_servers>` in an encrypted form.
 
 Monitor Server
 ----------------

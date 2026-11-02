@@ -3,7 +3,6 @@ Set up the network firewall
 
 .. toctree::
    :maxdepth: 2
-   :caption: Firewall setup
    :hidden:
 
    firewall_opnsense

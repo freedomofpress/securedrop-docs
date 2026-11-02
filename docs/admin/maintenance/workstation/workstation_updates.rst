@@ -4,6 +4,8 @@ Updating Workstations
 Preflight updates
 -----------------
 
+SecureDrop Workstations include a preflight updater application that runs automatically on startup, checks for Qubes and SecureDrop updates, and prompts the user to apply them if found. Given the sensitive nature of the system, it is critical that updates are applied when available. Administrators should ensure that users are aware of this requirement, and should periodically check to ensure that the system is up to date.
+
 After you unlock your Workstation, the preflight updater will prompt you to check for available updates at least once per day.
 
 The preflight updater delivers new SecureDrop Inbox releases, updates to the SecureDrop Workstation configuration of Qubes, and standard Qubes updates.

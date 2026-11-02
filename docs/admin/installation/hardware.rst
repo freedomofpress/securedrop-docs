@@ -3,7 +3,7 @@
 Hardware
 ========
 
-This page outlines the required hardware components necessary to successfully install and operate a SecureDrop instance. For specific hardware recommendations, see :doc:`/admin/reference/hardware_recommendations`. If you have any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
+This page outlines the required hardware components necessary to successfully install and operate a SecureDrop instance. For specific hardware recommendations, see :doc:`/appendices/hardware_recommendations`. If you have any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
 
 Hardware overview
 -----------------

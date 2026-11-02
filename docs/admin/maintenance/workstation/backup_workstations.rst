@@ -8,7 +8,7 @@ Qubes OS has a `backup utility <https://www.qubes-os.org/doc/backup-restore/>`_ 
 
 To perform backups, you will need:
 
-- a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/reference/provisioning_usb.html>`_ USB flash or external hard drive (of sufficient size, if backing up additional local data)
+- a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/manual/provisioning_usb.html>`_ USB flash or external hard drive (of sufficient size, if backing up additional local data)
 - a secure place to store backup credentials (such as a password manager on your primary laptop)
 
 Backup

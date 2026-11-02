@@ -114,10 +114,11 @@ SecureDrop is an open source project. You can support the work by `contributing 
 
    admin/securedrop_for_admins
    Installation <admin/installation/index>
+
    Migration <admin/migration/index>
    Deployment <admin/deployment/index>
    Maintenance <admin/maintenance/index>
-   Reference <admin/reference/index>
+   Reference <admin/manual/index>
 
 .. toctree::
    :caption: Appendices
@@ -128,6 +129,7 @@ SecureDrop is an open source project. You can support the work by `contributing 
    appendices/glossary
    appendices/faq
    appendices/passphrases
+   appendices/hardware_recommendations
    appendices/threat_model/threat_model.rst
    appendices/threat_model/dataflow.rst
    appendices/threat_model/mitigations.rst

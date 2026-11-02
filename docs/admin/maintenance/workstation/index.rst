@@ -9,4 +9,6 @@ Workstation maintenance
    workstation_logs
    bios_workstation
    rebuild_admin
-   troubleshooting_connection
+   troubleshoot_connection
+   troubleshoot_sd_manage
+   troubleshoot_qubes_install

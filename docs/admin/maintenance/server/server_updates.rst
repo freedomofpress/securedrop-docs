@@ -18,6 +18,12 @@ You can manually update by running: ::
 
 from both the Application and Monitor Servers.
 
+.. TODO, check the above command. Previously apt unattended-upgrades was used. does it matter?
+
+.. note::
+
+   Depending on the nature of the update (e.g., if the ``tor`` package is upgraded and you are using SSH-over-Tor), your SSH connection may be interrupted, and you may have to reconnect to see the full output.
+
 You can verify the installed version number by running: ::
 
     sudo apt policy securedrop-app-code

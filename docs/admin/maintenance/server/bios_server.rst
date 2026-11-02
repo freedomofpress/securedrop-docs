@@ -1,7 +1,7 @@
 Server BIOS updates
 ===========================
 
-Below are the steps for updating the BIOS on the Application and Monitor Servers. We provide instructions for Intel and ASUS NUC devices, in accordance with :ref:`our hardware recommendations <Hardware Recommendations>`. You should also update the BIOS on other computers such as the Admin Workstation, but those instructions will vary depending on the manufacturer and model of your device.
+Below are the steps for updating the BIOS on the Application and Monitor Servers. We provide instructions for Intel and ASUS NUC devices, in accordance with :ref:`our hardware recommendations <Hardware Recommendations>`.
 
 What you need
 ~~~~~~~~~~~~~
@@ -14,7 +14,7 @@ What you need
 Perform backups
 ~~~~~~~~~~~~~~~
 
-If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the Application Server </admin/maintenance/server_maintenance/backup_servers>` before proceeding.
+If you are updating the BIOS on an existing SecureDrop system, we recommend you :doc:`back up the Application Server </admin/maintenance/server/backup_servers>` before proceeding.
 
 Prepare the USB flash drive
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
