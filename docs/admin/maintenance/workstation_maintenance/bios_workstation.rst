@@ -1,5 +1,5 @@
-BIOS update instructions
-====================================
+Workstation BIOS updates
+========================
 
 .. _general_BIOS_update:
 

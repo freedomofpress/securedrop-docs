@@ -37,6 +37,6 @@ You should create a separate account on the Admin Interface for each user who ne
 
 For adding more user accounts, please refer now to our :doc:`Admin Interface Guide </admin/reference/admin_interface>`.
 
-.. note:: You can now set a custom logo image on your web interfaces by following the :ref:`Updating Logo Image` documentation.
+.. note:: You can now set a custom logo image on your web interfaces by following the :ref:`Updating Logo Image<admin_interface_updating_logo>` documentation.
 
 .. |TorBrowser| image:: ../../images/torbrowser.png

@@ -63,7 +63,7 @@ Click through the warning about overwriting the configuration slot and choose a 
 Adding users
 ------------
 
-When adding new users, a SecureDrop Administrator will need the **Secret Key** value described above. She will enter it after selecting the **I'm Using a YubiKey** option while :ref:`adding users <Adding Users>`. The new user will then have to verify their YubiKey before being added to the system. This means that the new user and the Administrator should be physically present for this process.
+When adding new users, a SecureDrop Administrator will need the **Secret Key** value described above. She will enter it after selecting the **I'm Using a YubiKey** option while :ref:`adding users <admin_interface_adding_users>`. The new user will then have to verify their YubiKey before being added to the system. This means that the new user and the Administrator should be physically present for this process.
 
 Using your YubiKey
 ------------------

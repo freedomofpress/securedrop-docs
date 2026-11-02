@@ -1,5 +1,5 @@
-Troubleshooting connection problems
-===================================
+Troubleshooting Workstation connection problems
+===============================================
 
 Before troubleshooting connection problems, we recommend reading about the :ref:`networking architecture <Networking Architecture>` of SecureDrop. If you are in a hurry, this guide offers quick diagnostic and remedial steps.
 
@@ -150,7 +150,7 @@ At any point after the successful installation of SecureDrop, if you cannot SSH 
 
 #. **Ensure that you are connected to Tor.**
 
-#. **Ensure your servers are online.** Visit the Admin Interface to check your Application Server is online, and you can trigger a :ref:`test OSSEC alert <test-OSSEC-alert>` to verify your Monitor Server is online.
+#. **Ensure your servers are online.** Visit the Admin Interface to check your Application Server is online, and you can trigger a :ref:`test OSSEC alert <admin_interface_test_OSSEC_alert>` to verify your Monitor Server is online.
 
 #. **Ensure that SSH aliases and Onion Service authentication are configured:**
 

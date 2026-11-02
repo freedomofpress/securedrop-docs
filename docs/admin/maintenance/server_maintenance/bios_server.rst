@@ -1,4 +1,4 @@
-BIOS updates on the Servers
+Server BIOS updates
 ===========================
 
 Below are the steps for updating the BIOS on the Application and Monitor Servers. We provide instructions for Intel and ASUS NUC devices, in accordance with :ref:`our hardware recommendations <Hardware Recommendations>`. You should also update the BIOS on other computers such as the Admin Workstation, but those instructions will vary depending on the manufacturer and model of your device.

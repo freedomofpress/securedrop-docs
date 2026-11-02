@@ -1,13 +1,12 @@
-Additional Server Configuration
+Optional Server Configuration
 ===============================
 
-.. TODO description of section and contents. 
+This section presents additional options you may configure on your SecureDrop instance. 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Additional Server Configuration
-   :hidden:
+   :maxdepth: 1
 
    configuring_ossec_fingerprint
    ssh_over_local_net
    tor_pow
+   https_source_interface

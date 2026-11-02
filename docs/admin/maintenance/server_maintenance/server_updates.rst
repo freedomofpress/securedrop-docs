@@ -1,10 +1,10 @@
-Updating SecureDrop server
-==========================
+Updating SecureDrop Servers
+===========================
 
 Automatic updates
 -----------------
 
-SecureDrop servers check for updates automatically, and install updates without any manual action or intervention within 24 hours of each new SecureDrop release.
+SecureDrop Servers check for updates automatically, and install updates without any manual action or intervention within 24 hours of each new SecureDrop release.
 
 `The latest SecureDrop server version number is available at securedrop.org. <https://securedrop.org/>`__
 
@@ -16,7 +16,7 @@ You can manually update by running: ::
   sudo apt update
   sudo apt upgrade
 
-from both the Application and Monitor servers.
+from both the Application and Monitor Servers.
 
 You can verify the installed version number by running: ::
 

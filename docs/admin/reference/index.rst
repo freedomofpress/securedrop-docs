@@ -1,12 +1,10 @@
-Admin reference
-===============
+Reference
+=========
 
-.. TODO description of section and contents. 
+This section contains additional reference material for SecureDrop Administrators. 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Admin reference
-   :hidden:
+   :maxdepth: 1
 
    hardware_recommendations
    admin_interface

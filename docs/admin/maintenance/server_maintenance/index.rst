@@ -2,11 +2,9 @@ Server maintenance
 ==================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Server maintenance
-   :hidden:
+   :maxdepth: 1
 
-   backup_servers
-   server_updates
-   server_logs
-   bios_server
+   /admin/maintenance/server_maintenance/backup_servers
+   /admin/maintenance/server_maintenance/server_updates
+   /admin/maintenance/server_maintenance/server_logs
+   /admin/maintenance/server_maintenance/bios_server

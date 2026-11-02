@@ -1,5 +1,5 @@
-Reviewing and exporting logs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Workstation logs
+=================
 
 SecureDrop Inbox aggregates system logs from all its qubes in the ``sd-log`` qube, in the folder ``~/QubesIncomingLogs``, with one subfolder for each qube. You can inspect these logs directly in the ``sd-log`` qube, or you can copy them to another qube, e.g., for purposes of sharing logs with the SecureDrop development team.
 

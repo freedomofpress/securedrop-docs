@@ -2,9 +2,7 @@ Workstation maintenance
 =======================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Workstation maintenance
-   :hidden:
+   :maxdepth: 1
 
    backup_workstations
    workstation_updates

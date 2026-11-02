@@ -1,21 +1,35 @@
 Onboard Journalists
 =====================
 
-At this point, the only person who has access to the system is the Administrator. In order to grant access to Journalists, you will need to do some additional setup for each individual Journalist.
+During the initial :doc:`installation</admin/installation/index>` of SecureDrop, only the first Administrator user is created. You can onboard additional Journalists as needed.
+
+For each new Journalist user, you should create a new account using the Admin Interface. Journalists can share or use an existing :ref:`Journalist Workstation<glossary_journalist_workstation>`, or you can :ref:`provision a new one<provision_journalist_workstation>`.
+
+Add a Journalist account on the Admin Interface
+-----------------------------------------------
+
+.. include:: /admin/reference/admin_interface.rst
+    :start-after: .. _admin_interface_logging_in:
+    :end-before: .. _admin_interface_user_management:
+
+.. include:: /admin/reference/admin_interface.rst
+    :start-after: .. _admin_interface_user_management:
+    :end-before: .. _admin_interface_adding_users:
+
+.. include:: /admin/reference/admin_interface.rst
+    :start-after: .. _admin_interface_adding_users:
+    :end-before: .. _admin_interface_freeotp:
+
+.. include:: /admin/reference/admin_interface.rst
+    :start-after: .. _admin_interface_freeotp:
+    :end-before: .. _admin_interface_yubikey:
+
+.. _provision_journalist_workstation:
 
 Provision Journalist Workstation
 -------------------------------------------
 
 .. TODO
-
-Add an account on the Admin Interface
---------------------------------------------
-
-Finally, you need to add an account on the :ref:`Admin Interface<glossary_admin_interface>` so the Journalist can log in and access submissions.
-
-.. include:: /admin/reference/admin_interface.rst
-    :start-after: .. _Adding Users:
-    :end-before: .. _Passphrases_and_two-factor_resets:
 
 Verify Journalist setup
 -------------------------

@@ -71,7 +71,7 @@ Managing users
 
 Adminstrators are responsible for managing user credentials and encouraging best practices. (See :ref:`Passphrase Best Practices<passphrase_best_practices>`.) The Administrator will also have access to the Admin Interface, via her own username, passphrase, and two-factor authentication method (using a smartphone application or YubiKey).
 
-See :ref:`User Management<User Management>` for more information on adding and managing users.
+See :ref:`User Management<admin_interface_user_management>` for more information on adding and managing users.
 
 .. _manage_config:
 
@@ -152,10 +152,6 @@ We strongly recommend :doc:`joining the SecureDrop support portal </introduction
    :alt: The Instance Configuration form displays 'Test alert sent' after a test OSSEC alert was sent successfully.
 .. |SecureDrop main page| image:: /images/manual/screenshots/journalist-admin_index_no_documents.png
    :alt: The top navigation of the Journalist Interface says 'Logged on as Journalist' and displays an 'Admin' link.
-.. |SecureDrop admin home| image:: /images/manual/screenshots/journalist-admin_interface_index.png
-   :alt: The Admin Interface displays an 'Add User' button.
-.. |Add a new user| image:: /images/manual/screenshots/journalist-admin_add_user_totp.png
-   :alt: The form used to create new users displays a pre-generated Diceware passphrase.
 .. |Enable FreeOTP| image:: /images/manual/screenshots/journalist-admin_new_user_two_factor_totp.png
    :alt: The form used to enable FreeOTP displays a barcode and a two-factor secret.
 .. |Enable YubiKey| image:: /images/manual/screenshots/journalist-admin_add_user_hotp.png
