@@ -105,14 +105,14 @@ If it does not report a good signature, try deleting the ISO and downloading it 
 Download and verify Qubes OS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Download the ``.iso`` and the ``Detached PGP signature`` for ``Qubes OS 4.3.1`` from `https://www.qubes-os.org/downloads/ <https://www.qubes-os.org/downloads/#qubes-os-4-3-1>`_. The ISO is 8 GB approximately, and may take some time to download based on the speed of your Internet connection.
+Download the ``.iso`` and the ``Detached PGP signature`` for ``Qubes OS 4.3.2`` from `https://www.qubes-os.org/downloads/ <https://www.qubes-os.org/downloads/#qubes-os-4-3-2>`_. The ISO is 8 GB approximately, and may take some time to download based on the speed of your Internet connection.
 
 Follow the linked instructions to `verify the ISO <https://doc.qubes-os.org/en/latest/project-security/verifying-signatures.html#how-to-verify-detached-pgp-signatures-on-qubes-isos>`_. Ensure that the ISO and hash values are in the same directory, then run:
 
 .. code-block:: sh
 
   gpg --keyserver-options no-self-sigs-only,no-import-clean --fetch-keys https://keys.qubes-os.org/keys/qubes-release-4.3-signing-key.asc
-  gpg -v --verify Qubes-R4.3.1-x86_64.iso.asc
+  gpg -v --verify Qubes-R4.3.2-x86_64.iso.asc
 
 The output should look like this:
 
@@ -128,8 +128,8 @@ The output should look like this:
   gpg: no ultimately trusted keys found
 
   gpg: enabled compatibility flags:
-  gpg: assuming signed data in 'Qubes-R4.3.1-x86_64.iso'
-  gpg: Signature made Wed Dec 17 23:33:45 2025 GMT
+  gpg: assuming signed data in 'Qubes-R4.3.2-x86_64.iso'
+  gpg: Signature made Thu 01 Oct 2026 09:54:17 PM CDT
   gpg:                using RSA key F3FA3F99D6281F7B3A3E5E871C3D9B627F3FADA4
   gpg: using pgp trust model
   gpg: Good signature from "Qubes OS Release 4.3 Signing Key" [unknown]
