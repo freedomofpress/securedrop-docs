@@ -145,7 +145,8 @@ html_theme_options = {
     "repository_branch": "main",
     "use_edit_page_button": True,
     "path_to_docs": "docs/",
-    "use_fullscreen_button": False
+    "use_fullscreen_button": False,
+    "show_navbar_depth": 2,
 }
 
 html_sidebars = {
