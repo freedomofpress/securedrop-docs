@@ -8,19 +8,19 @@ For each new Journalist user, you should create a new account using the Admin In
 Add a Journalist account on the Admin Interface
 -----------------------------------------------
 
-.. include:: /admin/manual/admin_interface.rst
+.. include:: /admin/reference/admin_interface.rst
     :start-after: .. _admin_interface_logging_in:
     :end-before: .. _admin_interface_user_management:
 
-.. include:: /admin/manual/admin_interface.rst
+.. include:: /admin/reference/admin_interface.rst
     :start-after: .. _admin_interface_user_management:
     :end-before: .. _admin_interface_adding_users:
 
-.. include:: /admin/manual/admin_interface.rst
+.. include:: /admin/reference/admin_interface.rst
     :start-after: .. _admin_interface_adding_users:
     :end-before: .. _admin_interface_freeotp:
 
-.. include:: /admin/manual/admin_interface.rst
+.. include:: /admin/reference/admin_interface.rst
     :start-after: .. _admin_interface_freeotp:
     :end-before: .. _admin_interface_yubikey:
 

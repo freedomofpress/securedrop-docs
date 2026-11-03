@@ -1,5 +1,6 @@
+**************
 Maintenance
-===========
+**************
 
 All the components of SecureDrop are designed to run with as little need for maintenance as possible. Nevertheless, there are times when manual intervention is necessary.
 

@@ -114,11 +114,11 @@ SecureDrop is an open source project. You can support the work by `contributing 
 
    admin/securedrop_for_admins
    Installation <admin/installation/index>
-
    Migration <admin/migration/index>
-   Deployment <admin/deployment/index>
+   Onboading users <admin/onboarding/index>
+   Publishing your SecureDrop <admin/publish/index>
    Maintenance <admin/maintenance/index>
-   Manual <admin/manual/index>
+   Reference <admin/reference/index>
 
 .. toctree::
    :caption: Appendices

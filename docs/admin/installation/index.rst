@@ -1,5 +1,6 @@
+*********************
 Installation overview
-=====================
+*********************
 
 This section will walk you though all the steps involved in planning executing a new SecureDrop installation.
 
@@ -10,7 +11,7 @@ Setting expectations
 
 Setting up SecureDrop is a multi-step process, where each step builds on the steps that come before it. It's important that you treat the installation as a complete process, making sure not to skip any portions of the install guide or jump ahead to later steps.
 
-Once you have all the necessary hardware, setting up SecureDrop will take at least a day's work. After installation, you will need at least one more day to :ref:`complete and test <Deployment>` your setup.
+Once you have all the necessary hardware, setting up SecureDrop will take at least a day's work. After installation, you will need at least one more day to complete your setup by :doc:`onboarding users</admin/onboarding/index>`.
 
 Planning your installation
 --------------------------------

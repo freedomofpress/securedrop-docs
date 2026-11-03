@@ -1,12 +1,12 @@
-Off-board Administrators and Journalists
+Offboard Administrators and Journalists
 ==========================================
 
-When Journalists and SecureDrop Administrators leave your organization, it is important to off-board them from SecureDrop.
+When Journalists and SecureDrop Administrators leave your organization, it is important to offboard them from SecureDrop.
 
 .. important:: Additional measures may need to be taken if the user's departure is on unfriendly terms. These measures will vary depending on the circumstances and your own internal incident response
    procedures, and may include doing a full reinstall of SecureDrop. If you are in such a situation, feel free to :doc:`contact us </introduction/getting_support>` for further assistance.
 
-Off-boarding checklist
+Offboarding checklist
 ----------------------
 
 - :doc:`Inform the SecureDrop Support </introduction/getting_support>` team that the user should be removed from any support Signal groups, and indicate if any new staff members should be added.
@@ -15,7 +15,7 @@ Off-boarding checklist
 - If the user receives email alerts (OSSEC alerts or Daily Journalist Alerts), either directly or as a member of an email alias, remove them from those alerts and :ref:`set up someone new <ossec_guide>` to receive those alerts.
 - (Circumstance-dependent) If you have specific concerns that the Submission Secret Key has been compromised, you should consider a full reinstall of SecureDrop. At minimum, you should :ref:`rotate the Submission Key <rotate_submission_key>`.
 
-Additional steps for off-boarding Administrators
+Additional steps for offboarding Administrators
 ------------------------------------------------
 
 - If the departing user was your primary SecureDrop Administrator, designate the next person who will take over their function. Ideally, your outgoing Administrator will be able to provide as much training as possible on the use and maintenance of the system, as well as on your organizational policies (such as backup strategies, and so on) before they leave; if this is not the case, :doc:`contact the SecureDrop Support team </introduction/getting_support>`.

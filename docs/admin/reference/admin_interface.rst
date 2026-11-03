@@ -79,7 +79,7 @@ If two-factor authentication was set up successfully, you will be redirected bac
 YubiKey
 ~~~~~~~
 
-#. If the Administrator wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide </admin/deployment/onboarding/yubikey_setup>`.
+#. If the Administrator wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide </admin/onboarding/yubikey_setup>`.
 
    |Enable YubiKey|
 
@@ -128,10 +128,10 @@ To reset two-factor authentication:
 
 #. Follow the on-screen instructions to complete the process and verify their new two-factor authentication credentials.
 
-Off-boarding users
+Offboarding users
 ~~~~~~~~~~~~~~~~~~
 
-See :doc:`our guide to off-boarding users from SecureDrop </admin/deployment/onboarding/offboarding>`.
+See :doc:`our guide to offboarding users from SecureDrop </admin/onboarding/offboarding>`.
 
 Instance configuration
 ^^^^^^^^^^^^^^^^^^^^^^

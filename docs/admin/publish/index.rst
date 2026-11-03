@@ -1,5 +1,6 @@
-Putting your SecureDrop online
-==============================
+**************************
+Publishing your SecureDrop
+**************************
 
 This sections covers how to publicize your SecureDrop, and in particular our recommendations for guiding potential Sources to your SecureDrop from your organization's website.
 

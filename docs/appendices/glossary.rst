@@ -17,14 +17,14 @@ Admin Interface
 
 The Admin Interface is the web-based interface Administrators use to add and manage SecureDrop users. It is hosted by the Application Server as an authenticated Onion Service. The Admin Interface is only accessed by an Administrator using Tor Browser on an Admin Workstation.
 
-Please see the :doc:`relevant page</admin/manual/admin_interface>` for complete instructions on accessing and using the Admin Interface.
+Please see the :doc:`relevant page</admin/reference/admin_interface>` for complete instructions on accessing and using the Admin Interface.
 
 .. _glossary_admin_workstation:
 
 Admin Workstation
 -----------------
 
-The Admin Workstation is a laptop running Qubes OS, configured with the administration tools and credentials needed for an Administrator to install and maintain a SecureDrop instance, in particular the :doc:`securedrop-admin</admin/manual/securedrop_admin>` utility. An Admin Workstation is capable of connection to the web-based Admin Interface, and to the Application and Monitor servers using SSH.
+The Admin Workstation is a laptop running Qubes OS, configured with the administration tools and credentials needed for an Administrator to install and maintain a SecureDrop instance, in particular the :doc:`securedrop-admin</admin/reference/securedrop_admin>` utility. An Admin Workstation is capable of connection to the web-based Admin Interface, and to the Application and Monitor servers using SSH.
 
 .. _glossary_application_server:
 
@@ -42,7 +42,7 @@ Export Device
 
 The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a Journalist Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
 
-Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/deployment/onboarding/provisioning_usb>`.
+Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/onboarding/provisioning_usb>`.
 
 .. _glossary_journalist:
 

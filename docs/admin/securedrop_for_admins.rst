@@ -31,7 +31,7 @@ As a SecureDrop Administrator, it is your responsibility to:
 
 * :doc:`Install SecureDrop </admin/installation/index>`
 * :ref:`Manage users <admin_interface_user_management>`
-* :doc:`Manage the system configuration</admin/manual/index>`
+* :doc:`Manage the system configuration</admin/reference/index>`
 * :ref:`Ensure that Servers, firewall and Workstations are kept up-to-date <manage_updates>`
 * :doc:`Monitor OSSEC alerts </admin/maintenance/server/ossec_alerts>`
 * :ref:`Monitor the SecureDrop team's release and security-related communications <monitoring_comms>`
