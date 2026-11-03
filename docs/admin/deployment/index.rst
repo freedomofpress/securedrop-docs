@@ -13,8 +13,7 @@ Certain topics, such as creating a :ref:`Landing Page<glossary_landing_page>` an
 The deployment tasks generally only need to be performed once. For tasks related to the upkeep and troubleshooting of your SecureDrop instance, we recommend reviewing :doc:`the maintenance documentation. </admin/maintenance/index>`
 
 .. toctree::
-   :maxdepth: 1
-   :hidden:
+   :maxdepth: 2
 
    onboarding/index
    getting_online/index
