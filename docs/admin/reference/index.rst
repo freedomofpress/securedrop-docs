@@ -6,7 +6,7 @@ Administrators are responsible for configuring and maintaining the system. Sever
 
 * :doc:`The Admin Interface<admin_interface>` allows the Administrator to manage users and configure web interface features such as organizations logos and submission preferences
 * :ref:`Server SSH access<server SSH access>` is also available, to allow Administrators to troubleshoot server issues and perform manual updates.
-* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the ``sd-admin`` qube. to configure and install SecureDrop, to perform operations including server backups and restores, and to update the server configuration after installation.
+* :ref:`The securedrop-admin utility<securedrop-admin utility>` is used via the ``sd-admin`` qube. It can be used to configure and install SecureDrop, perform operations including server backups and restores, and to update the server configuration after installation.
 
 .. TODO complete
 
