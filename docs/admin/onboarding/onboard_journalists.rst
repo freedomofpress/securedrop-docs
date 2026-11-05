@@ -1,8 +1,6 @@
 Onboard Journalists
 =====================
 
-During the initial :doc:`installation</admin/installation/index>` of SecureDrop, only the first Administrator user is created. You can onboard additional Journalists as needed.
-
 For each new Journalist user, you should create a new account using the Admin Interface. Journalists can share or use an existing :ref:`Journalist Workstation<glossary_journalist_workstation>`, or you can :ref:`provision a new one<provision_journalist_workstation>`.
 
 Add a Journalist account on the Admin Interface
