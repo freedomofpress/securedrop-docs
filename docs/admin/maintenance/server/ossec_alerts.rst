@@ -5,6 +5,8 @@ Analyzing OSSEC alerts
 
 Understanding the contents of the OSSEC alerts requires a background and knowledge in Linux systems administration. They may be confusing, and at first it will be hard to tell between a genuine problem and a fluke. You should examine these alerts regularly to ensure that the SecureDrop environment has not been compromised in any way, and follow up on any particularly concerning messages with direct investigation.
 
+.. warning:: If you believe that the system is behaving abnormally, you should :doc:`contact us</introduction/getting_support>` for help.
+
 An initial SecureDrop install will generate quite a few alerts as OSSEC is installed early in the install process. As part of the administration of a SecureDrop instance, regularly looking through the generated alerts provides Administrators with information on the overall health of the SecureDrop instance.
 
 OSSEC alerts will range from a severity level of 1 (lowest) to 14 (highest), and as a baseline, you should expect to see the following alerts:
@@ -114,5 +116,3 @@ OSSEC will send an alert when the `securedrop-admin` tool is used to backup, res
    Rule: 400001 fired (level 13) -> "Ansible playbook run on server (securedrop-admin install, backup, or restore)."
 
 **Action**: You should ensure that this action was performed by you or a fellow Administrator.
-
-If you believe that the system is behaving abnormally, you should :doc:`contact us</introduction/getting_support>` for help.
