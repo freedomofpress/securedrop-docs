@@ -2,7 +2,7 @@
 SecureDrop for Administrators
 #############################
 
-SecureDrop servers are managed by a :ref:`Administrator<glossary_administrator>`.
+SecureDrop servers are managed by an :ref:`Administrator<glossary_administrator>`.
 
 For larger newsrooms, there may be a team of Administrators, but at least one person within the organization will need to serve as the administrator. In some situations, such as smaller news organizations where a Journalist has the technical capacity to administer systems, one person can serve as both Journalist and administrator. When possible, we advise having a dedicated staff member serving the role of SecureDrop administrator.
 
