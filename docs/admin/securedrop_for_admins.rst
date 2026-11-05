@@ -4,7 +4,7 @@ SecureDrop for Administrators
 
 SecureDrop servers are managed by an :ref:`Administrator<glossary_administrator>`.
 
-For larger newsrooms, there may be a team of Administrators, but at least one person within the organization will need to serve as the administrator. In some situations, such as smaller news organizations where a Journalist has the technical capacity to administer systems, one person can serve as both Journalist and administrator. When possible, we advise having a dedicated staff member serving the role of SecureDrop administrator.
+For larger newsrooms, there may be a team of Administrators, but at least one person within the organization will need to serve as the Administrator. In some situations, such as smaller news organizations where a Journalist has the technical capacity to administer systems, one person can serve as both Journalist and Administrator. When possible, we advise having a dedicated staff member serving the role of SecureDrop Administrator.
 
 The Administrator connects to the Application and Monitor Servers over `authenticated Onion Services <https://tb-manual.torproject.org/onion-services/>`__, and manages them using `Ansible <https://www.ansible.com/>`__.
 
