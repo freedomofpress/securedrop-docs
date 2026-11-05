@@ -146,7 +146,7 @@ html_theme_options = {
     "use_edit_page_button": True,
     "path_to_docs": "docs/",
     "use_fullscreen_button": False,
-    "show_navbar_depth": 2,
+    "show_navbar_depth": 1,
 }
 
 html_sidebars = {
