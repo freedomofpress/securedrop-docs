@@ -29,21 +29,21 @@ The SecureDrop architecture contains multiple machines and hardened servers. Whi
 
 As a SecureDrop Administrator, it is your responsibility to:
 
-* :doc:`Install SecureDrop </admin/installation/index>`
-* :ref:`Manage users <admin_interface_user_management>`
-* :doc:`Manage the system configuration</admin/reference/index>`
-* :ref:`Ensure that Servers, firewall and Workstations are kept up-to-date <manage_updates>`
-* :doc:`Monitor OSSEC alerts </admin/maintenance/server/ossec_alerts>`
-* :ref:`Monitor the SecureDrop team's release and security-related communications <monitoring_comms>`
-* :ref:`Spply available firmware updates to all SecureDrop hardware<bios_updates>`
-* Ensure that the :ref:`SecureDrop environment is physically secure and monitored<security_requirements>`
-* Investigate and respond to security incidents
-* Ensure that Journalists adhere to the :doc:`documented processes</journalist/journalist>` for checking SecureDrop, communicating with Sources, and reviewing submitted files
-* Securing your own credentials for accessing your Admin Workstation, the Admin Interface, and the SecureDrop Servers
-* Encourage users to :ref:`employ best practices<passphrase_best_practices>` for securing their own credentials
-* Verify the integrity of SecureDrop code
-* Avoid the installation of unsupported code or patches
-* :doc:`Decommission SecureDrop after it is no longer in use </admin//maintenance/decommission>`
+* :doc:`Install SecureDrop </admin/installation/index>`.
+* :ref:`Manage users <admin_interface_user_management>`.
+* :doc:`Manage the system configuration</admin/reference/index>`.
+* :ref:`Ensure that Servers, firewall and Workstations are kept up-to-date <manage_updates>`.
+* :doc:`Monitor OSSEC alerts </admin/maintenance/server/ossec_alerts>`.
+* :ref:`Monitor the SecureDrop team's release and security-related communications <monitoring_comms>`.
+* :ref:`Spply available firmware updates to all SecureDrop hardware<bios_updates>`.
+* Ensure that the :ref:`SecureDrop environment is physically secure and monitored<security_requirements>`.
+* Investigate and respond to security incidents.
+* Ensure that Journalists adhere to the :doc:`documented processes</journalist/journalist>` for checking SecureDrop, communicating with Sources, and reviewing submitted files.
+* Securing your own credentials for accessing your Admin Workstation, the Admin Interface, and the SecureDrop Servers.
+* Encourage users to :ref:`employ best practices<passphrase_best_practices>` for securing their own credentials.
+* Verify the integrity of SecureDrop code.
+* Avoid the installation of unsupported code or patches.
+* :doc:`Decommission SecureDrop after it is no longer in use </admin//maintenance/decommission>`.
 
 Responsibilities of the SecureDrop team
 ---------------------------------------
