@@ -114,7 +114,7 @@ Open a terminal in ``sd-admin`` and run the following command, answering the pro
 The script will automatically validate the answers you provided and display error messages if any problems are detected. The answers will be written to the file ``~/.config/securedrop-admin/site-specific``.
 
 Optional: configuring fingerprint verification
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you run your own mail server, you may wish to increase the security level used by Postfix for sending mail to ``fingerprint``, rather than ``secure``. Doing so will require an exact match for the fingerprint of TLS certificate on the SMTP relay. The advantage to fingerprint verification is additional security, but the disadvantage is potential maintenance cost if the fingerprint changes often. If you manage the mail server and handle the certificate rotation, you should update the SecureDrop configuration whenever the certificate changes, so that OSSEC alerts continue to send. Using fingerprint verification does not work well for popular mail relays such as smtp.gmail.com, as those fingerprints can change frequently, due to load balancing or other factors.
 

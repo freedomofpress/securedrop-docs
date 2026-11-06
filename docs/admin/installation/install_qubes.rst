@@ -86,6 +86,8 @@ Finally, click **Finish Configuration** to set up the default system templates a
 
 Once the initial setup is complete, the login dialog will be displayed. Log in using the username and password set during installation.
 
+.. note:: If at this stage you encounter an error stating "Unable to reset PCI device" and network devices (Ethernet and Wi-Fi) will not work, you may need to apply a manual fix. Consult the :doc:`/admin/maintenance/workstation/troubleshoot_qubes_install` page for for information.
+
 Apply USB fixes (Hardware-dependent) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

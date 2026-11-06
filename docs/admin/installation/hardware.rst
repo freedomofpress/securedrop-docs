@@ -3,7 +3,9 @@
 Hardware
 ========
 
-This page outlines the required hardware components necessary to successfully install and operate a SecureDrop instance. For specific hardware recommendations, see :doc:`../../appendices/hardware_recommendations`. If you have any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
+This page outlines the required hardware components necessary to successfully install and operate a SecureDrop instance. For specific hardware recommendations, see :doc:`/appendices/hardware_recommendations`. If you have any questions, please :doc:`contact the SecureDrop Support team </introduction/getting_support>`.
+
+.. note:: No matter what hardware you decide to use, it's important to be mindful of how long it will continue to receive security updates. Given the security requirements for a SecureDrop instance, any hardware that is no longer receiving security updates from the manufacturer will become more and more vulnerable over time. Once your hardware has reached its end-of-life (EOL), we recommend upgrading to newer, supported hardware. See our :ref:`hardware recommendations <hardware_recommendations_eol>` for a list of end-of-life dates for currently recommended hardware.
 
 Hardware overview
 -----------------
@@ -30,9 +32,7 @@ Additionally, you may want to consider the following purchases:
 * a security key for HOTP authentication, such as a YubiKey, if you want to use hardware-based two-factor authentication instead of a mobile app.
 * a USB flash drive with a physical write protection switch, or a USB write blocker, if you want to mitigate the risk of introducing malware from your network to your Journalist Workstation during repeated use of an Export Device.
 
-.. tip::
-
-    While a printer is not required, we highly recommend it. Printing documents is generally far safer than copying them in digital form. See our guide to working with documents for more information.
+.. tip:: While a printer is not required, we highly recommend it. Printing documents is generally far safer than copying them in digital form. See our guide to working with documents for more information.
 
 Advice for users on a tight budget
 ----------------------------------
@@ -86,7 +86,7 @@ You will need one physical computer that is used as a dedicated firewall for the
 
 We recommend a 4 NIC network firewall and currently provide setup instructions for pfSense and OPNSense. You can :ref:`find our list of recommended hardware firewalls here.<hardware_recommendations_firewall>`
 
-An acceptable alternative that requires more technical expertise is to :doc:`configure an existing hardware firewall <network_firewall>`.
+An acceptable alternative that requires more technical expertise is to :doc:`configure an existing hardware firewall </admin/installation/firewall_setup/network_firewall>`.
 
 Two-factor device
 ^^^^^^^^^^^^^^^^^
@@ -115,7 +115,7 @@ You may want to consider enforcing write protection on USB flash drives when onl
 
 It is especially advisable to enable write protection before attaching an Export Device to an everyday workstation that lacks the security protections of the Tails operating system.
 
-Please review our :doc:`setup guide </admin/deployment/provisioning_usb>` for additional background on setting up Export Devices.
+Please review our :doc:`setup guide </admin/onboarding/provisioning_usb>` for additional background on setting up Export Devices.
 
 We also recommend buying an additional USB flash drive for making regular backups of your SecureDrop laptops.
 
@@ -151,9 +151,9 @@ Driverless
 
 SecureDrop implements driverless IPP printing to support a large selection of modern printers. Compatible printers can be easily identified by their support for the Apple AirPrint or Moipra standards:
 
-.. figure:: ../workstation_reference/images/airprint.jpg
+.. figure:: /images/airprint.jpg
 
-.. figure:: ../workstation_reference/images/moipra.jpg
+.. figure:: /images/moipra.jpg
 
 You may consult Apple's `list of printers that support AirPrint <https://support.apple.com/en-us/HT201311#printers>`_, Moipra's `list of certified products <https://mopria.org/certified-products>`_, or OpenPrinting's `list of printers supporting driverless printing <https://openprinting.github.io/printers/>`_.
 
@@ -184,8 +184,3 @@ It's useful to run periodic backups of the Servers in case of failure. We recomm
 .. important::
 
    Like all storage media associated with SecureDrop, this drive should be encrypted and protected with a secure passphrase. We recommend encrypting the drive using LUKS. You can follow the same instructions used for :ref:`creating a LUKS-based Export Device<luks_encrypted_drive>`.
-
-Hardware end-of-life
---------------------
-
-No matter what hardware you decide to use, it's important to be mindful of how long it will continue to receive security updates. Given the security requirements for a SecureDrop instance, any hardware that is no longer receiving security updates from the manufacturer will become more and more vulnerable over time. Once your hardware has reached its end-of-life (EOL), we recommend upgrading to newer, supported hardware. See our :ref:`hardware recommendations <hardware_recommendations_eol>` for a list of end-of-life dates for currently recommended hardware.

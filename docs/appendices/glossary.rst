@@ -42,7 +42,7 @@ Export Device
 
 The Export Device is a physical USB flash drive used to transfer decrypted files and conversation transcripts from a Journalist Workstation to a Journalist's everyday workstation, or to another computer for additional processing.
 
-Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/deployment/provisioning_usb>`.
+Please see the detailed security recommendations for the choice, configuration and use of your Export Device in the :doc:`journalist</journalist/journalist>` guide and in the :doc:`setup guide</admin/onboarding/provisioning_usb>`.
 
 .. _glossary_journalist:
 
@@ -80,7 +80,7 @@ The Monitor Server is physical computer housed on-premises running the `OSSEC<ht
 
 Instructions and tips for accessing the Monitor Server over SSH are on the :ref:`SSH access page<server SSH access>`.
 
-Instructions on how to interpret OSSEC email alerts are on the :doc:`Analyzing OSSEC alerts page</admin/reference/ossec_alerts>`.
+Instructions on how to interpret OSSEC email alerts are on the :doc:`Analyzing OSSEC alerts page</admin/maintenance/server/ossec_alerts>`.
 
 .. _glossary_onion_service:
 

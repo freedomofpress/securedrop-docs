@@ -17,6 +17,11 @@ rst_prolog = """
   :alt: Qubes Application menu
 .. |qubes_menu_gear| image:: /images/qubes_menu_gear.png
   :alt: System Tools 
+.. |SecureDrop admin home| image:: /images/manual/screenshots/journalist-admin_interface_index.png
+   :alt: The Admin Interface displays an 'Add User' button.
+.. |Add a new user| image:: /images/manual/screenshots/journalist-admin_add_user_totp.png
+   :alt: The form used to create new users displays a pre-generated Diceware passphrase.
+
 
 """
 
@@ -140,7 +145,8 @@ html_theme_options = {
     "repository_branch": "main",
     "use_edit_page_button": True,
     "path_to_docs": "docs/",
-    "use_fullscreen_button": False
+    "use_fullscreen_button": False,
+    "show_navbar_depth": 1,
 }
 
 html_sidebars = {

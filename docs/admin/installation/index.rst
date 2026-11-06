@@ -1,0 +1,125 @@
+*********************
+Installation overview
+*********************
+
+This section will walk you though all the steps involved in planning executing a new SecureDrop installation.
+
+.. note:: If you are migrating from a Tails-based SecureDrop deployment (with separate "Secure Viewing Station", "Journalist workstation," and "Admin Workstation" USB flash drives), skip to the :ref:`Migration Overview<migration_overview>`.
+
+Setting expectations
+--------------------
+
+Setting up SecureDrop is a multi-step process, where each step builds on the steps that come before it. It's important that you treat the installation as a complete process, making sure not to skip any portions of the install guide or jump ahead to later steps.
+
+Once you have all the necessary hardware, setting up SecureDrop will take at least a day's work. After installation, you will need at least one more day to complete your setup by :doc:`onboarding users</admin/onboarding/index>`.
+
+Planning your installation
+--------------------------------
+
+SecureDrop requires several different pieces of hardware, outlined below. 
+
+Workstations
+~~~~~~~~~~~~
+
+.. _install_overview_workstations:
+
+In the new SecureDrop, every workstation is a laptop running the `Qubes <https://www.qubes-os.org>`__ operating system with additional software and configurations depending on which roles they will fill.
+
+The :ref:`Admin Workstation<glossary_admin_workstation>` is used by Administrators. It is configured with the tools and credentials needed to administer and install SecureDrop Servers. 
+
+The :ref:`Journalist Workstation<glossary_journalist_workstation>` is used by Journalists. It has :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` installed and configured to connect to your SecureDrop Server.
+
+Typically, the Admin Workstation and Journalist Workstation will be different laptops used by different people (Administrations and Journalists, respectively). However, a single laptop can serve as a *combined* Admin + Journalist Workstation. This configuration accommodates small or cash-strapped newsrooms, where only a single laptop is shared between Administrators and Journalists, or where a single individual fills both roles. 
+
+For the initial installation of SecureDrop, you will set up either one Admin Workstation and one Journalist Workstation, or a single combined Admin + Journalist Workstation.
+
+After the initial installation is complete, you may add additional laptops of any type as needed for your organization.
+
+.. _install_overview_servers:
+
+Servers
+~~~~~~~
+
+SecureDrop requires two paired physical servers that are installed at a premise controlled by your organization. These servers run the Ubuntu operating system.
+
+The :ref:`Application Server<glossary_application_server>` runs the SecureDrop Server application, providing the :ref:`Source Interface<glossary_source_interface>`, :ref:`Admin Interface<glossary_admin_interface>`, and the API endpoint used by SecureDrop Inbox to sync messages between Sources and Journalists.
+
+The :ref:`Monitor Server <glossary_monitor_server>` monitors the Application Server with `OSSEC <https://www.ossec.net/>`__ and sends email alerts.
+
+Finally, a physical hardware Network Firewall is required to securely manage the connection between the Application and Monitor Servers and their connection to the internet. 
+
+.. _security_requirements:
+
+Minimum security requirements
+-----------------------------
+
+SecureDrop is a technical tool. It is designed to protect Journalists and Sources, but no tool can guarantee safety. There are a number of security requirements for the usage of SecureDrop's components, which should be considered when planning your installation.
+
+Minimum security requirements for Servers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The SecureDrop Servers handle all messages and files exchanged between Journalists and Sources. It is of the utmost importance that the SecureDrop Servers are housed somewhere physically secure to prevent tampering and access by unauthorized parties.
+
+- The Application and Monitor Servers should be dedicated physical machines, not virtual machines, :ref:`nor hosted on cloud servers<faq_physically_hosted>`.
+- A trusted location to host the Servers. The Servers should be hosted in a location that is owned or occupied by the organization to ensure that their legal department can not be bypassed with gag orders.
+- The SecureDrop Servers should be on a separate internet connection or completely segmented from the corporate network, such as a dedicated subnet with DENY rules for all traffic to and from the corporate LAN.
+- All traffic from the corporate network should be blocked at the SecureDrop's point of demarcation.
+- Video monitoring should be recorded of the server area and the organization's safe.
+- An established monitoring plan and incident response plan. Who will receive the OSSEC alerts and what will their response plan be? These should cover technical outages and a compromised environment plan.
+
+Minimum security requirements for Workstations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Every Admin and Journalist Workstation contains sensitive credentials and information related to your SecureDrop, such as SSH keys, the :ref:`Secret Submission Key<glossary_submission_key>`, and copies of messages and files exchanged between Journalists and Sources. Therefore, it's critical to ensure that appropriate security practices are applied to every Admin and Journalist Workstation.
+
+- Journalist Workstations should always be powered off and stored securely when not in use.
+- During installation, a wired internet connection that is either dedicated for this purpose, or on a fully segregated subnet should be used. 
+- Users should not bring other electronic devices into the room during installation, with the exception of smartphones used for 2FA token generation. While in the room, smartphones should be set to airplane mode, and should not be used for any purpose other than 2FA.
+
+Summary of installation tasks
+------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :numbered: 2
+
+   Acquire compatible hardware <hardware>
+   prepare_installation_media
+   email_alerts
+   install_qubes
+   generate_submission_key
+   install_admin_workstation
+   keepassxc_for_admins
+   transfer_public_keys
+   firewall_setup/network_firewall
+   prepare_servers
+   install_servers
+   apply_admin_workstation
+   create_admin_account
+   install_journalist
+   test_the_installation
+
+Tracking your progress
+----------------------
+
+To assist in the installation process, we offer a `SecureDrop Installation Worksheet`_, which you can print out and complete as you go. Only complete this worksheet on paper, never electronically.
+
+It is **critical** that you destroy this worksheet when your installation is complete and all of your passphrases have been safely stored in a password manager.
+
+.. warning:: Remember to destroy the `SecureDrop Installation Worksheet`_ after the installation is complete.
+
+.. _`SecureDrop Installation Worksheet`: https://docs.google.com/a/freedom.press/document/d/18RMAzhx1XCgpmw366I8tItBXQTzkFy_i_D0c605DTS8/edit?usp=sharing
+
+Installation support
+--------------------
+
+SecureDrop is open-source software. Therefore, any organization can install it for free.
+
+Because the installation and operation are complex, and because SecureDrop can only be as secure as the  operational security practices followed by its users, Freedom of the Press Foundation will also help  organizations install SecureDrop and train Journalists and Administrators.
+
+If you would like to work with Freedom of the Press Foundation on your SecureDrop installation, please reach out to us. We ask news organizations that can afford to pay for installation support, training, and maintenance to do so.
+
+As part of `priority support agreements <https://securedrop.org/priority-support/>`_  and on a pro-bono basis for smaller news organizations, Freedom of the Press Foundation will visit your offices, help set up SecureDrop and train Journalists to use it. (For  pro-bono support, we request that our travel costs are covered.)
+
+.. include:: ../../includes/provide-feedback.txt
+

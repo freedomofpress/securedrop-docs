@@ -31,23 +31,23 @@ If you have opted to create distinct Admin and Journalist Workstations, then you
 Export Submission Public Key from a Journalist Workstation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Insert a USB flash drive into your Journalist Workstation. You may use an encrypted drive such as an :ref:`Export Device<glossary_export_device>`, but it is not necessary for transferring the public key.
+1. Insert a USB flash drive into your Journalist Workstation. You may use an encrypted drive such as an :ref:`Export Device<glossary_export_device>`, but it is not necessary for transferring the public key.
 
-#. Open the Qubes Devices Widget and find your newly inserted USB flash drive under **USB Storage** at the bottom of the list (indicated by the word **new** in blue).
+2. Open the Qubes Devices Widget and find your newly inserted USB flash drive under **USB Storage** at the bottom of the list (indicated by the word **new** in blue).
 
-#. Attach your USB flash drive to a the **vault** qube.
-
-.. TODO Screenshot
-
-#. Open the file manager in the ``vault`` (|qubes_menu| **▸** **vault** **▸ Thunar File Manager**).
+3. Attach your USB flash drive to a the **vault** qube.
 
 .. TODO Screenshot
 
-#. Select your USB flash drive in the file manager to mount it (and unlock it if it is an encrypted Export Device).
+4. Open the file manager in the ``vault`` (|qubes_menu| **▸** **vault** **▸ Thunar File Manager**).
+
+.. TODO Screenshot
+
+5. Select your USB flash drive in the file manager to mount it (and unlock it if it is an encrypted Export Device).
 
 .. TODO import key to sd-admin
 
-#. Use the Qubes Devices menu to detach the USB flash drive. Then shut down the ``vault`` qube.
+6. Use the Qubes Devices menu to detach the USB flash drive. Then shut down the ``vault`` qube.
 
 .. TODO Screenshot
 
@@ -56,29 +56,29 @@ Export Submission Public Key from a Journalist Workstation
 Import Submission Public Key onto the Admin Workstation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Insert the USB flash drive into the Admin Workstation.
+1. Insert the USB flash drive into the Admin Workstation.
 
-#. Open the Qubes Devices menu and find your newly inserted USB flash drive under **USB Storage** at the bottom of the list (indicated by the word **new** in blue).
+2. Open the Qubes Devices menu and find your newly inserted USB flash drive under **USB Storage** at the bottom of the list (indicated by the word **new** in blue).
 
-#. Attach your USB flash drive to **sd-admin**.
-
-.. TODO Screenshot
-
-#. Open the file manager in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Thunar File Manager**).
-
-#. Select your USB flash drive in the file manager to mount it (and unlock it if it is an encrypted Export Device).
+3. Attach your USB flash drive to **sd-admin**.
 
 .. TODO Screenshot
 
-#. Right click on the ``sd-public.sec`` file and drag and drop to copy to the **Home** directory.
+4. Open the file manager in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin`` **▸ Thunar File Manager**).
+
+5. Select your USB flash drive in the file manager to mount it (and unlock it if it is an encrypted Export Device).
 
 .. TODO Screenshot
 
-#. Open a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Xfce Terminal**) and run the following command to move the Submission Public Key:
+6. Right click on the ``sd-public.sec`` file and drag and drop to copy to the **Home** directory.
 
-	.. code-block:: sh
+.. TODO Screenshot
 
-		mv ~/sd-public.sec ~/.config/securedrop-admin/.
+7. Open a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin`` **▸ Xfce Terminal**) and run the following command to move the Submission Public Key:
+
+.. code-block:: sh
+
+    mv ~/sd-public.sec ~/.config/securedrop-admin/.
 
 Copy email alert public keys
 ----------------------------

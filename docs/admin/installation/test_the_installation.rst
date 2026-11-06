@@ -36,7 +36,7 @@ On each server:
 #. Check that you can execute privileged commands by running ``sudo su``.
 #. Verify that you are booted into a grsec kernel: run ``uname -r`` and verify that the name of the running kernel ends with ``-grsec``.
 #. Check the current applied iptables rules with ``iptables-save``. It should output *approximately* 50 lines.
-#. You should have received an email alert from OSSEC when it first started. If not, review our :doc:`OSSEC Alerts Guide </admin/reference/ossec_alerts>`.
+#. You should have received an email alert from OSSEC when it first started. If not, review our :doc:`OSSEC Alerts Guide </admin/maintenance/server/ossec_alerts>`.
 
 On the Application Server:
 
