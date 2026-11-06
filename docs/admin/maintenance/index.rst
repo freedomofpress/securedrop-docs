@@ -49,7 +49,7 @@ Alerts and logs
 
 Both SecureDrop Servers and Workstations produce logs which can be useful for investigating problems and troubleshooting.
 
-.. warning:: Logs can contain sensitive information. Do share lots outside your organization without first carefully examining and redacting any sensitive information.
+.. warning:: Logs and alerts can contain sensitive information. Do not share logs outside your organization without first carefully examining them and redacting any sensitive information.
 
 .. _monitoring_ossec:
 
