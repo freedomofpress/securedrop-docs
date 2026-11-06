@@ -69,6 +69,6 @@ When in doubt how to resolve an issue, please avoid following technical instruct
 Monitoring SecureDrop-related communications
 --------------------------------------------
 
-Release announcements and security advisories are posted to the `SecureDrop blog <https://securedrop.org/news>`__, which is also available as an `RSS feed <https://securedrop.org/news/feed/>`__. You can also follow us on our social media accounts (`Mastodon <https://social.freedom.press/@securedrop>`__, `Bluesky <https://bsky.app/profile/securedrop.org>`__, and `Twitter <https://twitter.com/securedrop>`__).
+Release announcements and security advisories are posted to the `SecureDrop blog <https://securedrop.org/news>`__, which is also available as an `RSS feed <https://securedrop.org/news/feed/>`__. You can also follow us on our social media accounts (`Mastodon <https://social.freedom.press/@securedrop>`__, `Bluesky <https://bsky.app/profile/securedrop.org>`__, and `X (formerly Twitter) <https://twitter.com/securedrop>`__).
 
 We strongly recommend :doc:`joining the SecureDrop support portal </introduction/getting_support>`. As a member of the support portal, you will receive email notifications related to all major announcements, and you can open tickets in case of technical issues. Membership is free of charge.
