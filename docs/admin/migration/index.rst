@@ -37,7 +37,7 @@ This guide will help you migrate your Tails-based Admin and Journalist Workstati
 YubiKey Support
 ---------------
 
-.. TODO Note about current status of YubiKey support
+At present, using a YubiKey is **not supported** by the Qubes-based SecureDrop Workstation. If your organization has Journalists or Administrators using YubiKeys, do not migrate at this time. A future release will support using a YubiKey.
 
 Hardware overview
 ---------------------
