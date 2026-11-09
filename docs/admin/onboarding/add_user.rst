@@ -1,10 +1,5 @@
-Onboard Journalists
-=====================
-
-For each new Journalist user, you should create a new account using the Admin Interface. Journalists can share or use an existing :ref:`Journalist Workstation<glossary_journalist_workstation>`, or you can :ref:`provision a new one<provision_journalist_workstation>`.
-
-Add a Journalist account on the Admin Interface
------------------------------------------------
+Add user on the Admin Interface
+===============================
 
 .. include:: /admin/reference/admin_interface.rst
     :start-after: .. _admin_interface_logging_in:
@@ -21,15 +16,3 @@ Add a Journalist account on the Admin Interface
 .. include:: /admin/reference/admin_interface.rst
     :start-after: .. _admin_interface_freeotp:
     :end-before: .. _admin_interface_yubikey:
-
-.. _provision_journalist_workstation:
-
-Provision Journalist Workstation
--------------------------------------------
-
-.. TODO
-
-Verify Journalist setup
--------------------------
-
-.. TODO

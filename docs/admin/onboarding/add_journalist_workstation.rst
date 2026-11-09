@@ -1,0 +1,2 @@
+Provision additional Journalist Workstation
+===========================================
