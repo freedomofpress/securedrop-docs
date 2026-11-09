@@ -90,11 +90,9 @@ An acceptable alternative that requires more technical expertise is to :doc:`con
 Two-factor device
 ^^^^^^^^^^^^^^^^^
 
-Two-factor authentication is used when connecting to different parts of the SecureDrop system. Each Administrator and each Journalist needs a two-factor device. We currently support two options for two-factor authentication:
+Two-factor authentication is used when connecting to different parts of the SecureDrop system. Each Administrator and each Journalist needs a two-factor device. We currently support only one option for two-factor authentication:
 
 * Your existing smartphone with an app that computes TOTP codes (e.g. FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ and `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__).
-
-* A dedicated hardware dongle that computes HOTP codes (e.g. a `YubiKey <https://www.yubico.com/setup/>`__).
 
 .. include:: ../../includes/otp-app.txt
 
