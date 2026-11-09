@@ -29,7 +29,6 @@ Additionally, you may want to consider the following purchases:
 * a printer without wireless network support, to use in combination with the Journalist.
 * an external hard drive for server backups.
 * a USB flash drive to store backups of your laptops.
-* a security key for HOTP authentication, such as a YubiKey, if you want to use hardware-based two-factor authentication instead of a mobile app.
 * a USB flash drive with a physical write protection switch, or a USB write blocker, if you want to mitigate the risk of introducing malware from your network to your Journalist Workstation during repeated use of an Export Device.
 
 .. tip:: While a printer is not required, we highly recommend it. Printing documents is generally far safer than copying them in digital form. See our guide to working with documents for more information.

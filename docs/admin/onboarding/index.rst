@@ -14,7 +14,6 @@ The following pages describe all the procedures needed for onboarding and offboa
    provisioning_usb
    onboard_journalists
    onboard_administrators
-   yubikey_setup
    managing_clipboard
    offboarding
    

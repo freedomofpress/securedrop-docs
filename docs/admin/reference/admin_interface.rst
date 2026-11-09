@@ -79,7 +79,7 @@ If two-factor authentication was set up successfully, you will be redirected bac
 YubiKey
 ~~~~~~~
 
-#. If the Administrator wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide </admin/onboarding/yubikey_setup>`.
+#. If the Administrator wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key.
 
    |Enable YubiKey|
 
