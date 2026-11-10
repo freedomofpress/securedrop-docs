@@ -9,7 +9,7 @@ New user accounts
 
 :doc:`/admin/onboarding/add_user`
 
-Every new Administrator or Journalist must have a new corresponding SecureDrop account created using the Admin Interface. Administrators use this account to log in to the Admin Interface, and Journalist use it to log in to the SecureDrop Inbox application.
+Every new Administrator or Journalist must have a new corresponding SecureDrop account created using the Admin Interface. Administrators use this account to log in to the Admin Interface, and Journalists use it to log in to the SecureDrop Inbox application.
 
 Provision additional Workstations
 ---------------------------------
