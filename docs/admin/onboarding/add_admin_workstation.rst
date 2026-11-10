@@ -1,2 +1,95 @@
 Provision additional Admin Workstation
 ======================================
+
+Overview
+--------
+
+Provisioning additional Admin Workstations is done using a backup and restore mechanism, in lieu of repeating the :doc:`initial installation instructions</admin/installation/index>`. Qubes OS provides integrated tools for making and restoring backups which are leveraged here to ensure your SecureDrop's secret keys and stored Source messages are safely transferred onto new Workstations.
+
+At a high level, this process entails installing Qubes OS and the SecureDrop packages on a new laptop, making a fresh backup of an existing Admin Workstation, and then restoring that backup onto the new laptop. 
+
+The entire provisioning process will take several hours to complete. You may provision multiple Admin Workstations using a single backup, but keep in mind this backup will contain credentials such as your Server SSH keys. You must take the same care with storing this backup as you would with any Workstation or Workstation backup, and you should :ref:`securely erase<admin_provision_destroy_backup_medium>` it after provisioning is completed. 
+
+1. Create a backup of an existing Admin Workstation
+--------------------------------------------------------
+
+Start with an existing Admin Workstation or combined Admin + Journalist Workstation. You will also need a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/manual/provisioning_usb.html>`_ USB flash or external hard drive (of sufficient size, if backing up additional local data) and a secure place to store backup credentials (such as a password manager on your primary laptop).
+
+Back up the ``sd-admin`` qube
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+  :start-after: .. _backup_sd-admin:
+  :end-before: .. _in_situ_incomplete_backup:
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+  :start-after: .. _perform_backup_sdw:
+  :end-before: .. _backup_admin_workstation:
+
+2. Create Qubes OS installation media
+------------------------------------------------
+
+If you have a **Qubes 4.3** installation drive that you recently created and verified, such as during the initial installation of SecureDrop or to provision a Workstation, you can skip to :ref:`admin_install_qubes_securedrop_packages`
+
+Preparing your everyday computer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /admin/installation/prepare_installation_media.rst
+  :start-after: .. _prepare_everyday_computer:
+  :end-before: .. _prepare_everyday_computer_end:
+
+Preparing the installation media
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /admin/installation/prepare_installation_media.rst
+  :start-after: .. _preparing_installation_media:
+  :end-before: .. _download_os_installers:
+
+.. include:: /admin/installation/prepare_installation_media.rst
+  :start-after: .. _download_verify_qubes:
+
+.. _admin_install_qubes_securedrop_packages:
+
+3. Install Qubes OS and SecureDrop packages
+-------------------------------------------
+
+Install Qubes OS and the SecureDrop packages on your new Journalist Workstation.
+
+.. include:: /admin/installation/install_qubes.rst
+    :start-after: .. _apply_bios_updates_settings:
+    :end-before: .. _install_qubes_end:
+
+Install SecureDrop Workstation packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /admin/installation/install_qubes.rst
+    :start-after: .. _install_securedrop_packages:
+
+4. Restore to new Admin Workstation
+----------------------------------------
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+    :start-after: .. _rename_delete_redundant_qubes:
+    :end-before: .. _reapply_journalist_workstation:
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+    :start-after: .. _reapply_admin_workstation:
+    :end-before: .. _restore_custom_qubes_rpc:
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+    :start-after: .. _restore_custom_qubes_rpc:
+    :end-before: .. _destroy_backup_medium:
+
+5. Test new Admin Workstation
+----------------------------------
+
+.. TODO, this should borrow from test instructions elsewhere. 
+
+.. _admin_provision_destroy_backup_medium:
+
+6. Destory backup medium
+------------------------
+
+Wipe (reformat) the LUKS-encrypted storage device that you used to store the SecureDrop configuration material.
+
+.. include:: /includes/destroy_usb.txt

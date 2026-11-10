@@ -8,7 +8,7 @@ Provisioning additional Journalist Workstations is done using a backup and resto
 
 At a high level, this process entails installing Qubes OS and the SecureDrop packages on a new laptop, making a fresh backup of an existing Journalist Workstation, and then restoring that backup onto the new laptop. 
 
-The entire provisioning process will take several hours to complete. You may provision multiple Journalist Workstations using a single backup, but keep in mind this backup will contain credentials like your SecureDrop's :ref:`Submission Secret Key<glossary_submission_key>` and may contain unencrypted messages and files depending on how you proceed. You must take the same care with storing this backup as you would with any Workstation or Workstation backup, and you should :ref:`securely erase<provision_destroy_backup_medium>` it after provisioning is completed. 
+The entire provisioning process will take several hours to complete. You may provision multiple Journalist Workstations using a single backup, but keep in mind this backup will contain credentials wuch as your SecureDrop's :ref:`Submission Secret Key<glossary_submission_key>` and may contain unencrypted messages and files depending on how you proceed. You must take the same care with storing this backup as you would with any Workstation or Workstation backup, and you should :ref:`securely erase<journalist_provision_destroy_backup_medium>` it after provisioning is completed. 
 
 1. Create a backup of an existing Journalist Workstation
 --------------------------------------------------------
@@ -26,7 +26,7 @@ Start with an existing Journalist Workstation or combined Admin + Journalist Wor
 2. Create Qubes OS installation media
 ------------------------------------------------
 
-If you have a **Qubes 4.3** installation drive that you recently created and verified, such as during the initial installation of SecureDrop or to provision a Workstation, you can skip to :ref:`install_qubes_securedrop_packages`
+If you have a **Qubes 4.3** installation drive that you recently created and verified, such as during the initial installation of SecureDrop or to provision a Workstation, you can skip to :ref:`journalist_install_qubes_securedrop_packages`
 
 Preparing your everyday computer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +45,7 @@ Preparing the installation media
 .. include:: /admin/installation/prepare_installation_media.rst
   :start-after: .. _download_verify_qubes:
 
-.. _install_qubes_securedrop_packages:
+.. _journalist_install_qubes_securedrop_packages:
 
 3. Install Qubes OS and SecureDrop packages
 -------------------------------------------
@@ -67,6 +67,10 @@ Install SecureDrop Workstation packages
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst
     :start-after: .. _rename_delete_redundant_qubes:
+    :end-before: .. _reapply_journalist_workstation:
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+    :start-after: .. _reapply_journalist_workstation:
     :end-before: .. _reapply_admin_workstation:
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst
@@ -78,7 +82,7 @@ Install SecureDrop Workstation packages
 
 .. TODO, this should borrow from test instructions elsewhere. 
 
-.. _provision_destroy_backup_medium:
+.. _journalist_provision_destroy_backup_medium:
 
 6. Destory backup medium
 ------------------------

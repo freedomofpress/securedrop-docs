@@ -83,7 +83,7 @@ You do not need to back up the other ``sd-`` qubes.
 .. _perform_backup_sdw:
 
 Perform the backup
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 Click **Next**, and in **Backup destination,** specify the ``sd-devices`` qube and directory corresponding to your storage medium's current mount point.
 
@@ -106,11 +106,15 @@ To perform a backup of the Admin Workstation:
 Back up the ``sd-admin`` qube
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _backup_sd-admin:
+
 Ensure your storage medium is plugged in, attached to ``sd-devices``, and unlocked.
 
 Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup Qubes**, and move all qubes from **Selected** to **Available** by pressing the ``<<`` button.
 
 Highlight the ``sd-admin`` and ``sd-admin-vault`` qubes, then move them into the **Selected** column by pressing the ``>`` button. You do not need to back up the other ``sd-`` qubes.
+
+.. _in_situ_incomplete_backup:
 
 Click **Next**, then select the backup destination, set the encryption passphrase, and uncheck **save backup profile** as described previously in :ref:`Perform the backup <perform_backup_sdw>`, then proceed with the backup.
 
@@ -183,6 +187,8 @@ We suggest restoring only those qubes, provisioning SecureDrop, and then restori
      sudo qubes-dom0-update -y qubes-dist-upgrade qubes-dist-upgrade --template-standalone --upgrade
 
   More information can be found in the `upstream documentation <https://www.qubes-os.org/doc/upgrade/4.2/#clean-installation>`_. Contact Support with any questions.
+
+.. _reapply_journalist_workstation:
 
 Re-apply Journalist Workstation installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
