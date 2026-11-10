@@ -1,4 +1,4 @@
-Provisioning USB Export Devices
+Provision USB Export Devices
 =================================
 
 SecureDrop supports the export of submitted files and conversation transcripts from the :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` to a LUKS- or VeraCrypt-encrypted USB flash drive, referred to as an :ref:`Export Device<glossary_export_device>`.
