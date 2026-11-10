@@ -34,6 +34,11 @@ The Tails-based components are no longer needed, and the Tails version of Secure
 
 This guide will help you migrate your Tails-based Admin and Journalist Workstations to the new Qubes-based Workstations.
 
+YubiKey Support
+---------------
+
+At present, using a YubiKey is **not supported** by the Qubes-based SecureDrop Workstation. If your organization has Journalists or Administrators using YubiKeys, do not migrate at this time. A future release will support using a YubiKey.
+
 Hardware overview
 ---------------------
 
@@ -86,7 +91,6 @@ Migration scenarios
 - If you already have a Qubes-based Journalist Workstation and want to migrate your Tails Admin Workstation to a separate Qubes-based Admin Workstation laptop:
     #. :doc:`Install Qubes OS and SecureDrop packages</admin/migration/migrate_install_qubes>` on the new laptop
     #. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
-
 
 Decommissioning Tails Workstations
 ----------------------------------

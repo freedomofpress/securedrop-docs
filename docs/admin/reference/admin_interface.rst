@@ -34,7 +34,7 @@ You can use the Admin Interface to add and remove users, and to reset their cred
 Adding users
 ~~~~~~~~~~~~
 
-After logging in, you can add new user accounts for the Journalists at your organization who will be checking the SecureDrop Inbox, or Administrators who will be using an Admin Workstation. Make sure the new user is physically in the same room as you when you do this, as they will have to be present to enable two-factor authentication. SecureDrop Inbox supports a smartphone authenticator app for two-factor authentication. The Admin Interface supports a smartphone authenticator or a Yubikey for two-factor authentication.
+After logging in, you can add new user accounts for the Journalists at your organization who will be checking the SecureDrop Inbox, or Administrators who will be using an Admin Workstation. Make sure the new user is physically in the same room as you when you do this, as they will have to be present to enable two-factor authentication. SecureDrop Inbox supports a smartphone authenticator app for two-factor authentication. 
 
 .. include:: /includes/otp-app.txt
 
@@ -79,22 +79,7 @@ If two-factor authentication was set up successfully, you will be redirected bac
 YubiKey
 ~~~~~~~
 
-#. If the Administrator wishes to use a YubiKey for two-factor authentication, select **Is using a YubiKey**. You will then need to enter their YubiKey's OATH-HOTP Secret Key. For more information on how to retrieve this key, read the :doc:`YubiKey Setup Guide </admin/onboarding/yubikey_setup>`.
-
-   |Enable YubiKey|
-
-#. Once you've entered the Yubikey's OATH-HOTP Secret Key, click **Add User**.  On the next page, have the Administrator authenticate using their YubiKey, by inserting it into a USB port on the workstation and pressing its button.
-
-   |Verify YubiKey|
-
-#. If everything was set up correctly, you will be redirected back to the Admin Interface, where you should see a flashed message that says "The two-factor code for user *new username* was verified successfully.".
-
-The Administrator will require their username, passphrase, and two-factor authentication method whenever they check SecureDrop. Make sure that they have memorised their username and passphrase, or stored them in their password manager, and that they can keep their two-factor authentication device secure.
-
-.. |Enable YubiKey| image:: /images/manual/screenshots/journalist-admin_add_user_hotp.png
-   :alt: The form used to create new users, filled with the 40-character HOTP secret key of a Yubikey.
-.. |Verify YubiKey| image:: /images/manual/screenshots/journalist-admin_new_user_two_factor_hotp.png
-   :alt: The form used to verify the setup of the Yubikey requests a 6-digit verification code.
+.. note:: SecureDrop does not currently support using a YubiKey to authenticate from a Qubes-based Workstation.
 
 .. _admin_interface_passphrases_and_two-factor_resets:
 
