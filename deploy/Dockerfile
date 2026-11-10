@@ -13,6 +13,7 @@ COPY deploy/nginx.conf /etc/nginx
 RUN mkdir -p /opt/nginx/run /opt/nginx/webroot/en/latest /opt/nginx/webroot/en/stable && chown -R nginx:nginx /opt/nginx
 
 USER nginx
+COPY --chown=nginx:nginx deploy/robots.txt /opt/nginx/webroot/
 COPY --from=sphinx --chown=nginx:nginx build/stable/html/html/ /opt/nginx/webroot/en/stable/
 COPY --from=sphinx --chown=nginx:nginx build/stable/html/latex/SecureDrop.pdf /opt/nginx/webroot/en/stable/
 COPY --from=sphinx --chown=nginx:nginx build/latest/html/html/ /opt/nginx/webroot/en/latest/
