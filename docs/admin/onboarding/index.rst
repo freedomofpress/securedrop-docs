@@ -14,7 +14,7 @@ Every new Administrator or Journalist must have a new corresponding SecureDrop a
 Provision additional Workstations
 ---------------------------------
 
-The need to provision additional Workstations for new users depends on the needs of your users and the capacity of your organization. Each new Workstation will be based on a Qubes-compatible laptop based on our :ref:`hardware requirements<hardware_recommendations_workstations>`. 
+The need to provision additional Workstations for new users depends on the needs of your users and the capacity of your organization. Each new Workstation will be based on a Qubes-compatible laptop that meets our :ref:`hardware requirements<hardware_recommendations_workstations>`. 
 
 Adding Journalist Workstations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
