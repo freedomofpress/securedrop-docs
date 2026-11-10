@@ -29,7 +29,6 @@ Additionally, you may want to consider the following purchases:
 * a printer without wireless network support, to use in combination with the Journalist.
 * an external hard drive for server backups.
 * a USB flash drive to store backups of your laptops.
-* a security key for HOTP authentication, such as a YubiKey, if you want to use hardware-based two-factor authentication instead of a mobile app.
 * a USB flash drive with a physical write protection switch, or a USB write blocker, if you want to mitigate the risk of introducing malware from your network to your Journalist Workstation during repeated use of an Export Device.
 
 .. tip:: While a printer is not required, we highly recommend it. Printing documents is generally far safer than copying them in digital form. See our guide to working with documents for more information.
@@ -91,11 +90,9 @@ An acceptable alternative that requires more technical expertise is to :doc:`con
 Two-factor device
 ^^^^^^^^^^^^^^^^^
 
-Two-factor authentication is used when connecting to different parts of the SecureDrop system. Each Administrator and each Journalist needs a two-factor device. We currently support two options for two-factor authentication:
+Two-factor authentication is used when connecting to different parts of the SecureDrop system. Each Administrator and each Journalist needs a two-factor device. We currently support only one option for two-factor authentication:
 
 * Your existing smartphone with an app that computes TOTP codes (e.g. FreeOTP `for Android <https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp>`__ and `for iOS <https://apps.apple.com/us/app/freeotp-authenticator/id872559395>`__).
-
-* A dedicated hardware dongle that computes HOTP codes (e.g. a `YubiKey <https://www.yubico.com/setup/>`__).
 
 .. include:: ../../includes/otp-app.txt
 

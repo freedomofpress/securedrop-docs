@@ -39,7 +39,7 @@ The Journalist will be using a Journalist Workstation to view messages and files
 - The Qubes full disk encryption (FDE) password of the Journalist Workstation they use, required to unlock system storage on boot.
 - The Qubes system user password for the Journalist Workstation they use, required to log in.
 
-The Journalist will also need to have a two-factor authenticator, such as an Android or iOS device with FreeOTP installed, or a YubiKey. This means the Journalist will also have the following credential:
+The Journalist will also need to have a two-factor authenticator, such as an Android or iOS device with FreeOTP installed. This means the Journalist will also have the following credential:
 
 - The secret code for the Journalist's two-factor authentication.
 

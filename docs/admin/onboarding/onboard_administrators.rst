@@ -22,10 +22,6 @@ Add a Administrator account on the Admin Interface
     :start-after: .. _admin_interface_freeotp:
     :end-before: .. _admin_interface_yubikey:
 
-.. include:: /admin/reference/admin_interface.rst
-    :start-after: .. _admin_interface_yubikey:
-    :end-before: .. _admin_interface_passphrases_and_two-factor_resets:
-
 Provision Admin Workstation
 -------------------------------------------
 
