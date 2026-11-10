@@ -94,6 +94,7 @@ Set a strong, unique backup encryption passphrase (7-word diceware), and ensure 
 
 Uncheck **save backup profile**, then proceed with the backup.
 
+.. _backup_admin_workstation:
 
 Back up an Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,6 +114,8 @@ Highlight the ``sd-admin`` and ``sd-admin-vault`` qubes, then move them into the
 
 Click **Next**, then select the backup destination, set the encryption passphrase, and uncheck **save backup profile** as described previously in :ref:`Perform the backup <perform_backup_sdw>`, then proceed with the backup.
 
+.. _backup_combined_workstation:
+
 Backing up a combined Admin + Journalist Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -126,6 +129,8 @@ Qubes OS recommends verifying the integrity of the backup once the backup comple
 .. warning::
   Any files or data not mentioned above and not backed up elsewhere are at risk of being lost or destroyed. Ensure that any other data on your system (for example, using KeepassXC in the ``vault`` qube, or data stored in other qubes) have been backed up and the integrity of the backup has been verified.
  
+.. _restore_backup:
+
 Restore
 -------
 
@@ -133,6 +138,8 @@ Reinstall Qubes OS
 ~~~~~~~~~~~~~~~~~~
 
 To restore a SecureDrop Admin, Journalist or combined Workstation, follow our :doc:`pre-install tasks </admin/installation/install_qubes>` to provision a Qubes OS system complete with updated base templates, and download the SecureDrop Workstation packages.
+
+.. _rename_delete_redundant_qubes:
 
 Rename or delete redundant app qubes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -162,12 +169,12 @@ If you are restoring an Admin Workstation, you should ensure you restore:
 - ``sd-admin``
 - ``sd--admin-vault``
 
-If you are using a combination Journalist and Admin Workstation, restore all items listed above.
+If you are restoring a combination Journalist and Admin Workstation, restore all items listed above.
 
 We suggest restoring only those qubes, provisioning SecureDrop, and then restoring any customized qubes you may have had once that process is complete. This way SecureDrop is provisioned on a clean system and can implement the security measures it requires before any additional qubes are configured.
 
 .. note::
-  When migrating to a newer version of Qubes OS (for example, Qubes 4.1 to Qubes 4.2), you may notice that the original templates for certain qubes are not present on your new machine. For the purposes of this guide (optional ``sd-app`` backup), this is not a problem. Allow the qube to be restored with the default template suggested by the operating system (the current Fedora base template). **Do not start the qube.** Continue through the reinstallation process. The correct template will be configured as you follow the rest of these instructions.
+  If migrating to a newer version of Qubes OS (for example, Qubes 4.1 to Qubes 4.2), you may notice that the original templates for certain qubes are not present on your new machine. For the purposes of this guide (optional ``sd-app`` backup), this is not a problem. Allow the qube to be restored with the default template suggested by the operating system (the current Fedora base template). **Do not start the qube.** Continue through the reinstallation process. The correct template will be configured as you follow the rest of these instructions.
 
   If you are restoring your own customized qubes and templates, you will need to take additional steps. You may decide to create new templates for your custom qubes and provision them with the necessary applications/customizations (recommended), or you may upgrade your existing templates following the upstream documentation (`Fedora templates <https://www.qubes-os.org/doc/templates/fedora/#upgrading>`_, `Debian templates <https://www.qubes-os.org/doc/templates/debian/#upgrading>`_), then upgrade their package repositories to the Qubes 4.2 repositories using:
 
@@ -213,12 +220,14 @@ Reinstall SecureDrop:
 Restore additional keys to ``sd-gpg``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are using a Journalist Workstation and have multiple Submission Keys, perform the following commands from a ``dom0`` terminal:
+If you are restoring a Journalist Workstation, or a combined Admin + Journalist Workstation, and have multiple Submission Keys, perform the following commands from a ``dom0`` terminal:
 
 .. code-block:: sh
 
    qvm-copy-to-vm sd-gpg $RESTORE_DIR/securedrop-workstation-dom0-config/sd-keys.asc
    qvm-run sd-gpg 'gpg --import /home/user/QubesIncoming/dom0/sd-keys.asc'
+
+.. _reapply_admin_workstation:
 
 Re-apply Admin Workstation installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -229,6 +238,8 @@ If you are restoring an Admin Workstation, or a combined Admin + Journalist Work
 
    securedrop-manage apply --target admin
 
+.. _restore_custom_qubes_rpc:
+
 Restore customized qubes, RPC policies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -237,6 +248,8 @@ At this stage, you should have a functional Workstation of the desired type. You
 Customizations in ``dom0`` must be restored manually, meaning that any RPC policies you have added will need to be moved into place from the ``$RESTORE_DIR``.
 
 Once you are finished with the ``$RESTORE_DIR`` and have verified that your system works (download, decrypt, sync), you may delete the ``$RESTORE_DIR``.
+
+.. _destroy_backup_medium:
 
 (Post-migration instructions) Destroy backup medium
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
