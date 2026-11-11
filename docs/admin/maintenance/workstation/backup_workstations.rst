@@ -3,21 +3,15 @@ Backing up and restoring Workstations
 
 Qubes OS has a `backup utility <https://www.qubes-os.org/doc/backup-restore/>`_ that allows for backup and restoration of user-specified qubes and templates.
 
-.. warning::
-   Backups contain sensitive data, and must be created and stored just as securely as SecureDrop Workstations.
-
-To perform backups, you will need:
-
-- a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/manual/provisioning_usb.html>`_ USB flash or external hard drive (of sufficient size, if backing up additional local data)
-- a secure place to store backup credentials (such as a password manager on your primary laptop)
+.. include:: /includes/workstation-backups.txt
 
 Backup
 ------
 
-.. _backup_journalist_workstation:
-
 Back up a Journalist Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _backup_journalist_workstation:
 
 When backing up Journalist Workstation, there are four distinct sets of data you can back up:
 
@@ -26,7 +20,7 @@ When backing up Journalist Workstation, there are four distinct sets of data you
 
    If you skip this step, all previous messages exchanged between Sources and Journalists, as well as any submitted files you have downloaded, will not be included in the backup. The first time you log in on a restored SecureDrop Workstation, everything will need to be re-downloaded from your SecureDrop server.
    
-   This option is only recommended when performing a migration to a new SecureDrop Workstation installation (not for long-term storage).
+   This option is only recommended when provisioning a new Workstation (not for long-term storage).
 
 #. The KeePassXC database containing Journalist credentials for accessing SecureDrop stored in ``sd-journalist-vault``
 
@@ -58,9 +52,10 @@ If you have made customizations to ``dom0`` (for example, custom RPC policy file
   mkdir ~/etc-qubes && cp -r /etc/qubes ~/etc-qubes
   mkdir ~/etc-qubes-rpc && cp -r /etc/qubes-rpc ~/etc-qubes-rpc
 
-  
 Select qubes to back up
 ^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _select_qubes_backup:
 
 Ensure your storage medium is plugged in, attached to ``sd-devices``, and unlocked.
 
@@ -68,22 +63,24 @@ Navigate to |qubes_menu| **▸** |qubes_menu_gear| **▸ Qubes Tools ▸ Backup 
 
 To target a qube for backup, highlight it and move it into the **Selected** column by pressing the ``>`` button. Select:
 
+.. _select_qubes_backup_end:
+
 - ``dom0``
 - ``sd-journalist-vault``
 - the ``sd-app`` qube (optional)
 - any customized qubes that you may wish to preserve, and their templates (optional)
 
-If your Journalist Workstation also functions as an Admin Workstation, make sure to also select:
+If you are backing up a combined Admin + Journalist Workstation, make sure to also select:
 
 - the ``sd-admin`` qube
 - the ``sd-admin-vault`` qube
 
 You do not need to back up the other ``sd-`` qubes.
 
-.. _perform_backup_sdw:
-
 Perform the backup
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
+
+.. _perform_backup_sdw:
 
 Click **Next**, and in **Backup destination,** specify the ``sd-devices`` qube and directory corresponding to your storage medium's current mount point.
 
@@ -152,8 +149,10 @@ By default, Qubes OS will create the app qubes ``personal``, ``work``, ``untrust
 
 Example: If you wish to restore the ``vault`` qube, rename or delete the existing ``vault`` qube prior to restoring the backup. You can do so in |qubes_menu| **▸ Apps ▸ vault ▸ Settings** (the qube must not be running).
 
-Restore backup (SecureDrop components)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _restore_backup_qubes:
+
+Restore qubes from a backup
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
    If you are migrating from one machine to another or from one version of Qubes OS to another, we suggest you wipe (reformat) or destroy the drive after you have successfully restored it onto the new machine (which should ideally happen the same day). In all cases, follow your organization's internal policies on handling sensitive assets and information.
@@ -175,7 +174,9 @@ If you are restoring an Admin Workstation, you should ensure you restore:
 
 If you are restoring a combination Journalist and Admin Workstation, restore all items listed above.
 
-We suggest restoring only those qubes, provisioning SecureDrop, and then restoring any customized qubes you may have had once that process is complete. This way SecureDrop is provisioned on a clean system and can implement the security measures it requires before any additional qubes are configured.
+.. _restore_backup_qubes_note:
+
+We suggest restoring only those qubes, apply the appropriate Workstation configuration(s), and then restoring any customized qubes you may have had once that process is complete. This way SecureDrop is provisioned on a clean system and can implement the security measures it requires before any additional qubes are configured.
 
 .. note::
   If migrating to a newer version of Qubes OS (for example, Qubes 4.1 to Qubes 4.2), you may notice that the original templates for certain qubes are not present on your new machine. For the purposes of this guide (optional ``sd-app`` backup), this is not a problem. Allow the qube to be restored with the default template suggested by the operating system (the current Fedora base template). **Do not start the qube.** Continue through the reinstallation process. The correct template will be configured as you follow the rest of these instructions.
@@ -190,8 +191,8 @@ We suggest restoring only those qubes, provisioning SecureDrop, and then restori
 
 .. _reapply_journalist_workstation:
 
-Re-apply Journalist Workstation installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apply Journalist Workstation configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are restoring a Journalist Workstation, or a combined Admin + Journalist Workstation, you need to reinstall the additional Journalist Workstation components.
 
@@ -235,8 +236,8 @@ If you are restoring a Journalist Workstation, or a combined Admin + Journalist 
 
 .. _reapply_admin_workstation:
 
-Re-apply Admin Workstation installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apply Admin Workstation configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are restoring an Admin Workstation, or a combined Admin + Journalist Workstation, you need to reinstall the additional Admin Workstation components.
 

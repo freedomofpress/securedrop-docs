@@ -10,17 +10,26 @@ At a high level, this process entails installing Qubes OS and the SecureDrop pac
 
 The entire provisioning process will take several hours to complete. You may provision multiple Admin Workstations using a single backup, but keep in mind this backup will contain credentials such as your Server SSH keys. You must take the same care with storing this backup as you would with any Workstation or Workstation backup, and you should :ref:`securely erase<admin_provision_destroy_backup_medium>` it after provisioning is completed. 
 
+.. include:: /includes/workstation-backups.txt
+
 1. Create a backup of an existing Admin Workstation
 --------------------------------------------------------
 
-Start with an existing Admin Workstation or combined Admin + Journalist Workstation. You will also need a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/manual/provisioning_usb.html>`_ USB flash or external hard drive (of sufficient size, if backing up additional local data) and a secure place to store backup credentials (such as a password manager on your primary laptop).
+Start with an existing Admin Workstation or combined Admin + Journalist Workstation.
 
-Back up the ``sd-admin`` qube
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Select qubes to back up
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst
-  :start-after: .. _backup_sd-admin:
-  :end-before: .. _in_situ_incomplete_backup:
+  :start-after: .. _select_qubes_backup:
+  :end-before: .. _select_qubes_backup_end:
+
+- ``sd-admin``
+- ``sd-admin-vault``
+- any customized qubes that you may wish to preserve, and their templates (optional)
+
+Perform the backup
+~~~~~~~~~~~~~~~~~~
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst
   :start-after: .. _perform_backup_sdw:
@@ -70,6 +79,14 @@ Install SecureDrop Workstation packages
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst
     :start-after: .. _rename_delete_redundant_qubes:
+    :end-before: .. _restore_backup_qubes:
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+    :start-after: .. _restore_backup_qubes:
+    :end-before: .. _restore_backup_qubes_note:
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+    :start-after: .. _restore_backup_qubes_note:
     :end-before: .. _reapply_journalist_workstation:
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst

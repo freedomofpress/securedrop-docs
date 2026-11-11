@@ -8,16 +8,30 @@ Provisioning additional Journalist Workstations is done using a backup and resto
 
 At a high level, this process entails installing Qubes OS and the SecureDrop packages on a new laptop, making a fresh backup of an existing Journalist Workstation, and then restoring that backup onto the new laptop. 
 
-The entire provisioning process will take several hours to complete. You may provision multiple Journalist Workstations using a single backup, but keep in mind this backup will contain credentials wuch as your SecureDrop's :ref:`Submission Secret Key<glossary_submission_key>` and may contain unencrypted messages and files depending on how you proceed. You must take the same care with storing this backup as you would with any Workstation or Workstation backup, and you should :ref:`securely erase<journalist_provision_destroy_backup_medium>` it after provisioning is completed. 
+The entire provisioning process will take several hours to complete. You may provision multiple Journalist Workstations using a single backup, but keep in mind this backup will contain credentials wuch as your SecureDrop's :ref:`Submission Secret Key<glossary_submission_key>` and unencrypted messages and files (depending on how you proceed). You must take the same care with storing this backup as you would with any Workstation or Workstation backup, and you should :ref:`securely erase<journalist_provision_destroy_backup_medium>` it after provisioning is completed. 
+
+
+.. include:: /includes/workstation-backups.txt
 
 1. Create a backup of an existing Journalist Workstation
 --------------------------------------------------------
 
-Start with an existing Journalist Workstation or combined Admin + Journalist Workstation. You will also need a `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/manual/provisioning_usb.html>`_ USB flash or external hard drive (of sufficient size, if backing up additional local data) and a secure place to store backup credentials (such as a password manager on your primary laptop).
+Start with an existing Journalist Workstation or combined Admin + Journalist Workstation.
+
+Select qubes to back up
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst
-  :start-after: .. _backup_journalist_workstation:
-  :end-before: .. _perform_backup_sdw:
+  :start-after: .. _select_qubes_backup:
+  :end-before: .. _select_qubes_backup_end:
+
+- ``dom0``
+- ``sd-journalist-vault``
+- the ``sd-app`` qube (optional, but :ref:`recommended for provisioning a new Journalist Workstation<backup_journalist_workstation>`)
+- any customized qubes that you may wish to preserve, and their templates (optional)
+
+Perform the backup
+~~~~~~~~~~~~~~~~~~
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst
   :start-after: .. _perform_backup_sdw:
@@ -67,6 +81,14 @@ Install SecureDrop Workstation packages
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst
     :start-after: .. _rename_delete_redundant_qubes:
+    :end-before: .. _restore_backup_qubes:
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+    :start-after: .. _restore_backup_qubes:
+    :end-before: .. _restore_backup_qubes_note:
+
+.. include:: /admin/maintenance/workstation/backup_workstations.rst
+    :start-after: .. _restore_backup_qubes_note:
     :end-before: .. _reapply_journalist_workstation:
 
 .. include:: /admin/maintenance/workstation/backup_workstations.rst
