@@ -3,7 +3,9 @@ Create an Administrator account on the Admin Interface
 
 There are two types of accounts on the Admin Interface: admin accounts and normal accounts. Admin accounts are like normal accounts, but they are additionally allowed to manage (add, change, delete) other user accounts through the web interface.
 
-You must create the first admin account on the Admin Interface by running a command on the :ref:`Application Server<glossary_application_server>`. After that, the Administrator can create additional accounts through the web-based Admin Interface.
+You must create the first admin account on the Admin Interface by running a command on the :ref:`Application Server<glossary_application_server>`. 
+
+You will not create additional accounts during the installation. In the likely event your SecureDrop will not be single-user, you can create additional accounts following the instructions in the :doc:`Onboarding section</admin/onboarding/index>`.
 
 .. _Create Admin CLI:
 

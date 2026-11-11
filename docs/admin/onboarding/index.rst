@@ -4,7 +4,7 @@ Onboard users
 
 During the initial :doc:`installation</admin/installation/index>` of SecureDrop, only the first Administrator user is created. Additional Journalist and Administrators can be onboarded as needed. 
 
-New user accounts
+Add user accounts
 -----------------
 
 :doc:`/admin/onboarding/add_user`

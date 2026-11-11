@@ -176,7 +176,7 @@ If you are restoring a combination Journalist and Admin Workstation, restore all
 
 .. _restore_backup_qubes_note:
 
-We suggest restoring only those qubes, apply the appropriate Workstation configuration(s), and then restoring any customized qubes you may have had once that process is complete. This way SecureDrop is provisioned on a clean system and can implement the security measures it requires before any additional qubes are configured.
+We suggest restoring only those qubes, install the appropriate Workstation packages (:ref:`Journalist<reapply_journalist_workstation>` or :ref:`Admin<reapply_admin_workstation>`), and then restoring any customized qubes you may have had once that process is complete. This way SecureDrop is provisioned on a clean system and can implement the security measures it requires before any additional qubes are configured.
 
 .. note::
   If migrating to a newer version of Qubes OS (for example, Qubes 4.1 to Qubes 4.2), you may notice that the original templates for certain qubes are not present on your new machine. For the purposes of this guide (optional ``sd-app`` backup), this is not a problem. Allow the qube to be restored with the default template suggested by the operating system (the current Fedora base template). **Do not start the qube.** Continue through the reinstallation process. The correct template will be configured as you follow the rest of these instructions.
@@ -191,8 +191,8 @@ We suggest restoring only those qubes, apply the appropriate Workstation configu
 
 .. _reapply_journalist_workstation:
 
-Apply Journalist Workstation configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Install Journalist Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are restoring a Journalist Workstation, or a combined Admin + Journalist Workstation, you need to reinstall the additional Journalist Workstation components.
 
@@ -236,8 +236,8 @@ If you are restoring a Journalist Workstation, or a combined Admin + Journalist 
 
 .. _reapply_admin_workstation:
 
-Apply Admin Workstation configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Install Admin Workstation
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are restoring an Admin Workstation, or a combined Admin + Journalist Workstation, you need to reinstall the additional Admin Workstation components.
 
