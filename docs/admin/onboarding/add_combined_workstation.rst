@@ -186,14 +186,27 @@ Repeat these steps to restore qubes from discrete Admin and Journalist Workstati
     :start-after: .. _restore_custom_qubes_rpc:
     :end-before: .. _destroy_backup_medium:
 
-5. Test new combined Workstation
+5. Update credentials
+-------------------------
+
+.. include:: /admin/onboarding/add_admin_workstation.rst
+    :start-after: .. _new_admin_update_credentials:
+    :end-before: .. _test_new_admin_workstation:
+
+
+
+.. include:: /admin/onboarding/add_journalist_workstation.rst
+    :start-after: .. _new_journalist_update_credentials:
+    :end-before: .. _test_new_journalist_workstation:
+
+6. Test new combined Workstation
 ----------------------------------
 
 .. TODO, this should borrow from test instructions elsewhere. 
 
 .. _combined_provision_destroy_backup_medium:
 
-6. Destory backup medium
+7. Destory backup medium
 ------------------------
 
 Wipe (reformat) the LUKS-encrypted storage device that you used to store the SecureDrop configuration material.

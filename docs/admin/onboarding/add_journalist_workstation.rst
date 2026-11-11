@@ -99,14 +99,31 @@ Install SecureDrop Workstation packages
     :start-after: .. _restore_custom_qubes_rpc:
     :end-before: .. _destroy_backup_medium:
 
-5. Test new Journalist Workstation
+5. Update credentials
+-------------------------
+
+.. _new_journalist_update_credentials:
+
+Add new Journalist credentials in KeePassXC database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open the KeePassXC vault in ``sd-journalist-vault`` on the new Workstation and delete entries that won't be used by the user of this Workstation.
+
+1. Select each entry and hit the :kbd:`delete` key.
+2. After you have deleted all the entires, right-click the **Recycle Bin** item under **Root** in the KeePassXC sidebar, and select **Empty**.
+
+Add to the KeePassXC vault the needed credentials for the user of this new Workstation, such as their SecureDrop Inbox login. If it is a new user, you may :doc:`create the new user's account from the Admin Interface</admin/onboarding/add_user>` at this time and save the credentials directly into the KeePassXC vault.
+
+.. _test_new_journalist_workstation:
+
+6. Test new Journalist Workstation
 ----------------------------------
 
 .. TODO, this should borrow from test instructions elsewhere. 
 
 .. _journalist_provision_destroy_backup_medium:
 
-6. Destory backup medium
+7. Destory backup medium
 ------------------------
 
 Wipe (reformat) the LUKS-encrypted storage device that you used to store the SecureDrop configuration material.
