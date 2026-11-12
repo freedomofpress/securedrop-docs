@@ -151,7 +151,7 @@ You must now restore the following qubes onto your new combined Admin + Journali
 2. ``sd-journalist-vault``
 3. ``sd-app`` (if opted to included it)
 4. ``sd-admin``
-5. ``sd--admin-vault``
+5. ``sd-admin-vault``
 
 If you have a single backup from an existing combined Admin + Journalist Workstation, you will restore all of the above qubes from that backup.
 
