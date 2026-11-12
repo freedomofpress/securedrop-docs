@@ -17,6 +17,8 @@ The installation and configuration process for each laptop should take between 4
 Pre-install tasks
 -----------------
 
+.. _apply_bios_updates_settings:
+
 Apply BIOS updates and check settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -141,10 +143,12 @@ Once your network connection is working, launch the Qubes Update tool via |qubes
 
 Congratulations! You have installed Qubes OS.
 
-.. _intall_securedrop_packages:
+.. _install_qubes_end:
 
 Install SecureDrop Workstation packages
 ---------------------------------------
+
+.. _install_securedrop_packages:
 
 Next, you will install the SecureDrop packages necessary to configure the laptop into a Journalist and/or Admin Workstation.
 

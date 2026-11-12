@@ -1,0 +1,7 @@
+.. warning::
+   Backups contain sensitive data, and must be created and stored just as securely as SecureDrop Workstations.
+
+To create backups, you will need:
+
+- A `LUKS-encrypted <https://workstation.securedrop.org/en/stable/admin/manual/provisioning_usb.html>`_ USB flash or external hard drive (of sufficient size, if backing up additional local data). You may store multiple backups from multiple Workstations on the same drive.
+- A secure place to store backup credentials (such as a password manager on your primary laptop).
