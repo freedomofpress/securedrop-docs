@@ -2,7 +2,7 @@
 Installation overview
 *********************
 
-This section will walk you though all the steps involved in planning executing a new SecureDrop installation.
+This section will walk you though all the steps involved in planning and executing a new SecureDrop installation.
 
 .. note:: If you are migrating from a Tails-based SecureDrop deployment (with separate "Secure Viewing Station", "Journalist workstation," and "Admin Workstation" USB flash drives), skip to the :ref:`Migration Overview<migration_overview>`.
 
