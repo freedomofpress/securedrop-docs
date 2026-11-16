@@ -14,7 +14,12 @@ Migration from Tails
 
 .. _migration_overview:
 
-The previous version of SecureDrop was based on three "workstations": 
+This guide will help you migrate your Tails-based Admin and Journalist Workstations to the new Qubes-based Workstations. Tails-based components of SecureDrop are no longer needed, and the Tails version of SecureDrop will **no longer be supported** by the end of 2027.
+
+Background
+----------
+
+Previous versions of SecureDrop were based on three "workstations": 
 
 - The Journalist Workstation, where Journalists downloaded new submissions or replied to Sources.
 - The Secure Viewing Station (or SVS), where journalists decrypted and viewed submissions.
@@ -29,10 +34,6 @@ Development on the successor to this Tails-based version of SecureDrop, dubbed *
 As of late 2026, administrative tasks can be performed on a Qubes-based Admin Workstation. SecureDrop has transitioned completely to Qubes-based Workstations instead of the previous Tails-based USB flash drives.
 
 .. TODO link to Tails docs. 
-
-The Tails-based components are no longer needed, and the Tails version of SecureDrop will no longer be supported by the end of 2027.
-
-This guide will help you migrate your Tails-based Admin and Journalist Workstations to the new Qubes-based Workstations.
 
 YubiKey Support
 ---------------
