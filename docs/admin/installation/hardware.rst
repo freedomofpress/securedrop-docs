@@ -26,7 +26,7 @@ For an installation of SecureDrop, you must acquire:
 
 Additionally, you may want to consider the following purchases:
 
-* a printer without wireless network support, to use in combination with the Journalist.
+* a printer without wireless network support, to use in combination with the Journalist Workstation.
 * an external hard drive for server backups.
 * a USB flash drive to store backups of your laptops.
 * a USB flash drive with a physical write protection switch, or a USB write blocker, if you want to mitigate the risk of introducing malware from your network to your Journalist Workstation during repeated use of an Export Device.
