@@ -40,7 +40,7 @@ After the initial installation is complete, you may add additional laptops of an
 Servers
 ~~~~~~~
 
-SecureDrop requires two paired physical servers that are installed at a premise controlled by your organization. These servers run the Ubuntu operating system.
+SecureDrop requires two paired physical servers that are installed at a premises controlled by your organization. These servers run the Ubuntu operating system.
 
 The :ref:`Application Server<glossary_application_server>` runs the SecureDrop Server application, providing the :ref:`Source Interface<glossary_source_interface>`, :ref:`Admin Interface<glossary_admin_interface>`, and the API endpoint used by SecureDrop Inbox to sync messages between Sources and Journalists.
 

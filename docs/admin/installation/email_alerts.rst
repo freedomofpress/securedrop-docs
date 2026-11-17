@@ -25,7 +25,7 @@ If you are not familiar with configuring OpenPGP-encrypted email yourself, liste
 Mailvelope
 ~~~~~~~~~~
 
-`Mailvelope<https://mailvelope.com/>` is a browser extension that adds PGP encryption to a variety of common web-based email clients, including Gmail/Google Workspace and Outlook/Microsoft 365. Mailvelope takes care of generating a PGP key pair if you do not already have one.
+`Mailvelope <https://mailvelope.com/>`__ is a browser extension that adds PGP encryption to a variety of common web-based email clients, including Gmail/Google Workspace and Outlook/Microsoft 365. Mailvelope takes care of generating a PGP key pair if you do not already have one.
 
 .. note::
   By default, Mailvelope will upload the public key to their own Mailvelope Key Server upon creation of the key pair. Unless you are using this key pair outside of receiving SecureDrop alerts, you should **uncheck** this option.
@@ -33,12 +33,12 @@ Mailvelope
 Thunderbird
 ~~~~~~~~~~~
 
-The open-source cross-platform e-mail client `Thunderbird<https://www.thunderbird.net>` also provides built in support for PGP encryption, including `generating key pairs<https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_i-have-never-used-openpgp-with-thunderbird-before-how-do-i-setup-openpgp>` and `exporting keys<https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_how-can-i-export-my-secret-or-public-key>`.
+The open-source cross-platform e-mail client `Thunderbird <https://www.thunderbird.net>`__ also provides built in support for PGP encryption, including `generating key pairs <https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_i-have-never-used-openpgp-with-thunderbird-before-how-do-i-setup-openpgp>`__ and `exporting keys <https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_how-can-i-export-my-secret-or-public-key>`__.
 
 Proton Mail
 ~~~~~~~~~~~
 
-Proton Mail is a privacy-focused e-mail provider that implements PGP encryption by default. Every Proton Mail account has a PGP key pair, and you can easily `export the public key<https://proton.me/support/download-public-private-key>`.
+Proton Mail is a privacy-focused e-mail provider that implements PGP encryption by default. Every Proton Mail account has a PGP key pair, and you can easily `export the public key <https://proton.me/support/download-public-private-key>`__.
 
 .. _daily_journalist_alerts:
 
