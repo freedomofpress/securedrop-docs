@@ -14,7 +14,7 @@ Migration from Tails
 
 .. _migration_overview:
 
-This guide will help you migrate your Tails-based Admin and Journalist Workstations to the new Qubes-based Workstations. Tails-based components of SecureDrop are no longer needed, and the Tails version of SecureDrop will **no longer be supported** by the end of 2027.
+Tails-based components of SecureDrop are no longer needed, and the Tails version of SecureDrop will **no longer be supported** by the end of 2027. This guide will help you migrate your Tails-based Admin and Journalist Workstations to the new Qubes-based Workstations.
 
 Background
 ----------
