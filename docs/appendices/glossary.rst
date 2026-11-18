@@ -35,6 +35,8 @@ The Application Server is a physical computer housed on-premises running the Sec
 
 Instructions and tips for accessing the Application Server over SSH are on the :ref:`SSH access page<server SSH access>`.
 
+.. _glossary_combined_workstation:
+
 Combined Workstation
 --------------------
 
