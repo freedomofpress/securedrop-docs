@@ -40,6 +40,8 @@ Printing conversation transcripts
 #. You will prompted to attach your printer.
 #. A **Print Document** dialog will appear, from which you can configure different print options before printing the document.
 
+.. _exporting_export_device:
+
 Exporting using an Export Device
 --------------------------------
 

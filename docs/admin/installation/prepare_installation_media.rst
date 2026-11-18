@@ -3,12 +3,10 @@
 Prepare installation media
 ==========================
 
-SecureDrop Application and Monitor Servers run **Ubuntu Server 24.04.3 LTS (Noble Numbat)**. 
-
-Admin and Journalist Workstation laptops run **Qubes 4.3**.
-
 Preparing your everyday computer
 --------------------------------
+
+.. _prepare_everyday_computer:
 
 Before you can install and configure SecureDrop, you must first download and verify the operating system installation media using a normal, everyday computer. This computer can be running macOS, Windows, or Linux.
 
@@ -18,12 +16,18 @@ In order to verify the integrity of the downloaded installation media, you will 
 * **Mac:** ``gpg`` must be manually installed from the `GPG Suite <https://gpgtools.org/>`__. Use Terminal.app, or your favorite third-party terminal emulator, to enter commands.
 * **Windows:** ``gpg`` must be installed via `Gpg4win <https://gpg4win.org/download.html>`__. Use the Windows PowerShell to enter commands, which you can find by searching and selecting "Windows PowerShell" from the Start menu.
 
+.. _prepare_everyday_computer_end:
+
 Preparing the installation media
 --------------------------------
+
+.. _preparing_installation_media:
 
 This guide assumes the use of a USB 3.0 flash drive, although you may also use optical media via an external disc drive (which may make more sense depending on your `security concerns <https://www.qubes-os.org/doc/install-security/>`_).
 
 .. note:: A USB flash drive with a Type-A connector is recommended, as USB-C ports may be disabled on your computer when the BIOS settings are disabled later in the installation
+
+.. _download_os_installers:
 
 Downloading operating system installers
 ----------------------------------------
@@ -32,6 +36,8 @@ Downloading operating system installers
 
 Download and verify Ubuntu Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SecureDrop Application and Monitor Servers run **Ubuntu Server 24.04.3 LTS (Noble Numbat)**. 
 
 The installation media and the files required to verify it are available on the `Ubuntu Releases page`_. You will need to download the following files:
 
@@ -101,9 +107,13 @@ If the final verification step is successful, you should see the following outpu
 If it does not report a good signature, try deleting the ISO and downloading it again.
 
 .. caution:: If you do not see "Good signature" above it is not safe to proceed with the installation. If this happens, please contact us at securedrop@freedom.press.
-             
+
+.. _download_verify_qubes:
+
 Download and verify Qubes OS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Admin and Journalist Workstation laptops run **Qubes 4.3**.
 
 Download the ``.iso`` and the ``Detached PGP signature`` for ``Qubes OS 4.3.2`` from `https://www.qubes-os.org/downloads/ <https://www.qubes-os.org/downloads/#qubes-os-4-3-2>`_. The ISO is 8 GB approximately, and may take some time to download based on the speed of your Internet connection.
 

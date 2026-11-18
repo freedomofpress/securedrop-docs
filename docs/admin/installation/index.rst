@@ -33,7 +33,7 @@ Typically, the Admin Workstation and Journalist Workstation will be different la
 
 For the initial installation of SecureDrop, you will set up either one Admin Workstation and one Journalist Workstation, or a single combined Admin + Journalist Workstation.
 
-After the initial installation is complete, you may add additional laptops of any type as needed for your organization.
+After the initial installation is complete, you may add additional Workstations of any type as needed for your organization as documented in the :doc:`Onboarding section</admin/onboarding/index>`.
 
 .. _install_overview_servers:
 
@@ -98,6 +98,7 @@ Summary of installation tasks
    create_admin_account
    install_journalist
    test_the_installation
+   post_installation
 
 Tracking your progress
 ----------------------
