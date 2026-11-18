@@ -38,7 +38,7 @@ The entire provisioning process will take several hours to complete. You may pro
 1. Create a backup of an existing Admin Workstation
 --------------------------------------------------------
 
-Start with an existing Admin Workstation or combined Admin + Journalist Workstation.
+Start with an existing Admin Workstation or Combined Workstation.
 
 Select qubes to back up
 ~~~~~~~~~~~~~~~~~~~~~~~

@@ -29,9 +29,9 @@ The :ref:`Admin Workstation<glossary_admin_workstation>` is used by Administrato
 
 The :ref:`Journalist Workstation<glossary_journalist_workstation>` is used by Journalists. It has :ref:`SecureDrop Inbox<glossary_securedrop_inbox>` installed and configured to connect to your SecureDrop Server.
 
-Typically, the Admin Workstation and Journalist Workstation will be different laptops used by different people (Administrations and Journalists, respectively). However, a single laptop can serve as a *combined* Admin + Journalist Workstation. This configuration accommodates small or cash-strapped newsrooms, where only a single laptop is shared between Administrators and Journalists, or where a single individual fills both roles. 
+Typically, the Admin Workstation and Journalist Workstation will be different laptops used by different people (Administrations and Journalists, respectively). However, the software and configurations for each type of Workstation *can* be installed on a single laptop, which becomes a :ref:`Combined Workstation<glossary_combined_workstation>`. This configuration accommodates small or cash-strapped newsrooms, where only a single laptop is shared between Administrators and Journalists, or where a single individual fills both roles. 
 
-For the initial installation of SecureDrop, you will set up either one Admin Workstation and one Journalist Workstation, or a single combined Admin + Journalist Workstation.
+For the initial installation of SecureDrop, you will set up either one Admin Workstation and one Journalist Workstation, or a single Combined Workstation.
 
 After the initial installation is complete, you may add additional Workstations of any type as needed for your organization as documented in the :doc:`Onboarding section</admin/onboarding/index>`.
 

@@ -79,13 +79,13 @@ Migration scenarios
 
 - If you are starting with only the Tail-based workstations:
     1. :doc:`Install Qubes OS and SecureDrop Workstation packages</admin/migration/migrate_install_qubes>` on the desired number of laptops
-        - One laptop to create a combined Admin + Journalist Workstation
-        - Two laptops to create separate Admin and Journalist Workstations
+        - One laptop to create a :ref:`Combined Workstation<glossary_combined_workstation>`
+        - Two laptops to create separate :ref:`Admin<glossary_admin_workstation>` and :ref:`Journalist Workstations<glossary_journalist_workstation>`
 
     2. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
     3. Perform :doc:`Journalist migration</admin/migration/journalist_migration>` to create new Journalist Workstation
 
-- If you already have a Qubes Journalist Workstation (previously called a "SecureDrop Workstation") and simply want to install the administrative tools on it, turning it into a combined Admin + Journalist Workstation:
+- If you already have a Qubes Journalist Workstation (previously called a "SecureDrop Workstation") and simply want to install the administrative tools on it, turning it into a Combined Workstation:
     #. Perform the :doc:`Journalist migration</admin/migration/journalist_migration>` steps on the Qubes current Journalist Workstation 
 
 - If you already have a Qubes-based Journalist Workstation and want to migrate your Tails Admin Workstation to a separate Qubes-based Admin Workstation laptop:

@@ -10,10 +10,10 @@ Import Submission Public Key
 
 Earlier, you generated the Submission Key. The *public* half of this key needs to be imported to the correct location on the Admin Workstation.
 
-Moving the Submission Public Key to ``sd-admin`` for a combined Workstation (one laptop install)
+Moving the Submission Public Key to ``sd-admin`` for a Combined Workstation (one laptop install)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have opted to create a combined Admin + Journalist Workstation, then you should hav generated the Submission Key on the same laptop. The Submission Public Key simply needs to be copied from ``dom0`` to the ``sd-admin`` qube.
+If you have opted to create a Combined Workstation, then you should hav generated the Submission Key on the same laptop. The Submission Public Key simply needs to be copied from ``dom0`` to the ``sd-admin`` qube.
 
 In the ``dom0`` terminal, run the command:
 

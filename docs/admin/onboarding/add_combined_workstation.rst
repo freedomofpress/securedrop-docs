@@ -1,10 +1,10 @@
-Provision additional combined Workstation
+Provision additional Combined Workstation
 =========================================
 
 Overview
 --------
 
-Provisioning additional combined Admin+ Journalist Workstations is done using a backup and restore mechanism, in lieu of repeating the :doc:`initial installation instructions</admin/installation/index>`. Qubes OS provides integrated tools for making and restoring backups which are leveraged here to ensure your SecureDrop's secret keys and stored Source messages are safely transferred onto new Workstations.
+Provisioning additional Combined Workstations is done using a backup and restore mechanism, in lieu of repeating the :doc:`initial installation instructions</admin/installation/index>`. Qubes OS provides integrated tools for making and restoring backups which are leveraged here to ensure your SecureDrop's secret keys and stored Source messages are safely transferred onto new Workstations.
 
 At a high level, this process entails installing Qubes OS and the SecureDrop packages on a new laptop, making fresh backups from existing Workstations, and then restoring that backup onto the new laptop. 
 
@@ -12,16 +12,16 @@ The entire provisioning process will take several hours to complete. You may pro
 
 .. include:: /includes/workstation-backups.txt
 
-If you are starting from a combined Admin + Journalist Workstations, start at :ref:`provision_backup_combined_workstation` and skip :ref:`provision_backup_discrete_workstations`.
+If you are starting from a Combined Workstations, start at :ref:`provision_backup_combined_workstation` and skip :ref:`provision_backup_discrete_workstations`.
 
 Otherwise, if you are starting from *discrete* Admin and Journalist Workstations, start at :ref:`provision_backup_discrete_workstations`.
 
 .. _provision_backup_combined_workstation:
 
-1-A. Create a backup of an existing combined Admin + Journalist Workstation
+1-A. Create a backup of an existing Combined Workstation
 -----------------------------------------------------------------------------
 
-Grab your combined Admin + Journalist Workstation, start it, and log in to Qubes OS.
+Grab your Combined Workstation, start it, and log in to Qubes OS.
 
 Select qubes to back up
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -129,7 +129,7 @@ Preparing the installation media
 3. Install Qubes OS and SecureDrop packages
 -------------------------------------------
 
-Install Qubes OS and the SecureDrop packages on your new combined Admin + Journalist Workstation.
+Install Qubes OS and the SecureDrop packages on your new Combined Workstation.
 
 .. include:: /admin/installation/install_qubes.rst
     :start-after: .. _apply_bios_updates_settings:
@@ -142,10 +142,10 @@ Install SecureDrop Workstation packages
     :start-after: .. _install_securedrop_packages:
 
 
-4. Restore backup to new combined Workstation
+4. Restore backup to new Combined Workstation
 ---------------------------------------------------------------
 
-You must now restore the following qubes onto your new combined Admin + Journalist Workstation from the backup or backups you created earlier:
+You must now restore the following qubes onto your new Combined Workstation from the backup or backups you created earlier:
 
 1. ``dom0``
 2. ``sd-journalist-vault``
@@ -153,7 +153,7 @@ You must now restore the following qubes onto your new combined Admin + Journali
 4. ``sd-admin``
 5. ``sd-admin-vault``
 
-If you have a single backup from an existing combined Admin + Journalist Workstation, you will restore all of the above qubes from that backup.
+If you have a single backup from an existing Combined Workstation, you will restore all of the above qubes from that backup.
 
 If, instead, you have backups from discrete Admin and Journalist Workstations, you will restore qubes 1-3 from the Journalist Workstation and qubes 4-5 from the Admin Workstation in two phases. 
 
@@ -199,7 +199,7 @@ Repeat these steps to restore qubes from discrete Admin and Journalist Workstati
     :start-after: .. _new_journalist_update_credentials:
     :end-before: .. _test_new_journalist_workstation:
 
-6. Test new combined Workstation
+6. Test new Combined Workstation
 ----------------------------------
 
 .. TODO, this should borrow from test instructions elsewhere. 

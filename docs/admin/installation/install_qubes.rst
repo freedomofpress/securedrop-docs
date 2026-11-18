@@ -4,9 +4,9 @@ Install Qubes OS and SecureDrop Workstation packages
 Overview
 --------
 
-During installation of SecureDrop, you will be performing the following steps on either one laptop (to become a combined Admin + Journalist Workstation), or two laptops (to become distinct Admin and Journalist Workstations).
+During installation of SecureDrop, you will be performing the following steps on either one laptop (to become a :ref:`Combined Workstation<glossary_combined_workstation>`), or two laptops (to become distinct :ref:`Admin<glossary_admin_workstation>` and :ref:`Journalist Workstations<glossary_journalist_workstation>`).
 
-If you plan to create additional Admin, Journalist, or combined Workstations, you will do so using a different method at a later time. 
+If you plan to create additional Admin, Journalist, or Combined Workstations, you will do so using a :doc:`different method at a later time</admin/onboarding/index>`. 
 
 If your target is two laptops, you may reuse the same Qubes OS installation USB Flash Drive created earlier for installing on each laptop, or (provided you have enough desk space and USB flash drives) you may follow these steps in parallel on both laptops. Before beginning, you should label each laptop with its desired end state (either Admin Workstation or Journalist Workstation) to eliminate the likelihood of a mix-up.
 
