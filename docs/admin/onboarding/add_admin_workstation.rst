@@ -133,7 +133,7 @@ Open the KeePassXC vault in ``sd-admin-vault`` on the new Workstation and delete
 1. Select each entry and hit the :kbd:`delete` key.
 2. After you have deleted all the entires, right-click the **Recycle Bin** item under **Root** in the KeePassXC sidebar, and select **Empty**.
 
-Add to the KeePassXC vault the needed credentials for the user of this new Workstation, such as their Admin Interface login. If it is a new user, you may :doc:`create the new user's account from the Admin Interface</admin/onboarding/add_user>` at this time and save the credentials directly into the KeePassXC vault.
+Add the needed credentials for the user of this new Workstation to the KeePassXC vault, such as their Admin Interface login. If it is a new user, you may :doc:`create the new user's account from the Admin Interface</admin/onboarding/add_user>` at this time and save the credentials directly into the KeePassXC vault.
 
 Create new SSH key
 ~~~~~~~~~~~~~~~~~~
