@@ -24,7 +24,7 @@ Please see the :doc:`relevant page</admin/reference/admin_interface>` for comple
 Admin Workstation
 -----------------
 
-The Admin Workstation is a laptop running Qubes OS, configured with the administration tools and credentials needed for an Administrator to install and maintain a SecureDrop instance, in particular the :doc:`securedrop-admin</admin/reference/securedrop_admin>` utility. An Admin Workstation is capable of connection to the web-based Admin Interface, and to the Application and Monitor servers using SSH.
+An Admin Workstation is a laptop running Qubes OS, configured with the administration tools and credentials needed for an Administrator to install and maintain a SecureDrop instance, in particular the :doc:`securedrop-admin</admin/reference/securedrop_admin>` utility. An Admin Workstation is capable of connection to the web-based Admin Interface, and to the Application and Monitor servers using SSH.
 
 .. _glossary_application_server:
 
@@ -34,6 +34,11 @@ Application Server
 The Application Server is a physical computer housed on-premises running the SecureDrop server application. Based on our :doc:`recommendations</admin/installation/hardware>`, this is typically a NUC or similar Mini PC. The Application hosts the website that Sources access (the Source Interface), the Admin Interface, and the API endpoint that SecureDrop Inbox connects to so Journalists may download and reply to messages and files sent by Sources.
 
 Instructions and tips for accessing the Application Server over SSH are on the :ref:`SSH access page<server SSH access>`.
+
+Combined Workstation
+--------------------
+
+A Combined Workstation is a laptop running Qubes OS that is configured as both an :ref:`Admin Workstation<glossary_admin_workstation>` and a :ref:`Journalist Workstation<glossary_journalist_workstation>`. All the software and credentials found on both Workstation types is installed, although there is still isolation between the different roles thanks to the compartmentalization features of of Qubes OS. A Combined Laptop can be shared among multiple Administrators and Journalists as a budget-saving measure, or accommodate a single user who fills both roles.
 
 .. _glossary_export_device:
 
@@ -118,7 +123,7 @@ Instructions for using SecureDrop Inbox appear in our :doc:`Journalist Guide </j
 Journalist Workstation
 ----------------------
 
-The Journalist Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling untrusted files submitted by Sources. Each Journalist may have their own Journalist Workstation, or one may be shared among several Journalists.
+A Journalist Workstation is a laptop running Qubes OS, with SecureDrop Inbox installed and configured to connect to a specific SecureDrop instance. It implements the unique features of Qubes OS to protect Journalists while handling untrusted files submitted by Sources. Each Journalist may have their own Journalist Workstation, or one may be shared among several Journalists.
 
 .. _glossary_source:
 
