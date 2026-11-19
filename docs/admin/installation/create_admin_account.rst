@@ -5,7 +5,7 @@ There are two types of accounts on the Admin Interface: admin accounts and norma
 
 You must create the first admin account on the Admin Interface by running a command on the :ref:`Application Server<glossary_application_server>`. 
 
-You will not create additional accounts during the installation process. Unless you are a setting up a single-user SecureDrop, you will create additional accounts after installation is complete following the instructions in the :doc:`Onboarding section</admin/onboarding/index>`.
+You will not create additional accounts during the installation process. You will create additional accounts after installation is complete following the instructions in the :doc:`Onboarding section</admin/onboarding/index>` (unless your SecureDrop is checked and administered by a single user).
 
 .. _Create Admin CLI:
 

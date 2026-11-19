@@ -14,7 +14,12 @@ Migration from Tails
 
 .. _migration_overview:
 
-The previous version of SecureDrop was based on three "workstations": 
+Tails-based components of SecureDrop are no longer needed, and the Tails version of SecureDrop will **no longer be supported** by the end of 2027. This guide will help you migrate your Tails-based Admin and Journalist Workstations to the new Qubes-based Workstations.
+
+Background
+----------
+
+Previous versions of SecureDrop were based on three "workstations": 
 
 - The Journalist Workstation, where Journalists downloaded new submissions or replied to Sources.
 - The Secure Viewing Station (or SVS), where journalists decrypted and viewed submissions.
@@ -29,10 +34,6 @@ Development on the successor to this Tails-based version of SecureDrop, dubbed *
 As of late 2026, administrative tasks can be performed on a Qubes-based Admin Workstation. SecureDrop has transitioned completely to Qubes-based Workstations instead of the previous Tails-based USB flash drives.
 
 .. TODO link to Tails docs. 
-
-The Tails-based components are no longer needed, and the Tails version of SecureDrop will no longer be supported by the end of 2027.
-
-This guide will help you migrate your Tails-based Admin and Journalist Workstations to the new Qubes-based Workstations.
 
 YubiKey Support
 ---------------
@@ -78,19 +79,19 @@ Migration scenarios
 -------------------
 
 - If you are starting with only the Tail-based workstations:
-    1. :doc:`Install Qubes OS and SecureDrop Workstation packages</admin/migration/migrate_install_qubes>` on the desired number of laptops
-        - One laptop to create a combined Admin + Journalist Workstation
-        - Two laptops to create separate Admin and Journalist Workstations
+    1. :doc:`Install Qubes OS and SecureDrop Workstation packages</admin/migration/migrate_install_qubes>` on the desired number of laptops:
+        - One laptop to create a combined Admin + Journalist Workstation.
+        - Two laptops to create separate Admin and Journalist Workstations.
 
-    2. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
-    3. Perform :doc:`Journalist migration</admin/migration/journalist_migration>` to create new Journalist Workstation
+    2. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation.
+    3. Perform :doc:`Journalist migration</admin/migration/journalist_migration>` to create new Journalist Workstation.
 
 - If you already have a Qubes Journalist Workstation (previously called a "SecureDrop Workstation") and simply want to install the administrative tools on it, turning it into a combined Admin + Journalist Workstation:
-    #. Perform the :doc:`Journalist migration</admin/migration/journalist_migration>` steps on the Qubes current Journalist Workstation 
+    #. Perform the :doc:`Journalist migration</admin/migration/journalist_migration>` steps on the Qubes current Journalist Workstation.
 
 - If you already have a Qubes-based Journalist Workstation and want to migrate your Tails Admin Workstation to a separate Qubes-based Admin Workstation laptop:
-    #. :doc:`Install Qubes OS and SecureDrop packages</admin/migration/migrate_install_qubes>` on the new laptop
-    #. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation
+    #. :doc:`Install Qubes OS and SecureDrop packages</admin/migration/migrate_install_qubes>` on the new laptop.
+    #. Perform :doc:`Admin migration</admin/migration/admin_migration>` to create new Admin Workstation.
 
 Decommissioning Tails Workstations
 ----------------------------------

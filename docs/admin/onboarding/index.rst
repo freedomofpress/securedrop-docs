@@ -7,9 +7,9 @@ During the initial :doc:`installation</admin/installation/index>` of SecureDrop,
 Add user accounts
 -----------------
 
-:doc:`/admin/onboarding/add_user`
+Every new :ref:`Administrator<glossary_administrator>` or :ref:`Journalist<glossary_journalist>` must have a new corresponding SecureDrop account created using the :ref:`Admin Interface<glossary_admin_interface>`. Administrators use this account to log in to the Admin Interface, and Journalists use it to log in to the SecureDrop Inbox application.
 
-Every new Administrator or Journalist must have a new corresponding SecureDrop account created using the Admin Interface. Administrators use this account to log in to the Admin Interface, and Journalists use it to log in to the SecureDrop Inbox application.
+:doc:`/admin/onboarding/add_user`
 
 Provision additional Workstations
 ---------------------------------
@@ -26,7 +26,7 @@ Within your organization, each Journalist may have their own individual :ref:`Jo
 Adding Admin Workstations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ideally, each Administrator should have their own :ref:`Admin Workstation<glossary_admin_workstation>`. However, there are special measures that must be taken to keep multiple Admin Workstations in sync. 
+Ideally, each Administrator should have their own :ref:`Admin Workstation<glossary_admin_workstation>`. However, there are :ref:`special measures<multiple_admin_workstations>` that must be taken to keep multiple Admin Workstations in sync. 
 
 :doc:`add_admin_workstation`
 
