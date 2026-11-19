@@ -1,18 +1,18 @@
 Install Journalist Workstation
 ==============================
 
-You have created your first Admin Workstation and used it to install and configure your SecureDrop Servers. Now, it is time to create the first Journalist Workstation. It is important that this first Journalist Workstation is same the laptop where your :ref:`Submission Key<glossary_submission_key>` was :doc:`generated</admin/installation/generate_submission_key>`. Some of the following steps will vary depending on your situation:
+You have created your first :ref:`Admin Workstation<glossary_admin_workstation>` and used it to install and configure your SecureDrop Servers. Now, it is time to create the first :ref:`Journalist Workstation<glossary_journalist_workstation>`. It is important that this first Journalist Workstation is same the laptop where your :ref:`Submission Key<glossary_submission_key>` was :doc:`generated</admin/installation/generate_submission_key>`. Some of the following steps will vary depending on your situation:
 
-- If you :doc:`installed Qubes OS</admin/installation/install_qubes>` on only one laptop, intending to create a combined Admin + Journalist Workstation, then you will perform the indicated steps (one laptop install) on that single laptop. 
+- If you :doc:`installed Qubes OS</admin/installation/install_qubes>` on only one laptop, intending to create a :ref:`Combined Workstation<glossary_combined_workstation>`, then you will perform the indicated steps (one laptop install) on that single laptop. 
 
 - If instead you installed Qubes OS on two laptops, intending to create separate Admin and Journalist Workstations, then you should perform the indicated steps (two laptops install) on the new Journalist Workstation, *not* your first Admin Workstation. 
 
 When you installed the SecureDrop Servers from your Admin Workstation, the onion addresses of your SecureDrop Source Interface and Admin Interface and the associated :ref:`Onion Service<glossary_onion_service>` private key were created. You need to import the ``config.json`` file containing these addresses and key onto the Journalist Workstation.
 
-Importing to ``dom0`` on a combined Workstation (one laptop install)
+Importing to ``dom0`` on a Combined Workstation (one laptop install)
 --------------------------------------------------------------------
 
-If you have a combined Admin + Journalist Workstation, you simply need to copy the ``config.json`` file from ``sd-admin`` to the correct location in ``dom0``.
+If you have a Combined Workstation, you simply need to copy the ``config.json`` file from ``sd-admin`` to the correct location in ``dom0``.
 
 In a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**), run the following command:
 
@@ -96,7 +96,7 @@ The encrypted USB flash drive you used to transfer between the SecureDrop and Ad
 Install Journalist Workstation
 ------------------------------
 
-Now that you have imported the Onion Service files, you are ready to install and configure SecureDrop Inbox. Perform this step on either the new Journalist Workstation (two laptops install) or the combined Admin + Journalist Workststion (one laptop install).
+Now that you have imported the Onion Service files, you are ready to install and configure SecureDrop Inbox. Perform this step on either the new Journalist Workstation (two laptops install) or the Combined Workstation (one laptop install).
 
 These steps should be performed from a ``dom0`` terminal (|qubes_menu| **▸** |qubes_menu_gear| **▸ Other ▸ Xfce Terminal**). 
  

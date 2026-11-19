@@ -13,7 +13,7 @@ Back up a Journalist Workstation
 
 .. _backup_journalist_workstation:
 
-When backing up Journalist Workstation, there are four distinct sets of data you can back up:
+When backing up :ref:`Journalist Workstation<glossary_journalist_workstation>`, there are four distinct sets of data you can back up:
 
 #. The Submission Secret Key and SecureDrop Workstation config in ``dom0`` (required)
 #. The messages and files from SecureDrop Inbox stored in ``sd-app`` (optional)
@@ -70,7 +70,7 @@ To target a qube for backup, highlight it and move it into the **Selected** colu
 - the ``sd-app`` qube (optional)
 - any customized qubes that you may wish to preserve, and their templates (optional)
 
-If you are backing up a combined Admin + Journalist Workstation, make sure to also select:
+If you are backing up a Combined Workstation, make sure to also select:
 
 - the ``sd-admin`` qube
 - the ``sd-admin-vault`` qube
@@ -96,7 +96,7 @@ Uncheck **save backup profile**, then proceed with the backup.
 Back up an Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The process for backing up an Admin Workstation is similar to the process for a Journalist Workstation, although here there are fewer sensitive assets that are copied.
+The process for backing up an :ref:`Admin Workstation<glossary_admin_workstation>` is similar to the process for a Journalist Workstation, although here there are fewer sensitive assets that are copied.
 
 To perform a backup of the Admin Workstation:
 
@@ -117,10 +117,10 @@ Click **Next**, then select the backup destination, set the encryption passphras
 
 .. _backup_combined_workstation:
 
-Backing up a combined Admin + Journalist Workstation
+Backing up a Combined Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To backup a combined Admin + Journalist Workstation, follow the :ref:`steps to back up a Journalist Workstation<backup_journalist_workstation>`, and include the ``sd-admin`` and ``sd-admin-vault`` qubes when selecting which qubes to back up. 
+To backup a :ref:`Combined Workstation<glossary_combined_workstation>`, follow the :ref:`steps to back up a Journalist Workstation<backup_journalist_workstation>`, and include the ``sd-admin`` and ``sd-admin-vault`` qubes when selecting which qubes to back up. 
 
 Verify the backup
 ~~~~~~~~~~~~~~~~~
@@ -138,7 +138,7 @@ Restore
 Reinstall Qubes OS
 ~~~~~~~~~~~~~~~~~~
 
-To restore a SecureDrop Admin, Journalist or combined Workstation, follow our :doc:`pre-install tasks </admin/installation/install_qubes>` to provision a Qubes OS system complete with updated base templates, and download the SecureDrop Workstation packages.
+To restore a SecureDrop Admin, Journalist or Combined Workstation, follow our :doc:`pre-install tasks </admin/installation/install_qubes>` to provision a Qubes OS system complete with updated base templates, and download the SecureDrop Workstation packages.
 
 .. _rename_delete_redundant_qubes:
 
@@ -194,7 +194,7 @@ We suggest restoring only those qubes, install the appropriate Workstation packa
 Install Journalist Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are restoring a Journalist Workstation, or a combined Admin + Journalist Workstation, you need to reinstall the additional Journalist Workstation components.
+If you are restoring a Journalist Workstation, or a Combined Workstation, you need to reinstall the additional Journalist Workstation components.
 
 Retrieve the previous SecureDrop Workstation configuration from the backup folder on ``dom0``. From the ``dom0`` home directory:
 
@@ -227,7 +227,7 @@ Reinstall SecureDrop:
 Restore additional keys to ``sd-gpg``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are restoring a Journalist Workstation, or a combined Admin + Journalist Workstation, and have multiple Submission Keys, perform the following commands from a ``dom0`` terminal:
+If you are restoring a Journalist Workstation, or a Combined Workstation, and have multiple Submission Keys, perform the following commands from a ``dom0`` terminal:
 
 .. code-block:: sh
 
@@ -239,7 +239,7 @@ If you are restoring a Journalist Workstation, or a combined Admin + Journalist 
 Install Admin Workstation
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are restoring an Admin Workstation, or a combined Admin + Journalist Workstation, you need to reinstall the additional Admin Workstation components.
+If you are restoring an Admin Workstation, or a Combined Workstation, you need to reinstall the additional Admin Workstation components.
 
 .. code-block:: sh
 

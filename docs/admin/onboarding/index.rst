@@ -30,10 +30,10 @@ Ideally, each Administrator should have their own :ref:`Admin Workstation<glossa
 
 :doc:`add_admin_workstation`
 
-Adding Combined Admin + Journalist Workstations
+Adding Combined Workstations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To accommodate newsrooms on a tighter budget, or situations where the same individual is both an Administrator and Journalist, SecureDrop supports a combined Admin + Journalist Workstation.
+To accommodate newsrooms on a tighter budget, or situations where the same individual is both an Administrator and Journalist, SecureDrop supports a Combined Workstation.
 
 :doc:`add_combined_workstation`
 

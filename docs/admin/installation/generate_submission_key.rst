@@ -5,7 +5,7 @@ When a Source sends a message or file via SecureDrop, the :ref:`Application Serv
 
 The Submission Key for your SecureDrop is only generated once. Then the public and secret parts of this key will be copied to their respective locations. 
 
-If you have opted to perform your initial installation with *two* laptops (distinct Admin and Journalist Workstations, rather than a combined laptop for both) then perform this step on the laptop that will become the *Journalist Workstation*.
+If you have opted to perform your initial installation with *two* laptops (distinct :ref:`Admin<glossary_admin_workstation>` and :ref:`Journalist Workstations<glossary_journalist_workstation>`, rather than a :ref:`Combined Workstation<glossary_combined_workstation>`) then perform these steps on the laptop that will become the *Journalist Workstation*.
 
 Generate the Submission Key
 ---------------------------
