@@ -8,11 +8,11 @@ Onion names are short, memorable addresses that visitors can use to access an :r
 
 Imagine a SecureDrop instance for a new organization called *The New York World* with an onion address like this:
 
-`sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion`
+``sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion``
 
 An onion name for this SecureDrop instance could be:
 
-`nyworld.securedrop.tor.onion`
+``nyworld.securedrop.tor.onion``
 
 The general format for a SecureDrop onion name is:
 

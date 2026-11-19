@@ -127,9 +127,10 @@ When you do this, it's imperative that you use SHA-2 as the hashing algorithm in
 
     openssl req -new -newkey rsa:4096 -nodes -sha256 -keyout domain.com.key -out domain.com.csr
 
-**Don't load any resources (scripts, web fonts, etc.) from third parties (e.g. Google Web Fonts)**
+Do not load any third-party resources
+-------------------------------------
 
-This will potentially leak information about Sources to third parties, which can more easily be accessed by law enforcement agencies. Simply copy them to your server and serve them yourself to avoid this problem.
+Including third-party resources on your Landing Page, such as scripts or web fonts, will potentially leak information about Sources to third parties, which can more easily be accessed by law enforcement agencies. Simply copy them to your server and serve them yourself to avoid this problem.
 
 Do not use third-party analytics, tracking, or advertising
 ----------------------------------------------------------

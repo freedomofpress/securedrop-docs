@@ -170,7 +170,7 @@ If you are restoring a Journalist Workstation, you should ensure you restore:
 If you are restoring an Admin Workstation, you should ensure you restore:
 
 - ``sd-admin``
-- ``sd--admin-vault``
+- ``sd-admin-vault``
 
 If you are restoring a combination Journalist and Admin Workstation, restore all items listed above.
 

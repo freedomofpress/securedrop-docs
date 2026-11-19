@@ -13,7 +13,7 @@ Earlier, you generated the Submission Key. The *public* half of this key needs t
 Moving the Submission Public Key to ``sd-admin`` for a Combined Workstation (one laptop install)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have opted to create a Combined Workstation, then you should hav generated the Submission Key on the same laptop. The Submission Public Key simply needs to be copied from ``dom0`` to the ``sd-admin`` qube.
+If you have opted to create a Combined Workstation, then you should have generated the Submission Key on the same laptop. The Submission Public Key simply needs to be copied from ``dom0`` to the ``sd-admin`` qube.
 
 In the ``dom0`` terminal, run the command:
 
@@ -24,7 +24,7 @@ In the ``dom0`` terminal, run the command:
 Importing the Submission Public Key to ``sd-admin`` from separate Journalist Workstation (two laptop install)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have opted to create distinct Admin and Journalist Workstations, then your Submission Key needs to be copied from the Journalist Workstation onto the Admin Workstation and placed in the ``sd-admin`` qube.
+If you have opted to create distinct Admin and Journalist Workstations, then your Submission Key needs to be copied from the Journalist Workstation onto the Admin Workstation and placed in the ``sd-admin`` qube using a USB flash drive.
 
 .. TODO waiting for commands
 
@@ -107,7 +107,7 @@ Import public keys from a keyserver
 
 Instead of manually transferring your email public keys, you can request them from keyservers using the known fingerprint. Looking a key up by email address or a shorter key ID format could cause you to obtain a wrong, malicious, or expired key. Instead, we recommend you type out your fingerprint in groups of four (just like GPG prints it) enclosed by double quotes. The reason we suggest this formatting for the fingerprint is simply because it's easiest to type and verify correctly. In the code below simply replace ``<fingerprint>`` with your full, space-separated fingerprint:
 
-Download your key and import it into the local keyring: ::
+Using an ``sd-admin`` terminal (|qubes_menu| **▸** ``sd-admin`` **▸ Xfce Terminal**), download your key and import it into the local keyring: ::
 
     gpg --recv-key "<fingerprint>"
 
@@ -138,6 +138,6 @@ If you need to provide a custom CA to perform the validation, copy the cert file
 
     smtp_relay_cert_override_file: MyOrg.crt
 
-where ``MyOrg.crt`` is the filename. The file will be copied to the server in ``/etc/ssl/certs_local`` and the system CAs will be ignored when validating the SMTP relay TLS certificate. Be sure to save ``~/.config/securedrop-admin/site-specific`` when you are finished.
+where ``MyOrg.crt`` is the filename. The file will be copied to ``/etc/ssl/certs_local`` on the server and the system CAs will be ignored when validating the SMTP relay TLS certificate. Be sure to save ``~/.config/securedrop-admin/site-specific`` when you are finished.
 
 

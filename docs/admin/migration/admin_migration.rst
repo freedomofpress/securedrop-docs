@@ -18,7 +18,7 @@ Import from Tails Admin Workstation
 
 1. Locate a Tails Admin Workstation USB flash drive. 
 
-2. Connect the USB flash drive to a USB port on the Qubes computer, then use the Devices Widget in the upper right panel to attach it to the ``vault`` qube. There will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled ``Tails``), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
+2. Connect the USB flash drive to a USB port on the Qubes computer, then use the Devices Widget in the upper right panel to attach it to the ``vault`` qube. There will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled **Tails**), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
 
 3. In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the persistent volume passphrase to unlock and mount it. When prompted, select the option to **Forget password immediately**.
 
@@ -35,7 +35,7 @@ The command will print out the imported details to confirm before proceeding.
 Import Administrator KeePassXC database
 ---------------------------------------
 
-1. Use the Devices Widget in the upper right panel to attach the Tails Admin Workstation USB drive to the ``sd-admin-vault`` qube. As before, there will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled ``Tails``), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
+1. Use the Devices Widget in the upper right panel to attach the Tails Admin Workstation USB drive to the ``sd-admin-vault`` qube. As before, there will be 3 listings for the USB flash drive in the widget: one for the base drive, one for the Tails partition (labeled **Tails**), and a 3rd unlabeled listing (for the persistent volume). Choose the third listing.
 
 3. Launch KeePassXC in ``sd-admin-vault`` (|qubes_menu| **▸ Apps ▸ sd-admin-vault ▸ KeePassXC**). Select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the persistent volume passphrase to unlock and mount it. When prompted, select the option to **Forget password immediately**.
 

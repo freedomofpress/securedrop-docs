@@ -8,6 +8,8 @@ The :ref:`Admin Interface<glossary_admin_interface>` allows you to manage users 
 Logging in
 ^^^^^^^^^^
 
+.. TODO update for Menu on Qubes
+
 To log in to the Admin Interface, start the :ref:`Admin Workstation<glossary_admin_workstation>`. Open the *SecureDrop Menu* and select the **Launch Journalist Interface** option. Tor Browser will start and load the login page for the Admin Interface. Use your username, passphrase, and two-factor authentication token to log in.
 
 By default, you will be logged in to the Admin Interface's source list page.
@@ -48,7 +50,7 @@ After logging in, you can add new user accounts for the Journalists at your orga
 
 #. Hand the keyboard over to the new user so they can create their own username.
 #. Once they're done entering a username for themselves, have them save their pre-generated Diceware passphrase to their password manager.
-#. If the new account is to be an Administrator, allowing them to add or delete other journalist accounts, select **Is Admin**.
+#. If the new account is to be an Administrator, allowing them to manage the Source Interface and add or delete other accounts, select **Is Admin**.
 #. Finally, set up two-factor authentication for the account, following one of the two procedures below for your chosen method.
 
 .. note::
