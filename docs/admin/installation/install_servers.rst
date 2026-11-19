@@ -14,7 +14,7 @@ If you are using a setup where there is a switch on the LAN port, plug the Appli
 
 You should make sure you can connect from the Admin Workstation to both of the Servers before continuing with the installation.
 
-Open a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Xfce Terminal**) and verify that you can SSH into both Servers, authenticating with your server administrator username (e.g. ``sdadmin``) and password:
+Open a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin`` **▸ Xfce Terminal**) and verify that you can SSH into both Servers, authenticating with your server administrator username (e.g. ``sdadmin``) and password:
 
 .. code:: sh
 
@@ -83,7 +83,7 @@ If configuring Daily Journalist Alert emails (this is optional and can be config
 -  the Journalist Alert Public Key fingerprint
 -  the email address that will receive the Daily Journalist Alerts
 
-:doc:`Earlier</admin/installation/transfer_public_keys>`, you transferred your Submission Public Key, as well as the public keys for OSSEC Alerts and Daily Journalist Alerts (if applicable). If you need to determine the fingerprints for these public keys, you can do so by running the following command in a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin```` **▸ Xfce Terminal**):
+:doc:`Earlier</admin/installation/transfer_public_keys>`, you transferred your Submission Public Key, as well as the public keys for OSSEC Alerts and Daily Journalist Alerts (if applicable). If you need to determine the fingerprints for these public keys, you can do so by running the following command in a terminal in ``sd-admin`` (|qubes_menu| **▸** ``sd-admin`` **▸ Xfce Terminal**):
 
 .. code-block:: sh
 

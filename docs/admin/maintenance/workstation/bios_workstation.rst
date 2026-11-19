@@ -112,6 +112,6 @@ The instructions below assume the use of a Linux-based computer for the creation
 
 - Plug the USB flash drive into the ThinkPad.
 
-- Boot the ThinkPad and follow the prompts to enter its startup and boot menus, likely via the <Enter> and <F12> keys, respectively.
+- Boot the ThinkPad and follow the prompts to enter its startup and boot menus, likely via the :kbd:`Enter` and :kbd:`F12` keys, respectively.
 
 - Follow the on-screen instructions to update the BIOS, including any mandatory reboots. Note that the instructions may refer to an update CD instead of your update USB flash drive.

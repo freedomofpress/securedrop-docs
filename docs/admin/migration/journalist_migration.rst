@@ -54,7 +54,7 @@ SecureDrop Inbox connects to your SecureDrop's authenticated :ref:`Onion Service
 
 1. Locate an Tails Admin Workstation or Tails Journalist Workstation USB drive. Both hold the Onion Service address and authentication token; if you also want to copy the journalist user's password database, use the Tails Journalist Workstation USB drive.
 
-2. Connect the USB drive to a USB port on the Qubes computer, then use the Devices Widget in the upper right panel to attach it to the ``vault`` qube. There will be 3 listings for the USB in the widget: one for the base USB, one for the Tails partition on the USB, labeled ``Tails``, and a 3rd unlabeled listing, for the persistent volume. Choose the third listing.
+2. Connect the USB drive to a USB port on the Qubes computer, then use the Devices Widget in the upper right panel to attach it to the ``vault`` qube. There will be 3 listings for the USB in the widget: one for the base USB, one for the Tails partition on the USB, labeled **Tails**, and a 3rd unlabeled listing, for the persistent volume. Choose the third listing.
 
 3. In the the ``vault`` file manager, select the persistent volume's listing in the lower left sidebar. It will be named ``N GB encrypted``, where N is the size of the persistent volume. Enter the persistent volume passphrase to unlock and mount it. When prompted, select the option to **Forget password immediately**.
 
@@ -89,7 +89,7 @@ In order to set up KeePassXC for easy use:
 
 5. Locate the password database. It should be in the ``Persistent`` directory, and will typically be named ``keepassx.kdbx`` or similar.
 
-6. Open a second ``vault`` file manager window (:kbd:`Ctrl + N` in the current window) and navigate to the **Home** directory.
+6. Open a second ``vault`` file manager window (:kbd:`Ctrl+N` in the current window) and navigate to the **Home** directory.
 
 7. Drag and drop the password database to copy it.
 

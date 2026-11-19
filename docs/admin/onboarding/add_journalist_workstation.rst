@@ -8,7 +8,7 @@ Provisioning additional Journalist Workstations is done using a backup and resto
 
 At a high level, this process entails installing Qubes OS and the SecureDrop packages on a new laptop, making a fresh backup of an existing Journalist Workstation, and then restoring that backup onto the new laptop. 
 
-The entire provisioning process will take several hours to complete. You may provision multiple Journalist Workstations using a single backup, but keep in mind this backup will contain credentials wuch as your SecureDrop's :ref:`Submission Secret Key<glossary_submission_key>` and unencrypted messages and files (depending on how you proceed). You must take the same care with storing this backup as you would with any Workstation or Workstation backup, and you should :ref:`securely erase<journalist_provision_destroy_backup_medium>` it after provisioning is completed. 
+The entire provisioning process will take several hours to complete. You may provision multiple Journalist Workstations using a single backup, but keep in mind this backup will contain credentials such as your SecureDrop's :ref:`Submission Secret Key<glossary_submission_key>` and unencrypted messages and files (depending on how you proceed). You must take the same care with storing this backup as you would with any Workstation or Workstation backup, and you should :ref:`securely erase<journalist_provision_destroy_backup_medium>` it after provisioning is completed. 
 
 
 .. include:: /includes/workstation-backups.txt

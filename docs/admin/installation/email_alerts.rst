@@ -25,7 +25,7 @@ If you are not familiar with configuring OpenPGP-encrypted email yourself, liste
 Mailvelope
 ~~~~~~~~~~
 
-`Mailvelope<https://mailvelope.com/>` is a browser extension that adds PGP encryption to a variety of common web-based email clients, including Gmail/Google Workspace and Outlook/Microsoft 365. Mailvelope takes care of generating a PGP key pair if you do not already have one.
+`Mailvelope <https://mailvelope.com/>`__ is a browser extension that adds PGP encryption to a variety of common web-based email clients, including Gmail/Google Workspace and Outlook/Microsoft 365. Mailvelope takes care of generating a PGP key pair if you do not already have one.
 
 .. note::
   By default, Mailvelope will upload the public key to their own Mailvelope Key Server upon creation of the key pair. Unless you are using this key pair outside of receiving SecureDrop alerts, you should **uncheck** this option.
@@ -33,12 +33,12 @@ Mailvelope
 Thunderbird
 ~~~~~~~~~~~
 
-The open-source cross-platform e-mail client `Thunderbird<https://www.thunderbird.net>` also provides built in support for PGP encryption, including `generating key pairs<https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_i-have-never-used-openpgp-with-thunderbird-before-how-do-i-setup-openpgp>` and `exporting keys<https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_how-can-i-export-my-secret-or-public-key>`.
+The open-source cross-platform e-mail client `Thunderbird <https://www.thunderbird.net>`__ also provides built in support for PGP encryption, including `generating key pairs <https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_i-have-never-used-openpgp-with-thunderbird-before-how-do-i-setup-openpgp>`__ and `exporting keys <https://support.mozilla.org/en-US/kb/openpgp-thunderbird-howto-and-faq#w_how-can-i-export-my-secret-or-public-key>`__.
 
 Proton Mail
 ~~~~~~~~~~~
 
-Proton Mail is a privacy-focused e-mail provider that implements PGP encryption by default. Every Proton Mail account has a PGP key pair, and you can easily `export the public key<https://proton.me/support/download-public-private-key>`.
+Proton Mail is a privacy-focused e-mail provider that implements PGP encryption by default. Every Proton Mail account has a PGP key pair, and you can easily `export the public key <https://proton.me/support/download-public-private-key>`__.
 
 .. _daily_journalist_alerts:
 
@@ -89,19 +89,19 @@ You must specify the email and PGP public key that you'll be using to receive an
 SMTP relay
 ~~~~~~~~~~
 
-Receiving email alerts from OSSEC requires that you have an SMTP relay to route the emails. You can use an SMTP relay hosted internally, if one is available to you, or you can use a :ref:`third-party SMTP relay such as Gmail<ossec_gmail>`. The SMTP relay does not have to be on the same domain as the destination email address, i.e. smtp.gmail.com can be the SMTP relay and the destination address can be securedrop@freedom.press.
+Receiving email alerts from OSSEC requires that you have an SMTP relay to route the emails. You can use an SMTP relay hosted internally, if one is available to you, or you can use a :ref:`third-party SMTP relay such as Gmail<ossec_gmail>`. The SMTP relay does not have to be on the same domain as the destination email address, e.g. ``smtp.gmail.com`` could be the SMTP relay and the destination address could be ``securedrop@freedom.press``.
 
 While there are risks involved with receiving these alerts, such as information leakage through metadata, we feel the benefit of knowing how the SecureDrop Servers are functioning is worth it. If a third-party SMTP relay is used, that relay will be able to learn information such as the IP address the alerts were sent from, the subject of the alerts, and the destination email address the alerts were sent to. Only the body of an alert email is encrypted with the recipient's PGP key. A third-party SMTP relay could also prevent you from receiving any or specific alerts.
 
 The SMTP relay that you use should support SASL authentication and SMTP TLS protocols TLSv1.2, TLSv1.1, and TLSv1. Most enterprise email solutions should be able to meet those requirements.
 
-The SMTP relay mail server hostname is often, but not always, different from the SASL domain, e.g. smtp.gmail.com and gmail.com.
+The SMTP relay mail server hostname is often, but not always, different from the SASL domain, e.g. ``smtp.gmail.com`` and ``gmail.com``.
 
-The SMTP and SASL settings correspond to the *outgoing* email address used to send the alerts instead of where you're receiving them. If that email is ossec@news-org.com, the SASL Username would be ``ossec`` and the SASL Domain would be ``news-org.com``.
+The SMTP and SASL settings correspond to the *outgoing* email address used to send the alerts instead of where you're receiving them. If that email is ``ossec@news-org.com``, the SASL Username would be ``ossec`` and the SASL Domain would be ``news-org.com``.
 
-The settings and credentials for your SMTP relay must be provided during the SecureDrop server installation. It is better to get these right the first time rather than changing them after SecureDrop is installed. If you're not sure of the correct SMTP relay port number, you can use a simple mail client such as Thunderbird to test different settings or a port scanning tool such as nmap to see what's open. You could also use telnet to make sure you can connect to an SMTP server, which will always transmit a reply code of 220 meaning "Service ready" upon a successful connection.
+The settings and credentials for your SMTP relay must be provided during the SecureDrop server installation. It is better to get these right the first time rather than changing them after SecureDrop is installed. If you're not sure of the correct SMTP relay port number, you can use a simple mail client such as Thunderbird to test different settings or a port scanning tool such as ``nmap`` to see what's open. You could also use telnet to make sure you can connect to an SMTP server, which will always transmit a reply code of 220 meaning "Service ready" upon a successful connection.
 
-In some cases, authentication or transport encryption mechanisms will vary and you may require later edits to the Postfix configuration (mainly /etc/postfix/main.cf) on the Monitor Server in order to get alerts to work. You can consult `Postfix's official documentation <https://www.postfix.org/documentation.html>`__ for help, although we've described some common scenarios in the :ref:`troubleshooting section <troubleshooting_ossec>`.
+In some cases, authentication or transport encryption mechanisms will vary and you may require later edits to the Postfix configuration (mainly ``/etc/postfix/main.cf``) on the Monitor Server in order to get alerts to work. You can consult `Postfix's official documentation <https://www.postfix.org/documentation.html>`__ for help, although we've described some common scenarios in the :ref:`troubleshooting section <troubleshooting_ossec>`.
 
 .. _ossec_gmail:
 
@@ -114,10 +114,10 @@ First you should `sign up for a new account <https://accounts.google.com/SignUp?
 
 Next, enable `Google's 2-Step Verification <https://safety.google/authentication/>`__. This is required in order to use SMTP with a username and password, which is needed for SecureDrop.
 
-After enabling 2-Step Verification, you'll then need to generate a new app password to use exclusively with SecureDrop. To do so, `open the app password settings <https://myaccount.google.com/apppasswords>`__. From there, click "Select App", choose "Custom", assign it a name (such as "SecureDrop"), then click "Generate."
+After enabling 2-Step Verification, you'll then need to generate a new app password to use exclusively with SecureDrop. To do so, `open the app password settings <https://myaccount.google.com/apppasswords>`__. From there, click **Select App**, choose **Custom**, assign it a name (such as "SecureDrop"), then click **Generate**.
 
 This will provide you with a 16-character password that you will need to use for the SMTP settings to enable OSSEC alerts.
 
 .. tip:: SMTP through Gmail will only work with a generated app password. The password for the Gmail account itself is not sufficient, and will not allow mail to be sent. In order to be able to create an app password, you must have 2-Step Verification enabled on the Gmail account.
 
-Once the account is created you can log out and use the SASL username as your new Gmail username (without the domain), the SASL domain to be either gmail.com or your custom Google Apps domain, and then finally your SASL password when installing SecureDrop on the Servers. Remember to use the app password generated from the 2-step config, as the primary account password won't work. The SMTP relay will be smtp.gmail.com and the SMTP relay port is 587.
+Once the account is created you can log out and use the SASL username as your new Gmail username (without the domain), the SASL domain to be either ``gmail.com`` or your custom Google Apps domain, and then finally your SASL password when installing SecureDrop on the Servers. Remember to use the app password generated from the 2-step config, as the primary account password won't work. The SMTP relay will be ``smtp.gmail.com`` and the SMTP relay port is 587.

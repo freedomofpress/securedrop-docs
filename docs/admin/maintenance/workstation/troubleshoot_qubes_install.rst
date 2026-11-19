@@ -55,16 +55,16 @@ When you boot up, you will see a black-and-white menu with the following options
 
 While ``Qubes, with Xen hypervisor`` is selected, press :kbd:`e` to edit the option. You should now see a rudimentary edit interface.
 
-Find the line that starts with ``multiboot2   /xen-`` and ends with ``${xen_rm_opts}``. Use the arrow keys to move your cursor to before ``${xen_rm_opts}`` and type :kbd:`cpufreq=xen:hwp=off` (leave a space between ``off`` and the ``$``.
+Find the line that starts with ``multiboot2   /xen-`` and ends with ``${xen_rm_opts}``. Use the arrow keys to move your cursor to before ``${xen_rm_opts}`` and type ``cpufreq=xen:hwp=off`` (leave a space between ``off`` and the ``$``.
 
 Press :kbd:`Ctrl-x` to continue with booting. This will fix the current boot, we now need to make the fix permanent.
 
-Once Qubes has started and you have logged in, open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal** and type :kbd:`sudo nano /etc/default/grub` to start an editor.
+Once Qubes has started and you have logged in, open a ``dom0`` terminal via |qubes_menu| **▸** |qubes_menu_gear| **▸ Other Tools ▸ Xfce Terminal** and type ``sudo nano /etc/default/grub`` to start an editor.
 
-Move your cursor to the bottom of the file and add: :kbd:`GRUB_CMDLINE_XEN_DEFAULT="$GRUB_CMDLINE_XEN_DEFAULT cpufreq=xen:hwp=off"`
+Move your cursor to the bottom of the file and add: ``GRUB_CMDLINE_XEN_DEFAULT="$GRUB_CMDLINE_XEN_DEFAULT cpufreq=xen:hwp=off"``
 
 Press :kbd:`Ctrl-x`, then :kbd:`y`, and then :kbd:`Enter` to save the file.
 
-Finally, in the terminal run :kbd:`sudo grub2-mkconfig -o /boot/grub2/grub.cfg`. The workaround will now automatically be applied going forwards.
+Finally, in the terminal run ``sudo grub2-mkconfig -o /boot/grub2/grub.cfg``. The workaround will now automatically be applied going forwards.
 
 

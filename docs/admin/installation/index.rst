@@ -23,7 +23,7 @@ Workstations
 
 .. _install_overview_workstations:
 
-In the new SecureDrop, every workstation is a laptop running the `Qubes <https://www.qubes-os.org>`__ operating system with additional software and configurations depending on which roles they will fill.
+Every SecureDrop Workstation is a laptop running the `Qubes <https://www.qubes-os.org>`__ operating system with additional software and configurations depending on which role or roles it fills.
 
 The :ref:`Admin Workstation<glossary_admin_workstation>` is used by Administrators. It is configured with the tools and credentials needed to administer and install SecureDrop Servers. 
 
@@ -40,7 +40,7 @@ After the initial installation is complete, you may add additional Workstations 
 Servers
 ~~~~~~~
 
-SecureDrop requires two paired physical servers that are installed at a premise controlled by your organization. These servers run the Ubuntu operating system.
+SecureDrop requires two paired physical servers that are installed at a premises controlled by your organization. These servers run the Ubuntu operating system.
 
 The :ref:`Application Server<glossary_application_server>` runs the SecureDrop Server application, providing the :ref:`Source Interface<glossary_source_interface>`, :ref:`Admin Interface<glossary_admin_interface>`, and the API endpoint used by SecureDrop Inbox to sync messages between Sources and Journalists.
 
