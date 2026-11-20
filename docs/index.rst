@@ -111,6 +111,7 @@ SecureDrop is an open source project. You can support the work by `contributing 
    :caption: Admin Guide
    :name: adminguidetoc
    :maxdepth: 4
+   :hidden:
 
    admin/securedrop_for_admins
    Installation <admin/installation/index>
