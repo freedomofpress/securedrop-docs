@@ -206,6 +206,7 @@ You should see a directory called ``home-restore-$YYYY-MM-DD-HHMMSS/dom0-home/$U
 
 .. code-block:: sh
 
+   mkdir -p  ~/.config/securedrop-manage/
    cp ~/$RESTORE_DIR/securedrop-workstation-dom0-config/{sd-journalist.sec,config.json,sd-keys.asc} ~/.config/securedrop-manage/
 
 Optionally, inspect each file before proceeding. The first file should be an ASCII-armored GPG secret key file. The second file should follow the format of the `example configuration file <https://raw.githubusercontent.com/freedomofpress/securedrop-workstation/main/files/config.json.example>`_, with values for its fields (e.g., ``hostname``, ``submission_key_fpr``) specific to your configuration. The file may be formatted in a single line without whitespace. The third file is a backup of key material from ``sd-gpg`` and will be moved into that qube when you have reprovisioned the system.
